@@ -126,3 +126,20 @@ def test_original_lines_preserved():
     out = _run(SAMPLE, {})
     # the inner "value" line is untouched (not inside annotate targets)
     assert '\t\t\t\t"value"\t"425"\n' in out
+
+
+def test_comment_braces_do_not_corrupt_depth():
+    # A commented-out brace must not shift AbilityValues scope tracking.
+    sample = (
+        '"DOTAAbilities"\n{\n'
+        '\t"foo_ability"\n\t{\n'
+        '\t\t"AbilityValues"\n\t\t{\n'
+        '\t\t\t//{\n'                       # stray commented brace
+        '\t\t\t"damage"\t"100"\n'
+        '\t\t}\n\t}\n}\n'
+    )
+    out = "".join(annotate_file_lines(sample.splitlines(keepends=True), {}))
+    # "damage" is a direct AbilityValues child and must still be annotated
+    assert '"damage"\t"100"\t// higher = stronger' in out
+    # the comment line itself is preserved untouched
+    assert '\t\t\t//{\n' in out

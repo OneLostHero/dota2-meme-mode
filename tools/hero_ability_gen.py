@@ -115,14 +115,16 @@ def annotate_file_lines(lines, names):
                 annotated = _append_comment(line, direction_hint(key) or "check tooltip")
         out.append(annotated)
 
-        # (c) brace + AbilityValues scope tracking (after using current state)
-        if _NAMED_KEY.match(bare) and _NAMED_KEY.match(bare).group(1) == "AbilityValues":
-            pending_av = True
-        if "{" in line and pending_av:
-            values_depth = depth + 1
-            pending_av = False
-        depth += line.count("{") - line.count("}")
-        if values_depth is not None and depth < values_depth:
-            values_depth = None
+        # (c) brace + AbilityValues scope tracking (skip comment lines)
+        if not bare.lstrip().startswith("//"):
+            _m = _NAMED_KEY.match(bare)
+            if _m and _m.group(1) == "AbilityValues":
+                pending_av = True
+            if "{" in line and pending_av:
+                values_depth = depth + 1
+                pending_av = False
+            depth += line.count("{") - line.count("}")
+            if values_depth is not None and depth < values_depth:
+                values_depth = None
 
     return out
