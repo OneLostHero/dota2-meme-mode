@@ -9,7 +9,7 @@
 	</scripts>
 	<Panel class="LoadingRoot">
 		<Panel id="seq">
-			<Image id="seq_bg" class="SeqBg" src="file://{images}/custom_game/mgmod_logo_png.png" />
+			<Image id="seq_bg" class="SeqBg" src="file://{images}/custom_game/meme_mode_logo.png" />
 			<Image id="seq_bg_boosted" class="SeqBgSecondary_boost hidden" src="file://{images}/custom_game/boosted_logo_png.png" />
 		</Panel>
 	</Panel>
