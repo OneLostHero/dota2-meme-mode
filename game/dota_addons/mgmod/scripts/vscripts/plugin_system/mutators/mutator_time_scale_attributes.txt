@@ -1,0 +1,18 @@
+
+"presets"
+{
+    "mutator_time_scale_attributes"
+    {
+        "mutator" "1"
+        "settings"
+        {
+            "time_scaling"
+            {
+                "enabled" "1"
+                "str" "10"
+                "agi" "10"
+                "int" "10"
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+"plugin_settings"
+{
+    "Order" "96"
+    "enabled" {
+        "TYPE" "boolean"
+        "DEFAULT" "0"
+    }
+    "tower_bonus_hp" {
+        "Order" "2"
+        "TYPE" "number"
+        "DEFAULT" "300"
+    }
+    "tower_bonus_hp_regen" {
+        "Order" "3"
+        "TYPE" "number"
+        "DEFAULT" "0"
+    }
+    "tower_bonus_damage" {
+        "Order" "4"
+        "TYPE" "number"
+        "DEFAULT" "0"
+    }
+    "tower_bonus_armor" {
+        "Order" "5"
+        "TYPE" "number"
+        "DEFAULT" "0.0"
+    }
+    "tower_bonus_magic_resistance" {
+        "Order" "6"
+        "TYPE" "number"
+        "UNIT" "%"
+        "DEFAULT" "0.0"
+    }
+    "creep_bonus_hp" {
+        "Order" "20"
+        "TYPE" "number"
+        "DEFAULT" "5"
+    }
+    "creep_bonus_hp_regen" {
+        "Order" "87"
+        "TYPE" "number"
+        "DEFAULT" "0"
+    }
+    "creep_bonus_damage" {
+        "Order" "22"
+        "TYPE" "number"
+        "DEFAULT" "0"
+    }
+    "creep_bonus_armor" {
+        "Order" "23"
+        "TYPE" "number"
+        "DEFAULT" "0"
+    }
+    "creep_bonus_magic_resistance" {
+        "Order" "24"
+        "TYPE" "number"
+        "DEFAULT" "0"
+    }
+    "creep_bonus_building_damage" {
+        "Order" "25"
+        "TYPE" "number"
+        "DEFAULT" "20"
+    }
+}

@@ -1,0 +1,20 @@
+"plugin_settings"
+{
+    "Order" "4521"
+    "enabled" {
+        "TYPE" "boolean"
+        "DEFAULT" "0"
+    }
+    "currency"
+    {
+        "Order" "18"
+        "TYPE" "dropdown"
+        "DEFAULT" "purple"
+        "OPTIONS" {
+            "red" "red"
+            "green" "green"
+            "blue" "blue"
+            "purple" "purple"
+        }
+    }
+}

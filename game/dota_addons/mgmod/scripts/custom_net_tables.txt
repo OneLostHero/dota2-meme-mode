@@ -1,0 +1,93 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+  custom_net_tables =
+  [
+
+    "core_data_abilities",
+    "core_data_items",
+    "core_data_units",
+    "core_data_modifiers",
+
+    "dvd",
+    "credits",
+    "plugin_settings",
+    "mutator_presets",
+    "forced_mode",
+    
+    "ability_registery",
+    "item_registery",
+    "unit_registery",
+    "modifier_registery",
+    
+    "souls_collected",
+
+    "lod_pool",
+    "lod_builds",
+    "lod_bans",
+
+    "player_upgrades_0",
+    "player_upgrades_1",
+    "player_upgrades_2",
+    "player_upgrades_3",
+    "player_upgrades_4",
+    "player_upgrades_5",
+    "player_upgrades_6",
+    "player_upgrades_7",
+    "player_upgrades_8",
+    "player_upgrades_9",
+    "player_upgrades_10",
+    "player_upgrades_11",
+    "player_upgrades_12",
+    "player_upgrades_13",
+    "player_upgrades_14",
+    "player_upgrades_15",
+    "player_upgrades_16",
+    "player_upgrades_17",
+    "player_upgrades_18",
+    "player_upgrades_19",
+    "player_upgrades_20",
+    "player_upgrades_21",
+    "player_upgrades_22",
+    "player_upgrades_23",
+
+    "save_slots",
+    
+    "stonks",
+
+    "currencies",
+
+    "player_booster",
+    "debug_data",
+
+    "heroselection_rework",
+    "heroselection_rework_abilities",
+    
+    "custom_shops",
+
+    "bsrpg_upgrades_0",
+    "bsrpg_upgrades_1",
+    "bsrpg_upgrades_2",
+    "bsrpg_upgrades_3",
+    "bsrpg_upgrades_4",
+    "bsrpg_upgrades_5",
+    "bsrpg_upgrades_6",
+    "bsrpg_upgrades_7",
+    "bsrpg_upgrades_8",
+    "bsrpg_upgrades_9",
+    "bsrpg_upgrades_10",
+    "bsrpg_upgrades_11",
+    "bsrpg_upgrades_12",
+    "bsrpg_upgrades_13",
+    "bsrpg_upgrades_14",
+    "bsrpg_upgrades_15",
+    "bsrpg_upgrades_16",
+    "bsrpg_upgrades_17",
+    "bsrpg_upgrades_18",
+    "bsrpg_upgrades_19",
+    "bsrpg_upgrades_20",
+    "bsrpg_upgrades_21",
+    "bsrpg_upgrades_22",
+    "bsrpg_upgrades_23",
+    "rounds",
+  ]
+}

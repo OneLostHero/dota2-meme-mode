@@ -1,0 +1,80 @@
+<!-- xml reconstructed by Source 2 Viewer 5.0.0.0 - https://valveresourceformat.github.io -->
+<root>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/plugin_settings_review.js" />
+	</scripts>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="file://{resources}/styles/custom_game/plugin_settings.css" />
+	</styles>
+	<snippets>
+		<snippet name="PluginSettingsReviewButton">
+			<Button class="PluginSettingsReviewButton" />
+		</snippet>
+		<snippet name="PluginLabel">
+			<Panel id="PluginLabel" class="PluginLabel">
+				<Label id="PluginLabelText" text="unknown" />
+			</Panel>
+		</snippet>
+		<snippet name="PluginSettings">
+			<Panel id="PluginSettings" class="PluginSettings">
+				<Panel id="PluginSettingsHeader" class="PluginSettingsHeader">
+					<ToggleButton id="PluginEnabled" text="unknown" />
+					<DropDown id="PluginTeamSelect">
+						<Label text="#DOTA_TEAM_ALL" id="0"/>
+						<Label text="#DOTA_TEAM_SPECTATOR" id="1"/>
+						<Label text="#DOTA_GoodGuys" id="2"/>
+						<Label text="#DOTA_BadGuys" id="3"/>
+						<Label text="#DOTA_TEAM_CUSTOM_1" id="6"/>
+						<Label text="#DOTA_TEAM_CUSTOM_2" id="7"/>
+						<Label text="#DOTA_TEAM_CUSTOM_3" id="8"/>
+						<Label text="#DOTA_TEAM_CUSTOM_4" id="9"/>
+						<Label text="#DOTA_TEAM_CUSTOM_5" id="10"/>
+						<Label text="#DOTA_TEAM_CUSTOM_6" id="11"/>
+						<Label text="#DOTA_TEAM_CUSTOM_7" id="12"/>
+						<Label text="#DOTA_TEAM_CUSTOM_8" id="13"/>
+					</DropDown>
+				</Panel>
+				<Panel id="PluginSettingsDescription">
+					<Label id="PluginSettingsDescriptionText" text=""/>
+					<Panel id="PluginSettingsAuthorBox">
+						<Label id="PluginSettingsAuthorLable" text="Author:"/>
+						<DOTAAvatarImage id="AuthorAvatar" steamid="" />
+					</Panel>
+				</Panel>
+				<Panel id="PluginSettingsInternalScroll" />
+			</Panel>
+		</snippet>
+		<snippet name="SettingTypeBoolean">
+			<Panel id="SettingTypeBoolean" class="SettingTypeBoolean SettingGeneral">
+				<ToggleButton id="SettingTypeBooleanInput" text="unknown" />
+			</Panel>
+		</snippet>
+		<snippet name="SettingTypeText">
+			<Panel id="SettingTypeText" class="SettingTypeText SettingGeneral">
+				<TextEntry id="SettingTypeTextInput" text="unknown" />
+				<Label id="SettingTypeTextLabel" text="unknown" />
+			</Panel>
+		</snippet>
+		<snippet name="SettingTypeNumber">
+			<Panel id="SettingTypeNumber" class="SettingTypeNumber SettingGeneral">
+				<TextEntry id="SettingTypeNumberInput" text="unknown" />
+				<Label id="SettingTypeNumberLabel" text="unknown" />
+			</Panel>
+		</snippet>
+		<snippet name="SettingTypeDropdown">
+			<Panel id="SettingTypeDropdown" class="SettingTypeDropdown SettingGeneral">
+				<DropDown id="SettingTypeDropdownInput" />
+				<Label id="SettingTypeDropdownLabel" text="unknown" />
+			</Panel>
+		</snippet>
+	</snippets>
+	<Panel class="WindowRoot hidden">
+		<Panel id="WindowRoot">
+			<Panel id="PluginList">
+				<Panel id="PluginListInternalScroll" />
+			</Panel>
+			<Panel id="PluginSettingsBox" />
+		</Panel>
+	</Panel>
+</root>

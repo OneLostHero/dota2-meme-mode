@@ -1,0 +1,14 @@
+"plugin_settings"
+{
+    "Order" "7"
+    "enabled" {
+        "TYPE" "boolean"
+        "DEFAULT" "0"
+    }
+    "kill_limit"
+    {
+        "Order" "2"
+        "TYPE" "number"
+        "DEFAULT" "50"
+    }
+}

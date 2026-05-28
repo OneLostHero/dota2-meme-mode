@@ -1,0 +1,175 @@
+"plugin_settings"
+{
+    "Order" "69421"
+    "enabled" {
+        "TYPE" "boolean"
+        "DEFAULT" "0"
+    }
+    "core_apply_team" {
+        "TYPE" "dropdown"
+        "DEFAULT" "0"
+        "OPTIONS" {
+            "DOTA_TEAM_ALL" "0" // "DOTA_TEAM_ALL"
+            "DOTA_TEAM_SPECTATOR" "1" // "DOTA_TEAM_SPECTATOR"
+            "DOTA_TEAM_GOODGUYS" "2" // "DOTA_TEAM_GOODGUYS"
+            "DOTA_TEAM_BADGUYS" "3" // "DOTA_TEAM_BADGUYS"
+            "DOTA_TEAM_CUSTOM_1" "6" // "DOTA_TEAM_CUSTOM_1"
+            "DOTA_TEAM_CUSTOM_2" "7" // "DOTA_TEAM_CUSTOM_2"
+            "DOTA_TEAM_CUSTOM_3" "8" // "DOTA_TEAM_CUSTOM_3"
+            "DOTA_TEAM_CUSTOM_4" "9" // "DOTA_TEAM_CUSTOM_4"
+            "DOTA_TEAM_CUSTOM_5" "10" // "DOTA_TEAM_CUSTOM_5"
+            "DOTA_TEAM_CUSTOM_6" "11" // "DOTA_TEAM_CUSTOM_6"
+            "DOTA_TEAM_CUSTOM_7" "12" // "DOTA_TEAM_CUSTOM_7"
+            "DOTA_TEAM_CUSTOM_8" "13" // "DOTA_TEAM_CUSTOM_8"
+        }
+    }
+    "UPGRADE_RATE"
+    {
+        "Order" "2"
+        "TYPE" "number"
+        "UNIT" "%"
+        "DEFAULT" "50"
+    }
+    "DOWNGRADE_RATE"
+    {
+        "Order" "4"
+        "TYPE" "number"
+        "UNIT" "%"
+        "DEFAULT" "15"
+    }
+    "RARE_MULTIPLIER"
+    {
+        "Order" "8"
+        "TYPE" "number"
+        "UNIT" "%"
+        "DEFAULT" "150"
+    }
+    "ULTRA_MULTIPLIER"
+    {
+        "Order" "10"
+        "TYPE" "number"
+        "UNIT" "%"
+        "DEFAULT" "200"
+    }
+
+    "base_list" {
+        "Order" "15"
+        "TYPE" "dropdown"
+        "DEFAULT" "all"
+        "OPTIONS" {
+            "all" "all"
+            "none" "none"
+        }
+    }
+    "custom_list" {
+        "Order" "17"
+        "TYPE" "text"
+        "DEFAULT" ""
+    }
+    "custom_list_patch" {
+        "Order" "18"
+        "TYPE" "boolean"
+        "DEFAULT" "1"
+    }
+    "negative_one_block" {
+        "Order" "19"
+        "TYPE" "boolean"
+        "DEFAULT" "1"
+    }
+    "cost" {
+        "Order" "29"
+        "TYPE" "number"
+        "DEFAULT" "100"
+    }
+    "currency"
+    {
+        "Order" "28"
+        "TYPE" "dropdown"
+        "DEFAULT" "red"
+        "OPTIONS" {
+            "red" "red"
+            "green" "green"
+            "blue" "blue"
+            "purple" "purple"
+        }
+    }
+    "kv_bans" {
+        "Order" "30"
+        "TYPE" "number"
+        "DEFAULT" "5"
+    }
+    "only_slot"
+    {
+        "Order"     "32"
+        "TYPE" "dropdown"
+        "DEFAULT" "any"
+        "OPTIONS" {
+            "any" "any"
+            "q" "q"
+            "w" "w"
+            "e" "e"
+            "d" "d"
+            "f" "f"
+            "r" "r"
+        }
+    }
+    "MAX_MULTIPLIER"
+    {
+        "Order" "35"
+        "TYPE" "number"
+        "UNIT" "%"
+        "DEFAULT" "10000"
+    }
+    "MIN_MULTIPLIER"
+    {
+        "Order" "36"
+        "TYPE" "number"
+        "UNIT" "%"
+        "DEFAULT" "-10000"
+    }
+    "upgrade_count" {
+        "Order" "37"
+        "TYPE" "number"
+        "DEFAULT" "2"
+    }
+    "kv_count_bonus" {
+        "Order" "38"
+        "TYPE" "number"
+        "DEFAULT" "4"
+    }
+    
+    "rare_chance" {
+        "Order" "40"
+        "TYPE" "number"
+        "UNIT" "%"
+        "DEFAULT" "25"
+    }
+    "ultra_chance" {
+        "Order" "41"
+        "TYPE" "number"
+        "UNIT" "%"
+        "DEFAULT" "1"
+    }
+
+    "upgrade_normal_items" {
+        "Order" "400"
+        "TYPE" "boolean"
+        "DEFAULT" "0"
+    }
+
+    "upgrade_neutral_items" {
+        "Order" "401"
+        "TYPE" "boolean"
+        "DEFAULT" "1"
+    }
+
+    "no_nerf_list" {
+        "Order" "999"
+
+        "TYPE" "boolean"
+        "DEFAULT" "0"
+    }
+
+
+    
+}

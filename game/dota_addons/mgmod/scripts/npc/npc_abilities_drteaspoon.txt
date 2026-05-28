@@ -1,0 +1,84 @@
+"DOTAAbilities"
+{
+	"drteaspoon_multicast"
+	{
+		"BaseClass"						"ability_lua"
+		"CustomList"					"fixes"
+		"AbilityTextureName"        "drteaspoon/drteaspoon_multicast"
+		"ScriptFile"					"abilities/drteaspoon/multicast/ability"
+		"AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityValues"
+        {
+            "multicast_2_times"		"75 75 75"
+            "multicast_3_times"		"0 30 30"
+            "multicast_4_times"		"0 0 15"
+        }
+	}
+
+	"drteaspoon_black_king_bar"
+	{
+		"BaseClass"						"ability_lua"
+		"CustomList"					"drteaspoon"
+		"AbilityTextureName"        "drteaspoon/drteaspoon_black_king_bar"
+		"ScriptFile"					"abilities/drteaspoon/black_king_bar/ability"
+		"AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+
+		"AbilityCooldown"				"25"
+		"AbilityManaCost"				"50"
+        "AbilityValues"
+        {
+            "duration"		"3.0 4.5 6.0 7.5"
+        }
+	}
+
+	"drteaspoon_blink"
+	{
+		"BaseClass"						"ability_lua"
+		"CustomList"					"drteaspoon"
+		"AbilityTextureName"        "drteaspoon/drteaspoon_blink"
+		"ScriptFile"					"abilities/drteaspoon/blink/ability"
+		"AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		
+		"AbilityCastPoint"				"0.7"
+
+		"AbilityManaCost"				"50"
+		"AbilityCooldown"				"12 10 8 6"
+        "AbilityValues"
+        {
+            "distance"		"700 900 1200 1400"
+        }
+	}
+
+	"drteaspoon_witchcraft"
+	{
+		"BaseClass"						"ability_lua"
+		"CustomList"					"fixes"
+		"AbilityTextureName"        "drteaspoon/drteaspoon_witchcraft"
+		"ScriptFile"					"abilities/drteaspoon/witchcraft/ability"
+		"AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+        "AbilityValues"
+        {
+            "cooldown_reduction"		"1 2 3 4"
+            "manacost_reduction"		"10 15 20 25"
+            "movement_speed_bonus_pct"		"5 10 15 20"
+        }
+	}
+
+	"kvscanner"
+	{
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"        "drteaspoon/kvscanner"
+		"ScriptFile"					"plugin_system/plugins/devstuff/abilities/kvscanner"
+		"AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"CustomList"					"testing"
+        "AbilityValues"
+        {
+			"none" "1"
+        }
+	}
+}

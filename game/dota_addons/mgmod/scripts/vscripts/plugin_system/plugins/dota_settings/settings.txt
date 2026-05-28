@@ -1,0 +1,214 @@
+"plugin_settings"
+{
+    "Order" "0"
+    "enabled" {
+        "TYPE" "boolean"
+        "DEFAULT" "1"
+    }
+    "courier_enabled"
+    {
+        "Order" "0"
+        "TYPE" "boolean"
+        "DEFAULT" "1"
+    }
+    "univeral_Shop"
+    {
+        "Order" "1"
+        "TYPE" "boolean"
+        "DEFAULT" "0"
+    }
+    "single_buyback"
+    {
+        "Order" "2"
+        "TYPE" "boolean"
+        "DEFAULT" "0"
+    }
+    "hero_banning"
+    {
+        "Order" "3"
+        "TYPE" "boolean"
+        "DEFAULT" "0"
+    }
+
+    "pregame_time"
+    {
+        "Order" "6"
+        "TYPE" "number"
+        "UNIT" "s"
+        "DEFAULT" "60"
+    }
+    "heropick_time"
+    {
+        "Order" "7"
+        "TYPE" "number"
+        "UNIT" "s"
+        "DEFAULT" "60"
+    }
+    "strategy_time"
+    {
+        "Order" "8"
+        "TYPE" "number"
+        "UNIT" "s"
+        "DEFAULT" "10"
+    }
+
+    "gold_gain_percent"
+    {
+        "Order" "10"
+        "TYPE" "number"
+        "UNIT" "%"
+        "DEFAULT" "100"
+    }
+    "xp_gain_percent"
+    {
+        "Order" "15"
+        "TYPE" "number"
+        "UNIT" "%"
+        "DEFAULT" "100"
+    }
+    "death_time_percent"
+    {
+        "Order" "20"
+        "TYPE" "number"
+        "UNIT" "%"
+        "DEFAULT" "35"
+    }
+    "pick_mode"
+    {
+        "Order" "21"
+        "TYPE" "dropdown"
+        "DEFAULT" "allpick"
+        "OPTIONS" {
+            "allpick" "0"
+            "allrandom" "1"
+            "singledraft" "2"
+            "captainspick" "3"
+            "hostpick" "4"
+        }
+    }
+    "courier_turbo"
+    {
+        "Order" "24"
+        "TYPE" "boolean"
+        "DEFAULT" "0"
+    }
+    "courier_speed"
+    {
+        "Order" "25"
+        "TYPE" "number"
+        "UNIT" "%"
+        "DEFAULT" "400"
+    }
+    "max_level"
+    {
+        "Order" "99"
+        "TYPE" "number"
+        "DEFAULT" "30"
+    }
+    "agh_shard_time"
+    {
+        "Order" "50"
+        "TYPE" "number"
+        "UNIT" "min"
+        "DEFAULT" "15"
+    }
+
+    "sell_anywhere"
+    {
+        "Order" "700"
+        "TYPE" "boolean"
+        "DEFAULT" "0"
+    }
+    "allow_neutral_drops"
+    {
+        "Order" "720"
+        "TYPE" "boolean"
+        "DEFAULT" "1"
+    }
+//    "bounty_rune_spawn_interval"
+//    {
+//        "Order" "701"
+//        "TYPE" "number"
+//        "UNIT" "s"
+//        "DEFAULT" "180"
+//    }
+//    "power_rune_spawn_interval"
+//    {
+//        "Order" "702"
+//        "TYPE" "number"
+//        "UNIT" "s"
+//        "DEFAULT" "360"
+//    }
+//    "xp_rune_spawn_interval"
+//    {
+//        "Order" "703"
+//        "TYPE" "number"
+//        "UNIT" "s"
+//        "DEFAULT" "420"
+//    }
+    "backdoor_protection"
+    {
+        "Order" "705"
+        "TYPE" "boolean"
+        "DEFAULT" "1"
+    }
+    "allow_buyback"
+    {
+        "Order" "706"
+        "TYPE" "boolean"
+        "DEFAULT" "1"
+    }
+//    "backback_cooldown"
+//    {
+//        "Order" "707"
+//        "TYPE" "number"
+//        "UNIT" "%"
+//        "DEFAULT" "100"
+//    }
+    "day_night_rate"
+    {
+        "Order" "709"
+        "TYPE" "number"
+        "UNIT" "%"
+        "DEFAULT" "100"
+    }
+
+    "gold_per_tick"
+    {
+        "Order" "710"
+        "TYPE" "number"
+        "DEFAULT" "1"
+    }
+    "gold_tick"
+    {
+        "Order" "711"
+        "TYPE" "number"
+        "UNIT" "s"
+        "DEFAULT" "0.67"
+    }
+    "starting_gold"
+    {
+        "Order" "712"
+        "TYPE" "number"
+        "DEFAULT" "600"
+    }
+    "allow_samehero"
+    {
+        "Order" "713"
+        "TYPE" "boolean"
+        "DEFAULT" "0"
+    }
+    "tree_grow_time"
+    {
+        "Order" "714"
+        "TYPE" "number"
+        "UNIT" "s"
+        "DEFAULT" "180"
+    }
+    "allow_respawn"
+    {
+        "Order" "715"
+        "TYPE" "boolean"
+        "DEFAULT" "1"
+    }
+}

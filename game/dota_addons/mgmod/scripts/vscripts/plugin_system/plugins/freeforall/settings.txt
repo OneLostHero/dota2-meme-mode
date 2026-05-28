@@ -1,0 +1,26 @@
+"plugin_settings"
+{
+    "Order" "4567"
+    "enabled" {
+        "TYPE" "boolean"
+        "DEFAULT" "0"
+    }
+    "placement"
+    {
+        "Order" "2"
+        "TYPE" "dropdown"
+        "DEFAULT" "ordered_ring"
+        "OPTIONS" {
+            "ordered_ring" "0"
+            "offset_ring" "1"
+            "within_circle" "2"
+            "within_box" "3"
+        }
+    }
+    "distance"
+    {
+        "Order" "3"
+        "TYPE" "number"
+        "DEFAULT" "8000"
+    }
+}

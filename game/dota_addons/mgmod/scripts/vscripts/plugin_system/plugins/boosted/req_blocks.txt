@@ -1,0 +1,6 @@
+"blocklist"
+{
+    "all" {
+        "var_type" "1"
+    }
+}

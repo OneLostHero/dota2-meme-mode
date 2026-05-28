@@ -1,0 +1,33 @@
+"plugin_settings"
+{
+    "Order" "69400"
+    "author" "76561198072015344"
+    "enabled" {
+        "TYPE" "boolean"
+        "DEFAULT" "0"
+    }
+    "damage_percent" {
+        "TYPE" "number"
+        "DEFAULT" "50"
+    }
+    "radius_percent" {
+        "TYPE" "number"
+        "DEFAULT" "50"
+    }
+    "heal_percent" {
+        "TYPE" "number"
+        "DEFAULT" "30"
+    }
+    "mana_percent" {
+        "TYPE" "number"
+        "DEFAULT" "30"
+    }
+    "force_pattern" {
+        "TYPE" "number"
+        "DEFAULT" "0"
+    }
+    "cooldown" {
+        "TYPE" "number"
+        "DEFAULT" "0"
+    }
+}

@@ -1,0 +1,36 @@
+<!-- xml reconstructed by Source 2 Viewer 5.0.0.0 - https://valveresourceformat.github.io -->
+<root>
+	<styles>
+		<include src="file://{resources}/styles/custom_game/upgrade.css" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/upgrade.js" />
+	</scripts>
+	<snippets>
+		<snippet name="UpgradeOption">
+			<Panel class="UpgradeOption">
+				<DOTAAbilityImage id="UpgradeOptionImage" class="OptionImage" />
+				<DOTAItemImage id="UpgradeOptionImageItem" class="OptionImage" />
+				<Button id="AbilityChangeReport"/>
+				<Label id="UpgradeOptionLabel" html="true" text="key_value" />
+				<Button id="OptionButtonPlus" class="OptionButton">
+					<Label class="OptionNumText" id="OptionButtonPlusText" text="option_plus" />
+				</Button>
+				<Button id="OptionButtonMinus" class="OptionButton">
+					<Label class="OptionNumText" id="OptionButtonMinusText" text="option_minus" />
+				</Button>
+				<Button id="OptionButtonBan" class="OptionButton">
+					<Label class="OptionNumText" id="OptionButtonBanText" text="X" />
+				</Button>
+			</Panel>
+		</snippet>
+	</snippets>
+	<Panel class="PersonalUpgradeScreen" hittest="false" visible="true">
+		<Panel id="QueuedUpgrades">
+			<Label id="QueuedUpgradesText" text="0"/>
+		</Panel>
+
+		<Panel id="Upgrades" />
+		
+	</Panel>
+</root>

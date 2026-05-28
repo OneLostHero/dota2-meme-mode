@@ -1,0 +1,86 @@
+"plugin_settings"
+{
+    "Order" "890"
+    "enabled" {
+        "TYPE" "boolean"
+        "DEFAULT" "0"
+    }
+    "core_apply_team" {
+        "TYPE" "dropdown"
+        "DEFAULT" "0"
+        "OPTIONS" {
+            "DOTA_TEAM_ALL" "0" // "DOTA_TEAM_ALL"
+            "DOTA_TEAM_SPECTATOR" "1" // "DOTA_TEAM_SPECTATOR"
+            "DOTA_TEAM_GOODGUYS" "2" // "DOTA_TEAM_GOODGUYS"
+            "DOTA_TEAM_BADGUYS" "3" // "DOTA_TEAM_BADGUYS"
+            "DOTA_TEAM_CUSTOM_1" "6" // "DOTA_TEAM_CUSTOM_1"
+            "DOTA_TEAM_CUSTOM_2" "7" // "DOTA_TEAM_CUSTOM_2"
+            "DOTA_TEAM_CUSTOM_3" "8" // "DOTA_TEAM_CUSTOM_3"
+            "DOTA_TEAM_CUSTOM_4" "9" // "DOTA_TEAM_CUSTOM_4"
+            "DOTA_TEAM_CUSTOM_5" "10" // "DOTA_TEAM_CUSTOM_5"
+            "DOTA_TEAM_CUSTOM_6" "11" // "DOTA_TEAM_CUSTOM_6"
+            "DOTA_TEAM_CUSTOM_7" "12" // "DOTA_TEAM_CUSTOM_7"
+            "DOTA_TEAM_CUSTOM_8" "13" // "DOTA_TEAM_CUSTOM_8"
+        }
+    }
+    "fountain" {
+        "Order" "1"
+        "TYPE" "boolean"
+        "DEFAULT" "0"
+    }
+    "timer" {
+        "Order" "2"
+        "TYPE" "number"
+        "DEFAULT" "30"
+        "UNIT" "s"
+    }
+    "tower_effect" {
+        "Order" "3"
+        "TYPE" "number"
+        "DEFAULT" "100"
+        "UNIT" "%"
+    }
+    "hero_effect" {
+        "Order" "4"
+        "TYPE" "number"
+        "DEFAULT" "50"
+        "UNIT" "%"
+    }
+    "unit_effect" {
+        "Order" "5"
+        "TYPE" "number"
+        "DEFAULT" "5"
+        "UNIT" "%"
+    }
+
+    "stonks_random_effect" {
+        "Order" "6"
+        "TYPE" "number"
+        "DEFAULT" "15"
+    }
+    "min_stonk_price" {
+        "Order" "7"
+        "TYPE" "number"
+        "DEFAULT" "5"
+    }
+    "min_start_left" {
+        "Order" "8"
+        "TYPE" "number"
+        "DEFAULT" "8000"
+    }
+    "max_start_left" {
+        "Order" "9"
+        "TYPE" "number"
+        "DEFAULT" "9999"
+    }
+    "min_start_cost" {
+        "Order" "10"
+        "TYPE" "number"
+        "DEFAULT" "50"
+    }
+    "max_start_cost" {
+        "Order" "11"
+        "TYPE" "number"
+        "DEFAULT" "500"
+    }
+}

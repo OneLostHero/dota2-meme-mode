@@ -1,0 +1,22 @@
+"AddonInfo"
+{
+	"EnablePickRules"                 "1"
+	"maps"                            "boosted dota boosted24 dota24"
+    "HeroGuidesSupported"				"1"
+	"boosted"
+	{
+		"MaxPlayers"	"10"
+	}
+	"dota"
+	{
+		"MaxPlayers"	"10"
+	}
+	"boosted24"
+	{
+		"MaxPlayers"	"24"
+	}
+	"dota24"
+	{
+		"MaxPlayers"	"24"
+	}
+}

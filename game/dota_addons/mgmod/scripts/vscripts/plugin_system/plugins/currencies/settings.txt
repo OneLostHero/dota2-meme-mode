@@ -1,0 +1,316 @@
+"plugin_settings"
+{
+    "Order" "50"
+    "enabled" {
+        "TYPE" "boolean"
+        "DEFAULT" "0"
+    }
+    "red_state"
+    {
+        "Order" "10"
+        "TYPE" "dropdown"
+        "DEFAULT" "team"
+        "OPTIONS" {
+            "none" "none"
+            "solo" "solo"
+            "team" "team"
+            "all" "all"
+        }
+    }
+    "red_gold_buy"
+    {
+        "Order" "11"
+        "TYPE" "number"
+        "DEFAULT" "50"
+    }
+    "green_state"
+    {
+        "Order" "20"
+        "TYPE" "dropdown"
+        "DEFAULT" "none"
+        "OPTIONS" {
+            "none" "none"
+            "solo" "solo"
+            "team" "team"
+            "all" "all"
+        }
+    }
+    "green_gold_buy"
+    {
+        "Order" "21"
+        "TYPE" "number"
+        "DEFAULT" "0"
+    }
+    "blue_state"
+    {
+        "Order" "30"
+        "TYPE" "dropdown"
+        "DEFAULT" "none"
+        "OPTIONS" {
+            "none" "none"
+            "solo" "solo"
+            "team" "team"
+            "all" "all"
+        }
+    }
+    "blue_gold_buy"
+    {
+        "Order" "31"
+        "TYPE" "number"
+        "DEFAULT" "0"
+    }
+    "purple_state"
+    {
+        "Order" "40"
+        "TYPE" "dropdown"
+        "DEFAULT" "none"
+        "OPTIONS" {
+            "none" "none"
+            "solo" "solo"
+            "team" "team"
+            "all" "all"
+        }
+    }
+    "purple_gold_buy"
+    {
+        "Order" "41"
+        "TYPE" "number"
+        "DEFAULT" "0"
+    }
+
+    ///rewards
+    
+    "unit_kill_reward_currency"
+    {
+        "Order" "50"
+        "TYPE" "dropdown"
+        "DEFAULT" "red"
+        "OPTIONS" {
+            "red" "red"
+            "green" "green"
+            "blue" "blue"
+            "purple" "purple"
+        }
+    }
+    "unit_kill_reward_amount"
+    {
+        "Order" "51"
+        "TYPE" "number"
+        "DEFAULT" "1"
+    }
+    
+    "hero_kill_reward_currency"
+    {
+        "Order" "52"
+        "TYPE" "dropdown"
+        "DEFAULT" "red"
+        "OPTIONS" {
+            "red" "red"
+            "green" "green"
+            "blue" "blue"
+            "purple" "purple"
+        }
+    }
+    "hero_kill_reward_amount"
+    {
+        "Order" "53"
+        "TYPE" "number"
+        "DEFAULT" "25"
+    }
+    "hero_kill_reward_bounty"
+    {
+        "Order" "54"
+        "TYPE" "number"
+        "DEFAULT" "0"
+    }
+    
+    "observer_kill_reward_currency"
+    {
+        "Order" "60"
+        "TYPE" "dropdown"
+        "DEFAULT" "red"
+        "OPTIONS" {
+            "red" "red"
+            "green" "green"
+            "blue" "blue"
+            "purple" "purple"
+        }
+    }
+    "observer_kill_reward_amount"
+    {
+        "Order" "61"
+        "TYPE" "number"
+        "DEFAULT" "25"
+    }
+    
+    "observer_plant_reward_currency"
+    {
+        "Order" "70"
+        "TYPE" "dropdown"
+        "DEFAULT" "red"
+        "OPTIONS" {
+            "red" "red"
+            "green" "green"
+            "blue" "blue"
+            "purple" "purple"
+        }
+    }
+    "observer_plant_reward_amount"
+    {
+        "Order" "71"
+        "TYPE" "number"
+        "DEFAULT" "50"
+    }
+    
+    "timed_reward_currency"
+    {
+        "Order" "80"
+        "TYPE" "dropdown"
+        "DEFAULT" "red"
+        "OPTIONS" {
+            "red" "red"
+            "green" "green"
+            "blue" "blue"
+            "purple" "purple"
+        }
+    }
+    "timed_reward_amount"
+    {
+        "Order" "81"
+        "TYPE" "number"
+        "DEFAULT" "100"
+    }
+    "timed_reward_rate"
+    {
+        "Order" "82"
+        "TYPE" "number"
+        "DEFAULT" "60"
+    }
+    
+    "tower_kill_reward_currency"
+    {
+        "Order" "90"
+        "TYPE" "dropdown"
+        "DEFAULT" "red"
+        "OPTIONS" {
+            "red" "red"
+            "green" "green"
+            "blue" "blue"
+            "purple" "purple"
+        }
+    }
+
+    "tower_kill_reward_amount"
+    {
+        "Order" "91"
+        "TYPE" "number"
+        "DEFAULT" "100"
+    }
+
+    "roshan_kill_reward_currency"
+    {
+        "Order" "100"
+        "TYPE" "dropdown"
+        "DEFAULT" "red"
+        "OPTIONS" {
+            "red" "red"
+            "green" "green"
+            "blue" "blue"
+            "purple" "purple"
+        }
+    }
+
+    "roshan_kill_reward_amount"
+    {
+        "Order" "101"
+        "TYPE" "number"
+        "DEFAULT" "200"
+    }
+    
+    "lamp_capture_reward_currency"
+    {
+        "Order" "110"
+        "TYPE" "dropdown"
+        "DEFAULT" "red"
+        "OPTIONS" {
+            "red" "red"
+            "green" "green"
+            "blue" "blue"
+            "purple" "purple"
+        }
+    }
+
+    "lamp_capture_reward_amount"
+    {
+        "Order" "111"
+        "TYPE" "number"
+        "DEFAULT" "0"
+    }
+    
+    "outpost_capture_reward_currency"
+    {
+        "Order" "120"
+        "TYPE" "dropdown"
+        "DEFAULT" "red"
+        "OPTIONS" {
+            "red" "red"
+            "green" "green"
+            "blue" "blue"
+            "purple" "purple"
+        }
+    }
+
+    "outpost_capture_reward_amount"
+    {
+        "Order" "121"
+        "TYPE" "number"
+        "DEFAULT" "10"
+    }
+    
+
+    "tormentor_kill_reward_currency"
+    {
+        "Order" "130"
+        "TYPE" "dropdown"
+        "DEFAULT" "red"
+        "OPTIONS" {
+            "red" "red"
+            "green" "green"
+            "blue" "blue"
+            "purple" "purple"
+        }
+    }
+
+    "tormentor_kill_reward_amount"
+    {
+        "Order" "131"
+        "TYPE" "number"
+        "DEFAULT" "500"
+    }
+
+    //Starting amounts
+    "red_start"
+    {
+        "Order" "140"
+        "TYPE" "number"
+        "DEFAULT" "0"
+    }
+    "green_start"
+    {
+        "Order" "141"
+        "TYPE" "number"
+        "DEFAULT" "0"
+    }
+    "blue_start"
+    {
+        "Order" "142"
+        "TYPE" "number"
+        "DEFAULT" "0"
+    }
+    "purple_start"
+    {
+        "Order" "143"
+        "TYPE" "number"
+        "DEFAULT" "0"
+    }
+}

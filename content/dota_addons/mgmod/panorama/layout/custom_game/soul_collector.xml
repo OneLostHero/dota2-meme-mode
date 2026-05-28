@@ -1,0 +1,26 @@
+<!-- xml reconstructed by Source 2 Viewer 5.0.0.0 - https://valveresourceformat.github.io -->
+<root>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/soul_collector.js" />
+	</scripts>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="file://{resources}/styles/custom_game/soul_collector.css" />
+	</styles>
+	<snippets>
+		<snippet name="ButtonBar_SoulCollector">
+			<Button class="ButtonBar_SoulCollector" />
+		</snippet>
+	</snippets>
+	<Panel class="SoulCollector">
+		<Panel id="WindowRoot">
+			<Panel id="RadiantSouls" class="sous_bg">
+				<Label id="team_2" class="souls_count" text="0" />
+			</Panel>
+			<Panel class="spacer" />
+			<Panel id="DireSouls" class="sous_bg">
+				<Label id="team_3" class="souls_count" text="0" />
+			</Panel>
+		</Panel>
+	</Panel>
+</root>
