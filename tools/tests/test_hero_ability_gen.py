@@ -1,4 +1,4 @@
-from tools.hero_ability_gen import direction_hint
+from tools.hero_ability_gen import direction_hint, parse_active_heroes, hero_short
 
 
 def test_cost_fields_are_lower_stronger():
@@ -24,3 +24,23 @@ def test_unknown_returns_none():
     assert direction_hint("block_targeting") is None
     assert direction_hint("projectile_speed") == "higher = stronger"  # speed matches
     assert direction_hint("some_opaque_flag") is None
+
+
+def test_parse_active_heroes_keeps_order_and_filters():
+    text = '''"whitelist"
+{
+    "npc_dota_hero_riki" "1"
+    "npc_dota_hero_queenofpain" "1"
+    "npc_dota_hero_disabled" "0"
+    "npc_dota_hero_skeleton_king"\t"1"
+}'''
+    assert parse_active_heroes(text) == [
+        "npc_dota_hero_riki",
+        "npc_dota_hero_queenofpain",
+        "npc_dota_hero_skeleton_king",
+    ]
+
+
+def test_hero_short_strips_prefix():
+    assert hero_short("npc_dota_hero_skeleton_king") == "skeleton_king"
+    assert hero_short("npc_dota_hero_riki") == "riki"
