@@ -6,7 +6,7 @@ function Cleanup() {
 (function () {
     Cleanup();
     let custom_shop_tittle = FindDotaHudElement("CustomShopTitle");
-    custom_shop_tittle.text = "MG Mod Shop";
+    custom_shop_tittle.text = "Meme Mode Shop";
     let custom_shop_grid = FindDotaHudElement("GridCustomShopItems");
 
     let custom_shop_row = $.CreatePanel('Panel', $.GetContextPanel(), "ShopItems_customshop" );

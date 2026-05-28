@@ -381,7 +381,7 @@
 
 		//archive_pack_one
 		"Plugin_archive_pack_one" "Archive Pack I"
-		"Plugin_archive_pack_one_Description" "Collection of modifications released before MG Mod."
+		"Plugin_archive_pack_one_Description" "Collection of older Dota 2 modifications from before this plugin system."
 		"Plugin_archive_pack_one_Option_clicks_death" "100 clicks"
 		"Plugin_archive_pack_one_Option_clicks_death_Description" "After 100 clicks your hero dies."
 		"Plugin_archive_pack_one_Option_symbiosis" "5 Head"

@@ -349,7 +349,7 @@
         "Plugin_xmas12_Option_day12_Description" "Вся видимость уменьшена до 0%. Героям предоставляется короткий конус видимости."
 
         "Plugin_archive_pack_one" "Архивный пакет I"
-        "Plugin_archive_pack_one_Description" "Коллекция модификаций, выпущенных до MG Mod."
+        "Plugin_archive_pack_one_Description" "Коллекция старых модификаций Dota 2 до этой системы плагинов."
         "Plugin_archive_pack_one_Option_clicks_death" "100 кликов"
         "Plugin_archive_pack_one_Option_clicks_death_Description" "После 100 кликов ваш герой погибает."
         "Plugin_archive_pack_one_Option_symbiosis" "5 голов"
