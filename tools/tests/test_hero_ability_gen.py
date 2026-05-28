@@ -44,3 +44,25 @@ def test_parse_active_heroes_keeps_order_and_filters():
 def test_hero_short_strips_prefix():
     assert hero_short("npc_dota_hero_skeleton_king") == "skeleton_king"
     assert hero_short("npc_dota_hero_riki") == "riki"
+
+
+from tools.hero_ability_gen import parse_localized_names
+
+
+def test_parse_localized_names():
+    text = '''"lang"
+{
+"Tokens"
+{
+    "DOTA_Tooltip_ability_riki_smoke_screen" "Smoke Screen"
+    "DOTA_Tooltip_ability_riki_smoke_screen_radius" "RADIUS:"
+    "DOTA_Tooltip_ability_queenofpain_scream_of_pain" "Scream Of Pain"
+    "some_other_token" "ignored"
+}
+}'''
+    names = parse_localized_names(text)
+    assert names["riki_smoke_screen"] == "Smoke Screen"
+    assert names["queenofpain_scream_of_pain"] == "Scream Of Pain"
+    # sub-field tokens are still captured but never queried by ability key
+    assert names["riki_smoke_screen_radius"] == "RADIUS:"
+    assert "some_other_token" not in names

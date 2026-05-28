@@ -39,3 +39,15 @@ def hero_short(hero_key):
     if hero_key.startswith(_HERO_PREFIX):
         return hero_key[len(_HERO_PREFIX):]
     return hero_key
+
+
+_LOC_RE = re.compile(r'"DOTA_Tooltip_ability_([A-Za-z0-9_]+)"\s+"([^"]*)"')
+
+
+def parse_localized_names(loc_text):
+    """Map ability-token -> display string from a *_english.txt tokens file.
+
+    Captures every DOTA_Tooltip_ability_* token. Callers look up exact ability
+    keys (e.g. "riki_smoke_screen"), so sub-field tokens never collide in use.
+    """
+    return {key: value for key, value in _LOC_RE.findall(loc_text)}
