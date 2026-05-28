@@ -21,7 +21,7 @@ PluginSystem.core_items = {}
 PluginSystem.core_units = {}
 
 local JSON = require("utils/dkjson")
-GAMEMODE_SAVE_ID = "mgmod"
+GAMEMODE_SAVE_ID = "dota2_meme_mode"
 
 tStates = {}
 tStates["DOTA_GAMERULES_STATE_INIT"] = DOTA_GAMERULES_STATE_INIT
@@ -561,59 +561,18 @@ end
 
 
 function PluginSystem:SendSettingSave(slot)
-	local host = Toolbox:GetHostId()
-    local steamid = tostring(PlayerResource:GetSteamID(host))
-    if steamid == "0" then
-        return
-    end
-    local url = "http://drteaspoon.fi:3000/butmodes/settings"
-    local req = CreateHTTPRequestScriptVM("POST", url)
+	-- Cloud backend removed during the Meme Mode rebrand (formerly an external
+	-- HTTP server). Presets are saved to the in-session "save_slots" net table
+	-- so the host can save/restore presets during setup.
+	-- TODO: cross-session persistence needs a storage backend (future work).
 	local save = PluginSystem:GenerateSave()
-	
-    local hParams = {
-        player = steamid,
-        modeid = tostring(GAMEMODE_SAVE_ID),
-		slot = tonumber(slot),
-		data = save
-    }
-    req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", GetDedicatedServerKeyV3(GAMEMODE_SAVE_ID))
-	req:SetHTTPRequestHeaderValue("Content-Type", "application/json;charset=UTF-8")
-	req:SetHTTPRequestRawPostBody("application/json", json.encode(hParams))
-
-    req:Send(function(res)
-        if res.StatusCode ~= 200 then
-			--print(res.Body)
-            --print("something went wrong")
-        else
-            --print("all ok")
-			CustomNetTables:SetTableValue("save_slots", "slot_" .. slot, {data = save})
-        end
-    end)
+	CustomNetTables:SetTableValue("save_slots", "slot_" .. slot, {data = save})
 end
 
 function PluginSystem:GetSettingSave(slot)
-	local host = Toolbox:GetHostId()
-    local steamid = tostring(PlayerResource:GetSteamID(host))
-    if steamid == "0" then
-        --print("nope, it's a bot!")
-        return
-    end
-    local url = "http://drteaspoon.fi:3000/butmodes/settings?steamid=" .. steamid .. "&modeid=" .. GAMEMODE_SAVE_ID .. "&slot=" .. slot
-    local req = CreateHTTPRequestScriptVM("GET", url)
-    req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", GetDedicatedServerKeyV3(GAMEMODE_SAVE_ID))
-
-    req:Send(function(res)
-        if res.StatusCode ~= 200 then
-			--print(res.Body)
-            --print("something went wrong")
-        else
-			local data = JSON.decode(res.Body)
-            --print(res.Body)
-			if (#data == 1 and data[1] and data[1].result and #data[1].result == 1 and data[1].result[1].data) then
-				CustomNetTables:SetTableValue("save_slots", "slot_" .. slot, {data = data[1].result[1].data})
-			end
-        end
-    end)
+	-- Cloud backend removed during the Meme Mode rebrand. Presets live only in
+	-- the in-session "save_slots" net table, so there is nothing to fetch here.
+	-- TODO: load from a local/remote backend once cross-session presets exist.
 end
 
 function PluginSystem:LoadHostSettings()

@@ -3,7 +3,7 @@
 	"Language"		"English"
 	"Tokens"
 	{		
-		"addon_game_name"			"MG Mod"
+		"addon_game_name"			"Dota 2 - Meme Mode"
 
 		"DOTA_TEAM_ALL"														"All"
 		"DOTA_TEAM_CUSTOM_1"												"The Chaos"
@@ -26,7 +26,7 @@
 		"DOTA_TEAM_SPECTATOR"														"Spectators"
 
 		"Setuplink_github"		"GitHub"
-		"Setuplink_github_desc"		"MGMod is Open Source! Want to contribute? Want to make your own version? You can!"
+		"Setuplink_github_desc"		"Dota 2 - Meme Mode is Open Source! Want to contribute? Want to make your own version? You can!"
 		"Setuplink_discord"		"Discord"
 		"Setuplink_discord_desc"		"Come chat with other players and contributors."
 		"Setuplink_steamgame"		"Boosted Survivors!"

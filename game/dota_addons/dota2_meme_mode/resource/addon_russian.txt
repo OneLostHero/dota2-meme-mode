@@ -3,7 +3,7 @@
     "Language" "russian" 
 	"Tokens"
 	{		
-		"addon_game_name"			"MG Mod"
+		"addon_game_name"			"Dota 2 - Meme Mode"
 
         "DOTA_TEAM_ALL"														"Все"
         "DOTA_TEAM_CUSTOM_1"												"Хаос"

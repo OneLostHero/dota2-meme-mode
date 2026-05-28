@@ -12,7 +12,7 @@ function HalloweenPlugin:ApplySettings()
 
     local vPos = Vector(0,0,0)
     local iTeam = DOTA_TEAM_NEUTRALS
-    CreateUnitByNameAsync("npc_mgmod_halloween_fishmaster",vPos,true,nil,nil,iTeam,
+    CreateUnitByNameAsync("npc_meme_mode_halloween_fishmaster",vPos,true,nil,nil,iTeam,
     function(hNpc)
         for i=0,hNpc:GetAbilityCount() do
             local hAbility = hNpc:GetAbilityByIndex(i)

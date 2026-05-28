@@ -1449,31 +1449,9 @@ function BoostedPlugin:upgrade_report(tEvent)
 end
 
 function BoostedPlugin:upgrade_report_done(tEvent)
-    local iPlayer = tEvent.PlayerID
-    local sAbility = tEvent.ab
-    local sKV = tEvent.kv
-    local iReason = tEvent.reason
-
-    local url = "http://drteaspoon.fi:3000/list/report"
-    local req = CreateHTTPRequestScriptVM("POST", url)
-	local save = PluginSystem:GenerateSave()
-	
-    local hParams = {
-        ability_name = sAbility,
-        kv_name = sKV,
-		reason = tonumber(iReason)
-    }
-    req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", GetDedicatedServerKeyV3(GAMEMODE_SAVE_ID))
-	req:SetHTTPRequestHeaderValue("Content-Type", "application/json;charset=UTF-8")
-	req:SetHTTPRequestRawPostBody("application/json", json.encode(hParams))
-
-    req:Send(function(res)
-        if res.StatusCode ~= 200 then
-            --print("something went wrong")
-        else
-            --print("all ok")
-        end
-    end)
+    -- The ability-report submission to the external server was removed during the
+    -- Meme Mode rebrand. This handler is kept as a no-op so the client event has a
+    -- valid target. (future work: a replacement reporting backend, if desired.)
 end
 
 function BoostedPlugin:RequestAllAbilityValues(tAbilities,iPlayer)

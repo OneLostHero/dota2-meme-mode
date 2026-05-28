@@ -1,6 +1,6 @@
 "DOTAUnits"
 {
-	"npc_mgmod_halloween_fishmaster"	
+	"npc_meme_mode_halloween_fishmaster"
 	{
 		// General
 		//
