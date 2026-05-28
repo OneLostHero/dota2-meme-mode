@@ -1,0 +1,504 @@
+"DOTAAbilities"
+{
+    "Version"       "1"
+	// DAWNBREAKER START
+	//=================================================================================================================
+	// Dawnbreaker: FIRE WREATH
+	//=================================================================================================================
+	// ---- Starbreaker  (dawnbreaker_fire_wreath) ----
+	// icon: dawnbreaker_fire_wreath
+	"dawnbreaker_fire_wreath"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CAN_SELF_CAST | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"1"
+		"HasShardUpgrade"               "1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		//"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.1"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			
+			"AbilityCooldown"	// lower = stronger
+			{
+				"value"					"17 15 13 11"
+				"special_bonus_unique_dawnbreaker_fire_wreath_cooldown"			"-5"
+			}
+			"duration"					"1.1"	// higher = stronger
+			"swipe_radius"	// higher = stronger
+			{
+				"value"		"300"					
+				"affected_by_aoe_increase"	"1"	
+			}
+			"swipe_damage"	// higher = stronger
+			{
+				"value"											"25 40 55 70"
+				"special_bonus_unique_dawnbreaker_fire_wreath_swipe"		"+20"
+
+			}
+			"smash_radius"	// higher = stronger
+			{
+				"value"		"300"
+				"affected_by_aoe_increase"	"1"	
+			}
+			"smash_damage"	// higher = stronger
+			{
+				"value"				"25 40 55 70"
+				"special_bonus_unique_dawnbreaker_fire_wreath_swipe"			"+18"
+			}
+			"movement_speed"				"215"	// higher = stronger
+			"total_attacks"				"3"	// check tooltip
+			"smash_stun_duration"			"0.6 0.8 1.0 1.2"	// higher = stronger
+			"sweep_stun_duration"			"0.12"	// higher = stronger
+			"self_stun_duration"			"0.2"	// higher = stronger
+			"swipe_slow"			"-100"	// higher = stronger
+			"smash_distance_from_hero"				"120"	// check tooltip
+			"animation_rate"				"0"	// check tooltip
+			"turn_rate"					"90"	// check tooltip
+			"shard_cast_point"	// lower = stronger
+			{
+				"value"			"0.1"
+			}
+			"shard_movement_penalty"	// check tooltip
+			{
+				"value"							"0"
+				"special_bonus_shard"				"+25"
+			}			
+			
+		}	
+	}
+
+	//=================================================================================================================
+	// Dawnbreaker Celestial Hammer
+	//=================================================================================================================
+	// ---- Celestial Hammer  (dawnbreaker_celestial_hammer) ----
+	// icon: dawnbreaker_celestial_hammer
+	"dawnbreaker_celestial_hammer"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		
+		"AbilityCastPoint"				"0.2"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"18 16 14 12"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"110 120 130 140"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"hammer_damage"			"50 80 110 140"	// higher = stronger
+			"projectile_radius"	// higher = stronger
+			{
+				"value"	"200"
+				"affected_by_aoe_increase"	"1"	
+			}
+			"projectile_speed"	// higher = stronger
+			{
+				"value"					"1500"
+				"special_bonus_unique_dawnbreaker_celestial_hammer_cast_range"				"+80%"
+			}
+			"flare_debuff_duration"				"2.5 3 3.5 4"	// higher = stronger
+			"flare_radius"	// higher = stronger
+			{
+				"value"	"200"
+				"affected_by_aoe_increase"	"1"	
+			}
+			"move_slow"	// higher = stronger
+			{
+				"value"							"24 28 32 36"
+				"special_bonus_unique_dawnbreaker_celestial_hammer_slow"		"+15"
+			}	
+			"burn_damage"						"20 30 40 50"	// higher = stronger
+			"burn_interval"						"0.5"	// check tooltip
+			"pause_duration"	// higher = stronger
+			{
+				"value"						"2"
+				"special_bonus_facet_dawnbreaker_gleaming_hammer"			"+2"
+			}
+			"hammer_aoe_radius"						"200"	// higher = stronger
+			"travel_speed_pct"						"100"	// higher = stronger
+			"return_anim_distance_threshold"						"300"	// check tooltip
+			"range"	// higher = stronger
+			{
+				"value"								"700 900 1100 1300"
+				"special_bonus_unique_dawnbreaker_celestial_hammer_cast_range"				"+80%"
+			}
+			"hammer_solar_guardian_radius"	// higher = stronger
+			{
+				"value"											"0"
+				"special_bonus_facet_dawnbreaker_gleaming_hammer"			"+200"
+				"affected_by_aoe_increase"	"1"
+
+			}
+			"hammer_solar_guardian_effectiveness_pct"	// higher = stronger
+			{
+				"value"											"0"
+				"special_bonus_facet_dawnbreaker_gleaming_hammer"			"=50"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Dawnbreaker: Converge
+	//=================================================================================================================
+	// ---- Converge  (dawnbreaker_converge) ----
+	// icon: dawnbreaker_converge
+	"dawnbreaker_converge"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCastAnimation"			"ACT_INVALID"
+
+
+		// Unit Targeting
+		//-------------------------------------------------------------------------------------------------------------
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"375"
+		"AbilityCooldown"				"0.25"	// lower = stronger
+		"AbilityManaCost"				"0"	// lower = stronger
+	}	
+	//=================================================================================================================
+	// Ability: Dawnbreaker Luminosity
+	//=================================================================================================================
+	// ---- dawnbreaker_luminosity  (dawnbreaker_luminosity) ----
+	"dawnbreaker_luminosity"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_OVERRIDE_ABILITY_3"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+
+
+		"AbilityValues"
+		{
+				"attack_count"	// higher = stronger
+				{
+					"value"		"3"
+					"special_bonus_unique_dawnbreaker_luminosity_attack_count"		"-1"
+  
+				}
+				"heal_radius"	// higher = stronger
+				{
+					"value"		"650"
+					"affected_by_aoe_increase"	"1"	
+				}
+				"heal_pct"					"35 40 45 50"	// higher = stronger
+				"heal_from_creeps"			"40"	// higher = stronger
+				"bonus_damage"	// higher = stronger
+				{
+					"value"		"125 150 175 200"
+					"special_bonus_unique_dawnbreaker_luminosity_crit"		"+50"
+				}	
+				"proc_cooldown"				"0.00"	// lower = stronger
+				"allied_healing_pct"		"50"	// higher = stronger
+				"cooldown_reduction"	// higher = stronger
+				{
+					"value"									"0"
+					"special_bonus_facet_dawnbreaker_solar_charged"		"1"				
+				}
+				"attackspeed_bonus_max"	// higher = stronger
+				{
+					"value"					"0"
+					"special_bonus_facet_dawnbreaker_solar_battery"		"+50"					
+				}
+				"movespeed_bonus_max"	// higher = stronger
+				{
+					"value"					"0"
+					"special_bonus_facet_dawnbreaker_solar_battery"		"+20"					
+				}
+		
+		}
+	}
+	//=================================================================================================================
+	// Dawnbreaker: Solar Guardian
+	//=================================================================================================================
+	// ---- Solar Guardian  (dawnbreaker_solar_guardian) ----
+	// icon: dawnbreaker_solar_guardian
+	"dawnbreaker_solar_guardian"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"1"
+		"LinkedAbility"					"dawnbreaker_land"
+		"HasScepterUpgrade"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.1 0.1 0.1 0.1"
+		"AbilityChannelTime"			"1.7"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150 200 250"	// lower = stronger
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.25"	// generally used for damage only
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityCooldown"	// lower = stronger
+			{
+				"value"				"120 105 90"
+				"special_bonus_unique_dawnbreaker_solar_guardian_cooldown"			"-20"
+			}
+
+			"airtime_duration"				"0.8"	// higher = stronger
+			"radius"	// higher = stronger
+			{
+				"value"															"500"
+				"special_bonus_unique_dawnbreaker_solar_guardian_radius"		"+150"
+				"affected_by_aoe_increase"	"1"	
+			}
+			"base_damage"	// higher = stronger
+			{
+				"value"			"30 50 70"
+				"CalculateSpellDamageTooltip" "1"
+			}
+			"base_heal"	// higher = stronger
+			{
+				"value"				"45 70 95"
+				"special_bonus_scepter"	"+15 20 25"
+			}
+			"pulse_interval"				"0.5"	// check tooltip
+			"land_damage"	// higher = stronger
+			{
+				"value"			"130 160 190"
+				"CalculateSpellDamageTooltip" "1"
+			}
+			"land_stun_duration"			"1.4 1.6 1.8"	// higher = stronger
+			"max_offset_distance"			"350"	// check tooltip
+			"scepter_channel_time"	// check tooltip
+			{
+				"value"	"1.0"
+				"RequiresScepter"			"1"
+			}
+			"airtime_scepter_bonus"	// higher = stronger
+			{
+				"value"				"3.5"
+				"RequiresScepter"			"1"
+			}
+			"miss_rate"	// higher = stronger
+			{
+				"value"			"60"
+				"RequiresScepter"			"1"
+			}
+			"airtime_scepter_movement_speed"				"200"	// higher = stronger
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		//"AbilityChannelAnimation"	"ACT_DOTA_CAST_ABILITY_4"
+	}
+
+	//=================================================================================================================
+	// Ability: Dawnbreaker: Land
+	//=================================================================================================================
+	// ---- Land Solar Guardian  (dawnbreaker_land) ----
+	// icon: dawnbreaker_land
+	"dawnbreaker_land"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_UNRESTRICTED | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE | DOTA_ABILITY_BEHAVIOR_IGNORE_SILENCE"		
+		"LinkedAbility"					"dawnbreaker_solar_guardian"
+		"MaxLevel"						"1"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"2"	// lower = stronger
+	}
+
+	//=================================================================================================================
+	// Dawnbreaker: Break of Dawn
+	//=================================================================================================================
+	// ---- Break of Dawn  (dawnbreaker_break_of_dawn) ----
+	// icon: dawnbreaker_break_of_dawn
+	"dawnbreaker_break_of_dawn"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"						"1"
+		"Innate"						"1"
+		"AbilityValues"
+		{
+				"reveal_duration"				"4"	// higher = stronger
+				"think_interval"				"0.1"	// check tooltip
+				"reveal_linger"				"1"	// check tooltip
+				"reveal_radius"				"20000"	// higher = stronger
+				"conceal_duration"			"1"	// higher = stronger
+		}
+	}
+
+	//=================================================================================================================
+	// Dawnbreaker: Unbreakable
+	//=================================================================================================================
+	// ---- Unbreakable  (dawnbreaker_unbreakable) ----
+	// icon: dawnbreaker_unbreakable
+	"dawnbreaker_unbreakable"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
+		"MaxLevel"						"1"
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+  	"special_bonus_unique_dawnbreaker_solar_guardian_radius"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+  	"special_bonus_unique_dawnbreaker_fire_wreath_cooldown"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+
+		"ad_linked_abilities"			"dawnbreaker_fire_wreath"							// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+	}	
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+  	"special_bonus_unique_dawnbreaker_celestial_hammer_cast_range"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+  	"special_bonus_unique_dawnbreaker_luminosity_crit"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+		//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+  	"special_bonus_unique_dawnbreaker_solar_guardian_cooldown"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+		//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+  	"special_bonus_unique_dawnbreaker_luminosity_attack_count"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+	
+			//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+  	"special_bonus_unique_dawnbreaker_fire_wreath_swipe"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"value"	// check tooltip
+			{
+				"value" "18"
+				"ad_linked_abilities" "dawnbreaker_fire_wreath"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+  	"special_bonus_unique_dawnbreaker_celestial_hammer_slow"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+}

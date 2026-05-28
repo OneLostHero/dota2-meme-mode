@@ -1,0 +1,758 @@
+"DOTAAbilities"
+{
+    "Version"       "1"
+
+	//=================================================================================================================
+	// Beastmaster: Mark of the Beast ( scepter ability ) LEGACY
+	//=================================================================================================================
+	// ---- beastmaster_mark_of_the_beast  (beastmaster_mark_of_the_beast) ----
+	"beastmaster_mark_of_the_beast"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+		"IsGrantedByScepter"			"1"
+		"HasScepterUpgrade"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"16.0"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75"	// lower = stronger
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"		"6"	// higher = stronger
+			"target_crit_multiplier"	"160"	// higher = stronger
+		}
+	}
+
+	//=================================================================================================================
+	// Beastmaster: Wild Axes
+	//=================================================================================================================
+	// ---- Wild Axes  (beastmaster_wild_axes) ----
+	// icon: beastmaster_wild_axes
+	"beastmaster_wild_axes"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Beastmaster.Wild_Axes"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1500"
+		"AbilityCastPoint"				"0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"	// higher = stronger
+			{
+				"value"		"175"
+				"affected_by_aoe_increase"	"1"
+			}
+			"spread"	// check tooltip
+			{
+				"value"			"450"
+				"affected_by_aoe_increase"	"1"
+			}
+			"range"						"1500"	// higher = stronger
+			"axe_damage"	// higher = stronger
+			{
+				"value"					"35 65 95 125"
+				"CalculateSpellDamageTooltip"	"1"
+			}
+			"duration"						"12"	// higher = stronger
+			"damage_amp"	// higher = stronger
+			{
+				"value"				"6 8 10 12"
+				"special_bonus_unique_beastmaster_9"		"+2"
+			}
+			"AbilityCooldown"	// lower = stronger
+			{
+				"value"			"8"
+				"special_bonus_unique_beastmaster_wild_axe_cooldown"						"-8"
+			}			
+			"min_throw_duration"						"0.4"	// higher = stronger
+			"max_throw_duration"						"1.0"	// higher = stronger
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Beastmaster: Call of the Wild LEGACY
+	//=================================================================================================================
+	// ---- beastmaster_call_of_the_wild  (beastmaster_call_of_the_wild) ----
+	"beastmaster_call_of_the_wild"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilitySound"					"Hero_Beastmaster.Call.Boar"
+
+	}
+
+	//=================================================================================================================
+	// Beastmaster: Call of the Wild Boar
+	//=================================================================================================================
+	// ---- Call of the Wild Boar  (beastmaster_call_of_the_wild_boar) ----
+	// icon: beastmaster_call_of_the_wild_boar
+	"beastmaster_call_of_the_wild_boar"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"AbilitySound"					"Hero_Beastmaster.Call.Boar"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"60"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			
+			"duration"							"60"	// higher = stronger
+			"boar_base_max_health"				"300 450 600 750"	// higher = stronger
+			"boar_base_damage"					"20 35 50 65"	// higher = stronger
+			"boar_total_damage_tooltip"	// higher = stronger
+			{
+				"value"										"20 35 50 65"
+				"special_bonus_unique_beastmaster_2"		"+30"
+				"CalculateSpellDamageTooltip"				"0"
+			}
+			"boar_bonus_damage"	// higher = stronger
+			{
+				"value"										"0"
+				"special_bonus_unique_beastmaster_2"		"+30"
+			}
+			"boar_base_xp_bounty"				"60 70 80 90"	// check tooltip
+			"boar_base_movespeed"				"320 330 340 350"	// higher = stronger
+			"boar_moveslow_tooltip"				"10 18 26 34"	// higher = stronger
+			"boar_poison_duration_tooltip"		"3.0"	// higher = stronger
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+	
+	//=================================================================================================================
+	// Hawk: Dive Bomb ( shard ability )
+	//=================================================================================================================
+	// ---- Dive Bomb  (beastmaster_hawk_dive) ----
+	// icon: beastmaster_hawk_dive
+	"beastmaster_hawk_dive"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_IGNORE_SILENCE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+		
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"99999"
+		"AbilityCastPoint"				"0.4"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"	// lower = stronger
+	}
+
+	//=================================================================================================================
+	// Hawk: Perch
+	//=================================================================================================================
+	// ---- beastmaster_hawk_perch  (beastmaster_hawk_perch) ----
+	"beastmaster_hawk_perch"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"	
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_TREE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+		
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"999999"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"1"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"	// lower = stronger
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"perch_flight_height"			"100"	// check tooltip
+			"perch_tree_height"		"150"	// check tooltip
+			"flight_speed"			"850"	// higher = stronger
+			"perching_tree_height"	"150"	// check tooltip
+			"perched_spot_height"		"192.0"	// check tooltip
+			"top_level_height"			"500"	// check tooltip
+		}
+	}
+
+	//=================================================================================================================
+	// Beastmaster: Call of the Wild Hawk
+	//=================================================================================================================
+	// ---- Call of the Wild Hawk  (beastmaster_call_of_the_wild_hawk) ----
+	// icon: beastmaster_call_of_the_wild_hawk
+	"beastmaster_call_of_the_wild_hawk"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilitySound"					"Hero_Beastmaster.Call.Hawk"
+		"AbilityDraftPreAbility"			"beastmaster_call_of_the_wild_boar"
+
+        "HasShardUpgrade"               "1"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.3"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"						"25"	// higher = stronger
+			"hawk_base_max_health"			"200 325 450 625"	// higher = stronger
+			"hawk_base_gold_bounty"			"30 40 50 60"	// check tooltip
+			"hawk_base_vision_range"		"600 650 700 750"	// higher = stronger
+			"hawk_base_xp_bounty"			"40 50 60 70"	// check tooltip
+			"hawk_base_magic_resist"		"30 40 50 60"	// check tooltip
+			"AbilityCooldown"	// lower = stronger
+			{
+				"value"						"45 40 35 30"	
+				"special_bonus_shard"		"-10"
+			}
+			"attack_radius"	// higher = stronger
+			{
+				"value"		"500"
+				"affected_by_aoe_increase"	"1"
+			}
+			"hawk_count"	// higher = stronger
+			{
+				"value"					"1"
+				"special_bonus_shard"	"+1"
+			}
+			"dive_damage"	// higher = stronger
+			{
+				"value"		"60 90 120 150"
+				"special_bonus_unique_beastmaster_2" "+30"
+			}
+			"dive_root_duration"		"0.25 0.5 0.75 1.0"	// higher = stronger
+			"roaming_radius"					"280"	// higher = stronger
+			"roaming_seconds_per_rotation"			"4"	// check tooltip
+			"hawk_base_attack_interval"						"4"	// check tooltip
+			"min_move_speed"			"455"	// higher = stronger
+			"max_move_speed"			"1100"	// higher = stronger
+
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+	//=================================================================================================================
+	// Hawk: Attack
+	//=================================================================================================================
+	// ---- Hawk Attack  (beastmaster_call_of_the_wild_hawk_attack) ----
+	// icon: beastmaster_call_of_the_wild_hawk_attack
+	"beastmaster_call_of_the_wild_hawk_attack"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+		
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"	// lower = stronger
+	}
+	//=================================================================================================================
+	// Beastmaster: Greater Hawk: Invisibility
+	//=================================================================================================================
+	// ---- Invisibility  (beastmaster_hawk_invisibility) ----
+	// icon: beastmaster_hawk_invisibility
+	"beastmaster_hawk_invisibility"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"fade_time"				"1.0"	// check tooltip
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Beastmaster: Boar: Poison
+	//=================================================================================================================
+	// ---- Poison  (beastmaster_boar_poison) ----
+	// icon: beastmaster_boar_poison
+	"beastmaster_boar_poison"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"attack_speed"			"-10 -18 -26 -34"	// higher = stronger
+			"movement_speed"		"-10 -18 -26 -34"	// higher = stronger
+			"duration"				"3.0"	// higher = stronger
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Beastmaster: Boar: Poison LEGACY
+	//=================================================================================================================
+	// ---- Poison  (beastmaster_greater_boar_poison) ----
+	// icon: beastmaster_greater_boar_poison
+	"beastmaster_greater_boar_poison"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"attack_speed"			"-35"	// higher = stronger
+			"movement_speed"		"-35"	// higher = stronger
+			"duration"				"3.0"	// higher = stronger
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Beastmaster: Inner Beast
+	//=================================================================================================================
+	// ---- Inner Beast  (beastmaster_inner_beast) ----
+	// icon: beastmaster_inner_beast
+	"beastmaster_inner_beast"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"Innate"						"1"
+		"RequiredLevel"					"-1"
+		"MaxLevel"						"5"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"	// higher = stronger
+			{
+				"value"		"1200"
+				"affected_by_aoe_increase"	"1"
+			}
+			"bonus_attack_speed"	// higher = stronger
+			{
+				"value"									"5 10 25 40 55"
+				"special_bonus_unique_beastmaster_4"		"+10"
+			}
+			"attack_speed_per_unit"	// higher = stronger
+			{
+				"value"									"0"
+				"special_bonus_facet_beastmaster_wild_hunt"		"1 2 3 4 5"				
+			}
+			"berserk_duration"	// higher = stronger
+			{
+				"value"									"0"
+				"special_bonus_facet_beastmaster_beast_mode"		"+6"				
+			}
+			"berserk_bonus_attack_speed"	// higher = stronger
+			{
+				"value"								"0"
+				"special_bonus_facet_beastmaster_beast_mode"			"8 16 24 32 40"				
+			}
+			"AbilityCooldown"	// lower = stronger
+			{
+				"value"				"0"
+				"special_bonus_facet_beastmaster_beast_mode"		"=20"				
+			}
+			"AbilityManaCost"	// lower = stronger
+			{
+				"value"				"0"
+				"special_bonus_facet_beastmaster_beast_mode"		"=35"				
+			}
+			"magic_resist"	// check tooltip
+			{
+				"special_bonus_unique_beastmaster_3"	"5"
+			}
+			"bonus_damage"	// higher = stronger
+			{
+				"special_bonus_unique_beastmaster_2"	"+30"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Beastmaster: Primal Roar
+	//=================================================================================================================
+	// ---- Primal Roar  (beastmaster_primal_roar) ----
+	// icon: beastmaster_primal_roar
+	"beastmaster_primal_roar"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"		
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Beastmaster.Primal_Roar"
+
+		"AbilityDraftUltScepterAbility"		"beastmaster_drums_of_slom"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.5 0.5 0.5"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 125 150"	// lower = stronger
+		
+		// Cast Range
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.6"	// Applies multiple modifiers
+
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"					"2.75 3.25 3.75"	// higher = stronger
+			"damage"	// higher = stronger
+			{
+				"value"			"150 225 300"
+				"CalculateSpellDamageTooltip" "1"
+			}
+			"side_damage"	// higher = stronger
+			{
+				"value"			"150 225 300"
+				"CalculateSpellDamageTooltip" "1"
+			}
+			"damage_radius"	// higher = stronger
+			{
+				"value"		"300"
+				"DamageTypeTooltip"		"DAMAGE_TYPE_NONE"
+				"CalculateSpellDamageTooltip"		"0"
+				"affected_by_aoe_increase"	"1"
+			}
+			"slow_movement_speed_pct"	"-60"	// higher = stronger
+			"slow_attack_speed_pct"		"-60"	// higher = stronger
+			"push_distance"	// check tooltip
+			{
+				"value"		"450"
+					"affected_by_aoe_increase"	"1"
+			}
+			"push_duration"				"1.0"	// higher = stronger
+			"slow_duration"				"3 3.5 4"	// higher = stronger
+			"movement_speed"			"40"	// higher = stronger
+			"movement_speed_duration"			"3.0 3.5 4"	// higher = stronger
+			"AbilityCooldown"	// lower = stronger
+			{ 
+				"value"				"90 75 60"
+				"special_bonus_unique_beastmaster_7"		"-30"
+			}
+
+		}
+	}
+	
+	//=================================================================================================================
+	// Beastmaster: Drums of Slom (scepter)
+	//=================================================================================================================
+	// ---- Drums of Slom  (beastmaster_drums_of_slom) ----
+	// icon: beastmaster_drums_of_slom
+	"beastmaster_drums_of_slom"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_ElderTitan.EchoStomp"
+		"IsGrantedByScepter"			"1"
+		"MaxLevel"						"1"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_5"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"	// higher = stronger
+			{
+				"value"		"600"
+				"affected_by_aoe_increase"	"1"
+			}
+			"max_stacks"					"20"	// check tooltip
+			"stack_decay_time"				"1.0"	// check tooltip
+			"min_drum_hit_interval"			"0.4"	// check tooltip
+			"max_drum_hit_interval"			"3"	// check tooltip
+
+			"base_damage"	// higher = stronger
+			{
+				"value"			"90"
+				"CalculateSpellDamageTooltip" "1"
+			}
+			"heal_pct"						"25"	// higher = stronger
+			"creep_heal_pct"				"5"	// higher = stronger
+			"aura_radius"	// higher = stronger
+			{
+				"value"			"1200"
+				"affected_by_aoe_increase"	"1"
+			}
+		}
+	}	
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_boar_bonus_damage} Damage to Beastmaster and his units  (special_bonus_unique_beastmaster_2) ----
+	// icon: special_bonus_unique_beastmaster_2
+	"special_bonus_unique_beastmaster_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- {s:bonus_magic_resist}% Inner Beast Magic Resist  (special_bonus_unique_beastmaster_3) ----
+	// icon: special_bonus_unique_beastmaster_3
+	"special_bonus_unique_beastmaster_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"		
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_bonus_attack_speed} Inner Beast Attack Speed  (special_bonus_unique_beastmaster_4) ----
+	// icon: special_bonus_unique_beastmaster_4
+	"special_bonus_unique_beastmaster_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"		
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_ms} Movespeed Aura to Beastmaster and his units  (special_bonus_unique_beastmaster_5) ----
+	// icon: special_bonus_unique_beastmaster_5
+	"special_bonus_unique_beastmaster_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"bonus_ms"				"20"	// higher = stronger
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_hp} Max Health Aura to Beastmaster and his units  (special_bonus_unique_beastmaster_6) ----
+	// icon: special_bonus_unique_beastmaster_6
+	"special_bonus_unique_beastmaster_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"beastmaster_call_of_the_wild_boar"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_hp"				"250"	// higher = stronger
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- -{s:bonus_AbilityCooldown}s Primal Roar Cooldown  (special_bonus_unique_beastmaster_7) ----
+	// icon: special_bonus_unique_beastmaster_7
+	"special_bonus_unique_beastmaster_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"		
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_damage_amp}% Wild Axes Damage Amp Per Stack  (special_bonus_unique_beastmaster_9) ----
+	// icon: special_bonus_unique_beastmaster_9
+	"special_bonus_unique_beastmaster_9"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- No Wild Axes Cooldown  (special_bonus_unique_beastmaster_wild_axe_cooldown) ----
+	// icon: special_bonus_unique_beastmaster_wild_axe_cooldown
+	"special_bonus_unique_beastmaster_wild_axe_cooldown"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+}

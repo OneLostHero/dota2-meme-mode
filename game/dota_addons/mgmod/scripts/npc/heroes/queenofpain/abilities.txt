@@ -1,0 +1,415 @@
+"DOTAAbilities"
+{
+    "Version"       "1"
+
+	//=================================================================================================================
+	// Queen of Pain: Shadow Strike
+	//=================================================================================================================
+	// ---- Shadow Strike  (queenofpain_shadow_strike) ----
+	// icon: queenofpain_shadow_strike
+	"queenofpain_shadow_strike"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_QueenOfPain.ShadowStrike"
+		"HasScepterUpgrade"				"1"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"450 500 550 600"
+		"AbilityCastPoint"				"0.4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"13 10 7 4"	// lower = stronger
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"125 130 135 140"	// lower = stronger
+	
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"strike_damage"	// higher = stronger
+			{
+				"value"								"30 60 90 120"
+				"special_bonus_scepter"				"+50"
+			}
+			"duration_damage"		"20 40 60 80"	// higher = stronger
+			"movement_slow"			"-20 -35 -50 -65"	// higher = stronger
+			"projectile_speed"		"900"	// higher = stronger
+			"attack_speed"	// higher = stronger
+			{
+				"special_bonus_unique_queen_of_pain_1"	"+40"
+			}
+			"damage_interval"	// higher = stronger
+			{
+				"value"					"3.0"
+				"special_bonus_unique_queen_of_pain_4"		"-1"
+			}
+			"duration_heal"	// higher = stronger
+			{
+				"value"				"0"
+			}
+			"generate_scream"	// check tooltip
+			{
+				"value"								"0"
+				"special_bonus_scepter"				"+1"
+			}
+			"aoe_radius"	// higher = stronger
+			{
+				"value"								"0"
+				"special_bonus_scepter"				"+375"
+				"affected_by_aoe_increase"	"1"
+			}
+			"duration"						"16"	// higher = stronger
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	
+	//=================================================================================================================
+	// Queen of Pain: Blink
+	//=================================================================================================================
+	// ---- Blink  (queenofpain_blink) ----
+	// icon: queenofpain_blink
+	"queenofpain_blink"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
+		"AbilitySound"					"Hero_QueenOfPain.Blink_in"
+
+        "HasShardUpgrade"               "1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+		"AbilityCastRange"				"1075 1150 1225 1300"
+		"AbilityCastPoint"				"0.33 0.33 0.33 0.33"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12.0 10.0 8.0 6.0"	// lower = stronger
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"65"	// lower = stronger
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"min_blink_range"				"200"	// higher = stronger
+				"shard_damage"	// higher = stronger
+				{
+					"RequiresShard"				"1"
+					"value"						"125"
+				}
+
+				"shard_duration"	// higher = stronger
+				{
+					"RequiresShard"				"1"
+					"value"						"1.75"
+				}	
+				"shard_aoe"	// check tooltip
+				{
+					"RequiresShard"				"1"
+					"value"						"300"
+					"affected_by_aoe_increase"	"1"
+				}									
+		}
+	}
+	
+	//=================================================================================================================
+	// Queen of Pain: Scream of Pain
+	//=================================================================================================================
+	// ---- Scream Of Pain  (queenofpain_scream_of_pain) ----
+	// icon: queenofpain_scream_of_pain
+	"queenofpain_scream_of_pain"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilitySound"					"Hero_QueenOfPain.ScreamOfPain"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"7.5 7 6.5 6"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"120"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"area_of_effect"	// check tooltip
+			{
+				"value"		"600"
+				"affected_by_aoe_increase"	"1"
+			}
+			"projectile_speed"									"900"	// higher = stronger
+			"damage"	// higher = stronger
+			{
+				"value"											"75 150 225 300"
+				"special_bonus_unique_queen_of_pain_2" 			"+100"
+			}
+
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+		"AbilityCastGestureSlot"		"DEFAULT"
+	}
+
+	//=================================================================================================================
+	// Queen of Pain: Sonic Wave
+	//=================================================================================================================
+	// ---- Sonic Wave  (queenofpain_sonic_wave) ----
+	// icon: queenofpain_sonic_wave
+	"queenofpain_sonic_wave"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_POINT"				   
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_QueenOfPain.SonicWave"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.452 0.452 0.452"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"250 400 550"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"starting_aoe"	// check tooltip
+				{
+					"value"		"100"
+				}
+				"distance"	// check tooltip
+				{
+					"value"	"900"
+				}
+				"final_aoe"	// check tooltip
+				{
+					"value"	"450"
+					"affected_by_aoe_increase"		"1"
+				}
+				"speed"				"900"	// higher = stronger
+				"damage"	// higher = stronger
+				{
+					"value"											"350 500 650"
+					"special_bonus_unique_queen_of_pain_7"			"+250"
+				}
+				"tick_rate"	"0.1"	// check tooltip
+				"knockback_distance"	// check tooltip
+				{
+					"value"		"350"
+					"affected_by_aoe_increase"	"1"
+				}
+				"knockback_duration" "1.4"	// higher = stronger
+				"AbilityCooldown"	// lower = stronger
+				{	
+					"value"											"110 95 80"
+					"special_bonus_unique_queen_of_pain_3"			"-45"
+				}
+
+		}
+	}
+
+	//=================================================================================================================
+	// Queen of Pain: Innate Anguish
+	//=================================================================================================================
+	// ---- Masochist  (queenofpain_masochist) ----
+	// icon: queenofpain_masochist
+	"queenofpain_masochist"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"MaxLevel"						"1"
+		"AbilityValues"
+		{
+			"spell_amplification"			"15"	// check tooltip
+			"spell_amplification_per_level"	"0.0"	// check tooltip
+			"damage_reflected_to_self"		"22.0"	// higher = stronger
+		}
+	}
+
+	//=================================================================================================================
+	// Queen of Pain: Innate Seduction
+	//=================================================================================================================
+	// ---- Succubus  (queenofpain_succubus) ----
+	// icon: queenofpain_succubus
+	"queenofpain_succubus"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"MaxLevel"						"1"
+		"AbilityValues"
+		{
+			"spell_lifesteal"			"12.0"	// higher = stronger
+			"close_radius"	// higher = stronger
+			{
+				"value"		"300"
+				"affected_by_aoe_increase"	"1"
+			}
+			"max_radius"	// higher = stronger
+			{
+				"value"	"800"
+				"affected_by_aoe_increase"	"1"
+			}
+			"spell_lifesteal_close"		"18.0"	// higher = stronger
+		}
+	}
+
+	//=================================================================================================================
+	// Queen of Pain: Innate Spell Reflect
+	//=================================================================================================================
+	// ---- Bondage  (queenofpain_bondage) ----
+	// icon: queenofpain_bondage
+	"queenofpain_bondage"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"MaxLevel"						"1"
+		"Innate"						"1"
+
+		"AbilityValues"
+		{
+			"spell_reflect_pct"			"10.0"	// higher = stronger
+			"radius"	// higher = stronger
+			{
+				"value"			"1200"
+				"affected_by_aoe_increase"	"1"
+			}
+		}
+	}
+
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_attack_speed} Attack Speed against Shadow Striked units  (special_bonus_unique_queen_of_pain_1) ----
+	// icon: special_bonus_unique_queen_of_pain_1
+	"special_bonus_unique_queen_of_pain_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_damage} Scream of Pain Damage  (special_bonus_unique_queen_of_pain_2) ----
+	// icon: special_bonus_unique_queen_of_pain_2
+	"special_bonus_unique_queen_of_pain_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- -{s:bonus_AbilityCooldown}s Sonic Wave Cooldown  (special_bonus_unique_queen_of_pain_3) ----
+	// icon: special_bonus_unique_queen_of_pain_3
+	"special_bonus_unique_queen_of_pain_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- -{s:bonus_damage_interval}s Shadow Strike Damage Interval  (special_bonus_unique_queen_of_pain_4) ----
+	// icon: special_bonus_unique_queen_of_pain_4
+	"special_bonus_unique_queen_of_pain_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- -{s:value}s Blink Cooldown  (special_bonus_unique_queen_of_pain_6) ----
+	// icon: special_bonus_unique_queen_of_pain_6
+	"special_bonus_unique_queen_of_pain_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"value"	// check tooltip
+			{
+				"value" "2"
+				"ad_linked_abilities" "queenofpain_blink"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_damage} Sonic Wave Damage  (special_bonus_unique_queen_of_pain_7) ----
+	// icon: special_bonus_unique_queen_of_pain_7
+	"special_bonus_unique_queen_of_pain_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+
+	
+}

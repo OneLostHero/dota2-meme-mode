@@ -1,0 +1,456 @@
+"DOTAAbilities"
+{
+    "Version"       "1"
+	//=================================================================================================================
+	// Witch Doctor: Paralyzing Cask
+	//=================================================================================================================
+	// ---- Paralyzing Cask  (witch_doctor_paralyzing_cask) ----
+	// icon: witch_doctor_paralyzing_cask
+	"witch_doctor_paralyzing_cask"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_WitchDoctor.Paralyzing_Cask_Cast"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.2"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20.0 18.0 16.0 14.0"	// lower = stronger
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"80 100 120 140"	// lower = stronger
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.5"	// Can have multiple bounces
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"hero_duration"			"0.8"	// higher = stronger
+				"creep_duration"		"0.8"	// higher = stronger
+				"base_damage"	// higher = stronger
+				{
+					"value"					"50"
+					"CalculateSpellDamageTooltip"	"1"
+				}
+				"bounce_range"	// higher = stronger
+				{	
+					"value"		"575 575 575 575"
+					"affected_by_aoe_increase"	"1"
+				}
+				"bounces"	// check tooltip
+				{ 
+					"value"					"2 4 6 8"
+					"special_bonus_unique_witch_doctor_3"			"+2"
+				}
+				"speed"					"1200"	// higher = stronger
+				"bounce_delay"			"0.1"	// check tooltip
+				"bounce_bonus_damage"	// higher = stronger
+				{
+					"value"							"0"
+					"CalculateSpellDamageTooltip"	"1"
+					"special_bonus_facet_witch_doctor_headhunter"	"+35"
+					"RequiresFacet"				"witch_doctor_headhunter"
+				}
+				"creep_damage_pct"		"150"	// higher = stronger
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	
+	//=================================================================================================================
+	// Witch Doctor: Voodoo Restoration
+	//=================================================================================================================
+	// ---- Voodoo Restoration  (witch_doctor_voodoo_restoration) ----
+	// icon: witch_doctor_voodoo_restoration
+	"witch_doctor_voodoo_restoration"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+		"AbilitySound"					"Hero_WitchDoctor.Voodoo_Restoration"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0.0 0.0 0.0 0.0"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"35 40 45 50"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"mana_per_second"	// check tooltip
+				{
+					"value"	"8 12 16 20"
+				"special_bonus_unique_witch_doctor_4" "x0.75"
+				}
+				"tooltip_mana_per_second"	// check tooltip
+				{
+				"special_bonus_unique_witch_doctor_4" "+25"
+				}
+				"radius"	// higher = stronger
+				{
+					"value"			"500 550 600 650"
+					"special_bonus_facet_witch_doctor_voodoo_festeration"	"+200"
+					"affected_by_aoe_increase"	"1"
+				}
+				"heal"	// higher = stronger
+				{
+					"value"			"20 30 40 50"
+					"DamageTypeTooltip"			"DAMAGE_TYPE_MAGICAL"
+					"special_bonus_facet_witch_doctor_voodoo_festeration"	"+10"
+				}
+				"heal_interval"				"0.33 0.33 0.33 0.33"	// higher = stronger
+				"does_heal"	// higher = stronger
+				{
+					"value"			"1"
+					"special_bonus_facet_witch_doctor_voodoo_festeration"	"=0"
+				}
+				"does_damage"	// higher = stronger
+				{
+					"value"			"0"
+					"special_bonus_facet_witch_doctor_voodoo_festeration"	"+1"
+				}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+	
+	//=================================================================================================================
+	// Witch Doctor: Maledict
+	//=================================================================================================================
+	// ---- Maledict  (witch_doctor_maledict) ----
+	// icon: witch_doctor_maledict
+	"witch_doctor_maledict"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_WitchDoctor.Maledict_Cast"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.35 0.35 0.35 0.35"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30 26 22 18"	// lower = stronger
+		"AbilityDuration"				"12.0"
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"15 20 25 30"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"105 110 115 120"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"radius"	// higher = stronger
+				{
+					"value"			"200"
+					"affected_by_aoe_increase"	"1"
+				"special_bonus_unique_witch_doctor_6" "+100"
+				}
+				"bonus_damage"	// higher = stronger
+				{
+					"value"			"16 24 32 40"
+				"special_bonus_unique_witch_doctor_7" "+30"
+				}
+				"bonus_damage_threshold"	"100"	// higher = stronger
+				"ticks"	// check tooltip
+				{
+					"value"		"3"
+					"LinkedSpecialBonusField"		"value2"
+				}			
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_5"
+	}
+	
+	//=================================================================================================================
+	// Witch Doctor: Death Ward
+	//=================================================================================================================
+	// ---- Death Ward  (witch_doctor_death_ward) ----
+	// icon: witch_doctor_death_ward
+	"witch_doctor_death_ward"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NO_INVIS | DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE | DOTA_UNIT_TARGET_FLAG_NOT_ATTACK_IMMUNE | DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_WitchDoctor.Death_WardBuild"
+
+		"HasScepterUpgrade"			"1"
+
+		"AbilityDraftUltShardAbility"		"witch_doctor_voodoo_switcheroo"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"500"
+		"AbilityCastPoint"				"0.35 0.35 0.35"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityChannelAnimation"		"ACT_DOTA_CHANNEL_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"100 90 80"	// lower = stronger
+		"AbilityChannelTime"			"8.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"200 200 200"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"damage"	// higher = stronger
+				{
+					"value"		"60 95 130"
+					"special_bonus_unique_witch_doctor_5"	"+45"
+					"special_bonus_facet_witch_doctor_cleft_death"	"-30%"
+					"CalculateSpellDamageTooltip"	"0"
+				}
+				"attack_range_tooltip"	// higher = stronger
+				{
+					"value"		"600"
+					"special_bonus_unique_witch_doctor_1"	"+75"
+				}
+				"bonus_attack_range"	// higher = stronger
+				{
+					"value"					"0"
+					"special_bonus_unique_witch_doctor_1"	"+75"
+				}
+				"bounce_radius"	// higher = stronger
+				{
+					"value"		"650 650 650"
+					"RequiresScepter"		"1"
+					"affected_by_aoe_increase"	"1"
+				}
+				"scepter_lifesteal"	// higher = stronger
+				{
+					"value"		"10"
+					"RequiresScepter"		"1"
+				}
+				"bonus_accuracy"			"50"	// higher = stronger
+				"initial_target_count"	// higher = stronger
+				{
+					"value"						"1"
+					"special_bonus_facet_witch_doctor_cleft_death"	"+1"
+				}
+		}
+	}
+	
+	//=================================================================================================================
+	// Witch Doctor: Voodoo Switcheroo (Shard Ability)
+	//=================================================================================================================
+	// ---- Voodoo Switcheroo  (witch_doctor_voodoo_switcheroo) ----
+	// icon: witch_doctor_voodoo_switcheroo
+	"witch_doctor_voodoo_switcheroo"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"MaxLevel"						"1"
+		"IsGrantedByShard"				"1"
+	
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"50"	// lower = stronger
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"200"	// lower = stronger
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+		"AbilityValues"
+		{
+			"duration"	// higher = stronger
+			{
+				"value" "3"
+			}
+			"attack_speed_reduction"	// higher = stronger
+			{
+				"value" "45"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Witch Doctor: Innate Maledict Health Restoration Reduction
+	//=================================================================================================================
+	// ---- witch_doctor_innate_maledict_heal_reduction  (witch_doctor_innate_maledict_heal_reduction) ----
+	"witch_doctor_innate_maledict_heal_reduction"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
+		"MaxLevel"						"1"
+		"AbilityValues"
+		{
+			"health_restoration_reduction"		"30"	// higher = stronger
+		}
+	}
+	//=================================================================================================================
+	// Witch Doctor: Innate Grisgris item
+	//=================================================================================================================
+	// ---- Gris-Gris  (witch_doctor_gris_gris) ----
+	// icon: witch_doctor_gris_gris
+	"witch_doctor_gris_gris"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
+		"MaxLevel"						"1"
+		"Innate"						"1"
+		"AbilityValues"
+		{
+			"death_gold_lost_reduction_pct_tooltip"		"100"	// higher = stronger
+			"gold_tick_interval_tooltip"		"3"	// check tooltip
+		}
+	}
+
+
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- special_bonus_unique_witch_doctor_1  (special_bonus_unique_witch_doctor_1) ----
+	"special_bonus_unique_witch_doctor_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- special_bonus_unique_witch_doctor_2  (special_bonus_unique_witch_doctor_2) ----
+	"special_bonus_unique_witch_doctor_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"value"	// check tooltip
+			{
+				"value" "2"
+				"ad_linked_abilities" "witch_doctor_voodoo_restoration"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- special_bonus_unique_witch_doctor_3  (special_bonus_unique_witch_doctor_3) ----
+	"special_bonus_unique_witch_doctor_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+		
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- special_bonus_unique_witch_doctor_4  (special_bonus_unique_witch_doctor_4) ----
+	"special_bonus_unique_witch_doctor_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass" "special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- special_bonus_unique_witch_doctor_5  (special_bonus_unique_witch_doctor_5) ----
+	"special_bonus_unique_witch_doctor_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- special_bonus_unique_witch_doctor_6  (special_bonus_unique_witch_doctor_6) ----
+	"special_bonus_unique_witch_doctor_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass" "special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- special_bonus_unique_witch_doctor_7  (special_bonus_unique_witch_doctor_7) ----
+	"special_bonus_unique_witch_doctor_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass" "special_bonus_base"
+	}
+}

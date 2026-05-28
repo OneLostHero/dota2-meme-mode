@@ -1,0 +1,408 @@
+"DOTAAbilities"
+{
+    "Version"       "1"
+	
+	//=================================================================================================================
+	// Razor: Plasma Field
+	//=================================================================================================================
+	// ---- Plasma Field  (razor_plasma_field) ----
+	// icon: razor_plasma_field
+	"razor_plasma_field"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Ability.PlasmaField"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0 0 0 0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"13 12 11 10"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"125"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"damage_min"	// higher = stronger
+			{
+				"value"				"35 40 45 50"
+				"special_bonus_unique_razor_4"	"+30"								
+			}
+			"damage_max"	// higher = stronger
+			{
+				"value"				"80 115 150 185"
+				"special_bonus_unique_razor_4"	"+30"														
+			}
+			"radius"	// higher = stronger
+			{
+				"value"			"700"
+				"affected_by_aoe_increase"	"1"
+			}
+			"total_ability_time"		"2.2"	// check tooltip
+			"slow_min"				"5"	// higher = stronger
+			"slow_max"				"25 30 35 40"	// higher = stronger
+			"slow_duration"				"1.5"	// higher = stronger
+			"second_ring_delay"	// check tooltip
+			{
+				"value"						"0"
+				"special_bonus_unique_razor_plasmafield_second_ring"				"+0.8"
+			}
+			"second_ring_reduction"	// higher = stronger
+			{
+				"value"						"0"
+				"special_bonus_unique_razor_plasmafield_second_ring"				"+30"
+			}
+		}
+	}
+	
+	//=================================================================================================================
+	// Razor: Static Link
+	//=================================================================================================================
+	// ---- Static Link  (razor_static_link) ----
+	// icon: razor_static_link
+	"razor_static_link"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilitySound"					"Ability.static.start"
+		"HasShardUpgrade"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"50 40 30 20"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"65"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"drain_length"	// check tooltip
+			{
+				"value"			"10"
+			}
+			"drain_duration"		"12 14 16 18"	// higher = stronger
+			"drain_rate"	// check tooltip
+			{
+				"value"			"5 10 15 20"
+				"special_bonus_unique_razor"	"+5"
+			}
+			"drain_range_buffer"	"250"	// higher = stronger
+			"radius"				"200 200 200 200"	// higher = stronger
+			"speed"					"900 900 900 900"	// higher = stronger
+			"vision_duration"		"3.34 3.34 3.34 3.34"	// higher = stronger
+			"attack_speed_factor"	// higher = stronger
+			{
+				"value"						"0"
+				"special_bonus_unique_razor_static_link_aspd"				"+1"
+			}
+			"pull_speed"	// higher = stronger
+			{
+				"value"					"0"
+				"special_bonus_shard"		"+75"
+			}
+			"min_pull_range"	// higher = stronger
+						{
+				"value"					"0"
+				"special_bonus_shard"		"+175"
+			}
+			"AbilityCastRange"	// higher = stronger
+			{
+				"value"				"550"
+				"special_bonus_shard"		"+150"
+			}				
+			
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Razor: Storm Surge
+	//=================================================================================================================
+	// ---- Storm Surge  (razor_storm_surge) ----
+	// icon: razor_storm_surge
+	"razor_storm_surge"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"strike_pct_chance"		"18"	// higher = stronger
+			"strike_target_count"	"3"	// higher = stronger
+			"strike_damage"	// higher = stronger
+			{
+				"value"													"40 80 120 160"
+				"special_bonus_unique_razor_storm_surge_damage_and_slow"			"+25%"
+			}
+			"strike_move_slow_pct"	// higher = stronger
+			{
+				"value"				"25 30 35 40"
+				"special_bonus_unique_razor_storm_surge_damage_and_slow"			"+25"
+			}
+			"strike_slow_duration"			"1.0"	// higher = stronger
+			"strike_search_radius"	// higher = stronger
+			{
+				"value"						"700"
+				"affected_by_aoe_increase"	"1"
+			}
+
+			"strike_internal_cd"	// check tooltip
+			{
+				"value"										"3.0"
+				"special_bonus_unique_razor_3"				"-1"
+			}
+			"hit_targets_inside_eye_of_the_storm"	// check tooltip
+			{
+				"value"		"0"
+				"special_bonus_facet_razor_thunderhead"			"=1"
+			}
+			"eye_of_the_storm_chance_multiplier"	// higher = stronger
+			{
+				"value"				"0"
+				"special_bonus_facet_razor_thunderhead"			"=2"
+			}
+
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+	
+
+	//=================================================================================================================
+	// Ability: Unstable Current
+	//=================================================================================================================
+	// ---- razor_unstable_current  (razor_unstable_current) ----
+	"razor_unstable_current"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
+		"MaxLevel"						"1"
+		"Innate"						"1"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"movespeed_per_level_pct"				"1"	// higher = stronger
+		}
+	}
+
+
+
+	//=================================================================================================================
+	// Razor: Eye of the Storm
+	//=================================================================================================================
+	// ---- Eye of the Storm  (razor_eye_of_the_storm) ----
+	// icon: razor_eye_of_the_storm
+	"razor_eye_of_the_storm"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"1"
+		"HasScepterUpgrade"			"1"
+		"AbilitySound"					"Hero_Razor.Storm.Cast"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_OVERRIDE_ABILITY_4"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastPoint"				"0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"80 70 60"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 150 200"	// lower = stronger
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.1"	// Primarily about the damage
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"radius"	// higher = stronger
+				{
+					"value"		"500"		
+					"affected_by_aoe_increase"	"1"
+				}
+				"duration"			"30.0"	// higher = stronger
+				"strike_interval"	// check tooltip
+				{
+					"value"		"0.7 0.6 0.5"	
+				"special_bonus_unique_razor_2" "+-0.1"
+				}
+				"armor_reduction"	// higher = stronger
+				{
+					"value"						"1"
+				}
+				"damage"			"60 75 90"	// higher = stronger
+		}
+	}
+
+	//=================================================================================================================
+	// Razor: Dynamo
+	//=================================================================================================================
+	// ---- razor_dynamo  (razor_dynamo) ----
+	"razor_dynamo"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"MaxLevel"						"1"
+		"AbilityValues"
+		{
+			"spell_amp_damage_divisor"	"20"	// higher = stronger
+			"spell_amp_mult"			"1"	// check tooltip
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_drain_rate} Static Link Damage Steal  (special_bonus_unique_razor) ----
+	// icon: special_bonus_unique_razor
+	"special_bonus_unique_razor"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- -{s:bonus_strike_interval}s Eye of the Storm Strike Interval  (special_bonus_unique_razor_2) ----
+	// icon: special_bonus_unique_razor_2
+	"special_bonus_unique_razor_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass" "special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- -{s:bonus_strike_internal_cd} Storm Surge Strike Cooldown  (special_bonus_unique_razor_3) ----
+	// icon: special_bonus_unique_razor_3
+	"special_bonus_unique_razor_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"value"	// check tooltip
+			{
+				"value" "6"
+				"ad_linked_abilities" "razor_static_link"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_damage_min} Plasma Field Damage  (special_bonus_unique_razor_4) ----
+	// icon: special_bonus_unique_razor_4
+	"special_bonus_unique_razor_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"value"	// check tooltip
+			{
+				"value" "30"
+				"ad_linked_abilities" "razor_plasma_field"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- Creates A Second Plasma Field Delayed By {s:bonus_second_ring_delay}s  (special_bonus_unique_razor_plasmafield_second_ring) ----
+	// icon: special_bonus_unique_razor_plasmafield_second_ring
+	"special_bonus_unique_razor_plasmafield_second_ring"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}	
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================	
+	// ---- Static Link Steals Attack Speed  (special_bonus_unique_razor_static_link_aspd) ----
+	// icon: special_bonus_unique_razor_static_link_aspd
+	"special_bonus_unique_razor_static_link_aspd"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_strike_move_slow_pct}% Storm Surge Slow and Damage  (special_bonus_unique_razor_storm_surge_damage_and_slow) ----
+	// icon: special_bonus_unique_razor_storm_surge_damage_and_slow
+	"special_bonus_unique_razor_storm_surge_damage_and_slow"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}		
+}

@@ -1,0 +1,552 @@
+"DOTAAbilities"
+{
+    "Version"       "1"
+	
+	//=================================================================================================================
+	// Shadow Shaman: Ether Shock
+	//=================================================================================================================
+	// ---- Ether Shock  (shadow_shaman_ether_shock) ----
+	// icon: shadow_shaman_ether_shock
+	"shadow_shaman_ether_shock"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_ShadowShaman.EtherShock"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"14 12 10 8"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"90 105 120 135"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"start_radius"	// higher = stronger
+				{
+					"value"			"200 200 200 200"
+					"affected_by_aoe_increase"	"1"
+				}
+				"end_radius"	// higher = stronger
+				{
+					"value"			"300 300 300 300"
+					"affected_by_aoe_increase"	"1"
+				}
+				"end_distance"	// check tooltip
+				{
+					"value"			"600"
+				}
+				"targets"	// check tooltip
+				{
+					"value"		"3 5 7 9"
+				}
+				"damage"	// higher = stronger
+				{
+					"value"		"140 200 260 320"
+				"special_bonus_unique_shadow_shaman_3" "+400"
+				}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	
+	//=================================================================================================================
+	// Shadow Shaman: Voodoo
+	//=================================================================================================================
+	// ---- Hex  (shadow_shaman_voodoo) ----
+	// icon: shadow_shaman_voodoo
+	"shadow_shaman_voodoo"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_ShadowShaman.Hex.Target"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"550"
+		"AbilityCastPoint"				"0 0 0 0"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"24 20 16 12"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"110 140 170 200"	// lower = stronger
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"movespeed"					"100"	// higher = stronger
+				"duration"					"2 2.3 2.6 2.9"	// higher = stronger
+				"damage_amp"	// higher = stronger
+				{
+					"value"					"10 15 20 25"
+					"special_bonus_unique_shadow_shaman_hex_damage_amp"		"+10"
+				}
+				"can_target_allies"	// check tooltip
+				{
+					"value"										"0"
+					"special_bonus_facet_shadow_shaman_cluster_cluck"	"=1"
+				}
+				"ally_invuln_duration"	// higher = stronger
+				{
+					"value"										"0.0"
+					"special_bonus_facet_shadow_shaman_cluster_cluck"	"=0.1"
+				}
+				"ally_voodoo_duration"	// higher = stronger
+				{
+					"value"										"0.0"
+					"special_bonus_facet_shadow_shaman_cluster_cluck"	"=2.0"
+				}
+				"ally_invuln_vision_radius"	// higher = stronger
+				{
+					"value"										"0"
+					"affected_by_aoe_increase"	"1"
+					"special_bonus_facet_shadow_shaman_cluster_cluck"	"=1000"
+				}
+				"ally_chicken_images_count"	// higher = stronger
+				{
+					"value"										"0"
+					"special_bonus_facet_shadow_shaman_cluster_cluck"	"+3"
+				}
+				"ally_chicken_images_take_damage_percent"	// higher = stronger
+				{
+					"value"										"0"
+					"special_bonus_facet_shadow_shaman_cluster_cluck"	"=200"
+				}
+				"ally_chicken_movement_speed_bonus_pct"	// higher = stronger
+				{
+					"value"										"0"
+					"special_bonus_facet_shadow_shaman_cluster_cluck"	"+10"
+				}
+				"tooltip_damage_incoming_total_pct"	// higher = stronger
+				{
+					"value"										"0"
+					"special_bonus_facet_shadow_shaman_cluster_cluck"	"=300"
+				}
+				
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+	
+	//=================================================================================================================
+	// Shadow Shaman: Shackles
+	//=================================================================================================================
+	// ---- Shackles  (shadow_shaman_shackles) ----
+	// icon: shadow_shaman_shackles
+	"shadow_shaman_shackles"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+
+		"HasShardUpgrade"               "1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"450"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityChannelTime"			"2.4 3.0 3.6 4.2"
+		"AbilityCooldown"				"16 14 12 10"	// lower = stronger
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"125 140 155 170"	// lower = stronger
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"tick_interval"		"0.1 0.1 0.1 0.1"	// check tooltip
+			"total_damage"	// higher = stronger
+			{
+				"value"					"75 150 225 300"
+				"special_bonus_unique_shadow_shaman_6" "+170"
+			}
+			"channel_time"	// check tooltip
+			{
+				"value"									"2.4 3.0 3.6 4.2"
+				"special_bonus_unique_shadow_shaman_2"	"+1.0"
+			}
+			"shard_bonus_cast_range"	// higher = stronger
+			{
+				"value"					"75"
+				"RequiresShard"			"1"
+			}
+			"shard_ward_count"	// higher = stronger
+			{
+				"value"					"4"
+				"RequiresShard"			"1"
+			}
+			"shard_ward_duration"	// higher = stronger
+			{
+				"value"					"6"
+				"RequiresShard"			"1"
+			}
+			"shard_ward_spawn_distance"	// check tooltip
+			{
+				"value"					"100"
+				"RequiresShard"			"1"
+			}
+			"bonus_targets"	// higher = stronger
+			{
+				"value"						"0"
+			}
+			"bonus_targets_search_range"	// higher = stronger
+			{
+				"value"						"0"
+			}
+			"bonus_target_channel_time_pct"	// higher = stronger
+			{
+				"value"						"0"					// currently, damage done is calculated using base channel time, so 60% duration = 60% damage
+			}
+			"heal_percentage"	// higher = stronger
+			{
+				"value"						"100"
+			}
+
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Shadow Shaman: Mass Serpent Ward
+	//=================================================================================================================
+	// ---- Mass Serpent Ward  (shadow_shaman_mass_serpent_ward) ----
+	// icon: shadow_shaman_mass_serpent_ward
+	"shadow_shaman_mass_serpent_ward"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_ShadowShaman.SerpentWard"
+
+		"HasScepterUpgrade"			"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"550"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"110"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"200 350 550"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"ward_count"	// higher = stronger
+			{
+				"value"							"10"	// if changing this, change mega_ward_multiplier_tooltip
+			}
+			"bonus_damage"	// higher = stronger
+			{
+				"special_bonus_unique_shadow_shaman_4" "+20"
+			}
+			"bonus_attack_range"	// higher = stronger
+			{
+				"special_bonus_unique_shadow_shaman_8" "+140"
+			}
+			"duration"						"45.0 45.0 45.0"	// higher = stronger
+			"spawn_radius"					"150"	// higher = stronger
+			"hits_to_destroy_tooltip"	// check tooltip
+			{
+				"value"						"2"
+				"special_bonus_unique_shadow_shaman_1"		"50%"
+			}
+			"ward_health"	// higher = stronger
+			{
+				"value"						"4"
+				"special_bonus_unique_shadow_shaman_1"		"+2"
+			}
+			"is_mega_ward"	// check tooltip
+			{
+				"value"						"0"
+				"special_bonus_facet_shadow_shaman_massive_serpent_ward"	"+1"
+			}
+			"mega_ward_multiplier_tooltip"	// higher = stronger
+			{
+				"value"						"0"
+				"special_bonus_facet_shadow_shaman_massive_serpent_ward"	"=10"
+			}
+			"mega_ward_health_tooltip"	// higher = stronger
+			{
+				"special_bonus_facet_shadow_shaman_massive_serpent_ward"	"=7.5"
+			}
+			"mega_ward_health_reduction_pct"	// higher = stronger
+			{
+				"value"					"0"
+				"special_bonus_facet_shadow_shaman_massive_serpent_ward"		"=25"
+			}
+			"mega_ward_model_scale_multiplier"			"2.3 3.0 3.5"	// higher = stronger
+		}
+	}
+	//=================================================================================================================
+	// Shadow Shaman: Serpentine (scepter ability)
+	//=================================================================================================================
+	// ---- Serpentine  (shadow_shaman_serpentine) ----
+	// icon: shadow_shaman_serpentine
+	"shadow_shaman_serpentine"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilitySound"					"Hero_ShadowShaman.SerpentWard"
+		"FightRecapLevel"				"1"
+		"HasScepterUpgrade"				"1"
+		"MaxLevel"						"1"
+		"IsGrantedByScepter"			"1"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1000"
+		"AbilityCastPoint"				"0.1"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"35"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"	// lower = stronger
+		"AbilityValues"
+		{
+			"count"	// higher = stronger
+			{
+				"value" "8"
+			}
+			"length"	// check tooltip
+			{
+				"value" "925"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Shadow Shaman Innate: Fowl Play
+	//=================================================================================================================
+	// ---- Fowl Play  (shadow_shaman_fowl_play) ----
+	// icon: shadow_shaman_fowl_play
+	"shadow_shaman_fowl_play"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
+		"MaxLevel"						"1"
+		"Innate"						"1"
+		"AbilityCooldown"				"90"	// lower = stronger
+
+		"AbilityValues"
+		{
+			"hex_duration"				"3.0"	// higher = stronger
+			"movespeed_bonus_pct"		"10"	// if changing this, change ally_chicken_movement_speed_bonus_pct
+
+			"damage_reduction_duration"	"0.75"	// higher = stronger
+			"damage_reduction_pct"		"100"	// higher = stronger
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- special_bonus_unique_shadow_shaman_1  (special_bonus_unique_shadow_shaman_1) ----
+	"special_bonus_unique_shadow_shaman_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"value"	// check tooltip
+			{
+				"value" "2"
+				"ad_linked_abilities" "shadow_shaman_mass_serpent_ward"
+			}
+			"value2"	// check tooltip
+			{
+				"value" "1"
+				"ad_linked_abilities" "shadow_shaman_mass_serpent_ward"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- special_bonus_unique_shadow_shaman_2  (special_bonus_unique_shadow_shaman_2) ----
+	"special_bonus_unique_shadow_shaman_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- special_bonus_unique_shadow_shaman_3  (special_bonus_unique_shadow_shaman_3) ----
+	"special_bonus_unique_shadow_shaman_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass" "special_bonus_base"
+	}
+		
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- special_bonus_unique_shadow_shaman_4  (special_bonus_unique_shadow_shaman_4) ----
+	"special_bonus_unique_shadow_shaman_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass" "special_bonus_base"
+	}
+		
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- special_bonus_unique_shadow_shaman_6  (special_bonus_unique_shadow_shaman_6) ----
+	"special_bonus_unique_shadow_shaman_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass" "special_bonus_base"
+	}
+		
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- special_bonus_unique_shadow_shaman_7  (special_bonus_unique_shadow_shaman_7) ----
+	"special_bonus_unique_shadow_shaman_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass" "special_bonus_base"
+	}
+		
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- special_bonus_unique_shadow_shaman_8  (special_bonus_unique_shadow_shaman_8) ----
+	"special_bonus_unique_shadow_shaman_8"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass" "special_bonus_base"
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- special_bonus_unique_shadow_shaman_hex_damage_amp  (special_bonus_unique_shadow_shaman_hex_damage_amp) ----
+	"special_bonus_unique_shadow_shaman_hex_damage_amp"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Shadow Shaman: Innate Snake Jar
+	//=================================================================================================================
+	// ---- shadow_shaman_innate_snake_jar  (shadow_shaman_innate_snake_jar) ----
+	"shadow_shaman_innate_snake_jar"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
+		"MaxLevel"						"1"
+		"AbilityValues"
+		{
+			// purely for tooltips on variant selection, actual KV's are on the item
+			"tooltip_cast_range"				"400"	// higher = stronger
+			"tooltip_damage"					"50"	// higher = stronger
+			"tooltip_attack_range"				"650"	// higher = stronger
+			"duration"							"10"	// higher = stronger
+			"cooldown"							"40"	// lower = stronger
+			"tooltip_hits_to_destroy"			"2"	// check tooltip
+			"tooltip_hits_to_destroy_creeps"	"4"	// check tooltip
+		}
+	}
+
+	//=================================================================================================================
+	// Shadow Shaman: Innate Piglet Pole
+	//=================================================================================================================
+	// ---- shadow_shaman_innate_piglet_pole  (shadow_shaman_innate_piglet_pole) ----
+	"shadow_shaman_innate_piglet_pole"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
+		"MaxLevel"						"1"
+		"AbilityValues"
+		{	
+			// purely for tooltips on variant selection, actual KV's are on the item
+			"tooltip_duration"		"4"	// higher = stronger
+			"tooltip_cooldown"		"25.0"	// lower = stronger
+			"tooltip_manacost"		"0"	// lower = stronger
+			"tooltip_movespeed"		"10"	// higher = stronger
+			"voodoo_manacost"		"110"	// lower = stronger
+		}
+	}
+}

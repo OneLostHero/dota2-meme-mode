@@ -1,0 +1,479 @@
+"DOTAAbilities"
+{
+    "Version"       "1"
+
+	//=================================================================================================================
+	// Lion: Impale
+	//=================================================================================================================
+	// ---- Earth Spike  (lion_impale) ----
+	// icon: lion_impale
+	"lion_impale"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Lion.Impale"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+		
+		
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"90 110 130 150"	// lower = stronger
+		
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityCooldown"	"14 13 12 11"	// lower = stronger
+			"AbilityCastRange"	// higher = stronger
+			{
+				"value"			"650"
+				"special_bonus_unique_lion_2"	"+600"
+			}
+
+			"damage"	// higher = stronger
+			{
+				"value"			"105 170 235 300"
+				"special_bonus_unique_lion_3"	"+65"
+			}
+			"width"	// check tooltip
+			{
+				"value"			"140"
+				"affected_by_aoe_increase"	"1"
+			}
+			"duration"			"1.3 1.6 1.9 2.2"	// higher = stronger
+			"length_buffer"		"275"	// check tooltip
+			"speed"				"2800"	// higher = stronger
+			"pierces_immunity"	// check tooltip
+			{
+				"value"			"0"
+			}
+			"cone_shaped"	// check tooltip
+			{
+				"value"	"0"
+				"special_bonus_unique_lion_10" "+1"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Lion: Voodoo
+	//=================================================================================================================
+	// ---- Hex  (lion_voodoo) ----
+	// icon: lion_voodoo
+	"lion_voodoo"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Lion.Voodoo"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"550 575 600 625"
+		"AbilityCastPoint"				"0 0 0 0"
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"125 150 175 200"	// lower = stronger
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityCooldown"	// lower = stronger
+			{
+				"value"				"24 20 16 12"
+				"special_bonus_unique_lion_5"	"-2"
+			}
+			"duration"					"2 2.4 2.8 3.2"	// higher = stronger
+			"movespeed"					"120"	// higher = stronger
+			"radius"	// higher = stronger
+			{
+				"value"									"0"
+				"special_bonus_unique_lion_4"			"+250"
+				"affected_by_aoe_increase"				"1"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Lion: Mana Drain
+	//=================================================================================================================
+	// ---- Mana Drain  (lion_mana_drain) ----
+	// icon: lion_mana_drain
+	"lion_mana_drain"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE | DOTA_UNIT_TARGET_FLAG_NO_INVIS"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+
+        "HasShardUpgrade"               "1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"850"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+		"AbilityChannelTime"				"5.1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15 12 9 6"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"	// lower = stronger
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"5.0"	// better then the mana cost implies
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"duration"					"5.0"	// higher = stronger
+				"mana_per_second"	// check tooltip
+				{
+					"value"		"20 40 60 120"
+				}
+				"break_distance"	// check tooltip
+				{
+					"value"	"1100"
+					"special_bonus_shard"		"+200"	
+				}
+				"tick_interval"				"0.1"	// check tooltip
+				"movespeed"	// higher = stronger
+				{
+					"value"				"15 20 25 30"
+					"special_bonus_unique_lion_6"	"+10"
+				}
+				
+				"shard_bonus_targets"	// higher = stronger
+				{
+					"value"		"2"
+					"RequiresShard"				"1"
+				}		
+				"damage_pct"	// higher = stronger
+				{
+					"value"					"0"		
+					"special_bonus_facet_lion_essence_eater"	"+100"
+					"RequiresFacet"		"lion_essence_eater"
+				}
+				"magic_resist"	// check tooltip
+				{
+					"value"				"0"
+					"special_bonus_shard"		"+60"
+				}
+				"ally_pct"				"50"	// higher = stronger
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Lion: Finger of Death
+	//=================================================================================================================
+	// ---- Finger of Death  (lion_finger_of_death) ----
+	// icon: lion_finger_of_death
+	"lion_finger_of_death"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Lion.FingerOfDeath"
+
+		"HasScepterUpgrade"			"1"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"900"
+		"AbilityCastPoint"				"0.3 0.3 0.3"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"140.0 90.0 40.0"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"200 400 600"	// lower = stronger
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.0"	// Modifier just delays damage
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"damage"	// higher = stronger
+			{
+				"value"				"600 725 850"
+				"special_bonus_scepter"		"+100"
+			}
+			"damage_per_kill"	// higher = stronger
+			{
+				"value"				"40"
+				"special_bonus_unique_lion_8"	"+20"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+			"grace_period"				"3"	// check tooltip
+			"damage_delay"	// higher = stronger
+			{
+				"value"				"0.25"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+			"cooldown_scepter"	// lower = stronger
+			{
+				"value"	"80.0 50.0 20.0"
+				"RequiresScepter"			"1"
+			}
+			"splash_radius_scepter"	// higher = stronger
+			{
+				"value"		"325"
+				"RequiresScepter"			"1"
+				"affected_by_aoe_increase"	"1"
+			}
+				
+			"punch_duration"	// higher = stronger
+			{
+				"value"						"0"
+				"special_bonus_facet_lion_fist_of_death"	"+20"
+				"RequiresFacet"			"lion_fist_of_death"
+			}
+			"punch_attack_range"	// higher = stronger
+			{
+				"value"						"0"
+				"special_bonus_facet_lion_fist_of_death"	"=250"
+				"RequiresFacet"			"lion_fist_of_death"
+			}
+			"punch_bonus_damage_base"	// higher = stronger
+			{
+				"value"						"0"
+				"special_bonus_facet_lion_fist_of_death"	"+40"
+				"RequiresFacet"			"lion_fist_of_death"
+			}
+			"punch_bonus_damage_per_stack"	// higher = stronger
+			{
+				"value"						"0"
+				"special_bonus_facet_lion_fist_of_death"	"+30"
+				"RequiresFacet"			"lion_fist_of_death"
+			}
+			"punch_grace_period"	// check tooltip
+			{
+				"value"						"0"
+				"special_bonus_facet_lion_fist_of_death"	"+3"
+				"RequiresFacet"			"lion_fist_of_death"
+			}
+			"cleave_starting_width"	// check tooltip
+			{
+				"value"						"0"
+				"special_bonus_facet_lion_fist_of_death"	"+150"
+				"affected_by_aoe_increase"	"1"
+				"RequiresFacet"			"lion_fist_of_death"
+			}
+			"cleave_ending_width"	// check tooltip
+			{
+				"value"						"0"
+				"special_bonus_facet_lion_fist_of_death"	"+360"
+				"affected_by_aoe_increase"	"1"
+				"RequiresFacet"			"lion_fist_of_death"
+			}
+			"cleave_distance"	// check tooltip
+			{
+				"value"						"0"
+				"special_bonus_facet_lion_fist_of_death"	"+650"
+				"affected_by_aoe_increase"	"1"
+				"RequiresFacet"			"lion_fist_of_death"
+			}
+			"cleave_damage"	// higher = stronger
+			{
+				"value"							"0"
+				"special_bonus_facet_lion_fist_of_death"	"+50"
+				"RequiresFacet"					"lion_fist_of_death"
+				"CalculateSpellDamageTooltip"	"0"
+				"DamageTypeTooltip"				"DAMAGE_TYPE_NONE"
+			}
+
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_AbilityCastRange} Earth Spike cast range/travel distance  (special_bonus_unique_lion_2) ----
+	// icon: special_bonus_unique_lion_2
+	"special_bonus_unique_lion_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+	
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_damage} Earth Spike Damage  (special_bonus_unique_lion_3) ----
+	// icon: special_bonus_unique_lion_3
+	"special_bonus_unique_lion_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_radius} AoE Hex  (special_bonus_unique_lion_4) ----
+	// icon: special_bonus_unique_lion_4
+	"special_bonus_unique_lion_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- -{s:bonus_AbilityCooldown}s Hex Cooldown  (special_bonus_unique_lion_5) ----
+	// icon: special_bonus_unique_lion_5
+	"special_bonus_unique_lion_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_movespeed}% Mana Drain Slow  (special_bonus_unique_lion_6) ----
+	// icon: special_bonus_unique_lion_6
+	"special_bonus_unique_lion_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"lion_mana_drain"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+		
+		
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_damage_per_kill} Finger of Death Damage Per Kill  (special_bonus_unique_lion_8) ----
+	// icon: special_bonus_unique_lion_8
+	"special_bonus_unique_lion_8"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"lion_finger_of_death"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+		
+		
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- Earth Spike affects a 30 degree cone  (special_bonus_unique_lion_10) ----
+	// icon: special_bonus_unique_lion_10
+	"special_bonus_unique_lion_10"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:value} Max Health Per Finger of Death Kill  (special_bonus_unique_lion_11) ----
+	// icon: special_bonus_unique_lion_11
+	"special_bonus_unique_lion_11"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"value"	// check tooltip
+			{
+				"value" "70"
+				"ad_linked_abilities" "lion_finger_of_death"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Lion Innate To Hell and Back
+	//=================================================================================================================
+	// ---- To Hell and Back  (lion_to_hell_and_back) ----
+	// icon: lion_to_hell_and_back
+	"lion_to_hell_and_back"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"MaxLevel"						"1"
+		"Innate"						"1"
+		"AbilityValues"
+		{
+			"duration"					"90"	// higher = stronger
+			"spell_amp"					"20"	// check tooltip
+			"debuff_amp"				"20"	// check tooltip
+		}
+	}
+}

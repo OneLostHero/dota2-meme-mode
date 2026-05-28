@@ -1,0 +1,397 @@
+"DOTAAbilities"
+{
+    "Version"       "1"
+	//=================================================================================================================
+	// Ursa: Earthshock
+	//=================================================================================================================
+	// ---- Earthshock  (ursa_earthshock) ----
+	// icon: ursa_earthshock
+	"ursa_earthshock"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Ursa.Earthshock"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+
+        "HasShardUpgrade"               "1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDuration"				"4.0"
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"75 125 175 225"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"95"	// lower = stronger
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"shock_radius"	// higher = stronger
+			{
+				"value"		"385"
+				"affected_by_aoe_increase"	"1"
+				"special_bonus_unique_ursa_2"			"+400"
+			}
+			"movement_slow"				"-22 -28 -34 -40"	// higher = stronger
+			"hop_distance"	// check tooltip
+			{
+				"value"		"250"
+			}
+			"hop_duration"				"0.25"	// higher = stronger
+			"hop_height"				"83"	// check tooltip
+			"shard_enrage_duration"	// higher = stronger
+			{
+				"value"				"1.5"
+				"RequiresShard"		"1"
+			}
+			"fury_swipe_stacks_on_hit"	// check tooltip
+			{
+				"value"				"0"
+				"special_bonus_unique_ursa_earthshock_furyswipes"			"+2"
+			}
+			"AbilityCooldown"	// lower = stronger
+			{
+				"value"				"14 12 10 8"
+				"special_bonus_unique_ursa_3"	"=0.25"
+			}
+			"AbilityCharges"	// check tooltip
+			{
+				"value"	"0"
+				"special_bonus_unique_ursa_3"	"+2"
+			}
+			"AbilityChargeRestoreTime"	// check tooltip
+			{
+				"value"	"14 12 10 8"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastGestureSlot"		"DEFAULT"
+	}	
+
+	//=================================================================================================================
+	// Ursa: Overpower
+	//=================================================================================================================
+	// ---- Overpower  (ursa_overpower) ----
+	// icon: ursa_overpower
+	"ursa_overpower"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_Ursa.Overpower"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_OVERRIDE_ABILITY_3"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12 11 10 9"	// lower = stronger
+		"AbilityDuration"				"20"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"45 50 55 60"	// lower = stronger
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"max_attacks"	// check tooltip
+				{
+					"value"			"3 4 5 6"
+				"special_bonus_unique_ursa_7" "+3"
+				}
+				"attack_speed_bonus_pct"	"400"	// higher = stronger
+				"slow_resist"			"10 20 30 40"	// higher = stronger
+		}
+	}
+	
+	//=================================================================================================================
+	// Ursa: Fury Swipes
+	//=================================================================================================================
+	// ---- Fury Swipes  (ursa_fury_swipes) ----
+	// icon: ursa_fury_swipes
+	"ursa_fury_swipes"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+				
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"bonus_reset_time"	// higher = stronger
+				{
+					"value"						"8 12 16 20"
+					"special_bonus_unique_ursa_4" "+20"
+				}
+				"bonus_reset_time_roshan"		"10"	// higher = stronger
+				"damage_per_stack"	// higher = stronger
+				{
+					"value"					"13 21 29 37"
+				"special_bonus_unique_ursa" "+10"
+				}
+				"stun_stack_count"	// higher = stronger
+				{
+					"value"				"0"
+					"special_bonus_unique_ursa_furyswipes_stun"			"+5"	
+				}
+				"stun_duration"	// higher = stronger
+				{
+					"value"				"0"
+					"special_bonus_unique_ursa_furyswipes_stun"			"+1.5"	
+				}
+				
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}		
+
+	//=================================================================================================================
+	// Ursa: Enrage
+	//=================================================================================================================
+	// ---- Enrage  (ursa_enrage) ----
+	// icon: ursa_enrage
+	"ursa_enrage"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Ursa.Enrage"
+
+		"HasScepterUpgrade"			"1"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_OVERRIDE_ABILITY_4"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastRange"				"0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"70 50 30"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0 0 0"	// lower = stronger
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{			
+			"damage_reduction"			"80"	// higher = stronger
+			"status_resistance"	// check tooltip
+			{
+				"value"							"50"
+				"special_bonus_unique_ursa_8"			"+20"
+			}
+			"duration"	// higher = stronger
+			{
+				"value"							"4 4.5 5"
+			}
+			"cooldown_scepter"	// lower = stronger
+			{
+				"value"						"30 24 18"
+				"RequiresScepter"			"1"
+			}
+			"aoe_radius"	// higher = stronger
+			{
+				"value"						"0"
+				"affected_by_aoe_increase"	"1"
+			}
+
+			"damage_increase"	// higher = stronger
+			{
+				"value"									"0"
+				"special_bonus_facet_ursa_grudge_bearer"	"=5"
+			}
+			"damage_increase_duration"	// higher = stronger
+			{
+				"value"									"0"
+				"special_bonus_facet_ursa_grudge_bearer"	"=5"
+			}
+		}
+	}
+
+
+	//=================================================================================================================
+	// Ability: Might of Ulfsaar (Innate)
+	//=================================================================================================================
+	// ---- Maul  (ursa_maul) ----
+	// icon: ursa_maul
+	"ursa_maul"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"1"
+		"Innate"						"1"
+
+		"AbilityValues"
+		{
+			"health_as_damage_pct"	// higher = stronger
+			{
+				"value"	"1.5"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_damage_per_stack} Fury Swipes Damage  (special_bonus_unique_ursa) ----
+	// icon: special_bonus_unique_ursa
+	"special_bonus_unique_ursa"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass" "special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_shock_radius} Earthshock Radius  (special_bonus_unique_ursa_2) ----
+	// icon: special_bonus_unique_ursa_2
+	"special_bonus_unique_ursa_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- Earthshock has {s:bonus_AbilityCharges} Charges  (special_bonus_unique_ursa_3) ----
+	// icon: special_bonus_unique_ursa_3
+	"special_bonus_unique_ursa_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:value}s Fury Swipes Reset Time  (special_bonus_unique_ursa_4) ----
+	// icon: special_bonus_unique_ursa_4
+	"special_bonus_unique_ursa_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"value"	// check tooltip
+			{
+				"value" "20"
+				"ad_linked_abilities" "ursa_fury_swipes"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_max_attacks} Overpower Attacks  (special_bonus_unique_ursa_7) ----
+	// icon: special_bonus_unique_ursa_7
+	"special_bonus_unique_ursa_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass" "special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_status_resistance}% Enrage Status Resistance  (special_bonus_unique_ursa_8) ----
+	// icon: special_bonus_unique_ursa_8
+	"special_bonus_unique_ursa_8"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"value"	// check tooltip
+			{
+				"value" "10"
+				"ad_linked_abilities" "ursa_enrage"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- Earthshock Applies {s:bonus_fury_swipe_stacks_on_hit} Fury Swipes  (special_bonus_unique_ursa_earthshock_furyswipes) ----
+	// icon: special_bonus_unique_ursa_earthshock_furyswipes
+	"special_bonus_unique_ursa_earthshock_furyswipes"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ursa Innate Debuff duration increase
+	//=================================================================================================================
+	// ---- Bear Down  (ursa_bear_down) ----
+	// icon: ursa_bear_down
+	"ursa_bear_down"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"MaxLevel"						"1"
+		"AbilityValues"
+		{
+			"debuff_amp"				"20"	// check tooltip
+
+		}
+	}	
+}

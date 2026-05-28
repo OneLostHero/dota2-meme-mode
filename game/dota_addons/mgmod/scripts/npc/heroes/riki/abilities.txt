@@ -1,0 +1,467 @@
+"DOTAAbilities"
+{
+    "Version"       "1"
+
+	//=================================================================================================================
+	// Riki: Sleeping Dart ( scepter ability )
+	//=================================================================================================================
+	// ---- Sleeping Dart  (riki_poison_dart) ----
+	// icon: riki_poison_dart
+	"riki_poison_dart"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+		"IsGrantedByShard"              "1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75"	// lower = stronger
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"		"2.4"	// higher = stronger
+			"damage"	// higher = stronger
+			{
+				"value"					"150"
+				"CalculateSpellDamageTooltip"	"1"
+			}
+			"movement_slow"		"30"	// higher = stronger
+			"debuff_duration"		"4"	// higher = stronger
+			"projectile_speed"		"1600"	// higher = stronger
+			"wake_damage_limit"		"200"	// higher = stronger
+		}
+	}
+	
+	//=================================================================================================================
+	// Riki: Smoke Screen
+	//=================================================================================================================
+	// ---- Smoke Screen  (riki_smoke_screen) ----
+	// icon: riki_smoke_screen
+	"riki_smoke_screen"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilitySound"					"Hero_Riki.Smoke_Screen"
+		"HasShardUpgrade"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"550"
+		"AbilityCastPoint"				"0.2"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20 17 14 11"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"65 70 75 80"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityDuration"	// higher = stronger
+			{
+				"value"					"6"
+			}
+
+			"radius"	// higher = stronger
+			{
+				"value"					"425"
+				"special_bonus_unique_riki_7"	"+50"
+				"affected_by_aoe_increase"	"1"
+			}
+			"miss_rate"					"30 45 60 75"	// higher = stronger
+
+			"block_targeting"	// check tooltip
+			{
+				"value"					"0"
+				"special_bonus_shard"	"1"
+			}
+
+			"armor_reduction"	// higher = stronger
+			{
+				"value"					"0"
+				"special_bonus_shard"	"5"
+			}
+		}
+		
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	
+	//=================================================================================================================
+	// Riki: Blink Strike
+	//=================================================================================================================
+	// ---- Blink Strike  (riki_blink_strike) ----
+	// icon: riki_blink_strike
+	"riki_blink_strike"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CUSTOM"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilitySound"					"Hero_Riki.Blink_Strike"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600 700 800 900"
+		"AbilityCastPoint"				"0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0.1"	// lower = stronger
+		"AbilityCharges"				"2"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50 55 60 65"	// lower = stronger
+		
+		// Special
+		"AbilityValues"
+		{
+			
+			"bonus_damage"	// higher = stronger
+			{
+				"value"					"40 55 70 85"
+				"CalculateSpellDamageTooltip"	"1"
+			}
+			"AbilityChargeRestoreTime"	// check tooltip
+			{
+				"value"							"25 21 17 13"
+				"special_bonus_unique_riki_9" "-4"				
+			}
+			"slow"						"0.4"	// higher = stronger
+		}
+		
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+	
+	//=================================================================================================================
+	// Riki: Backstab (but it's actually cloak & dagger)
+	//=================================================================================================================
+	// ---- Cloak and Dagger  (riki_backstab) ----
+	// icon: riki_backstab
+	"riki_backstab"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"MaxLevel"						"3"		
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{			
+			"fade_delay"					"4 3 2"	// check tooltip
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Riki: Backstab Innate
+	//=================================================================================================================
+	// ---- Backstab  (riki_innate_backstab) ----
+	// icon: riki_innate_backstab
+	"riki_innate_backstab"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"			"4"
+		"Innate"			"1"
+		"DependentOnAbility"	"riki_backstab"
+
+		"AbilityValues"
+		{
+			"damage_multiplier"	// higher = stronger
+			{
+				"value"		"0.4 0.8 1.2 1.6"
+				"special_bonus_unique_riki_1"		"+0.3"
+				"CalculateSpellDamageTooltip"	"0"
+				"DamageTypeTooltip"			"DAMAGE_TYPE_NONE"
+			}
+		
+			"backstab_angle"				"105 105 105 105"	// check tooltip
+
+			"bonus_xp_kill"	// higher = stronger
+			{
+				"value"							"0"
+				"special_bonus_facet_riki_contract_killer"	"25 150 250 350"
+			}
+			"bonus_xp_assist"	// higher = stronger
+			{
+				"value"							"0"
+				"special_bonus_facet_riki_contract_killer"	"25 100 100 100"
+			}
+		}			
+	}
+	
+	//=================================================================================================================
+	// Riki: Permanent Invis
+	//=================================================================================================================
+	// ---- Permanent Invisibility  (riki_permanent_invisibility) ----
+	// icon: riki_permanent_invisibility
+	"riki_permanent_invisibility"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"fade_delay"					"4 3 2"	// check tooltip
+			"movement_speed"				"20 40 60"	// higher = stronger
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Riki: Tricks of the Trade
+	//=================================================================================================================
+	// ---- Tricks of the Trade  (riki_tricks_of_the_trade) ----
+	// icon: riki_tricks_of_the_trade
+	"riki_tricks_of_the_trade"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"HasScepterUpgrade"				"1"
+		"AbilitySound"					"Hero_Riki.TricksOfTheTrade.Cast"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"400"
+		"AbilityCastPoint"				"0.3"
+		"AbilityChannelTime"			"2.0"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityChannelAnimation"		"ACT_DOTA_CHANNEL_ABILITY_4"
+
+		// Ability Data
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"45 55 65 75"	// lower = stronger
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityCooldown"	// lower = stronger
+			{
+				"value"		"18 16 14 12"
+				"special_bonus_unique_riki_6"		"-3"
+			}
+			"radius"	// higher = stronger
+			{
+				"value"		"450"
+				"affected_by_aoe_increase"	"1"
+			}
+			"attack_count"	"4"	// higher = stronger
+			"damage_pct"	"40"	// higher = stronger
+			"agility_pct"	// higher = stronger
+			{
+				"value" 				"30 50 70 90"
+				"special_bonus_unique_riki_2" "+50"
+			}
+			"scepter_duration"	// higher = stronger
+			{
+				"value"			"2"
+				"RequiresScepter"		"1"
+			}
+			"scepter_attacks"	// check tooltip
+			{
+				"value"		"5"
+				"RequiresScepter"		"1"
+			}
+			"scepter_cast_range"	// higher = stronger
+			{
+				"value"		"700"
+				"RequiresScepter"		"1"
+			}
+			"dispel"	// check tooltip
+			{
+				"value"				"0"
+				"special_bonus_unique_riki_5"	"+1"
+			}
+			"creep_agility_multiplier"	// higher = stronger
+			{
+				"value"			"1"
+				"special_bonus_facet_riki_exterminator"	"=3"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_damage_multiplier} Backstab Multiplier  (special_bonus_unique_riki_1) ----
+	// icon: special_bonus_unique_riki_1
+	"special_bonus_unique_riki_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_agility_pct} Tricks of the Trade Agility Increase  (special_bonus_unique_riki_2) ----
+	// icon: special_bonus_unique_riki_2
+	"special_bonus_unique_riki_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"riki_tricks_of_the_trade"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+		
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- -{s:value}s Smoke Screen Cooldown  (special_bonus_unique_riki_3) ----
+	// icon: special_bonus_unique_riki_3
+	"special_bonus_unique_riki_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"value"	// check tooltip
+			{
+				"value" "3"
+				"ad_linked_abilities" "riki_smoke_screen"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- Tricks of the Trade Applies a Basic Dispel  (special_bonus_unique_riki_5) ----
+	// icon: special_bonus_unique_riki_5
+	"special_bonus_unique_riki_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"riki_tricks_of_the_trade"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+		
+		
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- -{s:bonus_AbilityCooldown} Tricks of the Trade Cooldown  (special_bonus_unique_riki_6) ----
+	// icon: special_bonus_unique_riki_6
+	"special_bonus_unique_riki_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_radius} Smoke Screen Radius  (special_bonus_unique_riki_7) ----
+	// icon: special_bonus_unique_riki_7
+	"special_bonus_unique_riki_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+				
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:value}% Cloak and Dagger Movement Speed  (special_bonus_unique_riki_8) ----
+	// icon: special_bonus_unique_riki_8
+	"special_bonus_unique_riki_8"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"value"	// check tooltip
+			{
+				"value" "8"
+				"ad_linked_abilities" "riki_backstab"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- -{s:bonus_AbilityChargeRestoreTime}s Blink Strike Replenish Time  (special_bonus_unique_riki_9) ----
+	// icon: special_bonus_unique_riki_9
+	"special_bonus_unique_riki_9"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+	}
+}

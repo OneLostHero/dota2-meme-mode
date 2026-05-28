@@ -1,0 +1,461 @@
+"DOTAAbilities"
+{
+    "Version"       "1"
+	
+	//=================================================================================================================
+	// Ember Spirit: Searing Chains
+	//=================================================================================================================
+	// ---- Searing Chains  (ember_spirit_searing_chains) ----
+	// icon: ember_spirit_searing_chains
+	"ember_spirit_searing_chains"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_EmberSpirit.SearingChains.Target"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"400"
+		"AbilityCastPoint"				"0"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"13 12 11 10"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"80 90 100 110"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"duration"	// higher = stronger
+				{
+					"value"		"1.5 2.0 2.5 3.0"
+					"special_bonus_unique_ember_spirit_2"			"+1"
+				}			
+				"radius"	// higher = stronger
+				{
+					"value"			"400"
+					"affected_by_aoe_increase"	"1"
+				}	
+				"damage_per_second"	// higher = stronger
+				{
+					"value"				"50 70 90 110"
+					"special_bonus_unique_ember_spirit_chains_dps"			"+60"
+				}
+				
+				
+				"tick_interval"					"0.5"	// check tooltip
+				"unit_count"	// higher = stronger
+				{
+					"value"			"3"
+					"special_bonus_facet_ember_spirit_chain_gang"				"+1"
+				}	
+				"remnant_chains"	// check tooltip
+				{
+				
+					"value"						"0"
+					"special_bonus_facet_ember_spirit_chain_gang"						"=1"
+				}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Ember Spirit: Sleight of Fist
+	//=================================================================================================================
+	// ---- Sleight of Fist  (ember_spirit_sleight_of_fist) ----
+	// icon: ember_spirit_sleight_of_fist
+	"ember_spirit_sleight_of_fist"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		
+		"AbilityCastRange"				"650"
+		"AbilityCastPoint"				"0"
+		"FightRecapLevel"				"1"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"65"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"radius"	// higher = stronger
+				{
+					"value"			"250 350 450 550"
+					"affected_by_aoe_increase"	"1"
+				}
+				"bonus_hero_damage"	// higher = stronger
+				{
+					"value"		"45 85 125 165"
+					"special_bonus_unique_ember_spirit_6"			"+55"
+					"CalculateSpellDamageTooltip"	"0"
+				}
+				"attack_interval"				"0.25"	// check tooltip
+				"creep_damage_penalty"	// higher = stronger
+				{
+					"value"							"0"
+					"CalculateSpellDamageTooltip"	"0"
+				}
+				"AbilityCharges"	// check tooltip
+				{
+					"value"		"0"
+					"special_bonus_unique_ember_spirit_4"	"=2"
+				}
+				"AbilityCooldown"	// lower = stronger
+				{
+					"value"									"12 10 8 6"
+					"special_bonus_unique_ember_spirit_4"	"=0"
+				}
+				"AbilityChargeRestoreTime"	// check tooltip
+				{
+					"value"									"12 10 8 6"
+					
+				}
+				"min_enemies_for_double_sleight"	// check tooltip
+				{
+					"value"										"0"
+					"special_bonus_facet_ember_spirit_double_impact"			"=2"
+				}
+				"second_attack_damage_penalty"	// higher = stronger
+				{
+					"value"					"0"
+					"special_bonus_facet_ember_spirit_double_impact"			"=40"
+				}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Ember Spirit: Flame Guard
+	//=================================================================================================================
+	// ---- Flame Guard  (ember_spirit_flame_guard) ----
+	// icon: ember_spirit_flame_guard
+	"ember_spirit_flame_guard"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_EmberSpirit.FlameGuard.Cast"
+		"MaxLevel"						"5"
+		"RequiredLevel"					"-1"
+		"Innate"						"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"400"
+		"AbilityCastPoint"				"0"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"35.0"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"65 80 95 110"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"duration"						"10 12 14 16 18"	// higher = stronger
+				"passive_radius"	// higher = stronger
+				{
+					"value"		"150"
+					"affected_by_aoe_increase"	"1"
+				}
+				"tick_interval"					"0.2"	// check tooltip
+				"passive_damage_per_second"	// higher = stronger
+				{
+					"value"			"10 15 20 25 30"	
+					"special_bonus_unique_ember_spirit_3"			"+100%"			
+				}
+				"blind_pct"				"50"	// higher = stronger
+				"linger_duration"		"0.5"	// higher = stronger
+				"active_radius"	// higher = stronger
+				{
+					"value"				"500"
+					"affected_by_aoe_increase"	"1"
+				}
+				"active_damage_per_second"	// higher = stronger
+				{
+					"value"			"15 25 35 45 55"
+					"special_bonus_unique_ember_spirit_3"			"+100%"
+				}
+				"shield_pct_absorb"		"70"	// higher = stronger
+				"absorb_amount"	// higher = stronger
+				{
+					"value"						"30 60 135 210 285"
+					"special_bonus_unique_ember_spirit_1"			"+200"
+				}	
+
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Ember Spirit: Fire Remnant
+	//=================================================================================================================
+	// ---- Fire Remnant  (ember_spirit_fire_remnant) ----
+	// icon: ember_spirit_fire_remnant
+	"ember_spirit_fire_remnant"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilitySound"					"Hero_EmberSpirit.FireRemnant.Cast"
+		"AbilityDraftPreAbility"		"ember_spirit_activate_fire_remnant"
+		"HasShardUpgrade"			"1"
+		"HasScepterUpgrade"			"1"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1400"
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_6"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0.5"	// lower = stronger
+		"AbilityCharges"				"3"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"	// lower = stronger
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"speed_multiplier"				"250"	// higher = stronger
+				"AbilityChargeRestoreTime"	// check tooltip
+				{
+					"value"			"35.0"
+					"special_bonus_unique_ember_spirit_5"	"-12"
+				}
+				"damage"	// higher = stronger
+				{
+					"value"			"100 200 300"
+					"CalculateSpellDamageTooltip" "1"
+				}
+				"radius"	// higher = stronger
+				{
+					"value"		"450"
+					"affected_by_aoe_increase"	"1"
+				}
+				"duration"				"45.0"	// higher = stronger
+				"scepter_range"	// higher = stronger
+				{
+					"value"			"3000"
+					"RequiresScepter"	"1"
+				}
+				"scepter_speed_multiplier"	// higher = stronger
+				{
+					"value"		"2"
+					"RequiresScepter"	"1"
+				}
+                "scepter_max_charges"	
+				{
+					"value"			"5"
+					"RequiresScepter"	"1"
+				}
+                "shard_radius"				
+				{
+					"value"			"450"
+					"RequiresShard"				"1"
+					"affected_by_aoe_increase"	"1"
+				}
+                "shard_damage_per_second"	
+				{
+					"value"		"45"
+					"RequiresShard"				"1"
+				}
+                "shard_charge_radius"				
+				{
+					"value"		"400"
+					"RequiresShard"				"1"
+					"affected_by_aoe_increase"	"1"
+				}
+		}
+	}
+
+	//=================================================================================================================
+	// Ember Spirit: Activate Fire Remnant
+	//=================================================================================================================
+	// ---- Activate Fire Remnant  (ember_spirit_activate_fire_remnant) ----
+	// icon: ember_spirit_activate_fire_remnant
+	"ember_spirit_activate_fire_remnant"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"MaxLevel"						"3"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"99999"
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0.0"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 125 150"	// lower = stronger
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"speed_multiplier"				"250"	// higher = stronger
+				"max_charges"				"3"	// check tooltip
+				"charge_restore_time"			"35.0"	// check tooltip
+				"damage"				"100 200 300"	// higher = stronger
+				"radius"	// higher = stronger
+				{
+					"value"		"450"
+					"affected_by_aoe_increase"	"1"
+				}
+				"speed"					"1300"	// higher = stronger
+                "scepter_mana_cost"		
+				{
+					"value"			"75"
+					"RequiresScepter"		"1"
+				}
+                "shard_remnant_speed_pct"	"300"
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_absorb_amount} Flame Guard Barrier Amount  (special_bonus_unique_ember_spirit_1) ----
+	// icon: special_bonus_unique_ember_spirit_1
+	"special_bonus_unique_ember_spirit_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_duration}s Searing Chains Duration  (special_bonus_unique_ember_spirit_2) ----
+	// icon: special_bonus_unique_ember_spirit_2
+	"special_bonus_unique_ember_spirit_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_active_damage_per_second}% Flame Guard DPS  (special_bonus_unique_ember_spirit_3) ----
+	// icon: special_bonus_unique_ember_spirit_3
+	"special_bonus_unique_ember_spirit_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- {s:bonus_AbilityCharges} Sleight of Fist Charges  (special_bonus_unique_ember_spirit_4) ----
+	// icon: special_bonus_unique_ember_spirit_4
+	"special_bonus_unique_ember_spirit_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- -{s:bonus_AbilityChargeRestoreTime}s Remnant Charge Restore Time  (special_bonus_unique_ember_spirit_5) ----
+	// icon: special_bonus_unique_ember_spirit_5
+	"special_bonus_unique_ember_spirit_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_bonus_hero_damage} Sleight of Fist Hero Damage  (special_bonus_unique_ember_spirit_6) ----
+	// icon: special_bonus_unique_ember_spirit_6
+	"special_bonus_unique_ember_spirit_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_damage_per_second} Searing Chains Damage  (special_bonus_unique_ember_spirit_chains_dps) ----
+	// icon: special_bonus_unique_ember_spirit_chains_dps
+	"special_bonus_unique_ember_spirit_chains_dps"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+
+	
+
+}

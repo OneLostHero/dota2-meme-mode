@@ -1,0 +1,444 @@
+"DOTAAbilities"
+{
+    "Version"       "1"
+	
+	//=================================================================================================================
+	// Crystal Maiden: Let It Go (Shard ability)
+	//=================================================================================================================
+	// ---- Let It Go  (crystal_maiden_let_it_go) ----
+	// icon: crystal_maiden_let_it_go
+	"crystal_maiden_let_it_go"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Rattletrap.Battery_Assault_Impact"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityCastPoint"				"0.1"	// check tooltip
+			"AbilityCastRange"				"1400"	// higher = stronger
+			"AbilityCooldown"				"30"	// lower = stronger
+			"AbilityManaCost"				"100"	// lower = stronger
+			"speed"							"50"	// higher = stronger
+			"duration"						"12"	// higher = stronger
+			"path_radius"					"150"	// higher = stronger
+			"slow"							"10"	// higher = stronger
+		}
+	}
+	
+	//=================================================================================================================
+	// Ability: Crystal Maiden's Crystal Nova
+	//=================================================================================================================
+	// ---- Crystal Nova  (crystal_maiden_crystal_nova) ----
+	// icon: crystal_maiden_crystal_nova
+	"crystal_maiden_crystal_nova"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Crystal.CrystalNova"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityCastRange"				"700"	// higher = stronger
+			"AbilityCastPoint"				"0.3 0.3 0.3 0.3"	// check tooltip
+			"AbilityCooldown"	// lower = stronger
+			{
+				"value"										"11 10 9 8"
+				"special_bonus_unique_crystal_maiden_5"		"-4"
+			}
+			"AbilityManaCost"				"115 135 155 175"	// lower = stronger
+			"radius"	// higher = stronger
+			{
+				"value"										"425"
+				"special_bonus_unique_crystal_maiden_6"		"+125"
+				"affected_by_aoe_increase"	"1"
+			}
+			"movespeed_slow"				"-20 -30 -40 -50"	// higher = stronger
+			"attackspeed_slow"				"-30 -45 -60 -75"	// higher = stronger
+			"duration"						"5"	// higher = stronger
+			"vision_duration"				"6.0"	// higher = stronger
+			"nova_damage"	// higher = stronger
+			{
+				"value"										"110 160 210 260"
+				"special_bonus_unique_crystal_maiden_2"		"+300"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}	
+
+	//=================================================================================================================
+	// Ability: Crystal Maiden's Frostbite
+	//=================================================================================================================
+	// ---- Frostbite  (crystal_maiden_frostbite) ----
+	// icon: crystal_maiden_frostbite
+	"crystal_maiden_frostbite"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"hero_Crystal.frostbite"
+		"AbilityDraftShardAbility"		"crystal_maiden_crystal_clone"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.5"	// Applies multiple modifiers
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityCastRange"	// higher = stronger
+			{
+				"value"								"600"
+				"special_bonus_unique_crystal_maiden_frostbite_castrange" 		"+125"
+			}
+			"AbilityCastPoint"				"0.3 0.3 0.3 0.3"	// check tooltip
+			"AbilityCooldown"				"9 8 7 6"	// lower = stronger
+			"AbilityManaCost"				"125 135 145 155"	// lower = stronger
+			"damage_per_second"	// higher = stronger
+			{
+				"value"			"100"
+				"CalculateSpellDamageTooltip" "1"
+			}
+			"duration"	// higher = stronger
+			{
+				"value"										"1.5 2 2.5 3"
+				"special_bonus_unique_crystal_maiden_1"		"+1.25"
+			}
+			"creep_multiplier"							"4"	// higher = stronger
+			"tick_interval"					"0.25"	// check tooltip
+			
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}	
+	
+	//=================================================================================================================
+	// Ability: Crystal Maiden's Arcane Aura
+	//=================================================================================================================
+	// ---- Arcane Aura  (crystal_maiden_brilliance_aura) ----
+	// icon: crystal_maiden_brilliance_aura
+	"crystal_maiden_brilliance_aura"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+		
+		"AbilityValues"
+		{
+			"base_mana_regen"	// higher = stronger
+			{
+				"value"										"0.4 0.6 0.8 1.0"
+			}
+			"proximity_mana_regen_tooltip"	// higher = stronger
+			{
+				"value"										"1.2 1.8 2.4 3.0"
+			}
+			"proximity_bonus_factor"		"3"	// higher = stronger
+			"proximity_bonus_radius"	// higher = stronger
+			{
+				"value"		"1200"
+				"special_bonus_facet_crystal_maiden_cold_comfort"		"=1200"
+				"affected_by_aoe_increase"	"1"
+			}
+			"self_cast_range_bonus"	// higher = stronger
+			{
+				"value"													"0"
+				"special_bonus_facet_crystal_maiden_frozen_expanse"		"50 75 100 125"
+			}
+
+			"aoe_bonus"	// higher = stronger
+			{
+				"special_bonus_facet_crystal_maiden_frozen_expanse" "7 8 9 10"
+			}
+
+			"mana_battery_mana_pct"	// higher = stronger
+			{
+				"value"						"0"
+				"special_bonus_facet_crystal_maiden_cold_comfort"		"10 15 20 25"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+	//=================================================================================================================
+	// Ability: Crystal Maiden's Freezing Field
+	//=================================================================================================================
+	// ---- Freezing Field  (crystal_maiden_freezing_field) ----
+	// icon: crystal_maiden_freezing_field
+	"crystal_maiden_freezing_field"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"hero_Crystal.freezingField.wind"
+		"HasScepterUpgrade"               "1"		
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityChannelAnimation"		"ACT_DOTA_CHANNEL_ABILITY_4"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.35"	// Primarily about the damage
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityChannelTime"			"10"	// check tooltip
+			"AbilityCastPoint"				"0"	// check tooltip
+			"AbilityCooldown"				"100 95 90"	// lower = stronger
+			"AbilityDuration"				"10.0"	// higher = stronger
+			"AbilityManaCost"				"200 400 600"	// lower = stronger
+			"radius"	// higher = stronger
+			{
+				"value"		"810"
+					"affected_by_aoe_increase"	"1"
+			}
+			"explosion_radius"	// higher = stronger
+			{
+				"value"		"320"
+					"affected_by_aoe_increase"	"1"
+			}
+			"explosion_interval"			"0.1"	// check tooltip
+			"movespeed_slow"				"-40"	// higher = stronger
+			"attack_slow"					"-80 -120 -160"	// higher = stronger
+			"slow_duration"					"1.0"	// higher = stronger
+			"explosion_min_dist"			"195"	// check tooltip
+			"explosion_max_dist"	// check tooltip
+			{
+				"value"	"785"
+					"affected_by_aoe_increase"	"1"
+			}
+			"damage"	// higher = stronger
+			{
+				"value"										"105 170 250"
+				"special_bonus_unique_crystal_maiden_3"		"+50"
+			}
+			"frostbite_delay" // negative means don't apply.
+			{
+				"value"						"-1"
+				"special_bonus_scepter"		"+3.5"
+				"RequiresScepter"			"1"
+			}
+			"shard_bonus_explosion"	// higher = stronger
+			{
+				"shard_bonus_explosion"		"0"
+				"special_bonus_scepter"		"+20"
+				"RequiresShard"				"1"
+			}
+			"shard_self_movement_speed_slow_pct"	// higher = stronger
+			{
+				"value"						"0"
+				"special_bonus_scepter"		"-75"
+				"RequiresScepter"				"1"
+			}
+			"can_move"	// check tooltip
+			{
+				"value"						"0"
+				"special_bonus_scepter"		"+1"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Crystal Maiden: Freezing Field Stop
+	//=================================================================================================================
+	// ---- Stop Freezing Field  (crystal_maiden_freezing_field_stop) ----
+	// icon: crystal_maiden_freezing_field_stop
+	"crystal_maiden_freezing_field_stop"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+		"AbilityCastAnimation"			"ACT_INVALID"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"1"	// lower = stronger
+	}
+
+	//=================================================================================================================
+	// Crystal Maiden Crystal Clone
+	//=================================================================================================================
+	// ---- Crystal Clone  (crystal_maiden_crystal_clone) ----
+	// icon: crystal_maiden_crystal_clone
+	"crystal_maiden_crystal_clone"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+		"IsGrantedByShard"				"1"
+		"AbilitySound"					"Hero_Enchantress.EnchantCreep"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastRange"				"-1"
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150"	// lower = stronger
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"hop_distance"				"275"	// check tooltip
+			"hop_duration"				"0.3"	// higher = stronger
+			"clone_duration"			"5"	// higher = stronger
+			"frostbite_radius"	// higher = stronger
+			{
+				"value"						"450"
+				"affected_by_aoe_increase"	"1"
+			}
+			
+			"anim_delay"				"0.02"	// check tooltip
+			"clone_health"				"150"	// higher = stronger
+		}
+	}
+
+	//=================================================================================================================
+	// Crystal Maiden: Innate mana regen multiplier
+	//=================================================================================================================
+	// ---- Blueheart Floe  (crystal_maiden_blueheart_floe) ----
+	// icon: crystal_maiden_blueheart_floe
+	"crystal_maiden_blueheart_floe"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
+		"AbilityTextureName"			"crystal_maiden_let_it_go"
+
+		"MaxLevel"						"1"
+		"Innate"						"1"
+
+		"AbilityValues"
+		{
+			"mana_regen_multiplier"		"50"	// higher = stronger
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_duration}s Frostbite Duration  (special_bonus_unique_crystal_maiden_1) ----
+	// icon: special_bonus_unique_crystal_maiden_1
+	"special_bonus_unique_crystal_maiden_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"crystal_maiden_frostbite"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_nova_damage} Crystal Nova Damage  (special_bonus_unique_crystal_maiden_2) ----
+	// icon: special_bonus_unique_crystal_maiden_2
+	"special_bonus_unique_crystal_maiden_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"crystal_maiden_crystal_nova"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_damage} Freezing Field Damage  (special_bonus_unique_crystal_maiden_3) ----
+	// icon: special_bonus_unique_crystal_maiden_3
+	"special_bonus_unique_crystal_maiden_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"crystal_maiden_freezing_field"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- -{s:bonus_AbilityCooldown}s Crystal Nova Cooldown  (special_bonus_unique_crystal_maiden_5) ----
+	// icon: special_bonus_unique_crystal_maiden_5
+	"special_bonus_unique_crystal_maiden_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"crystal_maiden_crystal_nova"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_radius} Crystal Nova AoE  (special_bonus_unique_crystal_maiden_6) ----
+	// icon: special_bonus_unique_crystal_maiden_6
+	"special_bonus_unique_crystal_maiden_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"crystal_maiden_crystal_nova"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_AbilityCastRange} Frostbite Cast Range  (special_bonus_unique_crystal_maiden_frostbite_castrange) ----
+	// icon: special_bonus_unique_crystal_maiden_frostbite_castrange
+	"special_bonus_unique_crystal_maiden_frostbite_castrange"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+}

@@ -1,0 +1,487 @@
+"DOTAAbilities"
+{
+    "Version"       "1"
+
+    	
+	//=================================================================================================================
+	// Ability: Sand King Burrowstrike
+	//=================================================================================================================
+	// ---- Burrowstrike  (sandking_burrowstrike) ----
+	// icon: sandking_burrowstrike
+	"sandking_burrowstrike"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_ALT_CASTABLE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+		//"HasScepterUpgrade"			"1"
+		"AbilitySound"					"Ability.SandKing_BurrowStrike"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"110 120 130 140"	// lower = stronger
+		
+		"AbilityDamage"					"80 140 200 260"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityCooldown"	// lower = stronger
+			{
+
+				"value"										"14 13 12 11"
+				"special_bonus_unique_sand_king_7"			"-2"
+
+			}
+			"burrow_width"	// check tooltip
+			{
+				"value"		"150"
+				"affected_by_aoe_increase"	"1"
+			}
+			"burrow_duration"	// higher = stronger
+			{
+				"value"			"1.2 1.4 1.6 1.8"
+				"special_bonus_unique_sand_king_burrowstrike_stun"				"+0.4"
+			}
+			"burrow_speed"		"2000"	// higher = stronger
+			"burrow_anim_time"	"0.52"	// check tooltip
+			"AbilityCastRange"	// higher = stronger
+			{
+				"value"						"525 600 675 750"
+				//"special_bonus_scepter"			"=1300"
+			}
+			"burrow_speed_scepter"	// higher = stronger
+			{
+				"value"		"3000"
+				"RequiresScepter"			"1"
+			}
+			"scepter_channel_time"			"2"	// check tooltip
+			"scepter_max_power"				"2"	// check tooltip
+
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	
+	//=================================================================================================================
+	// Ability: Sand King Sand Storm
+	//=================================================================================================================
+	// ---- Sand Storm  (sandking_sand_storm) ----
+	// icon: sandking_sand_storm
+	"sandking_sand_storm"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Ability.SandKing_SandStorm.start"
+		"HasScepterUpgrade"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityDuration"				"20 25 30 35"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"40 34 28 22"	// lower = stronger
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"85"	// lower = stronger
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"damage_tick_rate"	"0.2"	// higher = stronger
+			"sand_storm_radius"	// higher = stronger
+			{
+				"value"		"425 500 575 650"
+				"special_bonus_facet_sand_king_sandshroud"			"+125"
+				"affected_by_aoe_increase"	"1"
+			}
+			"sand_storm_damage"	// higher = stronger
+			{
+				"value"		"25 45 65 85"
+				"special_bonus_unique_sand_king_2"	"+15"
+			}
+			"fade_delay"	// check tooltip
+			{
+				"value"				"-1"
+				"special_bonus_facet_sand_king_sandshroud"			"=0.7"
+			}
+			"sand_storm_move_speed_pct"	// higher = stronger
+			{
+				"value"		"0"
+				"special_bonus_facet_sand_king_dust_devil"	"+70"
+			}
+			"scepter_explosion_radius_pct"	// higher = stronger
+			{
+				"value"					"0"
+				"special_bonus_scepter"		"+10"
+			}
+			"scepter_explosion_min_dist"	// check tooltip
+			{
+				"value"					"0"
+				"special_bonus_scepter"		"+90"
+			}
+			"scepter_explosions_per_pulse"	// check tooltip
+			{
+				"value"					"0"
+				"special_bonus_scepter"		"+2"
+			}	
+
+
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+	
+	//=================================================================================================================
+	// Ability: Sand King Caustic Finale
+	//=================================================================================================================
+	// ---- Caustic Finale  (sandking_caustic_finale) ----
+	// icon: sandking_caustic_finale
+	"sandking_caustic_finale"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Ability.SandKing_CausticFinale"
+		"DependentOnAbility"			"sandking_epicenter"
+		"Innate"						"1"
+		"MaxLevel"						"4"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"caustic_finale_radius"	// higher = stronger
+				{
+					"value"		"400"
+					"affected_by_aoe_increase"	"1"
+				}
+				"caustic_finale_damage_base"		"20 40 60 80"	// higher = stronger
+				"caustic_finale_damage_pct"		"8 10 12 14"	// higher = stronger
+				"caustic_finale_duration"	"6"	// higher = stronger
+
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+	//=================================================================================================================
+	// Ability: Sand King Caustic Finale Impediment
+	//=================================================================================================================
+	// ---- sandking_innate_caustic_impediment  (sandking_innate_caustic_impediment) ----
+	"sandking_innate_caustic_impediment"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"MaxLevel"						"1"
+	}
+	//=================================================================================================================
+	// Ability: Sand King Caustic Finale Volatility
+	//=================================================================================================================
+	// ---- sandking_innate_caustic_volatility  (sandking_innate_caustic_volatility) ----
+	"sandking_innate_caustic_volatility"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"MaxLevel"						"1"
+		"AbilityValues"
+		{
+			"radius"			"200"	// higher = stronger
+		}
+	}	
+
+	//=================================================================================================================
+	// Ability: Sand King Epicenter
+	//=================================================================================================================
+	// ---- Epicenter  (sandking_epicenter) ----
+	// icon: sandking_epicenter
+	"sandking_epicenter"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Ability.SandKing_Epicenter"
+        "HasShardUpgrade"               "1"
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"120 110 100"	// lower = stronger
+		"AbilityDuration"				"6.0"
+		"AbilityCastPoint"				"2.0"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityChannelAnimation"		"ACT_DOTA_CHANNEL_ABILITY_4"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150 225 300"	// lower = stronger
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.2"	// Damage is the main component of spell
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{			
+			"epicenter_pulses"	// check tooltip
+			{
+				"value"		"12 16 20"
+				"special_bonus_unique_sand_king"	"+10"
+			}
+			"epicenter_damage"	// higher = stronger
+			{
+				"value"					"60 70 80"
+				"special_bonus_shard"	"+5"
+				"CalculateSpellDamageTooltip"	"1"
+			}
+			"epicenter_radius_base"	// higher = stronger
+			{
+				"value"		"500"
+				"special_bonus_unique_sand_king_5"	"+100"
+				"affected_by_aoe_increase"	"1"
+			}
+			"epicenter_radius_increment"	// higher = stronger
+			{
+				"value"		"13"
+				"special_bonus_unique_sand_king_5"	"+12"
+			}
+			"epicenter_slow"	// higher = stronger
+			{
+				"value"			"-30 -40 -50"
+			}
+			"epicenter_slow_as"	// higher = stronger
+			{
+				"value"			"-50 -55 -60"
+			}
+			"shard_radius"	// higher = stronger
+			{
+				"value"		"425"
+				"special_bonus_unique_sand_king_5"	"+100"
+				"RequiresShard"	"1"
+				"affected_by_aoe_increase"	"1"
+			}
+			"shard_interval"	// check tooltip
+			{
+				"value"				"3.5"
+				"RequiresShard"		"1"
+			}
+			"linger_duration"		"3.0"	// higher = stronger
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Scorpion Strike
+	//=================================================================================================================
+	// ---- Stinger  (sandking_scorpion_strike) ----
+	// icon: sandking_scorpion_strike
+	"sandking_scorpion_strike"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				 "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilitySound"					"Hero_Kunkka.Tidebringer.Attack"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_3"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"200"
+		"FightRecapLevel"				"1"
+		"AbilityCastPoint"				"0.4"
+		"AbilityManaCost"				"30"	// lower = stronger
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"14.0 11.0 8.0 5.0"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+
+			"radius"	// higher = stronger
+			{
+				"value"			"225 255 285 315"
+				"affected_by_aoe_increase"	"1"
+			}
+			"inner_radius"	// higher = stronger
+			{
+				"value"			"125"
+				"affected_by_aoe_increase"	"1"
+			}
+			"inner_radius_bonus_damage_pct"				"40"	// higher = stronger
+			"attack_damage"	// higher = stronger
+			{
+				"value"																"40 80 120 160"
+				"special_bonus_unique_sand_king_scorpion_strike_damage"			"+50"
+			}
+			"debuff_duration"				"4 5 6 7"	// higher = stronger
+			"strike_slow"	// higher = stronger
+			{
+				"value"					"10 12 14 16"
+				"special_bonus_unique_sand_king_3"	"+12"
+			}
+		}
+	}
+
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_epicenter_pulses} Epicenter Pulses  (special_bonus_unique_sand_king) ----
+	// icon: special_bonus_unique_sand_king
+	"special_bonus_unique_sand_king"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_sand_storm_damage} Sand Storm Damage Per Second  (special_bonus_unique_sand_king_2) ----
+	// icon: special_bonus_unique_sand_king_2
+	"special_bonus_unique_sand_king_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_strike_slow}% Stinger Slow  (special_bonus_unique_sand_king_3) ----
+	// icon: special_bonus_unique_sand_king_3
+	"special_bonus_unique_sand_king_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- {s:value}% Sand Storm Slow and Blind  (special_bonus_unique_sand_king_4) ----
+	// icon: special_bonus_unique_sand_king_4
+	"special_bonus_unique_sand_king_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"value"	// check tooltip
+			{
+				"value" "35"
+				"ad_linked_abilities" "sandking_sand_storm"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_epicenter_radius_base}/{s:bonus_epicenter_radius_increment} Base/Incremental Radius of Epicenter  (special_bonus_unique_sand_king_5) ----
+	// icon: special_bonus_unique_sand_king_5
+	"special_bonus_unique_sand_king_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"value"	// check tooltip
+			{
+				"value" "20"
+				"ad_linked_abilities" "sandking_epicenter"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- -{s:bonus_AbilityCooldown}s Burrowstrike Cooldown  (special_bonus_unique_sand_king_7) ----
+	// icon: special_bonus_unique_sand_king_7
+	"special_bonus_unique_sand_king_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_burrow_duration}s Burrowstrike Stun  (special_bonus_unique_sand_king_burrowstrike_stun) ----
+	// icon: special_bonus_unique_sand_king_burrowstrike_stun
+	"special_bonus_unique_sand_king_burrowstrike_stun"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}	
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_attack_damage} Stinger Damage  (special_bonus_unique_sand_king_scorpion_strike_damage) ----
+	// icon: special_bonus_unique_sand_king_scorpion_strike_damage
+	"special_bonus_unique_sand_king_scorpion_strike_damage"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+}

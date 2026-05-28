@@ -1,0 +1,460 @@
+// Abilities for luna
+"DOTAAbilities"
+{
+    "Version"       "1"
+	//=================================================================================================================
+	// Luna: Lucent Beam
+	//=================================================================================================================
+	// ---- Lucent Beam  (luna_lucent_beam) ----
+	// icon: luna_lucent_beam
+	"luna_lucent_beam"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Luna.LucentBeam.Target"
+		"HasShardUpgrade"				"0"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.4"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.5"	// Mostly about the damage
+		
+		"AbilityValues"
+		{
+			"AbilityCooldown"	// lower = stronger
+			{
+				"value"					"9.0 8.0 7.0 6.0"
+				"special_bonus_unique_luna_2" "-2.0"
+			}
+			"AbilityManaCost"	// lower = stronger
+			{
+				"value"					"90 100 110 120"
+				
+			}
+			"beam_damage"	// higher = stronger
+			{
+				"value"					"80 160 240 320"
+				"special_bonus_unique_luna_1"	"+80"
+			}
+			"glaives_fired"	// check tooltip
+			{
+				"value"			"0"
+				"special_bonus_unique_luna_8"	"+2"
+			}
+			"glaives_attack_radius"	// higher = stronger
+			{
+				"value"					"0"
+				"special_bonus_unique_luna_8"	"+500"
+				"affected_by_aoe_increase"	"1"
+			}
+			"stun_duration"	// higher = stronger
+			{
+				"value"					"0.6"
+				"special_bonus_unique_luna_4"	"+0.4"
+			}
+			"damage_buff_duration"	// higher = stronger
+			{
+				"value"						"0"
+				"special_bonus_facet_luna_moonstorm"			"+15"
+				"CalculateSpellDamageTooltip"	"0"
+				"DamageTypeTooltip"				"DAMAGE_TYPE_NONE"
+			}
+			"damage_buff_per_beam"	// higher = stronger
+			{
+				"value"						"0"
+				"special_bonus_facet_luna_moonstorm"			"+5 8 11 14"
+				"CalculateSpellDamageTooltip"	"0"
+				"DamageTypeTooltip"				"DAMAGE_TYPE_PHYSICAL"
+			}
+			"lucent_beam_bounce_range"	// higher = stronger
+			{
+				"special_bonus_unique_luna_5"	"+500"
+				"affected_by_aoe_increase"	"1"
+			}
+			"damage_buff_from_eclipse_pct"	// higher = stronger
+			{
+				"special_bonus_facet_luna_moonstorm"				"=50"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Luna: Moon Glaives
+	//=================================================================================================================
+	// ---- Moon Glaives  (luna_moon_glaive) ----
+	// icon: luna_moon_glaive
+	"luna_moon_glaive"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilitySound"					"Hero_Luna.MoonGlaive.Impact"
+		"HasShardUpgrade"				"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			
+			"range"	// higher = stronger
+			{
+				"value"		"500"
+				"affected_by_aoe_increase"	"1"
+			}
+			"bounces"							"2 3 4 5"	// check tooltip
+			"damage_reduction_percent"	// higher = stronger
+			{
+				"value"							"50 45 40 35"
+				"special_bonus_unique_luna_7"	"-8"
+			}
+
+			"rotating_glaives_duration"	// higher = stronger
+			{
+				"value"								"7"
+			}
+
+			"rotating_glaives"	// check tooltip
+			{
+				"value"								"3"
+				"special_bonus_shard"				"+1"
+			}
+
+			"rotating_glaives_collision_damage"	// higher = stronger
+			{
+				"value"								"20"
+				"special_bonus_shard"				"+20"
+			}
+
+			"rotating_glaives_damage_reduction"	// higher = stronger
+			{
+				"value"								"0"
+				"special_bonus_facet_luna_lunar_orbit"	"10 15 20 25"
+				"RequiresFacet"					"luna_lunar_orbit"
+			}
+
+			"rotating_glaives_hit_radius"	// higher = stronger
+			{
+				"value"								"115"
+				"affected_by_aoe_increase"	"1"
+			}
+
+			"rotating_glaives_movement_radius"	// higher = stronger
+			{
+				"value"								"175"
+				"RequiresFacet"					"luna_lunar_orbit"
+			}
+
+			"unclamp_max_radius"	// higher = stronger
+			{
+				"value"								"0"
+			}
+
+			"rotating_glaives_speed"	// higher = stronger
+			{
+				"value"								"160"
+			}
+
+			"AbilityCooldown"	// lower = stronger
+			{
+				"value"			"30"
+			}
+
+			"AbilityManaCost"	// lower = stronger
+			{
+				"value"			"75"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Luna: Lunar Blessing
+	//=================================================================================================================
+	// ---- Lunar Blessing  (luna_lunar_blessing) ----
+	// icon: luna_lunar_blessing
+	"luna_lunar_blessing"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+	
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"radius"	// higher = stronger
+				{
+					"value"			"1200"
+					"affected_by_aoe_increase"	"1"
+				}
+				"bonus_damage"	// higher = stronger
+				{
+					"value"			"3 9 15 21"
+					"special_bonus_unique_luna_3"	"+20"
+				}
+				"self_increase_pct"	"200"	// higher = stronger
+				"bonus_night_vision"	// higher = stronger
+				{
+					"value"			"400 600 800 1000"
+				}
+
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Luna: Lunar Grace
+	//=================================================================================================================
+	// ---- Lunar Blessing  (luna_lunar_grace) ----
+	// icon: luna_lunar_grace
+	"luna_lunar_grace"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30 25 20 15"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"40"	// lower = stronger
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"attack_speed"					"30 45 60 75"	// higher = stronger
+			"night_multiplier"				"2.0"	// higher = stronger
+			"duration"						"5.0"	// higher = stronger
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Luna: Eclipse
+	//=================================================================================================================
+	// ---- Eclipse  (luna_eclipse) ----
+	// icon: luna_eclipse
+	"luna_eclipse"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Luna.Eclipse.Cast"
+		
+		"HasScepterUpgrade"			"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.5"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150 200 250"	// lower = stronger
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			
+			"beams"	// check tooltip
+			{
+				"value"					"6 9 12"
+				"special_bonus_scepter"	"+0 +3 +6"
+			}
+			"beam_interval"	// check tooltip
+			{
+				"value"					"0.6 0.6 0.6"
+				"special_bonus_scepter"	"-0.3"
+			}
+			"beam_interval_scepter"		"0.3" // purely for the tooltip Note, since the scepter tooltip doesn't show this.
+			"radius"	// higher = stronger
+			{
+				"value"	"675"
+				"affected_by_aoe_increase"	"1"
+			}
+			"hit_count"	// higher = stronger
+			{
+				"value"					"5"
+				"special_bonus_scepter"	"+1 +7 +13"
+			}
+			"AbilityCastRange"	// higher = stronger
+			{
+				"value"					"0"
+				"special_bonus_scepter"	"+2500"
+			}
+			"AbilityDuration"	// higher = stronger
+			{
+				"value"					"2.4 4.2 6.0"
+				"special_bonus_scepter"	"-0.6"
+			}
+			"night_duration"	// higher = stronger
+			{
+				"value"	"10.0"
+
+			}
+			"AbilityCooldown"	// lower = stronger
+			{
+				"value"							"110"
+				"special_bonus_unique_luna_6"	"-40.0"
+			}
+		}
+	}
+
+
+	//=================================================================================================================
+	// Ability: Selemene's Favor (bonus cast range at night)
+	//=================================================================================================================
+	// ---- luna_selemenes_favor  (luna_selemenes_favor) ----
+	"luna_selemenes_favor"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
+		"MaxLevel"						"1"
+		"Innate"						"1"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"night_cast_range_pct"				"20"	// higher = stronger
+		}
+	}
+
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_beam_damage} Lucent Beam Damage  (special_bonus_unique_luna_1) ----
+	// icon: special_bonus_unique_luna_1
+	"special_bonus_unique_luna_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"luna_lucent_beam"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- -{s:bonus_AbilityCooldown}s Lucent Beam Cooldown  (special_bonus_unique_luna_2) ----
+	// icon: special_bonus_unique_luna_2
+	"special_bonus_unique_luna_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"luna_lucent_beam"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_bonus_damage} Lunar Blessing Damage  (special_bonus_unique_luna_3) ----
+	// icon: special_bonus_unique_luna_3
+	"special_bonus_unique_luna_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"luna_lunar_blessing"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_stun_duration}s Lucent Beam Ministun  (special_bonus_unique_luna_4) ----
+	// icon: special_bonus_unique_luna_4
+	"special_bonus_unique_luna_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"luna_lucent_beam"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- Lucent Beam Hits Additional Target  (special_bonus_unique_luna_5) ----
+	// icon: special_bonus_unique_luna_5
+	"special_bonus_unique_luna_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"luna_eclipse"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- -{s:bonus_AbilityCooldown}s Eclipse Cooldown  (special_bonus_unique_luna_6) ----
+	// icon: special_bonus_unique_luna_6
+	"special_bonus_unique_luna_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"luna_eclipse"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- -{s:bonus_damage_reduction_percent}% Moon Glaives Damage Reduction  (special_bonus_unique_luna_7) ----
+	// icon: special_bonus_unique_luna_7
+	"special_bonus_unique_luna_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"luna_moon_glaive"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- {s:bonus_glaives_fired} Moon Glaives fired on Lucent Beam  (special_bonus_unique_luna_8) ----
+	// icon: special_bonus_unique_luna_8
+	"special_bonus_unique_luna_8"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"luna_lucent_beam && luna_moon_glaive"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+	}
+}

@@ -1,0 +1,526 @@
+"DOTAAbilities"
+{
+    "Version"       "1"
+	
+	//=================================================================================================================
+	// Lycan: Summon Wolves
+	//=================================================================================================================
+	// ---- Summon Wolves  (lycan_summon_wolves) ----
+	// icon: lycan_summon_wolves
+	"lycan_summon_wolves"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilitySound"					"Hero_Lycan.SummonWolves"
+
+        "HasShardUpgrade"               "1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30.0 30.0 30.0 30.0"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityManaCost"	// lower = stronger
+			{
+				"value"			"115 120 125 130"
+				"special_bonus_facet_lycan_spirit_wolves" "-50"
+			}
+			
+			"wolf_index"				"1 2 3 4"	// check tooltip
+			"wolf_duration"	// higher = stronger
+			{
+				"value"					"50"
+				"special_bonus_facet_lycan_spirit_wolves"		"=25"
+			}
+
+			"wolf_bat"	// check tooltip
+			{
+				"value"					"1.2 1.1 1.0 0.9"
+				"RequiresFacet"				"lycan_pack_leader"
+			}
+			"wolf_damage"	// higher = stronger
+			{
+				"value"							"23 29 35 41"
+				"special_bonus_unique_lycan_3"	"+10"
+				"RequiresFacet"				"lycan_pack_leader"
+			}
+			"wolf_hp"	// check tooltip
+			{
+				"value"	"325 375 425 475"
+				"special_bonus_unique_lycan_7"	"+350"
+				"RequiresFacet"				"lycan_pack_leader"
+			}
+			"bonus_health"	// higher = stronger
+			{
+				"value"			"0"
+				"special_bonus_unique_lycan_7"	"+350"
+			}
+			"bonus_damage"	// higher = stronger
+			{
+				"value"			"0"
+				"special_bonus_unique_lycan_3"	"+10"
+			}
+			"bash_chance"				"15"	// higher = stronger
+			"bash_duration"				"1.0"	// higher = stronger
+			"wolf_count"	// higher = stronger
+			{
+				"value"			"2 2 2 2"
+				"special_bonus_unique_lycan_2" "+2"
+			}
+
+			"is_lone_wolf"	// check tooltip
+			{
+				"value"					"0"
+				"special_bonus_facet_lycan_spirit_wolves"					"+1"
+			}
+			"back_distance"	// check tooltip
+			{
+				"value"						"0"
+				"special_bonus_facet_lycan_spirit_wolves"					"+150"
+			}
+			"side_distance"	// check tooltip
+			{
+				"value"						"0"
+				"special_bonus_facet_lycan_spirit_wolves"					"+75"
+			}
+			"model_scale"	// check tooltip
+			{
+				"value"						"0"
+				"special_bonus_facet_lycan_spirit_wolves"					"-15"
+			}
+			"invis_level"	// check tooltip
+			{
+				"value"						"0"
+				"special_bonus_facet_lycan_spirit_wolves"					"0.05"
+			}
+			"health_per_wolf"	// higher = stronger
+			{
+				"value"							"50 100 150 200"	
+				"special_bonus_unique_lycan_7"	"+250"
+				"RequiresFacet"					"lycan_spirit_wolves"
+			}
+			"damage_per_wolf"	// higher = stronger
+			{
+				"value"					"8 14 20 26"	
+				"special_bonus_unique_lycan_3"	"+8"
+				"RequiresFacet"					"lycan_spirit_wolves"
+			}
+			"death_fx_time"	// check tooltip
+			{
+				"special_bonus_facet_lycan_spirit_wolves"					"1.0"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Lycan: Wolf Bite
+	//=================================================================================================================
+	// ---- Wolf Bite  (lycan_wolf_bite) ----
+	// icon: lycan_wolf_bite
+	"lycan_wolf_bite"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+		
+		"MaxLevel"						"3"
+		"FightRecapLevel"				"1"
+		"IsGrantedByScepter"			"1"
+		"HasScepterUpgrade"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"300"
+		"AbilityCooldown"				"110 100 90"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150"	// lower = stronger
+
+
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"lifesteal_percent"		"40"	// higher = stronger
+			"creep_penalty"			"0.4"	// check tooltip
+			"lifesteal_range"	// higher = stronger
+			{
+				"value"		"1200"		
+				"affected_by_aoe_increase"	"1"
+			}
+			"attack_range"		"150"	// higher = stronger
+		}
+	}
+
+	//=================================================================================================================
+	// Lycan: Howl
+	//=================================================================================================================
+	// ---- Howl  (lycan_howl) ----
+	// icon: lycan_howl
+	"lycan_howl"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilitySound"					"Hero_Lycan.Howl"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"22 20 18 16"	// lower = stronger
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"40"	// lower = stronger
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportBonus"	"5"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"howl_duration"		"8"	// higher = stronger
+			"attack_damage_reduction"	// higher = stronger
+			{
+				"value"		"25 30 35 40"
+			}
+			"total_attack_damage_reduction"	// higher = stronger
+			{
+				"value"		"0"
+				"special_bonus_unique_lycan_5"	"+1"
+			}
+			"armor"	// higher = stronger
+			{
+				"value"				"4 5 6 7"
+				"special_bonus_unique_lycan_howl_armor"			"+3"
+			}
+			"radius"	// higher = stronger
+			{
+				"value"		"2000"
+				"affected_by_aoe_increase"	"1"
+			}
+			"fear_duration"		"0"	// higher = stronger
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+		"AbilityCastGestureSlot"	"DEFAULT" 
+	}
+
+	//=====================================================================================================
+	// Lycan: Feral Impulse
+	//=================================================================================================================
+	// ---- Feral Impulse  (lycan_feral_impulse) ----
+	// icon: lycan_feral_impulse
+	"lycan_feral_impulse"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Casting
+		"AbilityValues"
+		{
+			"bonus_damage"	// higher = stronger
+			{
+				"value"			"10 20 30 40"
+				"special_bonus_unique_lycan_4"	"+25"
+			}
+			"bonus_hp_regen"	// higher = stronger
+			{
+				"value"			"1 3 5 7"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Lycan: Shapeshift
+	//=================================================================================================================
+	// ---- Shapeshift  (lycan_shapeshift) ----
+	// icon: lycan_shapeshift
+	"lycan_shapeshift"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Lycan.Shapeshift.Cast"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		"AbilityDraftUltScepterAbility"		"lycan_wolf_bite"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"110 100 90"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"	// higher = stronger
+			{
+				"value"				"25"
+				"special_bonus_unique_lycan_1"	"+6"
+			}
+			"speed"				"550"	// higher = stronger
+			"bonus_night_vision"		"1000"	// higher = stronger
+			"transformation_time"		"1.1"	// check tooltip
+			"crit_chance"				"40"	// higher = stronger
+			"crit_multiplier"		"160 200 240"	// higher = stronger
+			"health_bonus"		"250 350 450"	// higher = stronger
+			"is_wolfpack"	// check tooltip
+			{
+				"value"				"0"
+				"special_bonus_facet_lycan_pack_leader"			"+1"
+			}
+			"kill_duration_extension"	// higher = stronger
+			{
+				"value"				"0"
+				"special_bonus_facet_lycan_pack_leader"			"+5"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Lycan: Summon Wolves Critical Strike
+	//=================================================================================================================
+	// ---- Cripple  (lycan_summon_wolves_critical_strike) ----
+	// icon: lycan_summon_wolves_critical_strike
+	"lycan_summon_wolves_critical_strike"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"MaxLevel"						"1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		
+	
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"maim_chance"				"20"	// higher = stronger
+			"maim_duration"				"4.0"	// higher = stronger
+			"maim_movement_speed"	// higher = stronger
+			{
+				"value"			"15"
+				"special_bonus_unique_lycan_3"	"+10"
+			}
+			"maim_attack_speed"			"60"	// higher = stronger
+			"maim_damage"				"8"	// higher = stronger
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Lycan Summon Wolves: Permanent Invisibility
+	//=================================================================================================================
+	// ---- Invisibility  (lycan_summon_wolves_invisibility) ----
+	// icon: lycan_summon_wolves_invisibility
+	"lycan_summon_wolves_invisibility"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+		"AbilityValues"
+		{
+			"fade_time"	// check tooltip
+			{
+				"value" "0.0 0.0 0.0"
+			}
+			"fade_delay"	// check tooltip
+			{
+				"value" "2"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_duration}s Shapeshift Duration  (special_bonus_unique_lycan_1) ----
+	// icon: special_bonus_unique_lycan_1
+	"special_bonus_unique_lycan_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"lycan_shapeshift"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+		
+		
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_wolf_count} Wolves Summoned  (special_bonus_unique_lycan_2) ----
+	// icon: special_bonus_unique_lycan_2
+	"special_bonus_unique_lycan_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"lycan_summon_wolves"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+		
+		
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_bonus_damage} Wolves Damage  (special_bonus_unique_lycan_3) ----
+	// icon: special_bonus_unique_lycan_3
+	"special_bonus_unique_lycan_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"lycan_summon_wolves"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+		
+		
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_bonus_damage}% Feral Impulse Damage  (special_bonus_unique_lycan_4) ----
+	// icon: special_bonus_unique_lycan_4
+	"special_bonus_unique_lycan_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"lycan_feral_impulse"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+		
+		
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- Howl Reduces Total Attack Damage  (special_bonus_unique_lycan_5) ----
+	// icon: special_bonus_unique_lycan_5
+	"special_bonus_unique_lycan_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"lycan_howl"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+		
+		
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_bonus_health} Summon Wolves Health  (special_bonus_unique_lycan_7) ----
+	// icon: special_bonus_unique_lycan_7
+	"special_bonus_unique_lycan_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"lycan_summon_wolves"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+		
+		
+	}
+	
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- -{s:value}s Shapeshift Cooldown  (special_bonus_unique_lycan_8) ----
+	// icon: special_bonus_unique_lycan_8
+	"special_bonus_unique_lycan_8"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"value"	// check tooltip
+			{
+				"value" "15"
+				"ad_linked_abilities" "lycan_shapeshift"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_armor} Howl Armor Reduction  (special_bonus_unique_lycan_howl_armor) ----
+	// icon: special_bonus_unique_lycan_howl_armor
+	"special_bonus_unique_lycan_howl_armor"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	
+	//=================================================================================================================
+	// Lycan Innate Apex Predator
+	//=================================================================================================================
+	// ---- Apex Predator  (lycan_apex_predator) ----
+	// icon: lycan_apex_predator
+	"lycan_apex_predator"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
+		"MaxLevel"						"1"
+		"Innate"						"1"
+		"AbilityValues"
+		{
+			"damage_amp_per_level"			"2"	// higher = stronger
+		}
+	}
+}

@@ -1,0 +1,503 @@
+"DOTAAbilities"
+{
+    "Version"       "1"
+
+	//=================================================================================================================
+	// Ability: Jakiro's Dual Breath
+	//=================================================================================================================
+	// ---- Dual Breath  (jakiro_dual_breath) ----
+	// icon: jakiro_dual_breath
+	"jakiro_dual_breath"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Jakiro.DualBreath.Cast"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityCastPoint"				"0.35"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10.0"	// lower = stronger
+		"AbilityDuration"				"5.0"
+
+		
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"0"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"125 140 155 170"	// lower = stronger
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.25"	// Applies two modifiers 
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"start_radius"	// higher = stronger
+			{
+				"value"			"150"
+				"affected_by_aoe_increase"	"1"
+			}
+			"end_radius"	// higher = stronger
+			{
+				"value"	"275"
+				"affected_by_aoe_increase"	"1"
+			}
+			"AbilityCastRange"	// higher = stronger
+			{
+				"value"							"850"
+				"special_bonus_unique_jakiro_2"	"+100%"
+			}
+			"speed"					"1050"	// higher = stronger
+			"fire_delay"			"0.2"	// check tooltip
+			"burn_damage"	// higher = stronger
+			{
+				"value"							"20 40 60 80"
+				"special_bonus_unique_jakiro_2"	"+100%"
+			}
+			"slow_movement_speed_pct"	// higher = stronger
+			{
+				"value"												"-25 -30 -35 -40"
+				"special_bonus_unique_jakiro_dualbreath_slow"		"-10"
+			}
+
+			"slow_attack_speed_pct"	// higher = stronger
+			{
+				"value"												"-25 -30 -35 -40"
+				"special_bonus_unique_jakiro_dualbreath_slow"		"-10"
+			}
+			"speed_fire"			"1050"	// higher = stronger
+
+		}		
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Ability: Jakiro's Ice Path
+	//=================================================================================================================
+	// ---- Ice Path  (jakiro_ice_path) ----
+	// icon: jakiro_ice_path
+	"jakiro_ice_path"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Jakiro.IcePath"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1100"
+		"AbilityCastPoint"				"0.65"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"path_delay"				"0.2"	// check tooltip
+			"stun_duration"	// higher = stronger
+			{
+				"value"					"1.25 1.50 1.75 2.0"
+				"special_bonus_unique_jakiro"		"+0.4"
+			}
+			"path_duration"	// higher = stronger
+			{
+				"value"					"3 3.5 4 4.5"
+				"special_bonus_unique_jakiro"		"+0.5"
+			}			
+			"path_radius"	// higher = stronger
+			{
+				"value"	"150"
+				"affected_by_aoe_increase"	"1"
+			}
+			"damage"	// higher = stronger
+			{
+				"value"			"50"
+				"CalculateSpellDamageTooltip" "1"
+			}
+			"AbilityCooldown"	// lower = stronger
+			{
+				"value"								"18 15 12 9"
+				"special_bonus_unique_jakiro_6"		"-1.5"
+			}	
+		}		
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Ability: Jakiro's Liquid Fire
+	//=================================================================================================================
+	// ---- Liquid Fire  (jakiro_liquid_fire) ----
+	// icon: jakiro_liquid_fire
+	"jakiro_liquid_fire"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_DEAD"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_Jakiro.LiquidFire"
+		"HasShardUpgrade"				"1"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"13 10 7 4"	// lower = stronger
+		"AbilityDuration"				"5.0"
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportBonus"		"35"
+			
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"slow_attack_speed_pct"	// higher = stronger
+			{
+				"value" 		"-30 -40 -50 -60"
+				"special_bonus_unique_jakiro_4"	"-50"
+			}
+			"radius"	// higher = stronger
+			{
+				"value"		"300"
+				"affected_by_aoe_increase"	"1"
+			}
+			"damage"	// higher = stronger
+			{
+				"value"				"20 30 40 50"
+			}
+			"pct_health_damage"	// higher = stronger
+			{
+				"value"						"0"
+				"special_bonus_shard"		"+2.5"
+			}
+			"tick_rate"				"0.5"	// check tooltip
+			"building_dmg_pct"		"75"	// higher = stronger
+			"double_head"	// check tooltip
+			{
+				"special_bonus_unique_jakiro_3"	"+1"
+			}
+		}		
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Ability: Jakiro's Liquid Ice
+	//=================================================================================================================
+	// ---- Liquid Frost  (jakiro_liquid_ice) ----
+	// icon: jakiro_liquid_ice
+	"jakiro_liquid_ice"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_DEAD"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_Jakiro.LiquidFire"
+		"FightRecapLevel"				"1"
+		"HasShardUpgrade"				"1"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"16 12 8 4"	// lower = stronger
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportBonus"		"35"
+			
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"movement_slow"	// higher = stronger
+			{
+				"value"		"15 20 25 30"
+			}
+			"damage"	// higher = stronger
+			{
+				"value"				"20 30 40 50"
+			}
+			"bonus_instance_damage_from_other_abilities"	// higher = stronger
+			{
+				"value"		"10 15 20 25"
+				"special_bonus_unique_jakiro_4"	"+10"			
+			}
+			"pct_health_damage"	// higher = stronger
+			{
+				"value"						"0"
+				"special_bonus_shard"		"+2.5"
+			}		
+			"duration"				"4.0"	// higher = stronger
+			"radius"	// higher = stronger
+			{
+				"value"		"0"
+				"affected_by_aoe_increase"	"1"
+			}
+			"tick_rate"				"0.5"	// check tooltip
+			"double_head"	// check tooltip
+			{
+				"special_bonus_unique_jakiro_3"	"+1"
+			}
+		}		
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Ability: Jakiro's Macropyre
+	//=================================================================================================================
+	// ---- Macropyre  (jakiro_macropyre) ----
+	// icon: jakiro_macropyre
+	"jakiro_macropyre"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Jakiro.Macropyre.Cast"
+
+		"HasScepterUpgrade"   			"1"
+		"AbilityDraftUltShardAbility"		"jakiro_liquid_ice"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		
+		"AbilityCastPoint"				"0.4"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"90 80 70"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"300 400 500"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"damage"	// higher = stronger
+			{
+				"value"								"100 150 200"
+				"special_bonus_unique_jakiro_7"		"+20"
+			}
+			"path_width"	// check tooltip
+			{
+				"value"	"500"
+				"special_bonus_scepter"			"+70"
+				"affected_by_aoe_increase"	"1"
+			}
+			"duration"	// higher = stronger
+			{
+				"value"							"10.0"
+				"special_bonus_scepter"			"+5.0"
+			}
+			"AbilityCastRange"	// higher = stronger
+			{
+				"value"						"1400"
+				
+			}
+			"burn_interval"				"0.5 0.5 0.5"	// check tooltip
+			"linger_duration"			"2"	// higher = stronger
+			"pure_damage_type"	// higher = stronger
+			{
+				"value"					"0"
+				"special_bonus_scepter"		"+1"
+			}
+			"pierces_magic_immunity"	// check tooltip
+			{
+				"value"					"0"
+				"special_bonus_scepter"		"+1"
+			}
+			"ice_edge_path_radius"	// higher = stronger
+			{
+				"value"							"0"
+				"special_bonus_scepter"			"+50"
+			}
+			"ice_edge_linger_duration"	// higher = stronger
+			{
+				"value"							"0"
+				"special_bonus_scepter"			"+0.4"
+			}
+			"ice_edge_movement_slow"	// higher = stronger
+			{
+				"value"							"0"
+				"special_bonus_scepter"			"60"
+			}
+			
+		}	
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_stun_duration}s Ice Path Duration  (special_bonus_unique_jakiro) ----
+	// icon: special_bonus_unique_jakiro
+	"special_bonus_unique_jakiro"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_AbilityCastRange}% Dual Breath Damage and Range  (special_bonus_unique_jakiro_2) ----
+	// icon: special_bonus_unique_jakiro_2
+	"special_bonus_unique_jakiro_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- Obtains Liquid Frost  (special_bonus_unique_jakiro_3) ----
+	// icon: special_bonus_unique_jakiro_3
+	"special_bonus_unique_jakiro_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_slow_attack_speed_pct} Liquid Fire Attack Speed Slow  (special_bonus_unique_jakiro_4) ----
+	// icon: special_bonus_unique_jakiro_4
+	"special_bonus_unique_jakiro_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- -{s:bonus_AbilityCooldown}s Ice Path Cooldown  (special_bonus_unique_jakiro_6) ----
+	// icon: special_bonus_unique_jakiro_6
+	"special_bonus_unique_jakiro_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"value"	// check tooltip
+			{
+				"value" "2.5"
+				"ad_linked_abilities" "jakiro_ice_path"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_damage} Macropyre Damage  (special_bonus_unique_jakiro_7) ----
+	// icon: special_bonus_unique_jakiro_7
+	"special_bonus_unique_jakiro_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- -{s:bonus_slow_movement_speed_pct}%/{s:bonus_slow_attack_speed_pct} Dual Breath Movement/Attack Speed Slow  (special_bonus_unique_jakiro_dualbreath_slow) ----
+	// icon: special_bonus_unique_jakiro_dualbreath_slow
+	"special_bonus_unique_jakiro_dualbreath_slow"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Double Attack
+	//=================================================================================================================
+	// ---- Double Trouble  (jakiro_double_trouble) ----
+	// icon: jakiro_double_trouble
+	"jakiro_double_trouble"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"MaxLevel"						"1"
+		"Innate"						"1"
+		"AbilityValues"
+		{
+			"second_attack_delay"			"0.2"	// check tooltip
+			"attack_damage_reduction"		"50"	// higher = stronger
+		}
+	}
+}

@@ -1,0 +1,393 @@
+"DOTAAbilities"
+{
+    "Version"       "1"
+	
+	//=================================================================================================================
+	// Ability: Bane Enfeeble
+	//=================================================================================================================
+	// ---- Enfeeble  (bane_enfeeble) ----
+	// icon: bane_enfeeble
+	"bane_enfeeble"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"AbilitySound"					"Hero_Bane.Enfeeble"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastRange"				"800 900 1000 1100"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"28 21 14 7"	// lower = stronger
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"120"	// lower = stronger
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"damage_reduction"						"55 60 65 70"	// higher = stronger
+			"heal_reduction"	// higher = stronger
+			{
+				"value" 							"0"
+			}
+			"cast_reduction"	// higher = stronger
+			{
+				"value"								"30"
+				"special_bonus_unique_bane_11"		"+20"
+			}
+			"duration"	"9"	// higher = stronger
+			"enfeeble_tick_damage"	// higher = stronger
+			{
+				"value"			"12 18 24 30"
+				"special_bonus_unique_bane_10"				"+13"
+				"CalculateSpellDamageTooltip" "1"
+			}
+			"enfeeble_heal_pct"	// higher = stronger
+			{
+				"value"					"0"
+			}
+			"damage_tick_rate"				"1.0"	// higher = stronger
+		}
+	}
+	
+	//=================================================================================================================
+	// Ability: Bane Brain Sap
+	//=================================================================================================================
+	// ---- Brain Sap  (bane_brain_sap) ----
+	// icon: bane_brain_sap
+	"bane_brain_sap"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"		
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Bane.BrainSap"
+        "HasShardUpgrade"               "1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastRange"				"625"
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"120 130 140 150"	// lower = stronger
+		"AbilityValues"
+		{
+			"brain_sap_damage"	// higher = stronger
+			{
+				"value"									"90 160 230 300"
+				"special_bonus_unique_bane_2"			"+250"
+			}
+			"AbilityCooldown"	// lower = stronger
+			{	
+				"value"	"17 15 13 11"
+				"special_bonus_unique_bane_8"			"-3"
+				"special_bonus_shard"				"-3"
+			}
+			"shard_radius"	// higher = stronger
+			{
+				"special_bonus_shard"				"+550"
+				"affected_by_aoe_increase"	"1"
+			}
+			"shard_secondary_target_heal_pct"	// higher = stronger
+			{
+				"special_bonus_shard"				"+30"
+			}			
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+	
+	//=================================================================================================================
+	// Ability: Bane Fiend's Grip
+	//=================================================================================================================
+	// ---- Fiend's Grip  (bane_fiends_grip) ----
+	// icon: bane_fiends_grip
+	"bane_fiends_grip"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Bane.FiendsGrip"
+
+		"HasScepterUpgrade"			"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"625"
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"200 300 400"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"fiend_grip_tick_interval"		"0.5"	// check tooltip
+			"fiend_grip_mana_drain"	// check tooltip
+			{
+				"value"						"5"
+				"special_bonus_unique_bane_9"			"+5"
+			}
+			"AbilityChannelTime"	// check tooltip
+			{
+				"value"					"4.75 5.25 5.75"
+				"special_bonus_unique_bane_3"		"+3"
+			}
+			"fiend_grip_damage"	// higher = stronger
+			{
+				"value"			"70 110 150"
+				"CalculateSpellDamageTooltip" "1"
+			}
+			"AbilityCooldown"	// lower = stronger
+			{
+				"value"	"120 110 100"
+				"special_bonus_scepter"	"-45"
+			}
+			"illusion_count"	// higher = stronger
+			{
+				"special_bonus_scepter" "+2"
+			}
+			"scepter_incoming_illusion_damage"	// higher = stronger
+			{
+				"special_bonus_scepter"	"+200"
+			}
+		}
+	}
+	
+	//=================================================================================================================
+	// Bane: Nightmare
+	//=================================================================================================================
+	// ---- Nightmare  (bane_nightmare) ----
+	// icon: bane_nightmare
+	"bane_nightmare"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_Bane.Nightmare"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"500 550 600 650"
+		"AbilityCastPoint"				"0.4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDuration"				"3.5 4.5 5.5 6.5"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"120 130 140 150"	// lower = stronger
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.5"	// Applies two modifiers
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+
+			"nightmare_invuln_time"		"1.0"	// check tooltip
+			"animation_rate"			"0.2 0.2 0.2 0.2"	// check tooltip
+			"AbilityCooldown"	// lower = stronger
+			{
+				"value"	"24 21 18 15"
+				"special_bonus_unique_bane_5" "-3"
+			}
+			"bonus_attack_speed"	// higher = stronger
+			{
+				"value"						"0"
+				"special_bonus_facet_bane_dream_stalker"	"40 50 60 70"
+			}
+			"is_vector_targeted"	// check tooltip
+			{
+				"value"						"0"
+				"special_bonus_facet_bane_sleepwalk"	"+1"
+			}
+			"vector_render_distance"		"600"	// check tooltip
+			"vector_render_radius"			"120"	// higher = stronger
+			"walk_speed"	// higher = stronger
+			{
+				"value"						"0"
+				"special_bonus_facet_bane_sleepwalk"	"+75"
+			}
+			"turn_rate"						"200"	// check tooltip
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Bane: Nightmare Wake Up
+	//=================================================================================================================
+	// ---- Nightmare End  (bane_nightmare_end) ----
+	// icon: bane_nightmare_end
+	"bane_nightmare_end"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"MaxLevel"						"1"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_5"
+	}
+
+	//=================================================================================================================
+	// Bane: Innate Equal Stats
+	//=================================================================================================================
+	// ---- Ichor of Nyctasha  (bane_ichor_of_nyctasha) ----
+	// icon: bane_ichor_of_nyctasha
+	"bane_ichor_of_nyctasha"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
+
+		"MaxLevel"						"1"
+		"Innate"						"1"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_brain_sap_damage} Brain Sap Damage/Heal  (special_bonus_unique_bane_2) ----
+	// icon: special_bonus_unique_bane_2
+	"special_bonus_unique_bane_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"bane_brain_sap"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_AbilityChannelTime}s Fiend's Grip Duration  (special_bonus_unique_bane_3) ----
+	// icon: special_bonus_unique_bane_3
+	"special_bonus_unique_bane_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"value"	// check tooltip
+			{
+				"value" "5"
+				"ad_linked_abilities" "bane_fiends_grip"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- -{s:bonus_AbilityCooldown}s Nightmare Cooldown  (special_bonus_unique_bane_5) ----
+	// icon: special_bonus_unique_bane_5
+	"special_bonus_unique_bane_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"bane_nightmare"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- -{s:bonus_AbilityCooldown}s Brain Sap Cooldown  (special_bonus_unique_bane_8) ----
+	// icon: special_bonus_unique_bane_8
+	"special_bonus_unique_bane_8"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"bane_brain_sap"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_fiend_grip_mana_drain}% Fiend's Grip Max Mana Drain  (special_bonus_unique_bane_9) ----
+	// icon: special_bonus_unique_bane_9
+	"special_bonus_unique_bane_9"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"value"	// check tooltip
+			{
+				"value" "5"
+				"ad_linked_abilities" "bane_fiends_grip"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_enfeeble_tick_damage} Enfeeble Damage Per Second  (special_bonus_unique_bane_10) ----
+	// icon: special_bonus_unique_bane_10
+	"special_bonus_unique_bane_10"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"special_bonus_base"		
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_cast_reduction}% Enfeeble Cast Range Reduction  (special_bonus_unique_bane_11) ----
+	// icon: special_bonus_unique_bane_11
+	"special_bonus_unique_bane_11"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"special_bonus_base"		
+	}
+}

@@ -1,0 +1,486 @@
+// Abilities for alchemist
+"DOTAAbilities"
+{
+    "Version"       "1"
+
+	//=================================================================================================================
+	// Alchemist: Berserk Potion (Shard)
+	//=================================================================================================================
+	// ---- Berserk Potion  (alchemist_berserk_potion) ----
+	// icon: alchemist_berserk_potion
+	"alchemist_berserk_potion"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+		"IsGrantedByShard"  			"1"
+		"HasShardUpgrade"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"35"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"	// lower = stronger
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"		"10"	// higher = stronger
+			"attack_speed"		"50"	// higher = stronger
+			"hp_regen"		"40"	// higher = stronger
+			"projectile_speed"			"900"	// higher = stronger
+			"move_speed"			"30"	// higher = stronger
+			"chemical_rage_cooldown_reduction_pct"	// higher = stronger
+			{
+				"value"					"0"
+				"special_bonus_facet_alchemist_mixologist"				"=50"
+			}
+
+		}
+	}
+
+	//=================================================================================================================
+	// Alchemist: Acid Spray
+	//=================================================================================================================
+	// ---- Acid Spray  (alchemist_acid_spray) ----
+	// icon: alchemist_acid_spray
+	"alchemist_acid_spray"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.1"
+		"AbilityCastRange"				"900"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"22.0 21 20 19"	// lower = stronger
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"110"	// lower = stronger
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"	// higher = stronger
+			{
+				"value"		"400 475 550 625"
+				"affected_by_aoe_increase"	"1"
+			}
+			"duration"				"15"	// higher = stronger
+			"damage"	// higher = stronger
+			{
+				"value"			"25 30 35 40"
+				"CalculateSpellDamageTooltip" "1"
+			}
+			"armor_reduction"	// higher = stronger
+			{
+				"value"						"3 4 5 6"
+				"special_bonus_unique_alchemist_5"		"+1"
+			}
+			"armor_allies"	// higher = stronger
+			{
+				"value"					"0"
+				"special_bonus_unique_alchemist_3"	"+1"
+			}
+			"tick_rate"				"1.0"	// check tooltip
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Alchemist: Unstable Concoction
+	//=================================================================================================================
+	// ---- Unstable Concoction  (alchemist_unstable_concoction) ----
+	// icon: alchemist_unstable_concoction
+	"alchemist_unstable_concoction"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Alchemist.UnstableConcoction.Fuse"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"775" // for visualization on hover
+		"AbilityCastPoint"				"0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15"	// lower = stronger
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"brew_time"					"5.0"	// check tooltip
+			"brew_explosion"			"5.5"	// check tooltip
+			"min_stun"					"0.25"	// higher = stronger
+			"max_stun"					"1.7 2.2 2.7 3.2"	// higher = stronger
+			"min_damage"				"0"	// higher = stronger
+			"max_damage"	// higher = stronger
+			{ 
+				"value"					"150 220 290 360"
+				"special_bonus_unique_alchemist_2"		"+400"
+			}
+
+			"radius"	// higher = stronger
+			{
+				"value"					"250"
+				"special_bonus_unique_alchemist"	"+125"
+				"affected_by_aoe_increase"	"1"
+			}
+			"move_speed"				"4 8 12 16"	// higher = stronger
+			"chemical_rage_cooldown_reduction_pct"	// higher = stronger
+			{
+				"value"					"0"
+				"special_bonus_facet_alchemist_mixologist"				"=30"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Alchemist: Unstable Concoction Throw
+	//=================================================================================================================
+	// ---- Unstable Concoction Throw  (alchemist_unstable_concoction_throw) ----
+	// icon: alchemist_unstable_concoction_throw
+	"alchemist_unstable_concoction_throw"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"775"
+		"AbilityCastPoint"				"0.2"
+  		"AbilityCastAnimation"			"ACT_INVALID"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportBonus"	"120"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"brew_time"					"5.0"	// check tooltip
+			"min_stun"					"0.25"	// higher = stronger
+			"max_stun"					"1.75 2.25 2.75 3.25"	// higher = stronger
+			"min_damage"				"0"	// higher = stronger
+			"max_damage"	// higher = stronger
+			{ 
+				"value"					"150 220 290 360"
+				"special_bonus_unique_alchemist_2"		"+400"
+			}
+			"projectile_speed"			"900"	// higher = stronger
+			"midair_explosion_radius"	// higher = stronger
+			{
+				"value"					"250"
+				"special_bonus_unique_alchemist"	"+125"
+				"affected_by_aoe_increase"	"1"
+			}			
+			"brew_explosion"			"7.0"	// check tooltip
+		}
+	}
+
+	//=================================================================================================================
+	// Alchemist: Goblin's Greed
+	//=================================================================================================================
+	// ---- Greevil's Greed  (alchemist_goblins_greed) ----
+	// icon: alchemist_goblins_greed
+	"alchemist_goblins_greed"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
+
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_SELF"
+		"MaxLevel"						"1"
+		"Innate"						"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"				"36"	// higher = stronger
+			"bonus_gold"			"2"	// higher = stronger
+			"bonus_bonus_gold"		"2"	// higher = stronger
+			"bounty_multiplier"		"2"	// higher = stronger
+			"damage"	// higher = stronger
+			{
+				"value"		"0"
+				"special_bonus_unique_alchemist_7"	"+2"
+			}
+
+			"bonus_gold_cap"	// higher = stronger
+			{
+				"value"				"18"
+				
+			}
+			"starting_gold_bonus"	// higher = stronger
+			{
+				"value"				"0"
+				"special_bonus_facet_alchemist_seed_money"	"=250"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Alchemist: Chemical Rage
+	//=================================================================================================================
+	// ---- Chemical Rage  (alchemist_chemical_rage) ----
+	// icon: alchemist_chemical_rage
+	"alchemist_chemical_rage"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Alchemist.ChemicalRage.Cast"
+
+		"HasScepterUpgrade"			"1"
+		"AbilityDraftUltShardAbility"  "alchemist_berserk_potion"
+		"AbilityDraftPreAbility"		"alchemist_goblins_greed"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		"AbilityCastAnimation"			"ACT_INVALID"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"60.0"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50 75 100"	// lower = stronger
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"				"30"	// higher = stronger
+			"transformation_time"	"0.35"	// check tooltip
+			"base_attack_time"	// check tooltip
+			{
+				"value"		"1.2 1.1 1.0"
+				"special_bonus_unique_alchemist_8"		"-0.1"
+
+			}
+			"bonus_health"			"0"	// higher = stronger
+			"bonus_health_regen"	// higher = stronger
+			{
+				"value"	"60 90 120"
+				"special_bonus_unique_alchemist_4"		"+50"
+			}
+			"bonus_mana_regen"		"0"	// higher = stronger
+			"bonus_movespeed"	// higher = stronger
+			{
+				
+				"value"		"30 45 60"
+				"special_bonus_unique_alchemist_6"			"+50"
+			}
+			"scepter_gold_damage"	// higher = stronger
+			{
+				"value"						"2"
+				"RequiresScepter"			"1"
+			}
+			"scepter_bonus_damage"	// higher = stronger
+			{
+				"value"						"25"
+				"RequiresScepter"			"1"
+			}
+			"scepter_spell_amp"	// check tooltip
+			{
+				"value"						"5"
+				"RequiresScepter"			"1"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Alchemist: Corrosive Weaponry
+	//=================================================================================================================
+	// ---- Corrosive Weaponry  (alchemist_corrosive_weaponry) ----
+	// icon: alchemist_corrosive_weaponry
+	"alchemist_corrosive_weaponry"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilitySound"					"Hero_Meepo.Geostrike"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{		
+				"max_stacks"	"4 6 8 10"	// check tooltip
+				"debuff_duration"		"4.0"	// higher = stronger
+				"slow_per_stack"		"4 5 6 7"	// higher = stronger
+				"attack_damage_per_stack"		"3 4 5 6"	// higher = stronger
+
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_radius} Unstable Concoction Radius  (special_bonus_unique_alchemist) ----
+	// icon: special_bonus_unique_alchemist
+	"special_bonus_unique_alchemist"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_max_damage} Unstable Concoction Max Damage  (special_bonus_unique_alchemist_2) ----
+	// icon: special_bonus_unique_alchemist_2
+	"special_bonus_unique_alchemist_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- Acid Spray grants armor to allies  (special_bonus_unique_alchemist_3) ----
+	// icon: special_bonus_unique_alchemist_3
+	"special_bonus_unique_alchemist_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_bonus_health_regen} Chemical Rage Regeneration  (special_bonus_unique_alchemist_4) ----
+	// icon: special_bonus_unique_alchemist_4
+	"special_bonus_unique_alchemist_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_armor_reduction} Acid Spray Armor Reduction  (special_bonus_unique_alchemist_5) ----
+	// icon: special_bonus_unique_alchemist_5
+	"special_bonus_unique_alchemist_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+		
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_bonus_movespeed} Chemical Rage Movement Speed  (special_bonus_unique_alchemist_6) ----
+	// icon: special_bonus_unique_alchemist_6
+	"special_bonus_unique_alchemist_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_damage} Damage per Greevil's Greed stack  (special_bonus_unique_alchemist_7) ----
+	// icon: special_bonus_unique_alchemist_7
+	"special_bonus_unique_alchemist_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- -{s:bonus_base_attack_time}s Chemical Rage Base Attack Time  (special_bonus_unique_alchemist_8) ----
+	// icon: special_bonus_unique_alchemist_8
+	"special_bonus_unique_alchemist_8"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+}

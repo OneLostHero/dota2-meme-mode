@@ -1,0 +1,591 @@
+"DOTAAbilities"
+{
+    "Version"       "1"
+
+	//=================================================================================================================
+	// Ability: Snapfire Scatterblast
+	//=================================================================================================================
+	// ---- Scatterblast  (snapfire_scatterblast) ----
+	// icon: snapfire_scatterblast
+	"snapfire_scatterblast"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Snapfire.Shotgun.Fire"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.4"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+		"AnimationPlaybackRate"			"1.2" // 1.0 corresponds to cast point of 0.45 or so
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"16 14 12 10"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"85 90 95 100"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"AbilityCastRange"	// higher = stronger
+				{
+					"value"		"800"
+					"special_bonus_facet_snapfire_full_bore"	"=1400"
+				}
+				"damage"	// higher = stronger
+				{
+					"value"		"100 160 220 280"
+					"special_bonus_unique_snapfire_7" "+70"
+				}
+				"blast_speed"				"3000"	// higher = stronger
+				"blast_width_initial"	// check tooltip
+				{
+					"value"		"225"
+					"special_bonus_facet_snapfire_full_bore"	"=75"
+					"affected_by_aoe_increase"	"1"		
+				}
+				"blast_width_end"	// check tooltip
+				{
+					"value"		"400"
+					"special_bonus_facet_snapfire_full_bore"	"=270"
+					"affected_by_aoe_increase"	"1"		
+				}
+				"debuff_duration"			"1.0"	// higher = stronger
+				"movement_slow_pct"			"100"	// higher = stronger
+				"attack_slow_pct"			"100"	// higher = stronger
+				"point_blank_range"	// higher = stronger
+				{
+					"value" "450"
+					"special_bonus_facet_snapfire_full_bore"	"=650"
+				}
+				"point_blank_dmg_bonus_pct"				"50"	// higher = stronger
+				"bonus_applies_at_long_range"	// higher = stronger
+				{
+					"value"			"0"
+					"special_bonus_facet_snapfire_full_bore"	"=1"
+				}
+				"shard_knockback_distance"	// check tooltip
+				{
+					"value"		"250"
+					"RequiresShard"				"1"
+					"affected_by_aoe_increase"	"1"		
+				}
+				"shard_knockback_duration"	// higher = stronger
+				{
+					"value"		"0.3"
+					"RequiresShard"				"1"
+				}
+				"shard_stun_duration"	// higher = stronger
+				{
+					"value"		"1.4"
+					"RequiresShard"				"1"
+				}
+				"shard_bonus_point_blank_dmg_pct"	// higher = stronger
+				{
+					"value"		"85.0"
+					"RequiresShard"				"1"
+				}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Snapfire Mortimer Kisses
+	//=================================================================================================================
+	// ---- Mortimer Kisses  (snapfire_mortimer_kisses) ----
+	// icon: snapfire_mortimer_kisses
+	"snapfire_mortimer_kisses"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_Snapfire.MortimerBlob.Launch"
+
+		// Gobble up scepter ability not tied to any spell in regular game, for AD, associating it here.
+		"AbilityDraftUltScepterAbility" "snapfire_gobble_up"
+		"AbilityDraftUltScepterPreAbility" "snapfire_spit_creep"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"3000"
+		"AbilityCastPoint"				"0.5"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"120 110 100"	// lower = stronger
+		"AbilityDuration"				"5.5"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"125 150 175"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"projectile_count"	// higher = stronger
+			{
+				"value"		"8"
+				"special_bonus_unique_snapfire_1"	"+6"
+			}
+			"projectile_speed"		"1300"	// higher = stronger
+			"projectile_width"	// check tooltip
+			{
+				"value"	"130"
+				"affected_by_aoe_increase"	"1"		
+			}
+			"impact_radius"	// higher = stronger
+			{
+				"value" "275"
+				"affected_by_aoe_increase"	"1"	
+			}
+			"damage_per_impact"	// higher = stronger
+			{
+				"value"		"180 270 360"
+				"special_bonus_unique_snapfire_mortimer_kisses_impact_damage"		"+60"
+			}
+			"duration_tooltip"		"5.5"	// higher = stronger
+			"projectile_vision"	// check tooltip
+			{
+				"value" "500"
+				"affected_by_aoe_increase"	"1"	
+			}
+			"turn_rate"				"75"	// check tooltip
+			"burn_interval"			"0.5"	// check tooltip
+			"burn_damage"	// higher = stronger
+			{
+				"value"					"60 80 100"
+				"special_bonus_unique_snapfire_5"	"+20"
+				"CalculateSpellDamageTooltip"	"1"
+			}
+			"move_slow_pct"	// higher = stronger
+			{
+				"value"			"15 20 25"
+			}
+			"burn_ground_duration"	"3.0"	// higher = stronger
+			"dist_change_speed"		"75"	// higher = stronger
+			"min_range"				"600"	// higher = stronger
+			"min_lob_travel_time"	"0.8"	// check tooltip
+			"max_lob_travel_time"	"2.0"	// check tooltip
+			"delay_after_last_projectile"	"0.5"	// check tooltip
+			"burn_linger_duration"	"1.0"	// higher = stronger
+		}
+	}
+
+	//=================================================================================================================
+	// Snapfire: Gobble Up
+	//=================================================================================================================
+	// ---- Gobble Up  (snapfire_gobble_up) ----
+	// icon: snapfire_gobble_up
+	"snapfire_gobble_up"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CUSTOM"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+		"IsGrantedByScepter"			"1"
+		"HasScepterUpgrade"				"1"
+		"AbilitySound"					"Hero_Snapfire.GobbleUp.Cast"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"120"	// lower = stronger
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"150"
+		"AbilityCooldown"				"40"	// lower = stronger
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityValues"
+		{
+			"max_time_in_belly"	// check tooltip
+			{
+				"value" "3"
+				"RequiresScepter" "1"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Snapfire Spit Creep
+	//=================================================================================================================
+	// ---- Spit Out  (snapfire_spit_creep) ----
+	// icon: snapfire_spit_creep
+	"snapfire_spit_creep"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+		"IsGrantedByScepter"			"1"
+		"HasScepterUpgrade"				"1"
+		"AbilitySound"					"Hero_Snapfire.MortimerBlob.Launch"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"3000"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"projectile_speed"		"1400"	// higher = stronger
+			"projectile_width"	// check tooltip
+			{
+				"value"	"130"
+				"affected_by_aoe_increase"	"1"	
+			}
+			"impact_radius"	// higher = stronger
+			{
+				"value"	"400"
+				"affected_by_aoe_increase"	"1"	
+			}
+			"projectile_vision"	// check tooltip
+			{
+				"value" "500"
+				"affected_by_aoe_increase"	"1"	
+			}
+			"burn_interval"			"0.5"	// check tooltip
+			"burn_damage"			"100"	// higher = stronger
+			"move_slow_pct"	// higher = stronger
+			{
+				"value"			"25"
+			}
+			"burn_ground_duration"	"3.0"	// higher = stronger
+			"min_lob_travel_time"	"0.1"	// check tooltip
+			"max_lob_travel_time"	"2.0"	// check tooltip
+			"burn_linger_duration"	"1.0"	// higher = stronger
+			"stun_duration"			"1.2"	// higher = stronger
+			"min_height_above_lowest"	"150.0"	// check tooltip
+			"min_height_above_highest"	"100.0"	// check tooltip
+			"min_acceleration"		"1000.0"	// check tooltip
+			"max_acceleration"		"2000.0"	// check tooltip
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Snapfire Firesnap Cookie
+	//=================================================================================================================
+	// ---- Firesnap Cookie  (snapfire_firesnap_cookie) ----
+	// icon: snapfire_firesnap_cookie
+	"snapfire_firesnap_cookie"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Snapfire.FeedCookie.Cast"
+		"HasShardUpgrade"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"85 90 95 100"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"AbilityCooldown"	// lower = stronger
+				{
+					"value"		"21 19 17 15"
+					"special_bonus_unique_snapfire_3"	"-4"
+				}
+
+				"projectile_speed"		"1200"	// higher = stronger
+				"pre_hop_duration"		"0.0"	// higher = stronger
+				"jump_duration"	// higher = stronger
+				{
+					"value"	"0.484" //"0.431 0.484 0.538 0.592" // proportional to horizontal distance
+				}
+				"jump_height"	// check tooltip
+				{
+					"value"						"257" //"228 257 285 314" // proportional to horizontal distance
+				}
+				"jump_horizontal_distance"	// check tooltip
+				{
+					"value"						"425" //"400 450 500 550"
+				}
+				"pre_land_anim_time"	"0.14"	// check tooltip
+				"landing_gesture_duration"	"0.6"	// higher = stronger
+				"impact_radius"	// higher = stronger
+				{
+					"value"	"300"
+					"affected_by_aoe_increase"	"1"	
+				}
+				"impact_damage"	// higher = stronger
+				{
+					"value"					"70 140 210 280"
+					"CalculateSpellDamageTooltip"	"1"
+				}
+				"impact_stun_duration"	// higher = stronger
+				{
+					"value"		"1.0 1.4 1.8 2.2"
+				}
+				"self_cast_delay"		"0.3"	// check tooltip
+				"target_heal"	// higher = stronger
+				{
+					"value"			"0"
+					"special_bonus_shard"	"+200"
+				}
+
+				"shard_damage_multiplier_tooltip" "50"	// higher = stronger
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Snapfire: Short Sighted (Innate)
+	//=================================================================================================================
+	// ---- Buckshot  (snapfire_buckshot) ----
+	// icon: snapfire_buckshot
+	"snapfire_buckshot"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"1"
+		"Innate"						"1"
+			
+		"AbilityValues"
+		{
+			"miss_chance" "25"	// higher = stronger
+			"damage_amp"	"25"	// higher = stronger
+			"split_shot"	// check tooltip
+			{
+				"value"	"0"
+				"special_bonus_facet_snapfire_ricochet_ii"		"+2"
+			}
+			"split_shot_damage_pct"	// higher = stronger
+			{
+				"value"		"0"
+				"special_bonus_facet_snapfire_ricochet_ii"		"=75"
+			}
+			"glancing_shot_damage_pct"	"50"	// higher = stronger
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Ability: Snapfire Lil Shredder
+	//=================================================================================================================
+	// ---- Lil' Shredder  (snapfire_lil_shredder) ----
+	// icon: snapfire_lil_shredder
+	"snapfire_lil_shredder"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Snapfire.ExplosiveShells.Cast"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		"AbilityCastRange"				"800"
+		"AbilityCastAnimation"			"ACT_DOTA_OVERRIDE_ABILITY_3"
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"24 20 16 12"	// lower = stronger
+		"AbilityDuration"				"6"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"70 80 90 100"	// lower = stronger
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"damage"					"15 30 45 60"	// higher = stronger
+				"buffed_attacks"	// check tooltip
+				{
+					"value"		"6"
+					"special_bonus_unique_snapfire_2"	"+2"
+				}
+				"damage_pct"	// higher = stronger
+				{
+					"value"	"25"
+					"special_bonus_unique_snapfire_6"	"+75"
+				}
+				"attack_speed_bonus"		"300"	// higher = stronger
+				"attack_range_bonus"		"160 240 320 400"	// higher = stronger
+				"buff_duration_tooltip"		"6"	// higher = stronger
+				"base_attack_time"			"1.0"	// check tooltip
+				"armor_reduction_per_attack"	"0.5"	// higher = stronger
+				"armor_duration"				"5.0"	// higher = stronger
+		}
+	}
+
+ 	//=================================================================================================================
+	// Ability: Snapfire Special Bonus (Bonus Mortimer Kisses Launched)
+	//=================================================================================================================
+  	"special_bonus_unique_snapfire_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"special_bonus_base"
+	}
+
+ 	//=================================================================================================================
+	// Ability: Snapfire Special Bonus
+	//=================================================================================================================
+  	"special_bonus_unique_snapfire_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"					"special_bonus_base"
+		"ad_linked_abilities"			"snapfire_lil_shredder"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+	}
+
+ 	//=================================================================================================================
+	// Ability: Snapfire Special Bonus
+	//=================================================================================================================
+  	"special_bonus_unique_snapfire_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"snapfire_firesnap_cookie"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+
+	}
+
+ 	//=================================================================================================================
+	// Ability: Snapfire Special Bonus
+	//=================================================================================================================
+  	"special_bonus_unique_snapfire_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"snapfire_firesnap_cookie"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+
+	}
+
+	//=================================================================================================================
+	// Ability: Snapfire Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_damage_pct}% Lil' Shredder Attack Damage  (special_bonus_unique_snapfire_6) ----
+	// icon: special_bonus_unique_snapfire_6
+	"special_bonus_unique_snapfire_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"value"	// check tooltip
+			{
+				"value" "1"
+				"ad_linked_abilities" "snapfire_lil_shredder"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Snapfire Special Bonus (Bonus Scatterblast Damage)
+	//=================================================================================================================
+	// ---- +{s:bonus_damage} Scatterblast Damage  (special_bonus_unique_snapfire_7) ----
+	// icon: special_bonus_unique_snapfire_7
+	"special_bonus_unique_snapfire_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass" "special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Snapfire Special Bonus (Bonus Scatterblast Damage)
+	//=================================================================================================================
+	// ---- {s:value}x Lil' Shredder Multishot  (special_bonus_unique_snapfire_8) ----
+	// icon: special_bonus_unique_snapfire_8
+	"special_bonus_unique_snapfire_8"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"value"	// check tooltip
+			{
+				"value" "3"
+				"ad_linked_abilities" "snapfire_lil_shredder"
+			}
+		}
+	}
+	// ---- +{s:bonus_damage_per_impact} Mortimer Kisses Impact Damage  (special_bonus_unique_snapfire_mortimer_kisses_impact_damage) ----
+	// icon: special_bonus_unique_snapfire_mortimer_kisses_impact_damage
+	"special_bonus_unique_snapfire_mortimer_kisses_impact_damage"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"special_bonus_base"
+	}
+}

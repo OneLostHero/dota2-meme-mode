@@ -1,0 +1,451 @@
+"DOTAAbilities"
+{
+    "Version"       "1"
+	//=================================================================================================================
+	// Sniper: Concussive Grenade ( shard ability )
+	//=================================================================================================================
+	// ---- Concussive Grenade  (sniper_concussive_grenade) ----
+	// icon: sniper_concussive_grenade
+	"sniper_concussive_grenade"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"IsGrantedByShard"				"1"
+		"MaxLevel"						"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.1"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50"	// lower = stronger
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+
+			"damage"	// higher = stronger
+			{
+				"value"					"200"
+				"CalculateSpellDamageTooltip"	"1"
+			}
+			"AbilityCastRange"	// higher = stronger
+			{
+				"value"							"600"
+			}
+			"radius"	// higher = stronger
+			{
+					"value"		"375"
+					"affected_by_aoe_increase"	"1"
+			}
+			"slow"		"50"	// higher = stronger
+			"debuff_duration"		"3"	// higher = stronger
+			"knockback_height"		"100"	// check tooltip
+			"knockback_distance"	// check tooltip
+			{
+				"value"		"475"
+					"affected_by_aoe_increase"	"1"
+			}
+			"knockback_duration"		"0.4"	// higher = stronger
+			"self_push"	// check tooltip
+			{
+				"value"			"1"
+
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Sniper: Shrapnel
+	//=================================================================================================================
+	// ---- Shrapnel  (sniper_shrapnel) ----
+	// icon: sniper_shrapnel
+	"sniper_shrapnel"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Sniper.ShrapnelShatter"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1800"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75"	// lower = stronger
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.25"	// primarily about damage
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"AbilityChargeRestoreTime"	// check tooltip
+				{
+					"value"				"35"
+					"special_bonus_unique_sniper_2" "-25"
+				}
+				"slow_movement_speed"	// higher = stronger
+				{
+					"value"		"-12 -18 -24 -30"
+					"special_bonus_facet_sniper_scattershot"	"x2"
+					"special_bonus_unique_sniper_5" "-10"
+				}
+				"radius"	// higher = stronger
+				{
+					"value"		"400 425 450 475"
+					"affected_by_aoe_increase"	"1"
+				}
+				"shrapnel_damage"	// higher = stronger
+				{
+					"value"			"25 40 55 70"
+					"special_bonus_facet_sniper_scattershot"	"x4"
+
+				}
+				"duration"	// higher = stronger
+				{
+					"value"		"10.0"
+					"special_bonus_facet_sniper_scattershot"	"=1"
+				}
+				"damage_delay"			"1.2"	// higher = stronger
+				"slow_duration"	// higher = stronger
+				{
+					"value"		"2"
+					"special_bonus_facet_sniper_scattershot"	"=2"
+				}
+				"AbilityCharges"	// check tooltip
+				{
+					"value" "3"
+				}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	
+	//=================================================================================================================
+	// Sniper: Headshot
+	//=================================================================================================================
+	// ---- Headshot  (sniper_headshot) ----
+	// icon: sniper_headshot
+	"sniper_headshot"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"damage"	// higher = stronger
+			{
+				"value"	"20 50 80 110"
+				"special_bonus_unique_sniper_headshot_damage"	"+30"
+			}
+			"proc_chance"					"40"	// higher = stronger
+			"knockback_distance"	// check tooltip
+			{
+				"value"					"50"
+				"special_bonus_unique_sniper_3"			"+50"
+			}
+			"slow"			"-100"	// higher = stronger
+			"slow_duration"					"0.5"	// higher = stronger
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Sniper: Take Aim
+	//=================================================================================================================
+	// ---- Take Aim  (sniper_take_aim) ----
+	// icon: sniper_take_aim
+	"sniper_take_aim"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+	
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0 0 0 0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20 18 16 14"	// lower = stronger
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50"	// lower = stronger
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"	// higher = stronger
+			{
+				"value"					"3"
+				"special_bonus_unique_sniper_4"	"+1"
+			}
+
+			"slow"	// higher = stronger
+			{
+				"value"								"65"				
+			}
+			"headshot_chance"			"100"	// higher = stronger
+			"active_attack_range_bonus"	// higher = stronger
+			{
+				"value"					"200"				
+			}
+			"bonus_armor"	// higher = stronger
+			{
+				"value"												"5 10 15 20"
+				"special_bonus_unique_sniper_take_aim_armor"		"+15"
+			}
+				
+			"does_root"	// check tooltip
+			{
+				"value"		"0"			
+			}
+
+			"require_target"	// check tooltip
+			{
+				"value"		"0"				
+			}
+
+			"no_reveal"	// check tooltip
+			{
+				"special_bonus_facet_sniper_ghillie_suit"	"1"
+			}
+		}
+		
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+	
+	//=================================================================================================================
+	// Sniper: Assassinate
+	//=================================================================================================================
+	// ---- Assassinate  (sniper_assassinate) ----
+	// icon: sniper_assassinate
+	"sniper_assassinate"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"FightRecapLevel"				"2"
+		"HasScepterUpgrade"					"1"
+		"AbilitySound"					"Ability.Assassinate"
+
+		"AbilityDraftUltShardAbility"		"sniper_concussive_grenade"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"3000"
+		"AbilityCastRangeBuffer"		"600"
+		"AbilityCastPoint"				"2"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20 15 10"	// lower = stronger
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"300 400 500"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"175"	// lower = stronger
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.0"	// Modifier just does damage
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"projectile_speed"			"2500 2500 2500"	// higher = stronger
+			"scepter_stun_duration"	// higher = stronger
+			{
+				"value" "0.8 1.0 1.2"
+				"RequiresScepter"		"1"
+			}
+			"scepter_crit"	// check tooltip
+			{
+				"value" "0"
+				"RequiresScepter"		"1"
+			}
+			"scepter_cast_point"	// lower = stronger
+			{
+				"value" "0.5"
+				"RequiresScepter"		"1"
+			}
+			"scatter_range"	// higher = stronger
+			{
+				"value"			"0"
+				"special_bonus_shard"	"0"
+			}
+			"scatter_width"	// check tooltip
+			{
+				"value"			"0" 
+				"special_bonus_shard"			"0"
+				"RequiresShard"	"1"
+			}
+			"scatter_damage_pct"	// higher = stronger
+			{
+				"value"			"0"
+				"special_bonus_shard"			"0"
+				"RequiresShard"	"1"
+			}
+			"cooldown_reduction_on_kill"		"0 5 10"	// higher = stronger
+
+			
+		}		
+	}
+
+	//=================================================================================================================
+	// Sniper: Keen Scope
+	//=================================================================================================================
+	// ---- Keen Scope  (sniper_keen_scope) ----
+	// icon: sniper_keen_scope
+	"sniper_keen_scope"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"4"		
+		"Innate"						"1"
+		"DependentOnAbility"			"sniper_assassinate"
+
+		"AbilityValues"
+		{
+			"bonus_range"				"100 200 300 400"	// higher = stronger
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- -{s:bonus_AbilityChargeRestoreTime}s Shrapnel Charge Restore Time  (special_bonus_unique_sniper_2) ----
+	// icon: special_bonus_unique_sniper_2
+	"special_bonus_unique_sniper_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass" "special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_knockback_distance} Max Headshot Knockback Distance  (special_bonus_unique_sniper_3) ----
+	// icon: special_bonus_unique_sniper_3
+	"special_bonus_unique_sniper_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_duration}s Take Aim Duration  (special_bonus_unique_sniper_4) ----
+	// icon: special_bonus_unique_sniper_4
+	"special_bonus_unique_sniper_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_slow_movement_speed}% Shrapnel Movement Slow  (special_bonus_unique_sniper_5) ----
+	// icon: special_bonus_unique_sniper_5
+	"special_bonus_unique_sniper_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass" "special_bonus_base"
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_damage} Headshot Damage  (special_bonus_unique_sniper_headshot_damage) ----
+	// icon: special_bonus_unique_sniper_headshot_damage
+	"special_bonus_unique_sniper_headshot_damage"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_bonus_armor} Take Aim Armor  (special_bonus_unique_sniper_take_aim_armor) ----
+	// icon: special_bonus_unique_sniper_take_aim_armor
+	"special_bonus_unique_sniper_take_aim_armor"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}	
+}

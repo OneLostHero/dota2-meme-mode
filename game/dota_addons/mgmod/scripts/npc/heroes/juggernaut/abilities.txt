@@ -1,0 +1,465 @@
+"DOTAAbilities"
+{
+    "Version"       "1"
+	
+	//=================================================================================================================
+	// Ability: Juggernaut Blade Dance
+	//=================================================================================================================
+	// ---- Blade Dance  (juggernaut_blade_dance) ----
+	// icon: juggernaut_blade_dance
+	"juggernaut_blade_dance"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"blade_dance_crit_chance"	"35"	// higher = stronger
+				"blade_dance_crit_mult"	// check tooltip
+				{
+					"value"		"130 150 170 190"
+					"special_bonus_unique_juggernaut_4"	"+10"
+				}
+				"blade_dance_lifesteal"	// higher = stronger
+				{
+					"value"	"0"
+					"special_bonus_unique_juggernaut_blade_dance_lifesteal"	"+60"
+				}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Ability: Juggernaut Blade Fury
+	//=================================================================================================================
+	// ---- Blade Fury  (juggernaut_blade_fury) ----
+	// icon: juggernaut_blade_fury
+	"juggernaut_blade_fury"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"1"
+
+	    "HasShardUpgrade"               "1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0 0 0 0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+
+			"blade_fury_aspd_multiplier"	// higher = stronger
+			{
+				"value"		"2.0"
+			}
+			"blade_fury_radius"	// higher = stronger
+			{
+				"value"						"260"
+				"special_bonus_shard"		"+100"
+				"affected_by_aoe_increase"	"1"
+			}
+
+			"blade_fury_damage_per_tick"	// higher = stronger
+			{
+				"value"				"45 50 55 60"
+			}
+			"duration"	// higher = stronger
+			{
+				"value"				"5.0"
+			}
+			"AbilityCooldown"	// lower = stronger
+			{
+				"value"					"42 34 26 18"
+				"special_bonus_unique_juggernaut_blade_fury_cooldown"		"-3"
+			}
+			"bonus_movespeed"	// higher = stronger
+			{
+				"value"			"0"
+				"special_bonus_unique_juggernaut_blade_fury_movespeed"		"+30"
+			}
+			"movement_slow"	// higher = stronger
+			{
+				"value"					"0"
+				"special_bonus_shard"		"+35"
+			}
+			"can_crit"	// check tooltip
+			{
+				"value"						"0"
+				"special_bonus_facet_juggernaut_bladestorm"	"+1"
+			}
+	
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Ability: Juggernaut Healing Ward
+	//=================================================================================================================
+	// ---- Healing Ward  (juggernaut_healing_ward) ----
+	// icon: juggernaut_healing_ward
+	"juggernaut_healing_ward"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilitySound"					"Hero_Juggernaut.HealingWard.Cast"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"350"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"60.0 60.0 60.0 60.0"	// lower = stronger
+		"AbilityDuration"				"25.0"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"140 130 120 110"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"healing_ward_heal_amount"	"2 3 4 5"	// higher = stronger
+				"healing_ward_aura_radius"	// higher = stronger
+				{
+					"value"		"400"
+					"affected_by_aoe_increase"	"1"
+				"special_bonus_unique_juggernaut_3"		"+150"
+
+				}
+				"healing_ward_movespeed_tooltip"	// higher = stronger
+				{
+					"value"	"325"
+				}
+				"healing_ward_bonus_health"	// higher = stronger
+				{
+					"value"	"0"
+					"special_bonus_unique_juggernaut_2"	"+2"
+				}
+				"healing_ward_hits_to_kill_tooltip"	// higher = stronger
+				{
+					"value" "1"
+					"special_bonus_unique_juggernaut_2" "+2"
+				}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Ability: Juggernaut Omni Slash
+	//=================================================================================================================
+	// ---- Omnislash  (juggernaut_omni_slash) ----
+	// icon: juggernaut_omni_slash
+	"juggernaut_omni_slash"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"2"
+
+		"HasScepterUpgrade"			"1"
+		"AbilityDraftUltScepterAbility"		"juggernaut_swift_slash"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityCastPoint"				"0.3 0.3 0.3"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"120"	// lower = stronger
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"200 275 350"	// lower = stronger
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.0"	// damage only
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"attack_rate_multiplier"	"1.5"	// higher = stronger
+			"bonus_damage"				"30 35 40"	// higher = stronger
+			"bonus_attack_speed"				"40"	// higher = stronger
+			"duration"	// higher = stronger
+			{
+				"value"					"3 3.25 3.5"
+				"special_bonus_unique_juggernaut_omnislash_duration"			"+1"
+			}
+			"omni_slash_radius"	// higher = stronger
+			{
+				"affected_by_aoe_increase"	"1"
+				"value"		"425"
+			}
+			"AbilityCastRange"	// higher = stronger
+			{
+				"value"					"350"
+			}
+			"dispel"	// check tooltip
+			{
+				"value"		"0"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Omnislash: Swift Slash ( scepter ability )
+	//=================================================================================================================
+	// ---- Swiftslash  (juggernaut_swift_slash) ----
+	// icon: juggernaut_swift_slash
+	"juggernaut_swift_slash"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+		"IsGrantedByScepter"			"1"
+		"HasScepterUpgrade"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"550"
+		"AbilityCastPoint"				"0.3 0.3 0.3"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"125"	// lower = stronger
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"duration"		"1"	// higher = stronger
+		}
+	}
+
+	//=================================================================================================================
+	// Juggernaut: Innate Face to Face
+	//=================================================================================================================
+	// ---- Duelist  (juggernaut_duelist) ----
+	// icon: juggernaut_duelist
+	"juggernaut_duelist"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
+
+		"MaxLevel"						"1"
+		"Innate"						"1"
+
+		"AbilityValues"
+		{
+			"front_angle"				"55"	// check tooltip
+			"front_damage_increase"		"10"	// higher = stronger
+		}
+	}
+
+	//=================================================================================================================
+	// Juggernaut: Exile Facet
+	//=================================================================================================================
+	// ---- Bladeform  (juggernaut_bladeform) ----
+	// icon: juggernaut_bladeform
+	"juggernaut_bladeform"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"MaxLevel"						"1"
+		"AbilityValues"
+		{
+			"max_stacks"				"10"	// check tooltip
+			"stack_gain_time"			"2.0"	// check tooltip
+			"agi_bonus_pct_per_stack"	"3.0"	// higher = stronger
+			"movement_speed_pct_per_stack"		"1"	// higher = stronger
+			"linger_duration"			"3"	// higher = stronger
+		}
+	}
+
+	//=================================================================================================================
+	// Innate Mask (Spin crit)
+	//=================================================================================================================
+	// ---- juggernaut_innate_mask_spin_crit  (juggernaut_innate_mask_spin_crit) ----
+	"juggernaut_innate_mask_spin_crit"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"MaxLevel"						"1"
+		"AbilityValues"
+		{
+			"mana_reduction_on_hit_tooltip"		"1"	// higher = stronger
+		}
+	}
+
+	//=================================================================================================================
+	// Innate Mask (Crit Lifesteal)
+	//=================================================================================================================
+	// ---- juggernaut_innate_mask_crit_lifesteal  (juggernaut_innate_mask_crit_lifesteal) ----
+	"juggernaut_innate_mask_crit_lifesteal"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"MaxLevel"						"1"
+		"AbilityValues"
+		{	
+			"lifesteal_flat_tooltip"					"5"	// higher = stronger
+			"blade_dance_lifesteal_consumed_tooltip"	"15"	// higher = stronger
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_healing_ward_bonus_health} Healing Ward Hits to Kill  (special_bonus_unique_juggernaut_2) ----
+	// icon: special_bonus_unique_juggernaut_2
+	"special_bonus_unique_juggernaut_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+		
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_healing_ward_aura_radius} Healing Ward Radius  (special_bonus_unique_juggernaut_3) ----
+	// icon: special_bonus_unique_juggernaut_3
+	"special_bonus_unique_juggernaut_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_blade_dance_crit_mult}% Blade Dance Crit Damage  (special_bonus_unique_juggernaut_4) ----
+	// icon: special_bonus_unique_juggernaut_4
+	"special_bonus_unique_juggernaut_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- -{s:value}s Healing Ward Cooldown  (special_bonus_unique_juggernaut_5) ----
+	// icon: special_bonus_unique_juggernaut_5
+	"special_bonus_unique_juggernaut_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"value"	// check tooltip
+			{
+				"value" "20"
+				"ad_linked_abilities" "juggernaut_healing_ward"
+			}
+		}
+	}
+
+	// ---- +{s:bonus_blade_dance_lifesteal}% Blade Dance Lifesteal  (special_bonus_unique_juggernaut_blade_dance_lifesteal) ----
+	// icon: special_bonus_unique_juggernaut_blade_dance_lifesteal
+	"special_bonus_unique_juggernaut_blade_dance_lifesteal"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+		"ad_linked_abilities"			"juggernaut_blade_dance"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+		
+	}
+
+	// ---- +{s:bonus_duration}s Omnislash Duration  (special_bonus_unique_juggernaut_omnislash_duration) ----
+	// icon: special_bonus_unique_juggernaut_omnislash_duration
+	"special_bonus_unique_juggernaut_omnislash_duration"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"		
+	}
+
+
+	// ---- -{s:bonus_AbilityCooldown}s Blade Fury Cooldown  (special_bonus_unique_juggernaut_blade_fury_cooldown) ----
+	// icon: special_bonus_unique_juggernaut_blade_fury_cooldown
+	"special_bonus_unique_juggernaut_blade_fury_cooldown"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+	// ---- +{s:bonus_bonus_movespeed} Movement Speed During Blade Fury  (special_bonus_unique_juggernaut_blade_fury_movespeed) ----
+	// icon: special_bonus_unique_juggernaut_blade_fury_movespeed
+	"special_bonus_unique_juggernaut_blade_fury_movespeed"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+	
+}

@@ -1,0 +1,610 @@
+"DOTAAbilities"
+{
+    "Version"       "1"
+	
+	//=================================================================================================================
+	// Magnataur: Horn Toss ( shard ability )
+	//=================================================================================================================
+	// ---- Horn Toss  (magnataur_horn_toss) ----
+	// icon: magnataur_horn_toss
+	"magnataur_horn_toss"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+		"IsGrantedByScepter"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"	// lower = stronger
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"damage"		"300"	// higher = stronger
+				"radius"	// higher = stronger
+				{
+					"value"			"325"
+					"affected_by_aoe_increase"	"1"
+				}
+				"air_duration"		"0.6"	// higher = stronger
+				"air_height"		"300"	// check tooltip
+				"slow_duration"		"2"	// higher = stronger
+				"pull_offset"		"75"	// check tooltip
+				"destination_offset"		"175"	// check tooltip
+				"pull_angle"				"230"	// check tooltip
+				"horn_toss_slow_pct"		"100"	// higher = stronger
+				"stun_duration"		"0.75"	// higher = stronger
+		}
+	}
+
+	//=================================================================================================================
+	// Magnataur: Shockwave
+	//=================================================================================================================
+	// ---- Shockwave  (magnataur_shockwave) ----
+	// icon: magnataur_shockwave
+	"magnataur_shockwave"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+
+        "HasShardUpgrade"             "1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"13 12 11 10"	// lower = stronger
+		"AbilityDuration"				"0.6875 0.6875 0.6875 0.6875"
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"shock_speed"	// higher = stronger
+			{
+				"value"					"1200"
+				"special_bonus_shard"	"+400"
+
+			}
+			"shock_width"	// check tooltip
+			{
+				"value"	"200"
+				"affected_by_aoe_increase"	"1"
+			}
+			"shock_damage"	// higher = stronger
+			{
+				"value"			"90 160 230 300"				
+				"special_bonus_unique_magnus"	"+125"
+			}
+			"movement_slow"				"75"	// higher = stronger
+			"slow_duration"				"2"	// higher = stronger
+			"pull_duration"				"0.2"	// higher = stronger
+			"pull_distance"		"150"	// check tooltip
+			"basic_slow_duration"	// higher = stronger
+			{
+				"value"					"0.7 0.8 0.9 1.0"
+				"special_bonus_unique_magnus_6"	"+0.5"
+			}
+			"return_damage_pct"	// higher = stronger
+			{
+				"value"			"0"
+				"special_bonus_shard"		"+75"
+			}
+			"AbilityCastRange"	// higher = stronger
+			{
+				"value"					"1200"
+				"special_bonus_shard"		"+400"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	
+	//=================================================================================================================
+	// Magnataur: Greater Shockwave (scepter ability)
+	//=================================================================================================================
+	// ---- Rolling Shockwave  (magnataur_greater_shockwave) ----
+	// icon: magnataur_greater_shockwave
+	"magnataur_greater_shockwave"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilitySound"					"Hero_ShadowShaman.SerpentWard"
+		"FightRecapLevel"				"1"
+		"HasScepterUpgrade"				"1"
+		"MaxLevel"						"1"
+		"IsGrantedByScepter"			"1"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1500"
+		"AbilityCastPoint"				"0.1"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"16"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"	// lower = stronger
+		"AbilityValues"
+		{
+			"length"	// check tooltip
+			{
+				"value" "1200"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Magnataur: Empower
+	//=================================================================================================================
+	// ---- Empower  (magnataur_empower) ----
+	// icon: magnataur_empower
+	"magnataur_empower"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_Magnataur.Empower.Cast"
+		//"HasShardUpgrade"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"8"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"45 55 65 75"	// lower = stronger
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.3"	// Easy to spam 
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityCastRange"	// higher = stronger
+			{
+				"value"								"800"
+				//"special_bonus_shard"				"+99999"
+			}
+			"should_self_cast"	// check tooltip
+			{
+				"value"								"0"
+				//"special_bonus_shard"				"+1"
+			}
+			"empower_duration"	// higher = stronger
+			{
+				"value"		"30 33 36 39"
+				"special_bonus_unique_magnus_4"	"+10"
+			}
+			"bonus_damage_pct"	// higher = stronger
+			{
+				"value"							"16 24 32 40"
+				"special_bonus_unique_magnus_2"	"+10"
+			}
+			"cleave_damage_pct"	// higher = stronger
+			{
+				"value"						"16 24 32 40"
+				"special_bonus_unique_magnus_2"	"+10"
+			}			
+			"cleave_starting_width"	// check tooltip
+			{
+				"value"			"150"
+				"affected_by_aoe_increase"	"1"
+			}			
+			"cleave_ending_width"	// check tooltip
+			{
+				"value"			"360"
+				"affected_by_aoe_increase"	"1"
+
+			}			
+			"cleave_distance"	// check tooltip
+			{
+				"value"		"650"
+				"affected_by_aoe_increase"	"1"
+			}
+			"secondary_cleave_distance"	// check tooltip
+			{
+				"value"			"0"
+				//"special_bonus_shard"	"+400"
+			}
+			"self_multiplier"		"50"	// higher = stronger
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Magnataur: Skewer
+	//=================================================================================================================
+	// ---- Skewer  (magnataur_skewer) ----
+	// icon: magnataur_skewer
+	"magnataur_skewer"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Magnataur.Skewer.Cast"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"80 80 80 80"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"AbilityCooldown"	// lower = stronger
+				{
+					"value"					"22 20 18 16"
+					"special_bonus_unique_magnus_7"		"-5"
+				}
+				"skewer_speed"					"900"	// higher = stronger
+				"range"	// higher = stronger
+				{
+					"value"			"900 975 1050 1125"
+				"special_bonus_unique_magnus_3" "+275"
+				}
+				"slow_pct"	// higher = stronger
+				{
+					"value"			"20 30 40 50"
+				}
+				"skewer_radius"	// higher = stronger
+				{
+					"value"		"145"
+					"affected_by_aoe_increase"	"1"
+				}
+				"slow_duration"				"3.25"	// higher = stronger
+				"skewer_damage"			"70 140 210 280"	// higher = stronger
+				"tree_radius"	// higher = stronger
+				{
+					"value"			"200"
+					"affected_by_aoe_increase"	"1"
+				}			
+				"tree_hit_damage"	// higher = stronger
+				{
+					"special_bonus_facet_magnataur_run_through"			"10 15 20 25"
+						
+				}
+				"cliff_hit_damage"	// higher = stronger
+				{
+					"special_bonus_facet_magnataur_run_through"			"40 60 80 100"
+				}				
+				"terrain_hit_cooldown"	// lower = stronger
+				{
+					"value"						"0"
+					"special_bonus_facet_magnataur_run_through"			"0.5"
+				}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+	
+	//=================================================================================================================
+	// Magnataur: Reverse Polarity
+	//=================================================================================================================
+	// ---- Reverse Polarity  (magnataur_reverse_polarity) ----
+	// icon: magnataur_reverse_polarity
+	"magnataur_reverse_polarity"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Magnataur.ReversePolarity.Cast"
+
+		"AbilityDraftUltScepterAbility"		"magnataur_horn_toss"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3 0.3 0.3"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		"AbilityCooldown"				"120"	// lower = stronger
+		"AbilityManaCost"				"150 225 300"	// lower = stronger
+		"AbilityCastRange"				"410 410 410"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.5"	// Applies multiple modifiers
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"pull_radius"	// higher = stronger
+			{
+				"value"							"430"
+				"affected_by_aoe_increase"		"1"
+				"special_bonus_facet_magnataur_reverse_reverse_polarity"		"-100%"				
+			}
+			"push_radius"	// higher = stronger
+			{
+				"value"							"0"
+				"special_bonus_facet_magnataur_reverse_reverse_polarity"		"+600"				
+				"affected_by_aoe_increase"		"1"
+			}
+			"max_knockback_distance"	// check tooltip
+			{
+				"value"							"0"
+				"special_bonus_facet_magnataur_reverse_reverse_polarity"		"+700"				
+				"affected_by_aoe_increase"		"1"
+			}	
+			"knockback_height"	// check tooltip
+			{
+				"value"							"0"
+				"special_bonus_facet_magnataur_reverse_reverse_polarity"		"+100"
+			}
+			"polarity_damage"	// higher = stronger
+			{
+				"value"							"100 200 300"
+				"CalculateSpellDamageTooltip" 	"1"
+			}
+			"hero_stun_duration"	// higher = stronger
+			{
+				"value"					"2.5 3.0 3.5"
+				"special_bonus_unique_magnus_5"	"+0.8"
+			}
+			"pull_duration"	// higher = stronger
+			{
+				"value"							"0.0"
+				"special_bonus_facet_magnataur_reverse_reverse_polarity"		"+0.2"
+			}
+			"stat_buff_duration"	// higher = stronger
+			{
+				"value"					"0"
+				"special_bonus_unique_magnus_reverse_polarity_stats"			"+15"
+			}
+			"stats_per_stack"	// check tooltip
+			{
+				"value"					"0"
+				"special_bonus_unique_magnus_reverse_polarity_stats"			"+10"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Magnus: Magnetic Horn
+	//=================================================================================================================
+	// ---- magnus_magnetic_horn  (magnus_magnetic_horn) ----
+	"magnus_magnetic_horn"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_NONE"	
+
+		"MaxLevel"						"1"
+
+		"AbilityValues"
+		{
+			"pull_duration"		"0.2"	// higher = stronger
+			"pull_distance"		"150"	// check tooltip
+			"pull_radius"		"200"	// higher = stronger
+		}		
+	}
+
+	//=================================================================================================================
+	// Magnus: Solid Core
+	//=================================================================================================================
+	// ---- Solid Core  (magnataur_solid_core) ----
+	// icon: magnataur_solid_core
+	"magnataur_solid_core"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_NONE"	
+		"MaxLevel"						"1"
+		"Innate"						"1"
+
+		"AbilityValues"
+		{
+			"knockback_reduction"		"50"	// higher = stronger
+		}		
+	}
+	//=================================================================================================================
+	// Ability: Magnus Strength of Joelrak (scepter)
+	//=================================================================================================================
+	// ---- Strength of Joelrak  (magnus_strength_of_joelrak) ----
+	// icon: magnus_strength_of_joelrak
+	"magnus_strength_of_joelrak"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"IsGrantedByShard"				"1"
+		"MaxLevel"						"1"
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			
+			"strength_per_stack"				"6"	// check tooltip
+			"max_stacks"						"10"	// check tooltip
+			"stack_duration"					"12"	// higher = stronger
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_shock_damage} Shockwave Damage  (special_bonus_unique_magnus) ----
+	// icon: special_bonus_unique_magnus
+	"special_bonus_unique_magnus"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"value"	// check tooltip
+			{
+				"value" "4"
+				"ad_linked_abilities" "magnataur_shockwave"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_bonus_damage_pct}% Empower Damage/Cleave  (special_bonus_unique_magnus_2) ----
+	// icon: special_bonus_unique_magnus_2
+	"special_bonus_unique_magnus_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_range} Skewer Range  (special_bonus_unique_magnus_3) ----
+	// icon: special_bonus_unique_magnus_3
+	"special_bonus_unique_magnus_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass" "special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_empower_duration}s Empower Duration  (special_bonus_unique_magnus_4) ----
+	// icon: special_bonus_unique_magnus_4
+	"special_bonus_unique_magnus_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_hero_stun_duration}s Reverse Polarity Stun Duration  (special_bonus_unique_magnus_5) ----
+	// icon: special_bonus_unique_magnus_5
+	"special_bonus_unique_magnus_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_basic_slow_duration}s Shockwave Slow Duration  (special_bonus_unique_magnus_6) ----
+	// icon: special_bonus_unique_magnus_6
+	"special_bonus_unique_magnus_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- -{s:bonus_AbilityCooldown}s Skewer Cooldown  (special_bonus_unique_magnus_7) ----
+	// icon: special_bonus_unique_magnus_7
+	"special_bonus_unique_magnus_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_stats_per_stack} All Stats per hero hit with Reverse Polarity  (special_bonus_unique_magnus_reverse_polarity_stats) ----
+	// icon: special_bonus_unique_magnus_reverse_polarity_stats
+	"special_bonus_unique_magnus_reverse_polarity_stats"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+}

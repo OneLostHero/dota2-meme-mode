@@ -1,0 +1,449 @@
+"DOTAAbilities"
+{
+    "Version"       "1"
+	
+	//=================================================================================================================
+	// Enigma: Malefice
+	//=================================================================================================================
+	// ---- Malefice  (enigma_malefice) ----
+	// icon: enigma_malefice
+	"enigma_malefice"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Enigma.Malefice"
+
+		"HasShardUpgrade"			"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"450 500 550 600"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20 18 16 14"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 110 120 130"	// lower = stronger
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.33"	// Applies multiple modifiers
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"tick_rate"				"2.0 2.0 2.0 2.0"	// check tooltip
+			"stun_duration"	// higher = stronger
+			{
+				"value" 							"0.3 0.5 0.7 0.9"
+				"special_bonus_shard"		"+0.30"
+			}		
+			"damage"	// higher = stronger
+			{
+				"value"								"55 70 85 100"
+				"special_bonus_unique_enigma_5"		"+40"
+			}
+			"stun_instances"	// higher = stronger
+			{
+				"value"									"3 3 3 3"
+				"special_bonus_unique_enigma_2"			"+4"
+			}
+			"eidolon_spawns_per_tick"	// check tooltip
+			{
+				"value"										"0"
+				"special_bonus_shard"						"+1"
+			}
+
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	
+	//=================================================================================================================
+	// Enigma: Demonic Summoning
+	//=================================================================================================================
+	// ---- Demonic Summoning  (enigma_demonic_conversion) ----
+	// icon: enigma_demonic_conversion
+	"enigma_demonic_conversion"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilitySound"					"Hero_Enigma.Demonic_Conversion"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"400"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"40 38 36 34"	// lower = stronger
+		"AbilityDuration"				"40.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"70 80 90 100"	// lower = stronger
+		"AbilityHealthCost"				"75 100 125 150"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"spawn_count"	// higher = stronger
+			{
+				"value"			"3 3 3 3"
+				"special_bonus_unique_enigma"	"+4"
+			}
+			"split_attack_count"	"6 6 6 6"	// higher = stronger
+			"eidelon_max_health"	// higher = stronger
+			{
+				"value"			"180 200 220 240"
+			}
+			"life_extension"		"2.0 2.0 2.0 2.0"	// check tooltip
+			"eidelon_base_damage"		"20 28 38 47"	// higher = stronger
+			"eidolon_damage_spread"			"4"	// higher = stronger
+			
+			"eidolon_bonus_damage"	// higher = stronger
+			{
+				"value"			"0"		
+				"special_bonus_unique_enigma_3"	"+40"
+			}			
+			"eidolon_bonus_attack_speed"	// higher = stronger
+			{
+				"value"			"0"
+				"special_bonus_unique_enigma_4"		"+10"
+			}
+			"eidelon_base_movespeed"			"280 310 340 370"	// higher = stronger
+			"creep_max_level"		"4"	// check tooltip
+			"eidolon_magic_resist"		"30 40 50 60"	// check tooltip
+			"eidolon_attack_range"		"425 450 475 500"	// higher = stronger
+			"allied_damage_pct"			"45"	// higher = stronger
+			"self_modelscale"			"-40"	// check tooltip
+			"spawn_offset"				"100"	// check tooltip
+			"current_health_pct"		"4"	// higher = stronger
+			"eidolon_xp_bounty"					"10"	// check tooltip
+			"eidolon_gold_bounty_min"			"14"	// check tooltip
+			"eidolon_gold_bounty_max"			"20"	// check tooltip
+			"non_splitting_bounty_reduction"		"50"	// higher = stronger
+
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+	
+	//=================================================================================================================
+	// Enigma: Midnight Pulse
+	//=================================================================================================================
+	// ---- Midnight Pulse  (enigma_midnight_pulse) ----
+	// icon: enigma_midnight_pulse
+	"enigma_midnight_pulse"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Enigma.Midnight_Pulse"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_MIDNIGHT_PULSE"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"40 35 30 25"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"65 90 115 140"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"radius"	// higher = stronger
+				{
+					"value"				"600"
+					"special_bonus_unique_enigma_9"	"+200"
+					"affected_by_aoe_increase"	"1"
+				}
+				"damage_percent"			"4 6 8 10"	// higher = stronger
+				"duration"	// higher = stronger
+				{
+					"value"			"9 10 11 12"
+				}
+				"base_damage"				"5 10 15 20"	// higher = stronger
+
+
+				"tick_rate"			"0.5"	// check tooltip
+		}
+	}
+	//=================================================================================================================
+	// Enigma: Black Hole
+	//=================================================================================================================
+	// ---- Black Hole  (enigma_black_hole) ----
+	// icon: enigma_black_hole
+	"enigma_black_hole"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"2"
+
+		"HasScepterUpgrade"			"1"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"275"
+		"AbilityCastPoint"				"0.3 0.3 0.3"
+		"AbilityChannelTime"			"4.0"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityChannelAnimation"		"ACT_DOTA_CHANNEL_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"180 170 160"	// lower = stronger
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"300 400 500"	// lower = stronger
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"damage"	// higher = stronger
+			{
+				"value"		"100 150 200"
+				"special_bonus_unique_enigma_6"	"+50"
+			}
+
+			"radius"	// higher = stronger
+			{	
+				"value"			"420"
+					"affected_by_aoe_increase"	"1"
+			}
+			"pull_speed"			"30"	// higher = stronger
+			"tick_rate"				"0.1 0.1 0.1"	// check tooltip
+			"duration"				"4.0"	// higher = stronger
+			"vision_radius"	// higher = stronger
+			{
+				"value"		"800"
+				"affected_by_aoe_increase"	"1"
+			}
+			"pull_rotate_speed"		"0.25"	// higher = stronger
+			"animation_rate"		"0.2"	// check tooltip
+			"scepter_pct_damage"	// higher = stronger
+			{
+				"value"					"4"
+				"RequiresScepter"		"1"
+			}
+			"scepter_radius"	// higher = stronger
+			{
+				"value"					"1200"
+				"RequiresScepter"			"1"
+					"affected_by_aoe_increase"	"1"
+			}
+			"scepter_drag_speed"	// higher = stronger
+			{
+				"value"					"175"
+				"RequiresScepter"			"1"
+			}
+			"scepter_pull_rotate_speed"	// higher = stronger
+			{
+				"value"					"0.1"
+				"RequiresScepter"			"1"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_spawn_count} Demonic Summoning Eidolons  (special_bonus_unique_enigma) ----
+	// icon: special_bonus_unique_enigma
+	"special_bonus_unique_enigma"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_stun_instances} Malefice Instances  (special_bonus_unique_enigma_2) ----
+	// icon: special_bonus_unique_enigma_2
+	"special_bonus_unique_enigma_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_eidolon_bonus_damage} Eidolon Damage  (special_bonus_unique_enigma_3) ----
+	// icon: special_bonus_unique_enigma_3
+	"special_bonus_unique_enigma_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"					"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_eidolon_bonus_attack_speed} Eidolon Attack Speed  (special_bonus_unique_enigma_4) ----
+	// icon: special_bonus_unique_enigma_4
+	"special_bonus_unique_enigma_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"					"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_damage} Malefice Instance Damage  (special_bonus_unique_enigma_5) ----
+	// icon: special_bonus_unique_enigma_5
+	"special_bonus_unique_enigma_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_damage} Black Hole Damage Per Second  (special_bonus_unique_enigma_6) ----
+	// icon: special_bonus_unique_enigma_6
+	"special_bonus_unique_enigma_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	// ---- +{s:bonus_radius} Midnight Pulse Radius  (special_bonus_unique_enigma_9) ----
+	// icon: special_bonus_unique_enigma_9
+	"special_bonus_unique_enigma_9"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	// ---- Gravity Well  (enigma_gravity_well) ----
+	// icon: enigma_gravity_well
+	"enigma_gravity_well"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_NONE"	
+
+		"MaxLevel"						"1"
+		"Innate"						"1"
+
+		"AbilityValues"
+		{
+			"max_dist"	// check tooltip
+			{
+				"value"		"500"
+				"affected_by_aoe_increase"	"1"
+			}
+			"min_dist"	// check tooltip
+			{
+				"value"		"200"
+				"affected_by_aoe_increase"	"1"
+			}
+			"damage_reduction"	"15"	// higher = stronger
+		}
+	}
+	//=================================================================================================================
+	// Enigma Innate Fragmentation 
+	//=================================================================================================================
+	// ---- Splitting Image  (enigma_splitting_image) ----
+	// icon: enigma_splitting_image
+	"enigma_splitting_image"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"MaxLevel"						"1"
+		"AbilityValues"
+		{
+				"damage_threshold"				"350"	// higher = stronger
+				"damage_reset_interval"			"7"	// higher = stronger
+				"eidolon_spawns"				"1"	// check tooltip
+		}
+	}
+	//=================================================================================================================
+	// Enigma Innate Gravity
+	//=================================================================================================================
+	// ---- Event Horizon  (enigma_event_horizon) ----
+	// icon: enigma_event_horizon
+	"enigma_event_horizon"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"MaxLevel"						"1"
+		"AbilityValues"
+		{
+			"radius"	// higher = stronger
+			{
+				"value"		"600"
+				"affected_by_aoe_increase"	"1"
+			}
+			"speed_bonus"		"15"	// higher = stronger
+			"vision_cone"		"0.08715"	// check tooltip
+		}
+	}	
+
+
+}
