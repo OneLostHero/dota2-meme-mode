@@ -51,3 +51,78 @@ def parse_localized_names(loc_text):
     keys (e.g. "riki_smoke_screen"), so sub-field tokens never collide in use.
     """
     return {key: value for key, value in _LOC_RE.findall(loc_text)}
+
+
+_ONE_TAB_KEY = re.compile(r'^\t"([^"]+)"\s*$')          # ability header candidate
+_FLAT_KV = re.compile(r'^\t+"([^"]+)"\s+"([^"]*)"\s*$')  # "key"  "value"
+_NAMED_KEY = re.compile(r'^\t+"([^"]+)"\s*$')            # "key"  (block opener)
+
+_COST_FIELDS = ("AbilityCooldown", "AbilityManaCost", "AbilityCastPoint")
+
+
+def _next_real_is_brace(lines, i):
+    """True if the next non-blank, non-comment line after i opens a brace."""
+    for j in range(i + 1, len(lines)):
+        s = lines[j].strip()
+        if s == "" or s.startswith("//"):
+            continue
+        return s.startswith("{")
+    return False
+
+
+def _append_comment(line, text):
+    """Append a trailing // comment, preserving the line's newline."""
+    newline = "\n" if line.endswith("\n") else ""
+    return line.rstrip("\n").rstrip() + f"\t// {text}{newline}"
+
+
+def annotate_file_lines(lines, names):
+    """Return a new list of lines with name headers and direction comments."""
+    out = []
+    depth = 0
+    values_depth = None      # brace depth at which AbilityValues *content* lives
+    pending_av = False       # saw "AbilityValues", waiting for its "{"
+
+    for i, line in enumerate(lines):
+        bare = line.rstrip("\n")
+        inside_av = values_depth is not None and depth == values_depth
+
+        # (a) ability-name header above a one-tab key that opens a block
+        header = _ONE_TAB_KEY.match(bare)
+        if header and _next_real_is_brace(lines, i):
+            key = header.group(1)
+            name = names.get(key)
+            out.append(f"\t// ---- {name or key}  ({key}) ----\n")
+            if name:
+                out.append(f"\t// icon: {key}\n")
+
+        # (b) value annotation
+        annotated = line
+        flat = _FLAT_KV.match(bare)
+        if flat:
+            key = flat.group(1)
+            if inside_av:
+                annotated = _append_comment(line, direction_hint(key) or "check tooltip")
+            elif key in _COST_FIELDS:
+                hint = direction_hint(key)
+                if hint:
+                    annotated = _append_comment(line, hint)
+        else:
+            named = _NAMED_KEY.match(bare)
+            # a named block value inside AbilityValues (e.g. "radius" { ... })
+            if named and inside_av and _next_real_is_brace(lines, i):
+                key = named.group(1)
+                annotated = _append_comment(line, direction_hint(key) or "check tooltip")
+        out.append(annotated)
+
+        # (c) brace + AbilityValues scope tracking (after using current state)
+        if _NAMED_KEY.match(bare) and _NAMED_KEY.match(bare).group(1) == "AbilityValues":
+            pending_av = True
+        if "{" in line and pending_av:
+            values_depth = depth + 1
+            pending_av = False
+        depth += line.count("{") - line.count("}")
+        if values_depth is not None and depth < values_depth:
+            values_depth = None
+
+    return out

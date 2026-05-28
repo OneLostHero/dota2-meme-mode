@@ -66,3 +66,63 @@ def test_parse_localized_names():
     # sub-field tokens are still captured but never queried by ability key
     assert names["riki_smoke_screen_radius"] == "RADIUS:"
     assert "some_other_token" not in names
+
+
+from tools.hero_ability_gen import annotate_file_lines
+
+SAMPLE = '''"DOTAAbilities"
+{
+\t"riki_smoke_screen"
+\t{
+\t\t"AbilityCooldown"\t"20 17 14 11"
+\t\t"AbilityValues"
+\t\t{
+\t\t\t"miss_rate"\t"30 45 60 75"
+\t\t\t"radius"
+\t\t\t{
+\t\t\t\t"value"\t"425"
+\t\t\t}
+\t\t\t"block_targeting"\t"0"
+\t\t}
+\t}
+}
+'''
+
+
+def _run(sample, names):
+    return "".join(annotate_file_lines(sample.splitlines(keepends=True), names))
+
+
+def test_injects_name_header_above_ability():
+    out = _run(SAMPLE, {"riki_smoke_screen": "Smoke Screen"})
+    assert "// ---- Smoke Screen  (riki_smoke_screen) ----" in out
+    assert "// icon: riki_smoke_screen" in out
+    # header appears before the ability key line
+    assert out.index("Smoke Screen  (riki_smoke_screen)") < out.index('"riki_smoke_screen"')
+
+
+def test_annotates_flat_value_inside_abilityvalues():
+    out = _run(SAMPLE, {})
+    assert '"miss_rate"\t"30 45 60 75"\t// higher = stronger' in out
+
+
+def test_annotates_named_block_value():
+    out = _run(SAMPLE, {})
+    # the "radius" key (block opener) gets the hint, not the inner "value"
+    assert '"radius"\t// higher = stronger' in out
+
+
+def test_annotates_ability_level_cooldown():
+    out = _run(SAMPLE, {})
+    assert '"AbilityCooldown"\t"20 17 14 11"\t// lower = stronger' in out
+
+
+def test_unknown_value_inside_abilityvalues_gets_tooltip_note():
+    out = _run(SAMPLE, {})
+    assert '"block_targeting"\t"0"\t// check tooltip' in out
+
+
+def test_original_lines_preserved():
+    out = _run(SAMPLE, {})
+    # the inner "value" line is untouched (not inside annotate targets)
+    assert '\t\t\t\t"value"\t"425"\n' in out
