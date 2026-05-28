@@ -143,3 +143,41 @@ def test_comment_braces_do_not_corrupt_depth():
     assert '"damage"\t"100"\t// higher = stronger' in out
     # the comment line itself is preserved untouched
     assert '\t\t\t//{\n' in out
+
+
+from tools.hero_ability_gen import render_base_block, update_load_file, BEGIN, END
+
+
+def test_render_base_block():
+    block = render_base_block(["npc_dota_hero_riki", "npc_dota_hero_skeleton_king"])
+    assert BEGIN in block and END in block
+    assert '#base "heroes/riki/abilities.txt"' in block
+    assert '#base "heroes/skeleton_king/abilities.txt"' in block
+
+
+def test_update_load_file_inserts_after_last_base():
+    content = (
+        '#base "npc_abilities_fix.txt"\n'
+        '#base "npc_abilities_halloween.txt"\n'
+        '\n'
+        '//#base "valvemodes/x.txt"\n'
+        '"DOTAAbilities"\n{\n}\n'
+    )
+    block = render_base_block(["npc_dota_hero_riki"])
+    updated = update_load_file(content, block)
+    assert updated.index('#base "npc_abilities_halloween.txt"') < updated.index(BEGIN)
+    assert updated.index(BEGIN) < updated.index('//#base "valvemodes/x.txt"')
+    assert '#base "heroes/riki/abilities.txt"' in updated
+
+
+def test_update_load_file_is_idempotent():
+    content = (
+        '#base "npc_abilities_halloween.txt"\n"DOTAAbilities"\n{\n}\n'
+    )
+    block1 = render_base_block(["npc_dota_hero_riki"])
+    once = update_load_file(content, block1)
+    block2 = render_base_block(["npc_dota_hero_riki", "npc_dota_hero_axe"])
+    twice = update_load_file(once, block2)
+    # only one marker block ever exists
+    assert twice.count(BEGIN) == 1
+    assert '#base "heroes/axe/abilities.txt"' in twice
