@@ -188,7 +188,7 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
-NPC = REPO / "game/dota_addons/mgmod/scripts/npc"
+NPC = REPO / "game/dota_addons/dota2_meme_mode/scripts/npc"
 
 
 def test_generator_dry_run_reports_124(tmp_path):

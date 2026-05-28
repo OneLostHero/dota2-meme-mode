@@ -1,5 +1,5 @@
 
-content/dota_addons/mgmod/localaccountrecord.txt
+content/dota_addons/dota2_meme_mode/localaccountrecord.txt
 *.vcss_c
 *.vjs_c
 *.vpcf_c
@@ -8,4 +8,4 @@ content/dota_addons/mgmod/localaccountrecord.txt
 *.bin
 *.vpk
 *.vmdl_c
-game/dota_addons/mgmod/panorama_debugger.cfg
+game/dota_addons/dota2_meme_mode/panorama_debugger.cfg

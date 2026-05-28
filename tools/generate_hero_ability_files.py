@@ -1,4 +1,4 @@
-"""Generate per-hero ability override files for MGMod ("Dota 2 Meme Mode").
+"""Generate per-hero ability override files for Dota 2 - Meme Mode.
 
 Reads the per-hero dumps in scripts/npc/_heroes/, writes annotated copies to
 scripts/npc/heroes/<hero>/abilities.txt, and (re)writes the #base include block
@@ -19,11 +19,11 @@ from tools.hero_ability_gen import (  # noqa: E402
 )
 
 REPO = Path(__file__).resolve().parents[1]
-NPC = REPO / "game/dota_addons/mgmod/scripts/npc"
+NPC = REPO / "game/dota_addons/dota2_meme_mode/scripts/npc"
 SRC = NPC / "_heroes"
 OUT = NPC / "heroes"
 LOAD_FILE = NPC / "npc_abilities_custom.txt"
-LOC_FILE = REPO / "game/dota_addons/mgmod/resource/_abilities_english.txt"
+LOC_FILE = REPO / "game/dota_addons/dota2_meme_mode/resource/_abilities_english.txt"
 
 
 def main(argv):

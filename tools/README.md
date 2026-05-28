@@ -1,4 +1,4 @@
-# MGMod tools
+# Dota 2 - Meme Mode tools
 
 ## generate_hero_ability_files.py
 
