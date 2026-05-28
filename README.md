@@ -76,7 +76,7 @@ David Kolf's JSON module for Lua 5.1/5.2 by David Heiko Kolf.
 
 # Special Thanks
 Thank you to **DrTeaSpoon** for the amazing work on MGMod.</br>
-Thank you to **Fahr3n** and his **PWR Team**: Flasaro, Moosestache, Mr.BadHabits,
-Occupational Hazard.</br>
+Thank you to **Fahr3n** and his **PWR Team**, **Flasaro**, **Moosestache**, **Mr.BadHabits**,
+**Occupational Hazard**.</br>
 And to the Mod Dota community ([moddota.com](https://moddota.com/)) for the invaluable
 reference and support. <3
