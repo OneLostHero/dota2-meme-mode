@@ -1,7 +1,7 @@
 """Generate per-hero ability override files for Dota 2 - Meme Mode.
 
-Reads the per-hero dumps in scripts/npc/_heroes/, writes annotated copies to
-scripts/npc/heroes/<hero>/abilities.txt, and (re)writes the #base include block
+Reads the per-hero dumps in docs/reference/npc/_heroes/, writes annotated copies
+to scripts/npc/heroes/<hero>/abilities.txt, and (re)writes the #base include block
 in npc_abilities_custom.txt. Re-runnable. Source dumps are never modified.
 
 Usage:
@@ -20,7 +20,7 @@ from tools.hero_ability_gen import (  # noqa: E402
 
 REPO = Path(__file__).resolve().parents[1]
 NPC = REPO / "game/dota_addons/dota2_meme_mode/scripts/npc"
-SRC = NPC / "_heroes"
+SRC = REPO / "docs/reference/npc/_heroes"
 OUT = NPC / "heroes"
 LOAD_FILE = NPC / "npc_abilities_custom.txt"
 LOC_FILE = REPO / "game/dota_addons/dota2_meme_mode/resource/_abilities_english.txt"

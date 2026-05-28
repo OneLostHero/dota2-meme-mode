@@ -11,7 +11,7 @@ Run from the repo root:
     python tools/generate_hero_ability_files.py            # generate
     python tools/generate_hero_ability_files.py --dry-run  # report only
 
-- **Source:** `scripts/npc/_heroes/npc_dota_hero_<x>.txt` dumps (never modified).
+- **Source:** `docs/reference/npc/_heroes/npc_dota_hero_<x>.txt` dumps (never modified).
 - **Output:** `scripts/npc/heroes/<x>/abilities.txt` (overwritten on each run).
 - **Idempotent:** safe to re-run after a Dota patch. Re-running overwrites the
   generated files, so re-apply any hand edits afterward (use `git diff`).
