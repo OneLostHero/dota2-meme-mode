@@ -161,6 +161,18 @@ function CreateToggleButton() {
     panel.SetPanelEvent( 'onactivate', function () {
 		$.GetContextPanel().ToggleClass("hidden");
     });
+    panel.SetPanelEvent(
+        "onmouseover",
+        function(){
+            $.DispatchEvent("DOTAShowTextTooltip", panel, "Inspect Upgrades");
+        }
+        )
+    panel.SetPanelEvent(
+        "onmouseout",
+        function(){
+        $.DispatchEvent("DOTAHideTextTooltip", panel);
+        }
+    )
 	panel.SetParent(button_bar);
 }
 

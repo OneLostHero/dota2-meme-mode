@@ -730,6 +730,8 @@ function unlock_remote() {
         const element = forced_mode.votes[key];
         c++;
     }
+    const needed = Math.max(1, Math.ceil(d * (forced_mode.vote_treshold * 0.01)));
+    const tally = $.GetContextPanel().FindChildTraverse("PluginUnlockTally");
     if (c/d > (forced_mode.vote_treshold * 0.01)) {
         forced_mode.lock_level = 0;
         let all = WindowRoot.FindChildrenWithClassTraverse("setting_disabled");
@@ -747,6 +749,10 @@ function unlock_remote() {
         const tr = forced_mode.vote_treshold * 0.01;
         const from_tr = (f/tr)*100;
         PluginUnlockBar.value = from_tr;
+        if (tally) {
+            tally.text = $.Localize("#PluginUnlockTally")
+                .replace("{votes}", c).replace("{needed}", needed);
+        }
     }
 }
 function load_abilities() {

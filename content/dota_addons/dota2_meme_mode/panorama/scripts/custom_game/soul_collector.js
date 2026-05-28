@@ -63,7 +63,7 @@ function CreateToggleButton() {
     panel.SetPanelEvent(
         "onmouseover", 
         function(){
-            $.DispatchEvent("DOTAShowTextTooltip", panel, "Add Units");
+            $.DispatchEvent("DOTAShowTextTooltip", panel, "Soul Collector");
         }
         )
     panel.SetPanelEvent(
