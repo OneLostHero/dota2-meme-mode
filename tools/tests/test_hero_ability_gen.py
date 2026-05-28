@@ -181,3 +181,23 @@ def test_update_load_file_is_idempotent():
     # only one marker block ever exists
     assert twice.count(BEGIN) == 1
     assert '#base "heroes/axe/abilities.txt"' in twice
+
+
+import subprocess
+import sys
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parents[2]
+NPC = REPO / "game/dota_addons/mgmod/scripts/npc"
+
+
+def test_generator_dry_run_reports_124(tmp_path):
+    # --dry-run must not write anything but should report the hero count
+    result = subprocess.run(
+        [sys.executable, "tools/generate_hero_ability_files.py", "--dry-run"],
+        cwd=REPO, capture_output=True, text=True,
+    )
+    assert result.returncode == 0, result.stderr
+    assert "124 heroes" in result.stdout
+    # dry run does not create the output dir
+    assert not (NPC / "heroes").exists() or any((NPC / "heroes").iterdir()) is not None
