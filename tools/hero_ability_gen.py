@@ -1,0 +1,23 @@
+"""Pure helpers for generating per-hero ability override files (MGMod)."""
+
+# Keys where a LOWER number is stronger (resources you spend / waits).
+LOWER_STRONGER = ("cooldown", "manacost", "mana_cost", "cast_point", "_cost")
+
+# Keys where a HIGHER number is stronger (effect magnitudes). Checked first so
+# compound keys like "cooldown_reduction" resolve to "higher".
+HIGHER_STRONGER = (
+    "damage", "duration", "radius", "range", "pct", "percent", "heal",
+    "bonus", "count", "slow", "miss_rate", "armor", "reduction", "steal",
+    "speed", "regen", "chance", "stun", "multiplier", "amount", "number",
+    "lifesteal",
+)
+
+
+def direction_hint(key):
+    """Return a tuning-direction string for an ability value key, or None."""
+    k = key.lower()
+    if any(token in k for token in HIGHER_STRONGER):
+        return "higher = stronger"
+    if any(token in k for token in LOWER_STRONGER):
+        return "lower = stronger"
+    return None
