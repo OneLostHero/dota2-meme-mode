@@ -9,6 +9,7 @@
 {
 	"special_bonus_unique_onelosthero_invis"
 	{
+		"BaseClass"			"special_bonus"
 		"AbilityType"		"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"			"1"
@@ -16,6 +17,7 @@
 	}
 	"special_bonus_unique_onelosthero_second_stroke"
 	{
+		"BaseClass"			"special_bonus"
 		"AbilityType"		"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"			"1"
@@ -23,6 +25,7 @@
 	}
 	"special_bonus_unique_onelosthero_explosion"
 	{
+		"BaseClass"			"special_bonus"
 		"AbilityType"		"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"			"1"
@@ -30,6 +33,7 @@
 	}
 	"special_bonus_unique_onelosthero_charges"
 	{
+		"BaseClass"			"special_bonus"
 		"AbilityType"		"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"			"1"
@@ -37,6 +41,7 @@
 	}
 	"special_bonus_unique_onelosthero_silence"
 	{
+		"BaseClass"			"special_bonus"
 		"AbilityType"		"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"			"1"
@@ -44,6 +49,7 @@
 	}
 	"special_bonus_unique_onelosthero_fear_pierce"
 	{
+		"BaseClass"			"special_bonus"
 		"AbilityType"		"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"			"1"
@@ -51,6 +57,7 @@
 	}
 	"special_bonus_unique_onelosthero_break"
 	{
+		"BaseClass"			"special_bonus"
 		"AbilityType"		"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"			"1"
