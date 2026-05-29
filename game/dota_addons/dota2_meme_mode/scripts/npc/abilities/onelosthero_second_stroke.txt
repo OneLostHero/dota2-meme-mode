@@ -1,0 +1,38 @@
+// OneLostHero — Q: Second Stroke
+// Forward sword slash; a delayed Echo repeats the slash. Recast in the swap window to swap with the Echo.
+"onelosthero_second_stroke"
+{
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"abilities/onelosthero/second_stroke"
+	"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL"
+	"AbilityType"			"DOTA_ABILITY_TYPE_BASIC"
+	"AbilityTextureName"	"juggernaut_blade_dance"
+	"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_1"
+	"AbilityCastPoint"		"0.2"
+	"AbilityCooldown"		"13 11 9 7"
+	"AbilityManaCost"		"80 90 100 110"
+	"AbilityCastRange"		"600"
+	"MaxLevel"				"4"
+	"AbilityUnitDamageType"	"DAMAGE_TYPE_PHYSICAL"
+	"SpellImmunityType"		"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"	"SPELL_DISPELLABLE_NO"
+
+	"AbilityValues"
+	{
+		"slash_distance"		"450 500 550 600"
+		"slash_width"			"140"
+		"damage"				"80 130 180 230"
+		"echo_delay"			"0.35"
+		"echo_damage_pct"		"40 50 60 70"
+		"echo_duration"			"2.5"
+		"swap_window"			"2.5"
+		"dash_speed"			"1800"
+	}
+
+	"precache"
+	{
+		"particle"		"particles/units/heroes/hero_void_spirit/void_spirit_astral_step.vpcf"
+		"particle"		"particles/units/heroes/hero_juggernaut/juggernaut_blade_fury.vpcf"
+		"soundfile"		"soundevents/game_sounds_heroes/game_sounds_void_spirit.vsndevts"
+	}
+}

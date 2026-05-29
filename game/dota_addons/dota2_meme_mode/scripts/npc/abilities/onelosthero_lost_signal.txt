@@ -1,0 +1,22 @@
+// OneLostHero — Innate: Lost Signal
+// Hidden passive. Breaking invisibility / emerging unseen arms a bonus-damage strike.
+"onelosthero_lost_signal"
+{
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"abilities/onelosthero/lost_signal"
+	"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_INNATE"
+	"AbilityType"			"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityTextureName"	"riki_permanent_invisibility"
+	"MaxLevel"				"1"
+	"IsHiddenOnHero"		"1"
+	"IsBreakable"			"0"
+
+	"AbilityValues"
+	{
+		"trigger_window"		"3.0"
+		"bonus_damage"			"35"
+		"echo_damage_pct"		"35"
+		"echo_duration"			"1.5"
+		"internal_cooldown"		"6.0"
+	}
+}

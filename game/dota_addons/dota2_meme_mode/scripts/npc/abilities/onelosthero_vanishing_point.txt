@@ -1,0 +1,51 @@
+// OneLostHero — R: Vanishing Point
+// Vanish + charge a finishing strike. Reappear in a fear/damage burst. Echoes release weaker bursts.
+// Shard: Unseen Exchange. Scepter: Many Lost, One Returned.
+"onelosthero_vanishing_point"
+{
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"abilities/onelosthero/vanishing_point"
+	"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityType"			"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityTextureName"	"nyx_assassin_vendetta"
+	"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_4"
+	"AbilityCastPoint"		"0.0"
+	"AbilityCooldown"		"120 100 80"
+	"AbilityManaCost"		"150 225 300"
+	"MaxLevel"				"3"
+	"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"		"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"	"SPELL_DISPELLABLE_NO"
+	"FightRecapLevel"		"2"
+
+	"AbilityValues"
+	{
+		"charge_duration"				"2.5 3.0 3.5"
+		"movespeed_bonus_pct"			"20 25 30"
+		"release_radius"				"475"
+		"base_damage"					"180 280 380"
+		"max_charge_bonus_pct"			"50"
+		"fear_duration"					"1.1 1.4 1.7"
+		"echo_burst_damage_pct"			"35"
+		"warning_radius"				"275"
+		"warning_delay"					"1.0"
+		"swap_allowed"					"1"
+
+		"shard_free_swap"				"1"
+		"shard_warning_suppression"		"0.75"
+		"shard_echo_detonation_pct"		"45"
+
+		"scepter_extra_echoes"			"2"
+		"scepter_echo_spread_distance"	"500"
+		"scepter_echo_burst_damage_pct"	"45"
+		"scepter_echo_fear_pct"			"60"
+	}
+
+	"precache"
+	{
+		"particle"		"particles/units/heroes/hero_night_stalker/nightstalker_void.vpcf"
+		"particle"		"particles/units/heroes/hero_terrorblade/terrorblade_sunder.vpcf"
+		"particle"		"particles/units/heroes/hero_spectre/spectre_desolate.vpcf"
+		"soundfile"		"soundevents/game_sounds_heroes/game_sounds_nightstalker.vsndevts"
+	}
+}

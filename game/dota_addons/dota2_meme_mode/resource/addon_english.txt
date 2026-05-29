@@ -12,6 +12,84 @@
 		"npc_dota_hero_flasaro_npedesc2"	"Pick him to strike from nowhere and carve through the enemy team."
 		"npc_dota_hero_flasaro_hype"		"Blink in. Cleave everything."
 
+		// Custom hero — OneLostHero, The Last Signal
+		"npc_dota_hero_onelosthero"			"OneLostHero"
+		"npc_dota_hero_onelosthero_bio"		"A sword-and-dagger Echo assassin who fights through afterimages, swaps, and a vanishing finishing strike. The last signal of a hero long lost to the fog."
+		"npc_dota_hero_onelosthero_npedesc1"	"An Echo assassin built on clone placement, swap timing, and misdirection rather than raw invisibility."
+		"npc_dota_hero_onelosthero_npedesc2"	"Place an Echo, swap to the perfect angle, vanish, and detonate into a fear burst."
+		"npc_dota_hero_onelosthero_hype"	"Be everywhere. Be no one."
+
+		// --- Lost Signal (Innate) ---
+		"DOTA_Tooltip_ability_onelosthero_lost_signal"				"Lost Signal"
+		"DOTA_Tooltip_ability_onelosthero_lost_signal_Description"	"Whenever OneLostHero breaks invisibility or emerges from being unseen, his next strike creates a brief Echo attack that deals bonus damage."
+		"DOTA_Tooltip_ability_onelosthero_lost_signal_trigger_window"	"Trigger Window"
+		"DOTA_Tooltip_ability_onelosthero_lost_signal_bonus_damage"		"Bonus Damage"
+		"DOTA_Tooltip_ability_onelosthero_lost_signal_echo_damage_pct"	"Echo Damage"
+		"DOTA_Tooltip_ability_onelosthero_lost_signal_echo_duration"	"Echo Duration"
+		"DOTA_Tooltip_ability_onelosthero_lost_signal_internal_cooldown"	"Internal Cooldown"
+
+		// --- Second Stroke (Q) ---
+		"DOTA_Tooltip_ability_onelosthero_second_stroke"			"Second Stroke"
+		"DOTA_Tooltip_ability_onelosthero_second_stroke_Description"	"OneLostHero slashes forward with his sword. After a brief delay, an Echo repeats the slash. Recast during the swap window to exchange places with the Echo."
+		"DOTA_Tooltip_ability_onelosthero_second_stroke_slash_distance"	"Slash Distance"
+		"DOTA_Tooltip_ability_onelosthero_second_stroke_slash_width"		"Slash Width"
+		"DOTA_Tooltip_ability_onelosthero_second_stroke_damage"			"Damage"
+		"DOTA_Tooltip_ability_onelosthero_second_stroke_echo_delay"		"Echo Delay"
+		"DOTA_Tooltip_ability_onelosthero_second_stroke_echo_damage_pct"	"Echo Damage"
+		"DOTA_Tooltip_ability_onelosthero_second_stroke_echo_duration"	"Echo Duration"
+		"DOTA_Tooltip_ability_onelosthero_second_stroke_swap_window"		"Swap Window"
+		"DOTA_Tooltip_ability_onelosthero_second_stroke_dash_speed"		"Dash Speed"
+
+		// --- Blindspot Dagger (W) ---
+		"DOTA_Tooltip_ability_onelosthero_blindspot_dagger"				"Blindspot Dagger"
+		"DOTA_Tooltip_ability_onelosthero_blindspot_dagger_Description"	"Marks an enemy with a dagger. If OneLostHero strikes the target from the side or behind, an Echo appears behind them, deals damage, and silences them."
+		"DOTA_Tooltip_ability_onelosthero_blindspot_dagger_dagger_damage"		"Dagger Damage"
+		"DOTA_Tooltip_ability_onelosthero_blindspot_dagger_mark_duration"		"Mark Duration"
+		"DOTA_Tooltip_ability_onelosthero_blindspot_dagger_slow_pct"			"Move Slow"
+		"DOTA_Tooltip_ability_onelosthero_blindspot_dagger_echo_strike_damage"	"Echo Strike Damage"
+		"DOTA_Tooltip_ability_onelosthero_blindspot_dagger_silence_duration"		"Silence Duration"
+		"DOTA_Tooltip_ability_onelosthero_blindspot_dagger_backstab_angle"		"Backstab Angle"
+		"DOTA_Tooltip_ability_onelosthero_blindspot_dagger_echo_duration"		"Echo Duration"
+		"DOTA_Tooltip_ability_onelosthero_blindspot_dagger_swap_window"			"Swap Window"
+
+		// --- False Hero (E) ---
+		"DOTA_Tooltip_ability_onelosthero_false_hero"				"False Hero"
+		"DOTA_Tooltip_ability_onelosthero_false_hero_Description"	"Sends a false version of OneLostHero forward. Recast to swap places with it. If destroyed before expiring, it bursts, slowing and disarming nearby enemies."
+		"DOTA_Tooltip_ability_onelosthero_false_hero_clone_distance"			"Clone Distance"
+		"DOTA_Tooltip_ability_onelosthero_false_hero_clone_duration"			"Clone Duration"
+		"DOTA_Tooltip_ability_onelosthero_false_hero_clone_movespeed_pct"		"Clone Move Speed"
+		"DOTA_Tooltip_ability_onelosthero_false_hero_clone_incoming_damage_pct"	"Clone Incoming Damage"
+		"DOTA_Tooltip_ability_onelosthero_false_hero_burst_radius"				"Burst Radius"
+		"DOTA_Tooltip_ability_onelosthero_false_hero_burst_slow_pct"				"Burst Slow"
+		"DOTA_Tooltip_ability_onelosthero_false_hero_burst_slow_duration"		"Slow Duration"
+		"DOTA_Tooltip_ability_onelosthero_false_hero_disarm_duration"			"Disarm Duration"
+		"DOTA_Tooltip_ability_onelosthero_false_hero_swap_window"				"Swap Window"
+
+		// --- Vanishing Point (R) ---
+		"DOTA_Tooltip_ability_onelosthero_vanishing_point"				"Vanishing Point"
+		"DOTA_Tooltip_ability_onelosthero_vanishing_point_Description"	"OneLostHero vanishes and charges a finishing strike. When the charge ends or is released, he reappears in a burst that damages and fears enemies. Echoes release weaker bursts."
+		"DOTA_Tooltip_ability_onelosthero_vanishing_point_charge_duration"		"Charge Duration"
+		"DOTA_Tooltip_ability_onelosthero_vanishing_point_movespeed_bonus_pct"	"Move Speed Bonus"
+		"DOTA_Tooltip_ability_onelosthero_vanishing_point_release_radius"		"Release Radius"
+		"DOTA_Tooltip_ability_onelosthero_vanishing_point_base_damage"			"Base Damage"
+		"DOTA_Tooltip_ability_onelosthero_vanishing_point_max_charge_bonus_pct"	"Max Charge Bonus"
+		"DOTA_Tooltip_ability_onelosthero_vanishing_point_fear_duration"			"Fear Duration"
+		"DOTA_Tooltip_ability_onelosthero_vanishing_point_echo_burst_damage_pct"	"Echo Burst Damage"
+		"DOTA_Tooltip_ability_onelosthero_vanishing_point_warning_radius"		"Warning Radius"
+		"DOTA_Tooltip_ability_onelosthero_vanishing_point_warning_delay"			"Warning Delay"
+		"DOTA_Tooltip_ability_onelosthero_vanishing_point_swap_allowed"			"Swap Allowed"
+		"DOTA_Tooltip_ability_onelosthero_vanishing_point_shard_free_swap"		"Shard Free Swap"
+		"DOTA_Tooltip_ability_onelosthero_vanishing_point_shard_warning_suppression"	"Shard Warning Suppression"
+		"DOTA_Tooltip_ability_onelosthero_vanishing_point_shard_echo_detonation_pct"	"Shard Echo Detonation"
+		"DOTA_Tooltip_ability_onelosthero_vanishing_point_scepter_extra_echoes"		"Scepter Extra Echoes"
+		"DOTA_Tooltip_ability_onelosthero_vanishing_point_scepter_echo_spread_distance"	"Scepter Echo Spread Distance"
+		"DOTA_Tooltip_ability_onelosthero_vanishing_point_scepter_echo_burst_damage_pct"	"Scepter Echo Burst Damage"
+		"DOTA_Tooltip_ability_onelosthero_vanishing_point_scepter_echo_fear_pct"		"Scepter Echo Fear Duration"
+
+		// Scepter / Shard description tokens
+		"DOTA_Tooltip_ability_onelosthero_vanishing_point_scepter_description"	"Many Lost, One Returned: creates extra invisible Echoes that spread outward and release weaker fear bursts on reappearance."
+		"DOTA_Tooltip_ability_onelosthero_vanishing_point_shard_description"		"Unseen Exchange: grants one free Echo swap during Vanishing Point; the abandoned Echo detonates on release and the warning indicator is briefly suppressed."
+
 		// Custom Heroes setup panel
 		"Plugin_custom_heroes"				"Custom Heroes"
 		"Plugin_custom_heroes_Description"	"Adds this mod's custom heroes (such as Flasaro) to the hero pick screen. When off, only standard Dota heroes can be picked."

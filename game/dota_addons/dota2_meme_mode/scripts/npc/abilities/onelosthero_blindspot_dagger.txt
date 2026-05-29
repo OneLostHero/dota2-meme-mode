@@ -1,0 +1,41 @@
+// OneLostHero — W: Blindspot Dagger
+// Marks an enemy. Striking the mark from side/behind spawns an Echo that damages + silences. Swap window with that Echo.
+"onelosthero_blindspot_dagger"
+{
+	"BaseClass"					"ability_lua"
+	"ScriptFile"				"abilities/onelosthero/blindspot_dagger"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityType"				"DOTA_ABILITY_TYPE_BASIC"
+	"AbilityTextureName"		"phantom_assassin_stifling_dagger"
+	"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	"AbilityCastPoint"			"0.15"
+	"AbilityCooldown"			"15 13 11 9"
+	"AbilityManaCost"			"70 80 90 100"
+	"AbilityCastRange"			"650"
+	"MaxLevel"					"4"
+	"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_NONE"
+	"AbilityUnitDamageType"		"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"			"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"		"SPELL_DISPELLABLE_YES"
+
+	"AbilityValues"
+	{
+		"dagger_damage"			"60 100 140 180"
+		"mark_duration"			"4.0"
+		"slow_pct"				"-18 -22 -26 -30"
+		"echo_strike_damage"	"40 70 100 130"
+		"silence_duration"		"0.8 1.1 1.4 1.7"
+		"backstab_angle"		"110"
+		"echo_duration"			"2.0"
+		"swap_window"			"2.0"
+	}
+
+	"precache"
+	{
+		"particle"		"particles/units/heroes/hero_riki/riki_backstab.vpcf"
+		"particle"		"particles/units/heroes/hero_phantom_assassin/phantom_assassin_stifling_dagger.vpcf"
+		"soundfile"		"soundevents/game_sounds_heroes/game_sounds_riki.vsndevts"
+	}
+}
