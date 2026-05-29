@@ -164,7 +164,7 @@ function onelosthero_false_hero:DoSwap()
 	Echo:RemoveSafely(echo) -- destroyed safely, no detonation
 	self._echo = nil
 
-	if caster:HasShard() then
+	if Echo:HasShard(caster) then
 		-- leave a fading Echo trap at the hero's original location
 		local fadeDur = self:GetSpecialValueFor("fading_echo_duration")
 		local fading = Echo:Create(caster, self, originalPos, {

@@ -43,7 +43,7 @@ function onelosthero_vanishing_point:OnSpellStart()
 	caster:EmitSound("Hero_Nightstalker.Darkness")
 
 	-- Scepter: extra invisible Echoes spread outward during the charge
-	if caster:HasScepter() then
+	if Echo:HasScepter(caster) then
 		local count   = self:GetSpecialValueFor("scepter_extra_echoes")
 		local spread  = self:GetSpecialValueFor("scepter_echo_spread_distance")
 		for i = 1, count do
@@ -100,7 +100,7 @@ function onelosthero_vanishing_point:Release()
 	end
 
 	-- Scepter Echo bursts (weaker damage + scaled fear)
-	if caster:HasScepter() then
+	if Echo:HasScepter(caster) then
 		local scepterBurstPct = self:GetSpecialValueFor("scepter_echo_burst_damage_pct")
 		local scepterFearPct  = self:GetSpecialValueFor("scepter_echo_fear_pct")
 		for _, echo in pairs(self._scepterEchoes) do
@@ -173,7 +173,9 @@ function modifier_onelosthero_vanishing_point_charge:GetEffectAttachType()
 end
 
 --------------------------------------------------------------------------------
--- Fear: command-restricted; periodically forced to run away from the burst source.
+-- Fear: uses the engine's FEARED state (the unit flees on its own, pathing-aware).
+-- The previous COMMAND_RESTRICTED + scripted move orders failed: command restriction blocks
+-- those very orders ("unit has commands restricted"), so nothing moved.
 --------------------------------------------------------------------------------
 modifier_onelosthero_vanishing_point_fear = class({})
 function modifier_onelosthero_vanishing_point_fear:IsDebuff() return true end
@@ -182,37 +184,9 @@ function modifier_onelosthero_vanishing_point_fear:IsDebuff() return true end
 function modifier_onelosthero_vanishing_point_fear:IsPurgable() return not self.pierce end
 function modifier_onelosthero_vanishing_point_fear:OnCreated(params)
 	self.pierce = params and params.pierce == 1
-	if params and params.src_x then
-		self.sourcePos = Vector(params.src_x, params.src_y, params.src_z)
-	else
-		self.sourcePos = self:GetCaster():GetAbsOrigin()
-	end
-	if IsServer() then
-		self:StartIntervalThink(0.1)
-		self:OnIntervalThink()
-	end
 end
-function modifier_onelosthero_vanishing_point_fear:OnIntervalThink()
-	if not IsServer() then return end
-	local parent = self:GetParent()
-	if not parent or parent:IsNull() or not parent:IsAlive() then return end
-	local away = (parent:GetAbsOrigin() - self.sourcePos)
-	away.z = 0
-	if away:Length2D() < 1 then away = parent:GetForwardVector() end
-	away = away:Normalized()
-	local dest = parent:GetAbsOrigin() + away * 300
-	ExecuteOrderFromTable({
-		UnitIndex = parent:entindex(),
-		OrderType = DOTA_UNIT_ORDER_MOVE_TO_POSITION,
-		Position = dest,
-		Queue = false,
-	})
-end
--- Command-restricted only: the engine's FEARED state would override our scripted move-away
--- orders, so we drive the flee ourselves (works on command-restricted units, which only blocks
--- PLAYER input). The visible effect is the enemy running away from the burst.
 function modifier_onelosthero_vanishing_point_fear:CheckState()
-	return { [MODIFIER_STATE_COMMAND_RESTRICTED] = true }
+	return { [MODIFIER_STATE_FEARED] = true }
 end
 function modifier_onelosthero_vanishing_point_fear:GetEffectName()
 	return "particles/units/heroes/hero_spectre/spectre_desolate.vpcf"

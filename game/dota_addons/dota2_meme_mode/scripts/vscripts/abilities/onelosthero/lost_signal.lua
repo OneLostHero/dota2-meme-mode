@@ -30,20 +30,6 @@ function modifier_onelosthero_lost_signal:OnCreated()
 	self.wasInvisible = false
 	if IsServer() then
 		self:StartIntervalThink(0.1)
-		-- TEMP DIAGNOSTIC: list every Kez activity enum the engine exposes, so we can map the
-		-- exact Echo Slash / Talon Toss / Raptor Dance cast animations. Remove once set.
-		Timers:CreateTimer(2.0, function()
-			local acts = {}
-			for k, _ in pairs(_G) do
-				if type(k) == "string" and (string.find(k, "ACT_DOTA_KEZ") or string.find(k, "RAPTOR") or string.find(k, "TALON") or string.find(k, "ECHO_SLASH")) then
-					acts[#acts + 1] = k
-				end
-			end
-			table.sort(acts)
-			print("=== [OneLostHero] Kez activities (" .. #acts .. ") ===")
-			for _, k in ipairs(acts) do print("   " .. k) end
-			print("=== [OneLostHero] end ===")
-		end)
 	end
 end
 

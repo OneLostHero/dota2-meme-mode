@@ -239,6 +239,17 @@ function Echo:IsBehindOrSide(attacker, target, angleDeg)
 	return math.deg(math.acos(dot)) <= (angleDeg / 2)
 end
 
+-- Shard / Scepter checks that survive the API method being unavailable post-patch
+-- (caster:HasShard() came back nil and crashed). Fall back to the item modifiers.
+function Echo:HasShard(unit)
+	if unit.HasShard then return unit:HasShard() end
+	return unit:HasModifier("modifier_item_aghanims_shard")
+end
+function Echo:HasScepter(unit)
+	if unit.HasScepter then return unit:HasScepter() end
+	return unit:HasModifier("modifier_item_ultimate_scepter")
+end
+
 -- Play the first activity (by global enum name) that actually exists on this build, as a
 -- gesture. Lets us use Kez's specific ability activities with safe fallbacks: an unknown
 -- enum name is just skipped (no error, no T-pose).
