@@ -109,9 +109,27 @@ content/.../panorama/images/heroes/icons/npc_dota_hero_<name>.png      (scoreboa
 content/.../panorama/images/heroes/crops/npc_dota_hero_<name>.png      (cropped)
 ```
 
+**CRITICAL — the PNGs must be COMPILED, or the portrait is blank** (engine logs
+`Failed loading .../selection/npc_dota_hero_<name>_png.vtex_c`). Addon panorama PNGs
+only compile to `.vtex_c` when referenced by a **compiled stylesheet/layout** — a
+JS-only `backgroundImage` reference is NOT enough. So add a line per image to
+`panorama/styles/custom_game/custom_hero_portrait.css` (included by
+`custom_hero_portrait.xml`):
+
+```css
+.PrecacheImg_<name>_selection { background-image: url("file://{images}/heroes/selection/npc_dota_hero_<name>.png"); }
+.PrecacheImg_<name>_portrait  { background-image: url("file://{images}/heroes/npc_dota_hero_<name>.png"); }
+.PrecacheImg_<name>_icon      { background-image: url("file://{images}/heroes/icons/npc_dota_hero_<name>.png"); }
+.PrecacheImg_<name>_crop      { background-image: url("file://{images}/heroes/crops/npc_dota_hero_<name>.png"); }
+```
+
+Once compiled, the engine's own pick screen finds the selection image — the portrait
+largely fixes itself. **Only reference images that exist** — a missing `url(...)`
+source breaks the whole CSS compile.
+
 Then the Hud script `panorama/scripts/custom_game/custom_hero_portrait.js`
-(registered in `custom_ui_manifest.xml`) overrides the portrait for any hero listed
-in its `CUSTOM_HEROES` table. To add a new custom hero, add its name there:
+(registered in `custom_ui_manifest.xml`) additionally overrides the inspect portrait
++ top-bar image for any hero in its `CUSTOM_HEROES` table:
 
 ```js
 var CUSTOM_HEROES = { "npc_dota_hero_flasaro": true, /* add new ones here */ };
