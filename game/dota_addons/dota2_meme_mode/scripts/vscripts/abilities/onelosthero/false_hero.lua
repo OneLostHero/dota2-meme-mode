@@ -36,44 +36,56 @@ function onelosthero_false_hero:GetIntrinsicModifierName()
 end
 
 --------------------------------------------------------------------------------
--- Charge helpers (see header note)
+-- Cooldown / charges (manual & reliable).
+-- Base: a normal AbilityCooldown (24/21/18/15). Because recasts (swap/detonate) reuse the
+-- cast button, the ability must stay castable while a sequence is live, so we EndCooldown
+-- during it and only StartCooldown when the sequence resolves. The lvl20 talent grants a
+-- 2nd "stored use": each completed sequence consumes one use and restores it after the
+-- cooldown, so you can fire twice before waiting.
 --------------------------------------------------------------------------------
+function onelosthero_false_hero:_Cd()
+	return self:GetCooldown(self:GetLevel() - 1)
+end
 function onelosthero_false_hero:_MaxCharges()
 	local t = self:GetCaster():FindAbilityByName("special_bonus_onelosthero_falsehero_charges")
 	return (t and t:GetLevel() > 0) and 2 or 1
 end
-function onelosthero_false_hero:_RefundCharge()
-	local cur = self:GetCurrentAbilityCharges()
-	if cur < self:_MaxCharges() then self:SetCurrentAbilityCharges(cur + 1) end
-end
-function onelosthero_false_hero:_ResolveCharge()
-	if self._pendingConsume then
-		self._pendingConsume = false
-		local cur = self:GetCurrentAbilityCharges()
-		if cur > 0 then self:SetCurrentAbilityCharges(cur - 1) end
+function onelosthero_false_hero:_UpdateCastable()
+	if self._mode ~= nil and self._mode ~= "idle" then
+		self:EndCooldown()                       -- a recast (swap/detonate) is pending
+	elseif (self._stored or self:_MaxCharges()) > 0 then
+		self:EndCooldown()                       -- a stored use remains
+	else
+		self:StartCooldown(self:_Cd())           -- out of uses -> show the cooldown
 	end
+end
+function onelosthero_false_hero:_ConsumeUse()
+	if self._stored == nil then self._stored = self:_MaxCharges() end
+	self._stored = math.max(0, self._stored - 1)
+	Timers:CreateTimer(self:_Cd(), function()
+		self._stored = math.min(self:_MaxCharges(), (self._stored or 0) + 1)
+		self:_UpdateCastable()
+	end)
 end
 
 --------------------------------------------------------------------------------
 function onelosthero_false_hero:OnSpellStart()
+	if self._stored == nil then self._stored = self:_MaxCharges() end
 	local mode = self._mode or "idle"
 
 	if mode == "swap" and Echo:IsValid(self._echo) then
-		self:_RefundCharge()
-		self:GetCaster():GiveMana(self._manaCost or 0)
+		self:GetCaster():GiveMana(self._manaCost or 0) -- recast is free
 		self:DoSwap()
 		return
 	elseif mode == "detonate" and Echo:IsValid(self._fadingEcho) then
-		self:_RefundCharge()
 		self:GetCaster():GiveMana(self._manaCost or 0)
 		self:DoDetonateFading()
 		return
 	end
 
-	-- Fresh cast (idle). Clean any stale references first.
-	self:_RefundCharge()        -- keep castable through the Echo's life
-	self._pendingConsume = true
+	-- Fresh cast (idle).
 	self:CastFresh()
+	self:_UpdateCastable() -- mode is now "swap" -> stays castable for the swap recast
 end
 
 function onelosthero_false_hero:CastFresh()
@@ -114,8 +126,9 @@ function onelosthero_false_hero:CastFresh()
 	})
 
 	if not echo then
-		self:_ResolveCharge()
+		caster:GiveMana(self._manaCost or 0) -- nothing spawned; refund
 		self._mode = "idle"
+		self:_UpdateCastable()
 		return
 	end
 
@@ -153,13 +166,15 @@ function onelosthero_false_hero:DoSwap()
 		if fading then
 			self._fadingEcho = fading
 			self._mode = "detonate"
-			return -- sequence not resolved yet; recast can detonate the fading Echo
+			self:_UpdateCastable() -- stay castable to detonate the fading Echo
+			return -- sequence not resolved yet
 		end
 	end
 
 	-- no Shard (or fading failed): sequence done
 	self._mode = "idle"
-	self:_ResolveCharge()
+	self:_ConsumeUse()
+	self:_UpdateCastable()
 end
 
 -- Recast 2 (Shard): manually detonate the fading Echo at reduced damage.
@@ -172,7 +187,8 @@ function onelosthero_false_hero:DoDetonateFading()
 	end
 	self._fadingEcho = nil
 	self._mode = "idle"
-	self:_ResolveCharge()
+	self:_ConsumeUse()
+	self:_UpdateCastable()
 end
 
 -- Echo reached a detonation condition (10s timeout or enemy-hero attack) without a swap.
@@ -180,21 +196,24 @@ function onelosthero_false_hero:OnEchoResolved(pos, mult)
 	self:Detonate(pos, mult)
 	self._echo = nil
 	self._mode = "idle"
-	self:_ResolveCharge()
+	self:_ConsumeUse()
+	self:_UpdateCastable()
 end
 
 -- Echo died to non-hero damage (creeps/towers): no blast, just resolve.
 function onelosthero_false_hero:OnEchoLostNoBlast()
 	self._echo = nil
 	self._mode = "idle"
-	self:_ResolveCharge()
+	self:_ConsumeUse()
+	self:_UpdateCastable()
 end
 
 -- Shard fading Echo expired naturally: disappears without detonation (recommended first impl).
 function onelosthero_false_hero:OnFadingExpired()
 	self._fadingEcho = nil
 	self._mode = "idle"
-	self:_ResolveCharge()
+	self:_ConsumeUse()
+	self:_UpdateCastable()
 end
 
 -- AOE detonation: magical damage + Break.

@@ -21,14 +21,7 @@
 		"SpellImmunityType"			"SPELL_IMMUNITY_ENEMIES_NO"
 		"SpellDispellableType"		"SPELL_DISPELLABLE_NO"
 		"HasShardUpgrade"			"1"
-
-		// Native charges: 1 base (behaves like a cooldown), +1 from the lvl20 talent.
-		"AbilityCharges"
-		{
-			"value"											"1"
-			"special_bonus_onelosthero_falsehero_charges"	"+1"
-		}
-		"AbilityChargeRestoreTime"	"24 21 18 15"
+		"AbilityCooldown"			"24 21 18 15"	// base cooldown; the lvl20 talent adds a 2nd stored use (handled in Lua)
 
 		"AbilityValues"
 		{
