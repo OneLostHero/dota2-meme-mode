@@ -9,6 +9,8 @@
 {
 	"special_bonus_unique_onelosthero_invis"
 	{
+		"BaseClass"			"ability_lua"
+		"ScriptFile"		"abilities/onelosthero/talents"
 		"AbilityType"		"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"			"1"
@@ -16,6 +18,8 @@
 	}
 	"special_bonus_unique_onelosthero_second_stroke"
 	{
+		"BaseClass"			"ability_lua"
+		"ScriptFile"		"abilities/onelosthero/talents"
 		"AbilityType"		"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"			"1"
@@ -23,6 +27,8 @@
 	}
 	"special_bonus_unique_onelosthero_explosion"
 	{
+		"BaseClass"			"ability_lua"
+		"ScriptFile"		"abilities/onelosthero/talents"
 		"AbilityType"		"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"			"1"
@@ -30,6 +36,8 @@
 	}
 	"special_bonus_unique_onelosthero_charges"
 	{
+		"BaseClass"			"ability_lua"
+		"ScriptFile"		"abilities/onelosthero/talents"
 		"AbilityType"		"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"			"1"
@@ -37,6 +45,8 @@
 	}
 	"special_bonus_unique_onelosthero_silence"
 	{
+		"BaseClass"			"ability_lua"
+		"ScriptFile"		"abilities/onelosthero/talents"
 		"AbilityType"		"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"			"1"
@@ -44,6 +54,8 @@
 	}
 	"special_bonus_unique_onelosthero_fear_pierce"
 	{
+		"BaseClass"			"ability_lua"
+		"ScriptFile"		"abilities/onelosthero/talents"
 		"AbilityType"		"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"			"1"
@@ -51,6 +63,8 @@
 	}
 	"special_bonus_unique_onelosthero_break"
 	{
+		"BaseClass"			"ability_lua"
+		"ScriptFile"		"abilities/onelosthero/talents"
 		"AbilityType"		"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"			"1"
