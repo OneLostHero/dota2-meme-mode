@@ -146,6 +146,16 @@ function Run() {
 }
 
 (function () {
+    // DIAGNOSTIC alive-ping: fires unconditionally so we can confirm in the SERVER
+    // log whether this script is even running + the JS->Lua event pipe works.
+    var pings = 0;
+    function Alive() {
+        pings++;
+        GameEvents.SendCustomGameEventToServer("chp_dump", { s: "PORTRAIT SCRIPT ALIVE ping " + pings });
+        if (pings < 6) $.Schedule(2.0, Alive);
+    }
+    $.Schedule(1.0, Alive);
+
     GameEvents.Subscribe("dota_player_hero_selection_dirty", Run);
     GameEvents.Subscribe("dota_player_update_hero_selection", Run);
     function Tick() { Run(); $.Schedule(0.3, Tick); }
