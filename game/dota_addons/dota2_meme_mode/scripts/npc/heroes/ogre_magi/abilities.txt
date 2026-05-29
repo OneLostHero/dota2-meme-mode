@@ -9,6 +9,7 @@
 	// icon: ogre_magi_dumb_luck
 	"ogre_magi_dumb_luck"
 	{
+		"BaseClass"		"ogre_magi_dumb_luck"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_NONE"	
 
@@ -51,6 +52,7 @@
 	// icon: ogre_magi_fireblast
 	"ogre_magi_fireblast"
 	{
+		"BaseClass"		"ogre_magi_fireblast"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -112,6 +114,7 @@
 	// icon: ogre_magi_smash
 	"ogre_magi_smash"
 	{
+		"BaseClass"		"ogre_magi_smash"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -168,6 +171,7 @@
 	// icon: ogre_magi_unrefined_fireblast
 	"ogre_magi_unrefined_fireblast"
 	{
+		"BaseClass"		"ogre_magi_unrefined_fireblast"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -218,6 +222,7 @@
 	// icon: ogre_magi_ignite
 	"ogre_magi_ignite"
 	{
+		"BaseClass"		"ogre_magi_ignite"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -276,6 +281,7 @@
 	// icon: ogre_magi_bloodlust
 	"ogre_magi_bloodlust"
 	{
+		"BaseClass"		"ogre_magi_bloodlust"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
@@ -338,6 +344,7 @@
 	// icon: ogre_magi_multicast
 	"ogre_magi_multicast"
 	{
+		"BaseClass"		"ogre_magi_multicast"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -390,6 +397,7 @@
 	// icon: ogre_magi_frost_armor
 	"ogre_magi_frost_armor"
 	{
+		"BaseClass"		"ogre_magi_frost_armor"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"MaxLevel"						"1"

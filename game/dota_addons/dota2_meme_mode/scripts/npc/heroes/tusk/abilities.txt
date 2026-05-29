@@ -9,6 +9,7 @@
 	// icon: tusk_ice_shards
 	"tusk_ice_shards"
 	{
+		"BaseClass"		"tusk_ice_shards"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -80,6 +81,7 @@
 	// icon: tusk_ice_shards_stop
 	"tusk_ice_shards_stop"
 	{
+		"BaseClass"		"tusk_ice_shards_stop"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -96,6 +98,7 @@
 	// icon: tusk_snowball
 	"tusk_snowball"
 	{
+		"BaseClass"		"tusk_snowball"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
@@ -168,6 +171,7 @@
 	// icon: tusk_launch_snowball
 	"tusk_launch_snowball"
 	{
+		"BaseClass"		"tusk_launch_snowball"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
@@ -186,6 +190,7 @@
 	// icon: tusk_frozen_sigil
 	"tusk_frozen_sigil"
 	{
+		"BaseClass"		"tusk_frozen_sigil"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -236,6 +241,7 @@
 	// icon: tusk_tag_team
 	"tusk_tag_team"
 	{
+		"BaseClass"		"tusk_tag_team"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -287,6 +293,7 @@
 	// icon: tusk_drinking_buddies
 	"tusk_drinking_buddies"
 	{
+		"BaseClass"		"tusk_drinking_buddies"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -338,6 +345,7 @@
 	// icon: tusk_bitter_chill
 	"tusk_bitter_chill"
 	{
+		"BaseClass"		"tusk_bitter_chill"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
 		"AbilityTextureName"			"tusk_frozen_sigil"
 
@@ -362,6 +370,7 @@
 	// icon: tusk_walrus_punch
 	"tusk_walrus_punch"
 	{
+		"BaseClass"		"tusk_walrus_punch"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
@@ -416,6 +425,7 @@
 	// icon: tusk_walrus_kick
 	"tusk_walrus_kick"
 	{
+		"BaseClass"		"tusk_walrus_kick"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"

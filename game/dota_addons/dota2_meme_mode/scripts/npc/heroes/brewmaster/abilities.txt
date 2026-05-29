@@ -9,6 +9,7 @@
 	// icon: brewmaster_thunder_clap
 	"brewmaster_thunder_clap"
 	{
+		"BaseClass"		"brewmaster_thunder_clap"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -57,6 +58,7 @@
 	// icon: brewmaster_drunken_haze
 	"brewmaster_drunken_haze"
 	{
+		"BaseClass"		"brewmaster_drunken_haze"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -103,6 +105,7 @@
 	// icon: brewmaster_cinder_brew
 	"brewmaster_cinder_brew"
 	{
+		"BaseClass"		"brewmaster_cinder_brew"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -198,6 +201,7 @@
 	// icon: brewmaster_drunken_brawler
 	"brewmaster_drunken_brawler"
 	{
+		"BaseClass"		"brewmaster_drunken_brawler"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -251,6 +255,7 @@
 	// icon: brewmaster_primal_split
 	"brewmaster_primal_split"
 	{
+		"BaseClass"		"brewmaster_primal_split"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -326,6 +331,7 @@
 	// icon: brewmaster_primal_split_cancel
 	"brewmaster_primal_split_cancel"
 	{
+		"BaseClass"		"brewmaster_primal_split_cancel"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -354,6 +360,7 @@
 	// icon: brewmaster_primal_companion
 	"brewmaster_primal_companion"
 	{
+		"BaseClass"		"brewmaster_primal_companion"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -393,6 +400,7 @@
 	// icon: brewmaster_earth_hurl_boulder
 	"brewmaster_earth_hurl_boulder"
 	{
+		"BaseClass"		"brewmaster_earth_hurl_boulder"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -438,6 +446,7 @@
 	// icon: brewmaster_void_astral_pulse
 	"brewmaster_void_astral_pulse"
 	{
+		"BaseClass"		"brewmaster_void_astral_pulse"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -478,6 +487,7 @@
 	// icon: brewmaster_earth_spell_immunity
 	"brewmaster_earth_spell_immunity"
 	{
+		"BaseClass"		"brewmaster_earth_spell_immunity"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -498,6 +508,7 @@
 	// icon: brewmaster_earth_pulverize
 	"brewmaster_earth_pulverize"
 	{
+		"BaseClass"		"brewmaster_earth_pulverize"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -518,6 +529,7 @@
 	// icon: brewmaster_storm_dispel_magic
 	"brewmaster_storm_dispel_magic"
 	{
+		"BaseClass"		"brewmaster_storm_dispel_magic"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
@@ -556,6 +568,7 @@
 	// icon: brewmaster_storm_cyclone
 	"brewmaster_storm_cyclone"
 	{
+		"BaseClass"		"brewmaster_storm_cyclone"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
@@ -595,6 +608,7 @@
 	// icon: brewmaster_storm_wind_walk
 	"brewmaster_storm_wind_walk"
 	{
+		"BaseClass"		"brewmaster_storm_wind_walk"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -637,6 +651,7 @@
 	// icon: brewmaster_fire_permanent_immolation
 	"brewmaster_fire_permanent_immolation"
 	{
+		"BaseClass"		"brewmaster_fire_permanent_immolation"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -663,6 +678,7 @@
 	// icon: brewmaster_fire_phase
 	"brewmaster_fire_phase"
 	{
+		"BaseClass"		"brewmaster_fire_phase"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -684,6 +700,7 @@
 	// icon: brewmaster_void_astral_pull
 	"brewmaster_void_astral_pull"
 	{
+		"BaseClass"		"brewmaster_void_astral_pull"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING"

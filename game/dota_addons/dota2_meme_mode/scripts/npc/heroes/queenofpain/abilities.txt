@@ -9,6 +9,7 @@
 	// icon: queenofpain_shadow_strike
 	"queenofpain_shadow_strike"
 	{
+		"BaseClass"		"queenofpain_shadow_strike"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -82,6 +83,7 @@
 	// icon: queenofpain_blink
 	"queenofpain_blink"
 	{
+		"BaseClass"		"queenofpain_blink"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
@@ -135,6 +137,7 @@
 	// icon: queenofpain_scream_of_pain
 	"queenofpain_scream_of_pain"
 	{
+		"BaseClass"		"queenofpain_scream_of_pain"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -182,6 +185,7 @@
 	// icon: queenofpain_sonic_wave
 	"queenofpain_sonic_wave"
 	{
+		"BaseClass"		"queenofpain_sonic_wave"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -250,6 +254,7 @@
 	// icon: queenofpain_masochist
 	"queenofpain_masochist"
 	{
+		"BaseClass"		"queenofpain_masochist"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -270,6 +275,7 @@
 	// icon: queenofpain_succubus
 	"queenofpain_succubus"
 	{
+		"BaseClass"		"queenofpain_succubus"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -299,6 +305,7 @@
 	// icon: queenofpain_bondage
 	"queenofpain_bondage"
 	{
+		"BaseClass"		"queenofpain_bondage"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"

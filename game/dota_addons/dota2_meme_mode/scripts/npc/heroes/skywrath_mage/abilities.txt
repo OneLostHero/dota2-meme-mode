@@ -9,6 +9,7 @@
 	// icon: skywrath_mage_arcane_bolt
 	"skywrath_mage_arcane_bolt"
 	{
+		"BaseClass"		"skywrath_mage_arcane_bolt"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -69,6 +70,7 @@
 	// icon: skywrath_mage_concussive_shot
 	"skywrath_mage_concussive_shot"
 	{
+		"BaseClass"		"skywrath_mage_concussive_shot"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -137,6 +139,7 @@
 	// icon: skywrath_mage_ancient_seal
 	"skywrath_mage_ancient_seal"
 	{
+		"BaseClass"		"skywrath_mage_ancient_seal"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -188,6 +191,7 @@
 	// icon: skywrath_mage_mystic_flare
 	"skywrath_mage_mystic_flare"
 	{
+		"BaseClass"		"skywrath_mage_mystic_flare"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -249,6 +253,7 @@
 	// icon: skywrath_mage_shield_of_the_scion
 	"skywrath_mage_shield_of_the_scion"
 	{
+		"BaseClass"		"skywrath_mage_shield_of_the_scion"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -273,6 +278,7 @@
 	// icon: skywrath_mage_staff_of_the_scion
 	"skywrath_mage_staff_of_the_scion"
 	{
+		"BaseClass"		"skywrath_mage_staff_of_the_scion"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -294,6 +300,7 @@
 	// icon: skywrath_mage_ruin_and_restoration
 	"skywrath_mage_ruin_and_restoration"
 	{
+		"BaseClass"		"skywrath_mage_ruin_and_restoration"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"

@@ -9,6 +9,7 @@
 	// icon: chaos_knight_chaos_bolt
 	"chaos_knight_chaos_bolt"
 	{
+		"BaseClass"		"chaos_knight_chaos_bolt"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -82,6 +83,7 @@
 	// icon: chaos_knight_reality_rift
 	"chaos_knight_reality_rift"
 	{
+		"BaseClass"		"chaos_knight_reality_rift"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
@@ -138,6 +140,7 @@
 	// icon: chaos_knight_chaos_strike
 	"chaos_knight_chaos_strike"
 	{
+		"BaseClass"		"chaos_knight_chaos_strike"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -175,6 +178,7 @@
 	// icon: chaos_knight_phantasm
 	"chaos_knight_phantasm"
 	{
+		"BaseClass"		"chaos_knight_phantasm"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -244,6 +248,7 @@
 	// icon: chaos_knight_phantasmagoria
 	"chaos_knight_phantasmagoria"
 	{
+		"BaseClass"		"chaos_knight_phantasmagoria"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -266,6 +271,7 @@
 	// icon: chaos_knight_reins_of_chaos
 	"chaos_knight_reins_of_chaos"
 	{
+		"BaseClass"		"chaos_knight_reins_of_chaos"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -288,6 +294,7 @@
 	// ---- chaos_knight_innate_spell_refund  (chaos_knight_innate_spell_refund) ----
 	"chaos_knight_innate_spell_refund"
 	{
+		"BaseClass"		"chaos_knight_innate_spell_refund"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

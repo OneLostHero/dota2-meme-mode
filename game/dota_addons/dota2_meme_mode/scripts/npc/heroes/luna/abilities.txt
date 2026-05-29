@@ -9,6 +9,7 @@
 	// icon: luna_lucent_beam
 	"luna_lucent_beam"
 	{
+		"BaseClass"		"luna_lucent_beam"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -98,6 +99,7 @@
 	// icon: luna_moon_glaive
 	"luna_moon_glaive"
 	{
+		"BaseClass"		"luna_moon_glaive"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -188,6 +190,7 @@
 	// icon: luna_lunar_blessing
 	"luna_lunar_blessing"
 	{
+		"BaseClass"		"luna_lunar_blessing"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -225,6 +228,7 @@
 	// icon: luna_lunar_grace
 	"luna_lunar_grace"
 	{
+		"BaseClass"		"luna_lunar_grace"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -255,6 +259,7 @@
 	// icon: luna_eclipse
 	"luna_eclipse"
 	{
+		"BaseClass"		"luna_eclipse"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -334,6 +339,7 @@
 	// ---- luna_selemenes_favor  (luna_selemenes_favor) ----
 	"luna_selemenes_favor"
 	{
+		"BaseClass"		"luna_selemenes_favor"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"

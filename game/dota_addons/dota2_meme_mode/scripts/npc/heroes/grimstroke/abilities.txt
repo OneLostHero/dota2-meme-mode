@@ -9,6 +9,7 @@
 	// icon: grimstroke_dark_artistry
 	"grimstroke_dark_artistry"
 	{
+		"BaseClass"		"grimstroke_dark_artistry"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
@@ -130,6 +131,7 @@
 	// icon: grimstroke_ink_creature
 	"grimstroke_ink_creature"
 	{
+		"BaseClass"		"grimstroke_ink_creature"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -196,6 +198,7 @@
 	// icon: grimstroke_dark_portrait
 	"grimstroke_dark_portrait"
 	{
+		"BaseClass"		"grimstroke_dark_portrait"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -259,6 +262,7 @@
 	// icon: grimstroke_ink_over
 	"grimstroke_ink_over"
 	{
+		"BaseClass"		"grimstroke_ink_over"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -313,6 +317,7 @@
 	// icon: grimstroke_spirit_walk
 	"grimstroke_spirit_walk"
 	{
+		"BaseClass"		"grimstroke_spirit_walk"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
@@ -405,6 +410,7 @@
 	// icon: grimstroke_return
 	"grimstroke_return"
 	{
+		"BaseClass"		"grimstroke_return"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -432,6 +438,7 @@
 	// icon: grimstroke_soul_chain
 	"grimstroke_soul_chain"
 	{
+		"BaseClass"		"grimstroke_soul_chain"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -485,6 +492,7 @@
 	// icon: grimstroke_ink_trail
 	"grimstroke_ink_trail"
 	{
+		"BaseClass"		"grimstroke_ink_trail"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

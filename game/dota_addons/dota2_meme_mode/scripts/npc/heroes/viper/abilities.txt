@@ -9,6 +9,7 @@
 	// icon: viper_poison_attack
 	"viper_poison_attack"
 	{
+		"BaseClass"		"viper_poison_attack"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
@@ -99,6 +100,7 @@
 	// icon: viper_nethertoxin
 	"viper_nethertoxin"
 	{
+		"BaseClass"		"viper_nethertoxin"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -153,6 +155,7 @@
 	// icon: viper_corrosive_skin
 	"viper_corrosive_skin"
 	{
+		"BaseClass"		"viper_corrosive_skin"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -225,6 +228,7 @@
 	// ---- viper_innate_corrosive_skin_vile  (viper_innate_corrosive_skin_vile) ----
 	"viper_innate_corrosive_skin_vile"
 	{
+		"BaseClass"		"viper_innate_corrosive_skin_vile"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -244,6 +248,7 @@
 	// ---- viper_innate_corrosive_skin_virulent  (viper_innate_corrosive_skin_virulent) ----
 	"viper_innate_corrosive_skin_virulent"
 	{
+		"BaseClass"		"viper_innate_corrosive_skin_virulent"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -265,6 +270,7 @@
 	// icon: viper_viper_strike
 	"viper_viper_strike"
 	{
+		"BaseClass"		"viper_viper_strike"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -334,6 +340,7 @@
 	// icon: viper_nose_dive
 	"viper_nose_dive"
 	{
+		"BaseClass"		"viper_nose_dive"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"

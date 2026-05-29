@@ -9,6 +9,7 @@
 	// icon: storm_spirit_electric_rave
 	"storm_spirit_electric_rave"
 	{
+		"BaseClass"		"storm_spirit_electric_rave"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -55,6 +56,7 @@
 	// icon: storm_spirit_static_remnant
 	"storm_spirit_static_remnant"
 	{
+		"BaseClass"		"storm_spirit_static_remnant"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -140,6 +142,7 @@
 	// icon: storm_spirit_electric_vortex
 	"storm_spirit_electric_vortex"
 	{
+		"BaseClass"		"storm_spirit_electric_vortex"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -201,6 +204,7 @@
 	// icon: storm_spirit_overload
 	"storm_spirit_overload"
 	{
+		"BaseClass"		"storm_spirit_overload"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -285,6 +289,7 @@
 	// icon: storm_spirit_ball_lightning
 	"storm_spirit_ball_lightning"
 	{
+		"BaseClass"		"storm_spirit_ball_lightning"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_CAN_SELF_CAST | DOTA_ABILITY_BEHAVIOR_OPTIONAL_UNIT_TARGET"
@@ -336,6 +341,7 @@
 	// icon: storm_spirit_galvanized
 	"storm_spirit_galvanized"
 	{
+		"BaseClass"		"storm_spirit_galvanized"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

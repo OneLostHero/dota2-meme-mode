@@ -8,6 +8,7 @@
 	// icon: witch_doctor_paralyzing_cask
 	"witch_doctor_paralyzing_cask"
 	{
+		"BaseClass"		"witch_doctor_paralyzing_cask"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -82,6 +83,7 @@
 	// icon: witch_doctor_voodoo_restoration
 	"witch_doctor_voodoo_restoration"
 	{
+		"BaseClass"		"witch_doctor_voodoo_restoration"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
@@ -145,6 +147,7 @@
 	// icon: witch_doctor_maledict
 	"witch_doctor_maledict"
 	{
+		"BaseClass"		"witch_doctor_maledict"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -205,6 +208,7 @@
 	// icon: witch_doctor_death_ward
 	"witch_doctor_death_ward"
 	{
+		"BaseClass"		"witch_doctor_death_ward"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
@@ -284,6 +288,7 @@
 	// icon: witch_doctor_voodoo_switcheroo
 	"witch_doctor_voodoo_switcheroo"
 	{
+		"BaseClass"		"witch_doctor_voodoo_switcheroo"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -324,6 +329,7 @@
 	// ---- witch_doctor_innate_maledict_heal_reduction  (witch_doctor_innate_maledict_heal_reduction) ----
 	"witch_doctor_innate_maledict_heal_reduction"
 	{
+		"BaseClass"		"witch_doctor_innate_maledict_heal_reduction"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -341,6 +347,7 @@
 	// icon: witch_doctor_gris_gris
 	"witch_doctor_gris_gris"
 	{
+		"BaseClass"		"witch_doctor_gris_gris"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"

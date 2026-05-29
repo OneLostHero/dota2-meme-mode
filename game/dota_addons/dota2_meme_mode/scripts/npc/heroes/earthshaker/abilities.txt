@@ -9,6 +9,7 @@
 	// icon: earthshaker_fissure
 	"earthshaker_fissure"
 	{
+		"BaseClass"		"earthshaker_fissure"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -89,6 +90,7 @@
 	// icon: earthshaker_enchant_totem
 	"earthshaker_enchant_totem"
 	{
+		"BaseClass"		"earthshaker_enchant_totem"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -223,6 +225,7 @@
 	// icon: earthshaker_aftershock
 	"earthshaker_aftershock"
 	{
+		"BaseClass"		"earthshaker_aftershock"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -280,6 +283,7 @@
 	// icon: earthshaker_echo_slam
 	"earthshaker_echo_slam"
 	{
+		"BaseClass"		"earthshaker_echo_slam"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"

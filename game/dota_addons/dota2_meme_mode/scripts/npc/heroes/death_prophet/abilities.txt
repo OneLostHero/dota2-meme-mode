@@ -9,6 +9,7 @@
 	// icon: death_prophet_carrion_swarm
 	"death_prophet_carrion_swarm"
 	{
+		"BaseClass"		"death_prophet_carrion_swarm"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT"
@@ -73,6 +74,7 @@
 	// icon: death_prophet_silence
 	"death_prophet_silence"
 	{
+		"BaseClass"		"death_prophet_silence"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
@@ -129,6 +131,7 @@
 	// ---- death_prophet_witchcraft  (death_prophet_witchcraft) ----
 	"death_prophet_witchcraft"
 	{
+		"BaseClass"		"death_prophet_witchcraft"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
@@ -151,6 +154,7 @@
 	// icon: death_prophet_spirit_siphon
 	"death_prophet_spirit_siphon"
 	{
+		"BaseClass"		"death_prophet_spirit_siphon"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -223,6 +227,7 @@
 	// icon: death_prophet_exorcism
 	"death_prophet_exorcism"
 	{
+		"BaseClass"		"death_prophet_exorcism"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -383,6 +388,7 @@
 	// icon: death_prophet_spirit_collector
 	"death_prophet_spirit_collector"
 	{
+		"BaseClass"		"death_prophet_spirit_collector"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
@@ -404,6 +410,7 @@
 	// ---- death_prophet_innate_healing_mastery  (death_prophet_innate_healing_mastery) ----
 	"death_prophet_innate_healing_mastery"
 	{
+		"BaseClass"		"death_prophet_innate_healing_mastery"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

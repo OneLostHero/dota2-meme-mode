@@ -10,6 +10,7 @@
 	// icon: alchemist_berserk_potion
 	"alchemist_berserk_potion"
 	{
+		"BaseClass"		"alchemist_berserk_potion"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -62,6 +63,7 @@
 	// icon: alchemist_acid_spray
 	"alchemist_acid_spray"
 	{
+		"BaseClass"		"alchemist_acid_spray"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -118,6 +120,7 @@
 	// icon: alchemist_unstable_concoction
 	"alchemist_unstable_concoction"
 	{
+		"BaseClass"		"alchemist_unstable_concoction"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -178,6 +181,7 @@
 	// icon: alchemist_unstable_concoction_throw
 	"alchemist_unstable_concoction_throw"
 	{
+		"BaseClass"		"alchemist_unstable_concoction_throw"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
@@ -227,6 +231,7 @@
 	// icon: alchemist_goblins_greed
 	"alchemist_goblins_greed"
 	{
+		"BaseClass"		"alchemist_goblins_greed"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
@@ -278,6 +283,7 @@
 	// icon: alchemist_chemical_rage
 	"alchemist_chemical_rage"
 	{
+		"BaseClass"		"alchemist_chemical_rage"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -353,6 +359,7 @@
 	// icon: alchemist_corrosive_weaponry
 	"alchemist_corrosive_weaponry"
 	{
+		"BaseClass"		"alchemist_corrosive_weaponry"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"

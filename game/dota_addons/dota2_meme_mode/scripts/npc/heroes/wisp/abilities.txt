@@ -9,6 +9,7 @@
 	// icon: wisp_tether
 	"wisp_tether"
 	{
+		"BaseClass"		"wisp_tether"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -86,6 +87,7 @@
 	// icon: wisp_spirits
 	"wisp_spirits"
 	{
+		"BaseClass"		"wisp_spirits"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -169,6 +171,7 @@
 	// icon: wisp_overcharge
 	"wisp_overcharge"
 	{
+		"BaseClass"		"wisp_overcharge"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -238,6 +241,7 @@
 	// icon: wisp_relocate
 	"wisp_relocate"
 	{
+		"BaseClass"		"wisp_relocate"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -278,6 +282,7 @@
 	// icon: wisp_tether_break
 	"wisp_tether_break"
 	{
+		"BaseClass"		"wisp_tether_break"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -300,6 +305,7 @@
 	// icon: wisp_spirits_in
 	"wisp_spirits_in"
 	{
+		"BaseClass"		"wisp_spirits_in"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_HIDDEN"
@@ -322,6 +328,7 @@
 	// icon: wisp_spirits_out
 	"wisp_spirits_out"
 	{
+		"BaseClass"		"wisp_spirits_out"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_HIDDEN"
@@ -340,6 +347,7 @@
 	// icon: wisp_sight_seer
 	"wisp_sight_seer"
 	{
+		"BaseClass"		"wisp_sight_seer"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"

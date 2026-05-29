@@ -8,6 +8,7 @@
 	// icon: ancient_apparition_cold_feet
 	"ancient_apparition_cold_feet"
 	{
+		"BaseClass"		"ancient_apparition_cold_feet"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -77,6 +78,7 @@
 	// icon: ancient_apparition_ice_vortex
 	"ancient_apparition_ice_vortex"
 	{
+		"BaseClass"		"ancient_apparition_ice_vortex"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -144,6 +146,7 @@
 	// icon: ancient_apparition_chilling_touch
 	"ancient_apparition_chilling_touch"
 	{
+		"BaseClass"		"ancient_apparition_chilling_touch"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
@@ -203,6 +206,7 @@
 	// icon: ancient_apparition_ice_blast
 	"ancient_apparition_ice_blast"
 	{
+		"BaseClass"		"ancient_apparition_ice_blast"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -287,6 +291,7 @@
 	// icon: ancient_apparition_death_rime
 	"ancient_apparition_death_rime"
 	{
+		"BaseClass"		"ancient_apparition_death_rime"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -328,6 +333,7 @@
 	// icon: ancient_apparition_ice_blast_release
 	"ancient_apparition_ice_blast_release"
 	{
+		"BaseClass"		"ancient_apparition_ice_blast_release"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -350,6 +356,7 @@
 	// icon: ancient_apparition_ice_age
 	"ancient_apparition_ice_age"
 	{
+		"BaseClass"		"ancient_apparition_ice_age"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT "

@@ -9,6 +9,7 @@
 	// icon: enchantress_untouchable
 	"enchantress_untouchable"
 	{
+		"BaseClass"		"enchantress_untouchable"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -38,6 +39,7 @@
 	// icon: enchantress_bunny_hop
 	"enchantress_bunny_hop"
 	{
+		"BaseClass"		"enchantress_bunny_hop"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -79,6 +81,7 @@
 	// icon: enchantress_little_friends
 	"enchantress_little_friends"
 	{
+		"BaseClass"		"enchantress_little_friends"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -129,6 +132,7 @@
 	// icon: enchantress_enchant
 	"enchantress_enchant"
 	{
+		"BaseClass"		"enchantress_enchant"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -208,6 +212,7 @@
 	// icon: enchantress_natures_attendants
 	"enchantress_natures_attendants"
 	{
+		"BaseClass"		"enchantress_natures_attendants"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -290,6 +295,7 @@
 	// icon: enchantress_impetus
 	"enchantress_impetus"
 	{
+		"BaseClass"		"enchantress_impetus"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
@@ -336,6 +342,7 @@
 	// icon: enchantress_forest_freebie
 	"enchantress_forest_freebie"
 	{
+		"BaseClass"		"enchantress_forest_freebie"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"

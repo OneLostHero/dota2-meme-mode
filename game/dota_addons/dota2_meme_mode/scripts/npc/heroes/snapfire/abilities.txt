@@ -9,6 +9,7 @@
 	// icon: snapfire_scatterblast
 	"snapfire_scatterblast"
 	{
+		"BaseClass"		"snapfire_scatterblast"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
@@ -106,6 +107,7 @@
 	// icon: snapfire_mortimer_kisses
 	"snapfire_mortimer_kisses"
 	{
+		"BaseClass"		"snapfire_mortimer_kisses"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
@@ -199,6 +201,7 @@
 	// icon: snapfire_gobble_up
 	"snapfire_gobble_up"
 	{
+		"BaseClass"		"snapfire_gobble_up"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -240,6 +243,7 @@
 	// icon: snapfire_spit_creep
 	"snapfire_spit_creep"
 	{
+		"BaseClass"		"snapfire_spit_creep"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
@@ -312,6 +316,7 @@
 	// icon: snapfire_firesnap_cookie
 	"snapfire_firesnap_cookie"
 	{
+		"BaseClass"		"snapfire_firesnap_cookie"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -394,6 +399,7 @@
 	// icon: snapfire_buckshot
 	"snapfire_buckshot"
 	{
+		"BaseClass"		"snapfire_buckshot"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -426,6 +432,7 @@
 	// icon: snapfire_lil_shredder
 	"snapfire_lil_shredder"
 	{
+		"BaseClass"		"snapfire_lil_shredder"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"

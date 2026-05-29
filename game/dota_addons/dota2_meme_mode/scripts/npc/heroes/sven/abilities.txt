@@ -9,6 +9,7 @@
 	// icon: sven_storm_bolt
 	"sven_storm_bolt"
 	{
+		"BaseClass"		"sven_storm_bolt"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -77,6 +78,7 @@
 	// icon: sven_great_cleave
 	"sven_great_cleave"
 	{
+		"BaseClass"		"sven_great_cleave"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -118,6 +120,7 @@
 	// icon: sven_warcry
 	"sven_warcry"
 	{
+		"BaseClass"		"sven_warcry"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -201,6 +204,7 @@
 	// icon: sven_gods_strength
 	"sven_gods_strength"
 	{
+		"BaseClass"		"sven_gods_strength"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -247,6 +251,7 @@
 	// icon: sven_vanquisher
 	"sven_vanquisher"
 	{
+		"BaseClass"		"sven_vanquisher"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
@@ -267,6 +272,7 @@
 	// icon: sven_wrath_of_god
 	"sven_wrath_of_god"
 	{
+		"BaseClass"		"sven_wrath_of_god"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN"

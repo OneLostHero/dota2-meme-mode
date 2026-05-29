@@ -9,6 +9,7 @@
 	// icon: zuus_heavenly_jump
 	"zuus_heavenly_jump"
 	{
+		"BaseClass"		"zuus_heavenly_jump"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
@@ -78,6 +79,7 @@
 	// icon: zuus_arc_lightning
 	"zuus_arc_lightning"
 	{
+		"BaseClass"		"zuus_arc_lightning"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -131,6 +133,7 @@
 	// icon: zuus_lightning_bolt
 	"zuus_lightning_bolt"
 	{
+		"BaseClass"		"zuus_lightning_bolt"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT"
@@ -205,6 +208,7 @@
 	// icon: zuus_cloud
 	"zuus_cloud"
 	{
+		"BaseClass"		"zuus_cloud"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -259,6 +263,7 @@
 	// icon: zuus_static_field
 	"zuus_static_field"
 	{
+		"BaseClass"		"zuus_static_field"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
@@ -312,6 +317,7 @@
 	// icon: zuus_thundergods_wrath
 	"zuus_thundergods_wrath"
 	{
+		"BaseClass"		"zuus_thundergods_wrath"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -377,6 +383,7 @@
 	// icon: zuus_lightning_hands
 	"zuus_lightning_hands"
 	{
+		"BaseClass"		"zuus_lightning_hands"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_ATTACK | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES "

@@ -8,6 +8,7 @@
 	// icon: faceless_void_time_walk
 	"faceless_void_time_walk"
 	{
+		"BaseClass"		"faceless_void_time_walk"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
@@ -79,6 +80,7 @@
 	// icon: faceless_void_distortion_field
 	"faceless_void_distortion_field"
 	{
+		"BaseClass"		"faceless_void_distortion_field"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -104,6 +106,7 @@
 	// ---- faceless_void_backtrack  (faceless_void_backtrack) ----
 	"faceless_void_backtrack"
 	{
+		"BaseClass"		"faceless_void_backtrack"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -122,6 +125,7 @@
 	// icon: faceless_void_time_walk_reverse
 	"faceless_void_time_walk_reverse"
 	{
+		"BaseClass"		"faceless_void_time_walk_reverse"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -166,6 +170,7 @@
 	// icon: faceless_void_time_lock
 	"faceless_void_time_lock"
 	{
+		"BaseClass"		"faceless_void_time_lock"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -202,6 +207,7 @@
 	// icon: faceless_void_time_dilation
 	"faceless_void_time_dilation"
 	{
+		"BaseClass"		"faceless_void_time_dilation"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -247,6 +253,7 @@
 	// icon: faceless_void_chronosphere
 	"faceless_void_chronosphere"
 	{
+		"BaseClass"		"faceless_void_chronosphere"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
@@ -309,6 +316,7 @@
 	// icon: faceless_void_time_zone
 	"faceless_void_time_zone"
 	{
+		"BaseClass"		"faceless_void_time_zone"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"

@@ -9,6 +9,7 @@
 	// icon: dawnbreaker_fire_wreath
 	"dawnbreaker_fire_wreath"
 	{
+		"BaseClass"		"dawnbreaker_fire_wreath"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CAN_SELF_CAST | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"
@@ -91,6 +92,7 @@
 	// icon: dawnbreaker_celestial_hammer
 	"dawnbreaker_celestial_hammer"
 	{
+		"BaseClass"		"dawnbreaker_celestial_hammer"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
@@ -175,6 +177,7 @@
 	// icon: dawnbreaker_converge
 	"dawnbreaker_converge"
 	{
+		"BaseClass"		"dawnbreaker_converge"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
@@ -199,6 +202,7 @@
 	// ---- dawnbreaker_luminosity  (dawnbreaker_luminosity) ----
 	"dawnbreaker_luminosity"
 	{
+		"BaseClass"		"dawnbreaker_luminosity"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -263,6 +267,7 @@
 	// icon: dawnbreaker_solar_guardian
 	"dawnbreaker_solar_guardian"
 	{
+		"BaseClass"		"dawnbreaker_solar_guardian"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -355,6 +360,7 @@
 	// icon: dawnbreaker_land
 	"dawnbreaker_land"
 	{
+		"BaseClass"		"dawnbreaker_land"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_UNRESTRICTED | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE | DOTA_ABILITY_BEHAVIOR_IGNORE_SILENCE"		
@@ -373,6 +379,7 @@
 	// icon: dawnbreaker_break_of_dawn
 	"dawnbreaker_break_of_dawn"
 	{
+		"BaseClass"		"dawnbreaker_break_of_dawn"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -396,6 +403,7 @@
 	// icon: dawnbreaker_unbreakable
 	"dawnbreaker_unbreakable"
 	{
+		"BaseClass"		"dawnbreaker_unbreakable"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

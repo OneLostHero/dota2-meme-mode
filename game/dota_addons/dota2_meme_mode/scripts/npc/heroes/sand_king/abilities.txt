@@ -10,6 +10,7 @@
 	// icon: sandking_burrowstrike
 	"sandking_burrowstrike"
 	{
+		"BaseClass"		"sandking_burrowstrike"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_ALT_CASTABLE"
@@ -80,6 +81,7 @@
 	// icon: sandking_sand_storm
 	"sandking_sand_storm"
 	{
+		"BaseClass"		"sandking_sand_storm"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
@@ -158,6 +160,7 @@
 	// icon: sandking_caustic_finale
 	"sandking_caustic_finale"
 	{
+		"BaseClass"		"sandking_caustic_finale"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -191,6 +194,7 @@
 	// ---- sandking_innate_caustic_impediment  (sandking_innate_caustic_impediment) ----
 	"sandking_innate_caustic_impediment"
 	{
+		"BaseClass"		"sandking_innate_caustic_impediment"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -204,6 +208,7 @@
 	// ---- sandking_innate_caustic_volatility  (sandking_innate_caustic_volatility) ----
 	"sandking_innate_caustic_volatility"
 	{
+		"BaseClass"		"sandking_innate_caustic_volatility"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -223,6 +228,7 @@
 	// icon: sandking_epicenter
 	"sandking_epicenter"
 	{
+		"BaseClass"		"sandking_epicenter"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -307,6 +313,7 @@
 	// icon: sandking_scorpion_strike
 	"sandking_scorpion_strike"
 	{
+		"BaseClass"		"sandking_scorpion_strike"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				 "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_AOE"

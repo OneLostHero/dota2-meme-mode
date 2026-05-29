@@ -10,6 +10,7 @@
 	// icon: abaddon_death_coil
 	"abaddon_death_coil"
 	{
+		"BaseClass"		"abaddon_death_coil"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -79,6 +80,7 @@
 	// icon: abaddon_aphotic_shield
 	"abaddon_aphotic_shield"
 	{
+		"BaseClass"		"abaddon_aphotic_shield"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -160,6 +162,7 @@
 	// icon: abaddon_the_quickening
 	"abaddon_the_quickening"
 	{
+		"BaseClass"		"abaddon_the_quickening"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -187,6 +190,7 @@
 	// icon: abaddon_font_of_avernus
 	"abaddon_font_of_avernus"
 	{
+		"BaseClass"		"abaddon_font_of_avernus"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -206,6 +210,7 @@
 	// icon: abaddon_frostmourne
 	"abaddon_frostmourne"
 	{
+		"BaseClass"		"abaddon_frostmourne"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -256,6 +261,7 @@
 	// icon: abaddon_soul_suck
 	"abaddon_soul_suck"
 	{
+		"BaseClass"		"abaddon_soul_suck"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -284,6 +290,7 @@
 	// icon: abaddon_borrowed_time
 	"abaddon_borrowed_time"
 	{
+		"BaseClass"		"abaddon_borrowed_time"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"

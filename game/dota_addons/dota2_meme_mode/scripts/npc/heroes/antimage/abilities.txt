@@ -9,6 +9,7 @@
 	// icon: antimage_mana_break
 	"antimage_mana_break"
 	{
+		"BaseClass"		"antimage_mana_break"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -52,6 +53,7 @@
 	// icon: antimage_blink
 	"antimage_blink"
 	{
+		"BaseClass"		"antimage_blink"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
@@ -99,6 +101,7 @@
 	// icon: antimage_spell_shield
 	"antimage_spell_shield"
 	{
+		"BaseClass"		"antimage_spell_shield"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -120,6 +123,7 @@
 	// icon: antimage_counterspell
 	"antimage_counterspell"
 	{
+		"BaseClass"		"antimage_counterspell"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -178,6 +182,7 @@
 	// icon: antimage_counterspell_ally
 	"antimage_counterspell_ally"
 	{
+		"BaseClass"		"antimage_counterspell_ally"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -235,6 +240,7 @@
 	// icon: antimage_mana_void
 	"antimage_mana_void"
 	{
+		"BaseClass"		"antimage_mana_void"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -336,6 +342,7 @@
 	// icon: antimage_mana_overload
 	"antimage_mana_overload"
 	{
+		"BaseClass"		"antimage_mana_overload"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"

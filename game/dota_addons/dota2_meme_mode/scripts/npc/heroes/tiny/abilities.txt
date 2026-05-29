@@ -9,6 +9,7 @@
 	// icon: tiny_avalanche
 	"tiny_avalanche"
 	{
+		"BaseClass"		"tiny_avalanche"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
@@ -70,6 +71,7 @@
 	// icon: tiny_toss
 	"tiny_toss"
 	{
+		"BaseClass"		"tiny_toss"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_RUNE_TARGET"
@@ -154,6 +156,7 @@
 	// icon: tiny_craggy_exterior
 	"tiny_craggy_exterior"
 	{
+		"BaseClass"		"tiny_craggy_exterior"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE "
@@ -187,6 +190,7 @@
 	// icon: tiny_tree_grab
 	"tiny_tree_grab"
 	{
+		"BaseClass"		"tiny_tree_grab"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -261,6 +265,7 @@
 	// icon: tiny_toss_tree
 	"tiny_toss_tree"
 	{
+		"BaseClass"		"tiny_toss_tree"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -309,6 +314,7 @@
 	// icon: tiny_tree_channel
 	"tiny_tree_channel"
 	{
+		"BaseClass"		"tiny_tree_channel"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_CHANNELLED  | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -362,6 +368,7 @@
 	// icon: tiny_grow
 	"tiny_grow"
 	{
+		"BaseClass"		"tiny_grow"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -428,6 +435,7 @@
 	// icon: tiny_rocksteady
 	"tiny_rocksteady"
 	{
+		"BaseClass"		"tiny_rocksteady"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -449,6 +457,7 @@
 	// icon: tiny_insurmountable
 	"tiny_insurmountable"
 	{
+		"BaseClass"		"tiny_insurmountable"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"

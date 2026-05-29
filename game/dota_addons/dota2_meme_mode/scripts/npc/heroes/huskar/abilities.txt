@@ -9,6 +9,7 @@
 	// icon: huskar_inner_vitality
 	"huskar_inner_vitality"
 	{
+		"BaseClass"		"huskar_inner_vitality"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
@@ -70,6 +71,7 @@
 	// icon: huskar_inner_fire
 	"huskar_inner_fire"
 	{
+		"BaseClass"		"huskar_inner_fire"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -153,6 +155,7 @@
 	// icon: huskar_burning_spear
 	"huskar_burning_spear"
 	{
+		"BaseClass"		"huskar_burning_spear"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
@@ -207,6 +210,7 @@
 	// icon: huskar_berserkers_blood
 	"huskar_berserkers_blood"
 	{
+		"BaseClass"		"huskar_berserkers_blood"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -238,6 +242,7 @@
 	// icon: huskar_blood_magic
 	"huskar_blood_magic"
 	{
+		"BaseClass"		"huskar_blood_magic"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_NONE"	
 		"MaxLevel"						"1"
@@ -250,6 +255,7 @@
 	// icon: huskar_life_break
 	"huskar_life_break"
 	{
+		"BaseClass"		"huskar_life_break"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"

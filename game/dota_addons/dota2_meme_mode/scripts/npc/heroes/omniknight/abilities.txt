@@ -9,6 +9,7 @@
 	// icon: omniknight_hammer_of_purity
 	"omniknight_hammer_of_purity"
 	{
+		"BaseClass"		"omniknight_hammer_of_purity"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
@@ -76,6 +77,7 @@
 	// icon: omniknight_purification
 	"omniknight_purification"
 	{
+		"BaseClass"		"omniknight_purification"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -127,6 +129,7 @@
 	// icon: omniknight_repel
 	"omniknight_repel"
 	{
+		"BaseClass"		"omniknight_repel"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -182,6 +185,7 @@
 	// icon: omniknight_pacify
 	"omniknight_pacify"
 	{
+		"BaseClass"		"omniknight_pacify"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
@@ -229,6 +233,7 @@
 	// icon: omniknight_degen_aura
 	"omniknight_degen_aura"
 	{
+		"BaseClass"		"omniknight_degen_aura"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -275,6 +280,7 @@
 	// icon: omniknight_healing_hammer
 	"omniknight_healing_hammer"
 	{
+		"BaseClass"		"omniknight_healing_hammer"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -295,6 +301,7 @@
 	// icon: omniknight_martyr
 	"omniknight_martyr"
 	{
+		"BaseClass"		"omniknight_martyr"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -348,6 +355,7 @@
 	// icon: omniknight_guardian_angel
 	"omniknight_guardian_angel"
 	{
+		"BaseClass"		"omniknight_guardian_angel"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -404,6 +412,7 @@
 	// icon: omniknight_angelic_flight
 	"omniknight_angelic_flight"
 	{
+		"BaseClass"		"omniknight_angelic_flight"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"

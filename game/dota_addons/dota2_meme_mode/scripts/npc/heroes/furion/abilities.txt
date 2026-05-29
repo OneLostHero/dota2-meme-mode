@@ -9,6 +9,7 @@
 	// icon: furion_sprout
 	"furion_sprout"
 	{
+		"BaseClass"		"furion_sprout"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT"
@@ -82,6 +83,7 @@
 	// icon: furion_greater_sprout
 	"furion_greater_sprout"
 	{
+		"BaseClass"		"furion_greater_sprout"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -126,6 +128,7 @@
 	// icon: furion_teleportation
 	"furion_teleportation"
 	{
+		"BaseClass"		"furion_teleportation"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
@@ -171,6 +174,7 @@
 	// icon: furion_force_of_nature
 	"furion_force_of_nature"
 	{
+		"BaseClass"		"furion_force_of_nature"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -247,6 +251,7 @@
 	// icon: furion_wrath_of_nature
 	"furion_wrath_of_nature"
 	{
+		"BaseClass"		"furion_wrath_of_nature"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT"
@@ -327,6 +332,7 @@
 	// icon: furion_curse_of_the_forest
 	"furion_curse_of_the_forest"
 	{
+		"BaseClass"		"furion_curse_of_the_forest"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -378,6 +384,7 @@
 	// icon: furion_hedgerow
 	"furion_hedgerow"
 	{
+		"BaseClass"		"furion_hedgerow"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
@@ -419,6 +426,7 @@
 	// icon: furion_arboreal_might
 	"furion_arboreal_might"
 	{
+		"BaseClass"		"furion_arboreal_might"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -458,6 +466,7 @@
 	// icon: furion_spirit_of_the_forest
 	"furion_spirit_of_the_forest"
 	{
+		"BaseClass"		"furion_spirit_of_the_forest"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -494,6 +503,7 @@
 	// ---- furion_fecundity  (furion_fecundity) ----
 	"furion_fecundity"
 	{
+		"BaseClass"		"furion_fecundity"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

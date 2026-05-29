@@ -9,6 +9,7 @@
 	// icon: lion_impale
 	"lion_impale"
 	{
+		"BaseClass"		"lion_impale"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -77,6 +78,7 @@
 	// icon: lion_voodoo
 	"lion_voodoo"
 	{
+		"BaseClass"		"lion_voodoo"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -125,6 +127,7 @@
 	// icon: lion_mana_drain
 	"lion_mana_drain"
 	{
+		"BaseClass"		"lion_mana_drain"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -203,6 +206,7 @@
 	// icon: lion_finger_of_death
 	"lion_finger_of_death"
 	{
+		"BaseClass"		"lion_finger_of_death"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -462,6 +466,7 @@
 	// icon: lion_to_hell_and_back
 	"lion_to_hell_and_back"
 	{
+		"BaseClass"		"lion_to_hell_and_back"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

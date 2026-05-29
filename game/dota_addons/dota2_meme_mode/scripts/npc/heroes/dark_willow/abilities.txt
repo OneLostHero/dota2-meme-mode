@@ -9,6 +9,7 @@
 	// icon: dark_willow_bramble_maze
 	"dark_willow_bramble_maze"
 	{
+		"BaseClass"		"dark_willow_bramble_maze"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
@@ -80,6 +81,7 @@
 	// icon: dark_willow_bedlam
 	"dark_willow_bedlam"
 	{
+		"BaseClass"		"dark_willow_bedlam"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -152,6 +154,7 @@
 	// icon: dark_willow_terrorize
 	"dark_willow_terrorize"
 	{
+		"BaseClass"		"dark_willow_terrorize"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN"
@@ -203,6 +206,7 @@
 	// icon: dark_willow_shadow_realm
 	"dark_willow_shadow_realm"
 	{
+		"BaseClass"		"dark_willow_shadow_realm"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		
@@ -271,6 +275,7 @@
 	// icon: dark_willow_cursed_crown
 	"dark_willow_cursed_crown"
 	{
+		"BaseClass"		"dark_willow_cursed_crown"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -336,6 +341,7 @@
 	// icon: dark_willow_pixie_dust
 	"dark_willow_pixie_dust"
 	{
+		"BaseClass"		"dark_willow_pixie_dust"
 	// General
 		//-------------------------------------------------------------------------------------------------------------
 

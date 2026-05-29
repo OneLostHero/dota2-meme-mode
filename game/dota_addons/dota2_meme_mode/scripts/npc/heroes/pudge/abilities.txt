@@ -9,6 +9,7 @@
 	// icon: pudge_flesh_heap
 	"pudge_flesh_heap"
 	{
+		"BaseClass"		"pudge_flesh_heap"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -45,6 +46,7 @@
 	// icon: pudge_meat_hook
 	"pudge_meat_hook"
 	{
+		"BaseClass"		"pudge_meat_hook"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -110,6 +112,7 @@
 	// icon: pudge_rot
 	"pudge_rot"
 	{
+		"BaseClass"		"pudge_rot"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -169,6 +172,7 @@
 	// icon: pudge_eject
 	"pudge_eject"
 	{
+		"BaseClass"		"pudge_eject"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -189,6 +193,7 @@
 	// icon: pudge_dismember
 	"pudge_dismember"
 	{
+		"BaseClass"		"pudge_dismember"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -286,6 +291,7 @@
 	// icon: pudge_innate_graft_flesh
 	"pudge_innate_graft_flesh"
 	{
+		"BaseClass"		"pudge_innate_graft_flesh"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"

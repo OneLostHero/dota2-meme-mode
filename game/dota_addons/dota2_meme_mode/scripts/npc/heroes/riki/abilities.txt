@@ -9,6 +9,7 @@
 	// icon: riki_poison_dart
 	"riki_poison_dart"
 	{
+		"BaseClass"		"riki_poison_dart"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -60,6 +61,7 @@
 	// icon: riki_smoke_screen
 	"riki_smoke_screen"
 	{
+		"BaseClass"		"riki_smoke_screen"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -121,6 +123,7 @@
 	// icon: riki_blink_strike
 	"riki_blink_strike"
 	{
+		"BaseClass"		"riki_blink_strike"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
@@ -171,6 +174,7 @@
 	// icon: riki_backstab
 	"riki_backstab"
 	{
+		"BaseClass"		"riki_backstab"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -197,6 +201,7 @@
 	// icon: riki_innate_backstab
 	"riki_innate_backstab"
 	{
+		"BaseClass"		"riki_innate_backstab"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -236,6 +241,7 @@
 	// icon: riki_permanent_invisibility
 	"riki_permanent_invisibility"
 	{
+		"BaseClass"		"riki_permanent_invisibility"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -261,6 +267,7 @@
 	// icon: riki_tricks_of_the_trade
 	"riki_tricks_of_the_trade"
 	{
+		"BaseClass"		"riki_tricks_of_the_trade"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_CHANNELLED"

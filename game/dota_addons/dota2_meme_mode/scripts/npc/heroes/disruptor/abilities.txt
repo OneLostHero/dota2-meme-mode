@@ -9,6 +9,7 @@
 	// icon: disruptor_thunder_strike
 	"disruptor_thunder_strike"
 	{
+		"BaseClass"		"disruptor_thunder_strike"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -88,6 +89,7 @@
 	// icon: disruptor_glimpse
 	"disruptor_glimpse"
 	{
+		"BaseClass"		"disruptor_glimpse"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -145,6 +147,7 @@
 	// icon: disruptor_kinetic_field
 	"disruptor_kinetic_field"
 	{
+		"BaseClass"		"disruptor_kinetic_field"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -201,6 +204,7 @@
 	// icon: disruptor_kinetic_fence
 	"disruptor_kinetic_fence"
 	{
+		"BaseClass"		"disruptor_kinetic_fence"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -260,6 +264,7 @@
 	// icon: disruptor_static_storm
 	"disruptor_static_storm"
 	{
+		"BaseClass"		"disruptor_static_storm"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -321,6 +326,7 @@
 	// icon: disruptor_electromagnetic_repulsion
 	"disruptor_electromagnetic_repulsion"
 	{
+		"BaseClass"		"disruptor_electromagnetic_repulsion"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -472,6 +478,7 @@
 	// ---- disruptor_innate_kinetic_circle  (disruptor_innate_kinetic_circle) ----
 	"disruptor_innate_kinetic_circle"
 	{
+		"BaseClass"		"disruptor_innate_kinetic_circle"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

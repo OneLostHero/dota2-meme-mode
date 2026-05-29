@@ -9,6 +9,7 @@
 	// icon: treant_natures_guise
 	"treant_natures_guise"
 	{
+		"BaseClass"		"treant_natures_guise"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -66,6 +67,7 @@
 	// ---- treant_innate_attack_damage  (treant_innate_attack_damage) ----
 	"treant_innate_attack_damage"
 	{
+		"BaseClass"		"treant_innate_attack_damage"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 
 		"MaxLevel"						"1"
@@ -88,6 +90,7 @@
 	// icon: treant_natures_grasp
 	"treant_natures_grasp"
 	{
+		"BaseClass"		"treant_natures_grasp"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
@@ -144,6 +147,7 @@
 	// icon: treant_leech_seed
 	"treant_leech_seed"
 	{
+		"BaseClass"		"treant_leech_seed"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"	
@@ -208,6 +212,7 @@
 	// icon: treant_living_armor
 	"treant_living_armor"
 	{
+		"BaseClass"		"treant_living_armor"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT"
@@ -254,6 +259,7 @@
 	// icon: treant_overgrowth
 	"treant_overgrowth"
 	{
+		"BaseClass"		"treant_overgrowth"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -320,6 +326,7 @@
 	// icon: treant_eyes_in_the_forest
 	"treant_eyes_in_the_forest"
 	{
+		"BaseClass"		"treant_eyes_in_the_forest"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -375,6 +382,7 @@
 	// ---- treant_lifebomb_explode  (treant_lifebomb_explode) ----
 	"treant_lifebomb_explode"
 	{
+		"BaseClass"		"treant_lifebomb_explode"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"MaxLevel"						"1"

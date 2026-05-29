@@ -9,6 +9,7 @@
 	// icon: juggernaut_blade_dance
 	"juggernaut_blade_dance"
 	{
+		"BaseClass"		"juggernaut_blade_dance"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -39,6 +40,7 @@
 	// icon: juggernaut_blade_fury
 	"juggernaut_blade_fury"
 	{
+		"BaseClass"		"juggernaut_blade_fury"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
@@ -117,6 +119,7 @@
 	// icon: juggernaut_healing_ward
 	"juggernaut_healing_ward"
 	{
+		"BaseClass"		"juggernaut_healing_ward"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
@@ -174,6 +177,7 @@
 	// icon: juggernaut_omni_slash
 	"juggernaut_omni_slash"
 	{
+		"BaseClass"		"juggernaut_omni_slash"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -242,6 +246,7 @@
 	// icon: juggernaut_swift_slash
 	"juggernaut_swift_slash"
 	{
+		"BaseClass"		"juggernaut_swift_slash"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
@@ -285,6 +290,7 @@
 	// icon: juggernaut_duelist
 	"juggernaut_duelist"
 	{
+		"BaseClass"		"juggernaut_duelist"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
 
 		"MaxLevel"						"1"
@@ -304,6 +310,7 @@
 	// icon: juggernaut_bladeform
 	"juggernaut_bladeform"
 	{
+		"BaseClass"		"juggernaut_bladeform"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -325,6 +332,7 @@
 	// ---- juggernaut_innate_mask_spin_crit  (juggernaut_innate_mask_spin_crit) ----
 	"juggernaut_innate_mask_spin_crit"
 	{
+		"BaseClass"		"juggernaut_innate_mask_spin_crit"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
@@ -341,6 +349,7 @@
 	// ---- juggernaut_innate_mask_crit_lifesteal  (juggernaut_innate_mask_crit_lifesteal) ----
 	"juggernaut_innate_mask_crit_lifesteal"
 	{
+		"BaseClass"		"juggernaut_innate_mask_crit_lifesteal"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"

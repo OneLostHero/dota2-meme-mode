@@ -9,6 +9,7 @@
 	// icon: void_spirit_aether_remnant
 	"void_spirit_aether_remnant"
 	{
+		"BaseClass"		"void_spirit_aether_remnant"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING"
@@ -114,6 +115,7 @@
 	// icon: void_spirit_dissimilate
 	"void_spirit_dissimilate"
 	{
+		"BaseClass"		"void_spirit_dissimilate"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
@@ -179,6 +181,7 @@
 	// icon: void_spirit_astral_step
 	"void_spirit_astral_step"
 	{
+		"BaseClass"		"void_spirit_astral_step"
 		// General
  	//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
@@ -249,6 +252,7 @@
 	// icon: void_spirit_resonant_pulse
 	"void_spirit_resonant_pulse"
 	{
+		"BaseClass"		"void_spirit_resonant_pulse"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -332,6 +336,7 @@
 	// icon: void_spirit_symmetry
 	"void_spirit_symmetry"
 	{
+		"BaseClass"		"void_spirit_symmetry"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
@@ -352,6 +357,7 @@
 	// icon: void_spirit_intrinsic_edge
 	"void_spirit_intrinsic_edge"
 	{
+		"BaseClass"		"void_spirit_intrinsic_edge"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_NONE"	
 

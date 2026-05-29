@@ -9,6 +9,7 @@
 	// icon: razor_plasma_field
 	"razor_plasma_field"
 	{
+		"BaseClass"		"razor_plasma_field"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -76,6 +77,7 @@
 	// icon: razor_static_link
 	"razor_static_link"
 	{
+		"BaseClass"		"razor_static_link"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -150,6 +152,7 @@
 	// icon: razor_storm_surge
 	"razor_storm_surge"
 	{
+		"BaseClass"		"razor_storm_surge"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -205,6 +208,7 @@
 	// ---- razor_unstable_current  (razor_unstable_current) ----
 	"razor_unstable_current"
 	{
+		"BaseClass"		"razor_unstable_current"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
@@ -227,6 +231,7 @@
 	// icon: razor_eye_of_the_storm
 	"razor_eye_of_the_storm"
 	{
+		"BaseClass"		"razor_eye_of_the_storm"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -285,6 +290,7 @@
 	// ---- razor_dynamo  (razor_dynamo) ----
 	"razor_dynamo"
 	{
+		"BaseClass"		"razor_dynamo"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"

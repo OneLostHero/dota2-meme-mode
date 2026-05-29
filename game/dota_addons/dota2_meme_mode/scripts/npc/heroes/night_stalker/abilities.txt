@@ -9,6 +9,7 @@
 	// icon: night_stalker_void
 	"night_stalker_void"
 	{
+		"BaseClass"		"night_stalker_void"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -77,6 +78,7 @@
 	// icon: night_stalker_crippling_fear
 	"night_stalker_crippling_fear"
 	{
+		"BaseClass"		"night_stalker_crippling_fear"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -167,6 +169,7 @@
 	// icon: night_stalker_hunter_in_the_night
 	"night_stalker_hunter_in_the_night"
 	{
+		"BaseClass"		"night_stalker_hunter_in_the_night"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -226,6 +229,7 @@
 	// icon: night_stalker_darkness
 	"night_stalker_darkness"
 	{
+		"BaseClass"		"night_stalker_darkness"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -267,6 +271,7 @@
 	// icon: night_stalker_heart_of_darkness
 	"night_stalker_heart_of_darkness"
 	{
+		"BaseClass"		"night_stalker_heart_of_darkness"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
@@ -288,6 +293,7 @@
 	// ---- night_stalker_night_reign  (night_stalker_night_reign) ----
 	"night_stalker_night_reign"
 	{
+		"BaseClass"		"night_stalker_night_reign"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"

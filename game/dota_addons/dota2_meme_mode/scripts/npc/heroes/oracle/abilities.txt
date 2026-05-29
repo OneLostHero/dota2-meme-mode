@@ -9,6 +9,7 @@
 	// icon: oracle_fortunes_end
 	"oracle_fortunes_end"
 	{
+		"BaseClass"		"oracle_fortunes_end"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_CHANNEL"
@@ -87,6 +88,7 @@
 	// icon: oracle_fates_edict
 	"oracle_fates_edict"
 	{
+		"BaseClass"		"oracle_fates_edict"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -131,6 +133,7 @@
 	// icon: oracle_purifying_flames
 	"oracle_purifying_flames"
 	{
+		"BaseClass"		"oracle_purifying_flames"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -176,6 +179,7 @@
 	// icon: oracle_false_promise
 	"oracle_false_promise"
 	{
+		"BaseClass"		"oracle_false_promise"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -257,6 +261,7 @@
 	// icon: oracle_rain_of_destiny
 	"oracle_rain_of_destiny"
 	{
+		"BaseClass"		"oracle_rain_of_destiny"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -306,6 +311,7 @@
 	// icon: oracle_clairvoyant_curse
 	"oracle_clairvoyant_curse"
 	{
+		"BaseClass"		"oracle_clairvoyant_curse"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -325,6 +331,7 @@
 	// icon: oracle_clairvoyant_cure
 	"oracle_clairvoyant_cure"
 	{
+		"BaseClass"		"oracle_clairvoyant_cure"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -342,6 +349,7 @@
 	// ---- oracle_prognosticate  (oracle_prognosticate) ----
 	"oracle_prognosticate"
 	{
+		"BaseClass"		"oracle_prognosticate"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

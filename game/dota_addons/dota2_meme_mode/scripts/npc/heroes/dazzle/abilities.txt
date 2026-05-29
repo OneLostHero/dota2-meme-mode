@@ -8,6 +8,7 @@
 	// ---- dazzle_rain_of_vermin  (dazzle_rain_of_vermin) ----
 	"dazzle_rain_of_vermin"
 	{
+		"BaseClass"		"dazzle_rain_of_vermin"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -68,6 +69,7 @@
 	// icon: dazzle_poison_touch
 	"dazzle_poison_touch"
 	{
+		"BaseClass"		"dazzle_poison_touch"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -171,6 +173,7 @@
 	// icon: dazzle_shallow_grave
 	"dazzle_shallow_grave"
 	{
+		"BaseClass"		"dazzle_shallow_grave"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -220,6 +223,7 @@
 	// icon: dazzle_shadow_wave
 	"dazzle_shadow_wave"
 	{
+		"BaseClass"		"dazzle_shadow_wave"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
@@ -284,6 +288,7 @@
 	// icon: dazzle_weave
 	"dazzle_weave"
 	{
+		"BaseClass"		"dazzle_weave"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -335,6 +340,7 @@
 	// icon: dazzle_bad_juju
 	"dazzle_bad_juju"
 	{
+		"BaseClass"		"dazzle_bad_juju"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -371,6 +377,7 @@
 	// icon: dazzle_good_juju
 	"dazzle_good_juju"
 	{
+		"BaseClass"		"dazzle_good_juju"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -410,6 +417,7 @@
 	// icon: dazzle_innate_weave
 	"dazzle_innate_weave"
 	{
+		"BaseClass"		"dazzle_innate_weave"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -439,6 +447,7 @@
 	// ---- dazzle_nothl_boon  (dazzle_nothl_boon) ----
 	"dazzle_nothl_boon"
 	{
+		"BaseClass"		"dazzle_nothl_boon"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

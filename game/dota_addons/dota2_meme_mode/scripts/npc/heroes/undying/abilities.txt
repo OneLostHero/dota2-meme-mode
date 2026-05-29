@@ -9,6 +9,7 @@
 	// icon: undying_decay
 	"undying_decay"
 	{
+		"BaseClass"		"undying_decay"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -75,6 +76,7 @@
 	// icon: undying_soul_rip
 	"undying_soul_rip"
 	{
+		"BaseClass"		"undying_soul_rip"
 	// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -145,6 +147,7 @@
 	// icon: undying_tombstone
 	"undying_tombstone"
 	{
+		"BaseClass"		"undying_tombstone"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -234,6 +237,7 @@
 	// ---- undying_tombstone_zombie_aura  (undying_tombstone_zombie_aura) ----
 	"undying_tombstone_zombie_aura"
 	{
+		"BaseClass"		"undying_tombstone_zombie_aura"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA | DOTA_ABILITY_BEHAVIOR_HIDDEN"
@@ -264,6 +268,7 @@
 	// icon: undying_tombstone_zombie_deathstrike
 	"undying_tombstone_zombie_deathstrike"
 	{
+		"BaseClass"		"undying_tombstone_zombie_deathstrike"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -313,6 +318,7 @@
 	// icon: undying_flesh_golem
 	"undying_flesh_golem"
 	{
+		"BaseClass"		"undying_flesh_golem"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -372,6 +378,7 @@
 	// icon: undying_tombstone_grab
 	"undying_tombstone_grab"
 	{
+		"BaseClass"		"undying_tombstone_grab"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_UNRESTRICTED | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE | DOTA_ABILITY_BEHAVIOR_IGNORE_SILENCE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
@@ -400,6 +407,7 @@
 	// icon: undying_tombstone_unit_grab
 	"undying_tombstone_unit_grab"
 	{
+		"BaseClass"		"undying_tombstone_unit_grab"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_UNRESTRICTED | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE | DOTA_ABILITY_BEHAVIOR_IGNORE_SILENCE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -422,6 +430,7 @@
 	// ---- undying_zombie_master  (undying_zombie_master) ----
 	"undying_zombie_master"
 	{
+		"BaseClass"		"undying_zombie_master"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK | DOTA_ABILITY_BEHAVIOR_BREAK_DISABLES"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilitySound"					"Hero_Undying.Tombstone"
@@ -482,6 +491,7 @@
 	// icon: undying_ceaseless_dirge
 	"undying_ceaseless_dirge"
 	{
+		"BaseClass"		"undying_ceaseless_dirge"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

@@ -9,6 +9,7 @@
 	// icon: dragon_knight_fireball
 	"dragon_knight_fireball"
 	{
+		"BaseClass"		"dragon_knight_fireball"
 		"MaxLevel"						"1"
 		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_HIDDEN  | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -60,6 +61,7 @@
 	// icon: dragon_knight_breathe_fire
 	"dragon_knight_breathe_fire"
 	{
+		"BaseClass"		"dragon_knight_breathe_fire"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"				   
@@ -129,6 +131,7 @@
 	// icon: dragon_knight_dragon_tail
 	"dragon_knight_dragon_tail"
 	{
+		"BaseClass"		"dragon_knight_dragon_tail"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -185,6 +188,7 @@
 	// icon: dragon_knight_dragon_blood
 	"dragon_knight_dragon_blood"
 	{
+		"BaseClass"		"dragon_knight_dragon_blood"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -294,6 +298,7 @@
 	// icon: dragon_knight_inherited_vigor
 	"dragon_knight_inherited_vigor"
 	{
+		"BaseClass"		"dragon_knight_inherited_vigor"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE |  DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -331,6 +336,7 @@
 	// icon: dragon_knight_elder_dragon_form
 	"dragon_knight_elder_dragon_form"
 	{
+		"BaseClass"		"dragon_knight_elder_dragon_form"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"

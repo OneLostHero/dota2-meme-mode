@@ -10,6 +10,7 @@
 	// icon: batrider_sticky_napalm
 	"batrider_sticky_napalm"
 	{
+		"BaseClass"		"batrider_sticky_napalm"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -105,6 +106,7 @@
 	// icon: batrider_smoldering_resin
 	"batrider_smoldering_resin"
 	{
+		"BaseClass"		"batrider_smoldering_resin"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
@@ -128,6 +130,7 @@
 	// icon: batrider_stoked
 	"batrider_stoked"
 	{
+		"BaseClass"		"batrider_stoked"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
@@ -149,6 +152,7 @@
 	// icon: batrider_sticky_napalm_application_damage
 	"batrider_sticky_napalm_application_damage"
 	{
+		"BaseClass"		"batrider_sticky_napalm_application_damage"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -166,6 +170,7 @@
 	// icon: batrider_flamebreak
 	"batrider_flamebreak"
 	{
+		"BaseClass"		"batrider_flamebreak"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
@@ -259,6 +264,7 @@
 	// icon: batrider_firefly
 	"batrider_firefly"
 	{
+		"BaseClass"		"batrider_firefly"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -316,6 +322,7 @@
 	// icon: batrider_flaming_lasso
 	"batrider_flaming_lasso"
 	{
+		"BaseClass"		"batrider_flaming_lasso"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"

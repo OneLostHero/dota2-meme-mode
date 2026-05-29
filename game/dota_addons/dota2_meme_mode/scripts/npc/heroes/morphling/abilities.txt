@@ -9,6 +9,7 @@
 	// icon: morphling_waveform
 	"morphling_waveform"
 	{
+		"BaseClass"		"morphling_waveform"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
@@ -67,6 +68,7 @@
 	// icon: morphling_adaptive_strike_agi
 	"morphling_adaptive_strike_agi"
 	{
+		"BaseClass"		"morphling_adaptive_strike_agi"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -131,6 +133,7 @@
 	// icon: morphling_adaptive_strike_str
 	"morphling_adaptive_strike_str"
 	{
+		"BaseClass"		"morphling_adaptive_strike_str"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -200,6 +203,7 @@
 	// ---- morphling_morph  (morphling_morph) ----
 	"morphling_morph"
 	{
+		"BaseClass"		"morphling_morph"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN"
@@ -212,6 +216,7 @@
 	// icon: morphling_morph_agi
 	"morphling_morph_agi"
 	{
+		"BaseClass"		"morphling_morph_agi"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE"
@@ -251,6 +256,7 @@
 	// icon: morphling_morph_str
 	"morphling_morph_str"
 	{
+		"BaseClass"		"morphling_morph_str"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE"
@@ -290,6 +296,7 @@
 	// icon: morphling_ebb
 	"morphling_ebb"
 	{
+		"BaseClass"		"morphling_ebb"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -304,6 +311,7 @@
 	// icon: morphling_flow
 	"morphling_flow"
 	{
+		"BaseClass"		"morphling_flow"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -325,6 +333,7 @@
 	// icon: morphling_replicate
 	"morphling_replicate"
 	{
+		"BaseClass"		"morphling_replicate"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -410,6 +419,7 @@
 	// icon: morphling_morph_replicate
 	"morphling_morph_replicate"
 	{
+		"BaseClass"		"morphling_morph_replicate"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -434,6 +444,7 @@
 	// icon: morphling_hybrid
 	"morphling_hybrid"
 	{
+		"BaseClass"		"morphling_hybrid"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN"
@@ -494,6 +505,7 @@
 	// icon: morphling_accumulation
 	"morphling_accumulation"
 	{
+		"BaseClass"		"morphling_accumulation"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
 
 		"MaxLevel"						"1"

@@ -9,6 +9,7 @@
 	// icon: rubick_telekinesis
 	"rubick_telekinesis"
 	{
+		"BaseClass"		"rubick_telekinesis"
 	// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -92,6 +93,7 @@
 	// icon: rubick_telekinesis_land
 	"rubick_telekinesis_land"
 	{
+		"BaseClass"		"rubick_telekinesis_land"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -117,6 +119,7 @@
 	// icon: rubick_telekinesis_land_self
 	"rubick_telekinesis_land_self"
 	{
+		"BaseClass"		"rubick_telekinesis_land_self"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
@@ -142,6 +145,7 @@
 	// icon: rubick_fade_bolt
 	"rubick_fade_bolt"
 	{
+		"BaseClass"		"rubick_fade_bolt"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -209,6 +213,7 @@
 	// icon: rubick_null_field
 	"rubick_null_field"
 	{
+		"BaseClass"		"rubick_null_field"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
@@ -241,6 +246,7 @@
 	// icon: rubick_arcane_supremacy
 	"rubick_arcane_supremacy"
 	{
+		"BaseClass"		"rubick_arcane_supremacy"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -274,6 +280,7 @@
 	// icon: rubick_might_and_magus
 	"rubick_might_and_magus"
 	{
+		"BaseClass"		"rubick_might_and_magus"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
@@ -297,6 +304,7 @@
 	// icon: rubick_spell_steal
 	"rubick_spell_steal"
 	{
+		"BaseClass"		"rubick_spell_steal"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -361,6 +369,7 @@
 	// icon: rubick_empty1
 	"rubick_empty1"
 	{
+		"BaseClass"		"rubick_empty1"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -375,6 +384,7 @@
 	// icon: rubick_empty2
 	"rubick_empty2"
 	{
+		"BaseClass"		"rubick_empty2"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -388,6 +398,7 @@
 	// ---- rubick_hidden1  (rubick_hidden1) ----
 	"rubick_hidden1"
 	{
+		"BaseClass"		"rubick_hidden1"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -401,6 +412,7 @@
 	// ---- rubick_hidden2  (rubick_hidden2) ----
 	"rubick_hidden2"
 	{
+		"BaseClass"		"rubick_hidden2"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -414,6 +426,7 @@
 	// ---- rubick_hidden3  (rubick_hidden3) ----
 	"rubick_hidden3"
 	{
+		"BaseClass"		"rubick_hidden3"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"

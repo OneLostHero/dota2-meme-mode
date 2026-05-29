@@ -9,6 +9,7 @@
 	// icon: bounty_hunter_shuriken_toss
 	"bounty_hunter_shuriken_toss"
 	{
+		"BaseClass"		"bounty_hunter_shuriken_toss"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -89,6 +90,7 @@
 	// icon: bounty_hunter_jinada
 	"bounty_hunter_jinada"
 	{
+		"BaseClass"		"bounty_hunter_jinada"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK | DOTA_ABILITY_BEHAVIOR_BREAK_DISABLES"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilitySound"					"Hero_BountyHunter.Jinada"
@@ -135,6 +137,7 @@
 	// icon: bounty_hunter_wind_walk
 	"bounty_hunter_wind_walk"
 	{
+		"BaseClass"		"bounty_hunter_wind_walk"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
@@ -199,6 +202,7 @@
 	// icon: bounty_hunter_wind_walk_ally
 	"bounty_hunter_wind_walk_ally"
 	{
+		"BaseClass"		"bounty_hunter_wind_walk_ally"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -238,6 +242,7 @@
 	// icon: bounty_hunter_track
 	"bounty_hunter_track"
 	{
+		"BaseClass"		"bounty_hunter_track"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -294,6 +299,7 @@
 	// ---- bounty_hunter_lookout  (bounty_hunter_lookout) ----
 	"bounty_hunter_lookout"
 	{
+		"BaseClass"		"bounty_hunter_lookout"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -338,6 +344,7 @@
 	// icon: bounty_hunter_cutpurse
 	"bounty_hunter_cutpurse"
 	{
+		"BaseClass"		"bounty_hunter_cutpurse"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -360,6 +367,7 @@
 	// icon: bounty_hunter_big_game_hunter
 	"bounty_hunter_big_game_hunter"
 	{
+		"BaseClass"		"bounty_hunter_big_game_hunter"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"

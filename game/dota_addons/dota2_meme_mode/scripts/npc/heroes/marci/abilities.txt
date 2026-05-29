@@ -9,6 +9,7 @@
 	// icon: marci_grapple
 	"marci_grapple"
 	{
+		"BaseClass"		"marci_grapple"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -69,6 +70,7 @@
 	// icon: marci_unleash
 	"marci_unleash"
 	{
+		"BaseClass"		"marci_unleash"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -154,6 +156,7 @@
 	// icon: marci_companion_run
 	"marci_companion_run"
 	{
+		"BaseClass"		"marci_companion_run"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
@@ -247,6 +250,7 @@
 	// icon: marci_guardian
 	"marci_guardian"
 	{
+		"BaseClass"		"marci_guardian"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -305,6 +309,7 @@
 	// icon: marci_bodyguard
 	"marci_bodyguard"
 	{
+		"BaseClass"		"marci_bodyguard"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -366,6 +371,7 @@
 	// icon: marci_special_delivery
 	"marci_special_delivery"
 	{
+		"BaseClass"		"marci_special_delivery"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

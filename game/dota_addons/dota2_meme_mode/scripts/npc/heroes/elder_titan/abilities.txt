@@ -9,6 +9,7 @@
 	// icon: elder_titan_echo_stomp
 	"elder_titan_echo_stomp"
 	{
+		"BaseClass"		"elder_titan_echo_stomp"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
@@ -70,6 +71,7 @@
 	// icon: elder_titan_echo_stomp_spirit
 	"elder_titan_echo_stomp_spirit"
 	{
+		"BaseClass"		"elder_titan_echo_stomp_spirit"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
@@ -127,6 +129,7 @@
 	// icon: elder_titan_ancestral_spirit
 	"elder_titan_ancestral_spirit"
 	{
+		"BaseClass"		"elder_titan_ancestral_spirit"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -222,6 +225,7 @@
 	// icon: elder_titan_return_spirit
 	"elder_titan_return_spirit"
 	{
+		"BaseClass"		"elder_titan_return_spirit"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
@@ -244,6 +248,7 @@
 	// icon: elder_titan_move_spirit
 	"elder_titan_move_spirit"
 	{
+		"BaseClass"		"elder_titan_move_spirit"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
@@ -266,6 +271,7 @@
 	// icon: elder_titan_natural_order
 	"elder_titan_natural_order"
 	{
+		"BaseClass"		"elder_titan_natural_order"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
@@ -312,6 +318,7 @@
 	// icon: elder_titan_natural_order_spirit
 	"elder_titan_natural_order_spirit"
 	{
+		"BaseClass"		"elder_titan_natural_order_spirit"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
@@ -359,6 +366,7 @@
 	// icon: elder_titan_earth_splitter
 	"elder_titan_earth_splitter"
 	{
+		"BaseClass"		"elder_titan_earth_splitter"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
@@ -427,6 +435,7 @@
 	// icon: elder_titan_momentum
 	"elder_titan_momentum"
 	{
+		"BaseClass"		"elder_titan_momentum"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

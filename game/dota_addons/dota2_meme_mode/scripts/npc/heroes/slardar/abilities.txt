@@ -9,6 +9,7 @@
 	// icon: slardar_seaborn_sentinel
 	"slardar_seaborn_sentinel"
 	{
+		"BaseClass"		"slardar_seaborn_sentinel"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -49,6 +50,7 @@
 	// icon: slardar_sprint
 	"slardar_sprint"
 	{
+		"BaseClass"		"slardar_sprint"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
@@ -107,6 +109,7 @@
 	// ---- slardar_scepter  (slardar_scepter) ----
 	"slardar_scepter"
 	{
+		"BaseClass"		"slardar_scepter"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -138,6 +141,7 @@
 	// icon: slardar_slithereen_crush
 	"slardar_slithereen_crush"
 	{
+		"BaseClass"		"slardar_slithereen_crush"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -227,6 +231,7 @@
 	// icon: slardar_bash
 	"slardar_bash"
 	{
+		"BaseClass"		"slardar_bash"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -261,6 +266,7 @@
 	// icon: slardar_amplify_damage
 	"slardar_amplify_damage"
 	{
+		"BaseClass"		"slardar_amplify_damage"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"

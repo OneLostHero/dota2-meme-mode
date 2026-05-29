@@ -9,6 +9,7 @@
 	// icon: lich_frost_nova
 	"lich_frost_nova"
 	{
+		"BaseClass"		"lich_frost_nova"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -74,6 +75,7 @@
 	// icon: lich_dark_sorcery
 	"lich_dark_sorcery"
 	{
+		"BaseClass"		"lich_dark_sorcery"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -109,6 +111,7 @@
 	// icon: lich_death_charge
 	"lich_death_charge"
 	{
+		"BaseClass"		"lich_death_charge"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
@@ -142,6 +145,7 @@
 	// icon: lich_sinister_gaze
 	"lich_sinister_gaze"
 	{
+		"BaseClass"		"lich_sinister_gaze"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_CHANNEL"
@@ -198,6 +202,7 @@
 	// icon: lich_frost_aura
 	"lich_frost_aura"
 	{
+		"BaseClass"		"lich_frost_aura"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
@@ -225,6 +230,7 @@
 	// icon: lich_frost_armor
 	"lich_frost_armor"
 	{
+		"BaseClass"		"lich_frost_armor"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
@@ -272,6 +278,7 @@
 	// icon: lich_frost_shield
 	"lich_frost_shield"
 	{
+		"BaseClass"		"lich_frost_shield"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
@@ -350,6 +357,7 @@
 	// icon: lich_chain_frost
 	"lich_chain_frost"
 	{
+		"BaseClass"		"lich_chain_frost"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -444,6 +452,7 @@
 	// ---- lich_variant_ice_rite  (lich_variant_ice_rite) ----
 	"lich_variant_ice_rite"
 	{
+		"BaseClass"		"lich_variant_ice_rite"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -489,6 +498,7 @@
 	// ---- lich_innate_chain_frost_projectile_speed  (lich_innate_chain_frost_projectile_speed) ----
 	"lich_innate_chain_frost_projectile_speed"
 	{
+		"BaseClass"		"lich_innate_chain_frost_projectile_speed"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -506,6 +516,7 @@
 	// ---- lich_innate_chain_frost_bounces  (lich_innate_chain_frost_bounces) ----
 	"lich_innate_chain_frost_bounces"
 	{
+		"BaseClass"		"lich_innate_chain_frost_bounces"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -525,6 +536,7 @@
 	// icon: lich_ice_spire
 	"lich_ice_spire"
 	{
+		"BaseClass"		"lich_ice_spire"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"

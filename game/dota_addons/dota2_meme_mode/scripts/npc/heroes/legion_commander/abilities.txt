@@ -9,6 +9,7 @@
 	// icon: legion_commander_overwhelming_odds
 	"legion_commander_overwhelming_odds"
 	{
+		"BaseClass"		"legion_commander_overwhelming_odds"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -96,6 +97,7 @@
 	// icon: legion_commander_press_the_attack
 	"legion_commander_press_the_attack"
 	{
+		"BaseClass"		"legion_commander_press_the_attack"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -157,6 +159,7 @@
 	// icon: legion_commander_moment_of_courage
 	"legion_commander_moment_of_courage"
 	{
+		"BaseClass"		"legion_commander_moment_of_courage"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -196,6 +199,7 @@
 	// icon: legion_commander_duel
 	"legion_commander_duel"
 	{
+		"BaseClass"		"legion_commander_duel"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"

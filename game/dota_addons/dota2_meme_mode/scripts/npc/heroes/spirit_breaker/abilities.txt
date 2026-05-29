@@ -8,6 +8,7 @@
 	// icon: spirit_breaker_charge_of_darkness
 	"spirit_breaker_charge_of_darkness"
 	{
+		"BaseClass"		"spirit_breaker_charge_of_darkness"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_ALERT_TARGET | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
@@ -96,6 +97,7 @@
 	// icon: spirit_breaker_bulldoze
 	"spirit_breaker_bulldoze"
 	{
+		"BaseClass"		"spirit_breaker_bulldoze"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -137,6 +139,7 @@
 	// icon: spirit_breaker_empowering_haste
 	"spirit_breaker_empowering_haste"
 	{
+		"BaseClass"		"spirit_breaker_empowering_haste"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_AURA"
@@ -180,6 +183,7 @@
 	// icon: spirit_breaker_greater_bash
 	"spirit_breaker_greater_bash"
 	{
+		"BaseClass"		"spirit_breaker_greater_bash"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -228,6 +232,7 @@
 	// icon: spirit_breaker_nether_strike
 	"spirit_breaker_nether_strike"
 	{
+		"BaseClass"		"spirit_breaker_nether_strike"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
@@ -309,6 +314,7 @@
 	// icon: spirit_breaker_planar_pocket
 	"spirit_breaker_planar_pocket"
 	{
+		"BaseClass"		"spirit_breaker_planar_pocket"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -353,6 +359,7 @@
 	// ---- spirit_breaker_knockback_amp  (spirit_breaker_knockback_amp) ----
 	"spirit_breaker_knockback_amp"
 	{
+		"BaseClass"		"spirit_breaker_knockback_amp"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
@@ -372,6 +379,7 @@
 	// icon: spirit_breaker_herd_mentality
 	"spirit_breaker_herd_mentality"
 	{
+		"BaseClass"		"spirit_breaker_herd_mentality"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"

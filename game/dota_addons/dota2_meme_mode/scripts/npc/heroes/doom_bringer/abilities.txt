@@ -9,6 +9,7 @@
 	// icon: doom_bringer_devour
 	"doom_bringer_devour"
 	{
+		"BaseClass"		"doom_bringer_devour"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_ALT_CASTABLE"
@@ -76,6 +77,7 @@
 	// icon: doom_bringer_lvl_pain
 	"doom_bringer_lvl_pain"
 	{
+		"BaseClass"		"doom_bringer_lvl_pain"
 	// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -97,6 +99,7 @@
 	// icon: doom_bringer_scorched_earth
 	"doom_bringer_scorched_earth"
 	{
+		"BaseClass"		"doom_bringer_scorched_earth"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -156,6 +159,7 @@
 	// icon: doom_bringer_infernal_blade
 	"doom_bringer_infernal_blade"
 	{
+		"BaseClass"		"doom_bringer_infernal_blade"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
@@ -217,6 +221,7 @@
 	// icon: doom_bringer_doom
 	"doom_bringer_doom"
 	{
+		"BaseClass"		"doom_bringer_doom"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -293,6 +298,7 @@
 	// icon: doom_bringer_empty1
 	"doom_bringer_empty1"
 	{
+		"BaseClass"		"doom_bringer_empty1"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -307,6 +313,7 @@
 	// icon: doom_bringer_empty2
 	"doom_bringer_empty2"
 	{
+		"BaseClass"		"doom_bringer_empty2"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -321,6 +328,7 @@
 	// icon: doom_bringer_devils_bargain
 	"doom_bringer_devils_bargain"
 	{
+		"BaseClass"		"doom_bringer_devils_bargain"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

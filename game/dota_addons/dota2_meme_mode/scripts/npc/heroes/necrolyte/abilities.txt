@@ -9,6 +9,7 @@
 	// icon: necrolyte_death_seeker
 	"necrolyte_death_seeker"
 	{
+		"BaseClass"		"necrolyte_death_seeker"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -59,6 +60,7 @@
 	// icon: necrolyte_death_pulse
 	"necrolyte_death_pulse"
 	{
+		"BaseClass"		"necrolyte_death_pulse"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -112,6 +114,7 @@
 	// icon: necrolyte_heartstopper_aura
 	"necrolyte_heartstopper_aura"
 	{
+		"BaseClass"		"necrolyte_heartstopper_aura"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
@@ -161,6 +164,7 @@
 	// icon: necrolyte_sadist
 	"necrolyte_sadist"
 	{
+		"BaseClass"		"necrolyte_sadist"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -198,6 +202,7 @@
 	// icon: necrolyte_ghost_shroud
 	"necrolyte_ghost_shroud"
 	{
+		"BaseClass"		"necrolyte_ghost_shroud"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		
@@ -256,6 +261,7 @@
 	// ---- necrolyte_sadist_stop  (necrolyte_sadist_stop) ----
 	"necrolyte_sadist_stop"
 	{
+		"BaseClass"		"necrolyte_sadist_stop"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
@@ -272,6 +278,7 @@
 	// icon: necrolyte_reapers_scythe
 	"necrolyte_reapers_scythe"
 	{
+		"BaseClass"		"necrolyte_reapers_scythe"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"

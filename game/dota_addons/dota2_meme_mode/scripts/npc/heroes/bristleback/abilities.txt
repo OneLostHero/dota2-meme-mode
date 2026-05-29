@@ -9,6 +9,7 @@
 	// icon: bristleback_hairball
 	"bristleback_hairball"
 	{
+		"BaseClass"		"bristleback_hairball"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -57,6 +58,7 @@
 	// icon: bristleback_viscous_nasal_goo
 	"bristleback_viscous_nasal_goo"
 	{
+		"BaseClass"		"bristleback_viscous_nasal_goo"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -116,6 +118,7 @@
 	// icon: bristleback_quill_spray
 	"bristleback_quill_spray"
 	{
+		"BaseClass"		"bristleback_quill_spray"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -167,6 +170,7 @@
 	// icon: bristleback_bristleback
 	"bristleback_bristleback"
 	{
+		"BaseClass"		"bristleback_bristleback"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -227,6 +231,7 @@
 	// icon: bristleback_warpath
 	"bristleback_warpath"
 	{
+		"BaseClass"		"bristleback_warpath"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"

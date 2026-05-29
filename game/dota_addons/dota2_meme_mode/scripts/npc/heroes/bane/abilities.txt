@@ -9,6 +9,7 @@
 	// icon: bane_enfeeble
 	"bane_enfeeble"
 	{
+		"BaseClass"		"bane_enfeeble"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -71,6 +72,7 @@
 	// icon: bane_brain_sap
 	"bane_brain_sap"
 	{
+		"BaseClass"		"bane_brain_sap"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -125,6 +127,7 @@
 	// icon: bane_fiends_grip
 	"bane_fiends_grip"
 	{
+		"BaseClass"		"bane_fiends_grip"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -193,6 +196,7 @@
 	// icon: bane_nightmare
 	"bane_nightmare"
 	{
+		"BaseClass"		"bane_nightmare"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
@@ -261,6 +265,7 @@
 	// icon: bane_nightmare_end
 	"bane_nightmare_end"
 	{
+		"BaseClass"		"bane_nightmare_end"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
@@ -275,6 +280,7 @@
 	// icon: bane_ichor_of_nyctasha
 	"bane_ichor_of_nyctasha"
 	{
+		"BaseClass"		"bane_ichor_of_nyctasha"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
 
 		"MaxLevel"						"1"

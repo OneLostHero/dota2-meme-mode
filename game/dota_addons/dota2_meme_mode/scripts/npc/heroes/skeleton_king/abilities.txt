@@ -9,6 +9,7 @@
 	// icon: skeleton_king_hellfire_blast
 	"skeleton_king_hellfire_blast"
 	{
+		"BaseClass"		"skeleton_king_hellfire_blast"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -84,6 +85,7 @@
 	// icon: skeleton_king_bone_guard
 	"skeleton_king_bone_guard"
 	{
+		"BaseClass"		"skeleton_king_bone_guard"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -132,6 +134,7 @@
 	// icon: skeleton_king_spectral_blade
 	"skeleton_king_spectral_blade"
 	{
+		"BaseClass"		"skeleton_king_spectral_blade"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -161,6 +164,7 @@
 	// icon: skeleton_king_mortal_strike
 	"skeleton_king_mortal_strike"
 	{
+		"BaseClass"		"skeleton_king_mortal_strike"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -199,6 +203,7 @@
 	// icon: skeleton_king_reincarnation
 	"skeleton_king_reincarnation"
 	{
+		"BaseClass"		"skeleton_king_reincarnation"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CAN_SELF_CAST"
@@ -269,6 +274,7 @@
 	// icon: skeleton_king_vampiric_spirit
 	"skeleton_king_vampiric_spirit"
 	{
+		"BaseClass"		"skeleton_king_vampiric_spirit"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

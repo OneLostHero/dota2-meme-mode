@@ -9,6 +9,7 @@
 	// icon: weaver_the_swarm
 	"weaver_the_swarm"
 	{
+		"BaseClass"		"weaver_the_swarm"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -79,6 +80,7 @@
 	// icon: weaver_shukuchi
 	"weaver_shukuchi"
 	{
+		"BaseClass"		"weaver_shukuchi"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
@@ -163,6 +165,7 @@
 	// icon: weaver_geminate_attack
 	"weaver_geminate_attack"
 	{
+		"BaseClass"		"weaver_geminate_attack"
 		// General
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK | DOTA_ABILITY_BEHAVIOR_BREAK_DISABLES"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
@@ -209,6 +212,7 @@
 	// icon: weaver_time_lapse
 	"weaver_time_lapse"
 	{
+		"BaseClass"		"weaver_time_lapse"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"

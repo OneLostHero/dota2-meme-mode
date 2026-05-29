@@ -9,6 +9,7 @@
 	// icon: mars_spear
 	"mars_spear"
 	{
+		"BaseClass"		"mars_spear"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL"
@@ -111,6 +112,7 @@
 	// icon: mars_gods_rebuke
 	"mars_gods_rebuke"
 	{
+		"BaseClass"		"mars_gods_rebuke"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN"
@@ -171,6 +173,7 @@
 	// icon: mars_dauntless
 	"mars_dauntless"
 	{
+		"BaseClass"		"mars_dauntless"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -196,6 +199,7 @@
 	// icon: mars_bulwark
 	"mars_bulwark"
 	{
+		"BaseClass"		"mars_bulwark"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE"
@@ -286,6 +290,7 @@
 	// icon: mars_arena_of_blood
 	"mars_arena_of_blood"
 	{
+		"BaseClass"		"mars_arena_of_blood"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"

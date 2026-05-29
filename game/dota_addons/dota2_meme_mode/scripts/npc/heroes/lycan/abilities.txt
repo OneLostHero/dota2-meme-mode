@@ -9,6 +9,7 @@
 	// icon: lycan_summon_wolves
 	"lycan_summon_wolves"
 	{
+		"BaseClass"		"lycan_summon_wolves"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -132,6 +133,7 @@
 	// icon: lycan_wolf_bite
 	"lycan_wolf_bite"
 	{
+		"BaseClass"		"lycan_wolf_bite"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -183,6 +185,7 @@
 	// icon: lycan_howl
 	"lycan_howl"
 	{
+		"BaseClass"		"lycan_howl"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -243,6 +246,7 @@
 	// icon: lycan_feral_impulse
 	"lycan_feral_impulse"
 	{
+		"BaseClass"		"lycan_feral_impulse"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -270,6 +274,7 @@
 	// icon: lycan_shapeshift
 	"lycan_shapeshift"
 	{
+		"BaseClass"		"lycan_shapeshift"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -324,6 +329,7 @@
 	// icon: lycan_summon_wolves_critical_strike
 	"lycan_summon_wolves_critical_strike"
 	{
+		"BaseClass"		"lycan_summon_wolves_critical_strike"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"MaxLevel"						"1"
@@ -356,6 +362,7 @@
 	// icon: lycan_summon_wolves_invisibility
 	"lycan_summon_wolves_invisibility"
 	{
+		"BaseClass"		"lycan_summon_wolves_invisibility"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -512,6 +519,7 @@
 	// icon: lycan_apex_predator
 	"lycan_apex_predator"
 	{
+		"BaseClass"		"lycan_apex_predator"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

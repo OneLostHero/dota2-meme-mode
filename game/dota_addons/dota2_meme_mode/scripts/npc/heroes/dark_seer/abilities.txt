@@ -9,6 +9,7 @@
 	// icon: dark_seer_normal_punch
 	"dark_seer_normal_punch"
 	{
+		"BaseClass"		"dark_seer_normal_punch"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -46,6 +47,7 @@
 	// icon: dark_seer_vacuum
 	"dark_seer_vacuum"
 	{
+		"BaseClass"		"dark_seer_vacuum"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -92,6 +94,7 @@
 	// icon: dark_seer_ion_shell
 	"dark_seer_ion_shell"
 	{
+		"BaseClass"		"dark_seer_ion_shell"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
@@ -164,6 +167,7 @@
 	// icon: dark_seer_surge
 	"dark_seer_surge"
 	{
+		"BaseClass"		"dark_seer_surge"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -241,6 +245,7 @@
 	// icon: dark_seer_wall_of_replica
 	"dark_seer_wall_of_replica"
 	{
+		"BaseClass"		"dark_seer_wall_of_replica"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING"
@@ -309,6 +314,7 @@
 	// icon: dark_seer_quick_wit
 	"dark_seer_quick_wit"
 	{
+		"BaseClass"		"dark_seer_quick_wit"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -328,6 +334,7 @@
 	// icon: dark_seer_heart_of_battle
 	"dark_seer_heart_of_battle"
 	{
+		"BaseClass"		"dark_seer_heart_of_battle"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -351,6 +358,7 @@
 	// icon: dark_seer_mental_fortitude
 	"dark_seer_mental_fortitude"
 	{
+		"BaseClass"		"dark_seer_mental_fortitude"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

@@ -9,6 +9,7 @@
 	// icon: invoker_quas
 	"invoker_quas"
 	{
+		"BaseClass"		"invoker_quas"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -63,6 +64,7 @@
 	// icon: invoker_wex
 	"invoker_wex"
 	{
+		"BaseClass"		"invoker_wex"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -106,6 +108,7 @@
 	// icon: invoker_exort
 	"invoker_exort"
 	{
+		"BaseClass"		"invoker_exort"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -162,6 +165,7 @@
 	// icon: invoker_empty1
 	"invoker_empty1"
 	{
+		"BaseClass"		"invoker_empty1"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -176,6 +180,7 @@
 	// icon: invoker_empty2
 	"invoker_empty2"
 	{
+		"BaseClass"		"invoker_empty2"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -190,6 +195,7 @@
 	// icon: invoker_invoke
 	"invoker_invoke"
 	{
+		"BaseClass"		"invoker_invoke"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -220,6 +226,7 @@
 	// ---- invoker_attribute_bonus  (invoker_attribute_bonus) ----
 	"invoker_attribute_bonus"
 	{
+		"BaseClass"		"invoker_attribute_bonus"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
@@ -243,6 +250,7 @@
 	// icon: invoker_cold_snap
 	"invoker_cold_snap"
 	{
+		"BaseClass"		"invoker_cold_snap"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -311,6 +319,7 @@
 	// icon: invoker_ghost_walk
 	"invoker_ghost_walk"
 	{
+		"BaseClass"		"invoker_ghost_walk"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -374,6 +383,7 @@
 	// icon: invoker_tornado
 	"invoker_tornado"
 	{
+		"BaseClass"		"invoker_tornado"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -447,6 +457,7 @@
 	// icon: invoker_emp
 	"invoker_emp"
 	{
+		"BaseClass"		"invoker_emp"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -509,6 +520,7 @@
 	// icon: invoker_alacrity
 	"invoker_alacrity"
 	{
+		"BaseClass"		"invoker_alacrity"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -561,6 +573,7 @@
 	// icon: invoker_chaos_meteor
 	"invoker_chaos_meteor"
 	{
+		"BaseClass"		"invoker_chaos_meteor"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -642,6 +655,7 @@
 	// icon: invoker_sun_strike
 	"invoker_sun_strike"
 	{
+		"BaseClass"		"invoker_sun_strike"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -717,6 +731,7 @@
 	// icon: invoker_forge_spirit
 	"invoker_forge_spirit"
 	{
+		"BaseClass"		"invoker_forge_spirit"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -791,6 +806,7 @@
 	// icon: forged_spirit_melting_strike
 	"forged_spirit_melting_strike"
 	{
+		"BaseClass"		"forged_spirit_melting_strike"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -817,6 +833,7 @@
 	// icon: invoker_ice_wall
 	"invoker_ice_wall"
 	{
+		"BaseClass"		"invoker_ice_wall"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -881,6 +898,7 @@
 	// icon: invoker_deafening_blast
 	"invoker_deafening_blast"
 	{
+		"BaseClass"		"invoker_deafening_blast"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -954,6 +972,7 @@
 	// icon: invoker_mastermind
 	"invoker_mastermind"
 	{
+		"BaseClass"		"invoker_mastermind"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -973,6 +992,7 @@
 	// icon: invoker_cold_snap_ad
 	"invoker_cold_snap_ad"
 	{
+		"BaseClass"		"invoker_cold_snap_ad"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -1027,6 +1047,7 @@
 	// icon: invoker_ghost_walk_ad
 	"invoker_ghost_walk_ad"
 	{
+		"BaseClass"		"invoker_ghost_walk_ad"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
@@ -1069,6 +1090,7 @@
 	// icon: invoker_tornado_ad
 	"invoker_tornado_ad"
 	{
+		"BaseClass"		"invoker_tornado_ad"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -1125,6 +1147,7 @@
 	// icon: invoker_emp_ad
 	"invoker_emp_ad"
 	{
+		"BaseClass"		"invoker_emp_ad"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -1183,6 +1206,7 @@
 	// icon: invoker_alacrity_ad
 	"invoker_alacrity_ad"
 	{
+		"BaseClass"		"invoker_alacrity_ad"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -1231,6 +1255,7 @@
 	// icon: invoker_sun_strike_ad
 	"invoker_sun_strike_ad"
 	{
+		"BaseClass"		"invoker_sun_strike_ad"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -1296,6 +1321,7 @@
 	// icon: invoker_forge_spirit_ad
 	"invoker_forge_spirit_ad"
 	{
+		"BaseClass"		"invoker_forge_spirit_ad"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -1339,6 +1365,7 @@
 	// icon: invoker_chaos_meteor_ad
 	"invoker_chaos_meteor_ad"
 	{
+		"BaseClass"		"invoker_chaos_meteor_ad"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -1418,6 +1445,7 @@
 	// icon: invoker_ice_wall_ad
 	"invoker_ice_wall_ad"
 	{
+		"BaseClass"		"invoker_ice_wall_ad"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -1471,6 +1499,7 @@
 	// icon: invoker_deafening_blast_ad
 	"invoker_deafening_blast_ad"
 	{
+		"BaseClass"		"invoker_deafening_blast_ad"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"

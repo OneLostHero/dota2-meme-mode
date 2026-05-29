@@ -9,6 +9,7 @@
 	// icon: lina_dragon_slave
 	"lina_dragon_slave"
 	{
+		"BaseClass"		"lina_dragon_slave"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT"
@@ -93,6 +94,7 @@
 	// icon: lina_light_strike_array
 	"lina_light_strike_array"
 	{
+		"BaseClass"		"lina_light_strike_array"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -159,6 +161,7 @@
 	// icon: lina_fiery_soul
 	"lina_fiery_soul"
 	{
+		"BaseClass"		"lina_fiery_soul"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -207,6 +210,7 @@
 	// icon: lina_flame_cloak
 	"lina_flame_cloak"
 	{
+		"BaseClass"		"lina_flame_cloak"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -243,6 +247,7 @@
 	// icon: lina_laguna_blade
 	"lina_laguna_blade"
 	{
+		"BaseClass"		"lina_laguna_blade"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -339,6 +344,7 @@
 	// icon: lina_slow_burn
 	"lina_slow_burn"
 	{
+		"BaseClass"		"lina_slow_burn"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"

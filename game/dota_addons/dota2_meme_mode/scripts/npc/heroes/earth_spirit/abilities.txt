@@ -9,6 +9,7 @@
 	// icon: earth_spirit_boulder_smash
 	"earth_spirit_boulder_smash"
 	{
+		"BaseClass"		"earth_spirit_boulder_smash"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -84,6 +85,7 @@
 	// icon: earth_spirit_rolling_boulder
 	"earth_spirit_rolling_boulder"
 	{
+		"BaseClass"		"earth_spirit_rolling_boulder"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
@@ -154,6 +156,7 @@
 	// icon: earth_spirit_geomagnetic_grip
 	"earth_spirit_geomagnetic_grip"
 	{
+		"BaseClass"		"earth_spirit_geomagnetic_grip"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -209,6 +212,7 @@
 	// icon: earth_spirit_stone_caller
 	"earth_spirit_stone_caller"
 	{
+		"BaseClass"		"earth_spirit_stone_caller"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -283,6 +287,7 @@
 	// icon: earth_spirit_petrify
 	"earth_spirit_petrify"
 	{
+		"BaseClass"		"earth_spirit_petrify"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET |  DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -340,6 +345,7 @@
 	// icon: earth_spirit_magnetize
 	"earth_spirit_magnetize"
 	{
+		"BaseClass"		"earth_spirit_magnetize"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"

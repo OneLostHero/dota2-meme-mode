@@ -9,6 +9,7 @@
 	// icon: enigma_malefice
 	"enigma_malefice"
 	{
+		"BaseClass"		"enigma_malefice"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -76,6 +77,7 @@
 	// icon: enigma_demonic_conversion
 	"enigma_demonic_conversion"
 	{
+		"BaseClass"		"enigma_demonic_conversion"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
@@ -148,6 +150,7 @@
 	// icon: enigma_midnight_pulse
 	"enigma_midnight_pulse"
 	{
+		"BaseClass"		"enigma_midnight_pulse"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -199,6 +202,7 @@
 	// icon: enigma_black_hole
 	"enigma_black_hole"
 	{
+		"BaseClass"		"enigma_black_hole"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
@@ -379,6 +383,7 @@
 	// icon: enigma_gravity_well
 	"enigma_gravity_well"
 	{
+		"BaseClass"		"enigma_gravity_well"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_NONE"	
 
@@ -407,6 +412,7 @@
 	// icon: enigma_splitting_image
 	"enigma_splitting_image"
 	{
+		"BaseClass"		"enigma_splitting_image"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -427,6 +433,7 @@
 	// icon: enigma_event_horizon
 	"enigma_event_horizon"
 	{
+		"BaseClass"		"enigma_event_horizon"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

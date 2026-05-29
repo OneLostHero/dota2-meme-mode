@@ -9,6 +9,7 @@
 	// icon: shadow_demon_disruption
 	"shadow_demon_disruption"
 	{
+		"BaseClass"		"shadow_demon_disruption"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
@@ -72,6 +73,7 @@
 	// icon: shadow_demon_soul_catcher
 	"shadow_demon_soul_catcher"
 	{
+		"BaseClass"		"shadow_demon_soul_catcher"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -124,6 +126,7 @@
 	// icon: shadow_demon_shadow_servant
 	"shadow_demon_shadow_servant"
 	{
+		"BaseClass"		"shadow_demon_shadow_servant"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
@@ -153,6 +156,7 @@
 	// icon: shadow_demon_shadow_poison
 	"shadow_demon_shadow_poison"
 	{
+		"BaseClass"		"shadow_demon_shadow_poison"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -219,6 +223,7 @@
 	// icon: shadow_demon_shadow_poison_release
 	"shadow_demon_shadow_poison_release"
 	{
+		"BaseClass"		"shadow_demon_shadow_poison_release"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -241,6 +246,7 @@
 	// icon: shadow_demon_demonic_purge
 	"shadow_demon_demonic_purge"
 	{
+		"BaseClass"		"shadow_demon_demonic_purge"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -312,6 +318,7 @@
 	// icon: shadow_demon_demonic_cleanse
 	"shadow_demon_demonic_cleanse"
 	{
+		"BaseClass"		"shadow_demon_demonic_cleanse"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -380,6 +387,7 @@
 	// icon: shadow_demon_disseminate
 	"shadow_demon_disseminate"
 	{
+		"BaseClass"		"shadow_demon_disseminate"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -435,6 +443,7 @@
 	// icon: shadow_demon_menace
 	"shadow_demon_menace"
 	{
+		"BaseClass"		"shadow_demon_menace"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

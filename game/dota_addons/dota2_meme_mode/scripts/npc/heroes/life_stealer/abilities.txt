@@ -8,6 +8,7 @@
 	// icon: life_stealer_rage
 	"life_stealer_rage"
 	{
+		"BaseClass"		"life_stealer_rage"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -66,6 +67,7 @@
 	// icon: life_stealer_unfettered
 	"life_stealer_unfettered"
 	{
+		"BaseClass"		"life_stealer_unfettered"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
@@ -113,6 +115,7 @@
 	// icon: life_stealer_feast
 	"life_stealer_feast"
 	{
+		"BaseClass"		"life_stealer_feast"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -149,6 +152,7 @@
 	// icon: life_stealer_open_wounds
 	"life_stealer_open_wounds"
 	{
+		"BaseClass"		"life_stealer_open_wounds"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -213,6 +217,7 @@
 	// icon: life_stealer_ghoul_frenzy
 	"life_stealer_ghoul_frenzy"
 	{
+		"BaseClass"		"life_stealer_ghoul_frenzy"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -250,6 +255,7 @@
 	// icon: life_stealer_infest
 	"life_stealer_infest"
 	{
+		"BaseClass"		"life_stealer_infest"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
@@ -343,6 +349,7 @@
 	// icon: life_stealer_assimilate
 	"life_stealer_assimilate"
 	{
+		"BaseClass"		"life_stealer_assimilate"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN"
@@ -399,6 +406,7 @@
 	// icon: life_stealer_assimilate_eject
 	"life_stealer_assimilate_eject"
 	{
+		"BaseClass"		"life_stealer_assimilate_eject"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -430,6 +438,7 @@
 	// icon: life_stealer_consume
 	"life_stealer_consume"
 	{
+		"BaseClass"		"life_stealer_consume"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -450,6 +459,7 @@
 	// icon: life_stealer_control
 	"life_stealer_control"
 	{
+		"BaseClass"		"life_stealer_control"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_UNRESTRICTED | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -470,6 +480,7 @@
 	// icon: life_stealer_corpse_eater
 	"life_stealer_corpse_eater"
 	{
+		"BaseClass"		"life_stealer_corpse_eater"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
@@ -487,6 +498,7 @@
 	// ---- life_stealer_empty_1  (life_stealer_empty_1) ----
 	"life_stealer_empty_1"
 	{
+		"BaseClass"		"life_stealer_empty_1"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -499,6 +511,7 @@
 	// ---- life_stealer_empty_2  (life_stealer_empty_2) ----
 	"life_stealer_empty_2"
 	{
+		"BaseClass"		"life_stealer_empty_2"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -511,6 +524,7 @@
 	// ---- life_stealer_empty_3  (life_stealer_empty_3) ----
 	"life_stealer_empty_3"
 	{
+		"BaseClass"		"life_stealer_empty_3"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -523,6 +537,7 @@
 	// ---- life_stealer_empty_4  (life_stealer_empty_4) ----
 	"life_stealer_empty_4"
 	{
+		"BaseClass"		"life_stealer_empty_4"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"

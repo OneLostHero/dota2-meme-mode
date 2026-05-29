@@ -9,6 +9,7 @@
 	// icon: obsidian_destroyer_arcane_orb
 	"obsidian_destroyer_arcane_orb"
 	{
+		"BaseClass"		"obsidian_destroyer_arcane_orb"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
@@ -51,6 +52,7 @@
 	// icon: obsidian_destroyer_ominous_discernment
 	"obsidian_destroyer_ominous_discernment"
 	{
+		"BaseClass"		"obsidian_destroyer_ominous_discernment"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
 
 		"MaxLevel"						"1"
@@ -73,6 +75,7 @@
 	// icon: obsidian_destroyer_astral_imprisonment
 	"obsidian_destroyer_astral_imprisonment"
 	{
+		"BaseClass"		"obsidian_destroyer_astral_imprisonment"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
@@ -174,6 +177,7 @@
 	// icon: obsidian_destroyer_essence_aura
 	"obsidian_destroyer_essence_aura"
 	{
+		"BaseClass"		"obsidian_destroyer_essence_aura"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
@@ -192,6 +196,7 @@
 	// icon: obsidian_destroyer_equilibrium
 	"obsidian_destroyer_equilibrium"
 	{
+		"BaseClass"		"obsidian_destroyer_equilibrium"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"		
@@ -239,6 +244,7 @@
 	// icon: obsidian_destroyer_sanity_eclipse
 	"obsidian_destroyer_sanity_eclipse"
 	{
+		"BaseClass"		"obsidian_destroyer_sanity_eclipse"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"

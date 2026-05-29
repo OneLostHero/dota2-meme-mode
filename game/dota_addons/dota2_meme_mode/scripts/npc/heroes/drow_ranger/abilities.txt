@@ -9,6 +9,7 @@
 	// icon: drow_ranger_frost_arrows
 	"drow_ranger_frost_arrows"
 	{
+		"BaseClass"		"drow_ranger_frost_arrows"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
@@ -111,6 +112,7 @@
 	// icon: drow_ranger_multishot
 	"drow_ranger_multishot"
 	{
+		"BaseClass"		"drow_ranger_multishot"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
@@ -172,6 +174,7 @@
 	// icon: drow_ranger_silence
 	"drow_ranger_silence"
 	{
+		"BaseClass"		"drow_ranger_silence"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
@@ -212,6 +215,7 @@
 	// icon: drow_ranger_wave_of_silence
 	"drow_ranger_wave_of_silence"
 	{
+		"BaseClass"		"drow_ranger_wave_of_silence"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
@@ -275,6 +279,7 @@
 	// icon: drow_ranger_trueshot
 	"drow_ranger_trueshot"
 	{
+		"BaseClass"		"drow_ranger_trueshot"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -308,6 +313,7 @@
 	// icon: drow_ranger_marksmanship
 	"drow_ranger_marksmanship"
 	{
+		"BaseClass"		"drow_ranger_marksmanship"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -343,6 +349,7 @@
 	// icon: drow_ranger_glacier
 	"drow_ranger_glacier"
 	{
+		"BaseClass"		"drow_ranger_glacier"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -401,6 +408,7 @@
 	// icon: drow_ranger_creep_rally
 	"drow_ranger_creep_rally"
 	{
+		"BaseClass"		"drow_ranger_creep_rally"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
@@ -415,6 +423,7 @@
 	// icon: drow_ranger_vantage_point
 	"drow_ranger_vantage_point"
 	{
+		"BaseClass"		"drow_ranger_vantage_point"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"

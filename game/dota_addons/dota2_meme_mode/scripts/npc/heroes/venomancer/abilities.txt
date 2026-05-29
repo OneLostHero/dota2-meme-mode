@@ -9,6 +9,7 @@
 	// icon: venomancer_area_poison
 	"venomancer_area_poison"
 	{
+		"BaseClass"		"venomancer_area_poison"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -50,6 +51,7 @@
 	// icon: venomancer_venomous_gale
 	"venomancer_venomous_gale"
 	{
+		"BaseClass"		"venomancer_venomous_gale"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
@@ -125,6 +127,7 @@
 	// icon: venomancer_poison_sting
 	"venomancer_poison_sting"
 	{
+		"BaseClass"		"venomancer_poison_sting"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
@@ -174,6 +177,7 @@
 	// icon: venomancer_plague_ward
 	"venomancer_plague_ward"
 	{
+		"BaseClass"		"venomancer_plague_ward"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
@@ -242,6 +246,7 @@
 	// icon: venomancer_noxious_plague
 	"venomancer_noxious_plague"
 	{
+		"BaseClass"		"venomancer_noxious_plague"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -310,6 +315,7 @@
 	// icon: venomancer_poison_nova
 	"venomancer_poison_nova"
 	{
+		"BaseClass"		"venomancer_poison_nova"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
@@ -346,6 +352,7 @@
 	// icon: venomancer_latent_poison
 	"venomancer_latent_poison"
 	{
+		"BaseClass"		"venomancer_latent_poison"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"

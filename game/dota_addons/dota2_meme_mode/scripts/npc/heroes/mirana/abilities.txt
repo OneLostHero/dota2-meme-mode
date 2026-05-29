@@ -10,6 +10,7 @@
 	// icon: mirana_arrow
 	"mirana_arrow"
 	{
+		"BaseClass"		"mirana_arrow"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -98,6 +99,7 @@
 	// icon: mirana_invis
 	"mirana_invis"
 	{
+		"BaseClass"		"mirana_invis"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -148,6 +150,7 @@
 	// icon: mirana_solar_flare
 	"mirana_solar_flare"
 	{
+		"BaseClass"		"mirana_solar_flare"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -199,6 +202,7 @@
 	// icon: mirana_leap
 	"mirana_leap"
 	{
+		"BaseClass"		"mirana_leap"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES "
@@ -290,6 +294,7 @@
 	// icon: mirana_starfall
 	"mirana_starfall"
 	{
+		"BaseClass"		"mirana_starfall"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -346,6 +351,7 @@
 	// icon: mirana_selemenes_faithful
 	"mirana_selemenes_faithful"
 	{
+		"BaseClass"		"mirana_selemenes_faithful"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
 

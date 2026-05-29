@@ -9,6 +9,7 @@
 	// icon: techies_land_mines
 	"techies_land_mines"
 	{
+		"BaseClass"		"techies_land_mines"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -79,6 +80,7 @@
 	// icon: techies_stasis_trap
 	"techies_stasis_trap"
 	{
+		"BaseClass"		"techies_stasis_trap"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -144,6 +146,7 @@
 	// icon: techies_suicide
 	"techies_suicide"
 	{
+		"BaseClass"		"techies_suicide"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
@@ -203,6 +206,7 @@
 	// icon: techies_sticky_bomb
 	"techies_sticky_bomb"
 	{
+		"BaseClass"		"techies_sticky_bomb"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -267,6 +271,7 @@
 	// icon: techies_reactive_tazer
 	"techies_reactive_tazer"
 	{
+		"BaseClass"		"techies_reactive_tazer"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -323,6 +328,7 @@
 	// icon: techies_reactive_tazer_stop
 	"techies_reactive_tazer_stop"
 	{
+		"BaseClass"		"techies_reactive_tazer_stop"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -341,6 +347,7 @@
 	// icon: techies_remote_mines
 	"techies_remote_mines"
 	{
+		"BaseClass"		"techies_remote_mines"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN"
@@ -428,6 +435,7 @@
 	// icon: techies_focused_detonate
 	"techies_focused_detonate"
 	{
+		"BaseClass"		"techies_focused_detonate"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_UNRESTRICTED | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -453,6 +461,7 @@
 	// icon: techies_remote_mines_self_detonate
 	"techies_remote_mines_self_detonate"
 	{
+		"BaseClass"		"techies_remote_mines_self_detonate"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -477,6 +486,7 @@
 	// icon: techies_minefield_sign
 	"techies_minefield_sign"
 	{
+		"BaseClass"		"techies_minefield_sign"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -545,6 +555,7 @@
 	// icon: techies_squees_scope
 	"techies_squees_scope"
 	{
+		"BaseClass"		"techies_squees_scope"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -564,6 +575,7 @@
 	// icon: techies_spoons_stash
 	"techies_spoons_stash"
 	{
+		"BaseClass"		"techies_spoons_stash"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

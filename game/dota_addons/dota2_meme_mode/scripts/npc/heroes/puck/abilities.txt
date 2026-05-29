@@ -9,6 +9,7 @@
 	// icon: puck_illusory_orb
 	"puck_illusory_orb"
 	{
+		"BaseClass"		"puck_illusory_orb"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
@@ -106,6 +107,7 @@
 	// icon: puck_ethereal_jaunt
 	"puck_ethereal_jaunt"
 	{
+		"BaseClass"		"puck_ethereal_jaunt"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
@@ -123,6 +125,7 @@
 	// icon: puck_puckish
 	"puck_puckish"
 	{
+		"BaseClass"		"puck_puckish"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"		
@@ -148,6 +151,7 @@
 	// icon: puck_waning_rift
 	"puck_waning_rift"
 	{
+		"BaseClass"		"puck_waning_rift"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -242,6 +246,7 @@
 	// icon: puck_phase_shift
 	"puck_phase_shift"
 	{
+		"BaseClass"		"puck_phase_shift"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
@@ -289,6 +294,7 @@
 	// icon: puck_dream_coil
 	"puck_dream_coil"
 	{
+		"BaseClass"		"puck_dream_coil"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"

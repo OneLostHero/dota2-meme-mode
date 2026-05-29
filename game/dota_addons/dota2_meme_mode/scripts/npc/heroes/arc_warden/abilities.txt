@@ -8,6 +8,7 @@
 	// ---- arc_warden_scepter  (arc_warden_scepter) ----
 	"arc_warden_scepter"
 	{
+		"BaseClass"		"arc_warden_scepter"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -49,6 +50,7 @@
 	// icon: arc_warden_flux
 	"arc_warden_flux"
 	{
+		"BaseClass"		"arc_warden_flux"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -121,6 +123,7 @@
 	// icon: arc_warden_magnetic_field
 	"arc_warden_magnetic_field"
 	{
+		"BaseClass"		"arc_warden_magnetic_field"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -228,6 +231,7 @@
 	// icon: arc_warden_spark_wraith
 	"arc_warden_spark_wraith"
 	{
+		"BaseClass"		"arc_warden_spark_wraith"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -352,6 +356,7 @@
 	// icon: arc_warden_tempest_double
 	"arc_warden_tempest_double"
 	{
+		"BaseClass"		"arc_warden_tempest_double"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
@@ -401,6 +406,7 @@
 	// icon: arc_warden_tempest_recall
 	"arc_warden_tempest_recall"
 	{
+		"BaseClass"		"arc_warden_tempest_recall"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN"
@@ -438,6 +444,7 @@
 	// icon: arc_warden_runic_infusion
 	"arc_warden_runic_infusion"
 	{
+		"BaseClass"		"arc_warden_runic_infusion"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
 		"AbilityTextureName"			"arc_warden_scepter"
 

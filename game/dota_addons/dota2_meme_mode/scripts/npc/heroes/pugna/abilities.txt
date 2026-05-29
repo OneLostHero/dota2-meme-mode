@@ -9,6 +9,7 @@
 	// icon: pugna_nether_blast
 	"pugna_nether_blast"
 	{
+		"BaseClass"		"pugna_nether_blast"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -58,6 +59,7 @@
 	// icon: pugna_decrepify
 	"pugna_decrepify"
 	{
+		"BaseClass"		"pugna_decrepify"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
@@ -112,6 +114,7 @@
 	// icon: pugna_nether_ward
 	"pugna_nether_ward"
 	{
+		"BaseClass"		"pugna_nether_ward"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT "		
@@ -195,6 +198,7 @@
 	// icon: pugna_life_drain
 	"pugna_life_drain"
 	{
+		"BaseClass"		"pugna_life_drain"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -303,6 +307,7 @@
 	// icon: pugna_oblivion_savant
 	"pugna_oblivion_savant"
 	{
+		"BaseClass"		"pugna_oblivion_savant"
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"Innate"				"1"
 		"MaxLevel"				"1"

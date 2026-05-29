@@ -9,6 +9,7 @@
 	// icon: templar_assassin_refraction
 	"templar_assassin_refraction"
 	{
+		"BaseClass"		"templar_assassin_refraction"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -77,6 +78,7 @@
 	// icon: templar_assassin_meld
 	"templar_assassin_meld"
 	{
+		"BaseClass"		"templar_assassin_meld"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
@@ -119,6 +121,7 @@
 	// icon: templar_assassin_psi_blades
 	"templar_assassin_psi_blades"
 	{
+		"BaseClass"		"templar_assassin_psi_blades"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -170,6 +173,7 @@
 	// icon: templar_assassin_psionic_trap
 	"templar_assassin_psionic_trap"
 	{
+		"BaseClass"		"templar_assassin_psionic_trap"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -261,6 +265,7 @@
 	// icon: templar_assassin_trap
 	"templar_assassin_trap"
 	{
+		"BaseClass"		"templar_assassin_trap"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_ALT_CASTABLE"
@@ -294,6 +299,7 @@
 	// icon: templar_assassin_trap_teleport
 	"templar_assassin_trap_teleport"
 	{
+		"BaseClass"		"templar_assassin_trap_teleport"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -334,6 +340,7 @@
 	// icon: templar_assassin_self_trap
 	"templar_assassin_self_trap"
 	{
+		"BaseClass"		"templar_assassin_self_trap"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"

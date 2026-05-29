@@ -9,6 +9,7 @@
 	// icon: naga_siren_mirror_image
 	"naga_siren_mirror_image"
 	{
+		"BaseClass"		"naga_siren_mirror_image"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -68,6 +69,7 @@
 	// icon: naga_siren_ensnare
 	"naga_siren_ensnare"
 	{
+		"BaseClass"		"naga_siren_ensnare"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -141,6 +143,7 @@
 	// icon: naga_siren_rip_tide
 	"naga_siren_rip_tide"
 	{
+		"BaseClass"		"naga_siren_rip_tide"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -195,6 +198,7 @@
 	// icon: naga_siren_deluge
 	"naga_siren_deluge"
 	{
+		"BaseClass"		"naga_siren_deluge"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -248,6 +252,7 @@
 	// icon: naga_siren_eelskin
 	"naga_siren_eelskin"
 	{
+		"BaseClass"		"naga_siren_eelskin"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -274,6 +279,7 @@
 	// icon: naga_siren_crit
 	"naga_siren_crit"
 	{
+		"BaseClass"		"naga_siren_crit"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -311,6 +317,7 @@
 	// icon: naga_siren_song_of_the_siren
 	"naga_siren_song_of_the_siren"
 	{
+		"BaseClass"		"naga_siren_song_of_the_siren"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -369,6 +376,7 @@
 	// icon: naga_siren_song_of_the_siren_cancel
 	"naga_siren_song_of_the_siren_cancel"
 	{
+		"BaseClass"		"naga_siren_song_of_the_siren_cancel"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -391,6 +399,7 @@
 	// icon: naga_siren_reel_in
 	"naga_siren_reel_in"
 	{
+		"BaseClass"		"naga_siren_reel_in"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_CHANNELLED"

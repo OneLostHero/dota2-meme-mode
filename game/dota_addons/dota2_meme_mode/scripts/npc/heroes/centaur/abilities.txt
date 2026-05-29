@@ -9,6 +9,7 @@
 	// icon: centaur_hoof_stomp
 	"centaur_hoof_stomp"
 	{
+		"BaseClass"		"centaur_hoof_stomp"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -55,6 +56,7 @@
 	// icon: centaur_double_edge
 	"centaur_double_edge"
 	{
+		"BaseClass"		"centaur_double_edge"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -141,6 +143,7 @@
 	// icon: centaur_return
 	"centaur_return"
 	{
+		"BaseClass"		"centaur_return"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -178,6 +181,7 @@
 	// icon: centaur_stampede
 	"centaur_stampede"
 	{
+		"BaseClass"		"centaur_stampede"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -245,6 +249,7 @@
 	// icon: centaur_work_horse
 	"centaur_work_horse"
 	{
+		"BaseClass"		"centaur_work_horse"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET |  DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -287,6 +292,7 @@
 	// icon: centaur_horsepower
 	"centaur_horsepower"
 	{
+		"BaseClass"		"centaur_horsepower"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -307,6 +313,7 @@
 	// icon: centaur_mount
 	"centaur_mount"
 	{
+		"BaseClass"		"centaur_mount"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET |  DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_HIDDEN"
@@ -350,6 +357,7 @@
 	// ---- centaur_overrun  (centaur_overrun) ----
 	"centaur_overrun"
 	{
+		"BaseClass"		"centaur_overrun"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -389,6 +397,7 @@
 	// icon: centaur_rawhide
 	"centaur_rawhide"
 	{
+		"BaseClass"		"centaur_rawhide"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

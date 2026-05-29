@@ -9,6 +9,7 @@
 	// icon: phoenix_icarus_dive
 	"phoenix_icarus_dive"
 	{
+		"BaseClass"		"phoenix_icarus_dive"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
@@ -75,6 +76,7 @@
 	// icon: phoenix_icarus_dive_stop
 	"phoenix_icarus_dive_stop"
 	{
+		"BaseClass"		"phoenix_icarus_dive_stop"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
@@ -92,6 +94,7 @@
 	// icon: phoenix_fire_spirits
 	"phoenix_fire_spirits"
 	{
+		"BaseClass"		"phoenix_fire_spirits"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -146,6 +149,7 @@
 	// icon: phoenix_sun_ray
 	"phoenix_sun_ray"
 	{
+		"BaseClass"		"phoenix_sun_ray"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
@@ -224,6 +228,7 @@
 	// icon: phoenix_sun_ray_stop
 	"phoenix_sun_ray_stop"
 	{
+		"BaseClass"		"phoenix_sun_ray_stop"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -241,6 +246,7 @@
 	// icon: phoenix_sun_ray_toggle_move
 	"phoenix_sun_ray_toggle_move"
 	{
+		"BaseClass"		"phoenix_sun_ray_toggle_move"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
@@ -259,6 +265,7 @@
 	// icon: phoenix_supernova
 	"phoenix_supernova"
 	{
+		"BaseClass"		"phoenix_supernova"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -330,6 +337,7 @@
 	// icon: phoenix_launch_fire_spirit
 	"phoenix_launch_fire_spirit"
 	{
+		"BaseClass"		"phoenix_launch_fire_spirit"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -384,6 +392,7 @@
 	// icon: phoenix_dying_light
 	"phoenix_dying_light"
 	{
+		"BaseClass"		"phoenix_dying_light"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -407,6 +416,7 @@
 	// icon: phoenix_blinding_sun
 	"phoenix_blinding_sun"
 	{
+		"BaseClass"		"phoenix_blinding_sun"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_NONE"	
 

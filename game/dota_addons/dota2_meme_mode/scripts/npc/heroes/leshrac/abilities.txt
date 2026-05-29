@@ -9,6 +9,7 @@
 	// icon: leshrac_split_earth
 	"leshrac_split_earth"
 	{
+		"BaseClass"		"leshrac_split_earth"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -79,6 +80,7 @@
 	// icon: leshrac_diabolic_edict
 	"leshrac_diabolic_edict"
 	{
+		"BaseClass"		"leshrac_diabolic_edict"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -150,6 +152,7 @@
 	// icon: leshrac_lightning_storm
 	"leshrac_lightning_storm"
 	{
+		"BaseClass"		"leshrac_lightning_storm"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -214,6 +217,7 @@
 	// icon: leshrac_greater_lightning_storm
 	"leshrac_greater_lightning_storm"
 	{
+		"BaseClass"		"leshrac_greater_lightning_storm"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE| DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -260,6 +264,7 @@
 	// icon: leshrac_pulse_nova
 	"leshrac_pulse_nova"
 	{
+		"BaseClass"		"leshrac_pulse_nova"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
@@ -318,6 +323,7 @@
 	// icon: leshrac_chronoptic_nourishment
 	"leshrac_chronoptic_nourishment"
 	{
+		"BaseClass"		"leshrac_chronoptic_nourishment"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS | DOTA_ABILITY_BEHAVIOR_HIDDEN"
@@ -339,6 +345,7 @@
 	// icon: leshrac_defilement
 	"leshrac_defilement"
 	{
+		"BaseClass"		"leshrac_defilement"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"

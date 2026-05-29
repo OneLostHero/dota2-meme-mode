@@ -9,6 +9,7 @@
 	// icon: windrunner_gale_force
 	"windrunner_gale_force"
 	{
+		"BaseClass"		"windrunner_gale_force"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT |  DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -52,6 +53,7 @@
 	// icon: windrunner_shackleshot
 	"windrunner_shackleshot"
 	{
+		"BaseClass"		"windrunner_shackleshot"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -116,6 +118,7 @@
 	// icon: windrunner_powershot
 	"windrunner_powershot"
 	{
+		"BaseClass"		"windrunner_powershot"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
@@ -192,6 +195,7 @@
 	// icon: windrunner_windrun
 	"windrunner_windrun"
 	{
+		"BaseClass"		"windrunner_windrun"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -264,6 +268,7 @@
 	// icon: windrunner_focusfire
 	"windrunner_focusfire"
 	{
+		"BaseClass"		"windrunner_focusfire"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -350,6 +355,7 @@
 	// icon: windrunner_focusfire_cancel
 	"windrunner_focusfire_cancel"
 	{
+		"BaseClass"		"windrunner_focusfire_cancel"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
@@ -501,6 +507,7 @@
 	// icon: windrunner_easy_breezy
 	"windrunner_easy_breezy"
 	{
+		"BaseClass"		"windrunner_easy_breezy"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"

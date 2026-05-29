@@ -9,6 +9,7 @@
 	// icon: keeper_of_the_light_illuminate
 	"keeper_of_the_light_illuminate"
 	{
+		"BaseClass"		"keeper_of_the_light_illuminate"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
@@ -80,6 +81,7 @@
 	// icon: keeper_of_the_light_mana_leak
 	"keeper_of_the_light_mana_leak"
 	{
+		"BaseClass"		"keeper_of_the_light_mana_leak"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -129,6 +131,7 @@
 	// icon: keeper_of_the_light_radiant_bind
 	"keeper_of_the_light_radiant_bind"
 	{
+		"BaseClass"		"keeper_of_the_light_radiant_bind"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -195,6 +198,7 @@
 	// icon: keeper_of_the_light_will_o_wisp
 	"keeper_of_the_light_will_o_wisp"
 	{
+		"BaseClass"		"keeper_of_the_light_will_o_wisp"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -253,6 +257,7 @@
 	// icon: keeper_of_the_light_chakra_magic
 	"keeper_of_the_light_chakra_magic"
 	{
+		"BaseClass"		"keeper_of_the_light_chakra_magic"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -307,6 +312,7 @@
 	// icon: keeper_of_the_light_empty1
 	"keeper_of_the_light_empty1"
 	{
+		"BaseClass"		"keeper_of_the_light_empty1"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -320,6 +326,7 @@
 	// icon: keeper_of_the_light_empty2
 	"keeper_of_the_light_empty2"
 	{
+		"BaseClass"		"keeper_of_the_light_empty2"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -333,6 +340,7 @@
 	// icon: keeper_of_the_light_spirit_form
 	"keeper_of_the_light_spirit_form"
 	{
+		"BaseClass"		"keeper_of_the_light_spirit_form"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -383,6 +391,7 @@
 	// icon: keeper_of_the_light_recall
 	"keeper_of_the_light_recall"
 	{
+		"BaseClass"		"keeper_of_the_light_recall"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_ALT_CASTABLE | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -445,6 +454,7 @@
 	// icon: keeper_of_the_light_blinding_light
 	"keeper_of_the_light_blinding_light"
 	{
+		"BaseClass"		"keeper_of_the_light_blinding_light"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
@@ -510,6 +520,7 @@
 	// icon: keeper_of_the_light_illuminate_end
 	"keeper_of_the_light_illuminate_end"
 	{
+		"BaseClass"		"keeper_of_the_light_illuminate_end"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
@@ -528,6 +539,7 @@
 	// icon: keeper_of_the_light_mana_magnifier
 	"keeper_of_the_light_mana_magnifier"
 	{
+		"BaseClass"		"keeper_of_the_light_mana_magnifier"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
 

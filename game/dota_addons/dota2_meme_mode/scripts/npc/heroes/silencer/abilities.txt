@@ -9,6 +9,7 @@
 	// icon: silencer_curse_of_the_silent
 	"silencer_curse_of_the_silent"
 	{
+		"BaseClass"		"silencer_curse_of_the_silent"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
@@ -77,6 +78,7 @@
 	// icon: silencer_glaives_of_wisdom
 	"silencer_glaives_of_wisdom"
 	{
+		"BaseClass"		"silencer_glaives_of_wisdom"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
@@ -154,6 +156,7 @@
 	// icon: silencer_last_word
 	"silencer_last_word"
 	{
+		"BaseClass"		"silencer_last_word"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -197,6 +200,7 @@
 	// icon: silencer_global_silence
 	"silencer_global_silence"
 	{
+		"BaseClass"		"silencer_global_silence"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -264,6 +268,7 @@
 	// icon: silencer_brain_drain
 	"silencer_brain_drain"
 	{
+		"BaseClass"		"silencer_brain_drain"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -292,6 +297,7 @@
 	// ---- silencer_irrepressible  (silencer_irrepressible) ----
 	"silencer_irrepressible"
 	{
+		"BaseClass"		"silencer_irrepressible"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

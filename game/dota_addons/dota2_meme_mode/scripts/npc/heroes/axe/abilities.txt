@@ -9,6 +9,7 @@
 	// icon: axe_berserkers_call
 	"axe_berserkers_call"
 	{
+		"BaseClass"		"axe_berserkers_call"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"
@@ -75,6 +76,7 @@
 	// icon: axe_battle_hunger
 	"axe_battle_hunger"
 	{
+		"BaseClass"		"axe_battle_hunger"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -150,6 +152,7 @@
 	// icon: axe_counter_helix
 	"axe_counter_helix"
 	{
+		"BaseClass"		"axe_counter_helix"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -207,6 +210,7 @@
 	// icon: axe_culling_blade
 	"axe_culling_blade"
 	{
+		"BaseClass"		"axe_culling_blade"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -276,6 +280,7 @@
 	// icon: axe_one_man_army
 	"axe_one_man_army"
 	{
+		"BaseClass"		"axe_one_man_army"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -294,6 +299,7 @@
 	// icon: axe_coat_of_blood
 	"axe_coat_of_blood"
 	{
+		"BaseClass"		"axe_coat_of_blood"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"

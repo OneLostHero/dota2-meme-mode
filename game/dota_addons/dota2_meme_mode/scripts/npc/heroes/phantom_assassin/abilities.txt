@@ -9,6 +9,7 @@
 	// icon: phantom_assassin_fan_of_knives
 	"phantom_assassin_fan_of_knives"
 	{
+		"BaseClass"		"phantom_assassin_fan_of_knives"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -57,6 +58,7 @@
 	// icon: phantom_assassin_stifling_dagger
 	"phantom_assassin_stifling_dagger"
 	{
+		"BaseClass"		"phantom_assassin_stifling_dagger"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -115,6 +117,7 @@
 	// icon: phantom_assassin_phantom_strike
 	"phantom_assassin_phantom_strike"
 	{
+		"BaseClass"		"phantom_assassin_phantom_strike"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
@@ -172,6 +175,7 @@
 	// icon: phantom_assassin_immaterial
 	"phantom_assassin_immaterial"
 	{
+		"BaseClass"		"phantom_assassin_immaterial"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -198,6 +202,7 @@
 	// icon: phantom_assassin_blur
 	"phantom_assassin_blur"
 	{
+		"BaseClass"		"phantom_assassin_blur"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -272,6 +277,7 @@
 	// icon: phantom_assassin_coup_de_grace
 	"phantom_assassin_coup_de_grace"
 	{
+		"BaseClass"		"phantom_assassin_coup_de_grace"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"

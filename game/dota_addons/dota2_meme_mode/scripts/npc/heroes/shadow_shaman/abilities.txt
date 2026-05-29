@@ -9,6 +9,7 @@
 	// icon: shadow_shaman_ether_shock
 	"shadow_shaman_ether_shock"
 	{
+		"BaseClass"		"shadow_shaman_ether_shock"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -70,6 +71,7 @@
 	// icon: shadow_shaman_voodoo
 	"shadow_shaman_voodoo"
 	{
+		"BaseClass"		"shadow_shaman_voodoo"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -157,6 +159,7 @@
 	// icon: shadow_shaman_shackles
 	"shadow_shaman_shackles"
 	{
+		"BaseClass"		"shadow_shaman_shackles"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
@@ -246,6 +249,7 @@
 	// icon: shadow_shaman_mass_serpent_ward
 	"shadow_shaman_mass_serpent_ward"
 	{
+		"BaseClass"		"shadow_shaman_mass_serpent_ward"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -328,6 +332,7 @@
 	// icon: shadow_shaman_serpentine
 	"shadow_shaman_serpentine"
 	{
+		"BaseClass"		"shadow_shaman_serpentine"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -373,6 +378,7 @@
 	// icon: shadow_shaman_fowl_play
 	"shadow_shaman_fowl_play"
 	{
+		"BaseClass"		"shadow_shaman_fowl_play"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -512,6 +518,7 @@
 	// ---- shadow_shaman_innate_snake_jar  (shadow_shaman_innate_snake_jar) ----
 	"shadow_shaman_innate_snake_jar"
 	{
+		"BaseClass"		"shadow_shaman_innate_snake_jar"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
@@ -535,6 +542,7 @@
 	// ---- shadow_shaman_innate_piglet_pole  (shadow_shaman_innate_piglet_pole) ----
 	"shadow_shaman_innate_piglet_pole"
 	{
+		"BaseClass"		"shadow_shaman_innate_piglet_pole"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"

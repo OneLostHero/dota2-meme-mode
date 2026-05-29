@@ -8,6 +8,7 @@
 	// icon: sniper_concussive_grenade
 	"sniper_concussive_grenade"
 	{
+		"BaseClass"		"sniper_concussive_grenade"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
@@ -77,6 +78,7 @@
 	// icon: sniper_shrapnel
 	"sniper_shrapnel"
 	{
+		"BaseClass"		"sniper_shrapnel"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -155,6 +157,7 @@
 	// icon: sniper_headshot
 	"sniper_headshot"
 	{
+		"BaseClass"		"sniper_headshot"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -192,6 +195,7 @@
 	// icon: sniper_take_aim
 	"sniper_take_aim"
 	{
+		"BaseClass"		"sniper_take_aim"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -265,6 +269,7 @@
 	// icon: sniper_assassinate
 	"sniper_assassinate"
 	{
+		"BaseClass"		"sniper_assassinate"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -355,6 +360,7 @@
 	// icon: sniper_keen_scope
 	"sniper_keen_scope"
 	{
+		"BaseClass"		"sniper_keen_scope"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
 		"MaxLevel"						"4"		
 		"Innate"						"1"

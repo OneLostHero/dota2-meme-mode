@@ -8,6 +8,7 @@
 	// icon: ursa_earthshock
 	"ursa_earthshock"
 	{
+		"BaseClass"		"ursa_earthshock"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -88,6 +89,7 @@
 	// icon: ursa_overpower
 	"ursa_overpower"
 	{
+		"BaseClass"		"ursa_overpower"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -131,6 +133,7 @@
 	// icon: ursa_fury_swipes
 	"ursa_fury_swipes"
 	{
+		"BaseClass"		"ursa_fury_swipes"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -175,6 +178,7 @@
 	// icon: ursa_enrage
 	"ursa_enrage"
 	{
+		"BaseClass"		"ursa_enrage"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -246,6 +250,7 @@
 	// icon: ursa_maul
 	"ursa_maul"
 	{
+		"BaseClass"		"ursa_maul"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -382,6 +387,7 @@
 	// icon: ursa_bear_down
 	"ursa_bear_down"
 	{
+		"BaseClass"		"ursa_bear_down"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

@@ -8,6 +8,7 @@
 	// ---- muerta_dead_shot  (muerta_dead_shot) ----
 	"muerta_dead_shot"
 	{
+		"BaseClass"		"muerta_dead_shot"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING"
@@ -67,6 +68,7 @@
 	// ---- muerta_the_calling  (muerta_the_calling) ----
 	"muerta_the_calling"
 	{
+		"BaseClass"		"muerta_the_calling"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_CAN_SELF_CAST"
@@ -149,6 +151,7 @@
 	// ---- muerta_gunslinger  (muerta_gunslinger) ----
 	"muerta_gunslinger"
 	{
+		"BaseClass"		"muerta_gunslinger"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_BREAK_DISABLES"
@@ -178,6 +181,7 @@
 	// ---- muerta_pierce_the_veil  (muerta_pierce_the_veil) ----
 	"muerta_pierce_the_veil"
 	{
+		"BaseClass"		"muerta_pierce_the_veil"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -246,6 +250,7 @@
 	// icon: muerta_ofrenda
 	"muerta_ofrenda"
 	{
+		"BaseClass"		"muerta_ofrenda"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
@@ -274,6 +279,7 @@
 	// ---- muerta_supernatural  (muerta_supernatural) ----
 	"muerta_supernatural"
 	{
+		"BaseClass"		"muerta_supernatural"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
@@ -289,6 +295,7 @@
 	// icon: muerta_ofrenda_destroy
 	"muerta_ofrenda_destroy"
 	{
+		"BaseClass"		"muerta_ofrenda_destroy"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -406,6 +413,7 @@
 	// ---- muerta_grave_tracker  (muerta_grave_tracker) ----
 	"muerta_grave_tracker"
 	{
+		"BaseClass"		"muerta_grave_tracker"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
 	}
@@ -416,6 +424,7 @@
 	// ---- muerta_grave_visitation  (muerta_grave_visitation) ----
 	"muerta_grave_visitation"
 	{
+		"BaseClass"		"muerta_grave_visitation"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -459,6 +468,7 @@
 	// icon: muerta_parting_shot
 	"muerta_parting_shot"
 	{
+		"BaseClass"		"muerta_parting_shot"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"

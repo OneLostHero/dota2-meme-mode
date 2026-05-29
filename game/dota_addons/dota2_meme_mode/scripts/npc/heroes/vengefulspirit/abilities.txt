@@ -9,6 +9,7 @@
 	// icon: vengefulspirit_magic_missile
 	"vengefulspirit_magic_missile"
 	{
+		"BaseClass"		"vengefulspirit_magic_missile"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -70,6 +71,7 @@
 	// icon: vengefulspirit_command_aura
 	"vengefulspirit_command_aura"
 	{
+		"BaseClass"		"vengefulspirit_command_aura"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
@@ -119,6 +121,7 @@
 	// icon: vengefulspirit_wave_of_terror
 	"vengefulspirit_wave_of_terror"
 	{
+		"BaseClass"		"vengefulspirit_wave_of_terror"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
@@ -185,6 +188,7 @@
 	// icon: vengefulspirit_nether_swap
 	"vengefulspirit_nether_swap"
 	{
+		"BaseClass"		"vengefulspirit_nether_swap"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -242,6 +246,7 @@
 	// icon: vengefulspirit_soul_strike
 	"vengefulspirit_soul_strike"
 	{
+		"BaseClass"		"vengefulspirit_soul_strike"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -262,6 +267,7 @@
 	// icon: vengefulspirit_retribution
 	"vengefulspirit_retribution"
 	{
+		"BaseClass"		"vengefulspirit_retribution"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

@@ -9,6 +9,7 @@
 	// icon: broodmother_spawn_spiderlings
 	"broodmother_spawn_spiderlings"
 	{
+		"BaseClass"		"broodmother_spawn_spiderlings"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -81,6 +82,7 @@
 	// icon: broodmother_poison_sting
 	"broodmother_poison_sting"
 	{
+		"BaseClass"		"broodmother_poison_sting"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -110,6 +112,7 @@
 	// icon: broodmother_spawn_spiderite
 	"broodmother_spawn_spiderite"
 	{
+		"BaseClass"		"broodmother_spawn_spiderite"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -132,6 +135,7 @@
 	// icon: broodmother_spin_web
 	"broodmother_spin_web"
 	{
+		"BaseClass"		"broodmother_spin_web"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -186,6 +190,7 @@
 	// icon: broodmother_spiders_milk
 	"broodmother_spiders_milk"
 	{
+		"BaseClass"		"broodmother_spiders_milk"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
@@ -214,6 +219,7 @@
 	// icon: broodmother_silken_bola
 	"broodmother_silken_bola"
 	{
+		"BaseClass"		"broodmother_silken_bola"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -289,6 +295,7 @@
 	// icon: broodmother_incapacitating_bite
 	"broodmother_incapacitating_bite"
 	{
+		"BaseClass"		"broodmother_incapacitating_bite"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -326,6 +333,7 @@
 	// icon: broodmother_insatiable_hunger
 	"broodmother_insatiable_hunger"
 	{
+		"BaseClass"		"broodmother_insatiable_hunger"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -394,6 +402,7 @@
 	// icon: broodmother_sticky_snare
 	"broodmother_sticky_snare"
 	{
+		"BaseClass"		"broodmother_sticky_snare"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_CHANNELLED "
@@ -450,6 +459,7 @@
 	// icon: broodmother_spin_web_destroy
 	"broodmother_spin_web_destroy"
 	{
+		"BaseClass"		"broodmother_spin_web_destroy"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"

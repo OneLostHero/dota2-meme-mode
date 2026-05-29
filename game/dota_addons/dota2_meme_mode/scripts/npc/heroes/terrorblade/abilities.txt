@@ -9,6 +9,7 @@
 	// icon: terrorblade_reflection
 	"terrorblade_reflection"
 	{
+		"BaseClass"		"terrorblade_reflection"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -88,6 +89,7 @@
 	// icon: terrorblade_conjure_image
 	"terrorblade_conjure_image"
 	{
+		"BaseClass"		"terrorblade_conjure_image"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -161,6 +163,7 @@
 	// icon: terrorblade_metamorphosis
 	"terrorblade_metamorphosis"
 	{
+		"BaseClass"		"terrorblade_metamorphosis"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -220,6 +223,7 @@
 	// icon: terrorblade_terror_wave
 	"terrorblade_terror_wave"
 	{
+		"BaseClass"		"terrorblade_terror_wave"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -266,6 +270,7 @@
 	// icon: terrorblade_demon_zeal
 	"terrorblade_demon_zeal"
 	{
+		"BaseClass"		"terrorblade_demon_zeal"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN  | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -320,6 +325,7 @@
 	// icon: terrorblade_sunder
 	"terrorblade_sunder"
 	{
+		"BaseClass"		"terrorblade_sunder"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
@@ -372,6 +378,7 @@
 	// icon: terrorblade_dark_unity
 	"terrorblade_dark_unity"
 	{
+		"BaseClass"		"terrorblade_dark_unity"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
 
 		"MaxLevel"						"1"

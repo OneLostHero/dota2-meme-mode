@@ -9,6 +9,7 @@
 	// icon: lone_druid_spirit_bear
 	"lone_druid_spirit_bear"
 	{
+		"BaseClass"		"lone_druid_spirit_bear"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -81,6 +82,7 @@
 	// icon: lone_druid_rabid
 	"lone_druid_rabid"
 	{
+		"BaseClass"		"lone_druid_rabid"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -121,6 +123,7 @@
 	// icon: lone_druid_spirit_link
 	"lone_druid_spirit_link"
 	{
+		"BaseClass"		"lone_druid_spirit_link"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -183,6 +186,7 @@
 	// icon: lone_druid_savage_roar
 	"lone_druid_savage_roar"
 	{
+		"BaseClass"		"lone_druid_savage_roar"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -253,6 +257,7 @@
 	// icon: lone_druid_savage_roar_bear
 	"lone_druid_savage_roar_bear"
 	{
+		"BaseClass"		"lone_druid_savage_roar_bear"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN"
@@ -295,6 +300,7 @@
 	// icon: lone_druid_true_form
 	"lone_druid_true_form"
 	{
+		"BaseClass"		"lone_druid_true_form"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -369,6 +375,7 @@
 	// icon: lone_druid_true_form_druid
 	"lone_druid_true_form_druid"
 	{
+		"BaseClass"		"lone_druid_true_form_druid"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -403,6 +410,7 @@
 	// icon: lone_druid_true_form_battle_cry
 	"lone_druid_true_form_battle_cry"
 	{
+		"BaseClass"		"lone_druid_true_form_battle_cry"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -451,6 +459,7 @@
 	// icon: lone_druid_spirit_bear_return
 	"lone_druid_spirit_bear_return"
 	{
+		"BaseClass"		"lone_druid_spirit_bear_return"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
@@ -483,6 +492,7 @@
 	// icon: lone_druid_spirit_bear_entangle
 	"lone_druid_spirit_bear_entangle"
 	{
+		"BaseClass"		"lone_druid_spirit_bear_entangle"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -524,6 +534,7 @@
 	// icon: lone_druid_entangling_claws
 	"lone_druid_entangling_claws"
 	{
+		"BaseClass"		"lone_druid_entangling_claws"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -568,6 +579,7 @@
 	// icon: lone_druid_spirit_bear_defender
 	"lone_druid_spirit_bear_defender"
 	{
+		"BaseClass"		"lone_druid_spirit_bear_defender"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -586,6 +598,7 @@
 	// icon: lone_druid_spirit_bear_fetch
 	"lone_druid_spirit_bear_fetch"
 	{
+		"BaseClass"		"lone_druid_spirit_bear_fetch"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_RUNE_TARGET"
@@ -636,6 +649,7 @@
 	// icon: lone_druid_spirit_bear_demolish
 	"lone_druid_spirit_bear_demolish"
 	{
+		"BaseClass"		"lone_druid_spirit_bear_demolish"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"

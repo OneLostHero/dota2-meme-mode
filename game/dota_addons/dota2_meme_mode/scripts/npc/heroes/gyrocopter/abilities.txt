@@ -9,6 +9,7 @@
 	// icon: gyrocopter_rocket_barrage
 	"gyrocopter_rocket_barrage"
 	{
+		"BaseClass"		"gyrocopter_rocket_barrage"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -68,6 +69,7 @@
 	// icon: gyrocopter_homing_missile
 	"gyrocopter_homing_missile"
 	{
+		"BaseClass"		"gyrocopter_homing_missile"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -137,6 +139,7 @@
 	// icon: gyrocopter_flak_cannon
 	"gyrocopter_flak_cannon"
 	{
+		"BaseClass"		"gyrocopter_flak_cannon"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -211,6 +214,7 @@
 	// icon: gyrocopter_call_down
 	"gyrocopter_call_down"
 	{
+		"BaseClass"		"gyrocopter_call_down"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -291,6 +295,7 @@
 	// ---- gyrocopter_lock_on  (gyrocopter_lock_on) ----
 	"gyrocopter_lock_on"
 	{
+		"BaseClass"		"gyrocopter_lock_on"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
@@ -316,6 +321,7 @@
 	// icon: gyrocopter_chop_shop
 	"gyrocopter_chop_shop"
 	{
+		"BaseClass"		"gyrocopter_chop_shop"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
 
 		"MaxLevel"						"1"

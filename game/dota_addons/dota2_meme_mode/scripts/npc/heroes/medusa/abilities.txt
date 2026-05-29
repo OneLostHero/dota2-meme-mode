@@ -9,6 +9,7 @@
 	// icon: medusa_cold_blooded
 	"medusa_cold_blooded"
 	{
+		"BaseClass"		"medusa_cold_blooded"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -39,6 +40,7 @@
 	// icon: medusa_split_shot
 	"medusa_split_shot"
 	{
+		"BaseClass"		"medusa_split_shot"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -85,6 +87,7 @@
 	// icon: medusa_mystic_snake
 	"medusa_mystic_snake"
 	{
+		"BaseClass"		"medusa_mystic_snake"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -179,6 +182,7 @@
 	// icon: medusa_mana_shield
 	"medusa_mana_shield"
 	{
+		"BaseClass"		"medusa_mana_shield"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -262,6 +266,7 @@
 	// icon: medusa_stone_gaze
 	"medusa_stone_gaze"
 	{
+		"BaseClass"		"medusa_stone_gaze"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"

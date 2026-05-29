@@ -9,6 +9,7 @@
 	// icon: monkey_king_boundless_strike
 	"monkey_king_boundless_strike"
 	{
+		"BaseClass"		"monkey_king_boundless_strike"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN"
@@ -80,6 +81,7 @@
 	// icon: monkey_king_mischief
 	"monkey_king_mischief"
 	{
+		"BaseClass"		"monkey_king_mischief"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -122,6 +124,7 @@
 	// icon: monkey_king_untransform
 	"monkey_king_untransform"
 	{
+		"BaseClass"		"monkey_king_untransform"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
@@ -151,6 +154,7 @@
 	// icon: monkey_king_tree_dance
 	"monkey_king_tree_dance"
 	{
+		"BaseClass"		"monkey_king_tree_dance"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
@@ -223,6 +227,7 @@
 	// icon: monkey_king_primal_spring
 	"monkey_king_primal_spring"
 	{
+		"BaseClass"		"monkey_king_primal_spring"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
@@ -272,6 +277,7 @@
 	// ---- monkey_king_primal_spring_early  (monkey_king_primal_spring_early) ----
 	"monkey_king_primal_spring_early"
 	{
+		"BaseClass"		"monkey_king_primal_spring_early"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
@@ -290,6 +296,7 @@
 	// icon: monkey_king_wukongs_command
 	"monkey_king_wukongs_command"
 	{
+		"BaseClass"		"monkey_king_wukongs_command"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN"
@@ -382,6 +389,7 @@
 	// icon: monkey_king_jingu_mastery
 	"monkey_king_jingu_mastery"
 	{
+		"BaseClass"		"monkey_king_jingu_mastery"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"

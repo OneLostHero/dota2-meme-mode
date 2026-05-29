@@ -9,6 +9,7 @@
 	// icon: chen_penitence
 	"chen_penitence"
 	{
+		"BaseClass"		"chen_penitence"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -60,6 +61,7 @@
 	// icon: chen_test_of_faith
 	"chen_test_of_faith"
 	{
+		"BaseClass"		"chen_test_of_faith"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -111,6 +113,7 @@
 	// icon: chen_divine_favor
 	"chen_divine_favor"
 	{
+		"BaseClass"		"chen_divine_favor"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -161,6 +164,7 @@
 	// ---- chen_test_of_faith_teleport  (chen_test_of_faith_teleport) ----
 	"chen_test_of_faith_teleport"
 	{
+		"BaseClass"		"chen_test_of_faith_teleport"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -199,6 +203,7 @@
 	// icon: chen_holy_persuasion
 	"chen_holy_persuasion"
 	{
+		"BaseClass"		"chen_holy_persuasion"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
@@ -262,6 +267,7 @@
 	// icon: chen_martyrdom
 	"chen_martyrdom"
 	{
+		"BaseClass"		"chen_martyrdom"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -293,6 +299,7 @@
 	// icon: chen_hand_of_god
 	"chen_hand_of_god"
 	{
+		"BaseClass"		"chen_hand_of_god"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -350,6 +357,7 @@
 	// icon: chen_summon_convert
 	"chen_summon_convert"
 	{
+		"BaseClass"		"chen_summon_convert"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
 		"AbilityTextureName"			"chen_test_of_faith_teleport"
 		"AbilityCooldown"				"30"	// lower = stronger
@@ -398,6 +406,7 @@
 	// ---- chen_innate_check_for_team_change  (chen_innate_check_for_team_change) ----
 	"chen_innate_check_for_team_change"
 	{
+		"BaseClass"		"chen_innate_check_for_team_change"
 		"AbilityBehavior" 		"DOTA_ABILITY_BEHAVIOR_HIDDEN"
 	}
 

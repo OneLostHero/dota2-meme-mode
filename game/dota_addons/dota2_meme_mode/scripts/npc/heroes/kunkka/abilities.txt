@@ -9,6 +9,7 @@
 	// icon: kunkka_tidal_wave
 	"kunkka_tidal_wave"
 	{
+		"BaseClass"		"kunkka_tidal_wave"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -59,6 +60,7 @@
 	// icon: kunkka_torrent
 	"kunkka_torrent"
 	{
+		"BaseClass"		"kunkka_torrent"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -128,6 +130,7 @@
 	// icon: kunkka_torrent_storm
 	"kunkka_torrent_storm"
 	{
+		"BaseClass"		"kunkka_torrent_storm"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -188,6 +191,7 @@
 	// icon: kunkka_tidebringer
 	"kunkka_tidebringer"
 	{
+		"BaseClass"		"kunkka_tidebringer"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK | DOTA_ABILITY_BEHAVIOR_BREAK_DISABLES"
@@ -264,6 +268,7 @@
 	// icon: kunkka_x_marks_the_spot
 	"kunkka_x_marks_the_spot"
 	{
+		"BaseClass"		"kunkka_x_marks_the_spot"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -329,6 +334,7 @@
 	// icon: kunkka_return
 	"kunkka_return"
 	{
+		"BaseClass"		"kunkka_return"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -357,6 +363,7 @@
 	// icon: kunkka_ghostship
 	"kunkka_ghostship"
 	{
+		"BaseClass"		"kunkka_ghostship"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -420,6 +427,7 @@
 	// ---- kunkka_ghost_ship_fire_cannons  (kunkka_ghost_ship_fire_cannons) ----
 	"kunkka_ghost_ship_fire_cannons"
 	{
+		"BaseClass"		"kunkka_ghost_ship_fire_cannons"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
@@ -567,6 +575,7 @@
 	// ---- kunkka_innate_kunkkas_spyglass  (kunkka_innate_kunkkas_spyglass) ----
 	"kunkka_innate_kunkkas_spyglass"
 	{
+		"BaseClass"		"kunkka_innate_kunkkas_spyglass"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
@@ -586,6 +595,7 @@
 	// ---- kunkka_innate_kunkkas_flask  (kunkka_innate_kunkkas_flask) ----
 	"kunkka_innate_kunkkas_flask"
 	{
+		"BaseClass"		"kunkka_innate_kunkkas_flask"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"

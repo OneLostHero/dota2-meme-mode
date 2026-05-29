@@ -9,6 +9,7 @@
 	// icon: troll_warlord_rampage
 	"troll_warlord_rampage"
 	{
+		"BaseClass"		"troll_warlord_rampage"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -54,6 +55,7 @@
 	// icon: troll_warlord_berserkers_rage
 	"troll_warlord_berserkers_rage"
 	{
+		"BaseClass"		"troll_warlord_berserkers_rage"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -97,6 +99,7 @@
 	// ---- troll_warlord_innate_unflinching  (troll_warlord_innate_unflinching) ----
 	"troll_warlord_innate_unflinching"
 	{
+		"BaseClass"		"troll_warlord_innate_unflinching"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -114,6 +117,7 @@
 	// ---- troll_warlord_innate_masterful  (troll_warlord_innate_masterful) ----
 	"troll_warlord_innate_masterful"
 	{
+		"BaseClass"		"troll_warlord_innate_masterful"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -132,6 +136,7 @@
 	// icon: troll_warlord_whirling_axes_ranged
 	"troll_warlord_whirling_axes_ranged"
 	{
+		"BaseClass"		"troll_warlord_whirling_axes_ranged"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -208,6 +213,7 @@
 	// icon: troll_warlord_whirling_axes_melee
 	"troll_warlord_whirling_axes_melee"
 	{
+		"BaseClass"		"troll_warlord_whirling_axes_melee"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -277,6 +283,7 @@
 	// ---- troll_warlord_scepter  (troll_warlord_scepter) ----
 	"troll_warlord_scepter"
 	{
+		"BaseClass"		"troll_warlord_scepter"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -323,6 +330,7 @@
 	// icon: troll_warlord_fervor
 	"troll_warlord_fervor"
 	{
+		"BaseClass"		"troll_warlord_fervor"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -367,6 +375,7 @@
 	// icon: troll_warlord_battle_trance
 	"troll_warlord_battle_trance"
 	{
+		"BaseClass"		"troll_warlord_battle_trance"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
@@ -429,6 +438,7 @@
 	// icon: dark_troll_warlord_ensnare
 	"dark_troll_warlord_ensnare"
 	{
+		"BaseClass"		"dark_troll_warlord_ensnare"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"MaxLevel"						"1"
@@ -468,6 +478,7 @@
 	// icon: dark_troll_warlord_raise_dead
 	"dark_troll_warlord_raise_dead"
 	{
+		"BaseClass"		"dark_troll_warlord_raise_dead"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"MaxLevel"						"1"

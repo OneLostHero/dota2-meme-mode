@@ -9,6 +9,7 @@
 	// icon: rattletrap_jetpack
 	"rattletrap_jetpack"
 	{
+		"BaseClass"		"rattletrap_jetpack"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -58,6 +59,7 @@
 	// icon: rattletrap_overclocking
 	"rattletrap_overclocking"
 	{
+		"BaseClass"		"rattletrap_overclocking"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -109,6 +111,7 @@
 	// icon: rattletrap_battery_assault
 	"rattletrap_battery_assault"
 	{
+		"BaseClass"		"rattletrap_battery_assault"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -166,6 +169,7 @@
 	// icon: rattletrap_power_cogs
 	"rattletrap_power_cogs"
 	{
+		"BaseClass"		"rattletrap_power_cogs"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -256,6 +260,7 @@
 	// icon: rattletrap_rocket_flare
 	"rattletrap_rocket_flare"
 	{
+		"BaseClass"		"rattletrap_rocket_flare"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -321,6 +326,7 @@
 	// icon: rattletrap_hookshot
 	"rattletrap_hookshot"
 	{
+		"BaseClass"		"rattletrap_hookshot"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -382,6 +388,7 @@
 	// icon: rattletrap_armor_power
 	"rattletrap_armor_power"
 	{
+		"BaseClass"		"rattletrap_armor_power"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

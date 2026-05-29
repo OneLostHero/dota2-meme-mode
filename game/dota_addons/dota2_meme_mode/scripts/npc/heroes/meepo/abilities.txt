@@ -9,6 +9,7 @@
 	// icon: meepo_petrify
 	"meepo_petrify"
 	{
+		"BaseClass"		"meepo_petrify"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
@@ -49,6 +50,7 @@
 	// icon: meepo_earthbind
 	"meepo_earthbind"
 	{
+		"BaseClass"		"meepo_earthbind"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -97,6 +99,7 @@
 	// icon: meepo_poof
 	"meepo_poof"
 	{
+		"BaseClass"		"meepo_poof"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_ALT_CASTABLE"
@@ -155,6 +158,7 @@
 	// icon: meepo_geostrike
 	"meepo_geostrike"
 	{
+		"BaseClass"		"meepo_geostrike"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -186,6 +190,7 @@
 	// icon: meepo_ransack
 	"meepo_ransack"
 	{
+		"BaseClass"		"meepo_ransack"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -220,6 +225,7 @@
 	// icon: meepo_divided_we_stand
 	"meepo_divided_we_stand"
 	{
+		"BaseClass"		"meepo_divided_we_stand"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -302,6 +308,7 @@
 	// icon: meepo_megameepo
 	"meepo_megameepo"
 	{
+		"BaseClass"		"meepo_megameepo"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -346,6 +353,7 @@
 	// icon: meepo_megameepo_fling
 	"meepo_megameepo_fling"
 	{
+		"BaseClass"		"meepo_megameepo_fling"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -399,6 +407,7 @@
 	// icon: meepo_pack_rat
 	"meepo_pack_rat"
 	{
+		"BaseClass"		"meepo_pack_rat"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -418,6 +427,7 @@
 	// icon: meepo_sticky_fingers
 	"meepo_sticky_fingers"
 	{
+		"BaseClass"		"meepo_sticky_fingers"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

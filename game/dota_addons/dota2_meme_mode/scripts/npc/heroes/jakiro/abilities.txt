@@ -9,6 +9,7 @@
 	// icon: jakiro_dual_breath
 	"jakiro_dual_breath"
 	{
+		"BaseClass"		"jakiro_dual_breath"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -93,6 +94,7 @@
 	// icon: jakiro_ice_path
 	"jakiro_ice_path"
 	{
+		"BaseClass"		"jakiro_ice_path"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
@@ -162,6 +164,7 @@
 	// icon: jakiro_liquid_fire
 	"jakiro_liquid_fire"
 	{
+		"BaseClass"		"jakiro_liquid_fire"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
@@ -225,6 +228,7 @@
 	// icon: jakiro_liquid_ice
 	"jakiro_liquid_ice"
 	{
+		"BaseClass"		"jakiro_liquid_ice"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
@@ -292,6 +296,7 @@
 	// icon: jakiro_macropyre
 	"jakiro_macropyre"
 	{
+		"BaseClass"		"jakiro_macropyre"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -487,6 +492,7 @@
 	// icon: jakiro_double_trouble
 	"jakiro_double_trouble"
 	{
+		"BaseClass"		"jakiro_double_trouble"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

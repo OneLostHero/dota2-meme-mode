@@ -9,6 +9,7 @@
 	// icon: slark_fish_bait
 	"slark_fish_bait"
 	{
+		"BaseClass"		"slark_fish_bait"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -59,6 +60,7 @@
 	// icon: slark_depth_shroud
 	"slark_depth_shroud"
 	{
+		"BaseClass"		"slark_depth_shroud"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -104,6 +106,7 @@
 	// icon: slark_dark_pact
 	"slark_dark_pact"
 	{
+		"BaseClass"		"slark_dark_pact"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -154,6 +157,7 @@
 	// icon: slark_pounce
 	"slark_pounce"
 	{
+		"BaseClass"		"slark_pounce"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
@@ -224,6 +228,7 @@
 	// icon: slark_essence_shift
 	"slark_essence_shift"
 	{
+		"BaseClass"		"slark_essence_shift"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -264,6 +269,7 @@
 	// icon: slark_barracuda
 	"slark_barracuda"
 	{
+		"BaseClass"		"slark_barracuda"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -301,6 +307,7 @@
 	// icon: slark_shadow_dance
 	"slark_shadow_dance"
 	{
+		"BaseClass"		"slark_shadow_dance"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"

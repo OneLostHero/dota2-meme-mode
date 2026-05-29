@@ -8,6 +8,7 @@
 	// icon: primal_beast_onslaught
 	"primal_beast_onslaught"
 	{
+		"BaseClass"		"primal_beast_onslaught"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
@@ -72,6 +73,7 @@
 	// icon: primal_beast_onslaught_release
 	"primal_beast_onslaught_release"	
 	{
+		"BaseClass"		"primal_beast_onslaught_release"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
@@ -95,6 +97,7 @@
 	// icon: primal_beast_trample
 	"primal_beast_trample"
 	{
+		"BaseClass"		"primal_beast_trample"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
@@ -196,6 +199,7 @@
 	// icon: primal_beast_uproar
 	"primal_beast_uproar"
 	{
+		"BaseClass"		"primal_beast_uproar"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -308,6 +312,7 @@
 	// icon: primal_beast_pulverize
 	"primal_beast_pulverize"
 	{
+		"BaseClass"		"primal_beast_pulverize"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -371,6 +376,7 @@
     //=================================================================================================================
     "primal_beast_rock_throw"
     {
+		"BaseClass"		"primal_beast_rock_throw"
         // General
         //-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
@@ -437,6 +443,7 @@
 	// ---- primal_beast_colossal  (primal_beast_colossal) ----
 	"primal_beast_colossal"
 	{
+		"BaseClass"		"primal_beast_colossal"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
@@ -457,6 +464,7 @@
 	// ---- primal_beast_innate_slow_resistance_per_time  (primal_beast_innate_slow_resistance_per_time) ----
 	"primal_beast_innate_slow_resistance_per_time"
 	{
+		"BaseClass"		"primal_beast_innate_slow_resistance_per_time"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -475,6 +483,7 @@
 	// ---- primal_beast_innate_status_resistance_per_time  (primal_beast_innate_status_resistance_per_time) ----
 	"primal_beast_innate_status_resistance_per_time"
 	{
+		"BaseClass"		"primal_beast_innate_status_resistance_per_time"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

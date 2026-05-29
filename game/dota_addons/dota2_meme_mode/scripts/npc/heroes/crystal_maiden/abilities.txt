@@ -9,6 +9,7 @@
 	// icon: crystal_maiden_let_it_go
 	"crystal_maiden_let_it_go"
 	{
+		"BaseClass"		"crystal_maiden_let_it_go"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
@@ -42,6 +43,7 @@
 	// icon: crystal_maiden_crystal_nova
 	"crystal_maiden_crystal_nova"
 	{
+		"BaseClass"		"crystal_maiden_crystal_nova"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
@@ -90,6 +92,7 @@
 	// icon: crystal_maiden_frostbite
 	"crystal_maiden_frostbite"
 	{
+		"BaseClass"		"crystal_maiden_frostbite"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
@@ -143,6 +146,7 @@
 	// icon: crystal_maiden_brilliance_aura
 	"crystal_maiden_brilliance_aura"
 	{
+		"BaseClass"		"crystal_maiden_brilliance_aura"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -192,6 +196,7 @@
 	// icon: crystal_maiden_freezing_field
 	"crystal_maiden_freezing_field"
 	{
+		"BaseClass"		"crystal_maiden_freezing_field"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -278,6 +283,7 @@
 	// icon: crystal_maiden_freezing_field_stop
 	"crystal_maiden_freezing_field_stop"
 	{
+		"BaseClass"		"crystal_maiden_freezing_field_stop"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -300,6 +306,7 @@
 	// icon: crystal_maiden_crystal_clone
 	"crystal_maiden_crystal_clone"
 	{
+		"BaseClass"		"crystal_maiden_crystal_clone"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -347,6 +354,7 @@
 	// icon: crystal_maiden_blueheart_floe
 	"crystal_maiden_blueheart_floe"
 	{
+		"BaseClass"		"crystal_maiden_blueheart_floe"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
 		"AbilityTextureName"			"crystal_maiden_let_it_go"
 

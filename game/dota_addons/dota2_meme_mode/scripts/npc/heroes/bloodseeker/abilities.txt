@@ -9,6 +9,7 @@
 	// icon: bloodseeker_bloodrage
 	"bloodseeker_bloodrage"
 	{
+		"BaseClass"		"bloodseeker_bloodrage"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -80,6 +81,7 @@
 	// icon: bloodseeker_blood_bath
 	"bloodseeker_blood_bath"
 	{
+		"BaseClass"		"bloodseeker_blood_bath"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
@@ -143,6 +145,7 @@
 	// icon: bloodseeker_thirst
 	"bloodseeker_thirst"
 	{
+		"BaseClass"		"bloodseeker_thirst"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -194,6 +197,7 @@
 	// icon: bloodseeker_rupture
 	"bloodseeker_rupture"
 	{
+		"BaseClass"		"bloodseeker_rupture"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -291,6 +295,7 @@
 	// icon: bloodseeker_blood_mist
 	"bloodseeker_blood_mist"
 	{
+		"BaseClass"		"bloodseeker_blood_mist"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
@@ -342,6 +347,7 @@
 	// icon: bloodseeker_sanguivore
 	"bloodseeker_sanguivore"
 	{
+		"BaseClass"		"bloodseeker_sanguivore"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"

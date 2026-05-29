@@ -9,6 +9,7 @@
 	// icon: winter_wyvern_arctic_burn
 	"winter_wyvern_arctic_burn"
 	{
+		"BaseClass"		"winter_wyvern_arctic_burn"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -80,6 +81,7 @@
 	// icon: winter_wyvern_splinter_blast
 	"winter_wyvern_splinter_blast"
 	{
+		"BaseClass"		"winter_wyvern_splinter_blast"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -140,6 +142,7 @@
 	// icon: winter_wyvern_cold_embrace
 	"winter_wyvern_cold_embrace"
 	{
+		"BaseClass"		"winter_wyvern_cold_embrace"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -198,6 +201,7 @@
 	// icon: winter_wyvern_winters_curse
 	"winter_wyvern_winters_curse"
 	{
+		"BaseClass"		"winter_wyvern_winters_curse"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -253,6 +257,7 @@
 	// icon: winter_wyvern_eldwurm_scholar
 	"winter_wyvern_eldwurm_scholar"
 	{
+		"BaseClass"		"winter_wyvern_eldwurm_scholar"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
 
 		"MaxLevel"						"1"
@@ -368,6 +373,7 @@
 	// icon: winter_wyvern_essence_of_the_blueheart
 	"winter_wyvern_essence_of_the_blueheart"
 	{
+		"BaseClass"		"winter_wyvern_essence_of_the_blueheart"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -386,6 +392,7 @@
 	// icon: winter_wyvern_dragon_sight
 	"winter_wyvern_dragon_sight"
 	{
+		"BaseClass"		"winter_wyvern_dragon_sight"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 

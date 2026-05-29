@@ -9,6 +9,7 @@
 	// icon: pangolier_swashbuckle
 	"pangolier_swashbuckle"
 	{
+		"BaseClass"		"pangolier_swashbuckle"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING"
@@ -83,6 +84,7 @@
 	// icon: pangolier_shield_crash
 	"pangolier_shield_crash"
 	{
+		"BaseClass"		"pangolier_shield_crash"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -188,6 +190,7 @@
 	// icon: pangolier_heartpiercer
 	"pangolier_heartpiercer"
 	{
+		"BaseClass"		"pangolier_heartpiercer"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -205,6 +208,7 @@
 	// icon: pangolier_lucky_shot
 	"pangolier_lucky_shot"
 	{
+		"BaseClass"		"pangolier_lucky_shot"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -235,6 +239,7 @@
 	// icon: pangolier_gyroshell
 	"pangolier_gyroshell"
 	{
+		"BaseClass"		"pangolier_gyroshell"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -330,6 +335,7 @@
 	// icon: pangolier_fortune_favors_the_bold
 	"pangolier_fortune_favors_the_bold"
 	{
+		"BaseClass"		"pangolier_fortune_favors_the_bold"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -354,6 +360,7 @@
 	// icon: pangolier_gyroshell_stop
 	"pangolier_gyroshell_stop"
 	{
+		"BaseClass"		"pangolier_gyroshell_stop"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -372,6 +379,7 @@
 	// icon: pangolier_rollup
 	"pangolier_rollup"
 	{
+		"BaseClass"		"pangolier_rollup"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET |  DOTA_ABILITY_BEHAVIOR_HIDDEN  | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -441,6 +449,7 @@
 	// icon: pangolier_rollup_stop
 	"pangolier_rollup_stop"
 	{
+		"BaseClass"		"pangolier_rollup_stop"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"

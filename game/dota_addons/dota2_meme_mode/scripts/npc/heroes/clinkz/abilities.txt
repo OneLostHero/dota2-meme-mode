@@ -9,6 +9,7 @@
 	// icon: clinkz_strafe
 	"clinkz_strafe"
 	{
+		"BaseClass"		"clinkz_strafe"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -83,6 +84,7 @@
 	// icon: clinkz_burning_barrage
 	"clinkz_burning_barrage"
 	{
+		"BaseClass"		"clinkz_burning_barrage"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
@@ -133,6 +135,7 @@
 	// icon: clinkz_searing_arrows
 	"clinkz_searing_arrows"
 	{
+		"BaseClass"		"clinkz_searing_arrows"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
@@ -172,6 +175,7 @@
 	// icon: clinkz_wind_walk
 	"clinkz_wind_walk"
 	{
+		"BaseClass"		"clinkz_wind_walk"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
@@ -217,6 +221,7 @@
 	// icon: clinkz_burning_army
 	"clinkz_burning_army"
 	{
+		"BaseClass"		"clinkz_burning_army"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
@@ -257,6 +262,7 @@
 	// ---- clinkz_scepter  (clinkz_scepter) ----
 	"clinkz_scepter"
 	{
+		"BaseClass"		"clinkz_scepter"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST  | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -278,6 +284,7 @@
 	// icon: clinkz_death_pact
 	"clinkz_death_pact"
 	{
+		"BaseClass"		"clinkz_death_pact"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -342,6 +349,7 @@
 	// icon: clinkz_bone_and_arrow
 	"clinkz_bone_and_arrow"
 	{
+		"BaseClass"		"clinkz_bone_and_arrow"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -401,6 +409,7 @@
 	// icon: clinkz_tar_bomb
 	"clinkz_tar_bomb"
 	{
+		"BaseClass"		"clinkz_tar_bomb"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -468,6 +477,7 @@
 	// icon: clinkz_empty1
 	"clinkz_empty1"
 	{
+		"BaseClass"		"clinkz_empty1"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"

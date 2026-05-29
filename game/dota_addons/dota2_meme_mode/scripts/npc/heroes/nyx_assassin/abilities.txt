@@ -9,6 +9,7 @@
 	// icon: nyx_assassin_impale
 	"nyx_assassin_impale"
 	{
+		"BaseClass"		"nyx_assassin_impale"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -66,6 +67,7 @@
 	// icon: nyx_assassin_mana_burn
 	"nyx_assassin_mana_burn"
 	{
+		"BaseClass"		"nyx_assassin_mana_burn"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -101,6 +103,7 @@
 	// icon: nyx_assassin_jolt
 	"nyx_assassin_jolt"
 	{
+		"BaseClass"		"nyx_assassin_jolt"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -162,6 +165,7 @@
 	// icon: nyx_assassin_spiked_carapace
 	"nyx_assassin_spiked_carapace"
 	{
+		"BaseClass"		"nyx_assassin_spiked_carapace"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -206,6 +210,7 @@
 	// icon: nyx_assassin_vendetta
 	"nyx_assassin_vendetta"
 	{
+		"BaseClass"		"nyx_assassin_vendetta"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
@@ -293,6 +298,7 @@
 	// icon: nyx_assassin_burrow
 	"nyx_assassin_burrow"
 	{
+		"BaseClass"		"nyx_assassin_burrow"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
@@ -333,6 +339,7 @@
 	// icon: nyx_assassin_unburrow
 	"nyx_assassin_unburrow"
 	{
+		"BaseClass"		"nyx_assassin_unburrow"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -361,6 +368,7 @@
 	// icon: nyx_assassin_nyxth_sense
 	"nyx_assassin_nyxth_sense"
 	{
+		"BaseClass"		"nyx_assassin_nyxth_sense"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
@@ -384,6 +392,7 @@
 	// icon: nyx_assassin_innate_mana_burn
 	"nyx_assassin_innate_mana_burn"
 	{
+		"BaseClass"		"nyx_assassin_innate_mana_burn"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"

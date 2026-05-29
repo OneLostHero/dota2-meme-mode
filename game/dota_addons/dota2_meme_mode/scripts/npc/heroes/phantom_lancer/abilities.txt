@@ -9,6 +9,7 @@
 	// icon: phantom_lancer_spirit_lance
 	"phantom_lancer_spirit_lance"
 	{
+		"BaseClass"		"phantom_lancer_spirit_lance"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -87,6 +88,7 @@
 	// icon: phantom_lancer_doppelwalk
 	"phantom_lancer_doppelwalk"
 	{
+		"BaseClass"		"phantom_lancer_doppelwalk"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
@@ -148,6 +150,7 @@
 	// icon: phantom_lancer_juxtapose
 	"phantom_lancer_juxtapose"
 	{
+		"BaseClass"		"phantom_lancer_juxtapose"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -235,6 +238,7 @@
 	// icon: phantom_lancer_phantom_edge
 	"phantom_lancer_phantom_edge"
 	{
+		"BaseClass"		"phantom_lancer_phantom_edge"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_BREAK_DISABLES"

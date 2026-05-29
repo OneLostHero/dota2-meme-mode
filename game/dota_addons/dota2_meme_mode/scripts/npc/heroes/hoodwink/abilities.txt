@@ -8,6 +8,7 @@
 	// icon: hoodwink_hunters_boomerang
 	"hoodwink_hunters_boomerang"
 	{
+		"BaseClass"		"hoodwink_hunters_boomerang"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -68,6 +69,7 @@
 	// icon: hoodwink_decoy
 	"hoodwink_decoy"
 	{
+		"BaseClass"		"hoodwink_decoy"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
@@ -119,6 +121,7 @@
 	// icon: hoodwink_acorn_shot
 	"hoodwink_acorn_shot"
 	{
+		"BaseClass"		"hoodwink_acorn_shot"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ALT_CASTABLE"
@@ -186,6 +189,7 @@
 	// icon: hoodwink_bushwhack
 	"hoodwink_bushwhack"
 	{
+		"BaseClass"		"hoodwink_bushwhack"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -236,6 +240,7 @@
 	// icon: hoodwink_scurry
 	"hoodwink_scurry"
 	{
+		"BaseClass"		"hoodwink_scurry"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -308,6 +313,7 @@
 	// icon: hoodwink_sharpshooter
 	"hoodwink_sharpshooter"
 	{
+		"BaseClass"		"hoodwink_sharpshooter"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -388,6 +394,7 @@
 	// icon: hoodwink_sharpshooter_release
 	"hoodwink_sharpshooter_release"	
 	{
+		"BaseClass"		"hoodwink_sharpshooter_release"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
@@ -408,6 +415,7 @@
 	// ---- hoodwink_mistwoods_wayfarer  (hoodwink_mistwoods_wayfarer) ----
 	"hoodwink_mistwoods_wayfarer"
 	{
+		"BaseClass"		"hoodwink_mistwoods_wayfarer"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS | DOTA_ABILITY_BEHAVIOR_INNATE_UI"

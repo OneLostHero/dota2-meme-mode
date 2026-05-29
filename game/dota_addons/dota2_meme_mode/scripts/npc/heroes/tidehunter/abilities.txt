@@ -9,6 +9,7 @@
 	// icon: tidehunter_gush
 	"tidehunter_gush"
 	{
+		"BaseClass"		"tidehunter_gush"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -87,6 +88,7 @@
 	// icon: tidehunter_kraken_shell
 	"tidehunter_kraken_shell"
 	{
+		"BaseClass"		"tidehunter_kraken_shell"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -117,6 +119,7 @@
 	// icon: tidehunter_anchor_smash
 	"tidehunter_anchor_smash"
 	{
+		"BaseClass"		"tidehunter_anchor_smash"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -179,6 +182,7 @@
 	// icon: tidehunter_ravage
 	"tidehunter_ravage"
 	{
+		"BaseClass"		"tidehunter_ravage"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -233,6 +237,7 @@
 	// icon: tidehunter_arm_of_the_deep
 	"tidehunter_arm_of_the_deep"
 	{
+		"BaseClass"		"tidehunter_arm_of_the_deep"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -281,6 +286,7 @@
 	// icon: tidehunter_dead_in_the_water
 	"tidehunter_dead_in_the_water"
 	{
+		"BaseClass"		"tidehunter_dead_in_the_water"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -330,6 +336,7 @@
 	// ---- tidehunter_krill_eater  (tidehunter_krill_eater) ----
 	"tidehunter_krill_eater"
 	{
+		"BaseClass"		"tidehunter_krill_eater"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 
@@ -362,6 +369,7 @@
 	// icon: tidehunter_blubber
 	"tidehunter_blubber"
 	{
+		"BaseClass"		"tidehunter_blubber"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
