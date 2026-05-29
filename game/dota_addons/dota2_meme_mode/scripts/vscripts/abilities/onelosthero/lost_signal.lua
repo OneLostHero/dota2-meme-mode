@@ -38,9 +38,25 @@ function modifier_onelosthero_lost_signal:OnCreated()
 		Timers:CreateTimer(2.0, function()
 			if not h or h:IsNull() then return end
 			print("=== [OneLostHero] ability/talent slots ===")
-			for i = 0, 23 do
+			for i = 0, 17 do
 				local a = h:GetAbilityByIndex(i)
 				if a then print(string.format("  slot %d: %s (lvl %d)", i, a:GetAbilityName(), a:GetLevel())) end
+			end
+			-- Is the talents file itself loadable + does it define our talents?
+			local kv = LoadKeyValues("scripts/npc/abilities/onelosthero_talents.txt")
+			if kv and kv["DOTAAbilities"] then
+				for k, _ in pairs(kv["DOTAAbilities"]) do print("  talents.txt defines: " .. tostring(k)) end
+			elseif kv then
+				for k, _ in pairs(kv) do print("  talents.txt ROOT key: " .. tostring(k)) end
+			else
+				print("  talents.txt FAILED to load (nil)")
+			end
+			-- Does the hero actually have each talent ability by name?
+			for _, n in ipairs({
+				"special_bonus_unique_onelosthero_invis",
+				"special_bonus_unique_onelosthero_charges",
+			}) do
+				print("  HasAbility(" .. n .. ") = " .. tostring(h:HasAbility(n)))
 			end
 			print("=== [OneLostHero] end ===")
 		end)
