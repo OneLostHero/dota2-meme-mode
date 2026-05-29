@@ -107,11 +107,25 @@ Confirmed by comparing against the original `drteaspoon420/MGMod`:
   boosted system — which is what surfaced upgrade/talent entries on the skill bar
   and let them consume points ("boosted combined with the regular skills").
 
-**Fix applied:** removed the 124 per-hero `#base` lines from
-`npc_abilities_custom.txt` (restoring parity with the original's 7 flat includes).
-The `heroes/<name>/abilities.txt` files are **kept for reference** but are no longer
-loaded. Normal talents and the runtime boosted system are now the only sources of
-ability values, as in the original.
+**Revised requirement (user):** the per-hero `heroes/<name>/abilities.txt` files
+must stay **loaded and editable** — they are the user's per-hero boosted-value
+tuning surface ("if the boosted values need limits or changes, do it per hero").
+So the fix is to load them *correctly*, not to disable them.
+
+**Fix applied (revised):**
+1. Reverted the `#base` removal — per-hero loading is re-enabled.
+2. Root issue with loading them as-is: each main-ability block redefined a built-in
+   ability **without `BaseClass`**, which drops the ability's compiled behavior (the
+   ability-level analog of the hero `BaseClass` lesson). Scripted
+   `"BaseClass" "<ability>"` onto every main-ability block across all 124 files
+   (985 inserts) so each is a clean **value-only** override. Talents
+   (`special_bonus_*`) already carry `BaseClass "special_bonus_base"` and were left
+   untouched.
+
+**Status:** pending the user's in-game verification. If any talent-specific
+spillover remains (talents already had correct BaseClass, so their issue may differ),
+the user will report exactly what still appears on the bar / takes a point, and a
+follow-up targeted fix will address the remainder.
 
 ## Out of scope
 
