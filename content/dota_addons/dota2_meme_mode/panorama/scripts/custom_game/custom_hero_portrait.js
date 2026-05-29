@@ -1,14 +1,35 @@
 "use strict";
-// Custom hero portrait fix + on-screen diagnostic.
-// The self-test proved the element loads and image-by-path works; this readout tells
-// us which pick-screen panels the script can actually reach.
+// Custom hero portrait fix.
+//
+// Panorama uses the SHORT hero name (e.g. "flasaro") for the selection and for panel
+// .heroname, while image paths use the full "npc_dota_hero_<name>". So we match on
+// the short name and build the full name for the image path.
+//
+// Grid cards + top-bar are DOTAHeroImage (blank for a custom hero, so a background
+// image shows through). The big inspect portrait is a DOTAHeroMovie that renders
+// nothing for a custom hero -> we hide it and overlay our static image.
+//
+// (Confirmed via on-screen diagnostic: root=DotaHud, HeroInspectInfo/HeroGrid
+// reachable, inspect render = DOTAHeroMovie, selection name = "flasaro".)
 
-var CUSTOM_HEROES = {
-    "npc_dota_hero_flasaro": true,
-    "npc_dota_hero_onelosthero": true,
+var CUSTOM_SHORT = {
+    "flasaro": true,
+    "onelosthero": true,
 };
-function IsCustomHero(name) { return name != null && name !== "" && CUSTOM_HEROES[name] === true; }
-function SelectionImg(name) { return 'url("file://{images}/heroes/selection/' + name + '.png")'; }
+
+function ShortName(n) { if (n == null) return ""; return n.indexOf("npc_dota_hero_") === 0 ? n.substring(14) : n; }
+function FullName(n)  { if (n == null || n === "") return ""; return n.indexOf("npc_dota_hero_") === 0 ? n : ("npc_dota_hero_" + n); }
+function IsCustomHero(n) { var s = ShortName(n); return s !== "" && CUSTOM_SHORT[s] === true; }
+function SelectionImg(n) { return 'url("file://{images}/heroes/selection/' + FullName(n) + '.png")'; }
+function TopBarImg(n)    { return 'url("file://{images}/heroes/' + FullName(n) + '.png")'; }
+
+function SetBg(p, url) {
+    if (!p) return;
+    p.style.backgroundImage = url;
+    p.style.backgroundSize = "100% 100%";
+    p.style.backgroundPosition = "50% 50%";
+    p.style.backgroundRepeat = "no-repeat";
+}
 
 function Root() {
     var p = $.GetContextPanel();
@@ -21,14 +42,14 @@ function LocalSelection() {
     var info = pid >= 0 ? Game.GetPlayerInfo(pid) : null;
     return info ? (info.player_selected_hero || info.possible_hero_selection || "") : "";
 }
-function Has(root, id) { try { return !!root.FindChildTraverse(id); } catch (e) { return false; } }
 
-function CountHeronames(panel, depth, acc) {
+// Grid cards / any .heroname panel for a custom hero -> set its bg image.
+function PatchByHeroname(panel, depth) {
     if (!panel || depth > 80) return;
     var h = null; try { h = panel.heroname; } catch (e) {}
-    if (h) { acc.total++; if (IsCustomHero(h)) { acc.custom++; if (acc.firstCustomId === "") acc.firstCustomId = panel.id + "(" + panel.paneltype + ")"; } }
+    if (IsCustomHero(h)) SetBg(panel, SelectionImg(h));
     var kids = null; try { kids = panel.Children(); } catch (e) {}
-    if (kids) { for (var i = 0; i < kids.length; i++) CountHeronames(kids[i], depth + 1, acc); }
+    if (kids) { for (var i = 0; i < kids.length; i++) PatchByHeroname(kids[i], depth + 1); }
 }
 
 function FindRenderPanel(root, depth) {
@@ -40,29 +61,64 @@ function FindRenderPanel(root, depth) {
     return null;
 }
 
-function Diag() {
-    var lbl = $.GetContextPanel().FindChildTraverse("ChpDiag");
-    if (!lbl) return;
-    try {
-        var root = Root();
-        var up = 0; var p = $.GetContextPanel(); while (p && p.GetParent && p.GetParent() && up < 300) { p = p.GetParent(); up++; }
-        var inspect = null; try { inspect = root.FindChildTraverse("HeroInspectInfo"); } catch (e) {}
-        var acc = { total: 0, custom: 0, firstCustomId: "" };
-        CountHeronames(root, 0, acc);
-        var render = inspect ? FindRenderPanel(inspect, 0) : null;
-        var renderType = render ? render.paneltype : "none";
-        lbl.text = "chp up=" + up + " rootId=" + (root ? root.id : "?")
-            + "\nHud=" + Has(root, "Hud") + " PreGame=" + Has(root, "PreGame")
-            + " HeroPickScreen=" + Has(root, "HeroPickScreen")
-            + " HeroInspectInfo=" + (!!inspect) + " HeroGrid=" + Has(root, "HeroGrid")
-            + "\nheronamePanels=" + acc.total + " custom=" + acc.custom + " first=" + acc.firstCustomId
-            + "\ninspectRenderPanel=" + renderType + " sel=" + LocalSelection();
-    } catch (e) {
-        lbl.text = "chp ERROR: " + e;
+// Big inspect portrait: hide the blank DOTAHeroMovie, overlay our static image.
+function UpdateInspect(root) {
+    var inspect = root.FindChildTraverse("HeroInspectInfo");
+    if (!inspect) return;
+    var render = FindRenderPanel(inspect, 0);
+    if (!render) return;
+    var parent = render.GetParent();
+    if (!parent) return;
+    var sel = LocalSelection();
+    var overlay = parent.FindChildTraverse("CustomHeroPortraitOverlay");
+    if (IsCustomHero(sel)) {
+        render.style.opacity = "0.0";
+        if (!overlay) {
+            overlay = $.CreatePanel("Panel", parent, "CustomHeroPortraitOverlay");
+            overlay.style.position = "0px 0px 0px";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.zIndex = "50";
+            overlay.style.backgroundSize = "100% 100%";
+            overlay.style.backgroundPosition = "50% 50%";
+            overlay.style.backgroundRepeat = "no-repeat";
+        }
+        overlay.style.backgroundImage = SelectionImg(sel);
+        overlay.visible = true;
+    } else {
+        if (overlay) overlay.visible = false;
+        render.style.opacity = "1.0";
     }
 }
 
+function UpdateTopBar(root) {
+    var rows = ["RadiantTeamPlayers", "DireTeamPlayers"];
+    for (var t = 0; t < rows.length; t++) {
+        var c = root.FindChildTraverse(rows[t]);
+        if (!c) continue;
+        for (var j = 0; j < c.GetChildCount(); j++) {
+            var ch = c.GetChild(j);
+            var img = ch ? ch.FindChildTraverse("HeroImage") : null;
+            var hn = null; try { hn = img ? img.heroname : null; } catch (e) {}
+            if (img && IsCustomHero(hn)) SetBg(img, TopBarImg(hn));
+        }
+    }
+}
+
+function Run() {
+    try {
+        var root = Root();
+        if (!root) return;
+        var pg = root.FindChildTraverse("PreGame") || root.FindChildTraverse("HeroPickScreen") || root;
+        PatchByHeroname(pg, 0);
+        UpdateInspect(root);
+        UpdateTopBar(root);
+    } catch (e) {}
+}
+
 (function () {
-    function Tick() { Diag(); $.Schedule(0.5, Tick); }
-    $.Schedule(0.5, Tick);
+    GameEvents.Subscribe("dota_player_hero_selection_dirty", Run);
+    GameEvents.Subscribe("dota_player_update_hero_selection", Run);
+    function Tick() { Run(); $.Schedule(0.3, Tick); }
+    $.Schedule(0.3, Tick);
 })();
