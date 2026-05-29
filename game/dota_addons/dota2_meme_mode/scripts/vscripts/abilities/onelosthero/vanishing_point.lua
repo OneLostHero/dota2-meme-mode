@@ -37,12 +37,11 @@ function onelosthero_vanishing_point:OnSpellStart()
 	self._chargeDuration = chargeDuration
 	self._scepterEchoes = {}
 
+	-- The Raptor Dance cast animation (AbilityCastAnimation ACT_DOTA_CAST_ABILITY_4) plays
+	-- during the ability's cast point, i.e. BEFORE this runs — so it's visible before the
+	-- hero vanishes here.
 	caster:AddNewModifier(caster, self, "modifier_onelosthero_vanishing_point_charge", { duration = chargeDuration })
 	caster:EmitSound("Hero_Nightstalker.Darkness")
-	-- Play the hero's ultimate cast animation as a flourish before vanishing. On the Kez
-	-- model this is Raptor Dance. ACT_DOTA_CAST_ABILITY_4 always maps to a hero's own ult
-	-- cast animation, so this is safe on any model. Swap to a specific Kez activity if desired.
-	caster:StartGesture(ACT_DOTA_CAST_ABILITY_4)
 
 	-- Scepter: extra invisible Echoes spread outward during the charge
 	if caster:HasScepter() then
