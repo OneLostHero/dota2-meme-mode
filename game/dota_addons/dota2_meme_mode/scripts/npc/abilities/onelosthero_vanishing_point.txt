@@ -37,7 +37,7 @@
 			"warning_delay"					"1.0"
 			"swap_allowed"					"1"
 
-			"scepter_extra_echoes"			"2"
+			"scepter_extra_echoes"			"10"
 			"scepter_echo_spread_distance"	"500"
 			"scepter_echo_burst_damage_pct"	"45"
 			"scepter_echo_fear_pct"			"60"

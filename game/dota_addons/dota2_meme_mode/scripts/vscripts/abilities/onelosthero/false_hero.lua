@@ -11,8 +11,8 @@
 	              NO explosion). Without Shard the sequence ends here. With Shard, a fading
 	              Echo is left at the hero's original location -> mode "detonate".
 	  - detonate: (Shard only) recast manually detonates the fading Echo (60% damage + Break).
-	The Echo otherwise detonates (full damage + Break) if an enemy hero attacks it or it
-	lives 10s without being swapped.
+	The Echo otherwise detonates (full damage + Break) if an enemy hero attacks it, if it is
+	destroyed by any damage, or if it lives 10s without being swapped.
 
 	Charges: native (1 base, +1 from the lvl20 talent). Because recasts (swap/detonate) reuse
 	the cast button, every OnSpellStart spends a charge+mana; we refund those and "truly"
@@ -123,7 +123,7 @@ function onelosthero_false_hero:CastFresh()
 		move_dest = dest,
 		source = "false_hero",
 		onExpire = function(u) self:OnEchoResolved(u:GetAbsOrigin(), 1.0) end,          -- 10s timeout -> detonate (teardown removes the unit)
-		onDeath = function(_) self:OnEchoLostNoBlast() end,                            -- killed by non-hero -> no blast
+		onDeath = function(u) self:OnEchoResolved(u:GetAbsOrigin(), 1.0) end,           -- destroyed (any damage) -> still detonate at its spot
 		onHeroAttacked = function(u)                                                   -- enemy-hero attack -> detonate + remove
 			self:OnEchoResolved(u:GetAbsOrigin(), 1.0)
 			Echo:RemoveSafely(u)
@@ -203,14 +203,6 @@ end
 -- Echo reached a detonation condition (10s timeout or enemy-hero attack) without a swap.
 function onelosthero_false_hero:OnEchoResolved(pos, mult)
 	self:Detonate(pos, mult)
-	self._echo = nil
-	self._mode = "idle"
-	self:_ConsumeUse()
-	self:_UpdateCastable()
-end
-
--- Echo died to non-hero damage (creeps/towers): no blast, just resolve.
-function onelosthero_false_hero:OnEchoLostNoBlast()
 	self._echo = nil
 	self._mode = "idle"
 	self:_ConsumeUse()

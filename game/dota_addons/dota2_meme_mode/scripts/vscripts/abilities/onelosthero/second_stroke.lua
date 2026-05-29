@@ -1,7 +1,7 @@
 --[[
 	OneLostHero — Q: Second Stroke
-	Dash-slash forward, damaging enemies in a radius at the strike, and leave an Echo at the
-	start point. Then, within the swap window:
+	Dash-slash forward, damaging enemies in a line (slash_width wide) along the dash path, and
+	leave an Echo at the start point. Then, within the swap window:
 	  - If you DON'T swap, the Echo repeats the strike: it dashes forward and strikes again for
 	    reduced damage, then vanishes.
 	  - If you recast to SWAP, you trade places with the Echo, then slash back toward where you
@@ -41,7 +41,7 @@ function onelosthero_second_stroke:OnSpellStart()
 	local caster = self:GetCaster()
 	local now = GameRules:GetGameTime()
 	local cd = self:GetCooldown(self:GetLevel() - 1)
-	local radius  = self:GetSpecialValueFor("strike_radius")
+	local width   = self:GetSpecialValueFor("slash_width")
 	local damage  = self:GetSpecialValueFor("damage")
 	local echoPct = self:GetSpecialValueFor("echo_damage_pct")
 
@@ -56,8 +56,9 @@ function onelosthero_second_stroke:OnSpellStart()
 			local dir = (heroOrigin - echoPos); dir.z = 0
 			if dir:Length2D() > 1 then caster:SetForwardVector(dir:Normalized()) end
 			Echo:PlayGesture(caster, { "ACT_DOTA_ATTACK", "ACT_DOTA_CAST_ABILITY_1" })
-			self:SlashVFX(heroOrigin, radius)
-			self:DamageRadius(caster, heroOrigin, radius, damage * (echoPct / 100))
+			-- slash back along the line from where you reappeared toward your old spot
+			self:LineVFX(echoPos, heroOrigin, width)
+			self:DamageLine(caster, echoPos, heroOrigin, width, damage * (echoPct / 100))
 			Timers:CreateTimer(0.05, function() if echo and not echo:IsNull() then Echo:Expire(echo) end end)
 			self:StartCooldown(cd)
 			return
@@ -81,8 +82,8 @@ function onelosthero_second_stroke:OnSpellStart()
 	-- hero Echo-Slash cast animation + visible slash, radius damage, then dash forward
 	caster:StartGesture(ACT_DOTA_CAST_ABILITY_1)
 	caster:EmitSound("Hero_VoidSpirit.AstralStep.Cast")
-	self:SlashVFX(endPos, radius)
-	self:DamageRadius(caster, endPos, radius, damage)
+	self:LineVFX(startPos, endPos, width)
+	self:DamageLine(caster, startPos, endPos, width, damage)
 	caster:SetAbsOrigin(endPos)
 	FindClearSpaceForUnit(caster, endPos, false)
 	caster:SetForwardVector(dir)
@@ -107,8 +108,8 @@ function onelosthero_second_stroke:OnSpellStart()
 		self._echo = nil
 		self._swapUntil = nil
 		echo:EmitSound("Hero_VoidSpirit.AstralStep.Cast")
-		self:SlashVFX(endPos, radius)
-		self:DamageRadius(caster, endPos, radius, damage * (echoPct / 100))
+		self:LineVFX(startPos, endPos, width)
+		self:DamageLine(caster, startPos, endPos, width, damage * (echoPct / 100))
 		self:DashUnit(echo, startPos, endPos, dashSpeed, function()
 			if echo and not echo:IsNull() then Echo:Expire(echo) end
 		end)
@@ -116,36 +117,40 @@ function onelosthero_second_stroke:OnSpellStart()
 	end)
 end
 
--- Visible slash that covers the full strike radius, centered on where the damage lands.
--- A spinning blade aura (blade_fury, ~250u) fills the area, ringed by outward-facing blade
--- slashes so the hit zone reads clearly. Brief + explicitly destroyed (blade_fury loops).
-function onelosthero_second_stroke:SlashVFX(center, radius)
-	local p = ParticleManager:CreateParticle("particles/units/heroes/hero_juggernaut/juggernaut_blade_fury.vpcf", PATTACH_WORLDORIGIN, nil)
-	ParticleManager:SetParticleControl(p, 0, center)
-	ParticleManager:SetParticleControl(p, 1, Vector(radius, radius, radius))
-	ParticleManager:SetParticleControl(p, 3, Vector(radius, 0, 0))
+-- Visible slash that covers the line from `fromPos` to `toPos` at the given width: blade
+-- slashes laid down in three lanes (center + both edges) along the path so the full hit
+-- corridor reads. Brief + explicitly destroyed so nothing lingers.
+function onelosthero_second_stroke:LineVFX(fromPos, toPos, width)
+	local dir = (toPos - fromPos); dir.z = 0
+	local len = dir:Length2D()
+	if len < 1 then dir = Vector(1, 0, 0); len = 1 else dir = dir:Normalized() end
+	local perp = Vector(-dir.y, dir.x, 0)
+	local lanes = { -width * 0.33, 0, width * 0.33 }
+	local spacing = 150
+	local n = math.max(1, math.floor(len / spacing))
 
-	local blades = {}
-	local count = 10
-	for i = 1, count do
-		local ang = (i / count) * 2 * math.pi
-		local dir = Vector(math.cos(ang), math.sin(ang), 0)
-		local b = ParticleManager:CreateParticle("particles/units/heroes/hero_riki/riki_backstab.vpcf", PATTACH_WORLDORIGIN, nil)
-		ParticleManager:SetParticleControl(b, 0, center + dir * radius)
-		ParticleManager:SetParticleControlForward(b, 0, dir)
-		blades[i] = b
+	local fx = {}
+	for i = 0, n do
+		local base = fromPos + dir * (len * (i / n))
+		for _, off in ipairs(lanes) do
+			local s = ParticleManager:CreateParticle("particles/units/heroes/hero_riki/riki_backstab.vpcf", PATTACH_WORLDORIGIN, nil)
+			ParticleManager:SetParticleControl(s, 0, base + perp * off)
+			ParticleManager:SetParticleControlForward(s, 0, dir)
+			fx[#fx + 1] = s
+		end
 	end
 
 	Timers:CreateTimer(0.5, function()
-		ParticleManager:DestroyParticle(p, false); ParticleManager:ReleaseParticleIndex(p)
-		for _, b in ipairs(blades) do
-			ParticleManager:DestroyParticle(b, false); ParticleManager:ReleaseParticleIndex(b)
+		for _, p in ipairs(fx) do
+			ParticleManager:DestroyParticle(p, false); ParticleManager:ReleaseParticleIndex(p)
 		end
 	end)
 end
 
-function onelosthero_second_stroke:DamageRadius(caster, pos, radius, damage)
-	for _, enemy in pairs(Echo:FindEnemiesInRadius(caster, pos, radius)) do
+-- Damage every enemy within the rectangle from `fromPos` to `toPos` (full width = `width`;
+-- FindUnitsInLine takes the half-width / perpendicular distance, hence width * 0.5).
+function onelosthero_second_stroke:DamageLine(caster, fromPos, toPos, width, damage)
+	for _, enemy in pairs(Echo:FindEnemiesInLine(caster, fromPos, toPos, width * 0.5)) do
 		if enemy and not enemy:IsNull() then
 			ApplyDamage({
 				victim = enemy, attacker = caster, damage = damage,

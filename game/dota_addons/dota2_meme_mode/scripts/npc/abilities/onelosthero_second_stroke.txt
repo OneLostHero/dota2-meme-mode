@@ -22,8 +22,7 @@
 		"AbilityValues"
 		{
 			"slash_distance"		"450 500 550 600"
-			"slash_width"			"250"
-			"strike_radius"			"250"	// each strike (hero, echo repeat, swap) hits this radius; VFX covers it
+			"slash_width"			"250"	// line width for each strike (forward, echo repeat, swap-back); VFX covers it
 			"damage"				"80 130 180 230"
 			"echo_delay"			"0.35"
 			"echo_damage_pct"
