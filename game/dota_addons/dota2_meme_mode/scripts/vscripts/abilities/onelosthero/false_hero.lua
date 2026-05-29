@@ -136,13 +136,21 @@ function onelosthero_false_hero:CastFresh()
 	self._echo = echo
 	self._mode = "swap"
 
-	-- autonomous forward attack-move
-	ExecuteOrderFromTable({
-		UnitIndex = echo:entindex(),
-		OrderType = DOTA_UNIT_ORDER_ATTACK_MOVE,
-		Position = startPos + dir * moveDist,
-		Queue = false,
-	})
+	-- Send the Echo forward in the hero's facing direction, attack-moving so it auto-attacks
+	-- along the way. Issued next frame: orders given to a freshly-created illusion on the same
+	-- frame are unreliable. The waypoint is far ahead so it keeps walking for the whole
+	-- duration unless the player redirects it.
+	local dest = startPos + dir * math.max(moveDist, 3000)
+	Timers:CreateTimer(0.03, function()
+		if Echo:IsValid(echo) then
+			ExecuteOrderFromTable({
+				UnitIndex = echo:entindex(),
+				OrderType = DOTA_UNIT_ORDER_ATTACK_MOVE,
+				Position = dest,
+				Queue = false,
+			})
+		end
+	end)
 end
 
 -- Recast 1: swap with the live Echo.
@@ -224,11 +232,18 @@ function onelosthero_false_hero:Detonate(pos, mult)
 	local radius = self:GetSpecialValueFor("explosion_radius")
 	local breakDur = self:GetSpecialValueFor("break_duration")
 
-	local p = ParticleManager:CreateParticle("particles/units/heroes/hero_terrorblade/terrorblade_sunder.vpcf", PATTACH_WORLDORIGIN, nil)
+	-- Visible radial AOE blast (the old terrorblade_sunder is a unit-to-unit beam and renders
+	-- nothing at a world point). doppelganger_aoe is a clear ground burst scaled to the radius.
+	local p = ParticleManager:CreateParticle("particles/units/heroes/hero_phantom_lancer/phantom_lancer_doppelganger_aoe.vpcf", PATTACH_WORLDORIGIN, nil)
 	ParticleManager:SetParticleControl(p, 0, pos)
 	ParticleManager:SetParticleControl(p, 1, Vector(radius, radius, radius))
+	ParticleManager:SetParticleControl(p, 2, Vector(radius, radius, radius))
+	ParticleManager:SetParticleControl(p, 3, pos)
 	ParticleManager:ReleaseParticleIndex(p)
-	EmitSoundOnLocationWithCaster(pos, "Hero_Terrorblade.Sunder.Target", caster)
+	local p2 = ParticleManager:CreateParticle("particles/units/heroes/hero_spectre/spectre_desolate.vpcf", PATTACH_WORLDORIGIN, nil)
+	ParticleManager:SetParticleControl(p2, 0, pos)
+	ParticleManager:ReleaseParticleIndex(p2)
+	EmitSoundOnLocationWithCaster(pos, "Hero_PhantomLancer.Doppelganger", caster)
 
 	for _, enemy in pairs(Echo:FindEnemiesInRadius(caster, pos, radius)) do
 		if enemy and not enemy:IsNull() then
@@ -245,12 +260,23 @@ end
 modifier_onelosthero_false_hero_invis = class({})
 function modifier_onelosthero_false_hero_invis:IsPurgable() return false end
 function modifier_onelosthero_false_hero_invis:DeclareFunctions()
-	return { MODIFIER_PROPERTY_INVISIBILITY_LEVEL }
+	return {
+		MODIFIER_PROPERTY_INVISIBILITY_LEVEL,
+		MODIFIER_EVENT_ON_ATTACK, -- attacking reveals the hero (and triggers Lost Signal)
+	}
 end
 -- MODIFIER_STATE_INVISIBLE on its own frequently fails to hide the unit; the engine also
 -- needs a non-zero invisibility level. Declaring both is the reliable invis pattern.
 function modifier_onelosthero_false_hero_invis:GetModifierInvisibilityLevel()
 	return 1.0
+end
+-- Attacking breaks invisibility immediately, even while the Echo is still alive. Casting
+-- abilities (incl. the swap recast) does NOT break it, so you can swap from stealth.
+function modifier_onelosthero_false_hero_invis:OnAttack(event)
+	if not IsServer() then return end
+	if event.attacker == self:GetParent() then
+		self:Destroy()
+	end
 end
 function modifier_onelosthero_false_hero_invis:CheckState()
 	return { [MODIFIER_STATE_INVISIBLE] = true }
