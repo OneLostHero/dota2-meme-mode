@@ -1,14 +1,16 @@
 "use strict";
 // Custom hero portrait fix.
 //
-// Panorama uses the SHORT hero name (e.g. "flasaro") for selection + panel .heroname;
-// image paths use the full "npc_dota_hero_<name>". Match short, build full.
+// Panorama uses the SHORT hero name (e.g. "flasaro") for the selection and for panel
+// .heroname, while image paths use the full "npc_dota_hero_<name>". So we match on
+// the short name and build the full name for the image path.
 //
-// - Any DOTAHeroImage with a custom .heroname (grid cards, top bar) is blank for a
-//   custom hero, so we set a background image (shows through). Done across the HUD.
-// - Moving-portrait render panels (DOTAHeroMovie / DOTAScenePanel / DOTAPortrait) in
-//   the pick screen render nothing for a custom hero: we hide each and overlay the
-//   static image. This covers BOTH the hover inspect AND the selected-hero preview.
+// Grid cards + top-bar are DOTAHeroImage (blank for a custom hero, so a background
+// image shows through). The big inspect portrait is a DOTAHeroMovie that renders
+// nothing for a custom hero -> we hide it and overlay our static image.
+//
+// (Confirmed via on-screen diagnostic: root=DotaHud, HeroInspectInfo/HeroGrid
+// reachable, inspect render = DOTAHeroMovie, selection name = "flasaro".)
 
 var CUSTOM_SHORT = {
     "flasaro": true,
@@ -19,6 +21,7 @@ function ShortName(n) { if (n == null) return ""; return n.indexOf("npc_dota_her
 function FullName(n)  { if (n == null || n === "") return ""; return n.indexOf("npc_dota_hero_") === 0 ? n : ("npc_dota_hero_" + n); }
 function IsCustomHero(n) { var s = ShortName(n); return s !== "" && CUSTOM_SHORT[s] === true; }
 function SelectionImg(n) { return 'url("file://{images}/heroes/selection/' + FullName(n) + '.png")'; }
+function TopBarImg(n)    { return 'url("file://{images}/heroes/' + FullName(n) + '.png")'; }
 
 function SetBg(p, url) {
     if (!p) return;
@@ -40,7 +43,7 @@ function LocalSelection() {
     return info ? (info.player_selected_hero || info.possible_hero_selection || "") : "";
 }
 
-// Background-image patch for any DOTAHeroImage-style panel with a custom .heroname.
+// Grid cards / any .heroname panel for a custom hero -> set its bg image.
 function PatchByHeroname(panel, depth) {
     if (!panel || depth > 80) return;
     var h = null; try { h = panel.heroname; } catch (e) {}
@@ -49,25 +52,26 @@ function PatchByHeroname(panel, depth) {
     if (kids) { for (var i = 0; i < kids.length; i++) PatchByHeroname(kids[i], depth + 1); }
 }
 
-// Collect moving-portrait render panels (don't recurse into them).
-function CollectRenderPanels(root, depth, out) {
-    if (!root || depth > 16) return;
+function FindRenderPanel(root, depth) {
+    if (!root || depth > 12) return null;
     var pt = null; try { pt = root.paneltype; } catch (e) {}
-    if (pt === "DOTAScenePanel" || pt === "DOTAHeroMovie" || pt === "DOTAPortrait") { out.push(root); return; }
+    if (pt === "DOTAScenePanel" || pt === "DOTAHeroMovie" || pt === "DOTAPortrait") return root;
     var kids = null; try { kids = root.Children(); } catch (e) {}
-    if (kids) { for (var i = 0; i < kids.length; i++) CollectRenderPanels(kids[i], depth + 1, out); }
-}
-
-function DirectChildById(parent, id) {
-    try { for (var i = 0; i < parent.GetChildCount(); i++) { var c = parent.GetChild(i); if (c && c.id === id) return c; } } catch (e) {}
+    if (kids) { for (var i = 0; i < kids.length; i++) { var r = FindRenderPanel(kids[i], depth + 1); if (r) return r; } }
     return null;
 }
 
-function OverlayRenderPanel(render, sel, custom) {
+// Big inspect portrait: hide the blank DOTAHeroMovie, overlay our static image.
+function UpdateInspect(root) {
+    var inspect = root.FindChildTraverse("HeroInspectInfo");
+    if (!inspect) return;
+    var render = FindRenderPanel(inspect, 0);
+    if (!render) return;
     var parent = render.GetParent();
     if (!parent) return;
-    var overlay = DirectChildById(parent, "CustomHeroPortraitOverlay");
-    if (custom) {
+    var sel = LocalSelection();
+    var overlay = parent.FindChildTraverse("CustomHeroPortraitOverlay");
+    if (IsCustomHero(sel)) {
         render.style.opacity = "0.0";
         if (!overlay) {
             overlay = $.CreatePanel("Panel", parent, "CustomHeroPortraitOverlay");
@@ -87,23 +91,28 @@ function OverlayRenderPanel(render, sel, custom) {
     }
 }
 
+function UpdateTopBar(root) {
+    var rows = ["RadiantTeamPlayers", "DireTeamPlayers"];
+    for (var t = 0; t < rows.length; t++) {
+        var c = root.FindChildTraverse(rows[t]);
+        if (!c) continue;
+        for (var j = 0; j < c.GetChildCount(); j++) {
+            var ch = c.GetChild(j);
+            var img = ch ? ch.FindChildTraverse("HeroImage") : null;
+            var hn = null; try { hn = img ? img.heroname : null; } catch (e) {}
+            if (img && IsCustomHero(hn)) SetBg(img, TopBarImg(hn));
+        }
+    }
+}
+
 function Run() {
     try {
         var root = Root();
         if (!root) return;
-
-        // Grid cards + top-bar (and any DOTAHeroImage) across the whole HUD.
-        PatchByHeroname(root, 0);
-
-        // Pick-screen moving portraits (hover inspect + selected preview).
-        var pg = root.FindChildTraverse("PreGame") || root.FindChildTraverse("HeroPickScreen");
-        if (pg) {
-            var sel = LocalSelection();
-            var custom = IsCustomHero(sel);
-            var panels = [];
-            CollectRenderPanels(pg, 0, panels);
-            for (var i = 0; i < panels.length; i++) OverlayRenderPanel(panels[i], sel, custom);
-        }
+        var pg = root.FindChildTraverse("PreGame") || root.FindChildTraverse("HeroPickScreen") || root;
+        PatchByHeroname(pg, 0);
+        UpdateInspect(root);
+        UpdateTopBar(root);
     } catch (e) {}
 }
 
