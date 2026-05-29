@@ -1,6 +1,6 @@
-# Moosestache & Occupational Hazard — Custom Hero Design
+# Moosestache, Occupational Hazard & Mr. BadHabits — Custom Hero Design
 
-Two new "Frankenstein" custom heroes assembled almost entirely from existing Valve
+Three new "Frankenstein" custom heroes assembled almost entirely from existing Valve
 abilities, following the proven Flasaro / OneLostHero pipeline documented in
 `docs/guides/creating-custom-heroes.md`.
 
@@ -10,8 +10,8 @@ abilities, following the proven Flasaro / OneLostHero pipeline documented in
 - **Aghs philosophy:** Scepter upgrades the ultimate; Shard upgrades a basic ability.
   Talents/Aghs/Shard are a **balanced hybrid** — source-flavored but tuned for these
   specific 4-ability kits, not copied verbatim.
-- **HeroIDs:** Moosestache `252`, Occupational Hazard `253` (Flasaro is 250,
-  OneLostHero is 251 — keep climbing, never recycle low gaps).
+- **HeroIDs:** Moosestache `252`, Occupational Hazard `253`, Mr. BadHabits `254`
+  (Flasaro is 250, OneLostHero is 251 — keep climbing, never recycle low gaps).
 
 > Internal ability names below are best-known and **must be verified against the live
 > game files at implementation** (the guide's standard caveat). Borrowed innates/abilities
@@ -125,6 +125,60 @@ raise skeletons, siphon their life, and finger the survivor.
 
 ---
 
+## Hero 3 — Mr. BadHabits
+
+**Fantasy:** a tanky, annoying punisher-thief. Toss the enemy around, bleed them with
+stacking quills behind a meat shield, and steal their best spell.
+
+- **Model / voice / stats base:** Treant Protector (`models/heroes/treant/treant.vmdl`,
+  `Hero_Treant`).
+- **BaseClass:** `npc_dota_hero_treant` (real class so it spawns + renders; Treant untouched).
+- **Primary attribute:** Strength. Copy Treant Protector's attributes/combat/classification block.
+- **Roles:** Durable, Disabler, Initiator, Nuker. Complexity 2.
+
+### Abilities
+
+| Slot | Ability | Source | Internal name (verify) | Type |
+|---|---|---|---|---|
+| Q (Ability1) | Toss | Tiny | `tiny_toss` | active, grab + throw a unit |
+| W (Ability2) | Quill Spray | Bristleback | `bristleback_quill_spray` | active, stacking nuke |
+| E (Ability3) | Meat Shield | Pudge | `pudge_meat_shield` | active, self damage-block (8/14/20/26, 4–7s) |
+| Ability4/5 | `generic_hidden` | — | — | — |
+| R (Ability6) | Spell Steal | Rubick | `rubick_spell_steal` | ultimate |
+| Innate (Ability7) | Flesh Heap | Pudge | `pudge_flesh_heap` | passive, +STR on nearby hero kills/deaths (450 radius) |
+
+> **Notes for verification:** Toss grabs the nearest unit around the caster and throws it —
+> confirm it works without Tiny's other abilities. Quill Spray's stacking `quill_stack`
+> debuff should carry over fine. Flesh Heap as a borrowed innate normally levels with
+> Dismember; as a standalone innate on Mr. BadHabits, set a fixed level / per-level value
+> so it grants STR correctly without Dismember present.
+
+### Talent tree (balanced-hybrid, drawn from Tiny / Bristleback / Pudge / Rubick — kept fair)
+
+| Lvl | Left | Right |
+|---|---|---|
+| 10 | +20 Quill Spray damage | +200 Health |
+| 15 | −2s Toss cooldown | +6 Quill Spray max stacks |
+| 20 | +15 Meat Shield damage block | +100 Toss damage |
+| 25 | +18 Quill Spray damage per stack | +25s stolen-spell duration |
+
+### Aghanim's — Scepter on the ultimate (Spell Steal)
+
+- **Effect:** Rubick's native Spell Steal Scepter — reduced cooldown, increased cast range,
+  and stolen abilities arrive already Aghs-upgraded.
+- **Feasibility:** **NATIVE — pure KV-only ✓.** `rubick_spell_steal` reads the caster's
+  Scepter internally; owning the ability + a Scepter applies the upgrade. No Lua needed.
+  Second clean reference case alongside Finger of Death.
+
+### Aghanim's — Shard on a basic ability (Meat Shield)
+
+- **Effect:** +Meat Shield duration and reflects 25% of blocked damage as magic damage to
+  nearby enemies (Pudge-flavored "bad habits punish you"; deliberately low power).
+- **Feasibility:** the +duration is KV; the reflect needs **a few lines of Lua** on the
+  Meat Shield modifier. Sanctioned "tiny Lua" case. Verified at planning.
+
+---
+
 ## Shared implementation checklist (per the custom-hero guide)
 
 For **each** hero:
@@ -132,8 +186,9 @@ For **each** hero:
 1. **`npc_heroes_custom.txt`** — add the `DOTAHeroes` block (BaseClass, HeroID, Enabled,
    Team, AttributePrimary, Model/Scale/SoundSet, the 7 ability slots + talents 10–17, and
    the full attributes/combat/classification block copied from the base hero).
-2. **`herolist.txt`** — add `"npc_dota_hero_moosestache" "1"` and
-   `"npc_dota_hero_occupational_hazard" "1"` (whitelist — must list every pickable hero).
+2. **`herolist.txt`** — add `"npc_dota_hero_moosestache" "1"`,
+   `"npc_dota_hero_occupational_hazard" "1"`, and `"npc_dota_hero_mr_badhabits" "1"`
+   (whitelist — must list every pickable hero).
 3. **`addon_game_mode.lua` Precache** — already loops all entries of
    `npc_heroes_custom.txt`; new heroes are picked up automatically (verify).
 4. **Portrait** — ship the 4 PNGs per hero (top-bar, selection, icons, crops), add the
@@ -151,11 +206,13 @@ For **each** hero:
 
 ## Open items to resolve during planning (verify, don't assume)
 
-- Exact internal names for every borrowed ability **and the two innates**
-  (`faceless_void_distortion_field`, `razor_storm_surge`) against live files.
+- Exact internal names for every borrowed ability **and the three innates**
+  (`faceless_void_distortion_field`, `razor_storm_surge`, `pudge_flesh_heap`) against live files.
 - Whether borrowed **innates** spawn correctly on the new carrier (Distortion Field aura,
-  Storm Surge proc) without their home hero's other abilities.
+  Storm Surge proc, Flesh Heap STR-on-kill) without their home hero's other abilities — in
+  particular Flesh Heap normally levels with Dismember, so pin a fixed level/value.
 - Bone Guard skeleton behavior on a non-WK carrier (summon/expire/aggro, no missing-modifier errors).
+- Toss behavior on a non-Tiny carrier (grabs + throws nearest unit correctly).
 - Which stock `special_bonus_*` talent tokens exist for the intended effects vs. needing a
   generic token + localized value.
 - Minimum-viable Lua surface for the two non-native Aghs effects (keep it tiny).
