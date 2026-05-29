@@ -1,0 +1,19 @@
+/* Force-compile custom hero portrait images.
+ *
+ * Addon panorama images (PNGs) only get compiled to .vtex_c when they are
+ * referenced by a COMPILED stylesheet/layout. Our custom hero portraits are only
+ * referenced from JS at runtime, so the panorama build never compiled them and the
+ * engine reported:
+ *   Failed loading resource ".../selection/npc_dota_hero_flasaro_png.vtex_c"
+ * Referencing them here forces compilation to the exact path the engine's own pick
+ * screen looks up (so the portrait works even without the JS override).
+ *
+ * IMPORTANT: reference ONLY images that exist. A missing source breaks the whole
+ * CSS compile (and would disable this stylesheet). When a new custom hero gets art,
+ * add its lines here. OneLostHero has no art yet -> intentionally not referenced.
+ */
+
+.PrecacheImg_flasaro_selection { background-image: url("file://{images}/heroes/selection/npc_dota_hero_flasaro.png"); }
+.PrecacheImg_flasaro_portrait  { background-image: url("file://{images}/heroes/npc_dota_hero_flasaro.png"); }
+.PrecacheImg_flasaro_icon      { background-image: url("file://{images}/heroes/icons/npc_dota_hero_flasaro.png"); }
+.PrecacheImg_flasaro_crop      { background-image: url("file://{images}/heroes/crops/npc_dota_hero_flasaro.png"); }

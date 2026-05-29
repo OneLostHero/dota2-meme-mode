@@ -1,4 +1,7 @@
 <root>
+	<styles>
+		<include src="file://{resources}/styles/custom_game/custom_hero_portrait.css" />
+	</styles>
 	<scripts>
 		<include src="file://{resources}/scripts/custom_game/util.js" />
 		<include src="file://{resources}/scripts/custom_game/custom_hero_portrait.js" />
