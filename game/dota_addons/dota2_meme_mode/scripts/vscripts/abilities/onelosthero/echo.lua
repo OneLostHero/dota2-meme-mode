@@ -39,22 +39,42 @@ function Echo:Create(owner, ability, vOrigin, opts)
 	if not IsServer() then return nil end
 	opts = opts or {}
 	local team = owner:GetTeamNumber()
-	local unit = CreateUnitByName("npc_onelosthero_echo", vOrigin, true, owner, owner, team)
-	if not unit then return nil end
+	local unit
 
-	unit:SetOwner(owner)
-	if opts.controllable then
-		local pid = owner:GetPlayerOwnerID()
-		if pid ~= nil and pid >= 0 then unit:SetControllableByPlayer(pid, true) end
+	if opts.illusion then
+		-- A real illusion copy of the hero (Phantom-Lancer style): identical model, name,
+		-- healthbar and items, and it adopts the custom model automatically once one exists.
+		-- The engine's illusion modifier governs damage dealt/taken; our tracking modifier
+		-- (added below) only handles swap eligibility, the hero-attack detonation hook, and
+		-- the 10s lifetime. The "+1" duration is a safety net behind our modifier's expiry.
+		local list = CreateIllusions(owner, owner, {
+			outgoing_damage = opts.outgoing_damage or 100,
+			incoming_damage = opts.incoming_damage or 100,
+			bounty_base = 0,
+			bounty_growth = 0,
+			duration = (opts.duration or 2.0) + 1.0,
+		}, 1, owner:GetHullRadius(), false, true)
+		unit = list and list[1]
+		if not unit then return nil end
+		unit:SetAbsOrigin(vOrigin)
+		FindClearSpaceForUnit(unit, vOrigin, true)
+	else
+		unit = CreateUnitByName("npc_onelosthero_echo", vOrigin, true, owner, owner, team)
+		if not unit then return nil end
+		unit:SetOwner(owner)
+		if opts.controllable then
+			local pid = owner:GetPlayerOwnerID()
+			if pid ~= nil and pid >= 0 then unit:SetControllableByPlayer(pid, true) end
+		end
+		unit:SetRenderColor(ECHO_TINT[1], ECHO_TINT[2], ECHO_TINT[3])
+		if opts.movespeed then unit:SetBaseMoveSpeed(opts.movespeed) end
+		if opts.can_attack and opts.attack_damage then
+			unit:SetBaseDamageMin(opts.attack_damage)
+			unit:SetBaseDamageMax(opts.attack_damage)
+		end
 	end
+
 	unit:SetForwardVector(owner:GetForwardVector())
-	unit:SetRenderColor(ECHO_TINT[1], ECHO_TINT[2], ECHO_TINT[3])
-	if opts.movespeed then unit:SetBaseMoveSpeed(opts.movespeed) end
-	if opts.can_attack and opts.attack_damage then
-		unit:SetBaseDamageMin(opts.attack_damage)
-		unit:SetBaseDamageMax(opts.attack_damage)
-	end
-
 	local now = GameRules:GetGameTime()
 	unit.olh_echo = {
 		owner            = owner,
@@ -72,16 +92,19 @@ function Echo:Create(owner, ability, vOrigin, opts)
 	}
 
 	unit:AddNewModifier(owner, ability, "modifier_onelosthero_echo", {
-		duration   = opts.duration or 2.0,
-		killable   = opts.killable and 1 or 0,
-		dmg_pct    = opts.incoming_damage_pct or 100,
-		can_attack = opts.can_attack and 1 or 0,
+		duration    = opts.duration or 2.0,
+		killable    = opts.killable and 1 or 0,
+		dmg_pct     = opts.incoming_damage_pct or 100,
+		can_attack  = opts.can_attack and 1 or 0,
+		is_illusion = opts.illusion and 1 or 0,
 	})
 
 	owner.olh_active_echoes = owner.olh_active_echoes or {}
 	owner.olh_active_echoes[unit:entindex()] = unit
 
-	ParticleManager:CreateParticle(ECHO_PARTICLE, PATTACH_ABSORIGIN_FOLLOW, unit)
+	if not opts.illusion then -- keep illusions visually identical to the real hero
+		ParticleManager:CreateParticle(ECHO_PARTICLE, PATTACH_ABSORIGIN_FOLLOW, unit)
+	end
 	return unit
 end
 
@@ -215,9 +238,13 @@ function modifier_onelosthero_echo:OnCreated(params)
 	self.killable = (params and params.killable == 1) or false
 	self.dmgPct = (params and params.dmg_pct) or 100
 	self.canAttack = (params and params.can_attack == 1) or false
+	self.isIllusion = (params and params.is_illusion == 1) or false
 end
 
 function modifier_onelosthero_echo:CheckState()
+	-- Real illusions keep their native behavior (collide, attack, show on minimap, be
+	-- killable) so they read as the real hero; we only ride along for tracking/detonation.
+	if self.isIllusion then return {} end
 	local state = {
 		[MODIFIER_STATE_NO_UNIT_COLLISION] = true,
 		[MODIFIER_STATE_NOT_ON_MINIMAP]    = true,
@@ -239,6 +266,7 @@ function modifier_onelosthero_echo:DeclareFunctions()
 end
 
 function modifier_onelosthero_echo:GetModifierIncomingDamage_Percentage()
+	if self.isIllusion then return 0 end -- the engine's illusion modifier governs this
 	if self.killable then return self.dmgPct - 100 end
 	return 0
 end

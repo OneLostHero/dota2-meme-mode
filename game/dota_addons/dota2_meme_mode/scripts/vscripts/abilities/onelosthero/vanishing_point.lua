@@ -134,6 +134,7 @@ function onelosthero_vanishing_point:BurstAt(caster, pos, damage, fearDuration, 
 			if pierce or not enemy:IsMagicImmune() then
 				enemy:AddNewModifier(caster, self, "modifier_onelosthero_vanishing_point_fear", {
 					duration = fearDuration, src_x = pos.x, src_y = pos.y, src_z = pos.z,
+					pierce = pierce and 1 or 0,
 				})
 			end
 		end
@@ -170,8 +171,11 @@ end
 --------------------------------------------------------------------------------
 modifier_onelosthero_vanishing_point_fear = class({})
 function modifier_onelosthero_vanishing_point_fear:IsDebuff() return true end
-function modifier_onelosthero_vanishing_point_fear:IsPurgable() return true end
+-- Non-purgable when it pierces (lvl25 talent): a non-purgable Lua modifier persists through
+-- BKB's debuff immunity, so the fear sticks. Otherwise it's a normal purgable debuff.
+function modifier_onelosthero_vanishing_point_fear:IsPurgable() return not self.pierce end
 function modifier_onelosthero_vanishing_point_fear:OnCreated(params)
+	self.pierce = params and params.pierce == 1
 	if params and params.src_x then
 		self.sourcePos = Vector(params.src_x, params.src_y, params.src_z)
 	else

@@ -89,19 +89,21 @@ function onelosthero_false_hero:CastFresh()
 	local invisDur     = self:GetSpecialValueFor("invis_duration")
 	local dmgPct       = self:GetSpecialValueFor("echo_attack_damage_pct")
 	local moveDist     = self:GetSpecialValueFor("echo_move_distance")
-	local echoDamage   = caster:GetAverageTrueAttackDamage(caster) * (dmgPct / 100)
 
 	-- real hero vanishes
 	caster:AddNewModifier(caster, self, "modifier_onelosthero_false_hero_invis", { duration = invisDur })
 	caster:EmitSound("Hero_Terrorblade.Reflection.Cast")
 
+	-- A true illusion (Phantom-Lancer style) so it reads as the real hero. The illusion
+	-- modifier handles its damage in/out; our tracking modifier rides along for swap +
+	-- detonation. Deals echo_attack_damage_pct of the hero's damage, takes full damage.
 	local echo = Echo:Create(caster, self, startPos, {
+		illusion = true,
+		outgoing_damage = dmgPct,
+		incoming_damage = 100,
 		duration = echoDuration,
 		killable = true,
-		can_attack = true,
-		attack_damage = echoDamage,
 		canSwap = true,
-		controllable = false,
 		source = "false_hero",
 		onExpire = function(u) self:OnEchoResolved(u:GetAbsOrigin(), 1.0) end,          -- 10s timeout -> detonate (teardown removes the unit)
 		onDeath = function(_) self:OnEchoLostNoBlast() end,                            -- killed by non-hero -> no blast
