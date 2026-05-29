@@ -17,6 +17,7 @@
 
 var CUSTOM_HEROES = {
     "npc_dota_hero_flasaro": true,
+    "npc_dota_hero_onelosthero": true, // needs PNG art shipped (see morning tasks)
 };
 
 function IsCustomHero(name) {
