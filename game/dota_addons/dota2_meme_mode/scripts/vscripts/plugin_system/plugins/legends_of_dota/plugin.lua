@@ -65,9 +65,6 @@ function LegendsOfDotaPlugin:LoadHeroes()
                 custom_data.Enabled = 1
                 custom_data.HeroID = tonumber(custom_data.HeroID) or custom_data.HeroID
                 LegendsOfDotaPlugin.hero_definitions[custom_name] = custom_data
-                print("[meme_mode] merged custom hero: " .. custom_name ..
-                    " (HeroID " .. tostring(custom_data.HeroID) ..
-                    ", attr " .. tostring(custom_data.AttributePrimary) .. ")")
             end
         end
     end
@@ -89,12 +86,6 @@ function LegendsOfDotaPlugin:LoadHeroes()
             end
         end
     end
-    
-    
-    print("[meme_mode] hero pool sizes: str=" .. #LegendsOfDotaPlugin.heroes[1] ..
-        " agi=" .. #LegendsOfDotaPlugin.heroes[2] ..
-        " int=" .. #LegendsOfDotaPlugin.heroes[3] ..
-        " uni=" .. #LegendsOfDotaPlugin.heroes[4])
     CustomNetTables:SetTableValue("heroselection_rework", "hero_pools", LegendsOfDotaPlugin.heroes)
 end
 
