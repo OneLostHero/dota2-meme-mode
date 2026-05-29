@@ -183,6 +183,7 @@
 		"TeamName"				"DOTA_TEAM_GOODGUYS"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 
+		// Look + voice (Bloodseeker)
 		"Model"					"models/heroes/blood_seeker/blood_seeker.vmdl"
 		"ModelScale"			"1.000000"
 		"SoundSet"				"Hero_Bloodseeker"
@@ -253,8 +254,8 @@
 	//============================================================
 	"npc_dota_hero_occupational_hazard"
 	{
-		"BaseClass"				"npc_dota_hero_necrolyte"
-		"HeroID"				"253"
+		"BaseClass"				"npc_dota_hero_necrolyte"		// REQUIRED: real base class so the hero spawns + renders. Necrophos is untouched.
+		"HeroID"				"253"							// high, unused id (250 Flasaro, 251 OneLostHero, 252 Moosestache)
 		"Enabled"				"1"
 		"Team"					"Good"
 		"TeamName"				"DOTA_TEAM_GOODGUYS"
@@ -269,6 +270,7 @@
 		"Complexity"			"2"
 		"BotImplemented"		"0"
 
+		// Abilities
 		"Ability1"				"death_prophet_spirit_siphon"		// Q
 		"Ability2"				"skeleton_king_bone_guard"			// W
 		"Ability3"				"necrolyte_heartstopper_aura"		// E (passive aura)
@@ -277,6 +279,7 @@
 		"Ability6"				"lion_finger_of_death"				// R (ult)
 		"Ability7"				"razor_storm_surge"					// Innate
 
+		// Talents (real stock tokens, verified wired to held abilities)
 		"Ability10"				"special_bonus_unique_necrophos_2"
 		"Ability11"				"special_bonus_unique_death_prophet_5"
 		"Ability12"				"special_bonus_unique_necrophos_5"

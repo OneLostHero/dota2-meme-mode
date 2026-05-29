@@ -22,6 +22,8 @@
 		// Custom hero — Moosestache
 		"npc_dota_hero_moosestache"			"Moosestache"
 		"npc_dota_hero_moosestache_bio"		"A relentless momentum bruiser who charges across the battlefield, latches onto his prey to drain its strength, and freezes time to finish the job."
+		"npc_dota_hero_moosestache_npedesc1"	"A charging bruiser-carry: lock on from across the map, leech attack damage with Static Link, then freeze the fight to clean up."
+		"npc_dota_hero_moosestache_npedesc2"	"Open with Charge of Darkness, tether Static Link, drop Chronosphere, and crit with Jinada."
 		"npc_dota_hero_moosestache_hype"	"You can run. You'll just die tired."
 
 		// Custom hero — Occupational Hazard

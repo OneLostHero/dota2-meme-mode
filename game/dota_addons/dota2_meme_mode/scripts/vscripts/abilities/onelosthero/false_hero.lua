@@ -120,6 +120,7 @@ function onelosthero_false_hero:CastFresh()
 		killable = true,
 		canSwap = true,
 		drive_forward = true,
+		controllable = true, -- player can select it and override its movement/targets
 		move_dest = dest,
 		source = "false_hero",
 		onExpire = function(u) self:OnEchoResolved(u:GetAbsOrigin(), 1.0) end,          -- 10s timeout -> detonate (teardown removes the unit)

@@ -15,6 +15,8 @@
 var CUSTOM_SHORT = {
     "flasaro": true,
     "onelosthero": true,
+    "moosestache": true,
+    "occupational_hazard": true,
 };
 
 function ShortName(n) { if (n == null) return ""; return n.indexOf("npc_dota_hero_") === 0 ? n.substring(14) : n; }
