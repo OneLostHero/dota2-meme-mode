@@ -51,12 +51,16 @@ function modifier_onelosthero_lost_signal:OnCreated()
 			else
 				print("  talents.txt FAILED to load (nil)")
 			end
-			-- Does the hero actually have each talent ability by name?
+			-- Is each ability REGISTERED in the engine? AddAbility returns a handle if the
+			-- engine knows the KV, nil if it's unknown. Compare a vanilla talent vs ours.
 			for _, n in ipairs({
-				"special_bonus_unique_onelosthero_invis",
-				"special_bonus_unique_onelosthero_charges",
+				"special_bonus_attack_speed_15",                  -- vanilla control
+				"special_bonus_unique_onelosthero_invis",         -- ours
+				"special_bonus_unique_onelosthero_charges",       -- ours
 			}) do
-				print("  HasAbility(" .. n .. ") = " .. tostring(h:HasAbility(n)))
+				local ok, added = pcall(function() return h:AddAbility(n) end)
+				print("  AddAbility(" .. n .. ") ok=" .. tostring(ok) .. " handle=" .. tostring(added))
+				if ok and added then pcall(function() h:RemoveAbilityByHandle(added) end) end
 			end
 			print("=== [OneLostHero] end ===")
 		end)
