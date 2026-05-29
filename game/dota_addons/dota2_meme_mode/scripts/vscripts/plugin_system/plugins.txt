@@ -32,6 +32,7 @@
 #base "plugins/basic_commands/plugin.txt"
 
 #base "plugins/boosted/plugin.txt"
+#base "plugins/custom_heroes/plugin.txt"
 #base "plugins/time_scaling/plugin.txt"
 #base "plugins/tower_buffs/plugin.txt"
 #base "plugins/boost_scaling/plugin.txt"

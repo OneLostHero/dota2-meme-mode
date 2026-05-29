@@ -3,7 +3,7 @@
     "Order" "50"
     "enabled" {
         "TYPE" "boolean"
-        "DEFAULT" "0"
+        "DEFAULT" "1"
     }
     "red_state"
     {

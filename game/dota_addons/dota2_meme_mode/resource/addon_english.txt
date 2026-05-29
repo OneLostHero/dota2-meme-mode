@@ -13,6 +13,10 @@
 		"npc_dota_hero_flasaro_hype"		"Blink in. Cleave everything."
 		"DOTA_Tooltip_Ability_flasaro_dragonblood"		"Dragon Blood"
 
+		// Custom Heroes setup panel
+		"Plugin_custom_heroes"				"Custom Heroes"
+		"Plugin_custom_heroes_Description"	"Adds this mod's custom heroes (such as Flasaro) to the hero pick screen. When off, only standard Dota heroes can be picked."
+
 		"DOTA_TEAM_ALL"														"All"
 		"DOTA_TEAM_CUSTOM_1"												"The Chaos"
 		"DOTA_TEAM_CUSTOM_2"												"The Order"
