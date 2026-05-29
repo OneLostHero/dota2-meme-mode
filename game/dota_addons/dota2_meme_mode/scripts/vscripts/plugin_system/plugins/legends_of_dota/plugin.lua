@@ -54,6 +54,23 @@ function LegendsOfDotaPlugin:LoadHeroes()
         {}		-- universal
     }
     LegendsOfDotaPlugin.hero_definitions = LoadKeyValues('scripts/npc/npc_heroes.txt')
+    -- Merge custom heroes (e.g. Flasaro) so they enter the pick pool. The base
+    -- npc_heroes.txt LoadKeyValues does not include npc_heroes_custom.txt entries.
+    local custom_heroes = LoadKeyValues('scripts/npc/npc_heroes_custom.txt')
+    if custom_heroes ~= nil then
+        for custom_name, custom_data in pairs(custom_heroes) do
+            if type(custom_data) == "table" and custom_data.HeroID ~= nil then
+                -- Normalize so process_hero (checks Enabled == 1, reads HeroID /
+                -- AttributePrimary) reliably accepts the custom hero.
+                custom_data.Enabled = 1
+                custom_data.HeroID = tonumber(custom_data.HeroID) or custom_data.HeroID
+                LegendsOfDotaPlugin.hero_definitions[custom_name] = custom_data
+                print("[meme_mode] merged custom hero: " .. custom_name ..
+                    " (HeroID " .. tostring(custom_data.HeroID) ..
+                    ", attr " .. tostring(custom_data.AttributePrimary) .. ")")
+            end
+        end
+    end
     local process_hero = function(hero_data,hero_name)
         if hero_data.Enabled ~= 1 then return end
         local hero_attribute = _G[hero_data.AttributePrimary]
@@ -74,6 +91,10 @@ function LegendsOfDotaPlugin:LoadHeroes()
     end
     
     
+    print("[meme_mode] hero pool sizes: str=" .. #LegendsOfDotaPlugin.heroes[1] ..
+        " agi=" .. #LegendsOfDotaPlugin.heroes[2] ..
+        " int=" .. #LegendsOfDotaPlugin.heroes[3] ..
+        " uni=" .. #LegendsOfDotaPlugin.heroes[4])
     CustomNetTables:SetTableValue("heroselection_rework", "hero_pools", LegendsOfDotaPlugin.heroes)
 end
 

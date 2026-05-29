@@ -1,6 +1,78 @@
 // Dota Heroes File
-// NOTE: This is not for creating new heroes, this is for taking a currently existing hero as a template and overriding
-// the specified key-value combinations.  Use override_hero <hero_to_override> for this.
+// Custom heroes for Dota 2 - Meme Mode.
+//
+// Flasaro is a NEW, self-contained hero (NOT an override of Dragon Knight).
+// Lessons learned:
+//   - "override_hero" MODIFIES the target hero in place (it broke Dragon Knight),
+//     so it is NOT used here. Instead this is a full hero definition.
+//   - HeroID must reuse an unused Valve id. Only 24 and 105 are free. Using 24.
+//   - "AttributePrimary" is required (the hero-pool Lua does _G[attr] + 1).
+//   - Model/voice/stats are copied from Dragon Knight so Flasaro looks like DK
+//     while Dragon Knight itself stays untouched and fully playable.
 "DOTAHeroes"
 {
+	//============================================================
+	//  Flasaro  (new hero, HeroID 24, Dragon Knight look-alike)
+	//  Q antimage_blink | W riki_blink_strike | E sven_great_cleave
+	//  R sven_gods_strength | Sven talent tree (placeholder)
+	//============================================================
+	"npc_dota_hero_flasaro"
+	{
+		"HeroID"				"24"							// unused Valve id (24 or 105 are the only free ones)
+		"Enabled"				"1"
+		"Team"					"Good"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
+
+		// Look + voice (copied from Dragon Knight)
+		"Model"					"models/heroes/dragon_knight/dragon_knight.vmdl"
+		"ModelScale"			"0.840000"
+		"SoundSet"				"Hero_DragonKnight"
+		"GibType"				"default"
+		"Role"					"Carry,Durable,Initiator"
+		"Complexity"			"1"
+		"BotImplemented"		"0"
+
+		// Abilities
+		"Ability1"				"antimage_blink"				// Q
+		"Ability2"				"riki_blink_strike"				// W
+		"Ability3"				"sven_great_cleave"				// E
+		"Ability4"				"generic_hidden"
+		"Ability5"				"generic_hidden"
+		"Ability6"				"sven_gods_strength"			// R (ult)
+		"Ability10"				"special_bonus_unique_sven_5"
+		"Ability11"				"special_bonus_attack_speed_15"
+		"Ability12"				"special_bonus_unique_sven_3"
+		"Ability13"				"special_bonus_unique_sven_8"
+		"Ability14"				"special_bonus_unique_sven_6"
+		"Ability15"				"special_bonus_unique_sven_7"
+		"Ability16"				"special_bonus_unique_sven_2"
+		"Ability17"				"special_bonus_unique_sven_4"
+
+		// Attributes (copied from Dragon Knight)
+		"AttributeBaseStrength"			"21"
+		"AttributeStrengthGain"			"3.600000"
+		"AttributeBaseAgility"			"16"
+		"AttributeAgilityGain"			"2.000000"
+		"AttributeBaseIntelligence"		"18"
+		"AttributeIntelligenceGain"		"1.700000"
+
+		// Combat (copied from Dragon Knight)
+		"ArmorPhysical"			"0"
+		"MagicalResistance"		"25"
+		"AttackCapabilities"	"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"		"34"
+		"AttackDamageMax"		"40"
+		"AttackRate"			"1.600000"
+		"AttackAnimationPoint"	"0.500000"
+		"AttackAcquisitionRange"	"600"
+		"AttackRange"			"150"
+		"MovementSpeed"			"315"
+		"MovementTurnRate"		"0.500000"
+		"VisionDaytimeRange"	"1800"
+		"VisionNighttimeRange"	"800"
+		"StatusHealth"			"200"
+		"StatusHealthRegen"		"0.25"
+		"StatusMana"			"75"
+		"StatusManaRegen"		"0.0"
+	}
 }
