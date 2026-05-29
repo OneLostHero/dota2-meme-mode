@@ -293,105 +293,41 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_gods_strength_damage}% God's Strength Damage  (special_bonus_unique_sven_2) ----
 	// icon: special_bonus_unique_sven_2
-	"special_bonus_unique_sven_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s God's Strength Cooldown  (special_bonus_unique_sven_3) ----
 	// icon: special_bonus_unique_sven_3
-	"special_bonus_unique_sven_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "15"
-				"ad_linked_abilities" "sven_gods_strength"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bolt_stun_duration}s Storm Hammer Stun Duration  (special_bonus_unique_sven_4) ----
 	// icon: special_bonus_unique_sven_4
-	"special_bonus_unique_sven_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_duration}s Warcry Duration  (special_bonus_unique_sven_5) ----
 	// icon: special_bonus_unique_sven_5
-	"special_bonus_unique_sven_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_armor} Warcry Armor  (special_bonus_unique_sven_7) ----
 	// icon: special_bonus_unique_sven_7
-	"special_bonus_unique_sven_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_great_cleave_damage}% Great Cleave Damage  (special_bonus_unique_sven_8) ----
 	// icon: special_bonus_unique_sven_8
-	"special_bonus_unique_sven_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_slow_resistance}% God's Strength Slow Resistance  (special_bonus_unique_sven_gods_strength_slow_resist) ----
 	// icon: special_bonus_unique_sven_gods_strength_slow_resist
-	"special_bonus_unique_sven_gods_strength_slow_resist"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 
 }

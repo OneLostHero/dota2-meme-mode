@@ -283,101 +283,42 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_spawn_count} Demonic Summoning Eidolons  (special_bonus_unique_enigma) ----
 	// icon: special_bonus_unique_enigma
-	"special_bonus_unique_enigma"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_stun_instances} Malefice Instances  (special_bonus_unique_enigma_2) ----
 	// icon: special_bonus_unique_enigma_2
-	"special_bonus_unique_enigma_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_eidolon_bonus_damage} Eidolon Damage  (special_bonus_unique_enigma_3) ----
 	// icon: special_bonus_unique_enigma_3
-	"special_bonus_unique_enigma_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"					"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_eidolon_bonus_attack_speed} Eidolon Attack Speed  (special_bonus_unique_enigma_4) ----
 	// icon: special_bonus_unique_enigma_4
-	"special_bonus_unique_enigma_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"					"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage} Malefice Instance Damage  (special_bonus_unique_enigma_5) ----
 	// icon: special_bonus_unique_enigma_5
-	"special_bonus_unique_enigma_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage} Black Hole Damage Per Second  (special_bonus_unique_enigma_6) ----
 	// icon: special_bonus_unique_enigma_6
-	"special_bonus_unique_enigma_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_radius} Midnight Pulse Radius  (special_bonus_unique_enigma_9) ----
 	// icon: special_bonus_unique_enigma_9
-	"special_bonus_unique_enigma_9"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	// ---- Gravity Well  (enigma_gravity_well) ----
 	// icon: enigma_gravity_well

@@ -436,88 +436,33 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_base_health_regen} Dragon Blood HP Regen/Armor  (special_bonus_unique_dragon_knight) ----
 	// icon: special_bonus_unique_dragon_knight
-	"special_bonus_unique_dragon_knight"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_stun_duration}s Dragon Tail Stun  (special_bonus_unique_dragon_knight_2) ----
 	// icon: special_bonus_unique_dragon_knight_2
-	"special_bonus_unique_dragon_knight_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- {s:value}% Breathe Fire Damage Reduction  (special_bonus_unique_dragon_knight_3) ----
 	// icon: special_bonus_unique_dragon_knight_3
-	"special_bonus_unique_dragon_knight_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "-30"
-				"ad_linked_abilities" "dragon_knight_breathe_fire"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_attack_range} Elder Dragon Form Attack Range  (special_bonus_unique_dragon_knight_7) ----
 	// icon: special_bonus_unique_dragon_knight_7
-	"special_bonus_unique_dragon_knight_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_dragon_aoe} AoE Dragon Tail During Elder Dragon Form  (special_bonus_unique_dragon_knight_8) ----
 	// icon: special_bonus_unique_dragon_knight_8
-	"special_bonus_unique_dragon_knight_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_dragon_form_bonus_pct}% Breathe Fire Damage/Cast Range in Dragon Form  (special_bonus_unique_dragon_knight_9) ----
 	// icon: special_bonus_unique_dragon_knight_9
-	"special_bonus_unique_dragon_knight_9"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 }

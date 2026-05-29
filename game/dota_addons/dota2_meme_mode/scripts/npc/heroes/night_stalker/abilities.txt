@@ -315,107 +315,40 @@
 	//=================================================================================================================
 	// ---- -{s:value}s Dark Ascension Cooldown  (special_bonus_unique_night_stalker) ----
 	// icon: special_bonus_unique_night_stalker
-	"special_bonus_unique_night_stalker"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "50"
-				"ad_linked_abilities" "night_stalker_darkness"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_attack_speed_night} Hunter In The Night Attack Speed  (special_bonus_unique_night_stalker_2) ----
 	// icon: special_bonus_unique_night_stalker_2
-	"special_bonus_unique_night_stalker_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_damage} Dark Ascension Damage  (special_bonus_unique_night_stalker_3) ----
 	// icon: special_bonus_unique_night_stalker_3
-	"special_bonus_unique_night_stalker_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-		
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage} Void Damage  (special_bonus_unique_night_stalker_4) ----
 	// icon: special_bonus_unique_night_stalker_4
-	"special_bonus_unique_night_stalker_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_duration}s Dark Ascension Duration  (special_bonus_unique_night_stalker_7) ----
 	// icon: special_bonus_unique_night_stalker_7
-	"special_bonus_unique_night_stalker_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_status_resist_night}% Hunter in the Night Status Resistance  (special_bonus_unique_night_stalker_hunter_status_resist) ----
 	// icon: special_bonus_unique_night_stalker_hunter_status_resist
-	"special_bonus_unique_night_stalker_hunter_status_resist"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_dps} Crippling Fear DPS  (special_bonus_unique_night_stalker_crippling_fear_damage) ----
 	// icon: special_bonus_unique_night_stalker_crippling_fear_damage
-	"special_bonus_unique_night_stalker_crippling_fear_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"		
-	}
 }

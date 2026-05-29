@@ -383,111 +383,46 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_radius} Unstable Concoction Radius  (special_bonus_unique_alchemist) ----
 	// icon: special_bonus_unique_alchemist
-	"special_bonus_unique_alchemist"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_max_damage} Unstable Concoction Max Damage  (special_bonus_unique_alchemist_2) ----
 	// icon: special_bonus_unique_alchemist_2
-	"special_bonus_unique_alchemist_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Acid Spray grants armor to allies  (special_bonus_unique_alchemist_3) ----
 	// icon: special_bonus_unique_alchemist_3
-	"special_bonus_unique_alchemist_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_health_regen} Chemical Rage Regeneration  (special_bonus_unique_alchemist_4) ----
 	// icon: special_bonus_unique_alchemist_4
-	"special_bonus_unique_alchemist_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_armor_reduction} Acid Spray Armor Reduction  (special_bonus_unique_alchemist_5) ----
 	// icon: special_bonus_unique_alchemist_5
-	"special_bonus_unique_alchemist_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_movespeed} Chemical Rage Movement Speed  (special_bonus_unique_alchemist_6) ----
 	// icon: special_bonus_unique_alchemist_6
-	"special_bonus_unique_alchemist_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage} Damage per Greevil's Greed stack  (special_bonus_unique_alchemist_7) ----
 	// icon: special_bonus_unique_alchemist_7
-	"special_bonus_unique_alchemist_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_base_attack_time}s Chemical Rage Base Attack Time  (special_bonus_unique_alchemist_8) ----
 	// icon: special_bonus_unique_alchemist_8
-	"special_bonus_unique_alchemist_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 }

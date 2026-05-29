@@ -482,117 +482,40 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_crit_multiplier}% Walrus Punch Crit  (special_bonus_unique_tusk) ----
 	// icon: special_bonus_unique_tusk
-	"special_bonus_unique_tusk"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_snowball_damage} Snowball Damage  (special_bonus_unique_tusk_2) ----
 	// icon: special_bonus_unique_tusk_2
-	"special_bonus_unique_tusk_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_damage} Tag Team Damage  (special_bonus_unique_tusk_3) ----
 	// icon: special_bonus_unique_tusk_3
-	"special_bonus_unique_tusk_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- {s:value}% Chance Walrus Punch  (special_bonus_unique_tusk_4) ----
 	// icon: special_bonus_unique_tusk_4
-	"special_bonus_unique_tusk_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "12"
-				"ad_linked_abilities" "tusk_walrus_punch"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Ice Shards Cooldown  (special_bonus_unique_tusk_5) ----
 	// icon: special_bonus_unique_tusk_5
-	"special_bonus_unique_tusk_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "6"
-				"ad_linked_abilities" "tusk_ice_shards"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Snowball Cooldown  (special_bonus_unique_tusk_6) ----
 	// icon: special_bonus_unique_tusk_6
-	"special_bonus_unique_tusk_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "8"
-				"ad_linked_abilities" "tusk_snowball"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_air_time}s Walrus Punch Stun Duration  (special_bonus_unique_tusk_7) ----
 	// icon: special_bonus_unique_tusk_7
-	"special_bonus_unique_tusk_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 }

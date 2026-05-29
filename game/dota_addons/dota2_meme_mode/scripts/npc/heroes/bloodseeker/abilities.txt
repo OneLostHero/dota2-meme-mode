@@ -377,100 +377,40 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_damage} Blood Rite Damage  (special_bonus_unique_bloodseeker_2) ----
 	// icon: special_bonus_unique_bloodseeker_2
-	"special_bonus_unique_bloodseeker_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_AbilityCastRange} Rupture Cast Range  (special_bonus_unique_bloodseeker_3) ----
 	// icon: special_bonus_unique_bloodseeker_3
-	"special_bonus_unique_bloodseeker_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"	
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_movement_speed}% Max Thirst MS  (special_bonus_unique_bloodseeker_4) ----
 	// icon: special_bonus_unique_bloodseeker_4
-	"special_bonus_unique_bloodseeker_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_attack_speed} Bloodrage Attack Speed  (special_bonus_unique_bloodseeker_5) ----
 	// icon: special_bonus_unique_bloodseeker_5
-	"special_bonus_unique_bloodseeker_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-	
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_spell_amp}% Bloodrage Spell Amplification  (special_bonus_unique_bloodseeker_6) ----
 	// icon: special_bonus_unique_bloodseeker_6
-	"special_bonus_unique_bloodseeker_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-		
-	}
 
 		//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_hp_pct}% Rupture Initial Damage  (special_bonus_unique_bloodseeker_7) ----
 	// icon: special_bonus_unique_bloodseeker_7
-	"special_bonus_unique_bloodseeker_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"		
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 
 	// ---- {s:bonus_AbilityCharges} Rupture Charges  (special_bonus_unique_bloodseeker_rupture_charges) ----
 	// icon: special_bonus_unique_bloodseeker_rupture_charges
-	"special_bonus_unique_bloodseeker_rupture_charges"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 }

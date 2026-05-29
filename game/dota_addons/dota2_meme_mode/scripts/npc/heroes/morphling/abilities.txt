@@ -523,79 +523,24 @@
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- special_bonus_unique_morphling_1  (special_bonus_unique_morphling_1) ----
-	"special_bonus_unique_morphling_1"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"morphling_waveform"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-				
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- special_bonus_unique_morphling_4  (special_bonus_unique_morphling_4) ----
-	"special_bonus_unique_morphling_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "1"
-				"ad_linked_abilities" "morphling_waveform"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- special_bonus_unique_morphling_8  (special_bonus_unique_morphling_8) ----
-	"special_bonus_unique_morphling_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- special_bonus_unique_morphling_10  (special_bonus_unique_morphling_10) ----
-	"special_bonus_unique_morphling_10"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "0"
-				"ad_linked_abilities" "morphling_morph_agi"
-			}
-		}
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}% Waveform Cooldown  (special_bonus_unique_morphling_waveform_cooldown) ----
 	// icon: special_bonus_unique_morphling_waveform_cooldown
-	"special_bonus_unique_morphling_waveform_cooldown"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}	
 }

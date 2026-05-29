@@ -446,88 +446,33 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_attack_speed} Bloodlust Attack Speed  (special_bonus_unique_ogre_magi) ----
 	// icon: special_bonus_unique_ogre_magi
-	"special_bonus_unique_ogre_magi"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_fireblast_damage} Fireblast Damage  (special_bonus_unique_ogre_magi_2) ----
 	// icon: special_bonus_unique_ogre_magi_2
-	"special_bonus_unique_ogre_magi_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- special_bonus_unique_ogre_magi_3  (special_bonus_unique_ogre_magi_3) ----
-	"special_bonus_unique_ogre_magi_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "17"
-				"ad_linked_abilities" "ogre_magi_fireblast"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_burn_damage} Ignite DPS  (special_bonus_unique_ogre_magi_4) ----
 	// icon: special_bonus_unique_ogre_magi_4
-	"special_bonus_unique_ogre_magi_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Fireblast Cooldown  (special_bonus_unique_ogre_magi_5) ----
 	// icon: special_bonus_unique_ogre_magi_5
-	"special_bonus_unique_ogre_magi_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_mana_per_str}/{s:bonus_mana_regen_per_str} Dumb Luck Mana/Mana Regen Per Strength  (special_bonus_unique_ogre_magi_dumb_luck_mana) ----
 	// icon: special_bonus_unique_ogre_magi_dumb_luck_mana
-	"special_bonus_unique_ogre_magi_dumb_luck_mana"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	
 }

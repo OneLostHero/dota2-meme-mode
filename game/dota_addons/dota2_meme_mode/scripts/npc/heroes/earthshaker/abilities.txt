@@ -345,98 +345,40 @@
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Enchant Totem Cooldown  (special_bonus_unique_earthshaker) ----
 	// icon: special_bonus_unique_earthshaker
-	"special_bonus_unique_earthshaker"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_echo_slam_echo_damage} Echo Damage  (special_bonus_unique_earthshaker_2) ----
 	// icon: special_bonus_unique_earthshaker_2
-	"special_bonus_unique_earthshaker_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_fissure_range} Fissure Range  (special_bonus_unique_earthshaker_3) ----
 	// icon: special_bonus_unique_earthshaker_3
-	"special_bonus_unique_earthshaker_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_fissure_damage} Fissure Damage  (special_bonus_unique_earthshaker_4) ----
 	// icon: special_bonus_unique_earthshaker_4
-	"special_bonus_unique_earthshaker_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_aftershock_damage} Aftershock Damage  (special_bonus_unique_earthshaker_6) ----
 	// icon: special_bonus_unique_earthshaker_6
-	"special_bonus_unique_earthshaker_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_totem_damage_percentage}% Enchant Totem Damage  (special_bonus_unique_earthshaker_totem_damage) ----
 	// icon: special_bonus_unique_earthshaker_totem_damage
-	"special_bonus_unique_earthshaker_totem_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"earthshaker_enchant_totem"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}% Echo Slam Cooldown  (special_bonus_unique_earthshaker_echo_cd) ----
 	// icon: special_bonus_unique_earthshaker_echo_cd
-	"special_bonus_unique_earthshaker_echo_cd"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"earthshaker_echo_slam"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		"BaseClass"						"special_bonus_base"
-	}
 }

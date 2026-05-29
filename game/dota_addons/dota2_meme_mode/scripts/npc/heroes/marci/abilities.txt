@@ -392,106 +392,27 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_debuff_duration}s Rebound Stun Duration  (special_bonus_unique_marci_grapple_stun_duration) ----
 	// icon: special_bonus_unique_marci_grapple_stun_duration
-	"special_bonus_unique_marci_grapple_stun_duration"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"					"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Marci: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_lifesteal_pct}% Sidekick Lifesteal  (special_bonus_unique_marci_guardian_lifesteal) ----
 	// icon: special_bonus_unique_marci_guardian_lifesteal
-	"special_bonus_unique_marci_guardian_lifesteal"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "10"
-				"ad_linked_abilities" "marci_guardian"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Marci: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_max_jump_distance} Rebound Cast/Jump Range  (special_bonus_unique_marci_lunge_range) ----
 	// icon: special_bonus_unique_marci_lunge_range
-	"special_bonus_unique_marci_lunge_range"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	// ---- +{s:bonus_bonus_movespeed}% Unleash Movement Speed  (special_bonus_unique_marci_unleash_speed) ----
 	// icon: special_bonus_unique_marci_unleash_speed
-	"special_bonus_unique_marci_unleash_speed"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"							"special_bonus_base"
-
-		
-	}
 
 	// ---- +{s:bonus_impact_damage} Dispose Damage  (special_bonus_unique_marci_grapple_damage) ----
 	// icon: special_bonus_unique_marci_grapple_damage
-	"special_bonus_unique_marci_grapple_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"							"special_bonus_base"
-
-	
-	}
 	
 	// ---- Unleash Duration Extended By {s:bonus_extend_duration}s On Kill  (special_bonus_unique_marci_unleash_extend_duration) ----
 	// icon: special_bonus_unique_marci_unleash_extend_duration
-	"special_bonus_unique_marci_unleash_extend_duration"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"							"special_bonus_base"
-	}
 	// ---- +{s:bonus_ally_movespeed_pct}% Rebound Movement Speed Bonus  (special_bonus_unique_marci_lunge_movespeed) ----
 	// icon: special_bonus_unique_marci_lunge_movespeed
-	"special_bonus_unique_marci_lunge_movespeed"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"							"special_bonus_base"
-
-		
-	}
-		"special_bonus_unique_marci_guardian_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"							"special_bonus_base"
-
-	
-	}
 }

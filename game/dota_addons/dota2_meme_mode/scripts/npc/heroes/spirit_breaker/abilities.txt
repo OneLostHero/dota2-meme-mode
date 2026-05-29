@@ -397,77 +397,28 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_chance_pct}% Greater Bash Chance  (special_bonus_unique_spirit_breaker_1) ----
 	// icon: special_bonus_unique_spirit_breaker_1
-	"special_bonus_unique_spirit_breaker_1"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Bulldoze Cooldown  (special_bonus_unique_spirit_breaker_2) ----
 	// icon: special_bonus_unique_spirit_breaker_2
-	"special_bonus_unique_spirit_breaker_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "3"
-				"ad_linked_abilities" "spirit_breaker_bulldoze"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage}% Greater Bash Damage  (special_bonus_unique_spirit_breaker_3) ----
 	// icon: special_bonus_unique_spirit_breaker_3
-	"special_bonus_unique_spirit_breaker_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Charge of Darkness Cooldown  (special_bonus_unique_spirit_breaker_4) ----
 	// icon: special_bonus_unique_spirit_breaker_4
-	"special_bonus_unique_spirit_breaker_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-	
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Bulldoze {s:bonus_damage_barrier} All Damage Barrier  (special_bonus_unique_spirit_breaker_shield) ----
 	// icon: special_bonus_unique_spirit_breaker_shield
-	"special_bonus_unique_spirit_breaker_shield"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"spirit_breaker_bulldoze"	
-		"BaseClass"						"special_bonus_base"
-	}
 }

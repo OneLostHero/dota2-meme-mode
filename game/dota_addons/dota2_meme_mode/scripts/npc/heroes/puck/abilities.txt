@@ -375,125 +375,43 @@
 	//=================================================================================================================
 	// ---- -{s:value}s Dream Coil Cooldown  (special_bonus_unique_puck) ----
 	// icon: special_bonus_unique_puck
-	"special_bonus_unique_puck"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"puck_dream_coil"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		"AbilityValues"
-		{
-				"value"				"10"	// check tooltip
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Waning Rift Cooldown  (special_bonus_unique_puck_2) ----
 	// icon: special_bonus_unique_puck_2
-	"special_bonus_unique_puck_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "3"
-				"ad_linked_abilities" "puck_waning_rift"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Dream Coil Pierces Debuff Immunity  (special_bonus_unique_puck_5) ----
 	// icon: special_bonus_unique_puck_5
-	"special_bonus_unique_puck_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "1"
-				"ad_linked_abilities" "puck_dream_coil"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage} Waning Rift Damage  (special_bonus_unique_puck_6) ----
 	// icon: special_bonus_unique_puck_6
-	"special_bonus_unique_puck_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_silence_duration}s Waning Rift Silence Duration  (special_bonus_unique_puck_7) ----
 	// icon: special_bonus_unique_puck_7
-	"special_bonus_unique_puck_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage} Illusory Orb Damage  (special_bonus_unique_puck_orb_damage) ----
 	// icon: special_bonus_unique_puck_orb_damage
-	"special_bonus_unique_puck_orb_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}	
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_coil_break_damage} Initial/Break Dream Coil Damage  (special_bonus_unique_puck_coil_damage) ----
 	// icon: special_bonus_unique_puck_coil_damage
-	"special_bonus_unique_puck_coil_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}	
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_radius} Waning Rift Radius/Max Distance  (special_bonus_unique_puck_rift_radius) ----
 	// icon: special_bonus_unique_puck_rift_radius
-	"special_bonus_unique_puck_rift_radius"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 }

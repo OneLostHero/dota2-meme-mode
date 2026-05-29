@@ -359,118 +359,47 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_slow_duration}s Thunder Strike Slow Duration  (special_bonus_unique_disruptor) ----
 	// icon: special_bonus_unique_disruptor
-	"special_bonus_unique_disruptor"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Kinetic Field Cooldown  (special_bonus_unique_disruptor_2) ----
 	// icon: special_bonus_unique_disruptor_2
-	"special_bonus_unique_disruptor_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "3"
-				"ad_linked_abilities" "disruptor_kinetic_field"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Glimpse Cooldown  (special_bonus_unique_disruptor_4) ----
 	// icon: special_bonus_unique_disruptor_4
-	"special_bonus_unique_disruptor_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_duration}s Kinetic Field Duration  (special_bonus_unique_disruptor_5) ----
 	// icon: special_bonus_unique_disruptor_5
-	"special_bonus_unique_disruptor_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_duration}s Static Storm Duration  (special_bonus_unique_disruptor_7) ----
 	// icon: special_bonus_unique_disruptor_7
-	"special_bonus_unique_disruptor_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_radius} Static Storm Radius  (special_bonus_unique_disruptor_8) ----
 	// icon: special_bonus_unique_disruptor_8
-	"special_bonus_unique_disruptor_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_max_damage} Glimpse Max Damage  (special_bonus_unique_disruptor_9) ----
 	// icon: special_bonus_unique_disruptor_9
-	"special_bonus_unique_disruptor_9"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_strike_damage_bonus} Thunder Strike Damage per Strike  (special_bonus_unique_disruptor_consecutive_strike_damage) ----
 	// icon: special_bonus_unique_disruptor_consecutive_strike_damage
-	"special_bonus_unique_disruptor_consecutive_strike_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Innate Lone Wolf

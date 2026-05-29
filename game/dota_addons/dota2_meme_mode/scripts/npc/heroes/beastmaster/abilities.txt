@@ -655,118 +655,45 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_boar_bonus_damage} Damage to Beastmaster and his units  (special_bonus_unique_beastmaster_2) ----
 	// icon: special_bonus_unique_beastmaster_2
-	"special_bonus_unique_beastmaster_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- {s:bonus_magic_resist}% Inner Beast Magic Resist  (special_bonus_unique_beastmaster_3) ----
 	// icon: special_bonus_unique_beastmaster_3
-	"special_bonus_unique_beastmaster_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_attack_speed} Inner Beast Attack Speed  (special_bonus_unique_beastmaster_4) ----
 	// icon: special_bonus_unique_beastmaster_4
-	"special_bonus_unique_beastmaster_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_ms} Movespeed Aura to Beastmaster and his units  (special_bonus_unique_beastmaster_5) ----
 	// icon: special_bonus_unique_beastmaster_5
-	"special_bonus_unique_beastmaster_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"bonus_ms"				"20"	// higher = stronger
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_hp} Max Health Aura to Beastmaster and his units  (special_bonus_unique_beastmaster_6) ----
 	// icon: special_bonus_unique_beastmaster_6
-	"special_bonus_unique_beastmaster_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"beastmaster_call_of_the_wild_boar"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityValues"
-		{
-			"bonus_hp"				"250"	// higher = stronger
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Primal Roar Cooldown  (special_bonus_unique_beastmaster_7) ----
 	// icon: special_bonus_unique_beastmaster_7
-	"special_bonus_unique_beastmaster_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage_amp}% Wild Axes Damage Amp Per Stack  (special_bonus_unique_beastmaster_9) ----
 	// icon: special_bonus_unique_beastmaster_9
-	"special_bonus_unique_beastmaster_9"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- No Wild Axes Cooldown  (special_bonus_unique_beastmaster_wild_axe_cooldown) ----
 	// icon: special_bonus_unique_beastmaster_wild_axe_cooldown
-	"special_bonus_unique_beastmaster_wild_axe_cooldown"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 }

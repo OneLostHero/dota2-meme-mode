@@ -330,14 +330,6 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_attack_speed} Attack Speed against Shadow Striked units  (special_bonus_unique_queen_of_pain_1) ----
 	// icon: special_bonus_unique_queen_of_pain_1
-	"special_bonus_unique_queen_of_pain_1"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 
 	//=================================================================================================================
@@ -345,77 +337,30 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_damage} Scream of Pain Damage  (special_bonus_unique_queen_of_pain_2) ----
 	// icon: special_bonus_unique_queen_of_pain_2
-	"special_bonus_unique_queen_of_pain_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Sonic Wave Cooldown  (special_bonus_unique_queen_of_pain_3) ----
 	// icon: special_bonus_unique_queen_of_pain_3
-	"special_bonus_unique_queen_of_pain_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_damage_interval}s Shadow Strike Damage Interval  (special_bonus_unique_queen_of_pain_4) ----
 	// icon: special_bonus_unique_queen_of_pain_4
-	"special_bonus_unique_queen_of_pain_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Blink Cooldown  (special_bonus_unique_queen_of_pain_6) ----
 	// icon: special_bonus_unique_queen_of_pain_6
-	"special_bonus_unique_queen_of_pain_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "2"
-				"ad_linked_abilities" "queenofpain_blink"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage} Sonic Wave Damage  (special_bonus_unique_queen_of_pain_7) ----
 	// icon: special_bonus_unique_queen_of_pain_7
-	"special_bonus_unique_queen_of_pain_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 
 	

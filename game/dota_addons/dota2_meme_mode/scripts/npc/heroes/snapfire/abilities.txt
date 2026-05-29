@@ -482,117 +482,36 @@
  	//=================================================================================================================
 	// Ability: Snapfire Special Bonus (Bonus Mortimer Kisses Launched)
 	//=================================================================================================================
-  	"special_bonus_unique_snapfire_1"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"							"special_bonus_base"
-	}
 
  	//=================================================================================================================
 	// Ability: Snapfire Special Bonus
 	//=================================================================================================================
-  	"special_bonus_unique_snapfire_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"					"special_bonus_base"
-		"ad_linked_abilities"			"snapfire_lil_shredder"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 
  	//=================================================================================================================
 	// Ability: Snapfire Special Bonus
 	//=================================================================================================================
-  	"special_bonus_unique_snapfire_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"snapfire_firesnap_cookie"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-
-	}
 
  	//=================================================================================================================
 	// Ability: Snapfire Special Bonus
 	//=================================================================================================================
-  	"special_bonus_unique_snapfire_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"snapfire_firesnap_cookie"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-
-	}
 
 	//=================================================================================================================
 	// Ability: Snapfire Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage_pct}% Lil' Shredder Attack Damage  (special_bonus_unique_snapfire_6) ----
 	// icon: special_bonus_unique_snapfire_6
-	"special_bonus_unique_snapfire_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "1"
-				"ad_linked_abilities" "snapfire_lil_shredder"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Snapfire Special Bonus (Bonus Scatterblast Damage)
 	//=================================================================================================================
 	// ---- +{s:bonus_damage} Scatterblast Damage  (special_bonus_unique_snapfire_7) ----
 	// icon: special_bonus_unique_snapfire_7
-	"special_bonus_unique_snapfire_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Snapfire Special Bonus (Bonus Scatterblast Damage)
 	//=================================================================================================================
 	// ---- {s:value}x Lil' Shredder Multishot  (special_bonus_unique_snapfire_8) ----
 	// icon: special_bonus_unique_snapfire_8
-	"special_bonus_unique_snapfire_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "3"
-				"ad_linked_abilities" "snapfire_lil_shredder"
-			}
-		}
-	}
 	// ---- +{s:bonus_damage_per_impact} Mortimer Kisses Impact Damage  (special_bonus_unique_snapfire_mortimer_kisses_impact_damage) ----
 	// icon: special_bonus_unique_snapfire_mortimer_kisses_impact_damage
-	"special_bonus_unique_snapfire_mortimer_kisses_impact_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"							"special_bonus_base"
-	}
 }

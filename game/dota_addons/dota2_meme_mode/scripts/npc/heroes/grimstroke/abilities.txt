@@ -512,110 +512,40 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_radius} Ink Swell Radius  (special_bonus_unique_grimstroke_1) ----
 	// icon: special_bonus_unique_grimstroke_1
-	"special_bonus_unique_grimstroke_1"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus - +75% Stroke of Fate Damage
 	//=================================================================================================================
 	// ---- +{s:bonus_damage}% Stroke of Fate Damage  (special_bonus_unique_grimstroke_2) ----
 	// icon: special_bonus_unique_grimstroke_2
-	"special_bonus_unique_grimstroke_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus - +1000 Stroke of Fate Cast Range
 	//=================================================================================================================
 	// ---- +{s:bonus_AbilityCastRange}% Stroke of Fate Speed and Travel Range  (special_bonus_unique_grimstroke_3) ----
 	// icon: special_bonus_unique_grimstroke_3
-	"special_bonus_unique_grimstroke_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus - Phantom's Embrace +1 Hit To Kill
 	//=================================================================================================================
 	// ---- +{s:bonus_destroy_attacks} Hits to Kill Phantom  (special_bonus_unique_grimstroke_4) ----
 	// icon: special_bonus_unique_grimstroke_4
-	"special_bonus_unique_grimstroke_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus - Phantom's Embrace Rend Damage
 	//=================================================================================================================
 	// ---- +{s:bonus_movespeed_bonus_pct}% Ink Swell Movement Speed  (special_bonus_unique_grimstroke_6) ----
 	// icon: special_bonus_unique_grimstroke_6
-	"special_bonus_unique_grimstroke_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus - Phantom's Embrace Rend Damage
 	//=================================================================================================================
 	// ---- -{s:value}s Ink Swell Cooldown  (special_bonus_unique_grimstroke_7) ----
 	// icon: special_bonus_unique_grimstroke_7
-	"special_bonus_unique_grimstroke_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "4"
-				"ad_linked_abilities" "grimstroke_spirit_walk"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus 
 	//=================================================================================================================
 	// ---- +{s:bonus_damage_per_second} Phantom's Embrace DPS  (special_bonus_unique_grimstroke_8) ----
 	// icon: special_bonus_unique_grimstroke_8
-	"special_bonus_unique_grimstroke_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
-  	"special_bonus_unique_grimstroke_soul_chain_reflect_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"							"special_bonus_base"
-	}
 }

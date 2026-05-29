@@ -453,113 +453,48 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_ensnare_duration}s Pit of Malice Root  (special_bonus_unique_underlord) ----
 	// icon: special_bonus_unique_underlord
-	"special_bonus_unique_underlord"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"abyssal_underlord_pit_of_malice"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage_reduction_pct}% Atrophy Aura Attack Damage Reduction/Gain  (special_bonus_unique_underlord_3) ----
 	// icon: special_bonus_unique_underlord_3
-	"special_bonus_unique_underlord_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"abyssal_underlord_atrophy_aura"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_burn_damage}% Firestorm Burn Damage  (special_bonus_unique_underlord_4) ----
 	// icon: special_bonus_unique_underlord_4
-	"special_bonus_unique_underlord_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"abyssal_underlord_firestorm"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Firestorm Cooldown  (special_bonus_unique_underlord_5) ----
 	// icon: special_bonus_unique_underlord_5
-	"special_bonus_unique_underlord_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"abyssal_underlord_firestorm"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Pit of Malice Slows by {s:bonus_speed_bonus}%  (special_bonus_unique_underlord_6) ----
 	// icon: special_bonus_unique_underlord_6
-	"special_bonus_unique_underlord_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"abyssal_underlord_pit_of_malice"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_ms}% Fiend's Gate Movement Bonus/Damage Reduction  (special_bonus_unique_underlord_7) ----
 	// icon: special_bonus_unique_underlord_7
-	"special_bonus_unique_underlord_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_radius} Firestorm Radius  (special_bonus_unique_underlord_8) ----
 	// icon: special_bonus_unique_underlord_8
-	"special_bonus_unique_underlord_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"abyssal_underlord_firestorm"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Fiend's Gates deals {s:bonus_dps} DPS in a {s:bonus_radius} radius  (special_bonus_unique_underlord_9) ----
 	// icon: special_bonus_unique_underlord_9
-	"special_bonus_unique_underlord_9"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"abyssal_underlord_atrophy_aura"
-	}
 
 	//=================================================================================================================
 	// Ability:  Abyssal Underling last will

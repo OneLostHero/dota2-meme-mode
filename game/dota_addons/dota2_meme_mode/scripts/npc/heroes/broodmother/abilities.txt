@@ -485,101 +485,39 @@
 	//=================================================================================================================
 	// ---- -{s:bonus_bat_bonus}s BAT during Insatiable Hunger  (special_bonus_unique_broodmother_1) ----
 	// icon: special_bonus_unique_broodmother_1
-	"special_bonus_unique_broodmother_1"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"broodmother_insatiable_hunger"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_attack_damage} Incapacitating Bite Attack Bonus  (special_bonus_unique_broodmother_2) ----
 	// icon: special_bonus_unique_broodmother_2
-	"special_bonus_unique_broodmother_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"broodmother_silken_bola"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage} Spawn Spiderlings Damage  (special_bonus_unique_broodmother_3) ----
 	// icon: special_bonus_unique_broodmother_3
-	"special_bonus_unique_broodmother_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"broodmother_spawn_spiderlings"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_miss_chance}% Incapacitating Bite Slow/Miss Chance  (special_bonus_unique_broodmother_4) ----
 	// icon: special_bonus_unique_broodmother_4
-	"special_bonus_unique_broodmother_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"broodmother_silken_bola"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityChargeRestoreTime}s Spin Web Charge Restore Time  (special_bonus_unique_broodmother_5) ----
 	// icon: special_bonus_unique_broodmother_5
-	"special_bonus_unique_broodmother_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"broodmother_spin_web"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		
-		
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_count} Spin Web Simultaneous Webs  (special_bonus_unique_broodmother_6) ----
 	// icon: special_bonus_unique_broodmother_6
-	"special_bonus_unique_broodmother_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"broodmother_spin_web"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		"BaseClass"						"special_bonus_base"				
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_hp_bonus} Spiderlings Health  (special_bonus_unique_broodmother_7) ----
 	// icon: special_bonus_unique_broodmother_7
-	"special_bonus_unique_broodmother_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"				
-	}
 	
 }

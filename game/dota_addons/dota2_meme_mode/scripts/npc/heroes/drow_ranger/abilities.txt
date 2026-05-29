@@ -442,95 +442,39 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_arrow_damage_pct}% Multishot Damage  (special_bonus_unique_drow_ranger_1) ----
 	// icon: special_bonus_unique_drow_ranger_1
-	"special_bonus_unique_drow_ranger_1"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage} Frost Arrow Damage  (special_bonus_unique_drow_ranger_2) ----
 	// icon: special_bonus_unique_drow_ranger_2
-	"special_bonus_unique_drow_ranger_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_chance}% Marksmanship Chance  (special_bonus_unique_drow_ranger_3) ----
 	// icon: special_bonus_unique_drow_ranger_3
-	"special_bonus_unique_drow_ranger_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Multishot Cooldown  (special_bonus_unique_drow_ranger_6) ----
 	// icon: special_bonus_unique_drow_ranger_6
-	"special_bonus_unique_drow_ranger_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Gust Cooldown  (special_bonus_unique_drow_ranger_7) ----
 	// icon: special_bonus_unique_drow_ranger_7
-	"special_bonus_unique_drow_ranger_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_wave_count} Multishot Wave  (special_bonus_unique_drow_ranger_8) ----
 	// icon: special_bonus_unique_drow_ranger_8
-	"special_bonus_unique_drow_ranger_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- {s:bonus_bonus_movespeed}% Gust Self Movement Speed  (special_bonus_unique_drow_ranger_gust_selfmovespeed) ----
 	// icon: special_bonus_unique_drow_ranger_gust_selfmovespeed
-	"special_bonus_unique_drow_ranger_gust_selfmovespeed"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 }

@@ -377,81 +377,32 @@
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityChargeRestoreTime}s Shrapnel Charge Restore Time  (special_bonus_unique_sniper_2) ----
 	// icon: special_bonus_unique_sniper_2
-	"special_bonus_unique_sniper_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_knockback_distance} Max Headshot Knockback Distance  (special_bonus_unique_sniper_3) ----
 	// icon: special_bonus_unique_sniper_3
-	"special_bonus_unique_sniper_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_duration}s Take Aim Duration  (special_bonus_unique_sniper_4) ----
 	// icon: special_bonus_unique_sniper_4
-	"special_bonus_unique_sniper_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_slow_movement_speed}% Shrapnel Movement Slow  (special_bonus_unique_sniper_5) ----
 	// icon: special_bonus_unique_sniper_5
-	"special_bonus_unique_sniper_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage} Headshot Damage  (special_bonus_unique_sniper_headshot_damage) ----
 	// icon: special_bonus_unique_sniper_headshot_damage
-	"special_bonus_unique_sniper_headshot_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_armor} Take Aim Armor  (special_bonus_unique_sniper_take_aim_armor) ----
 	// icon: special_bonus_unique_sniper_take_aim_armor
-	"special_bonus_unique_sniper_take_aim_armor"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}	
 }

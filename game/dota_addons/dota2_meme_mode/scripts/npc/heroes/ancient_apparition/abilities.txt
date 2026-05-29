@@ -399,108 +399,44 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_break_distance} Cold Feet Breaking distance  (special_bonus_unique_ancient_apparition_1) ----
 	// icon: special_bonus_unique_ancient_apparition_1
-	"special_bonus_unique_ancient_apparition_1"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage} Chilling Touch Damage  (special_bonus_unique_ancient_apparition_2) ----
 	// icon: special_bonus_unique_ancient_apparition_2
-	"special_bonus_unique_ancient_apparition_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Ice Vortex Cooldown  (special_bonus_unique_ancient_apparition_3) ----
 	// icon: special_bonus_unique_ancient_apparition_3
-	"special_bonus_unique_ancient_apparition_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_kill_pct}% Ice Blast Kill Threshold  (special_bonus_unique_ancient_apparition_5) ----
 	// icon: special_bonus_unique_ancient_apparition_5
-	"special_bonus_unique_ancient_apparition_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage}% Death Rime Slow/Damage  (special_bonus_unique_ancient_apparition_6) ----
 	// icon: special_bonus_unique_ancient_apparition_6
-	"special_bonus_unique_ancient_apparition_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_attack_range_bonus} Chilling Touch Attack Range  (special_bonus_unique_ancient_apparition_7) ----
 	// icon: special_bonus_unique_ancient_apparition_7
-	"special_bonus_unique_ancient_apparition_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_frost_stacks} Cold Feet Death Rime Stacks  (special_bonus_unique_ancient_apparition_8) ----
 	// icon: special_bonus_unique_ancient_apparition_8
-	"special_bonus_unique_ancient_apparition_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_frostbite_duration}s Ice Blast Frostbitten Duration  (special_bonus_unique_ancient_apparition_ice_vortex_duration) ----
 	// icon: special_bonus_unique_ancient_apparition_ice_vortex_duration
-	"special_bonus_unique_ancient_apparition_ice_vortex_duration"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 }

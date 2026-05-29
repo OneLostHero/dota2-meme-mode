@@ -369,96 +369,40 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_absorb_amount} Flame Guard Barrier Amount  (special_bonus_unique_ember_spirit_1) ----
 	// icon: special_bonus_unique_ember_spirit_1
-	"special_bonus_unique_ember_spirit_1"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_duration}s Searing Chains Duration  (special_bonus_unique_ember_spirit_2) ----
 	// icon: special_bonus_unique_ember_spirit_2
-	"special_bonus_unique_ember_spirit_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_active_damage_per_second}% Flame Guard DPS  (special_bonus_unique_ember_spirit_3) ----
 	// icon: special_bonus_unique_ember_spirit_3
-	"special_bonus_unique_ember_spirit_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- {s:bonus_AbilityCharges} Sleight of Fist Charges  (special_bonus_unique_ember_spirit_4) ----
 	// icon: special_bonus_unique_ember_spirit_4
-	"special_bonus_unique_ember_spirit_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityChargeRestoreTime}s Remnant Charge Restore Time  (special_bonus_unique_ember_spirit_5) ----
 	// icon: special_bonus_unique_ember_spirit_5
-	"special_bonus_unique_ember_spirit_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_hero_damage} Sleight of Fist Hero Damage  (special_bonus_unique_ember_spirit_6) ----
 	// icon: special_bonus_unique_ember_spirit_6
-	"special_bonus_unique_ember_spirit_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage_per_second} Searing Chains Damage  (special_bonus_unique_ember_spirit_chains_dps) ----
 	// icon: special_bonus_unique_ember_spirit_chains_dps
-	"special_bonus_unique_ember_spirit_chains_dps"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 
 	

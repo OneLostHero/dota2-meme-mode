@@ -499,90 +499,26 @@
 	//=================================================================================================================
 	// Ability: Primal Beast Uproar Dispels
 	//=================================================================================================================
-  	"special_bonus_unique_primal_beast_roar_dispells"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Onslaught knockback damage
 	//=================================================================================================================
-  	"special_bonus_unique_primal_beast_onslaught_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Primal Beast Trample Damage
 	//=================================================================================================================
-  	"special_bonus_unique_primal_beast_trample_attack_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Primal Beast Pulverize Duration
 	//=================================================================================================================
-  	"special_bonus_unique_primal_beast_pulverize_duration"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}			
 	//=================================================================================================================
 	// Ability: Primal Beast Uproar Armor
 	//=================================================================================================================
-  	"special_bonus_unique_primal_beast_uproar_armor"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}	
 	//=================================================================================================================
 	// Ability: Primal Beast Uproar Armor
 	//=================================================================================================================
-  	"special_bonus_unique_primal_beast_trample_magic_resist"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}	
 	//=================================================================================================================
 	// Ability: Primal Beast Uproar Armor
 	//=================================================================================================================
-  	"special_bonus_unique_primal_beast_trample_cooldown"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}	
 	//=================================================================================================================
 	// Ability: Primal Beast Uproar Armor
 	//=================================================================================================================
-  	"special_bonus_unique_primal_beast_trample_unslowable"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}	
 }

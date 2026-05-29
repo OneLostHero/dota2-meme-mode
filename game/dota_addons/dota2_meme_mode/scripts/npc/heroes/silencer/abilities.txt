@@ -310,126 +310,45 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_damage} Arcane Curse Damage  (special_bonus_unique_silencer) ----
 	// icon: special_bonus_unique_silencer
-	"special_bonus_unique_silencer"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Global Silence Undispellable  (special_bonus_unique_silencer_2) ----
 	// icon: special_bonus_unique_silencer_2
-	"special_bonus_unique_silencer_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_intellect_damage_pct}% Glaives of Wisdom Damage  (special_bonus_unique_silencer_3) ----
 	// icon: special_bonus_unique_silencer_3
-	"special_bonus_unique_silencer_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage_per_silence}/{s:bonus_slow_per_silence}% Last Word Damage/Slow  (special_bonus_unique_silencer_4) ----
 	// icon: special_bonus_unique_silencer_4
-	"special_bonus_unique_silencer_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "0.8"
-				"ad_linked_abilities" "silencer_last_word"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Global Silence Cooldown  (special_bonus_unique_silencer_7) ----
 	// icon: special_bonus_unique_silencer_7
-	"special_bonus_unique_silencer_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "20"
-				"ad_linked_abilities" "silencer_global_silence"
-			}
-		}
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- {s:bonus_bounce_count} Glaives of Wisdom Bounce  (special_bonus_unique_silencer_glaives_bounces) ----
 	// icon: special_bonus_unique_silencer_glaives_bounces
-	"special_bonus_unique_silencer_glaives_bounces"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Arcane Curse Undispellable  (special_bonus_unique_silencer_arcane_curse_undispellable) ----
 	// icon: special_bonus_unique_silencer_arcane_curse_undispellable
-	"special_bonus_unique_silencer_arcane_curse_undispellable"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- {s:bonus_AbilityCharges} Arcane Curse charges  (special_bonus_unique_silencer_arcane_curse_charges) ----
 	// icon: special_bonus_unique_silencer_arcane_curse_charges
-	"special_bonus_unique_silencer_arcane_curse_charges"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	
 }

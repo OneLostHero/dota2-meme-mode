@@ -272,52 +272,20 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_quill_stack_damage} Quill Stack Damage  (special_bonus_unique_bristleback_2) ----
 	// icon: special_bonus_unique_bristleback_2
-	"special_bonus_unique_bristleback_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage_per_stack} Warpath Damage Per Stack  (special_bonus_unique_bristleback_3) ----
 	// icon: special_bonus_unique_bristleback_3
-	"special_bonus_unique_bristleback_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_AbilityCastRange} Goo Cast Range  (special_bonus_unique_bristleback_5) ----
 	// icon: special_bonus_unique_bristleback_5
-	"special_bonus_unique_bristleback_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_back_damage_reduction}%/{s:bonus_side_damage_reduction}% Bristleback Back/Side Damage Reduction  (special_bonus_unique_bristleback_6) ----
 	// icon: special_bonus_unique_bristleback_6
-	"special_bonus_unique_bristleback_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 }

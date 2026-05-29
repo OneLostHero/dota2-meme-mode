@@ -371,124 +371,46 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_epicenter_pulses} Epicenter Pulses  (special_bonus_unique_sand_king) ----
 	// icon: special_bonus_unique_sand_king
-	"special_bonus_unique_sand_king"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_sand_storm_damage} Sand Storm Damage Per Second  (special_bonus_unique_sand_king_2) ----
 	// icon: special_bonus_unique_sand_king_2
-	"special_bonus_unique_sand_king_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_strike_slow}% Stinger Slow  (special_bonus_unique_sand_king_3) ----
 	// icon: special_bonus_unique_sand_king_3
-	"special_bonus_unique_sand_king_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- {s:value}% Sand Storm Slow and Blind  (special_bonus_unique_sand_king_4) ----
 	// icon: special_bonus_unique_sand_king_4
-	"special_bonus_unique_sand_king_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "35"
-				"ad_linked_abilities" "sandking_sand_storm"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_epicenter_radius_base}/{s:bonus_epicenter_radius_increment} Base/Incremental Radius of Epicenter  (special_bonus_unique_sand_king_5) ----
 	// icon: special_bonus_unique_sand_king_5
-	"special_bonus_unique_sand_king_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "20"
-				"ad_linked_abilities" "sandking_epicenter"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Burrowstrike Cooldown  (special_bonus_unique_sand_king_7) ----
 	// icon: special_bonus_unique_sand_king_7
-	"special_bonus_unique_sand_king_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_burrow_duration}s Burrowstrike Stun  (special_bonus_unique_sand_king_burrowstrike_stun) ----
 	// icon: special_bonus_unique_sand_king_burrowstrike_stun
-	"special_bonus_unique_sand_king_burrowstrike_stun"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}	
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_attack_damage} Stinger Damage  (special_bonus_unique_sand_king_scorpion_strike_damage) ----
 	// icon: special_bonus_unique_sand_king_scorpion_strike_damage
-	"special_bonus_unique_sand_king_scorpion_strike_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 }

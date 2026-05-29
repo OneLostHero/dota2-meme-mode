@@ -361,123 +361,45 @@
 	//=================================================================================================================
 	// ---- +{s:value}s Shadow Realm Duration  (special_bonus_unique_dark_willow_1) ----
 	// icon: special_bonus_unique_dark_willow_1
-	"special_bonus_unique_dark_willow_1"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "1.5"
-				"ad_linked_abilities" "dark_willow_shadow_realm"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- {s:bonus_impact_damage} Terrorize Impact Damage  (special_bonus_unique_dark_willow_2) ----
 	// icon: special_bonus_unique_dark_willow_2
-	"special_bonus_unique_dark_willow_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "1.5"
-				"ad_linked_abilities" "dark_willow_terrorize"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Bramble Maze CD  (special_bonus_unique_dark_willow_3) ----
 	// icon: special_bonus_unique_dark_willow_3
-	"special_bonus_unique_dark_willow_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_attack_damage} Bedlam Damage  (special_bonus_unique_dark_willow_4) ----
 	// icon: special_bonus_unique_dark_willow_4
-	"special_bonus_unique_dark_willow_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Shadow Realm Cooldown  (special_bonus_unique_dark_willow_5) ----
 	// icon: special_bonus_unique_dark_willow_5
-	"special_bonus_unique_dark_willow_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_stun_duration}s Cursed Crown Stun Duration  (special_bonus_unique_dark_willow_6) ----
 	// icon: special_bonus_unique_dark_willow_6
-	"special_bonus_unique_dark_willow_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_stun_radius} Cursed Crown AoE  (special_bonus_unique_dark_willow_7) ----
 	// icon: special_bonus_unique_dark_willow_7
-	"special_bonus_unique_dark_willow_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_target_count} Bedlam Attack Targets  (special_bonus_unique_dark_willow_bedlam_targets) ----
 	// icon: special_bonus_unique_dark_willow_bedlam_targets
-	"special_bonus_unique_dark_willow_bedlam_targets"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"					"special_bonus_base"
-	}
 }

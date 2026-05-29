@@ -360,107 +360,43 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_damage_absorb} Aphotic Shield Barrier Amount  (special_bonus_unique_abaddon) ----
 	// icon: special_bonus_unique_abaddon
-	"special_bonus_unique_abaddon"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_target_damage} Mist Coil Heal/Damage  (special_bonus_unique_abaddon_2) ----
 	// icon: special_bonus_unique_abaddon_2
-	"special_bonus_unique_abaddon_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_curse_attack_speed} Curse of Avernus Attack Speed Bonus  (special_bonus_unique_abaddon_3) ----
 	// icon: special_bonus_unique_abaddon_3
-	"special_bonus_unique_abaddon_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- {s:bonus_effect_radius} AoE Mist Coil  (special_bonus_unique_abaddon_4) ----
 	// icon: special_bonus_unique_abaddon_4
-	"special_bonus_unique_abaddon_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_curse_dps} Curse of Avernus DPS  (special_bonus_unique_abaddon_5) ----
 	// icon: special_bonus_unique_abaddon_5
-	"special_bonus_unique_abaddon_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_curse_slow}% Curse of Avernus Movement Slow  (special_bonus_unique_abaddon_6) ----
 	// icon: special_bonus_unique_abaddon_6
-	"special_bonus_unique_abaddon_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Aphotic Shield provides +{s:bonus_regen}HP Regen  (special_bonus_unique_abaddon_7) ----
 	// icon: special_bonus_unique_abaddon_7
-	"special_bonus_unique_abaddon_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- {s:bonus_immolate_damage} DPS Borrowed Time Immolation  (special_bonus_unique_abaddon_immolation) ----
 	// icon: special_bonus_unique_abaddon_immolation
-	"special_bonus_unique_abaddon_immolation"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 }

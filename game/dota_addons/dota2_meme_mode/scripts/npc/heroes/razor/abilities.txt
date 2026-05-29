@@ -308,107 +308,37 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_drain_rate} Static Link Damage Steal  (special_bonus_unique_razor) ----
 	// icon: special_bonus_unique_razor
-	"special_bonus_unique_razor"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_strike_interval}s Eye of the Storm Strike Interval  (special_bonus_unique_razor_2) ----
 	// icon: special_bonus_unique_razor_2
-	"special_bonus_unique_razor_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_strike_internal_cd} Storm Surge Strike Cooldown  (special_bonus_unique_razor_3) ----
 	// icon: special_bonus_unique_razor_3
-	"special_bonus_unique_razor_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "6"
-				"ad_linked_abilities" "razor_static_link"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage_min} Plasma Field Damage  (special_bonus_unique_razor_4) ----
 	// icon: special_bonus_unique_razor_4
-	"special_bonus_unique_razor_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "30"
-				"ad_linked_abilities" "razor_plasma_field"
-			}
-		}
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Creates A Second Plasma Field Delayed By {s:bonus_second_ring_delay}s  (special_bonus_unique_razor_plasmafield_second_ring) ----
 	// icon: special_bonus_unique_razor_plasmafield_second_ring
-	"special_bonus_unique_razor_plasmafield_second_ring"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}	
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================	
 	// ---- Static Link Steals Attack Speed  (special_bonus_unique_razor_static_link_aspd) ----
 	// icon: special_bonus_unique_razor_static_link_aspd
-	"special_bonus_unique_razor_static_link_aspd"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_strike_move_slow_pct}% Storm Surge Slow and Damage  (special_bonus_unique_razor_storm_surge_damage_and_slow) ----
 	// icon: special_bonus_unique_razor_storm_surge_damage_and_slow
-	"special_bonus_unique_razor_storm_surge_damage_and_slow"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}		
 }

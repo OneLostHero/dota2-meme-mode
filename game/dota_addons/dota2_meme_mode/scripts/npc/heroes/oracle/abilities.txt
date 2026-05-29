@@ -362,139 +362,47 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_duration}s False Promise Duration  (special_bonus_unique_oracle) ----
 	// icon: special_bonus_unique_oracle
-	"special_bonus_unique_oracle"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_maximum_purge_duration}s Fortune's End Duration  (special_bonus_unique_oracle_2) ----
 	// icon: special_bonus_unique_oracle_2
-	"special_bonus_unique_oracle_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "0.4"
-				"ad_linked_abilities" "oracle_fortunes_end"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Purifying Flames Cooldown  (special_bonus_unique_oracle_5) ----
 	// icon: special_bonus_unique_oracle_5
-	"special_bonus_unique_oracle_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "1"
-				"ad_linked_abilities" "oracle_purifying_flames"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s False Promise Cooldown  (special_bonus_unique_oracle_6) ----
 	// icon: special_bonus_unique_oracle_6
-	"special_bonus_unique_oracle_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Fortune's End constantly Dispels  (special_bonus_unique_oracle_7) ----
 	// icon: special_bonus_unique_oracle_7
-	"special_bonus_unique_oracle_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "2.5"
-				"ad_linked_abilities" "oracle_fortunes_end"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:value}% Purifying Flames Enemy Damage  (special_bonus_unique_oracle_8) ----
 	// icon: special_bonus_unique_oracle_8
-	"special_bonus_unique_oracle_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "30"
-				"ad_linked_abilities" "oracle_purifying_flames"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_armor} Armor False Promise  (special_bonus_unique_oracle_9) ----
 	// icon: special_bonus_unique_oracle_9
-	"special_bonus_unique_oracle_9"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 		//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Fortune's End Heals/Damages for {s:bonus_damage_per_buff} Per Effect Dispelled  (special_bonus_unique_oracle_damage_per_purge) ----
 	// icon: special_bonus_unique_oracle_damage_per_purge
-	"special_bonus_unique_oracle_damage_per_purge"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	
 	

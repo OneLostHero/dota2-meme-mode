@@ -347,123 +347,44 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_leash_duration}s Pounce Leash  (special_bonus_unique_slark) ----
 	// icon: special_bonus_unique_slark
-	"special_bonus_unique_slark"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_total_damage} Dark Pact Damage  (special_bonus_unique_slark_2) ----
 	// icon: special_bonus_unique_slark_2
-	"special_bonus_unique_slark_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_duration}s Shadow Dance Duration  (special_bonus_unique_slark_3) ----
 	// icon: special_bonus_unique_slark_3
-	"special_bonus_unique_slark_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_duration}s Essence Shift Duration  (special_bonus_unique_slark_4) ----
 	// icon: special_bonus_unique_slark_4
-	"special_bonus_unique_slark_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 		//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_agi_gain} Agility gain/stolen per Essence Shift Stack  (special_bonus_unique_slark_5) ----
 	// icon: special_bonus_unique_slark_5
-	"special_bonus_unique_slark_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Dark Pact Cooldown  (special_bonus_unique_slark_6) ----
 	// icon: special_bonus_unique_slark_6
-	"special_bonus_unique_slark_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "0.5"
-				"ad_linked_abilities" "slark_dark_pact"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:value} Shadow Dance Attack Speed  (special_bonus_unique_slark_7) ----
 	// icon: special_bonus_unique_slark_7
-	"special_bonus_unique_slark_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "80"
-				"ad_linked_abilities" "slark_shadow_dance"
-			}
-		}
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_regen} Barracude Regen  (special_bonus_unique_slark_8) ----
 	// icon: special_bonus_unique_slark_8
-	"special_bonus_unique_slark_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-		"ad_linked_abilities"			"slark_shadow_dance"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.		
-	}
 }

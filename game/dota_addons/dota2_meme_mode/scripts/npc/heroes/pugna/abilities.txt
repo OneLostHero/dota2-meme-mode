@@ -327,117 +327,40 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_heal_pct}% Life Drain Heal  (special_bonus_unique_pugna_1) ----
 	// icon: special_bonus_unique_pugna_1
-	"special_bonus_unique_pugna_1"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "20"
-				"ad_linked_abilities" "pugna_life_drain"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_blast_damage} Nether Blast Damage  (special_bonus_unique_pugna_2) ----
 	// icon: special_bonus_unique_pugna_2
-	"special_bonus_unique_pugna_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_mana_multiplier} Nether Ward Damage Per Mana  (special_bonus_unique_pugna_3) ----
 	// icon: special_bonus_unique_pugna_3
-	"special_bonus_unique_pugna_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Nether Blast Cooldown  (special_bonus_unique_pugna_4) ----
 	// icon: special_bonus_unique_pugna_4
-	"special_bonus_unique_pugna_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "1"
-				"ad_linked_abilities" "pugna_nether_blast"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_AbilityDuration}s Decrepify Duration  (special_bonus_unique_pugna_5) ----
 	// icon: special_bonus_unique_pugna_5
-	"special_bonus_unique_pugna_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "1.5"
-				"ad_linked_abilities" "pugna_decrepify"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_attacks_to_destroy} Nether Ward Health  (special_bonus_unique_pugna_6) ----
 	// icon: special_bonus_unique_pugna_6
-	"special_bonus_unique_pugna_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_movement_speed_allies}% Decrepify Movement Speed To Allies  (special_bonus_unique_pugna_decrepify_ally_movespeed) ----
 	// icon: special_bonus_unique_pugna_decrepify_ally_movespeed
-	"special_bonus_unique_pugna_decrepify_ally_movespeed"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 }

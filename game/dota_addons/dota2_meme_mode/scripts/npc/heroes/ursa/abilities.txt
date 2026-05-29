@@ -273,112 +273,41 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_damage_per_stack} Fury Swipes Damage  (special_bonus_unique_ursa) ----
 	// icon: special_bonus_unique_ursa
-	"special_bonus_unique_ursa"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_shock_radius} Earthshock Radius  (special_bonus_unique_ursa_2) ----
 	// icon: special_bonus_unique_ursa_2
-	"special_bonus_unique_ursa_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Earthshock has {s:bonus_AbilityCharges} Charges  (special_bonus_unique_ursa_3) ----
 	// icon: special_bonus_unique_ursa_3
-	"special_bonus_unique_ursa_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:value}s Fury Swipes Reset Time  (special_bonus_unique_ursa_4) ----
 	// icon: special_bonus_unique_ursa_4
-	"special_bonus_unique_ursa_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "20"
-				"ad_linked_abilities" "ursa_fury_swipes"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_max_attacks} Overpower Attacks  (special_bonus_unique_ursa_7) ----
 	// icon: special_bonus_unique_ursa_7
-	"special_bonus_unique_ursa_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_status_resistance}% Enrage Status Resistance  (special_bonus_unique_ursa_8) ----
 	// icon: special_bonus_unique_ursa_8
-	"special_bonus_unique_ursa_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "10"
-				"ad_linked_abilities" "ursa_enrage"
-			}
-		}
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Earthshock Applies {s:bonus_fury_swipe_stacks_on_hit} Fury Swipes  (special_bonus_unique_ursa_earthshock_furyswipes) ----
 	// icon: special_bonus_unique_ursa_earthshock_furyswipes
-	"special_bonus_unique_ursa_earthshock_furyswipes"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ursa Innate Debuff duration increase

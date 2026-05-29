@@ -307,79 +307,29 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_spirits} Exorcism Spirits  (special_bonus_unique_death_prophet) ----
 	// icon: special_bonus_unique_death_prophet
-	"special_bonus_unique_death_prophet"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"death_prophet_exorcism"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Crypt Swarm Cooldown  (special_bonus_unique_death_prophet_2) ----
 	// icon: special_bonus_unique_death_prophet_2
-	"special_bonus_unique_death_prophet_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"death_prophet_carrion_swarm"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage} Spirit Siphon Damage/Heal  (special_bonus_unique_death_prophet_3) ----
 	// icon: special_bonus_unique_death_prophet_3
-	"special_bonus_unique_death_prophet_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Spirit Siphon Replenish Time  (special_bonus_unique_death_prophet_5) ----
 	// icon: special_bonus_unique_death_prophet_5
-	"special_bonus_unique_death_prophet_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "22"
-				"ad_linked_abilities" "death_prophet_spirit_siphon"
-			}
-		}
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage} Crypt Swarm damage  (special_bonus_unique_death_prophet_crypt_swarm_damage) ----
 	// icon: special_bonus_unique_death_prophet_crypt_swarm_damage
-	"special_bonus_unique_death_prophet_crypt_swarm_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"death_prophet_carrion_swarm"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		"BaseClass"						"special_bonus_base"
-	}
 	
 	//=================================================================================================================
 	// Death Prophet Innate Ghost Mastery

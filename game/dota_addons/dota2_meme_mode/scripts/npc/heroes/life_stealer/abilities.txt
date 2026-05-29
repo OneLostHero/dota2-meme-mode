@@ -549,110 +549,43 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_duration}s Rage Duration  (special_bonus_unique_lifestealer) ----
 	// icon: special_bonus_unique_lifestealer
-	"special_bonus_unique_lifestealer"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_movement_speed_bonus}% Ghoul Frenzy Movement Speed  (special_bonus_unique_lifestealer_2) ----
 	// icon: special_bonus_unique_lifestealer_2
-	"special_bonus_unique_lifestealer_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_hp_damage_percent}% Feast Lifesteal and Damage  (special_bonus_unique_lifestealer_3) ----
 	// icon: special_bonus_unique_lifestealer_3
-	"special_bonus_unique_lifestealer_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_slow_tooltip}% Open Wounds Slow  (special_bonus_unique_lifestealer_4) ----
 	// icon: special_bonus_unique_lifestealer_4
-	"special_bonus_unique_lifestealer_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_attack_speed_bonus} Ghoul Frenzy Attack Speed  (special_bonus_unique_lifestealer_5) ----
 	// icon: special_bonus_unique_lifestealer_5
-	"special_bonus_unique_lifestealer_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-		
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_heal_percent}% Open Wounds Lifesteal  (special_bonus_unique_lifestealer_6) ----
 	// icon: special_bonus_unique_lifestealer_6
-	"special_bonus_unique_lifestealer_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage} Infest Damage  (special_bonus_unique_lifestealer_infest_damage) ----
 	// icon: special_bonus_unique_lifestealer_infest_damage
-	"special_bonus_unique_lifestealer_infest_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_movement_speed}% Infest Target Movespeed/Health  (special_bonus_unique_lifestealer_infest_target_bonus) ----
 	// icon: special_bonus_unique_lifestealer_infest_target_bonus
-	"special_bonus_unique_lifestealer_infest_target_bonus"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 }

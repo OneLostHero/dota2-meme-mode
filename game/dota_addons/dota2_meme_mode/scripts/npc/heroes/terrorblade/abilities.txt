@@ -401,107 +401,41 @@
 	//=================================================================================================================
 	// ---- -{s:value}s Sunder Cooldown  (special_bonus_unique_terrorblade) ----
 	// icon: special_bonus_unique_terrorblade
-	"special_bonus_unique_terrorblade"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "30"
-				"ad_linked_abilities" "terrorblade_sunder"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Reflection Cooldown  (special_bonus_unique_terrorblade_2) ----
 	// icon: special_bonus_unique_terrorblade_2
-	"special_bonus_unique_terrorblade_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_duration}s Metamorphosis Duration  (special_bonus_unique_terrorblade_3) ----
 	// icon: special_bonus_unique_terrorblade_3
-	"special_bonus_unique_terrorblade_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_illusion_outgoing_damage}% Conjure Image Damage  (special_bonus_unique_terrorblade_4) ----
 	// icon: special_bonus_unique_terrorblade_4
-	"special_bonus_unique_terrorblade_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_illusion_duration}s Conjure Image Duration  (special_bonus_unique_terrorblade_5) ----
 	// icon: special_bonus_unique_terrorblade_5
-	"special_bonus_unique_terrorblade_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_move_slow}% Reflection Slow/Damage  (special_bonus_unique_terrorblade_6) ----
 	// icon: special_bonus_unique_terrorblade_6
-	"special_bonus_unique_terrorblade_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Metamorphosis Cooldown  (special_bonus_unique_terrorblade_metamorphosis_cooldown) ----
 	// icon: special_bonus_unique_terrorblade_metamorphosis_cooldown
-	"special_bonus_unique_terrorblade_metamorphosis_cooldown"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	
 }

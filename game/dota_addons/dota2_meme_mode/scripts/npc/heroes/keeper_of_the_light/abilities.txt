@@ -565,138 +565,46 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_total_damage} Illuminate Damage  (special_bonus_unique_keeper_of_the_light) ----
 	// icon: special_bonus_unique_keeper_of_the_light
-	"special_bonus_unique_keeper_of_the_light"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_mana_restore} Chakra Magic Mana  (special_bonus_unique_keeper_of_the_light_2) ----
 	// icon: special_bonus_unique_keeper_of_the_light_2
-	"special_bonus_unique_keeper_of_the_light_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "200"
-				"ad_linked_abilities" "keeper_of_the_light_chakra_magic"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Blinding Light Cooldown  (special_bonus_unique_keeper_of_the_light_5) ----
 	// icon: special_bonus_unique_keeper_of_the_light_5
-	"special_bonus_unique_keeper_of_the_light_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "8"
-				"ad_linked_abilities" "keeper_of_the_light_blinding_light"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Chakra Magic Cooldown  (special_bonus_unique_keeper_of_the_light_7) ----
 	// icon: special_bonus_unique_keeper_of_the_light_7
-	"special_bonus_unique_keeper_of_the_light_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "3"
-				"ad_linked_abilities" "keeper_of_the_light_chakra_magic"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_miss_rate}% Blinding Light Miss  (special_bonus_unique_keeper_of_the_light_8) ----
 	// icon: special_bonus_unique_keeper_of_the_light_8
-	"special_bonus_unique_keeper_of_the_light_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_duration}s Spirit Form Duration  (special_bonus_unique_keeper_of_the_light_11) ----
 	// icon: special_bonus_unique_keeper_of_the_light_11
-	"special_bonus_unique_keeper_of_the_light_11"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Chakra Magic Strong Dispels  (special_bonus_unique_keeper_of_the_light_14) ----
 	// icon: special_bonus_unique_keeper_of_the_light_14
-	"special_bonus_unique_keeper_of_the_light_14"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "0"
-				"ad_linked_abilities" "keeper_of_the_light_chakra_magic"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Illuminate Cooldown  (special_bonus_unique_keeper_of_the_light_illuminate_cooldown) ----
 	// icon: special_bonus_unique_keeper_of_the_light_illuminate_cooldown
-	"special_bonus_unique_keeper_of_the_light_illuminate_cooldown"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 }

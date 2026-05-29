@@ -319,93 +319,33 @@
 	//=================================================================================================================
 	// Talent: MUERTA Deadshot charges
 	//=================================================================================================================
-  	"special_bonus_unique_muerta_dead_shot_charges"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-		"AbilityValues"
-		{
-			"value"							"2"	// check tooltip
-		}
-	}
 
 	//=================================================================================================================
 	// Talent: MUERTA Deadshot damage
 	//=================================================================================================================
-  	"special_bonus_unique_muerta_dead_shot_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Talent: MUERTA Deadshot range
 	//=================================================================================================================
 	// ---- +{s:bonus_AbilityCastRange} Dead Shot Cast Range  (special_bonus_unique_muerta_dead_shot_range) ----
 	// icon: special_bonus_unique_muerta_dead_shot_range
-	"special_bonus_unique_muerta_dead_shot_range"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Talent: MUERTA Deadshot range
 	//=================================================================================================================
 	// ---- +{s:bonus_hp_regen_pct}% Max HP Regen while inside The Calling  (special_bonus_unique_muerta_calling_hp_regen) ----
 	// icon: special_bonus_unique_muerta_calling_hp_regen
-	"special_bonus_unique_muerta_calling_hp_regen"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
-		"special_bonus_unique_muerta_gunslinger_bonus_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Talent: MUERTA The Calling Num Revenants
 	//=================================================================================================================
 	// ---- The Calling summons {s:bonus_num_revenants} additional revenants  (special_bonus_unique_muerta_the_calling_num_revenants) ----
 	// icon: special_bonus_unique_muerta_the_calling_num_revenants
-	"special_bonus_unique_muerta_the_calling_num_revenants"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Talent: MUERTA Gunslinger Double Shot Chance
 	//=================================================================================================================
-  	"special_bonus_unique_muerta_gunslinger_double_shot_chance"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Muerta: Grave Tracker

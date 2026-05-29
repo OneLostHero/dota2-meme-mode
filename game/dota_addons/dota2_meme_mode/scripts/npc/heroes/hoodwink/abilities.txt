@@ -438,104 +438,27 @@
 	//=================================================================================================================
 	// Talent: Hoodwink Acorn Shot Charges
 	//=================================================================================================================
-  	"special_bonus_unique_hoodwink_acorn_shot_charges"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "2"
-				"ad_linked_abilities" "hoodwink_acorn_shot"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Talent: Hoodwink Sharpshooter Pure Damage
 	//=================================================================================================================
-  	"special_bonus_unique_hoodwink_sharpshooter_pure_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "0"
-				"ad_linked_abilities" "hoodwink_sharpshooter"
-			}
-		}
-	}
 	//=================================================================================================================
 	// Talent: Hoodwink Sharpshooter Bonus Damage
 	//=================================================================================================================
-  	"special_bonus_unique_hoodwink_sharpshooter_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Talent: Hoodwink Bushwhack Cooldown
 	//=================================================================================================================
-  	"special_bonus_unique_hoodwink_bushwhack_cooldown"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "2"
-				"ad_linked_abilities" "hoodwink_bushwhack"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Talent: Hoodwink Bushwhack Damage
 	//=================================================================================================================
-  	"special_bonus_unique_hoodwink_bushwhack_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Talent: Hoodwink Scurry Duration
 	//=================================================================================================================
-  	"special_bonus_unique_hoodwink_scurry_duration"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Talent: Hoodwink Scurry Duration
 	//=================================================================================================================
-  	"special_bonus_unique_hoodwink_acorn_shot_bounces"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 }

@@ -465,119 +465,45 @@
 
 	// ---- +{s:bonus_range} Swashbuckle Slash Range  (special_bonus_unique_pangolier) ----
 	// icon: special_bonus_unique_pangolier
-	"special_bonus_unique_pangolier"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-		
-	
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 
 	// ---- +{s:bonus_attack_damage}% Attack Damage as Swashbuckle Damage  (special_bonus_unique_pangolier_3) ----
 	// icon: special_bonus_unique_pangolier_3
-	"special_bonus_unique_pangolier_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-		
-		
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 
 	// ---- -{s:bonus_AbilityCooldown}s Swashbuckle Cooldown  (special_bonus_unique_pangolier_4) ----
 	// icon: special_bonus_unique_pangolier_4
-	"special_bonus_unique_pangolier_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-		
-
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 
 	// ---- -{s:bonus_AbilityCooldown}s Rolling Thunder Cooldown  (special_bonus_unique_pangolier_5) ----
 	// icon: special_bonus_unique_pangolier_5
-	"special_bonus_unique_pangolier_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-		
-		
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 
 	// ---- +{s:bonus_duration}s Rolling Thunder Duration  (special_bonus_unique_pangolier_6) ----
 	// icon: special_bonus_unique_pangolier_6
-	"special_bonus_unique_pangolier_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-		
-	
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 
 	// ---- +{s:bonus_hero_shield} Shield Crash Barrier Per Hero  (special_bonus_unique_pangolier_shield_crash_herostacks) ----
 	// icon: special_bonus_unique_pangolier_shield_crash_herostacks
-	"special_bonus_unique_pangolier_shield_crash_herostacks"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 
 	// ---- +{s:bonus_armor} Lucky Shot Armor Reduction  (special_bonus_unique_pangolier_luckyshot_armor) ----
 	// icon: special_bonus_unique_pangolier_luckyshot_armor
-	"special_bonus_unique_pangolier_luckyshot_armor"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	// ---- +{s:bonus_radius} Shield Crash Radius and Damage  (special_bonus_unique_pangolier_shield_crash_radius) ----
 	// icon: special_bonus_unique_pangolier_shield_crash_radius
-	"special_bonus_unique_pangolier_shield_crash_radius"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 
 	

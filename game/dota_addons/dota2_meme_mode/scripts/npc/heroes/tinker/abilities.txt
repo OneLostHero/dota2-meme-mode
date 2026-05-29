@@ -563,104 +563,40 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_laser_damage} Laser Damage  (special_bonus_unique_tinker) ----
 	// icon: special_bonus_unique_tinker
-	"special_bonus_unique_tinker"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- {s:bonus_radius_explosion} AoE Laser  (special_bonus_unique_tinker_4) ----
 	// icon: special_bonus_unique_tinker_4
-	"special_bonus_unique_tinker_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityChannelTime}s Keen Conveyance Channel Time  (special_bonus_unique_tinker_5) ----
 	// icon: special_bonus_unique_tinker_5
-	"special_bonus_unique_tinker_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage_absorb} Defense Matrix Damage Absorbed  (special_bonus_unique_tinker_7) ----
 	// icon: special_bonus_unique_tinker_7
-	"special_bonus_unique_tinker_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "125"
-				"ad_linked_abilities" "tinker_defense_matrix"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Rearm Grants {s:bonus_magic_resistance}% Bonus Magic Resistance  (special_bonus_unique_tinker_rearm_magic_resistance) ----
 	// icon: special_bonus_unique_tinker_rearm_magic_resistance
-	"special_bonus_unique_tinker_rearm_magic_resistance"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_duration}s March of the Machines Duration  (special_bonus_unique_tinker_march_duration) ----
 	// icon: special_bonus_unique_tinker_march_duration
-	"special_bonus_unique_tinker_march_duration"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_status_resistance}% Defense Matrix Status Resistance  (special_bonus_unique_tinker_defense_matrix_status_resistance) ----
 	// icon: special_bonus_unique_tinker_defense_matrix_status_resistance
-	"special_bonus_unique_tinker_defense_matrix_status_resistance"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 }

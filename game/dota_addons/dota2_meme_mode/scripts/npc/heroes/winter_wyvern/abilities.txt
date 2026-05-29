@@ -274,98 +274,42 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_move_slow}% Arctic Burn Slow  (special_bonus_unique_winter_wyvern_1) ----
 	// icon: special_bonus_unique_winter_wyvern_1
-	"special_bonus_unique_winter_wyvern_1"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_split_radius} Splinter Blast Shatter Radius  (special_bonus_unique_winter_wyvern_2) ----
 	// icon: special_bonus_unique_winter_wyvern_2
-	"special_bonus_unique_winter_wyvern_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_attack_speed} Winter's Curse Attack Speed   (special_bonus_unique_winter_wyvern_3) ----
 	// icon: special_bonus_unique_winter_wyvern_3
-	"special_bonus_unique_winter_wyvern_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Splinter Blast {s:bonus_stun_duration}s Stun  (special_bonus_unique_winter_wyvern_4) ----
 	// icon: special_bonus_unique_winter_wyvern_4
-	"special_bonus_unique_winter_wyvern_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_heal_additive}HP/s Cold Embrace Heal  (special_bonus_unique_winter_wyvern_5) ----
 	// icon: special_bonus_unique_winter_wyvern_5
-	"special_bonus_unique_winter_wyvern_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage_duration}s Arctic Burn Debuff Duration  (special_bonus_unique_winter_wyvern_6) ----
 	// icon: special_bonus_unique_winter_wyvern_6
-	"special_bonus_unique_winter_wyvern_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage} Splinter Blast Damage  (special_bonus_unique_winter_wyvern_7) ----
 	// icon: special_bonus_unique_winter_wyvern_7
-	"special_bonus_unique_winter_wyvern_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 	//=================================================================================================================
 	// Frozen Blood (Convert overheal into mana)
 	//=================================================================================================================

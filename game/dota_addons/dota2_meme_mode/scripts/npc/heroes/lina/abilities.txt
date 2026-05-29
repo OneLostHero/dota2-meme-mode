@@ -383,95 +383,38 @@
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Dragon Slave Cooldown  (special_bonus_unique_lina_1) ----
 	// icon: special_bonus_unique_lina_1
-	"special_bonus_unique_lina_1"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"							"special_bonus_base"
-
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_fiery_soul_attack_speed_bonus}/{s:bonus_fiery_soul_move_speed_bonus}% Fiery Soul Per Stack  (special_bonus_unique_lina_2) ----
 	// icon: special_bonus_unique_lina_2
-	"special_bonus_unique_lina_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_light_strike_array_damage} Light Strike Array Damage  (special_bonus_unique_lina_3) ----
 	// icon: special_bonus_unique_lina_3
-	"special_bonus_unique_lina_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- {s:bonus_fiery_soul_magic_resist}% Fiery Soul Magic Resist Per Stack  (special_bonus_unique_lina_4) ----
 	// icon: special_bonus_unique_lina_4
-	"special_bonus_unique_lina_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Laguna Blade Cooldown  (special_bonus_unique_lina_6) ----
 	// icon: special_bonus_unique_lina_6
-	"special_bonus_unique_lina_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- {s:bonus_barrier_pct}% Laguna Blade Damage into barrier  (special_bonus_unique_lina_7) ----
 	// icon: special_bonus_unique_lina_7
-	"special_bonus_unique_lina_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 		//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_target_crit_multiplier}% Crit On Targets Affected By Dragon Slave  (special_bonus_unique_lina_dragon_slave_crits) ----
 	// icon: special_bonus_unique_lina_dragon_slave_crits
-	"special_bonus_unique_lina_dragon_slave_crits"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	
 }

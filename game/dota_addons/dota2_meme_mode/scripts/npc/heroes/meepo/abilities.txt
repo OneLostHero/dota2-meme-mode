@@ -446,89 +446,28 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_poof_damage} Poof Damage  (special_bonus_unique_meepo_2) ----
 	// icon: special_bonus_unique_meepo_2
-	"special_bonus_unique_meepo_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "30"
-				"ad_linked_abilities" "meepo_poof"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Earthbind Cooldown  (special_bonus_unique_meepo_3) ----
 	// icon: special_bonus_unique_meepo_3
-	"special_bonus_unique_meepo_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityValues"
-		{
-				"value"				"2.5"	// check tooltip
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Earthbind grants True Strike on Targets  (special_bonus_unique_meepo_4) ----
 	// icon: special_bonus_unique_meepo_4
-	"special_bonus_unique_meepo_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "1"
-				"ad_linked_abilities" "meepo_earthbind"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_health_steal_heroes} Ransack Health Steal  (special_bonus_unique_meepo_6) ----
 	// icon: special_bonus_unique_meepo_6
-	"special_bonus_unique_meepo_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_cast_duration}s Poof Cast Duration  (special_bonus_unique_meepo_poof_cast_point) ----
 	// icon: special_bonus_unique_meepo_poof_cast_point
-	"special_bonus_unique_meepo_poof_cast_point"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-		
-	}
 	
 }

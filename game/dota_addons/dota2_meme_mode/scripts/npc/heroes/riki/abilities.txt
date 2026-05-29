@@ -345,130 +345,46 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_damage_multiplier} Backstab Multiplier  (special_bonus_unique_riki_1) ----
 	// icon: special_bonus_unique_riki_1
-	"special_bonus_unique_riki_1"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_agility_pct} Tricks of the Trade Agility Increase  (special_bonus_unique_riki_2) ----
 	// icon: special_bonus_unique_riki_2
-	"special_bonus_unique_riki_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"riki_tricks_of_the_trade"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Smoke Screen Cooldown  (special_bonus_unique_riki_3) ----
 	// icon: special_bonus_unique_riki_3
-	"special_bonus_unique_riki_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "3"
-				"ad_linked_abilities" "riki_smoke_screen"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Tricks of the Trade Applies a Basic Dispel  (special_bonus_unique_riki_5) ----
 	// icon: special_bonus_unique_riki_5
-	"special_bonus_unique_riki_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"riki_tricks_of_the_trade"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown} Tricks of the Trade Cooldown  (special_bonus_unique_riki_6) ----
 	// icon: special_bonus_unique_riki_6
-	"special_bonus_unique_riki_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_radius} Smoke Screen Radius  (special_bonus_unique_riki_7) ----
 	// icon: special_bonus_unique_riki_7
-	"special_bonus_unique_riki_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-				
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:value}% Cloak and Dagger Movement Speed  (special_bonus_unique_riki_8) ----
 	// icon: special_bonus_unique_riki_8
-	"special_bonus_unique_riki_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "8"
-				"ad_linked_abilities" "riki_backstab"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityChargeRestoreTime}s Blink Strike Replenish Time  (special_bonus_unique_riki_9) ----
 	// icon: special_bonus_unique_riki_9
-	"special_bonus_unique_riki_9"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-	}
 }

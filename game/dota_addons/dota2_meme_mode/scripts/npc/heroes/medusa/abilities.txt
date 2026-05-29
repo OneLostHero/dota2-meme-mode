@@ -329,112 +329,39 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_duration}s Stone Gaze Duration  (special_bonus_unique_medusa) ----
 	// icon: special_bonus_unique_medusa
-	"special_bonus_unique_medusa"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"medusa_stone_gaze"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_damage_modifier}% Split Shot Damage Penalty  (special_bonus_unique_medusa_2) ----
 	// icon: special_bonus_unique_medusa_2
-	"special_bonus_unique_medusa_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"medusa_split_shot"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_snake_jumps} Mystic Snake Bounces  (special_bonus_unique_medusa_3) ----
 	// icon: special_bonus_unique_medusa_3
-	"special_bonus_unique_medusa_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"medusa_mystic_snake"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Split Shot Uses Modifiers  (special_bonus_unique_medusa_4) ----
 	// icon: special_bonus_unique_medusa_4
-	"special_bonus_unique_medusa_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "1"
-				"ad_linked_abilities" "medusa_split_shot"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Mystic Snake Cooldown  (special_bonus_unique_medusa_5) ----
 	// icon: special_bonus_unique_medusa_5
-	"special_bonus_unique_medusa_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-		
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage_per_mana} Mana Shield Damage per Mana  (special_bonus_unique_medusa_6) ----
 	// icon: special_bonus_unique_medusa_6
-	"special_bonus_unique_medusa_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"medusa_mana_shield"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		"BaseClass"						"special_bonus_base"
-	}
 
 	// ---- +{s:bonus_bonus_physical_damage}% Stone Gaze Bonus Physical Damage  (special_bonus_unique_medusa_8) ----
 	// icon: special_bonus_unique_medusa_8
-	"special_bonus_unique_medusa_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	// ---- +{s:bonus_snake_damage} Mystic Snake Damage  (special_bonus_unique_medusa_snake_damage) ----
 	// icon: special_bonus_unique_medusa_snake_damage
-	"special_bonus_unique_medusa_snake_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}	
 }
 

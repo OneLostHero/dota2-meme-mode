@@ -367,138 +367,45 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_hero_damage} Spirits Hero Damage  (special_bonus_unique_wisp) ----
 	// icon: special_bonus_unique_wisp
-	"special_bonus_unique_wisp"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_movespeed}% Tether Movement Speed  (special_bonus_unique_wisp_3) ----
 	// icon: special_bonus_unique_wisp_3
-	"special_bonus_unique_wisp_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"wisp_tether"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Attack Tethered Ally's Target ({s:bonus_tether_attack_damage_pct}% damage)  (special_bonus_unique_wisp_4) ----
 	// icon: special_bonus_unique_wisp_4
-	"special_bonus_unique_wisp_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "1"
-				"ad_linked_abilities" "wisp_tether"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Relocate Cooldown  (special_bonus_unique_wisp_6) ----
 	// icon: special_bonus_unique_wisp_6
-	"special_bonus_unique_wisp_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "30"
-				"ad_linked_abilities" "wisp_relocate"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:value} Attack Damage to Tethered Units  (special_bonus_unique_wisp_8) ----
 	// icon: special_bonus_unique_wisp_8
-	"special_bonus_unique_wisp_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "12"
-				"ad_linked_abilities" "wisp_tether"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:value} Health to Tethered Units  (special_bonus_unique_wisp_9) ----
 	// icon: special_bonus_unique_wisp_9
-	"special_bonus_unique_wisp_9"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "400"
-				"ad_linked_abilities" "wisp_tether"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_hp_regen}% Overcharge Max HP Regen Bonus  (special_bonus_unique_wisp_10) ----
 	// icon: special_bonus_unique_wisp_10
-	"special_bonus_unique_wisp_10"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"wisp_overcharge"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_slow}% Tether Enemy Move/Attack Slow  (special_bonus_unique_wisp_11) ----
 	// icon: special_bonus_unique_wisp_11
-	"special_bonus_unique_wisp_11"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 }

@@ -503,117 +503,46 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_shock_damage} Shockwave Damage  (special_bonus_unique_magnus) ----
 	// icon: special_bonus_unique_magnus
-	"special_bonus_unique_magnus"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "4"
-				"ad_linked_abilities" "magnataur_shockwave"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_damage_pct}% Empower Damage/Cleave  (special_bonus_unique_magnus_2) ----
 	// icon: special_bonus_unique_magnus_2
-	"special_bonus_unique_magnus_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_range} Skewer Range  (special_bonus_unique_magnus_3) ----
 	// icon: special_bonus_unique_magnus_3
-	"special_bonus_unique_magnus_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_empower_duration}s Empower Duration  (special_bonus_unique_magnus_4) ----
 	// icon: special_bonus_unique_magnus_4
-	"special_bonus_unique_magnus_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_hero_stun_duration}s Reverse Polarity Stun Duration  (special_bonus_unique_magnus_5) ----
 	// icon: special_bonus_unique_magnus_5
-	"special_bonus_unique_magnus_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_basic_slow_duration}s Shockwave Slow Duration  (special_bonus_unique_magnus_6) ----
 	// icon: special_bonus_unique_magnus_6
-	"special_bonus_unique_magnus_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Skewer Cooldown  (special_bonus_unique_magnus_7) ----
 	// icon: special_bonus_unique_magnus_7
-	"special_bonus_unique_magnus_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_stats_per_stack} All Stats per hero hit with Reverse Polarity  (special_bonus_unique_magnus_reverse_polarity_stats) ----
 	// icon: special_bonus_unique_magnus_reverse_polarity_stats
-	"special_bonus_unique_magnus_reverse_polarity_stats"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 }

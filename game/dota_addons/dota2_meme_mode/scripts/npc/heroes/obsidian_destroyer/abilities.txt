@@ -307,74 +307,27 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_mana_pool_damage_pct}% Arcane Orb Damage  (special_bonus_unique_outworld_devourer) ----
 	// icon: special_bonus_unique_outworld_devourer
-	"special_bonus_unique_outworld_devourer"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_mana_as_ms}% of Current Mana as Movement Speed  (special_bonus_unique_outworld_devourer_3) ----
 	// icon: special_bonus_unique_outworld_devourer_3
-	"special_bonus_unique_outworld_devourer_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage_multiplier} Sanity's Eclipse Mana Difference Multiplier  (special_bonus_unique_outworld_devourer_4) ----
 	// icon: special_bonus_unique_outworld_devourer_4
-	"special_bonus_unique_outworld_devourer_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Sanity's Eclipse Cooldown  (special_bonus_unique_outworld_devourer_5) ----
 	// icon: special_bonus_unique_outworld_devourer_5
-	"special_bonus_unique_outworld_devourer_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "60"
-				"ad_linked_abilities" "obsidian_destroyer_sanity_eclipse"
-			}
-		}
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_AbilityCastRange} Astral Imprisonment Cast Range  (special_bonus_unique_outworld_devourer_astral_castrange) ----
 	// icon: special_bonus_unique_outworld_devourer_astral_castrange
-	"special_bonus_unique_outworld_devourer_astral_castrange"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 }

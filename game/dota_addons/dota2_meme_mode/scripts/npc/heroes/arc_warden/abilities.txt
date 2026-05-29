@@ -465,94 +465,37 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_spark_damage_base}% Spark Wraith Damage  (special_bonus_unique_arc_warden) ----
 	// icon: special_bonus_unique_arc_warden
-	"special_bonus_unique_arc_warden"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_attack_speed_bonus} Magnetic Field Attack Speed/Bonus Damage  (special_bonus_unique_arc_warden_3) ----
 	// icon: special_bonus_unique_arc_warden_3
-	"special_bonus_unique_arc_warden_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_duration}s Flux Duration  (special_bonus_unique_arc_warden_4) ----
 	// icon: special_bonus_unique_arc_warden_4
-	"special_bonus_unique_arc_warden_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_AbilityCastRange} Flux Cast Range  (special_bonus_unique_arc_warden_5) ----
 	// icon: special_bonus_unique_arc_warden_5
-	"special_bonus_unique_arc_warden_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 		//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Magnetic Field Affects Creeps and Buildings  (special_bonus_unique_arc_warden_7) ----
 	// icon: special_bonus_unique_arc_warden_7
-	"special_bonus_unique_arc_warden_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- No Distance Penalty For Tempest Double  (special_bonus_unique_arc_warden_8) ----
 	// icon: special_bonus_unique_arc_warden_8
-	"special_bonus_unique_arc_warden_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}	
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Magnetic Field Cooldown  (special_bonus_unique_arc_warden_9) ----
 	// icon: special_bonus_unique_arc_warden_9
-	"special_bonus_unique_arc_warden_9"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}	
 }

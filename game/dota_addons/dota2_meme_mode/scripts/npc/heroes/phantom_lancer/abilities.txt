@@ -283,119 +283,41 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_max_distance} Phantom Rush Range  (special_bonus_unique_phantom_lancer) ----
 	// icon: special_bonus_unique_phantom_lancer
-	"special_bonus_unique_phantom_lancer"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_agility_duration}s Phantom Rush Bonus Agility Duration  (special_bonus_unique_phantom_lancer_2) ----
 	// icon: special_bonus_unique_phantom_lancer_2
-	"special_bonus_unique_phantom_lancer_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "100"
-				"ad_linked_abilities" "phantom_lancer_phantom_edge"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Doppelganger CD  (special_bonus_unique_phantom_lancer_4) ----
 	// icon: special_bonus_unique_phantom_lancer_4
-	"special_bonus_unique_phantom_lancer_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "4"
-				"ad_linked_abilities" "phantom_lancer_doppelwalk"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Spirit Lance Cooldown  (special_bonus_unique_phantom_lancer_5) ----
 	// icon: special_bonus_unique_phantom_lancer_5
-	"special_bonus_unique_phantom_lancer_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "1"
-				"ad_linked_abilities" "phantom_lancer_spirit_lance"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_tooltip_illusion_damage}% Juxtapose Damage  (special_bonus_unique_phantom_lancer_6) ----
 	// icon: special_bonus_unique_phantom_lancer_6
-	"special_bonus_unique_phantom_lancer_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_lance_damage} Spirit Lance Damage  (special_bonus_unique_phantom_lancer_lance_damage) ----
 	// icon: special_bonus_unique_phantom_lancer_lance_damage
-	"special_bonus_unique_phantom_lancer_lance_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_agility} Phantom Rush Agility  (special_bonus_unique_phantom_lancer_phantom_rush_agility) ----
 	// icon: special_bonus_unique_phantom_lancer_phantom_rush_agility
-	"special_bonus_unique_phantom_lancer_phantom_rush_agility"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-		"ad_linked_abilities"			"phantom_lancer_phantom_edge"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 	
 }

@@ -589,78 +589,28 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_damage} Blast Off! Damage  (special_bonus_unique_techies) ----
 	// icon: special_bonus_unique_techies
-	"special_bonus_unique_techies"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_radius} Sticky Bomb Latch/Explosion Radius  (special_bonus_unique_techies_2) ----
 	// icon: special_bonus_unique_techies_2
-	"special_bonus_unique_techies_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"techies_sticky_bomb"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityChargeRestoreTime}s Proximity Mines Cooldown  (special_bonus_unique_techies_3) ----
 	// icon: special_bonus_unique_techies_3
-	"special_bonus_unique_techies_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"techies_land_mines"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_activation_delay}s Proximity Mines Activation Delay  (special_bonus_unique_techies_4) ----
 	// icon: special_bonus_unique_techies_4
-	"special_bonus_unique_techies_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"techies_land_mines"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Blast Off! Cooldown  (special_bonus_unique_techies_5) ----
 	// icon: special_bonus_unique_techies_5
-	"special_bonus_unique_techies_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "15"
-				"ad_linked_abilities" "techies_suicide"
-			}
-		}
-	}
 }

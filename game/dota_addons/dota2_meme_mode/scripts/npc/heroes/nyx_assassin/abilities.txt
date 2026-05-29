@@ -413,137 +413,49 @@
 	//=================================================================================================================
 	// ---- {s:bonus_aoe} Mind Flare Radius  (special_bonus_unique_nyx) ----
 	// icon: special_bonus_unique_nyx
-	"special_bonus_unique_nyx"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "75"
-				"ad_linked_abilities" "nyx_assassin_jolt"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_impale_damage} Impale Damage  (special_bonus_unique_nyx_2) ----
 	// icon: special_bonus_unique_nyx_2
-	"special_bonus_unique_nyx_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_duration}s Impale Stun Duration  (special_bonus_unique_nyx_4) ----
 	// icon: special_bonus_unique_nyx_4
-	"special_bonus_unique_nyx_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_float_multiplier} Mind Flare Max Mana Multiplier  (special_bonus_unique_nyx_5) ----
 	// icon: special_bonus_unique_nyx_5
-	"special_bonus_unique_nyx_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"nyx_assassin_jolt"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_stun_duration}s Spiked Carapace Stun Duration  (special_bonus_unique_nyx_6) ----
 	// icon: special_bonus_unique_nyx_6
-	"special_bonus_unique_nyx_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "0.6"
-				"ad_linked_abilities" "nyx_assassin_spiked_carapace"
-			}
-		}
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_reflect_duration}s Spiked Carapace Reflect Duration  (special_bonus_unique_nyx_carapace_reflect_duration) ----
 	// icon: special_bonus_unique_nyx_carapace_reflect_duration
-	"special_bonus_unique_nyx_carapace_reflect_duration"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_damage} Vendetta Damage  (special_bonus_unique_nyx_vendetta_damage) ----
 	// icon: special_bonus_unique_nyx_vendetta_damage
-	"special_bonus_unique_nyx_vendetta_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Vendetta Applies Break  (special_bonus_unique_nyx_vendetta_cd_manacost) ----
 	// icon: special_bonus_unique_nyx_vendetta_cd_manacost
-	"special_bonus_unique_nyx_vendetta_cd_manacost"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Mind Flare Cooldown  (special_bonus_unique_nyx_jolt_cooldown) ----
 	// icon: special_bonus_unique_nyx_jolt_cooldown
-	"special_bonus_unique_nyx_jolt_cooldown"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 }

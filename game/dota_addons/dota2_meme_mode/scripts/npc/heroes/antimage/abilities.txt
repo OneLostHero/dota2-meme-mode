@@ -385,99 +385,42 @@
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Blink Cooldown  (special_bonus_unique_antimage) ----
 	// icon: special_bonus_unique_antimage
-	"special_bonus_unique_antimage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Mana Void Cooldown  (special_bonus_unique_antimage_2) ----
 	// icon: special_bonus_unique_antimage_2
-	"special_bonus_unique_antimage_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_AbilityCastRange} Blink Cast Range  (special_bonus_unique_antimage_3) ----
 	// icon: special_bonus_unique_antimage_3
-	"special_bonus_unique_antimage_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_magic_resistance}% Counterspell Magic Resistance  (special_bonus_unique_antimage_4) ----
 	// icon: special_bonus_unique_antimage_4
-	"special_bonus_unique_antimage_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- {s:bonus_move_slow}% Slow on Fully Mana Drained targets  (special_bonus_unique_antimage_5) ----
 	// icon: special_bonus_unique_antimage_5
-	"special_bonus_unique_antimage_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_mana_void_damage_per_mana} Mana Void Damage Multiplier  (special_bonus_unique_antimage_6) ----
 	// icon: special_bonus_unique_antimage_6
-	"special_bonus_unique_antimage_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_mana_per_hit_pct}% Max Mana Mana Burn  (special_bonus_unique_antimage_7) ----
 	// icon: special_bonus_unique_antimage_7
-	"special_bonus_unique_antimage_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	}
 	// ---- +{s:bonus_mana_void_aoe_radius} Mana Void Radius  (special_bonus_unique_antimage_manavoid_aoe) ----
 	// icon: special_bonus_unique_antimage_manavoid_aoe
-	"special_bonus_unique_antimage_manavoid_aoe"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 }

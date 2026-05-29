@@ -283,118 +283,46 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_trigger_chance}% Moment of Courage Proc Chance  (special_bonus_unique_legion_commander_3) ----
 	// icon: special_bonus_unique_legion_commander_3
-	"special_bonus_unique_legion_commander_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage_per_hero} Overwhelming Odds Damage per Hero  (special_bonus_unique_legion_commander_4) ----
 	// icon: special_bonus_unique_legion_commander_4
-	"special_bonus_unique_legion_commander_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- {s:bonus_radius} AoE Press The Attack  (special_bonus_unique_legion_commander_5) ----
 	// icon: special_bonus_unique_legion_commander_5
-	"special_bonus_unique_legion_commander_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_hp_regen} Press The Attack HP Regen  (special_bonus_unique_legion_commander_6) ----
 	// icon: special_bonus_unique_legion_commander_6
-	"special_bonus_unique_legion_commander_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_hp_leech_percent}% Moment of Courage Lifesteal  (special_bonus_unique_legion_commander_7) ----
 	// icon: special_bonus_unique_legion_commander_7
-	"special_bonus_unique_legion_commander_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Press the Attack grants {s:value}s Debuff Immunity  (special_bonus_unique_legion_commander_8) ----
 	// icon: special_bonus_unique_legion_commander_8
-	"special_bonus_unique_legion_commander_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-		"ad_linked_abilities"			"legion_commander_press_the_attack"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "1.5"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Overwhelming Odds Cooldown  (special_bonus_unique_legion_commander_9) ----
 	// icon: special_bonus_unique_legion_commander_9
-	"special_bonus_unique_legion_commander_9"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_move_speed}% Press The Attack Movement Speed  (special_bonus_unique_legion_commander_pta_movespeed) ----
 	// icon: special_bonus_unique_legion_commander_pta_movespeed
-	"special_bonus_unique_legion_commander_pta_movespeed"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 }

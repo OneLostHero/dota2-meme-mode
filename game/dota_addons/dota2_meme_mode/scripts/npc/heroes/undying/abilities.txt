@@ -512,143 +512,46 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_zombie_damage_tooltip} Zombie Damage  (special_bonus_unique_undying) ----
 	// icon: special_bonus_unique_undying
-	"special_bonus_unique_undying"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "20"
-				"ad_linked_abilities" "undying_tombstone"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Decay Cooldown  (special_bonus_unique_undying_2) ----
 	// icon: special_bonus_unique_undying_2
-	"special_bonus_unique_undying_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "2"
-				"ad_linked_abilities" "undying_decay"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Tombstone On Death  (special_bonus_unique_undying_3) ----
 	// icon: special_bonus_unique_undying_3
-	"special_bonus_unique_undying_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "1"
-				"ad_linked_abilities" "undying_tombstone"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_str_percentage}% Flesh Golem Strength Bonus  (special_bonus_unique_undying_4) ----
 	// icon: special_bonus_unique_undying_4
-	"special_bonus_unique_undying_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_hits_to_destroy_tooltip} Tombstone Attacks to Destroy  (special_bonus_unique_undying_5) ----
 	// icon: special_bonus_unique_undying_5
-	"special_bonus_unique_undying_5"
-	{
-		// Gener
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "6"
-				"ad_linked_abilities" "undying_tombstone"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage_per_unit} Soul Rip Damage/Heal  (special_bonus_unique_undying_6) ----
 	// icon: special_bonus_unique_undying_6
-	"special_bonus_unique_undying_6"
-	{
-		// Gener
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Tombstone Cooldown  (special_bonus_unique_undying_7) ----
 	// icon: special_bonus_unique_undying_7
-	"special_bonus_unique_undying_7"
-	{
-		// Gener
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-
-		"AbilityValues"
-		{
-			"zombie_master_flesh_golem_cooldown"	"20"	// lower = stronger
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_decay_damage} Decay Damage  (special_bonus_unique_undying_8) ----
 	// icon: special_bonus_unique_undying_8
-	"special_bonus_unique_undying_8"
-	{
-		// Gener
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 }

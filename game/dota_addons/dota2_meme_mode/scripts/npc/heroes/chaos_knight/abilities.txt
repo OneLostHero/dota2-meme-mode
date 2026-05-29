@@ -314,97 +314,39 @@
 	//=================================================================================================================
 	// ---- Reality Rift Pierces Spell Immunity  (special_bonus_unique_chaos_knight) ----
 	// icon: special_bonus_unique_chaos_knight
-	"special_bonus_unique_chaos_knight"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_pull_distance} Reality Rift Pull Distance  (special_bonus_unique_chaos_knight_2) ----
 	// icon: special_bonus_unique_chaos_knight_2
-	"special_bonus_unique_chaos_knight_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"		
-
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_stun_max} Min/Max Chaos Bolt Duration  (special_bonus_unique_chaos_knight_3) ----
 	// icon: special_bonus_unique_chaos_knight_3
-	"special_bonus_unique_chaos_knight_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_illusion_duration}s Phantasm Duration  (special_bonus_unique_chaos_knight_4) ----
 	// icon: special_bonus_unique_chaos_knight_4
-	"special_bonus_unique_chaos_knight_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_chance}% Chaos Strike Chance  (special_bonus_unique_chaos_knight_5) ----
 	// icon: special_bonus_unique_chaos_knight_5
-	"special_bonus_unique_chaos_knight_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_lifesteal}% Chaos Strike Lifesteal  (special_bonus_unique_chaos_knight_6) ----
 	// icon: special_bonus_unique_chaos_knight_6
-	"special_bonus_unique_chaos_knight_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Chaos Bolt Cooldown  (special_bonus_unique_chaos_knight_8) ----
 	// icon: special_bonus_unique_chaos_knight_8
-	"special_bonus_unique_chaos_knight_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 }

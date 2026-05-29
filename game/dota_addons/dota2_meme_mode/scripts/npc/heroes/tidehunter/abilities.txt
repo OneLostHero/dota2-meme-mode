@@ -398,115 +398,44 @@
 	//=================================================================================================================
 	// ---- -{s:bonus_negative_armor} Gush Armor  (special_bonus_unique_tidehunter) ----
 	// icon: special_bonus_unique_tidehunter
-	"special_bonus_unique_tidehunter"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_gush_damage} Gush Damage  (special_bonus_unique_tidehunter_2) ----
 	// icon: special_bonus_unique_tidehunter_2
-	"special_bonus_unique_tidehunter_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage_reduction}% Anchor Smash Damage Reduction  (special_bonus_unique_tidehunter_3) ----
 	// icon: special_bonus_unique_tidehunter_3
-	"special_bonus_unique_tidehunter_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_movement_speed}% Gush Slow  (special_bonus_unique_tidehunter_5) ----
 	// icon: special_bonus_unique_tidehunter_5
-	"special_bonus_unique_tidehunter_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_duration}s Ravage Stun Duration  (special_bonus_unique_tidehunter_7) ----
 	// icon: special_bonus_unique_tidehunter_7
-	"special_bonus_unique_tidehunter_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- 50% chance of Anchor Smash on attack  (special_bonus_unique_tidehunter_8) ----
 	// icon: special_bonus_unique_tidehunter_8
-	"special_bonus_unique_tidehunter_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "1"
-				"ad_linked_abilities" "tidehunter_anchor_smash"
-			}
-		}
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_attack_damage} Anchor Smash Damage  (special_bonus_unique_tidehunter_9) ----
 	// icon: special_bonus_unique_tidehunter_9
-	"special_bonus_unique_tidehunter_9"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Anchor Smash affects buildings  (special_bonus_unique_tidehunter_10) ----
 	// icon: special_bonus_unique_tidehunter_10
-	"special_bonus_unique_tidehunter_10"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}		
 }

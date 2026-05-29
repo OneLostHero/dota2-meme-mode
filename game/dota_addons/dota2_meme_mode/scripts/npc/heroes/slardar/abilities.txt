@@ -341,113 +341,39 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_crush_damage} Slithereen Crush Damage  (special_bonus_unique_slardar) ----
 	// icon: special_bonus_unique_slardar
-	"special_bonus_unique_slardar"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-	
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_damage} Bash of the Deep Damage  (special_bonus_unique_slardar_2) ----
 	// icon: special_bonus_unique_slardar_2
-	"special_bonus_unique_slardar_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Corrosive Haze Undispellable  (special_bonus_unique_slardar_3) ----
 	// icon: special_bonus_unique_slardar_3
-	"special_bonus_unique_slardar_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "0"
-				"ad_linked_abilities" "slardar_amplify_damage"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Slithereen Crush Cooldown  (special_bonus_unique_slardar_4) ----
 	// icon: special_bonus_unique_slardar_4
-	"special_bonus_unique_slardar_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "3"
-				"ad_linked_abilities" "slardar_slithereen_crush"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_armor_reduction} Corrosive Haze Armor  (special_bonus_unique_slardar_5) ----
 	// icon: special_bonus_unique_slardar_5
-	"special_bonus_unique_slardar_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"slardar_amplify_damage"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Guardian Sprint Cooldown  (special_bonus_unique_slardar_7) ----
 	// icon: special_bonus_unique_slardar_7
-	"special_bonus_unique_slardar_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_stun_duration}s Slithereen Crush Stun Duration  (special_bonus_unique_slardar_slithereen_crush_stun) ----
 	// icon: special_bonus_unique_slardar_slithereen_crush_stun
-	"special_bonus_unique_slardar_slithereen_crush_stun"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}	
 }

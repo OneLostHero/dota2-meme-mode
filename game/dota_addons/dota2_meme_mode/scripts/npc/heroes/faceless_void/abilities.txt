@@ -394,119 +394,46 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_attack_speed} Attack Speed during Chronosphere  (special_bonus_unique_faceless_void) ----
 	// icon: special_bonus_unique_faceless_void
-	"special_bonus_unique_faceless_void"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_radius} Chronosphere AoE  (special_bonus_unique_faceless_void_2) ----
 	// icon: special_bonus_unique_faceless_void_2
-	"special_bonus_unique_faceless_void_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_damage} Time Lock Damage  (special_bonus_unique_faceless_void_3) ----
 	// icon: special_bonus_unique_faceless_void_3
-	"special_bonus_unique_faceless_void_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:dodge_chance_pct}% Backtrack Chance  (special_bonus_unique_faceless_void_4) ----
 	// icon: special_bonus_unique_faceless_void_4
-	"special_bonus_unique_faceless_void_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"dodge_chance_pct"	// higher = stronger
-			{
-				"value" "20"
-				"ad_linked_abilities" "special_bonus_inherent"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Time Walk Cooldown  (special_bonus_unique_faceless_void_5) ----
 	// icon: special_bonus_unique_faceless_void_5
-	"special_bonus_unique_faceless_void_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"		
-
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage_per_stack} Time Dilation DPS Per Cooldown  (special_bonus_unique_faceless_void_6) ----
 	// icon: special_bonus_unique_faceless_void_6
-	"special_bonus_unique_faceless_void_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_backtrack_duration}s Time Walk Backtrack Duration  (special_bonus_unique_faceless_void_7) ----
 	// icon: special_bonus_unique_faceless_void_7
-	"special_bonus_unique_faceless_void_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"		
-
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_slow}% Time Dilation Slow per Cooldown  (special_bonus_unique_faceless_void_8) ----
 	// icon: special_bonus_unique_faceless_void_8
-	"special_bonus_unique_faceless_void_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 }

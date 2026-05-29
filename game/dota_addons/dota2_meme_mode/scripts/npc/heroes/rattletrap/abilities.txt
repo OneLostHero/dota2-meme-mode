@@ -405,14 +405,6 @@
 	//=================================================================================================================
 	// ---- -{s:bonus_interval}s Battery Assault Interval  (special_bonus_unique_clockwerk) ----
 	// icon: special_bonus_unique_clockwerk
-	"special_bonus_unique_clockwerk"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-	}
 
 
 	//=================================================================================================================
@@ -420,21 +412,6 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_damage} Battery Assault Damage  (special_bonus_unique_clockwerk_3) ----
 	// icon: special_bonus_unique_clockwerk_3
-	"special_bonus_unique_clockwerk_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "24"
-				"ad_linked_abilities" "rattletrap_battery_assault"
-			}
-		}
-	}
 
 
 	//=================================================================================================================
@@ -442,35 +419,12 @@
 	//=================================================================================================================
 	// ---- Rocket Flare True Sight  (special_bonus_unique_clockwerk_4) ----
 	// icon: special_bonus_unique_clockwerk_4
-	"special_bonus_unique_clockwerk_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "0"
-				"ad_linked_abilities" "rattletrap_rocket_flare"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_attacks_to_destroy} Power Cogs Hit To Kill  (special_bonus_unique_clockwerk_5) ----
 	// icon: special_bonus_unique_clockwerk_5
-	"special_bonus_unique_clockwerk_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 
 	//=================================================================================================================
@@ -478,55 +432,22 @@
 	//=================================================================================================================
 	// ---- Debuff Immunity Inside Power Cogs  (special_bonus_unique_clockwerk_6) ----
 	// icon: special_bonus_unique_clockwerk_6
-	"special_bonus_unique_clockwerk_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-		"ad_linked_abilities"			"rattletrap_power_cogs"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Rocket Flare Cooldown  (special_bonus_unique_clockwerk_7) ----
 	// icon: special_bonus_unique_clockwerk_7
-	"special_bonus_unique_clockwerk_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 		//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Power Cogs Cooldown  (special_bonus_unique_clockwerk_9) ----
 	// icon: special_bonus_unique_clockwerk_9
-	"special_bonus_unique_clockwerk_9"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}	
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage} Rocket Flare Damage  (special_bonus_unique_clockwerk_flare_damage) ----
 	// icon: special_bonus_unique_clockwerk_flare_damage
-	"special_bonus_unique_clockwerk_flare_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}	
 
 }

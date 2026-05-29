@@ -463,97 +463,35 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_purge_damage} Demonic Purge/Cleanse Damage/Heal  (special_bonus_unique_shadow_demon_1) ----
 	// icon: special_bonus_unique_shadow_demon_1
-	"special_bonus_unique_shadow_demon_1"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Shadow Poison Cooldown  (special_bonus_unique_shadow_demon_3) ----
 	// icon: special_bonus_unique_shadow_demon_3
-	"special_bonus_unique_shadow_demon_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "1"
-				"ad_linked_abilities" "shadow_demon_shadow_poison"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_stack_damage}% Shadow Poison Damage  (special_bonus_unique_shadow_demon_4) ----
 	// icon: special_bonus_unique_shadow_demon_4
-	"special_bonus_unique_shadow_demon_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- {s:bonus_AbilityCharges} Charges of Disruption  (special_bonus_unique_shadow_demon_7) ----
 	// icon: special_bonus_unique_shadow_demon_7
-	"special_bonus_unique_shadow_demon_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Demonic Purge Cooldown  (special_bonus_unique_shadow_demon_9) ----
 	// icon: special_bonus_unique_shadow_demon_9
-	"special_bonus_unique_shadow_demon_9"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "30"
-				"ad_linked_abilities" "shadow_demon_demonic_purge"
-			}
-		}
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage_reflection_pct}% Disseminate Shared Damage  (special_bonus_unique_shadow_demon_disseminate_damage) ----
 	// icon: special_bonus_unique_shadow_demon_disseminate_damage
-	"special_bonus_unique_shadow_demon_disseminate_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"							"special_bonus_base"
-	}
 
 
 }

@@ -434,97 +434,41 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_max_hero_attacks} Supernova Hit Count  (special_bonus_unique_phoenix_1) ----
 	// icon: special_bonus_unique_phoenix_1
-	"special_bonus_unique_phoenix_1"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_stun_duration}s Supernova Stun Duration  (special_bonus_unique_phoenix_2) ----
 	// icon: special_bonus_unique_phoenix_2
-	"special_bonus_unique_phoenix_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage_per_second} Fire Spirits Damage Per Second  (special_bonus_unique_phoenix_3) ----
 	// icon: special_bonus_unique_phoenix_3
-	"special_bonus_unique_phoenix_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_dash_length} Icarus Dive Cast Range  (special_bonus_unique_phoenix_4) ----
 	// icon: special_bonus_unique_phoenix_4
-	"special_bonus_unique_phoenix_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_hp_perc_damage}% Max Health Sun Ray Damage  (special_bonus_unique_phoenix_5) ----
 	// icon: special_bonus_unique_phoenix_5
-	"special_bonus_unique_phoenix_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_slow_movement_speed_pct}% Icarus Dive Slow  (special_bonus_unique_phoenix_6) ----
 	// icon: special_bonus_unique_phoenix_6
-	"special_bonus_unique_phoenix_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage_per_second} Icarus Dive Damage Per Second  (special_bonus_unique_phoenix_dive_damage) ----
 	// icon: special_bonus_unique_phoenix_dive_damage
-	"special_bonus_unique_phoenix_dive_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 
 	

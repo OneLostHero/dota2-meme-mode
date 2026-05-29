@@ -292,108 +292,38 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_brain_sap_damage} Brain Sap Damage/Heal  (special_bonus_unique_bane_2) ----
 	// icon: special_bonus_unique_bane_2
-	"special_bonus_unique_bane_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"bane_brain_sap"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_AbilityChannelTime}s Fiend's Grip Duration  (special_bonus_unique_bane_3) ----
 	// icon: special_bonus_unique_bane_3
-	"special_bonus_unique_bane_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "5"
-				"ad_linked_abilities" "bane_fiends_grip"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Nightmare Cooldown  (special_bonus_unique_bane_5) ----
 	// icon: special_bonus_unique_bane_5
-	"special_bonus_unique_bane_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"bane_nightmare"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Brain Sap Cooldown  (special_bonus_unique_bane_8) ----
 	// icon: special_bonus_unique_bane_8
-	"special_bonus_unique_bane_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"bane_brain_sap"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_fiend_grip_mana_drain}% Fiend's Grip Max Mana Drain  (special_bonus_unique_bane_9) ----
 	// icon: special_bonus_unique_bane_9
-	"special_bonus_unique_bane_9"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "5"
-				"ad_linked_abilities" "bane_fiends_grip"
-			}
-		}
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_enfeeble_tick_damage} Enfeeble Damage Per Second  (special_bonus_unique_bane_10) ----
 	// icon: special_bonus_unique_bane_10
-	"special_bonus_unique_bane_10"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"							"special_bonus_base"		
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_cast_reduction}% Enfeeble Cast Range Reduction  (special_bonus_unique_bane_11) ----
 	// icon: special_bonus_unique_bane_11
-	"special_bonus_unique_bane_11"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"							"special_bonus_base"		
-	}
 }

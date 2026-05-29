@@ -359,108 +359,44 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_beam_damage} Lucent Beam Damage  (special_bonus_unique_luna_1) ----
 	// icon: special_bonus_unique_luna_1
-	"special_bonus_unique_luna_1"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"luna_lucent_beam"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Lucent Beam Cooldown  (special_bonus_unique_luna_2) ----
 	// icon: special_bonus_unique_luna_2
-	"special_bonus_unique_luna_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"luna_lucent_beam"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_damage} Lunar Blessing Damage  (special_bonus_unique_luna_3) ----
 	// icon: special_bonus_unique_luna_3
-	"special_bonus_unique_luna_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"luna_lunar_blessing"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_stun_duration}s Lucent Beam Ministun  (special_bonus_unique_luna_4) ----
 	// icon: special_bonus_unique_luna_4
-	"special_bonus_unique_luna_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"luna_lucent_beam"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Lucent Beam Hits Additional Target  (special_bonus_unique_luna_5) ----
 	// icon: special_bonus_unique_luna_5
-	"special_bonus_unique_luna_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"luna_eclipse"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Eclipse Cooldown  (special_bonus_unique_luna_6) ----
 	// icon: special_bonus_unique_luna_6
-	"special_bonus_unique_luna_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"luna_eclipse"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_damage_reduction_percent}% Moon Glaives Damage Reduction  (special_bonus_unique_luna_7) ----
 	// icon: special_bonus_unique_luna_7
-	"special_bonus_unique_luna_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"luna_moon_glaive"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- {s:bonus_glaives_fired} Moon Glaives fired on Lucent Beam  (special_bonus_unique_luna_8) ----
 	// icon: special_bonus_unique_luna_8
-	"special_bonus_unique_luna_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"luna_lucent_beam && luna_moon_glaive"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 }

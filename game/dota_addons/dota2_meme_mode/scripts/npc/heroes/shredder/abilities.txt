@@ -650,96 +650,38 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_tree_damage_scale} Whirling Death Tree Bonus Damage  (special_bonus_unique_timbersaw) ----
 	// icon: special_bonus_unique_timbersaw
-	"special_bonus_unique_timbersaw"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_stack_limit} Max / +{s:bonus_stacks_per_hero_attack} Hero Attack Reactive Armor Stacks  (special_bonus_unique_timbersaw_2) ----
 	// icon: special_bonus_unique_timbersaw_2
-	"special_bonus_unique_timbersaw_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_AbilityCastRange}% Timber Chain Range/Projectile Speed  (special_bonus_unique_timbersaw_3) ----
 	// icon: special_bonus_unique_timbersaw_3
-	"special_bonus_unique_timbersaw_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_slow}% Chakram Slow  (special_bonus_unique_timbersaw_4) ----
 	// icon: special_bonus_unique_timbersaw_4
-	"special_bonus_unique_timbersaw_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_stat_loss_pct}% Whirling Death Stat Loss  (special_bonus_unique_timbersaw_5) ----
 	// icon: special_bonus_unique_timbersaw_5
-	"special_bonus_unique_timbersaw_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_hp_regen} Reactive Armor Regeneration Per Stack  (special_bonus_unique_timbersaw_reactive_armor_regen_per_stack) ----
 	// icon: special_bonus_unique_timbersaw_reactive_armor_regen_per_stack
-	"special_bonus_unique_timbersaw_reactive_armor_regen_per_stack"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"	
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_hp_regen} Reactive Armor Regeneration Per Stack  (special_bonus_unique_timbersaw_reactive_armor_regen_per_stack) ----
 	// icon: special_bonus_unique_timbersaw_reactive_armor_regen_per_stack
-	"special_bonus_unique_timbersaw_reactive_armor_regen_per_stack"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	
-	}	
 
 
 

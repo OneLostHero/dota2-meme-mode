@@ -433,97 +433,39 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_damage} Rolling Boulder Damage  (special_bonus_unique_earth_spirit) ----
 	// icon: special_bonus_unique_earth_spirit
-	"special_bonus_unique_earth_spirit"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Magnetize Undispellable  (special_bonus_unique_earth_spirit_2) ----
 	// icon: special_bonus_unique_earth_spirit_2
-	"special_bonus_unique_earth_spirit_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"	
-		"ad_linked_abilities"			"earth_spirit_magnetize"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_stun_duration}s Rolling Boulder Stun Duration  (special_bonus_unique_earth_spirit_3) ----
 	// icon: special_bonus_unique_earth_spirit_3
-	"special_bonus_unique_earth_spirit_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_distance} Rolling Boulder Distance  (special_bonus_unique_earth_spirit_4) ----
 	// icon: special_bonus_unique_earth_spirit_4
-	"special_bonus_unique_earth_spirit_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Geomagnetic Grip Cooldown  (special_bonus_unique_earth_spirit_5) ----
 	// icon: special_bonus_unique_earth_spirit_5
-	"special_bonus_unique_earth_spirit_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"	
-		"ad_linked_abilities"			"earth_spirit_geomagnetic_grip"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_rock_damage} Boulder Smash Damage  (special_bonus_unique_earth_spirit_6) ----
 	// icon: special_bonus_unique_earth_spirit_6
-	"special_bonus_unique_earth_spirit_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"	
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage_duration}% Magnetize Damage & Duration  (special_bonus_unique_earth_spirit_8) ----
 	// icon: special_bonus_unique_earth_spirit_8
-	"special_bonus_unique_earth_spirit_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"							"special_bonus_base"		
-	}
 }

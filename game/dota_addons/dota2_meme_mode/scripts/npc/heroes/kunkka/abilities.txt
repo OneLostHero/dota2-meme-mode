@@ -454,121 +454,44 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_damage_bonus} Tidebringer Damage  (special_bonus_unique_kunkka_2) ----
 	// icon: special_bonus_unique_kunkka_2
-	"special_bonus_unique_kunkka_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Ghostship Fleet  (special_bonus_unique_kunkka_3) ----
 	// icon: special_bonus_unique_kunkka_3
-	"special_bonus_unique_kunkka_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "3.5"
-				"ad_linked_abilities" "kunkka_ghostship"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_cleave_damage}% Tidebringer Cleave Damage  (special_bonus_unique_kunkka_4) ----
 	// icon: special_bonus_unique_kunkka_4
-	"special_bonus_unique_kunkka_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "70"
-				"ad_linked_abilities" "kunkka_tidebringer"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_ally_ms}% X Marks the Spot Move Speed  (special_bonus_unique_kunkka_6) ----
 	// icon: special_bonus_unique_kunkka_6
-	"special_bonus_unique_kunkka_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_stun_duration}% Torrent Damage/Knock Up Duration  (special_bonus_unique_kunkka_7) ----
 	// icon: special_bonus_unique_kunkka_7
-	"special_bonus_unique_kunkka_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Tidebringer applies {s:bonus_movespeed_slow}% slow for {s:bonus_movespeed_slow_duration}s  (special_bonus_unique_kunkka_tidebringer_slow) ----
 	// icon: special_bonus_unique_kunkka_tidebringer_slow
-	"special_bonus_unique_kunkka_tidebringer_slow"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Torrent Cooldown  (special_bonus_unique_kunkka_torrent_cooldown) ----
 	// icon: special_bonus_unique_kunkka_torrent_cooldown
-	"special_bonus_unique_kunkka_torrent_cooldown"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_ghostship_absorb}% Rum Damage Delay  (special_bonus_unique_kunkka_rum) ----
 	// icon: special_bonus_unique_kunkka_rum
-	"special_bonus_unique_kunkka_rum"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Innate Spyglass
 	//=================================================================================================================

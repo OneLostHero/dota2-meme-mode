@@ -367,130 +367,44 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_instances} Refraction Instances  (special_bonus_unique_templar_assassin) ----
 	// icon: special_bonus_unique_templar_assassin
-	"special_bonus_unique_templar_assassin"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_armor} Meld Armor Reduction  (special_bonus_unique_templar_assassin_2) ----
 	// icon: special_bonus_unique_templar_assassin_2
-	"special_bonus_unique_templar_assassin_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_movement_speed_min}% Psionic Trap Slow  (special_bonus_unique_templar_assassin_3) ----
 	// icon: special_bonus_unique_templar_assassin_3
-	"special_bonus_unique_templar_assassin_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"				"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Refraction Dispels  (special_bonus_unique_templar_assassin_4) ----
 	// icon: special_bonus_unique_templar_assassin_4
-	"special_bonus_unique_templar_assassin_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "0"
-				"ad_linked_abilities" "templar_assassin_meld"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- {s:value}s Meld Hit Bash  (special_bonus_unique_templar_assassin_7) ----
 	// icon: special_bonus_unique_templar_assassin_7
-	"special_bonus_unique_templar_assassin_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "1"
-				"ad_linked_abilities" "templar_assassin_meld"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:value} Psi Blades Attack and Spill Range  (special_bonus_unique_templar_assassin_8) ----
 	// icon: special_bonus_unique_templar_assassin_8
-	"special_bonus_unique_templar_assassin_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "120"
-				"ad_linked_abilities" "templar_assassin_psi_blades"
-			}
-		}
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_damage} Refraction Damage  (special_bonus_unique_templar_assassin_refraction_damage) ----
 	// icon: special_bonus_unique_templar_assassin_refraction_damage
-	"special_bonus_unique_templar_assassin_refraction_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}	
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Refraction Can Be Cast While Disabled  (special_bonus_unique_templar_assassin_refraction_disable_cast) ----
 	// icon: special_bonus_unique_templar_assassin_refraction_disable_cast
-	"special_bonus_unique_templar_assassin_refraction_disable_cast"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}	
 }

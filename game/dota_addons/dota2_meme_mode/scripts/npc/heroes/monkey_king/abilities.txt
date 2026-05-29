@@ -431,130 +431,46 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_damage} Jingu Mastery Damage  (special_bonus_unique_monkey_king_2) ----
 	// icon: special_bonus_unique_monkey_king_2
-	"special_bonus_unique_monkey_king_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_impact_damage} Primal Spring Max Damage  (special_bonus_unique_monkey_king_3) ----
 	// icon: special_bonus_unique_monkey_king_3
-	"special_bonus_unique_monkey_king_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Additional Wukong's Command Ring  (special_bonus_unique_monkey_king_6) ----
 	// icon: special_bonus_unique_monkey_king_6
-	"special_bonus_unique_monkey_king_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "1100"
-				"affected_by_aoe_increase" "1"
-				"ad_linked_abilities" "monkey_king_wukongs_command"
-			}
-			"value2"	// check tooltip
-			{
-				"value" "7"
-				"ad_linked_abilities" "monkey_king_wukongs_command"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_ground_jump_distance} Tree Dance Cast Range  (special_bonus_unique_monkey_king_7) ----
 	// icon: special_bonus_unique_monkey_king_7
-	"special_bonus_unique_monkey_king_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- 0 Cooldown Primal Spring  (special_bonus_unique_monkey_king_8) ----
 	// icon: special_bonus_unique_monkey_king_8
-	"special_bonus_unique_monkey_king_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "0"
-				"ad_linked_abilities" "monkey_king_tree_dance"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_stun_duration}s Boundless Strike Stun Duration  (special_bonus_unique_monkey_king_9) ----
 	// icon: special_bonus_unique_monkey_king_9
-	"special_bonus_unique_monkey_king_9"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_strike_crit_mult}% Boundless Strike Critical Damage  (special_bonus_unique_monkey_king_10) ----
 	// icon: special_bonus_unique_monkey_king_10
-	"special_bonus_unique_monkey_king_10"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-	}
 	
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_required_hits} Jingu Mastery Required Hits  (special_bonus_unique_monkey_king_11) ----
 	// icon: special_bonus_unique_monkey_king_11
-	"special_bonus_unique_monkey_king_11"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-		
-	}
 }

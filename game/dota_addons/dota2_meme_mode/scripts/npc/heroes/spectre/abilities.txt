@@ -336,116 +336,39 @@
 	//=================================================================================================================
 	// ---- -{s:value}s Spectral Dagger Cooldown  (special_bonus_unique_spectre) ----
 	// icon: special_bonus_unique_spectre
-	"special_bonus_unique_spectre"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "4"
-				"ad_linked_abilities" "spectre_spectral_dagger"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_damage} Desolate Damage  (special_bonus_unique_spectre_2) ----
 	// icon: special_bonus_unique_spectre_2
-	"special_bonus_unique_spectre_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_movespeed}% Spectral Dagger Slow/Bonus  (special_bonus_unique_spectre_3) ----
 	// icon: special_bonus_unique_spectre_3
-	"special_bonus_unique_spectre_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:value}% Haunt Illusion Damage  (special_bonus_unique_spectre_4) ----
 	// icon: special_bonus_unique_spectre_4
-	"special_bonus_unique_spectre_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "30"
-				"ad_linked_abilities" "spectre_haunt"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:value}% Dispersion  (special_bonus_unique_spectre_5) ----
 	// icon: special_bonus_unique_spectre_5
-	"special_bonus_unique_spectre_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "5"
-				"ad_linked_abilities" "spectre_dispersion"
-			}
-		}
-	}
 
 		//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage} Spectral Dagger Damage  (special_bonus_unique_spectre_6) ----
 	// icon: special_bonus_unique_spectre_6
-	"special_bonus_unique_spectre_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_radius} Desolate Ally Radius  (special_bonus_unique_spectre_desolate_radius) ----
 	// icon: special_bonus_unique_spectre_desolate_radius
-	"special_bonus_unique_spectre_desolate_radius"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 }

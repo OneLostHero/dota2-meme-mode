@@ -676,93 +676,37 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_bear_armor} Spirit Bear Armor  (special_bonus_unique_lone_druid_2) ----
 	// icon: special_bonus_unique_lone_druid_2
-	"special_bonus_unique_lone_druid_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"					"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Savage Roar Cooldown  (special_bonus_unique_lone_druid_4) ----
 	// icon: special_bonus_unique_lone_druid_4
-	"special_bonus_unique_lone_druid_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s True Form Cooldown  (special_bonus_unique_lone_druid_8) ----
 	// icon: special_bonus_unique_lone_druid_8
-	"special_bonus_unique_lone_druid_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bear_movespeed} Spirit Bear Movement Speed  (special_bonus_unique_lone_druid_11) ----
 	// icon: special_bonus_unique_lone_druid_11
-	"special_bonus_unique_lone_druid_11"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_attack_speed} Spirit Link Attack Speed  (special_bonus_unique_lone_druid_spirit_link_attack_speed) ----
 	// icon: special_bonus_unique_lone_druid_spirit_link_attack_speed
-	"special_bonus_unique_lone_druid_spirit_link_attack_speed"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage} Entangling Claws Damage  (special_bonus_unique_lone_druid_entangle_dps) ----
 	// icon: special_bonus_unique_lone_druid_entangle_dps
-	"special_bonus_unique_lone_druid_entangle_dps"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_radius} Savage Roar Radius  (special_bonus_unique_lone_druid_savage_roar_aoe) ----
 	// icon: special_bonus_unique_lone_druid_savage_roar_aoe
-	"special_bonus_unique_lone_druid_savage_roar_aoe"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}		
 }

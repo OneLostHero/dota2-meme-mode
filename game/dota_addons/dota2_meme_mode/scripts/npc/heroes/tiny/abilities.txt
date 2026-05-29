@@ -406,28 +406,12 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_avalanche_damage} Avalanche Damage  (special_bonus_unique_tiny) ----
 	// icon: special_bonus_unique_tiny
-	"special_bonus_unique_tiny"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- {s:bonus_AbilityCharges} Toss Charges  (special_bonus_unique_tiny_2) ----
 	// icon: special_bonus_unique_tiny_2
-	"special_bonus_unique_tiny_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 	//=================================================================================================================
 	// Rocksteady
 	//=================================================================================================================
@@ -477,85 +461,28 @@
 	//=================================================================================================================
 	// ---- -{s:value}s Avalanche Cooldown  (special_bonus_unique_tiny_3) ----
 	// icon: special_bonus_unique_tiny_3
-	"special_bonus_unique_tiny_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "8"
-				"ad_linked_abilities" "tiny_avalanche"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_AbilityCastRange} Avalanche Cast Range  (special_bonus_unique_tiny_4) ----
 	// icon: special_bonus_unique_tiny_4
-	"special_bonus_unique_tiny_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Toss Requires No Target  (special_bonus_unique_tiny_5) ----
 	// icon: special_bonus_unique_tiny_5
-	"special_bonus_unique_tiny_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "0"
-				"ad_linked_abilities" "tiny_toss"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_attack_speed_reduction}% Grow Attack Speed Reduction  (special_bonus_unique_tiny_6) ----
 	// icon: special_bonus_unique_tiny_6
-	"special_bonus_unique_tiny_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_damage} Tree Grab Base Damage  (special_bonus_unique_tiny_7) ----
 	// icon: special_bonus_unique_tiny_7
-	"special_bonus_unique_tiny_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"tiny_grow"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		
-	}
 }

@@ -454,120 +454,45 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_images_count} Mirror Image Illusion  (special_bonus_unique_naga_siren) ----
 	// icon: special_bonus_unique_naga_siren
-	"special_bonus_unique_naga_siren"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage}% Rip Tide Damage  (special_bonus_unique_naga_siren_2) ----
 	// icon: special_bonus_unique_naga_siren_2
-	"special_bonus_unique_naga_siren_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_incoming_damage}% Mirror Image Illusion Damage Taken  (special_bonus_unique_naga_siren_3) ----
 	// icon: special_bonus_unique_naga_siren_3
-	"special_bonus_unique_naga_siren_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"							"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_outgoing_damage_tooltip}% Mirror Image Damage  (special_bonus_unique_naga_siren_4) ----
 	// icon: special_bonus_unique_naga_siren_4
-	"special_bonus_unique_naga_siren_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Song of the Siren Cooldown  (special_bonus_unique_naga_siren_5) ----
 	// icon: special_bonus_unique_naga_siren_5
-	"special_bonus_unique_naga_siren_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"naga_siren_song_of_the_siren"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		"AbilityValues"
-		{
-				"value"				"-20"	// check tooltip
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Mirror Image Cooldown  (special_bonus_unique_naga_siren_6) ----
 	// icon: special_bonus_unique_naga_siren_6
-	"special_bonus_unique_naga_siren_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "10"
-				"ad_linked_abilities" "naga_siren_mirror_image"
-			}
-		}
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Ensnare Cooldown  (special_bonus_unique_naga_siren_net_cooldown) ----
 	// icon: special_bonus_unique_naga_siren_net_cooldown
-	"special_bonus_unique_naga_siren_net_cooldown"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"							"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Ensnare applies Break  (special_bonus_unique_naga_siren_net_breaks) ----
 	// icon: special_bonus_unique_naga_siren_net_breaks
-	"special_bonus_unique_naga_siren_net_breaks"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 }

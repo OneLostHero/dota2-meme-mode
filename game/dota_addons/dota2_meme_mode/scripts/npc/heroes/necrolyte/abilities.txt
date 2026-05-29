@@ -329,116 +329,45 @@
 	//=================================================================================================================
 	// ---- -{s:value}s Death Pulse Cooldown  (special_bonus_unique_necrophos) ----
 	// icon: special_bonus_unique_necrophos
-	"special_bonus_unique_necrophos"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "2.5"
-				"ad_linked_abilities" "necrolyte_death_pulse"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_aura_damage}% Heartstopper Aura Damage  (special_bonus_unique_necrophos_2) ----
 	// icon: special_bonus_unique_necrophos_2
-	"special_bonus_unique_necrophos_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_movement_speed}% Ghost Shroud Movement Slow  (special_bonus_unique_necrophos_3) ----
 	// icon: special_bonus_unique_necrophos_3
-	"special_bonus_unique_necrophos_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_heal} Death Pulse Heal  (special_bonus_unique_necrophos_4) ----
 	// icon: special_bonus_unique_necrophos_4
-	"special_bonus_unique_necrophos_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_heal_reduction_pct}% Heartstopper Regen Reduction  (special_bonus_unique_necrophos_5) ----
 	// icon: special_bonus_unique_necrophos_5
-	"special_bonus_unique_necrophos_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_AbilityCastRange} Reaper's Scythe Cast Range  (special_bonus_unique_necrophos_6) ----
 	// icon: special_bonus_unique_necrophos_6
-	"special_bonus_unique_necrophos_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_regen_duration}s Sadist Stack Duration  (special_bonus_unique_necrophos_heartstopper_regen_duration) ----
 	// icon: special_bonus_unique_necrophos_heartstopper_regen_duration
-	"special_bonus_unique_necrophos_heartstopper_regen_duration"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_heal_bonus}% Ghost Shroud Self Restoration Amp  (special_bonus_unique_necrophos_sadist_heal_bonus) ----
 	// icon: special_bonus_unique_necrophos_sadist_heal_bonus
-	"special_bonus_unique_necrophos_sadist_heal_bonus"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}	
 
 }

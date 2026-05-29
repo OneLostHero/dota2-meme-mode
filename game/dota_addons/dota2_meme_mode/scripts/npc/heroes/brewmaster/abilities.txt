@@ -741,109 +741,39 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_brewling_hp} Brewlings Health  (special_bonus_unique_brewmaster) ----
 	// icon: special_bonus_unique_brewmaster
-	"special_bonus_unique_brewmaster"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_damage} Brewlings Damage  (special_bonus_unique_brewmaster_2) ----
 	// icon: special_bonus_unique_brewmaster_2
-	"special_bonus_unique_brewmaster_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"		"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Cinder Brew applies Fear when ignited  (special_bonus_unique_brewmaster_4) ----
 	// icon: special_bonus_unique_brewmaster_4
-	"special_bonus_unique_brewmaster_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "1.5"
-				"ad_linked_abilities" "brewmaster_cinder_brew"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_total_ignite_damage}% Cinder Brew Damage/Duration  (special_bonus_unique_brewmaster_5) ----
 	// icon: special_bonus_unique_brewmaster_5
-	"special_bonus_unique_brewmaster_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"		"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Brewlings Gain Drunken Brawler Passive  (special_bonus_unique_brewmaster_6) ----
 	// icon: special_bonus_unique_brewmaster_6
-	"special_bonus_unique_brewmaster_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "0"
-				"ad_linked_abilities" "brewmaster_primal_split && brewmaster_drunken_brawler"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_radius} Thunder Clap AoE  (special_bonus_unique_brewmaster_7) ----
 	// icon: special_bonus_unique_brewmaster_7
-	"special_bonus_unique_brewmaster_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_active_multiplier}x Brewed Up multiplier for Drunken Brawler  (special_bonus_unique_brewmaster_8) ----
 	// icon: special_bonus_unique_brewmaster_8
-	"special_bonus_unique_brewmaster_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 }

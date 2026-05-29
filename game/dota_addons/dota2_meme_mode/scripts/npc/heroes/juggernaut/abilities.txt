@@ -366,109 +366,35 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_healing_ward_bonus_health} Healing Ward Hits to Kill  (special_bonus_unique_juggernaut_2) ----
 	// icon: special_bonus_unique_juggernaut_2
-	"special_bonus_unique_juggernaut_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_healing_ward_aura_radius} Healing Ward Radius  (special_bonus_unique_juggernaut_3) ----
 	// icon: special_bonus_unique_juggernaut_3
-	"special_bonus_unique_juggernaut_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_blade_dance_crit_mult}% Blade Dance Crit Damage  (special_bonus_unique_juggernaut_4) ----
 	// icon: special_bonus_unique_juggernaut_4
-	"special_bonus_unique_juggernaut_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Healing Ward Cooldown  (special_bonus_unique_juggernaut_5) ----
 	// icon: special_bonus_unique_juggernaut_5
-	"special_bonus_unique_juggernaut_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "20"
-				"ad_linked_abilities" "juggernaut_healing_ward"
-			}
-		}
-	}
 
 	// ---- +{s:bonus_blade_dance_lifesteal}% Blade Dance Lifesteal  (special_bonus_unique_juggernaut_blade_dance_lifesteal) ----
 	// icon: special_bonus_unique_juggernaut_blade_dance_lifesteal
-	"special_bonus_unique_juggernaut_blade_dance_lifesteal"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-		"ad_linked_abilities"			"juggernaut_blade_dance"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		
-	}
 
 	// ---- +{s:bonus_duration}s Omnislash Duration  (special_bonus_unique_juggernaut_omnislash_duration) ----
 	// icon: special_bonus_unique_juggernaut_omnislash_duration
-	"special_bonus_unique_juggernaut_omnislash_duration"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"		
-	}
 
 
 	// ---- -{s:bonus_AbilityCooldown}s Blade Fury Cooldown  (special_bonus_unique_juggernaut_blade_fury_cooldown) ----
 	// icon: special_bonus_unique_juggernaut_blade_fury_cooldown
-	"special_bonus_unique_juggernaut_blade_fury_cooldown"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	// ---- +{s:bonus_bonus_movespeed} Movement Speed During Blade Fury  (special_bonus_unique_juggernaut_blade_fury_movespeed) ----
 	// icon: special_bonus_unique_juggernaut_blade_fury_movespeed
-	"special_bonus_unique_juggernaut_blade_fury_movespeed"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	
 }

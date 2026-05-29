@@ -323,21 +323,6 @@
 	//=================================================================================================================
 	// ---- -{s:value}s Ancient Seal Cooldown  (special_bonus_unique_skywrath) ----
 	// icon: special_bonus_unique_skywrath
-	"special_bonus_unique_skywrath"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "7"
-				"ad_linked_abilities" "skywrath_mage_ancient_seal"
-			}
-		}
-	}
 
 	
 	//=================================================================================================================
@@ -345,97 +330,35 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_int_multiplier}x Arcane Bolt Int Multiplier  (special_bonus_unique_skywrath_2) ----
 	// icon: special_bonus_unique_skywrath_2
-	"special_bonus_unique_skywrath_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_resist_debuff}% Ancient Seal Increased Magic Damage  (special_bonus_unique_skywrath_3) ----
 	// icon: special_bonus_unique_skywrath_3
-	"special_bonus_unique_skywrath_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Global Concussive Shot  (special_bonus_unique_skywrath_4) ----
 	// icon: special_bonus_unique_skywrath_4
-	"special_bonus_unique_skywrath_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "0"
-				"ad_linked_abilities" "skywrath_mage_concussive_shot"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage} Mystic Flare Damage  (special_bonus_unique_skywrath_5) ----
 	// icon: special_bonus_unique_skywrath_5
-	"special_bonus_unique_skywrath_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Arcane Bolt Pierces Spell Immunity  (special_bonus_unique_skywrath_6) ----
 	// icon: special_bonus_unique_skywrath_6
-	"special_bonus_unique_skywrath_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "1"
-				"ad_linked_abilities" "skywrath_mage_arcane_bolt"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_spell_lifesteal}% Ruin and Restoration Spell Lifesteal  (special_bonus_unique_skywrath_arcane_bolt_lifesteal) ----
 	// icon: special_bonus_unique_skywrath_arcane_bolt_lifesteal
-	"special_bonus_unique_skywrath_arcane_bolt_lifesteal"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 
 }

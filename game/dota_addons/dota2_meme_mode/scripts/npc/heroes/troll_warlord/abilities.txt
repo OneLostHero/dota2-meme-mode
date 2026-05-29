@@ -508,115 +508,44 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_armor} Berserker's Rage Armor  (special_bonus_unique_troll_warlord) ----
 	// icon: special_bonus_unique_troll_warlord
-	"special_bonus_unique_troll_warlord"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"							"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_move_speed} Berserker's Rage Movement Speed  (special_bonus_unique_troll_warlord_2) ----
 	// icon: special_bonus_unique_troll_warlord_2
-	"special_bonus_unique_troll_warlord_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"							"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_axe_damage} Whirling Axes Damage  (special_bonus_unique_troll_warlord_3) ----
 	// icon: special_bonus_unique_troll_warlord_3
-	"special_bonus_unique_troll_warlord_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"							"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Battle Trance Strong Dispels  (special_bonus_unique_troll_warlord_4) ----
 	// icon: special_bonus_unique_troll_warlord_4
-	"special_bonus_unique_troll_warlord_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "0"
-				"ad_linked_abilities" "troll_warlord_battle_trance"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_attack_speed} Fervor Attack Speed  (special_bonus_unique_troll_warlord_5) ----
 	// icon: special_bonus_unique_troll_warlord_5
-	"special_bonus_unique_troll_warlord_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Whirling Axes Pierce Magic Immunity  (special_bonus_unique_troll_warlord_6) ----
 	// icon: special_bonus_unique_troll_warlord_6
-	"special_bonus_unique_troll_warlord_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"							"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_axe_slow_duration}s Whirling Axes Debuff Duration  (special_bonus_unique_troll_warlord_whirling_axes_debuff_duration) ----
 	// icon: special_bonus_unique_troll_warlord_whirling_axes_debuff_duration
-	"special_bonus_unique_troll_warlord_whirling_axes_debuff_duration"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"							"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_slow_resistance}% Battle Trance Slow Resistance  (special_bonus_unique_troll_warlord_battle_trance_movespeed) ----
 	// icon: special_bonus_unique_troll_warlord_battle_trance_movespeed
-	"special_bonus_unique_troll_warlord_battle_trance_movespeed"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"							"special_bonus_base"
-	}
 }

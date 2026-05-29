@@ -371,133 +371,46 @@
 	//=================================================================================================================
 	// ---- Focus Fire Kills Advance Cooldown by {s:bonus_cooldown_reduction_per_kill}s  (special_bonus_unique_windranger_2) ----
 	// icon: special_bonus_unique_windranger_2
-	"special_bonus_unique_windranger_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "18"
-				"ad_linked_abilities" "windrunner_focusfire"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_damage_reduction}% Powershot Reduction  (special_bonus_unique_windranger_3) ----
 	// icon: special_bonus_unique_windranger_3
-	"special_bonus_unique_windranger_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"windrunner_powershot"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Windrun Cooldown  (special_bonus_unique_windranger_4) ----
 	// icon: special_bonus_unique_windranger_4
-	"special_bonus_unique_windranger_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"windrunner_windrun"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "2.5"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_stun_duration}s Shackleshot Duration  (special_bonus_unique_windranger_6) ----
 	// icon: special_bonus_unique_windranger_6
-	"special_bonus_unique_windranger_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" "special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_focusfire_damage_reduction}% Focus Fire Damage Reduction  (special_bonus_unique_windranger_8) ----
 	// icon: special_bonus_unique_windranger_8
-	"special_bonus_unique_windranger_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:value}s Shackleshot Cooldown  (special_bonus_unique_windranger_9) ----
 	// icon: special_bonus_unique_windranger_9
-	"special_bonus_unique_windranger_9"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "2"
-				"ad_linked_abilities" "windrunner_shackleshot"
-			}
-		}
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Windrun Cannot Be Dispelled  (special_bonus_unique_windranger_windrun_undispellable) ----
 	// icon: special_bonus_unique_windranger_windrun_undispellable
-	"special_bonus_unique_windranger_windrun_undispellable"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 		//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_slow}% Powershot Slow  (special_bonus_unique_windranger_powershot_slow) ----
 	// icon: special_bonus_unique_windranger_powershot_slow
-	"special_bonus_unique_windranger_powershot_slow"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 
 	//=================================================================================================================

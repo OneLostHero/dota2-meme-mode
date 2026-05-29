@@ -585,124 +585,46 @@
 	//=================================================================================================================
 	// ---- Frost Shield Provides +{s:bonus_health_regen} HP Regen  (special_bonus_unique_lich_1) ----
 	// icon: special_bonus_unique_lich_1
-	"special_bonus_unique_lich_1"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"lich_frost_shield"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_AbilityChannelTime}s Sinister Gaze Duration  (special_bonus_unique_lich_2) ----
 	// icon: special_bonus_unique_lich_2
-	"special_bonus_unique_lich_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "0.4"
-				"ad_linked_abilities" "lich_sinister_gaze"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Frost Blast Cooldown  (special_bonus_unique_lich_3) ----
 	// icon: special_bonus_unique_lich_3
-	"special_bonus_unique_lich_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"lich_frost_nova"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_duration}s Frost Shield Duration  (special_bonus_unique_lich_4) ----
 	// icon: special_bonus_unique_lich_4
-	"special_bonus_unique_lich_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"lich_frost_shield"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Chain Frost Unlimited Bounces  (special_bonus_unique_lich_5) ----
 	// icon: special_bonus_unique_lich_5
-	"special_bonus_unique_lich_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "1"
-				"ad_linked_abilities" "lich_chain_frost"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_radius} Frost Blast Radius and Damage  (special_bonus_unique_lich_6) ----
 	// icon: special_bonus_unique_lich_6
-	"special_bonus_unique_lich_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"lich_frost_nova"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Chain Frost on Death  (special_bonus_unique_lich_7) ----
 	// icon: special_bonus_unique_lich_7
-	"special_bonus_unique_lich_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"lich_chain_frost"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage_reduction}% Frost Shield Damage Reduction  (special_bonus_unique_lich_8) ----
 	// icon: special_bonus_unique_lich_8
-	"special_bonus_unique_lich_8"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"	
-		"ad_linked_abilities"			"lich_frost_shield"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 }

@@ -1555,106 +1555,41 @@
 	//=================================================================================================================
 	// ---- Radial Deafening Blast  (special_bonus_unique_invoker_2) ----
 	// icon: special_bonus_unique_invoker_2
-	"special_bonus_unique_invoker_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Tornado Cooldown  (special_bonus_unique_invoker_3) ----
 	// icon: special_bonus_unique_invoker_3
-	"special_bonus_unique_invoker_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"invoker_tornado_ad"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_bonus_attack_speed} Alacrity Damage/Speed  (special_bonus_unique_invoker_5) ----
 	// icon: special_bonus_unique_invoker_5
-	"special_bonus_unique_invoker_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"invoker_alacrity_ad"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Cold Snap Cooldown  (special_bonus_unique_invoker_9) ----
 	// icon: special_bonus_unique_invoker_9
-	"special_bonus_unique_invoker_9"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"invoker_cold_snap_ad"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_spirit_attack_speed} Forged Spirit Attack Speed  (special_bonus_unique_invoker_11) ----
 	// icon: special_bonus_unique_invoker_11
-	"special_bonus_unique_invoker_11"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"invoker_forge_spirit_ad"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- special_bonus_unique_invoker_13  (special_bonus_unique_invoker_13) ----
-	"special_bonus_unique_invoker_13"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	}
 
 	//=================================================================================================================
 	// Talent: INVOKER Ice Wall DPS
 	//=================================================================================================================
-  	"special_bonus_unique_invoker_ice_wall_dps"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"invoker_ice_wall_ad"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Talent: INVOKER Additional Chaos Meteors
 	//=================================================================================================================
-  	"special_bonus_unique_invoker_additional_chaos_meteors"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"invoker_chaos_meteor_ad"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		"BaseClass"						"special_bonus_base"
-	}
 }

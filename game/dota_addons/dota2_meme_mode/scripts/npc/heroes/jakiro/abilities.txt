@@ -387,103 +387,41 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_stun_duration}s Ice Path Duration  (special_bonus_unique_jakiro) ----
 	// icon: special_bonus_unique_jakiro
-	"special_bonus_unique_jakiro"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_AbilityCastRange}% Dual Breath Damage and Range  (special_bonus_unique_jakiro_2) ----
 	// icon: special_bonus_unique_jakiro_2
-	"special_bonus_unique_jakiro_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- Obtains Liquid Frost  (special_bonus_unique_jakiro_3) ----
 	// icon: special_bonus_unique_jakiro_3
-	"special_bonus_unique_jakiro_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_slow_attack_speed_pct} Liquid Fire Attack Speed Slow  (special_bonus_unique_jakiro_4) ----
 	// icon: special_bonus_unique_jakiro_4
-	"special_bonus_unique_jakiro_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_AbilityCooldown}s Ice Path Cooldown  (special_bonus_unique_jakiro_6) ----
 	// icon: special_bonus_unique_jakiro_6
-	"special_bonus_unique_jakiro_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityValues"
-		{
-			"value"	// check tooltip
-			{
-				"value" "2.5"
-				"ad_linked_abilities" "jakiro_ice_path"
-			}
-		}
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_damage} Macropyre Damage  (special_bonus_unique_jakiro_7) ----
 	// icon: special_bonus_unique_jakiro_7
-	"special_bonus_unique_jakiro_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- -{s:bonus_slow_movement_speed_pct}%/{s:bonus_slow_attack_speed_pct} Dual Breath Movement/Attack Speed Slow  (special_bonus_unique_jakiro_dualbreath_slow) ----
 	// icon: special_bonus_unique_jakiro_dualbreath_slow
-	"special_bonus_unique_jakiro_dualbreath_slow"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Double Attack

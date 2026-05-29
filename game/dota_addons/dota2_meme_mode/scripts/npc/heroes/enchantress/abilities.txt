@@ -361,98 +361,39 @@
 	//=================================================================================================================
 	// ---- +{s:bonus_wisp_count} Nature's Attendants Wisps  (special_bonus_unique_enchantress_2) ----
 	// icon: special_bonus_unique_enchantress_2
-	"special_bonus_unique_enchantress_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_slow_attack_speed} Untouchable Attack Slow  (special_bonus_unique_enchantress_3) ----
 	// icon: special_bonus_unique_enchantress_3
-	"special_bonus_unique_enchantress_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_distance_damage_pct}% Impetus Damage  (special_bonus_unique_enchantress_4) ----
 	// icon: special_bonus_unique_enchantress_4
-	"special_bonus_unique_enchantress_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"enchantress_impetus"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		
-		
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_heal} Nature's Attendants Heal  (special_bonus_unique_enchantress_5) ----
 	// icon: special_bonus_unique_enchantress_5
-	"special_bonus_unique_enchantress_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_movespeed} Movespeed during Nature's Attendants  (special_bonus_unique_enchantress_6) ----
 	// icon: special_bonus_unique_enchantress_6
-	"special_bonus_unique_enchantress_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_enchant_health} Health / +{s:bonus_enchant_damage} Damage for Enchanted Creeps  (special_bonus_unique_enchantress_enchant_health_damage) ----
 	// icon: special_bonus_unique_enchantress_enchant_health_damage
-	"special_bonus_unique_enchantress_enchant_health_damage"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	// ---- +{s:bonus_enchant_armor} Enchanted Creep Armor  (special_bonus_unique_enchantress_enchant_armor) ----
 	// icon: special_bonus_unique_enchantress_enchant_armor
-	"special_bonus_unique_enchantress_enchant_armor"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"						"special_bonus_base"
-	}
 	
 }
