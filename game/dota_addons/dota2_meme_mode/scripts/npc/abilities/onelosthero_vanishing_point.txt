@@ -32,13 +32,14 @@
 			"base_damage"					"180 280 380"
 			"max_charge_bonus_pct"			"50"
 			"fear_duration"					"1.1 1.4 1.7"
+			"fear_slow_pct"					"-30"	// feared enemies also flee slowed
 			"echo_burst_damage_pct"			"35"
 			"warning_radius"				"275"
 			"warning_delay"					"1.0"
 			"swap_allowed"					"1"
 
 			"scepter_extra_echoes"			"10"
-			"scepter_echo_spread_distance"	"500"
+			"scepter_echo_attack_damage"	"60"	// echoes run to the radius edge and attack with this while charging
 			"scepter_echo_burst_damage_pct"	"45"
 			"scepter_echo_fear_pct"			"60"
 		}

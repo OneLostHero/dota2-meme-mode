@@ -42,18 +42,37 @@ function onelosthero_vanishing_point:OnSpellStart()
 	caster:AddNewModifier(caster, self, "modifier_onelosthero_vanishing_point_charge", { duration = chargeDuration })
 	caster:EmitSound("Hero_Nightstalker.Darkness")
 
-	-- Scepter: extra invisible Echoes spread outward during the charge
+	-- Scepter: extra Echoes spawn ON the hero, then run outward to the edge of the release
+	-- radius (evenly fanned around the circle), auto-attacking along the way. They detonate
+	-- their own burst at their current spot on release.
 	if Echo:HasScepter(caster) then
-		local count   = self:GetSpecialValueFor("scepter_extra_echoes")
-		local spread  = self:GetSpecialValueFor("scepter_echo_spread_distance")
+		local count  = self:GetSpecialValueFor("scepter_extra_echoes")
+		local edge   = self:GetSpecialValueFor("release_radius")
+		local atkDmg = self:GetSpecialValueFor("scepter_echo_attack_damage")
+		local origin = caster:GetAbsOrigin()
 		for i = 1, count do
 			local angle = (i / count) * 2 * math.pi
-			local offset = Vector(math.cos(angle), math.sin(angle), 0) * spread
-			local pos = caster:GetAbsOrigin() + offset
-			local echo = Echo:Create(caster, self, pos, {
-				duration = chargeDuration + 0.5, killable = false, canSwap = false, source = "vanishing_point_scepter",
+			local dir = Vector(math.cos(angle), math.sin(angle), 0)
+			local dest = origin + dir * edge
+			local echo = Echo:Create(caster, self, origin, {
+				duration = chargeDuration + 0.5, killable = false, canSwap = false,
+				can_attack = true, attack_damage = atkDmg, drive_forward = true,
+				move_dest = dest, movespeed = 400, source = "vanishing_point_scepter",
 			})
-			if echo then table.insert(self._scepterEchoes, echo) end
+			if echo then
+				echo:SetForwardVector(dir)
+				-- kick off the run immediately; the echo modifier re-issues thereafter
+				Timers:CreateTimer(0.03, function()
+					if Echo:IsValid(echo) then
+						ExecuteOrderFromTable({
+							UnitIndex = echo:entindex(),
+							OrderType = DOTA_UNIT_ORDER_ATTACK_MOVE,
+							Position = dest, Queue = false,
+						})
+					end
+				end)
+				table.insert(self._scepterEchoes, echo)
+			end
 		end
 	end
 
@@ -210,6 +229,13 @@ function modifier_onelosthero_vanishing_point_fear:OnCreated(params)
 end
 function modifier_onelosthero_vanishing_point_fear:CheckState()
 	return { [MODIFIER_STATE_FEARED] = true }
+end
+-- Feared enemies also flee slowed.
+function modifier_onelosthero_vanishing_point_fear:DeclareFunctions()
+	return { MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE }
+end
+function modifier_onelosthero_vanishing_point_fear:GetModifierMoveSpeedBonus_Percentage()
+	return self:GetAbility():GetSpecialValueFor("fear_slow_pct")
 end
 function modifier_onelosthero_vanishing_point_fear:GetEffectName()
 	return "particles/units/heroes/hero_spectre/spectre_desolate.vpcf"

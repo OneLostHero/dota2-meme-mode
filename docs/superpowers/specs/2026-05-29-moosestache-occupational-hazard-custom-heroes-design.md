@@ -36,25 +36,25 @@ attack damage, lock the teamfight in a time bubble, and crit with stolen power.
 | Slot | Ability | Source | Internal name (verify) | Type |
 |---|---|---|---|---|
 | Q (Ability1) | Charge of Darkness | Spirit Breaker | `spirit_breaker_charge_of_darkness` | active, global wind-up charge |
-| W (Ability2) | Static Link | Razor | `razor_link` | active, tether steals attack damage |
+| W (Ability2) | Static Link | Razor | `razor_static_link` | active, tether steals attack damage |
 | E (Ability3) | Jinada | Bounty Hunter | `bounty_hunter_jinada` | passive, bonus-damage strike on cd |
 | Ability4/5 | `generic_hidden` | — | — | — |
 | R (Ability6) | Chronosphere | Faceless Void | `faceless_void_chronosphere` | ultimate |
 | Innate (Ability7) | Distortion Field | Faceless Void | `faceless_void_distortion_field` | passive projectile-slow aura |
 
-### Talent tree (balanced-hybrid, drawn from SB / Razor / BH / FV)
+### Talent tree (real stock tokens — verified functional, pre-balanced)
 
-| Lvl | Left | Right |
+A borrowed talent only does something if the held ability's KV references that token, so
+the tree uses **real source-hero tokens that hook a held ability**, plus generic stat
+tokens. (Chronosphere has **no** talent hooks in this build, so the ult carries itself and
+talents focus on the basics.) Stock tokens also bring their own localization for free.
+
+| Lvl | Left (token) | Right (token) |
 |---|---|---|
-| 10 | +25 Movement Speed | +40 Jinada bonus damage |
-| 15 | −4s Charge of Darkness cooldown | +25% Static Link damage steal |
-| 20 | +1.5s Chronosphere duration | Jinada: no cooldown (procs every attack) |
-| 25 | +1 Static Link target | Charge of Darkness: +100 impact damage & +0.6s stun |
-
-Where a stock talent token from the source hero matches (e.g. an existing
-`special_bonus_unique_bounty_hunter_*` for Jinada no-cooldown, an FV Chronosphere-duration
-token), reuse it. Otherwise use a generic `special_bonus_*` token with matching values.
-Final token IDs resolved at planning against the live files.
+| 10 | Jinada — `special_bonus_unique_bounty_hunter` | +Move Speed — `special_bonus_movement_speed_30` |
+| 15 | Static Link AS — `special_bonus_unique_razor_static_link_aspd` | Charge of Darkness — `special_bonus_unique_spirit_breaker_4` |
+| 20 | Jinada — `special_bonus_unique_bounty_hunter_4` | +Attack Damage — `special_bonus_attack_damage_40` |
+| 25 | Jinada no cooldown — `special_bonus_unique_bounty_hunter_jinada_no_cooldown` | Static Link — `special_bonus_unique_razor` |
 
 ### Aghanim's — Scepter on the ultimate (Chronosphere)
 
@@ -100,14 +100,17 @@ raise skeletons, siphon their life, and finger the survivor.
 > skeletons spawn, are uncontrollable-but-aggressive, expire/respawn correctly, and don't
 > error from missing WK modifiers. If it misbehaves, fall back to a cleaner summon source.
 
-### Talent tree (balanced-hybrid, drawn from Necro / Lion / DP / WK)
+### Talent tree (real stock tokens — verified functional, pre-balanced)
 
-| Lvl | Left | Right |
+Bone Guard has **no** talent hooks in this build, so talents focus on Heart Stopper,
+Spirit Siphon, the Storm Surge innate, and Finger of Death, plus a stat.
+
+| Lvl | Left (token) | Right (token) |
 |---|---|---|
-| 10 | +1.5% max-HP/s Heart Stopper Aura | +1 Spirit Siphon charge |
-| 15 | +250 Heart Stopper Aura radius | +2 Bone Guard skeletons |
-| 20 | +2s Spirit Siphon duration & +40 dps | −20 Bone Guard charges required |
-| 25 | +100 Finger of Death damage per kill | Spirit Siphon also heals you for amount drained |
+| 10 | Heart Stopper — `special_bonus_unique_necrophos_2` | Spirit Siphon — `special_bonus_unique_death_prophet_5` |
+| 15 | Heart Stopper — `special_bonus_unique_necrophos_5` | Spirit Siphon — `special_bonus_unique_death_prophet_3` |
+| 20 | Storm Surge (innate) — `special_bonus_unique_razor_storm_surge_damage_and_slow` | +Health — `special_bonus_health_250` |
+| 25 | Finger of Death — `special_bonus_unique_lion_8` | +Magic Resist — `special_bonus_magic_resistance_10` |
 
 ### Aghanim's — Scepter on the ultimate (Finger of Death)
 
@@ -142,25 +145,35 @@ stacking quills behind a meat shield, and steal their best spell.
 |---|---|---|---|---|
 | Q (Ability1) | Toss | Tiny | `tiny_toss` | active, grab + throw a unit |
 | W (Ability2) | Quill Spray | Bristleback | `bristleback_quill_spray` | active, stacking nuke |
-| E (Ability3) | Meat Shield | Pudge | `pudge_meat_shield` | active, self damage-block (8/14/20/26, 4–7s) |
+| E (Ability3) | Meat Shield | Pudge | `pudge_flesh_heap` | active, self damage-block (8/14/20/26, 5–8s) |
 | Ability4/5 | `generic_hidden` | — | — | — |
 | R (Ability6) | Spell Steal | Rubick | `rubick_spell_steal` | ultimate |
-| Innate (Ability7) | Flesh Heap | Pudge | `pudge_flesh_heap` | passive, +STR on nearby hero kills/deaths (450 radius) |
+| Innate (Ability7) | Flesh Heap | Pudge | `pudge_innate_graft_flesh` | passive, +STR on nearby hero kills/deaths |
 
+> **Name mapping (verified against the on-disk stock dump):** in this build the
+> damage-block "Meat Shield" active is internally `pudge_flesh_heap`
+> (`damage_block` 8/14/20/26, duration 5–8s, cd 20–17s), and the strength-on-kills
+> "Flesh Heap" innate is internally `pudge_innate_graft_flesh`. (Valve's display vs.
+> internal names are swapped from intuition.)
+>
 > **Notes for verification:** Toss grabs the nearest unit around the caster and throws it —
 > confirm it works without Tiny's other abilities. Quill Spray's stacking `quill_stack`
-> debuff should carry over fine. Flesh Heap as a borrowed innate normally levels with
-> Dismember; as a standalone innate on Mr. BadHabits, set a fixed level / per-level value
-> so it grants STR correctly without Dismember present.
+> debuff should carry over fine. `pudge_innate_graft_flesh` has
+> `DependentOnAbility pudge_dismember`, which this hero lacks, so the innate will sit at
+> base level (acceptable: it still grants STR, just at the lowest tier — do **not** override
+> the stock ability to re-level it, as that would mutate Pudge in meme mode).
 
-### Talent tree (balanced-hybrid, drawn from Tiny / Bristleback / Pudge / Rubick — kept fair)
+### Talent tree (real stock tokens — verified functional, pre-balanced)
 
-| Lvl | Left | Right |
+Spell Steal has **no** generic talent hook in this build (only a removed-facet token), so
+talents focus on Quill Spray, Toss, Meat Shield, plus tanky stats fitting Treant.
+
+| Lvl | Left (token) | Right (token) |
 |---|---|---|
-| 10 | +20 Quill Spray damage | +200 Health |
-| 15 | −2s Toss cooldown | +6 Quill Spray max stacks |
-| 20 | +15 Meat Shield damage block | +100 Toss damage |
-| 25 | +18 Quill Spray damage per stack | +25s stolen-spell duration |
+| 10 | Quill Spray — `special_bonus_unique_bristleback_2` | +Health — `special_bonus_health_250` |
+| 15 | Toss — `special_bonus_unique_tiny_2` | Meat Shield block ×1.5 — `special_bonus_unique_pudge_1` |
+| 20 | Toss — `special_bonus_unique_tiny_5` | +Strength — `special_bonus_strength_12` |
+| 25 | +Status Resist — `special_bonus_status_resistance_10` | +Attack Damage — `special_bonus_attack_damage_60` |
 
 ### Aghanim's — Scepter on the ultimate (Spell Steal)
 
@@ -213,9 +226,18 @@ For **each** hero:
   particular Flesh Heap normally levels with Dismember, so pin a fixed level/value.
 - Bone Guard skeleton behavior on a non-WK carrier (summon/expire/aggro, no missing-modifier errors).
 - Toss behavior on a non-Tiny carrier (grabs + throws nearest unit correctly).
-- Which stock `special_bonus_*` talent tokens exist for the intended effects vs. needing a
-  generic token + localized value.
-- Minimum-viable Lua surface for the two non-native Aghs effects (keep it tiny).
+- Talent tokens are now locked to real stock tokens (verified each is referenced by a held
+  ability's KV). Confirm in-client that each still resolves a value + tooltip; swap any
+  generic stat token whose exact name differs in-build for the nearest existing one.
+- **Aghs facet caveat:** some ult Scepter upgrades migrated to facets, which are removed in
+  this mode. Verify in-client that **Finger of Death** and **Spell Steal** actually upgrade
+  when the hero holds a Scepter (Spell Steal's is code-driven via `HasScepter`, so it should
+  fire; Finger of Death references both `special_bonus_scepter` and a
+  `facet_lion_fist_of_death` token — confirm the scepter path, not the facet path, triggers).
+  If an ult's Scepter is facet-gated and dead, fall back to the sanctioned tiny-Lua numeric
+  Scepter for that ult.
+- Minimum-viable Lua surface for the non-native Aghs effects (Chronosphere allies-act,
+  Meat Shield reflect, Spirit Siphon self-heal — keep each tiny).
 
 ## Gotchas (from the guide — apply to both)
 
