@@ -100,7 +100,7 @@ function CreateToggleButton() {
     panel.SetPanelEvent(
         "onmouseover", 
         function(){
-            $.DispatchEvent("DOTAShowTextTooltip", panel, "Hackerman");
+            $.DispatchEvent("DOTAShowTextTooltip", panel, "Add Units");
         }
         )
     panel.SetPanelEvent(

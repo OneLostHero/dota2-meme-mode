@@ -1,49 +1,6 @@
 // Dota Heroes File
-// Custom heroes for Dota 2 - Meme Mode.
-//
-// A NEW selectable hero is added (not replacing any existing hero) by:
-//   - giving it a unique KV block keyed by its npc name,
-//   - "override_hero" pointing at an existing hero used as a TEMPLATE
-//     (model / voice / animations / base stats are inherited),
-//   - a "HeroID" reusing an UNUSED gap in Valve's hero-id range (you cannot
-//     mint brand-new ids; gaps below the current frontier are safest),
-//   - "AttributePrimary" MUST be set: the hero-pool Lua does
-//     _G[AttributePrimary] + 1 for every hero, so a missing value crashes the
-//     pool build and wipes the mode-selection UI.
-//   - "Enabled" "1" so it flows into the pick pool.
-// Caveat (per community): if Valve ever reuses gap id 24, this would collide.
+// NOTE: This is not for creating new heroes, this is for taking a currently existing hero as a template and overriding
+// the specified key-value combinations.  Use override_hero <hero_to_override> for this.
 "DOTAHeroes"
 {
-	//============================================================
-	//  Flasaro  (new hero; clones Dragon Knight as a template)
-	//  Kit: AM Blink (Q), Riki Blink Strike (W), Sven Cleave (E),
-	//       Sven God's Strength (R). Sven talent tree (placeholder).
-	//  Portrait/minimap icon need Panorama work (deferred polish).
-	//============================================================
-	"npc_dota_hero_flasaro"
-	{
-		"override_hero"			"npc_dota_hero_dragon_knight"	// template: model + voice + anims + base stats
-		"HeroID"				"24"							// unused gap id (below the 138 frontier)
-		"Enabled"				"1"								// appears in the pick pool
-		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"		// REQUIRED — its absence crashes the pool Lua
-		"Team"					"Good"
-
-		//---- Abilities ----
-		"Ability1"				"antimage_blink"				// Q — Anti-Mage Blink
-		"Ability2"				"riki_blink_strike"				// W — Riki Blink Strike
-		"Ability3"				"sven_great_cleave"				// E — Sven Great Cleave
-		"Ability4"				"generic_hidden"
-		"Ability5"				"generic_hidden"
-		"Ability6"				"sven_gods_strength"			// R — Sven God's Strength (ult)
-
-		//---- Talents (Sven's tree — placeholder "for the time being") ----
-		"Ability10"				"special_bonus_unique_sven_5"
-		"Ability11"				"special_bonus_attack_speed_15"
-		"Ability12"				"special_bonus_unique_sven_3"
-		"Ability13"				"special_bonus_unique_sven_8"
-		"Ability14"				"special_bonus_unique_sven_6"
-		"Ability15"				"special_bonus_unique_sven_7"
-		"Ability16"				"special_bonus_unique_sven_2"
-		"Ability17"				"special_bonus_unique_sven_4"
-	}
 }

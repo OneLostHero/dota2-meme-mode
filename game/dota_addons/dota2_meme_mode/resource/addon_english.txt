@@ -2,11 +2,8 @@
 {
 	"Language"		"English"
 	"Tokens"
-	{
+	{		
 		"addon_game_name"			"Dota 2 - Meme Mode"
-
-		// ---- Custom heroes ----
-		"npc_dota_hero_flasaro"				"Flasaro"
 
 		"DOTA_TEAM_ALL"														"All"
 		"DOTA_TEAM_CUSTOM_1"												"The Chaos"
@@ -39,10 +36,7 @@
 		"DOTA_Tooltip_Ability_special_bonus_generic_talent_Description"		"You are pretty untalented."
 
 		"ReadyButton" "Start Game"
-		"PluginListUnlockButtonText" "Vote to Unlock Settings"
-		"PluginUnlockExplain" "This game mode has locked the sandbox settings. Players can vote to unlock them and make changes."
-		"PluginUnlockTally" "Votes: {votes} / {needed} needed"
-		"PluginSettingsDescriptionDefault" "Select a plugin or mutator on the left to see what it does."
+		"PluginListUnlockButtonText" "Vote to unlock options"
 		//Dota Plugin
 		"Plugin_dota_settings" "Dota"
 		"Plugin_dota_settings_Description" "Basic Dota 2 settings."
