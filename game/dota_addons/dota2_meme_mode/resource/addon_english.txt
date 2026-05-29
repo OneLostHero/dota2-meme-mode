@@ -7,6 +7,11 @@
 
 		// Custom hero
 		"npc_dota_hero_flasaro"				"Flasaro"
+		"npc_dota_hero_flasaro_bio"			"Forged in dragon's blood, Flasaro blinks across the battlefield to cleave down his foes."
+		"npc_dota_hero_flasaro_npedesc1"	"A Dragon Knight look-alike who borrows blink, blink strike, cleave and god's strength."
+		"npc_dota_hero_flasaro_npedesc2"	"Pick him to strike from nowhere and carve through the enemy team."
+		"npc_dota_hero_flasaro_hype"		"Blink in. Cleave everything."
+		"DOTA_Tooltip_Ability_flasaro_dragonblood"		"Dragon Blood"
 
 		"DOTA_TEAM_ALL"														"All"
 		"DOTA_TEAM_CUSTOM_1"												"The Chaos"

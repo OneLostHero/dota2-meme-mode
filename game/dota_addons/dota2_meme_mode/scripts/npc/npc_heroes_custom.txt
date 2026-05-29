@@ -48,6 +48,18 @@
 		"Ability16"				"special_bonus_unique_sven_2"
 		"Ability17"				"special_bonus_unique_sven_4"
 
+		// Facets — REQUIRED in modern Dota (7.36+). Without at least one facet the
+		// hero gets a null facet and FAILS TO SPAWN even though it is pickable.
+		"Facets"
+		{
+			"flasaro_dragonblood"
+			{
+				"Icon"			"strength"
+				"Color"			"Red"
+				"GradientID"	"1"
+			}
+		}
+
 		// Attributes (copied from Dragon Knight)
 		"AttributeBaseStrength"			"21"
 		"AttributeStrengthGain"			"3.600000"

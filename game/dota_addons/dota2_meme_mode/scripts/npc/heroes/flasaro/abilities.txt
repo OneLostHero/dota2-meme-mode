@@ -1,0 +1,21 @@
+// Flasaro — custom hero (Dragon Knight look-alike). HeroID 24.
+//
+// Flasaro's kit is assembled from existing heroes' abilities, so his in-game
+// balance follows the BOOSTED versions of those abilities. To see/tune the
+// actual numbers, edit the source hero's boosted file noted on each line:
+//
+//   Q  antimage_blink        -> heroes/antimage/abilities.txt
+//   W  riki_blink_strike     -> heroes/riki/abilities.txt
+//   E  sven_great_cleave     -> heroes/sven/abilities.txt
+//   R  sven_gods_strength    -> heroes/sven/abilities.txt   (ultimate)
+//
+// Talents: Sven's talent tree (placeholder) — see heroes/sven/abilities.txt.
+//
+// This file exists for organization/readability (one folder per hero). Flasaro
+// reuses the shared ability definitions above rather than redefining them, so
+// there are no Flasaro-specific overrides yet. Add a "DOTAAbilities" block below
+// only if you want Flasaro's copies to diverge from the source heroes.
+"DOTAAbilities"
+{
+	"Version"		"1"
+}
