@@ -1,0 +1,50 @@
+// OneLostHero — custom talents (special_bonus abilities).
+// The bonus AMOUNTS live in each affected ability's AbilityValues value-block
+// (e.g. "+0.5", "+80"); these are just the talent flags/holders. The lvl10-left
+// talent (+15 Attack Speed) reuses the vanilla special_bonus_attack_speed_15.
+// Behavior talents (charges, fear pierce) are read in Lua via FindAbilityByName.
+"DOTAAbilities"
+{
+	"special_bonus_onelosthero_falsehero_invis"
+	{
+		"BaseClass"		"special_bonus"
+		"AbilityType"	"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"MaxLevel"		"1"
+	}
+	"special_bonus_onelosthero_secondstroke_echo"
+	{
+		"BaseClass"		"special_bonus"
+		"AbilityType"	"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"MaxLevel"		"1"
+	}
+	"special_bonus_onelosthero_falsehero_explosion"
+	{
+		"BaseClass"		"special_bonus"
+		"AbilityType"	"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"MaxLevel"		"1"
+	}
+	"special_bonus_onelosthero_falsehero_charges"
+	{
+		"BaseClass"		"special_bonus"
+		"AbilityType"	"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"MaxLevel"		"1"
+	}
+	"special_bonus_onelosthero_blindspot_silence"
+	{
+		"BaseClass"		"special_bonus"
+		"AbilityType"	"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"MaxLevel"		"1"
+	}
+	"special_bonus_onelosthero_vanishing_fearpierce"
+	{
+		"BaseClass"		"special_bonus"
+		"AbilityType"	"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"MaxLevel"		"1"
+	}
+	"special_bonus_onelosthero_falsehero_break"
+	{
+		"BaseClass"		"special_bonus"
+		"AbilityType"	"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"MaxLevel"		"1"
+	}
+}

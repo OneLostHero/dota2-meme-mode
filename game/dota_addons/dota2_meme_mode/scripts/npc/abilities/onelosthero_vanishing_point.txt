@@ -21,7 +21,6 @@
 		"FightRecapLevel"		"2"
 
 		"HasScepterUpgrade"		"1"
-		"HasShardUpgrade"		"1"
 
 		"AbilityValues"
 		{
@@ -35,10 +34,6 @@
 			"warning_radius"				"275"
 			"warning_delay"					"1.0"
 			"swap_allowed"					"1"
-
-			"shard_free_swap"				"1"
-			"shard_warning_suppression"		"0.75"
-			"shard_echo_detonation_pct"		"45"
 
 			"scepter_extra_echoes"			"2"
 			"scepter_echo_spread_distance"	"500"

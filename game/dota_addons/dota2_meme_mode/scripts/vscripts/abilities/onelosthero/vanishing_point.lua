@@ -104,12 +104,7 @@ function onelosthero_vanishing_point:Release()
 		end
 	end
 
-	-- Shard: abandoned Echo (consumed via free swap this cast) detonates
-	if caster:HasShard() and self._shardAbandonedPos then
-		local shardPct = self:GetSpecialValueFor("shard_echo_detonation_pct")
-		self:BurstAt(caster, self._shardAbandonedPos, finalDamage * (shardPct / 100), fearDuration, radius, shardPct)
-		self._shardAbandonedPos = nil
-	end
+	-- (Shard no longer affects Vanishing Point — it now upgrades False Hero.)
 
 	-- cleanup: expire all remaining Echoes spawned for the ult
 	for _, echo in pairs(self._scepterEchoes) do
@@ -120,24 +115,29 @@ function onelosthero_vanishing_point:Release()
 	self:StartCooldown(self:GetCooldown(self:GetLevel() - 1))
 end
 
--- Damage + fear all enemies around a point.
+-- Does the lvl25-left talent (fear pierces debuff immunity) apply?
+function onelosthero_vanishing_point:FearPiercesImmunity()
+	local t = self:GetCaster():FindAbilityByName("special_bonus_onelosthero_vanishing_fearpierce")
+	return t ~= nil and t:GetLevel() > 0
+end
+
+-- Damage + fear all enemies around a point. Fear respects debuff immunity unless the
+-- lvl25 talent is taken (then it pierces). Scepter Echo bursts inherit this via the same path.
 function onelosthero_vanishing_point:BurstAt(caster, pos, damage, fearDuration, radius, _pct)
+	local pierce = self:FearPiercesImmunity()
 	for _, enemy in pairs(Echo:FindEnemiesInRadius(caster, pos, radius)) do
 		if enemy and not enemy:IsNull() then
 			ApplyDamage({
 				victim = enemy, attacker = caster, damage = damage,
 				damage_type = DAMAGE_TYPE_MAGICAL, ability = self,
 			})
-			enemy:AddNewModifier(caster, self, "modifier_onelosthero_vanishing_point_fear", {
-				duration = fearDuration, src_x = pos.x, src_y = pos.y, src_z = pos.z,
-			})
+			if pierce or not enemy:IsMagicImmune() then
+				enemy:AddNewModifier(caster, self, "modifier_onelosthero_vanishing_point_fear", {
+					duration = fearDuration, src_x = pos.x, src_y = pos.y, src_z = pos.z,
+				})
+			end
 		end
 	end
-end
-
--- Shard free swap hook (used by the charge modifier when the hero swaps mid-ult).
-function onelosthero_vanishing_point:NotifyShardSwap(abandonedPos)
-	self._shardAbandonedPos = abandonedPos
 end
 
 --------------------------------------------------------------------------------

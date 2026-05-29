@@ -1,40 +1,65 @@
-// OneLostHero — E: False Hero
-// Sends a clone forward; recast to swap with it. If destroyed before expiry it bursts (slow + disarm).
+// OneLostHero — E: False Hero  (revised: deception identity)
+// No-target. Leaves an autonomous Echo that walks forward attacking, while the real hero
+// turns invisible. Recast to swap with the Echo (destroyed safely, no explosion). If an
+// enemy hero attacks the Echo, or it lives 10s, it detonates: magical damage + Break.
+// Shard (Unseen Exchange): after a swap, a fading Echo is left at the original spot; recast
+// again to manually detonate it (60% damage + Break). Talent at lvl20 grants a 2nd charge.
 "DOTAAbilities"
 {
 	"onelosthero_false_hero"
 	{
-		"BaseClass"				"ability_lua"
-		"ScriptFile"			"abilities/onelosthero/false_hero"
-		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL"
-		"AbilityType"			"DOTA_ABILITY_TYPE_BASIC"
-		"AbilityTextureName"	"onelosthero_false_hero"
-		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_3"
-		"AbilityCastPoint"		"0.1"
-		"AbilityCooldown"		"22 18 14 10"
-		"AbilityManaCost"		"90"
-		"AbilityCastRange"		"800"
-		"MaxLevel"				"4"
-		"SpellImmunityType"		"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"	"SPELL_DISPELLABLE_NO"
+		"BaseClass"					"ability_lua"
+		"ScriptFile"				"abilities/onelosthero/false_hero"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityType"				"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityTextureName"		"onelosthero_false_hero"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+		"AbilityCastPoint"			"0.1"
+		"AbilityManaCost"			"90 100 110 120"
+		"MaxLevel"					"4"
+		"AbilityUnitDamageType"		"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"			"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"		"SPELL_DISPELLABLE_NO"
+		"HasShardUpgrade"			"1"
+
+		// Native charges: 1 base (behaves like a cooldown), +1 from the lvl20 talent.
+		"AbilityCharges"
+		{
+			"value"											"1"
+			"special_bonus_onelosthero_falsehero_charges"	"+1"
+		}
+		"AbilityChargeRestoreTime"	"24 21 18 15"
 
 		"AbilityValues"
 		{
-			"clone_distance"			"550 650 750 850"
-			"clone_duration"			"3.0 3.5 4.0 4.5"
-			"clone_movespeed_pct"		"100"
-			"clone_incoming_damage_pct"	"250"
-			"burst_radius"				"300"
-			"burst_slow_pct"			"-25 -30 -35 -40"
-			"burst_slow_duration"		"2.0"
-			"disarm_duration"			"0.8 1.0 1.2 1.4"
-			"swap_window"				"4.5"
+			"echo_duration"			"10.0"
+			"invis_duration"
+			{
+				"value"											"3.0 3.5 4.0 4.5"
+				"special_bonus_onelosthero_falsehero_invis"		"+0.5"
+			}
+			"echo_attack_damage_pct"	"25 30 35 40"
+			"explosion_damage"
+			{
+				"value"											"80 140 200 260"
+				"special_bonus_onelosthero_falsehero_explosion"	"+80"
+			}
+			"explosion_radius"		"325 350 375 400"
+			"break_duration"
+			{
+				"value"											"2.5"
+				"special_bonus_onelosthero_falsehero_break"		"+2.0"
+			}
+			"echo_move_distance"	"1200"
+			"shard_detonation_pct"	"60"
+			"fading_echo_duration"	"3.0"
 		}
 
 		"precache"
 		{
 			"particle"		"particles/units/heroes/hero_terrorblade/terrorblade_mirror_image.vpcf"
 			"particle"		"particles/units/heroes/hero_phantom_lancer/phantom_lancer_doppelganger_aoe.vpcf"
+			"particle"		"particles/units/heroes/hero_spectre/spectre_desolate.vpcf"
 			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_terrorblade.vsndevts"
 		}
 	}

@@ -54,16 +54,18 @@
 
 		// --- False Hero (E) ---
 		"DOTA_Tooltip_ability_onelosthero_false_hero"				"False Hero"
-		"DOTA_Tooltip_ability_onelosthero_false_hero_Description"	"Sends a false version of OneLostHero forward. Recast to swap places with it. If destroyed before expiring, it bursts, slowing and disarming nearby enemies."
-		"DOTA_Tooltip_ability_onelosthero_false_hero_clone_distance"			"Clone Distance"
-		"DOTA_Tooltip_ability_onelosthero_false_hero_clone_duration"			"Clone Duration"
-		"DOTA_Tooltip_ability_onelosthero_false_hero_clone_movespeed_pct"		"Clone Move Speed"
-		"DOTA_Tooltip_ability_onelosthero_false_hero_clone_incoming_damage_pct"	"Clone Incoming Damage"
-		"DOTA_Tooltip_ability_onelosthero_false_hero_burst_radius"				"Burst Radius"
-		"DOTA_Tooltip_ability_onelosthero_false_hero_burst_slow_pct"				"Burst Slow"
-		"DOTA_Tooltip_ability_onelosthero_false_hero_burst_slow_duration"		"Slow Duration"
-		"DOTA_Tooltip_ability_onelosthero_false_hero_disarm_duration"			"Disarm Duration"
-		"DOTA_Tooltip_ability_onelosthero_false_hero_swap_window"				"Swap Window"
+		"DOTA_Tooltip_ability_onelosthero_false_hero_Description"	"OneLostHero leaves behind an Echo clone that continues moving in the direction he was facing, attacking nearby creeps and enemy heroes as though it were the real hero. At the same time, the real OneLostHero becomes invisible.\n\nRecast to swap places with the Echo, destroying it safely.\n\nIf the Echo is attacked by an enemy hero or expires after 10 seconds, it detonates, dealing magical damage and applying Break to enemies in an area."
+		"DOTA_Tooltip_ability_onelosthero_false_hero_echo_duration"			"Echo Duration"
+		"DOTA_Tooltip_ability_onelosthero_false_hero_invis_duration"			"Invisibility Duration"
+		"DOTA_Tooltip_ability_onelosthero_false_hero_echo_attack_damage_pct"	"Echo Attack Damage"
+		"DOTA_Tooltip_ability_onelosthero_false_hero_explosion_damage"			"Explosion Damage"
+		"DOTA_Tooltip_ability_onelosthero_false_hero_explosion_radius"			"Explosion Radius"
+		"DOTA_Tooltip_ability_onelosthero_false_hero_break_duration"			"Break Duration"
+		"DOTA_Tooltip_ability_onelosthero_false_hero_shard_detonation_pct"		"Shard Detonation Damage"
+		"DOTA_Tooltip_ability_onelosthero_false_hero_fading_echo_duration"		"Fading Echo Duration"
+		"DOTA_Tooltip_ability_onelosthero_false_hero_shard_description"			"Unseen Exchange: after swapping with the Echo, OneLostHero leaves a fading Echo at his original location. Recast False Hero again to manually detonate it, dealing reduced magical damage and applying Break in an area."
+		"DOTA_Tooltip_modifier_onelosthero_false_hero_invis"			"Vanished"
+		"DOTA_Tooltip_modifier_onelosthero_false_hero_break"			"Broken"
 
 		// --- Vanishing Point (R) ---
 		"DOTA_Tooltip_ability_onelosthero_vanishing_point"				"Vanishing Point"
@@ -89,6 +91,15 @@
 		// Scepter / Shard description tokens
 		"DOTA_Tooltip_ability_onelosthero_vanishing_point_scepter_description"	"Many Lost, One Returned: creates extra invisible Echoes that spread outward and release weaker fear bursts on reappearance."
 		"DOTA_Tooltip_ability_onelosthero_vanishing_point_shard_description"		"Unseen Exchange: grants one free Echo swap during Vanishing Point; the abandoned Echo detonates on release and the warning indicator is briefly suppressed."
+
+		// --- Talents ---
+		"DOTA_Tooltip_ability_special_bonus_onelosthero_falsehero_invis"		"+0.5s False Hero Invisibility"
+		"DOTA_Tooltip_ability_special_bonus_onelosthero_secondstroke_echo"	"+20% Second Stroke Echo Damage"
+		"DOTA_Tooltip_ability_special_bonus_onelosthero_falsehero_explosion"	"+80 False Hero Explosion Damage"
+		"DOTA_Tooltip_ability_special_bonus_onelosthero_falsehero_charges"	"False Hero 2 Charges"
+		"DOTA_Tooltip_ability_special_bonus_onelosthero_blindspot_silence"	"+1s Blindspot Dagger Silence"
+		"DOTA_Tooltip_ability_special_bonus_onelosthero_vanishing_fearpierce"	"Vanishing Point Fear Pierces Debuff Immunity"
+		"DOTA_Tooltip_ability_special_bonus_onelosthero_falsehero_break"		"+2s False Hero Break Duration"
 
 		// Custom Heroes setup panel
 		"Plugin_custom_heroes"				"Custom Heroes"

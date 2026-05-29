@@ -121,15 +121,15 @@
 		"Ability6"				"onelosthero_vanishing_point"	// R (ult)
 		"Ability7"				"onelosthero_lost_signal"		// Innate
 
-		// Talents (generic stat talents — confirmed to exist; agility-assassin themed)
-		"Ability10"				"special_bonus_attack_damage_30"	// L10
-		"Ability11"				"special_bonus_movement_speed_30"	// L10
-		"Ability12"				"special_bonus_agility_15"			// L15
-		"Ability13"				"special_bonus_evasion_15"			// L15
-		"Ability14"				"special_bonus_attack_speed_30"		// L20
-		"Ability15"				"special_bonus_spell_amplify_8"		// L20
-		"Ability16"				"special_bonus_all_stats_10"		// L25
-		"Ability17"				"special_bonus_magic_resistance_15"	// L25
+		// Talents (finalized tree — Ability Update brief §13)
+		"Ability10"				"special_bonus_attack_speed_15"					// L10 left:  +15 Attack Speed (vanilla)
+		"Ability11"				"special_bonus_onelosthero_falsehero_invis"		// L10 right: +0.5s False Hero invisibility
+		"Ability12"				"special_bonus_onelosthero_secondstroke_echo"	// L15 left:  +20% Second Stroke Echo damage
+		"Ability13"				"special_bonus_onelosthero_falsehero_explosion"	// L15 right: +80 False Hero explosion damage
+		"Ability14"				"special_bonus_onelosthero_falsehero_charges"	// L20 left:  False Hero gains 2 charges
+		"Ability15"				"special_bonus_onelosthero_blindspot_silence"	// L20 right: +1s Blindspot Dagger silence
+		"Ability16"				"special_bonus_onelosthero_vanishing_fearpierce"	// L25 left:  Vanishing Point fear pierces debuff immunity
+		"Ability17"				"special_bonus_onelosthero_falsehero_break"		// L25 right: +2s False Hero Break duration
 
 		// Attributes (Riki)
 		"AttributeBaseStrength"			"18"

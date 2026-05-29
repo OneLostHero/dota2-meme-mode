@@ -28,7 +28,11 @@
 			"mark_duration"			"4.0"
 			"slow_pct"				"-18 -22 -26 -30"
 			"echo_strike_damage"	"40 70 100 130"
-			"silence_duration"		"0.8 1.1 1.4 1.7"
+			"silence_duration"
+			{
+				"value"											"0.8 1.1 1.4 1.7"
+				"special_bonus_onelosthero_blindspot_silence"	"+1.0"
+			}
 			"backstab_angle"		"110"
 			"echo_duration"			"2.0"
 			"swap_window"			"2.0"
