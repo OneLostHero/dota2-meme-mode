@@ -1,25 +1,19 @@
 // Dota Heroes File
-// Custom heroes for Dota 2 - Meme Mode.
-// New heroes clone an existing hero via "override_hero" (inherits model/anims/
-// base stats), then override ability slots and identity keys.
+// NOTE: npc_heroes_custom.txt can only OVERRIDE existing heroes in place — it
+// cannot create a brand-new hero with its own HeroID (HeroIDs are capped at
+// MAX_HERO_ID). So "Flasaro" is built by reskinning Dragon Knight: we override
+// dragon_knight's ability slots and rename it to "Flasaro" in addon_english.txt.
+// Dragon Knight keeps its model/animations and becomes Flasaro.
 "DOTAHeroes"
 {
 	//============================================================
-	//  Flasaro
-	//  Clones Dragon Knight (model + animations).
+	//  Flasaro  (reskins npc_dota_hero_dragon_knight in place)
 	//  Kit: AM Blink (Q), Riki Blink Strike (W), Sven Cleave (E),
 	//       Sven God's Strength (R). Sven talent tree (placeholder).
+	//  Model/animations: Dragon Knight's own (unchanged).
 	//============================================================
-	"npc_dota_hero_flasaro"
+	"npc_dota_hero_dragon_knight"
 	{
-		"override_hero"			"npc_dota_hero_dragon_knight"	// clone base: model + anims + stats
-		"HeroID"				"10001"							// unique; clear of stock + future Valve IDs
-		"Enabled"				"1"								// flows into the hero-pick pool
-		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
-
-		// Model — inherited from Dragon Knight via override_hero; set explicitly as insurance.
-		"Model"					"models/heroes/dragon_knight/dragon_knight.vmdl"
-
 		//---- Abilities ----
 		"Ability1"				"antimage_blink"				// Q — Anti-Mage Blink
 		"Ability2"				"riki_blink_strike"				// W — Riki Blink Strike

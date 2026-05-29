@@ -6,8 +6,8 @@
 		"addon_game_name"			"Dota 2 - Meme Mode"
 
 		// ---- Custom heroes ----
-		"npc_dota_hero_flasaro"				"Flasaro"
-		"DOTA_Tooltip_Hero_flasaro_bio"		"A Dragon Knight-shaped enigma who borrows tricks from across the rift: he blinks like the Anti-Mage, strikes from the shadows like Riki, and brings Sven's cleaving fury."
+		// Flasaro reskins Dragon Knight in place, so we rename the DK hero token.
+		"npc_dota_hero_dragon_knight"		"Flasaro"
 
 		"DOTA_TEAM_ALL"														"All"
 		"DOTA_TEAM_CUSTOM_1"												"The Chaos"
