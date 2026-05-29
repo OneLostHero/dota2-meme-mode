@@ -92,6 +92,27 @@ decides. No blind edits to the boosted system.
 cost red currency, never appear on the skill bar, and never consume skill/talent
 points; the normal talent tree still functions.
 
+## Part B — Diagnosis (resolved 2026-05-29)
+
+Confirmed by comparing against the original `drteaspoon420/MGMod`:
+
+- In the **original**, the per-hero ability folder is `_heroes/` (underscore =
+  disabled, like `_npc_heroes.txt`/`_activelist.txt`), and `npc_abilities_custom.txt`
+  has **only 7 flat `#base` includes** — it does **not** load any per-hero files.
+  The boosted system applies its rebalances/upgrades purely at runtime.
+- In **our fork**, that folder was renamed `_heroes/` → `heroes/` (to give the user
+  a browsable per-hero reference) **and** `npc_abilities_custom.txt` gained 124
+  `#base "heroes/<name>/abilities.txt"` lines. That **statically loaded** every
+  hero's rebalanced ability + talent definitions, colliding with the runtime
+  boosted system — which is what surfaced upgrade/talent entries on the skill bar
+  and let them consume points ("boosted combined with the regular skills").
+
+**Fix applied:** removed the 124 per-hero `#base` lines from
+`npc_abilities_custom.txt` (restoring parity with the original's 7 flat includes).
+The `heroes/<name>/abilities.txt` files are **kept for reference** but are no longer
+loaded. Normal talents and the runtime boosted system are now the only sources of
+ability values, as in the original.
+
 ## Out of scope
 
 - Bespoke custom abilities for Flasaro (he keeps the borrowed vanilla abilities).
