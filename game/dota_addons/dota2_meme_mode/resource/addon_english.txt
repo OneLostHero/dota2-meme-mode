@@ -100,13 +100,13 @@
 		"DOTA_Tooltip_ability_onelosthero_vanishing_point_SummaryDescription"	"Vanish and charge, then reappear in a fear-and-damage burst."
 
 		// --- Talents ---
-		"DOTA_Tooltip_ability_special_bonus_onelosthero_falsehero_invis"		"+0.5s False Hero Invisibility"
-		"DOTA_Tooltip_ability_special_bonus_onelosthero_secondstroke_echo"	"+20% Second Stroke Echo Damage"
-		"DOTA_Tooltip_ability_special_bonus_onelosthero_falsehero_explosion"	"+80 False Hero Explosion Damage"
-		"DOTA_Tooltip_ability_special_bonus_onelosthero_falsehero_charges"	"False Hero 2 Charges"
-		"DOTA_Tooltip_ability_special_bonus_onelosthero_blindspot_silence"	"+1s Blindspot Dagger Silence"
-		"DOTA_Tooltip_ability_special_bonus_onelosthero_vanishing_fearpierce"	"Vanishing Point Fear Pierces Debuff Immunity"
-		"DOTA_Tooltip_ability_special_bonus_onelosthero_falsehero_break"		"+2s False Hero Break Duration"
+		"DOTA_Tooltip_ability_special_bonus_unique_onelosthero_invis"			"+0.5s False Hero Invisibility"
+		"DOTA_Tooltip_ability_special_bonus_unique_onelosthero_second_stroke"	"+20% Second Stroke Echo Damage"
+		"DOTA_Tooltip_ability_special_bonus_unique_onelosthero_explosion"		"+80 False Hero Explosion Damage"
+		"DOTA_Tooltip_ability_special_bonus_unique_onelosthero_charges"			"False Hero 2 Charges"
+		"DOTA_Tooltip_ability_special_bonus_unique_onelosthero_silence"			"+1s Blindspot Dagger Silence"
+		"DOTA_Tooltip_ability_special_bonus_unique_onelosthero_fear_pierce"		"Vanishing Point Fear Pierces Debuff Immunity"
+		"DOTA_Tooltip_ability_special_bonus_unique_onelosthero_break"			"+2s False Hero Break Duration"
 
 		// Custom Heroes setup panel
 		"Plugin_custom_heroes"				"Custom Heroes"

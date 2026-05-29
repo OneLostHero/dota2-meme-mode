@@ -125,13 +125,13 @@
 
 		// Talents (finalized tree — Ability Update brief §13)
 		"Ability10"				"special_bonus_attack_speed_15"					// L10 left:  +15 Attack Speed (vanilla)
-		"Ability11"				"special_bonus_onelosthero_falsehero_invis"		// L10 right: +0.5s False Hero invisibility
-		"Ability12"				"special_bonus_onelosthero_secondstroke_echo"	// L15 left:  +20% Second Stroke Echo damage
-		"Ability13"				"special_bonus_onelosthero_falsehero_explosion"	// L15 right: +80 False Hero explosion damage
-		"Ability14"				"special_bonus_onelosthero_falsehero_charges"	// L20 left:  False Hero gains 2 charges
-		"Ability15"				"special_bonus_onelosthero_blindspot_silence"	// L20 right: +1s Blindspot Dagger silence
-		"Ability16"				"special_bonus_onelosthero_vanishing_fearpierce"	// L25 left:  Vanishing Point fear pierces debuff immunity
-		"Ability17"				"special_bonus_onelosthero_falsehero_break"		// L25 right: +2s False Hero Break duration
+		"Ability11"				"special_bonus_unique_onelosthero_invis"			// L10 right: +0.5s False Hero invisibility
+		"Ability12"				"special_bonus_unique_onelosthero_second_stroke"	// L15 left:  +20% Second Stroke Echo damage
+		"Ability13"				"special_bonus_unique_onelosthero_explosion"		// L15 right: +80 False Hero explosion damage
+		"Ability14"				"special_bonus_unique_onelosthero_charges"			// L20 left:  False Hero gains 2 charges
+		"Ability15"				"special_bonus_unique_onelosthero_silence"			// L20 right: +1s Blindspot Dagger silence
+		"Ability16"				"special_bonus_unique_onelosthero_fear_pierce"		// L25 left:  Vanishing Point fear pierces debuff immunity
+		"Ability17"				"special_bonus_unique_onelosthero_break"			// L25 right: +2s False Hero Break duration
 
 		// Attributes (Riki)
 		"AttributeBaseStrength"			"18"

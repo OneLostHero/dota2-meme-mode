@@ -27,8 +27,8 @@
 			"echo_delay"			"0.35"
 			"echo_damage_pct"
 			{
-				"value"											"40 50 60 70"
-				"special_bonus_onelosthero_secondstroke_echo"	"+20"
+				"value"												"40 50 60 70"
+				"special_bonus_unique_onelosthero_second_stroke"	"+20"
 			}
 			"echo_duration"			"2.5"
 			"swap_window"			"2.5"

@@ -120,7 +120,7 @@ end
 
 -- Does the lvl25-left talent (fear pierces debuff immunity) apply?
 function onelosthero_vanishing_point:FearPiercesImmunity()
-	local t = self:GetCaster():FindAbilityByName("special_bonus_onelosthero_vanishing_fearpierce")
+	local t = self:GetCaster():FindAbilityByName("special_bonus_unique_onelosthero_fear_pierce")
 	return t ~= nil and t:GetLevel() > 0
 end
 

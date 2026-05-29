@@ -30,19 +30,19 @@
 			"invis_duration"
 			{
 				"value"											"10.0"
-				"special_bonus_onelosthero_falsehero_invis"		"+0.5"
+				"special_bonus_unique_onelosthero_invis"		"+0.5"
 			}
 			"echo_attack_damage_pct"	"25 30 35 40"
 			"explosion_damage"
 			{
 				"value"											"80 140 200 260"
-				"special_bonus_onelosthero_falsehero_explosion"	"+80"
+				"special_bonus_unique_onelosthero_explosion"	"+80"
 			}
 			"explosion_radius"		"325 350 375 400"
 			"break_duration"
 			{
 				"value"											"2.5"
-				"special_bonus_onelosthero_falsehero_break"		"+2.0"
+				"special_bonus_unique_onelosthero_break"		"+2.0"
 			}
 			"echo_move_distance"	"1200"
 			"shard_detonation_pct"	"60"

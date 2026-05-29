@@ -1,48 +1,51 @@
-// OneLostHero — custom talents (special_bonus abilities).
-// Format matches vanilla talents: NO "BaseClass" (the special_bonus_ name prefix is what
-// the engine recognizes); just AbilityType + PASSIVE behavior. The bonus AMOUNTS live in
-// each affected ability's AbilityValues value-block (e.g. "+0.5", "+80"); these are the
-// talent flags/holders. The lvl10-left talent (+15 Attack Speed) reuses vanilla
-// special_bonus_attack_speed_15. Behavior talents (charges, fear pierce) are read in Lua.
+// OneLostHero — custom talents.
+// IMPORTANT: this is a Legends-of-Dota mod whose talent system (and the vanilla talent
+// tree) only recognizes hero talents by the "special_bonus_unique_" name prefix
+// (see legends_of_dota/plugin.lua FindHeroTalentOwner / FindLinkedTalents). Talents named
+// anything else never register in the tree. So every custom talent is named
+// special_bonus_unique_onelosthero_*. Format matches vanilla talents (no BaseClass).
+// The bonus AMOUNTS live in each affected ability's AbilityValues value-block ("+0.5", "+80",
+// etc.); behavior talents (charges, fear pierce) are read in Lua. 10L is vanilla
+// special_bonus_attack_speed_15.
 "DOTAAbilities"
 {
-	"special_bonus_onelosthero_falsehero_invis"
+	"special_bonus_unique_onelosthero_invis"
 	{
 		"AbilityType"		"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"			"1"
 	}
-	"special_bonus_onelosthero_secondstroke_echo"
+	"special_bonus_unique_onelosthero_second_stroke"
 	{
 		"AbilityType"		"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"			"1"
 	}
-	"special_bonus_onelosthero_falsehero_explosion"
+	"special_bonus_unique_onelosthero_explosion"
 	{
 		"AbilityType"		"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"			"1"
 	}
-	"special_bonus_onelosthero_falsehero_charges"
+	"special_bonus_unique_onelosthero_charges"
 	{
 		"AbilityType"		"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"			"1"
 	}
-	"special_bonus_onelosthero_blindspot_silence"
+	"special_bonus_unique_onelosthero_silence"
 	{
 		"AbilityType"		"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"			"1"
 	}
-	"special_bonus_onelosthero_vanishing_fearpierce"
+	"special_bonus_unique_onelosthero_fear_pierce"
 	{
 		"AbilityType"		"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"			"1"
 	}
-	"special_bonus_onelosthero_falsehero_break"
+	"special_bonus_unique_onelosthero_break"
 	{
 		"AbilityType"		"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
