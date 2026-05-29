@@ -28,6 +28,19 @@ function Precache( context )
 	PrecacheResource("soundfile", "soundevents/custom_sounds.vsndevts", context)
 	PrecacheResource( "particle", "particles/tickets_gain.vpcf", context )
 	PrecacheResource( "particle", "particles/souls/ward_skull_rubick.vpcf", context )
+
+	-- Precache custom heroes (Flasaro, etc.). Vanilla heroes are auto-precached
+	-- when selected, but custom heroes defined in npc_heroes_custom.txt are NOT,
+	-- so without this the hero spawns server-side (model appears) while the CLIENT
+	-- fails to fully instantiate it -- no ability bar, no portrait, no control.
+	local custom_heroes = LoadKeyValues('scripts/npc/npc_heroes_custom.txt')
+	if custom_heroes ~= nil then
+		for hero_name, hero_data in pairs(custom_heroes) do
+			if type(hero_data) == "table" then
+				PrecacheUnitByNameSync(hero_name, context)
+			end
+		end
+	end
 end
 function Activate()
 	GameRules.AddonTemplate = CMemeModeGameMode()
