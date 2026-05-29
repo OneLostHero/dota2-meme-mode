@@ -131,4 +131,5 @@
 	"npc_dota_hero_onelosthero"		"1"
 	"npc_dota_hero_moosestache"		"1"
 	"npc_dota_hero_occupational_hazard"		"1"
+	"npc_dota_hero_mr_badhabits"		"1"
 }

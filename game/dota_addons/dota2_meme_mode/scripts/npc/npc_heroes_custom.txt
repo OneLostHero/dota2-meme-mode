@@ -324,4 +324,82 @@
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 	}
+
+	//============================================================
+	//  Mr. BadHabits  (custom hero, Treant Protector base/look)
+	//  Q Toss | W Quill Spray | E Meat Shield (pudge_flesh_heap)
+	//  R Spell Steal | Innate Flesh Heap (pudge_innate_graft_flesh)
+	//  Tanky punisher-thief: toss them around, bleed them behind a shield, steal their best spell.
+	//============================================================
+	"npc_dota_hero_mr_badhabits"
+	{
+		"BaseClass"				"npc_dota_hero_treant"			// REQUIRED: real base class so the hero spawns + renders. Treant is untouched.
+		"HeroID"				"254"							// high, unused id (250 Flasaro, 251 OneLostHero, 252 Moosestache, 253 Occupational Hazard)
+		"Enabled"				"1"
+		"Team"					"Good"
+		"TeamName"				"DOTA_TEAM_GOODGUYS"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
+
+		// Look + voice (Treant Protector)
+		"Model"					"models/heroes/treant_protector/treant_protector.vmdl"
+		"ModelScale"			"1.000000"
+		"SoundSet"				"Hero_Treant"
+		"GibType"				"default"
+		"Role"					"Durable,Disabler,Initiator,Nuker"
+		"Complexity"			"2"
+		"BotImplemented"		"0"
+
+		// Abilities
+		"Ability1"				"tiny_toss"					// Q
+		"Ability2"				"bristleback_quill_spray"	// W
+		"Ability3"				"pudge_flesh_heap"			// E (Meat Shield: damage-block active)
+		"Ability4"				"generic_hidden"
+		"Ability5"				"generic_hidden"
+		"Ability6"				"rubick_spell_steal"		// R (ult)
+		"Ability7"				"pudge_innate_graft_flesh"	// Innate (Flesh Heap: +STR on kills)
+
+		// Talents (real stock tokens, verified wired to held abilities)
+		"Ability10"				"special_bonus_unique_bristleback_2"
+		"Ability11"				"special_bonus_health_250"
+		"Ability12"				"special_bonus_unique_tiny_2"
+		"Ability13"				"special_bonus_unique_pudge_1"
+		"Ability14"				"special_bonus_unique_tiny_5"
+		"Ability15"				"special_bonus_strength_12"
+		"Ability16"				"special_bonus_status_resistance_10"
+		"Ability17"				"special_bonus_attack_damage_60"
+
+		// Attributes (Treant Protector)
+		"AttributeBaseStrength"			"25"
+		"AttributeStrengthGain"			"3.400000"
+		"AttributeBaseAgility"			"15"
+		"AttributeAgilityGain"			"1.800000"
+		"AttributeBaseIntelligence"		"20"
+		"AttributeIntelligenceGain"		"1.800000"
+
+		// Combat (Treant Protector)
+		"ArmorPhysical"			"-1"
+		"MagicalResistance"		"25"
+		"AttackCapabilities"	"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"		"60"
+		"AttackDamageMax"		"68"
+		"AttackRate"			"1.900000"
+		"AttackAnimationPoint"	"0.600000"
+		"AttackAcquisitionRange"	"600"
+		"AttackRange"			"150"
+		"MovementSpeed"			"280"
+		"MovementTurnRate"		"0.500000"
+		"MovementCapabilities"	"DOTA_UNIT_CAP_MOVE_GROUND"
+		"VisionDaytimeRange"	"1800"
+		"VisionNighttimeRange"	"800"
+		"StatusHealth"			"200"
+		"StatusHealthRegen"		"0.25"
+		"StatusMana"			"75"
+		"StatusManaRegen"		"0.25"
+		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
+
+		// Classification
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}
 }

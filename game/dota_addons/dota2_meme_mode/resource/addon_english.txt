@@ -33,6 +33,13 @@
 		"npc_dota_hero_occupational_hazard_npedesc2"	"Open with Heart Stopper + Spirit Siphon, raise Bone Guard skeletons, then execute the survivor with Finger of Death."
 		"npc_dota_hero_occupational_hazard_hype"	"Death is just the cost of doing business."
 
+		// Custom hero — Mr. BadHabits
+		"npc_dota_hero_mr_badhabits"		"Mr. BadHabits"
+		"npc_dota_hero_mr_badhabits_bio"	"An immovable nuisance who hurls his enemies where he pleases, grinds them down with a spray of quills from behind a wall of meat, and helps himself to whatever spell they were saving."
+		"npc_dota_hero_mr_badhabits_npedesc1"	"A tanky punisher-thief: reposition foes with Toss, bleed them with Quill Spray behind Meat Shield, then steal their best spell."
+		"npc_dota_hero_mr_badhabits_npedesc2"	"Toss an enemy into your team, stack Quill Spray, pop Meat Shield, and Spell Steal the scariest ability on the field."
+		"npc_dota_hero_mr_badhabits_hype"	"Old habits die hard. So do you."
+
 		// --- Lost Signal (Innate) ---
 		"DOTA_Tooltip_ability_onelosthero_lost_signal"				"Lost Signal"
 		"DOTA_Tooltip_ability_onelosthero_lost_signal_Description"	"Whenever OneLostHero breaks invisibility or emerges from being unseen, his next strike creates a brief Echo attack that deals bonus damage."
