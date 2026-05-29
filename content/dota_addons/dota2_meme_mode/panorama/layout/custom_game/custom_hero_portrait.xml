@@ -6,5 +6,16 @@
 		<include src="file://{resources}/scripts/custom_game/util.js" />
 		<include src="file://{resources}/scripts/custom_game/custom_hero_portrait.js" />
 	</scripts>
-	<Panel />
+	<Panel hittest="false" style="width: 100%; height: 100%;">
+		<!-- TEMPORARY DIAGNOSTIC self-test box. If you SEE a magenta-bordered Flasaro
+		     image on the left side (during pick and/or in-game), then this element
+		     loads and image-by-path works, and only the pick-panel traversal needs
+		     fixing. If you DON'T see it, the element isn't loading at all. Remove once
+		     the portrait is solved. -->
+		<Panel id="ChpSelfTest" hittest="false"
+			style="position: 30px 160px 0px; width: 180px; height: 240px; z-index: 1000;
+			       border: 3px solid #ff00ffff;
+			       background-image: url('file://{images}/heroes/selection/npc_dota_hero_flasaro.png');
+			       background-size: 100% 100%;" />
+	</Panel>
 </root>
