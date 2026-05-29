@@ -7,6 +7,7 @@ _G.CustomHeroesPlugin = CustomHeroesPlugin
 -- picked at all -- availability filtering can only narrow that list, not extend it.
 CustomHeroesPlugin.custom_heroes = {
     "npc_dota_hero_flasaro",
+    "npc_dota_hero_onelosthero",
 }
 
 function CustomHeroesPlugin:Init()
