@@ -61,12 +61,13 @@ function onelosthero_vanishing_point:OnSpellStart()
 			})
 			if echo then
 				echo:SetForwardVector(dir)
-				-- kick off the run immediately; the echo modifier re-issues thereafter
+				-- kick off the run-out immediately (plain move so it ignores center enemies);
+				-- the echo modifier re-issues the move and then attack-moves once at the edge
 				Timers:CreateTimer(0.03, function()
 					if Echo:IsValid(echo) then
 						ExecuteOrderFromTable({
 							UnitIndex = echo:entindex(),
-							OrderType = DOTA_UNIT_ORDER_ATTACK_MOVE,
+							OrderType = DOTA_UNIT_ORDER_MOVE_TO_POSITION,
 							Position = dest, Queue = false,
 						})
 					end

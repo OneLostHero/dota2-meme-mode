@@ -296,23 +296,34 @@ function modifier_onelosthero_echo:OnCreated(params)
 	end
 end
 
--- Keep a NON-controllable Echo advancing toward its waypoint. Re-issues the attack-move only
--- when it isn't already attacking something, so it still fights along the way but never just
--- stalls after the initial order is dropped.
+-- Drive a NON-controllable Echo (the ult's scepter echoes) out to its waypoint at the edge of
+-- the radius. While en route it MOVES (a plain move order ignores nearby enemies) so it
+-- actually reaches the edge instead of stopping to fight at the center; once arrived it
+-- switches to attack-move so it strikes whatever is nearby until the ult detonates it.
 function modifier_onelosthero_echo:OnIntervalThink()
 	if not IsServer() then return end
 	local unit = self:GetParent()
 	if not unit or unit:IsNull() or not unit:IsAlive() then return end
 	local data = unit.olh_echo
 	if not data or not data.moveDest then return end
-	if unit:GetAggroTarget() ~= nil then return end -- currently attacking; leave it
-	if (unit:GetAbsOrigin() - data.moveDest):Length2D() < 150 then return end -- arrived
-	ExecuteOrderFromTable({
-		UnitIndex = unit:entindex(),
-		OrderType = DOTA_UNIT_ORDER_ATTACK_MOVE,
-		Position = data.moveDest,
-		Queue = false,
-	})
+
+	local arrived = (unit:GetAbsOrigin() - data.moveDest):Length2D() < 150
+	if not arrived then
+		ExecuteOrderFromTable({
+			UnitIndex = unit:entindex(),
+			OrderType = DOTA_UNIT_ORDER_MOVE_TO_POSITION,
+			Position = data.moveDest,
+			Queue = false,
+		})
+	elseif not data.arrivedAttack then
+		data.arrivedAttack = true
+		ExecuteOrderFromTable({
+			UnitIndex = unit:entindex(),
+			OrderType = DOTA_UNIT_ORDER_ATTACK_MOVE,
+			Position = unit:GetAbsOrigin(),
+			Queue = false,
+		})
+	end
 end
 
 function modifier_onelosthero_echo:CheckState()
