@@ -97,23 +97,31 @@ end
 
 ## 4. Portrait — Panorama static-image override
 
-There is **no pure-KV way** to give a server-only custom hero a client portrait, so
-the big pick-screen portrait and the in-game top-bar image render blank. Fix it in
-Panorama by pointing those panels at static PNGs we ship.
+There is **no pure-KV way** to give a *server-only* custom hero a client portrait on
+the **pick screen** (pre-spawn, the client doesn't know the hero), so its grid card,
+the big inspect portrait, and the top player row render blank. We fix the pick screen
+with static PNGs. **In-game the engine renders the portrait natively from the hero's
+model — do NOT touch the in-game HUD** (overlaying it covers the live portrait).
 
-Ship these images (any reasonable resolution; PNG):
+### 4a. Ship the four PNGs
+
 ```
 content/.../panorama/images/heroes/npc_dota_hero_<name>.png            (top bar / loadout)
 content/.../panorama/images/heroes/selection/npc_dota_hero_<name>.png  (pick-screen portrait)
 content/.../panorama/images/heroes/icons/npc_dota_hero_<name>.png      (scoreboard icon)
 content/.../panorama/images/heroes/crops/npc_dota_hero_<name>.png      (cropped)
 ```
+**Aspect:** the selection/grid portrait slot is a **tall ~3:4 (vertical) portrait**. A
+square source gets stretched tall — center-crop square art to 3:4 (e.g. 940×1254)
+before shipping. The same image in all four slots is fine.
 
-**CRITICAL — the PNGs must be COMPILED, or the portrait is blank** (engine logs
-`Failed loading .../selection/npc_dota_hero_<name>_png.vtex_c`). Addon panorama PNGs
-only compile to `.vtex_c` when referenced by a **compiled stylesheet/layout** — a
-JS-only `backgroundImage` reference is NOT enough. So add a line per image to
-`panorama/styles/custom_game/custom_hero_portrait.css` (included by
+### 4b. Reference each PNG from the compiled CSS (so it COMPILES)
+
+**CRITICAL — the PNGs must be COMPILED to `_png.vtex_c`, or the portrait is blank**
+(engine logs `Failed loading .../selection/npc_dota_hero_<name>_png.vtex_c
+(File not found)`). Addon panorama PNGs only compile when referenced by a **compiled
+stylesheet/layout** — a JS-only `backgroundImage` reference is NOT enough. Add four
+lines to `panorama/styles/custom_game/custom_hero_portrait.css` (included by
 `custom_hero_portrait.xml`):
 
 ```css
@@ -122,21 +130,56 @@ JS-only `backgroundImage` reference is NOT enough. So add a line per image to
 .PrecacheImg_<name>_icon      { background-image: url("file://{images}/heroes/icons/npc_dota_hero_<name>.png"); }
 .PrecacheImg_<name>_crop      { background-image: url("file://{images}/heroes/crops/npc_dota_hero_<name>.png"); }
 ```
+**Only reference images that exist** — a missing `url(...)` source breaks the whole
+CSS compile (and every portrait with it).
 
-Once compiled, the engine's own pick screen finds the selection image — the portrait
-largely fixes itself. **Only reference images that exist** — a missing `url(...)`
-source breaks the whole CSS compile.
+### 4c. How the `.vtex_c` actually gets built (the step that bites)
 
-Then the Hud script `panorama/scripts/custom_game/custom_hero_portrait.js`
-(registered in `custom_ui_manifest.xml`) additionally overrides the inspect portrait
-+ top-bar image for any hero in its `CUSTOM_HEROES` table:
+The CSS reference is necessary but the compile happens in the **Dota 2 Workshop Tools
+asset pipeline**, NOT from a plain game launch and NOT from the command line:
+
+- `resourcecompiler.exe -i <file>.png` does **NOT** work — it reports
+  `Failed to find compiler for file ".png"`. There is no standalone PNG compiler.
+- The `_png.vtex_c` is produced by the **Workshop Tools asset watcher / on-demand
+  recompiler** while running in tools/dev mode (the same system that hot-recompiles
+  `.js`→`.vjs`). When you launch in tools mode and the pick screen requests the image,
+  it compiles to `game/.../<path>/npc_dota_hero_<name>_png.vtex_c`.
+
+So after adding a hero's PNGs + CSS lines: **launch in tools/dev mode and open the
+hero pick screen once**, then verify the four files exist:
+```
+game/.../panorama/images/heroes/{,selection/,icons/,crops/}npc_dota_hero_<name>_png.vtex_c
+```
+If they're missing, the portrait will be blank in a normal launch. (These `.vtex_c`
+are gitignored build artifacts — they are not committed; each machine compiles them.)
+
+### 4d. Register the hero in the portrait script
+
+`panorama/scripts/custom_game/custom_hero_portrait.js` (registered in
+`custom_ui_manifest.xml` as **both** `type="HeroSelection"` and `type="Hud"`) patches
+the pick-screen panels for any hero in its `CUSTOM_SHORT` table. **Use the SHORT hero
+name** (no `npc_dota_hero_` prefix) — Panorama's `player_selected_hero` and panel
+`.heroname` return the short form (`"flasaro"`, not `"npc_dota_hero_flasaro"`):
 
 ```js
-var CUSTOM_HEROES = { "npc_dota_hero_flasaro": true, /* add new ones here */ };
+var CUSTOM_SHORT = {
+    "flasaro": true,
+    "onelosthero": true,
+    "<name>": true,   // add new heroes here, SHORT name
+};
 ```
 
-Known limitation (per community): the **minimap icon** for a custom hero is a rare
-unfixable. A 3D animated portrait would need a `.webm` movie panel (advanced).
+How the script works (so future edits don't re-break it):
+- It runs **only during `HERO_SELECTION`/`STRATEGY_TIME`** (`Game.GetState()` gate) —
+  never in-game, or it would cover the live native portrait.
+- A `DOTAHeroImage`/`DOTAHeroMovie` paints its own (blank, for a custom hero) texture
+  **over its child panels**, so the static image is laid as a **sibling on the panel's
+  parent** (not a child), pixel-sized and positioned via `GetPositionWithinWindow()`.
+- Percentage sizes on these overlays resolve to 0 — always size overlays in **pixels**.
+
+Known limitation: the **minimap icon** is a rare unfixable. A 3D animated pick-screen
+portrait would need the model resolvable client-side (see `scripts/npc/portraits.txt`,
+keyed by model name) — out of scope for the static-image approach.
 
 ## 5. Localization — `resource/addon_english.txt`
 
@@ -161,9 +204,17 @@ heroes to its `custom_heroes` list (`scripts/vscripts/plugin_system/plugins/cust
 - [ ] `BaseClass` set to a real hero — **or it won't spawn / portrait is black**.
 - [ ] `HeroID` high + unused (e.g. 250), `Enabled 1`, `AttributePrimary` set.
 - [ ] No `Facets` block, no `override_hero`, no `AttackDamageType`.
-- [ ] Listed in `herolist.txt`.
+- [ ] Listed in `herolist.txt` (`"npc_dota_hero_<name>" "1"`).
 - [ ] Precached in `addon_game_mode.lua`.
-- [ ] Portrait PNGs shipped + name added to `custom_hero_portrait.js`.
+- [ ] Added to the `custom_heroes` list in `plugin_system/plugins/custom_heroes/plugin.lua`
+      (full name). **Don't list a hero here that isn't fully defined** — a dangling
+      `npc_dota_hero_*` with no KV/herolist/PNGs is a broken reference.
+- [ ] **Portrait — all of these, or it's blank:**
+  - [ ] Four PNGs shipped (`heroes/{,selection,icons,crops}/`), selection art ~3:4.
+  - [ ] Four `.PrecacheImg_<name>_*` lines in `custom_hero_portrait.css`.
+  - [ ] Short name added to `CUSTOM_SHORT` in `custom_hero_portrait.js`.
+  - [ ] Compiled in tools/dev mode — verify the four `_png.vtex_c` exist under
+        `game/.../panorama/images/heroes/...`.
 - [ ] Localization tokens in `addon_english.txt`.
 - [ ] Test via `dota_launch_custom_game dota2_meme_mode dota` (not Hammer — Hammer
       doesn't run the addon game-mode Lua).
