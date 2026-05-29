@@ -92,6 +92,13 @@
 		"DOTA_Tooltip_ability_onelosthero_vanishing_point_scepter_description"	"Many Lost, One Returned: creates extra invisible Echoes that spread outward and release weaker fear bursts on reappearance."
 		"DOTA_Tooltip_ability_onelosthero_vanishing_point_shard_description"		"Unseen Exchange: grants one free Echo swap during Vanishing Point; the abandoned Echo detonates on release and the warning indicator is briefly suppressed."
 
+		// --- Ability short summaries (silences _SummaryDescription localize warnings) ---
+		"DOTA_Tooltip_ability_onelosthero_lost_signal_SummaryDescription"		"Emerging unseen arms a bonus-damage strike."
+		"DOTA_Tooltip_ability_onelosthero_second_stroke_SummaryDescription"		"Dash-slash forward; an Echo repeats the strike. Recast to swap."
+		"DOTA_Tooltip_ability_onelosthero_blindspot_dagger_SummaryDescription"	"Mark a foe; strike from behind for an Echo, damage and silence."
+		"DOTA_Tooltip_ability_onelosthero_false_hero_SummaryDescription"		"Leave an Echo decoy and vanish. Recast to swap; it detonates with Break."
+		"DOTA_Tooltip_ability_onelosthero_vanishing_point_SummaryDescription"	"Vanish and charge, then reappear in a fear-and-damage burst."
+
 		// --- Talents ---
 		"DOTA_Tooltip_ability_special_bonus_onelosthero_falsehero_invis"		"+0.5s False Hero Invisibility"
 		"DOTA_Tooltip_ability_special_bonus_onelosthero_secondstroke_echo"	"+20% Second Stroke Echo Damage"
