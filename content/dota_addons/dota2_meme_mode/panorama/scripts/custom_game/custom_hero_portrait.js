@@ -108,6 +108,33 @@ function UpdateTopBar(hud) {
     }
 }
 
+// DIAGNOSTIC: stream the HeroInspectInfo panel tree to the server log (via Lua),
+// since $.Msg isn't visible in the server console. One event per panel. One-time.
+var g_dumped = false;
+function DumpTree(panel, depth) {
+    if (!panel || depth > 4) return;
+    var id = "", type = "", cls = "";
+    try { id = panel.id; } catch (e) {}
+    try { type = panel.paneltype; } catch (e) {}
+    try { cls = panel.GetClassList ? panel.GetClassList().join(",") : ""; } catch (e) {}
+    GameEvents.SendCustomGameEventToServer("chp_dump", { s: depth + " | " + id + " | " + type + " | " + cls });
+    var kids = null;
+    try { kids = panel.Children(); } catch (e) {}
+    if (kids) { for (var i = 0; i < kids.length && i < 30; i++) DumpTree(kids[i], depth + 1); }
+}
+function MaybeDump(hud) {
+    if (g_dumped) return;
+    var pid = Players.GetLocalPlayer();
+    var info = pid >= 0 ? Game.GetPlayerInfo(pid) : null;
+    var sel = info ? (info.player_selected_hero || info.possible_hero_selection || "") : "";
+    if (!IsCustomHero(sel)) return;
+    var inspect = hud.FindChildTraverse("HeroInspectInfo");
+    if (!inspect) return;
+    g_dumped = true;
+    GameEvents.SendCustomGameEventToServer("chp_dump", { s: "=== HeroInspectInfo tree (hero=" + sel + ") ===" });
+    DumpTree(inspect, 0);
+}
+
 function Run() {
     var hud = GetDotaHud();
     if (!hud) return;
@@ -115,6 +142,7 @@ function Run() {
     if (pg) PatchByHeroname(pg, 0);
     UpdateInspectPortrait(hud);
     UpdateTopBar(hud);
+    MaybeDump(hud);
 }
 
 (function () {

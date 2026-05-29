@@ -83,3 +83,10 @@ ListenToGameEvent("game_rules_state_change", function()
         Timers:CreateTimer(1.0, ensure_custom_heroes_spawned)
     end
 end, nil)
+
+-- DIAGNOSTIC: the portrait JS can't print to the server log, so it streams the
+-- pick-screen panel tree here and we print it to the server console (which the user
+-- can capture). One line per panel. Remove once the portrait is solved.
+CustomGameEventManager:RegisterListener("chp_dump", function(_, data)
+    print("[chp_dump] " .. tostring(data and data.s or ""))
+end)
