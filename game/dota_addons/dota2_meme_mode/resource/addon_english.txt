@@ -19,6 +19,11 @@
 		"npc_dota_hero_onelosthero_npedesc2"	"Place an Echo, swap to the perfect angle, vanish, and detonate into a fear burst."
 		"npc_dota_hero_onelosthero_hype"	"Be everywhere. Be no one."
 
+		// Custom hero — Moosestache
+		"npc_dota_hero_moosestache"			"Moosestache"
+		"npc_dota_hero_moosestache_bio"		"A relentless momentum bruiser who charges across the battlefield, latches onto his prey to drain its strength, and freezes time to finish the job."
+		"npc_dota_hero_moosestache_hype"	"You can run. You'll just die tired."
+
 		// --- Lost Signal (Innate) ---
 		"DOTA_Tooltip_ability_onelosthero_lost_signal"				"Lost Signal"
 		"DOTA_Tooltip_ability_onelosthero_lost_signal_Description"	"Whenever OneLostHero breaks invisibility or emerges from being unseen, his next strike creates a brief Echo attack that deals bonus damage."

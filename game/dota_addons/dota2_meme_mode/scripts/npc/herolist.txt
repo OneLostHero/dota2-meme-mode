@@ -129,4 +129,5 @@
 	"npc_dota_hero_zuus"		"1"
 	"npc_dota_hero_flasaro"		"1"
 	"npc_dota_hero_onelosthero"		"1"
+	"npc_dota_hero_moosestache"		"1"
 }

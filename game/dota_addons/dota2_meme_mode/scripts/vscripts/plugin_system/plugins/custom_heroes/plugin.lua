@@ -8,6 +8,7 @@ _G.CustomHeroesPlugin = CustomHeroesPlugin
 CustomHeroesPlugin.custom_heroes = {
     "npc_dota_hero_flasaro",
     "npc_dota_hero_onelosthero",
+    "npc_dota_hero_moosestache",
 }
 
 function CustomHeroesPlugin:Init()

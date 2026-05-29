@@ -167,4 +167,81 @@
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 	}
+
+	//============================================================
+	//  Moosestache  (custom hero, Bloodseeker base/look)
+	//  Q Charge of Darkness | W Static Link | E Jinada
+	//  R Chronosphere | Innate Distortion Field
+	//  Momentum bruiser-carry: charge in, leech attack damage, lock the fight, crit.
+	//============================================================
+	"npc_dota_hero_moosestache"
+	{
+		"BaseClass"				"npc_dota_hero_bloodseeker"		// REQUIRED: real base class so the hero spawns + renders. Bloodseeker is untouched.
+		"HeroID"				"252"							// high, unused id (250 Flasaro, 251 OneLostHero)
+		"Enabled"				"1"
+		"Team"					"Good"
+		"TeamName"				"DOTA_TEAM_GOODGUYS"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
+
+		"Model"					"models/heroes/blood_seeker/blood_seeker.vmdl"
+		"ModelScale"			"1.000000"
+		"SoundSet"				"Hero_Bloodseeker"
+		"GibType"				"default"
+		"Role"					"Carry,Initiator,Disabler,Durable"
+		"Complexity"			"2"
+		"BotImplemented"		"0"
+
+		// Abilities
+		"Ability1"				"spirit_breaker_charge_of_darkness"		// Q
+		"Ability2"				"razor_static_link"						// W
+		"Ability3"				"bounty_hunter_jinada"					// E (passive)
+		"Ability4"				"generic_hidden"
+		"Ability5"				"generic_hidden"
+		"Ability6"				"faceless_void_chronosphere"			// R (ult)
+		"Ability7"				"faceless_void_distortion_field"		// Innate
+
+		// Talents (real stock tokens, verified wired to held abilities)
+		"Ability10"				"special_bonus_unique_bounty_hunter"
+		"Ability11"				"special_bonus_movement_speed_30"
+		"Ability12"				"special_bonus_unique_razor_static_link_aspd"
+		"Ability13"				"special_bonus_unique_spirit_breaker_4"
+		"Ability14"				"special_bonus_unique_bounty_hunter_4"
+		"Ability15"				"special_bonus_attack_damage_40"
+		"Ability16"				"special_bonus_unique_bounty_hunter_jinada_no_cooldown"
+		"Ability17"				"special_bonus_unique_razor"
+
+		// Attributes (Bloodseeker)
+		"AttributeBaseStrength"			"24"
+		"AttributeStrengthGain"			"2.700000"
+		"AttributeBaseAgility"			"22"
+		"AttributeAgilityGain"			"3.100000"
+		"AttributeBaseIntelligence"		"17"
+		"AttributeIntelligenceGain"		"2.000000"
+
+		// Combat (Bloodseeker)
+		"ArmorPhysical"			"2"
+		"MagicalResistance"		"25"
+		"AttackCapabilities"	"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"		"35"
+		"AttackDamageMax"		"41"
+		"AttackRate"			"1.700000"
+		"AttackAnimationPoint"	"0.430000"
+		"AttackAcquisitionRange"	"600"
+		"AttackRange"			"150"
+		"MovementSpeed"			"300"
+		"MovementTurnRate"		"0.500000"
+		"MovementCapabilities"	"DOTA_UNIT_CAP_MOVE_GROUND"
+		"VisionDaytimeRange"	"1800"
+		"VisionNighttimeRange"	"800"
+		"StatusHealth"			"200"
+		"StatusHealthRegen"		"0.25"
+		"StatusMana"			"75"
+		"StatusManaRegen"		"0.0"
+		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
+
+		// Classification
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}
 }
