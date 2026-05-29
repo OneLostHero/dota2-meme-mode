@@ -35,10 +35,10 @@
 			"echo_attack_damage_pct"	"25 30 35 40"
 			"explosion_damage"
 			{
-				"value"											"250"
+				"value"											"80 140 200 260"
 				"special_bonus_unique_onelosthero_explosion"	"+80"
 			}
-			"explosion_radius"		"325 350 375 400"
+			"explosion_radius"		"250"
 			"break_duration"
 			{
 				"value"											"2.5"
