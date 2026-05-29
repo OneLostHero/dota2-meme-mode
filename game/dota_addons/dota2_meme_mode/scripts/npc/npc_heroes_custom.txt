@@ -244,4 +244,81 @@
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 	}
+
+	//============================================================
+	//  Occupational Hazard  (custom hero, Necrophos base/look)
+	//  Q Spirit Siphon | W Bone Guard | E Heart Stopper Aura
+	//  R Finger of Death | Innate Storm Surge
+	//  Necro-caster/summoner/drain: aura attrition, skeletons, siphon, execute.
+	//============================================================
+	"npc_dota_hero_occupational_hazard"
+	{
+		"BaseClass"				"npc_dota_hero_necrolyte"
+		"HeroID"				"253"
+		"Enabled"				"1"
+		"Team"					"Good"
+		"TeamName"				"DOTA_TEAM_GOODGUYS"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
+
+		// Look + voice (Necrophos)
+		"Model"					"models/heroes/necrolyte/necrolyte.vmdl"
+		"ModelScale"			"1.000000"
+		"SoundSet"				"Hero_Necrolyte"
+		"GibType"				"default"
+		"Role"					"Nuker,Disabler,Pusher,Durable"
+		"Complexity"			"2"
+		"BotImplemented"		"0"
+
+		"Ability1"				"death_prophet_spirit_siphon"		// Q
+		"Ability2"				"skeleton_king_bone_guard"			// W
+		"Ability3"				"necrolyte_heartstopper_aura"		// E (passive aura)
+		"Ability4"				"generic_hidden"
+		"Ability5"				"generic_hidden"
+		"Ability6"				"lion_finger_of_death"				// R (ult)
+		"Ability7"				"razor_storm_surge"					// Innate
+
+		"Ability10"				"special_bonus_unique_necrophos_2"
+		"Ability11"				"special_bonus_unique_death_prophet_5"
+		"Ability12"				"special_bonus_unique_necrophos_5"
+		"Ability13"				"special_bonus_unique_death_prophet_3"
+		"Ability14"				"special_bonus_unique_razor_storm_surge_damage_and_slow"
+		"Ability15"				"special_bonus_health_250"
+		"Ability16"				"special_bonus_unique_lion_8"
+		"Ability17"				"special_bonus_magic_resistance_10"
+
+		// Attributes (Necrophos)
+		"AttributeBaseStrength"			"18"
+		"AttributeStrengthGain"			"2.300000"
+		"AttributeBaseIntelligence"		"21"
+		"AttributeIntelligenceGain"		"2.700000"
+		"AttributeBaseAgility"			"12"
+		"AttributeAgilityGain"			"1.300000"
+
+		// Combat (Necrophos)
+		"ArmorPhysical"			"2"
+		"MagicalResistance"		"25"
+		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"		"26"
+		"AttackDamageMax"		"30"
+		"AttackRate"			"1.700000"
+		"AttackAnimationPoint"	"0.300000"
+		"AttackAcquisitionRange"	"800"
+		"AttackRange"			"500"
+		"ProjectileModel"		"particles/units/heroes/hero_necrolyte/necrolyte_base_attack.vpcf"
+		"MovementSpeed"			"280"
+		"MovementTurnRate"		"0.500000"
+		"MovementCapabilities"	"DOTA_UNIT_CAP_MOVE_GROUND"
+		"VisionDaytimeRange"	"1800"
+		"VisionNighttimeRange"	"800"
+		"StatusHealth"			"200"
+		"StatusHealthRegen"		"0.25"
+		"StatusMana"			"75"
+		"StatusManaRegen"		"0.0"
+		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
+
+		// Classification
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}
 }

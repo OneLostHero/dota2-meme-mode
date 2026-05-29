@@ -24,6 +24,13 @@
 		"npc_dota_hero_moosestache_bio"		"A relentless momentum bruiser who charges across the battlefield, latches onto his prey to drain its strength, and freezes time to finish the job."
 		"npc_dota_hero_moosestache_hype"	"You can run. You'll just die tired."
 
+		// Custom hero — Occupational Hazard
+		"npc_dota_hero_occupational_hazard"			"Occupational Hazard"
+		"npc_dota_hero_occupational_hazard_bio"		"A grim attritionist who melts foes with a deathly aura, raises skeletal labor, siphons the life from his enemies, and points a single fatal finger at the survivor."
+		"npc_dota_hero_occupational_hazard_npedesc1"	"A caster-summoner who wins by attrition: stack aura and siphon damage while skeletons and Storm Surge wear the enemy down."
+		"npc_dota_hero_occupational_hazard_npedesc2"	"Open with Heart Stopper + Spirit Siphon, raise Bone Guard skeletons, then execute the survivor with Finger of Death."
+		"npc_dota_hero_occupational_hazard_hype"	"Death is just the cost of doing business."
+
 		// --- Lost Signal (Innate) ---
 		"DOTA_Tooltip_ability_onelosthero_lost_signal"				"Lost Signal"
 		"DOTA_Tooltip_ability_onelosthero_lost_signal_Description"	"Whenever OneLostHero breaks invisibility or emerges from being unseen, his next strike creates a brief Echo attack that deals bonus damage."
