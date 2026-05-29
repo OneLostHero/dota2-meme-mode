@@ -103,9 +103,12 @@
 		"TeamName"				"DOTA_TEAM_GOODGUYS"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 
-		// Look + voice: inherited from BaseClass (Kez) — no explicit Model override so we
-		// don't risk a wrong .vmdl path. Kez's dual-blade animations (incl. the ult/Raptor
-		// Dance cast) come for free. Set an explicit Model here once a custom .vmdl exists.
+		// Look + voice (Kez). Kez uses a modular model; the renderable body is kez_base.vmdl
+		// (there is no plain kez.vmdl — omitting Model gives an error model). Gives Kez's
+		// dual-blade animations incl. the ult/Raptor Dance cast. Swap to a custom .vmdl later.
+		"Model"					"models/heroes/kez/kez_base.vmdl"
+		"ModelScale"			"1.000000"
+		"SoundSet"				"Hero_Kez"
 		"GibType"				"default"
 		"Role"					"Escape,Nuker,Disabler"
 		"Complexity"			"3"
