@@ -89,14 +89,16 @@ function Echo:Create(owner, ability, vOrigin, opts)
 		onHeroAttacked   = opts.onHeroAttacked,
 		heroAttackFired  = false,
 		expired          = false,
+		moveDest         = opts.move_dest,
 	}
 
 	unit:AddNewModifier(owner, ability, "modifier_onelosthero_echo", {
-		duration    = opts.duration or 2.0,
-		killable    = opts.killable and 1 or 0,
-		dmg_pct     = opts.incoming_damage_pct or 100,
-		can_attack  = opts.can_attack and 1 or 0,
-		is_illusion = opts.illusion and 1 or 0,
+		duration      = opts.duration or 2.0,
+		killable      = opts.killable and 1 or 0,
+		dmg_pct       = opts.incoming_damage_pct or 100,
+		can_attack    = opts.can_attack and 1 or 0,
+		is_illusion   = opts.illusion and 1 or 0,
+		drive_forward = opts.drive_forward and 1 or 0,
 	})
 
 	owner.olh_active_echoes = owner.olh_active_echoes or {}
@@ -239,6 +241,28 @@ function modifier_onelosthero_echo:OnCreated(params)
 	self.dmgPct = (params and params.dmg_pct) or 100
 	self.canAttack = (params and params.can_attack == 1) or false
 	self.isIllusion = (params and params.is_illusion == 1) or false
+	if IsServer() and params and params.drive_forward == 1 then
+		self:StartIntervalThink(0.5)
+	end
+end
+
+-- Keep an autonomous Echo (False Hero) advancing toward its waypoint. Re-issues the
+-- attack-move only when it isn't already attacking something, so it still fights along the way
+-- but never just stalls after the initial order is dropped.
+function modifier_onelosthero_echo:OnIntervalThink()
+	if not IsServer() then return end
+	local unit = self:GetParent()
+	if not unit or unit:IsNull() or not unit:IsAlive() then return end
+	local data = unit.olh_echo
+	if not data or not data.moveDest then return end
+	if unit:GetAggroTarget() ~= nil then return end -- currently attacking; leave it
+	if (unit:GetAbsOrigin() - data.moveDest):Length2D() < 150 then return end -- arrived
+	ExecuteOrderFromTable({
+		UnitIndex = unit:entindex(),
+		OrderType = DOTA_UNIT_ORDER_ATTACK_MOVE,
+		Position = data.moveDest,
+		Queue = false,
+	})
 end
 
 function modifier_onelosthero_echo:CheckState()

@@ -37,9 +37,9 @@ function onelosthero_vanishing_point:OnSpellStart()
 	self._chargeDuration = chargeDuration
 	self._scepterEchoes = {}
 
-	-- The Raptor Dance cast animation (AbilityCastAnimation ACT_DOTA_CAST_ABILITY_4) plays
-	-- during the ability's cast point, i.e. BEFORE this runs — so it's visible before the
-	-- hero vanishes here.
+	-- Force the Raptor Dance gesture (ACT_DOTA_CAST_ABILITY_4 = the hero's ult cast animation
+	-- on the Kez model) so the flourish plays even though the charge applies right away.
+	caster:StartGesture(ACT_DOTA_CAST_ABILITY_4)
 	caster:AddNewModifier(caster, self, "modifier_onelosthero_vanishing_point_charge", { duration = chargeDuration })
 	caster:EmitSound("Hero_Nightstalker.Darkness")
 
@@ -205,14 +205,14 @@ function modifier_onelosthero_vanishing_point_fear:OnIntervalThink()
 		Queue = false,
 	})
 end
+-- Command-restricted only: the engine's FEARED state would override our scripted move-away
+-- orders, so we drive the flee ourselves (works on command-restricted units, which only blocks
+-- PLAYER input). The visible effect is the enemy running away from the burst.
 function modifier_onelosthero_vanishing_point_fear:CheckState()
-	return {
-		[MODIFIER_STATE_COMMAND_RESTRICTED] = true,
-		[MODIFIER_STATE_FEARED]             = true,
-	}
+	return { [MODIFIER_STATE_COMMAND_RESTRICTED] = true }
 end
 function modifier_onelosthero_vanishing_point_fear:GetEffectName()
-	return "particles/units/heroes/hero_terrorblade/terrorblade_sunder.vpcf"
+	return "particles/units/heroes/hero_spectre/spectre_desolate.vpcf"
 end
 function modifier_onelosthero_vanishing_point_fear:GetEffectAttachType()
 	return PATTACH_OVERHEAD_FOLLOW

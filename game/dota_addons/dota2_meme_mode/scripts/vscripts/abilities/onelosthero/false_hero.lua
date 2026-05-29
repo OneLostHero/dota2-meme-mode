@@ -101,6 +101,9 @@ function onelosthero_false_hero:CastFresh()
 	local invisDur     = self:GetSpecialValueFor("invis_duration")
 	local dmgPct       = self:GetSpecialValueFor("echo_attack_damage_pct")
 	local moveDist     = self:GetSpecialValueFor("echo_move_distance")
+	-- Far waypoint in the facing direction; the Echo's modifier keeps re-issuing the
+	-- attack-move toward it so it reliably advances even if the first order is dropped.
+	local dest = startPos + dir * math.max(moveDist, 3000)
 
 	-- real hero vanishes
 	caster:AddNewModifier(caster, self, "modifier_onelosthero_false_hero_invis", { duration = invisDur })
@@ -108,7 +111,7 @@ function onelosthero_false_hero:CastFresh()
 
 	-- A true illusion (Phantom-Lancer style) so it reads as the real hero. The illusion
 	-- modifier handles its damage in/out; our tracking modifier rides along for swap +
-	-- detonation. Deals echo_attack_damage_pct of the hero's damage, takes full damage.
+	-- detonation + forward-drive. Deals echo_attack_damage_pct of the hero's damage.
 	local echo = Echo:Create(caster, self, startPos, {
 		illusion = true,
 		outgoing_damage = dmgPct,
@@ -116,6 +119,8 @@ function onelosthero_false_hero:CastFresh()
 		duration = echoDuration,
 		killable = true,
 		canSwap = true,
+		drive_forward = true,
+		move_dest = dest,
 		source = "false_hero",
 		onExpire = function(u) self:OnEchoResolved(u:GetAbsOrigin(), 1.0) end,          -- 10s timeout -> detonate (teardown removes the unit)
 		onDeath = function(_) self:OnEchoLostNoBlast() end,                            -- killed by non-hero -> no blast
@@ -136,11 +141,7 @@ function onelosthero_false_hero:CastFresh()
 	self._echo = echo
 	self._mode = "swap"
 
-	-- Send the Echo forward in the hero's facing direction, attack-moving so it auto-attacks
-	-- along the way. Issued next frame: orders given to a freshly-created illusion on the same
-	-- frame are unreliable. The waypoint is far ahead so it keeps walking for the whole
-	-- duration unless the player redirects it.
-	local dest = startPos + dir * math.max(moveDist, 3000)
+	-- kick off movement immediately (the modifier re-issues thereafter)
 	Timers:CreateTimer(0.03, function()
 		if Echo:IsValid(echo) then
 			ExecuteOrderFromTable({
