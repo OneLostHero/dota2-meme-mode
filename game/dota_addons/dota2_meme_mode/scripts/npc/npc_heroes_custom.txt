@@ -96,17 +96,16 @@
 	//============================================================
 	"npc_dota_hero_onelosthero"
 	{
-		"BaseClass"				"npc_dota_hero_riki"			// REQUIRED: real base class so the hero spawns + renders. Riki is untouched.
+		"BaseClass"				"npc_dota_hero_kez"				// REQUIRED: real base class so the hero spawns + renders. Kez is untouched.
 		"HeroID"				"251"							// high, unused id (Flasaro is 250)
 		"Enabled"				"1"
 		"Team"					"Good"
 		"TeamName"				"DOTA_TEAM_GOODGUYS"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 
-		// Look + voice (Riki)
-		"Model"					"models/heroes/rikimaru/rikimaru.vmdl"
-		"ModelScale"			"0.870000"
-		"SoundSet"				"Hero_Riki"
+		// Look + voice: inherited from BaseClass (Kez) — no explicit Model override so we
+		// don't risk a wrong .vmdl path. Kez's dual-blade animations (incl. the ult/Raptor
+		// Dance cast) come for free. Set an explicit Model here once a custom .vmdl exists.
 		"GibType"				"default"
 		"Role"					"Escape,Nuker,Disabler"
 		"Complexity"			"3"
