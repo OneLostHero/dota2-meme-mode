@@ -1,12 +1,12 @@
 "use strict";
 // Custom hero portrait fix.
 //
-// Server-only custom heroes have no client portrait, so:
-//   - grid cell + top-bar image: plain images -> fixed simply by pointing them at
-//     our static PNGs (which now compile, see custom_hero_portrait.css).
-//   - the big pick-screen INSPECT portrait: a 3D/movie render panel that draws a
-//     black frame over any background for a custom hero. We can't recolor it, so we
-//     HIDE it and lay our static selection image on top.
+// Grid cards and top-bar hero images are DOTAHeroImage panels and render natively
+// from their `heroname` once the PNGs compile (see custom_hero_portrait.css).
+//
+// The only blank panel is the big pick-screen INSPECT portrait, which is a 3D/movie
+// render that shows nothing for a server-only custom hero. Fix: hide that render and
+// overlay a DOTAHeroImage whose `heroname` we set -- it draws the compiled portrait.
 //
 // Requires util.js (GetDotaHud) included first.
 
@@ -18,29 +18,8 @@ var CUSTOM_HEROES = {
 function IsCustomHero(name) {
     return name != null && name !== "" && CUSTOM_HEROES[name] === true;
 }
-function SelectionImg(name) { return 'url("file://{images}/heroes/selection/' + name + '.png")'; }
-function TopBarImg(name)    { return 'url("file://{images}/heroes/' + name + '.png")'; }
 
-function SetBg(panel, url) {
-    if (!panel) return;
-    panel.style.backgroundImage = url;
-    panel.style.backgroundSize = "100% 100%";
-    panel.style.backgroundPosition = "50% 50%";
-    panel.style.backgroundRepeat = "no-repeat";
-}
-
-// --- grid cells + any .heroname panel ---
-function PatchByHeroname(panel, depth) {
-    if (!panel || depth > 50) return;
-    var hero = null;
-    try { hero = panel.heroname; } catch (e) {}
-    if (IsCustomHero(hero)) SetBg(panel, SelectionImg(hero));
-    var kids = null;
-    try { kids = panel.Children(); } catch (e) {}
-    if (kids) { for (var i = 0; i < kids.length; i++) PatchByHeroname(kids[i], depth + 1); }
-}
-
-// Find the vanilla render panel (3D scene / movie / portrait) inside a container.
+// The vanilla render panel inside the inspect portrait (3D scene / movie / portrait).
 function FindRenderPanel(root, depth) {
     if (!root || depth > 10) return null;
     var pt = null;
@@ -57,105 +36,45 @@ function FindRenderPanel(root, depth) {
     return null;
 }
 
-// --- big inspect portrait: hide black render, overlay our static image ---
-function UpdateInspectPortrait(hud) {
-    var inspect = hud.FindChildTraverse("HeroInspectInfo");
-    if (!inspect) return;
-
+function LocalSelection() {
     var pid = Players.GetLocalPlayer();
     var info = pid >= 0 ? Game.GetPlayerInfo(pid) : null;
-    var sel = info ? (info.player_selected_hero || info.possible_hero_selection || "") : "";
-    var custom = IsCustomHero(sel);
-
-    var render = FindRenderPanel(inspect, 0);
-    var parent = render ? render.GetParent() : null;
-    if (!parent) return; // no render panel found -> don't risk covering the stats panel
-
-    var overlay = parent.FindChildTraverse("CustomHeroPortraitOverlay");
-
-    if (custom) {
-        if (render) render.style.opacity = "0.0";
-        if (!overlay) {
-            overlay = $.CreatePanel("Panel", parent, "CustomHeroPortraitOverlay");
-            overlay.style.position = "0px 0px 0px";
-            overlay.style.width = "100%";
-            overlay.style.height = "100%";
-            overlay.style.zIndex = "100";
-            overlay.style.backgroundSize = "100% 100%";
-            overlay.style.backgroundPosition = "50% 50%";
-            overlay.style.backgroundRepeat = "no-repeat";
-        }
-        overlay.style.backgroundImage = SelectionImg(sel);
-        overlay.visible = true;
-    } else {
-        if (overlay) overlay.visible = false;
-        if (render) render.style.opacity = "1.0";
-    }
-}
-
-function UpdateTopBar(hud) {
-    var rows = ["RadiantTeamPlayers", "DireTeamPlayers"];
-    for (var t = 0; t < rows.length; t++) {
-        var c = hud.FindChildTraverse(rows[t]);
-        if (!c) continue;
-        for (var j = 0; j < c.GetChildCount(); j++) {
-            var child = c.GetChild(j);
-            var img = child ? child.FindChildTraverse("HeroImage") : null;
-            var hn = null;
-            try { hn = img ? img.heroname : null; } catch (e) {}
-            if (img && IsCustomHero(hn)) SetBg(img, TopBarImg(hn));
-        }
-    }
-}
-
-// DIAGNOSTIC: stream the HeroInspectInfo panel tree to the server log (via Lua),
-// since $.Msg isn't visible in the server console. One event per panel. One-time.
-var g_dumped = false;
-function DumpTree(panel, depth) {
-    if (!panel || depth > 4) return;
-    var id = "", type = "", cls = "";
-    try { id = panel.id; } catch (e) {}
-    try { type = panel.paneltype; } catch (e) {}
-    try { cls = panel.GetClassList ? panel.GetClassList().join(",") : ""; } catch (e) {}
-    GameEvents.SendCustomGameEventToServer("chp_dump", { s: depth + " | " + id + " | " + type + " | " + cls });
-    var kids = null;
-    try { kids = panel.Children(); } catch (e) {}
-    if (kids) { for (var i = 0; i < kids.length && i < 30; i++) DumpTree(kids[i], depth + 1); }
-}
-function MaybeDump(hud) {
-    if (g_dumped) return;
-    var pid = Players.GetLocalPlayer();
-    var info = pid >= 0 ? Game.GetPlayerInfo(pid) : null;
-    var sel = info ? (info.player_selected_hero || info.possible_hero_selection || "") : "";
-    if (!IsCustomHero(sel)) return;
-    var inspect = hud.FindChildTraverse("HeroInspectInfo");
-    if (!inspect) return;
-    g_dumped = true;
-    GameEvents.SendCustomGameEventToServer("chp_dump", { s: "=== HeroInspectInfo tree (hero=" + sel + ") ===" });
-    DumpTree(inspect, 0);
+    return info ? (info.player_selected_hero || info.possible_hero_selection || "") : "";
 }
 
 function Run() {
     var hud = GetDotaHud();
     if (!hud) return;
-    var pg = hud.FindChildTraverse("PreGame") || hud.FindChildTraverse("HeroPickScreen");
-    if (pg) PatchByHeroname(pg, 0);
-    UpdateInspectPortrait(hud);
-    UpdateTopBar(hud);
-    MaybeDump(hud);
+    var inspect = hud.FindChildTraverse("HeroInspectInfo");
+    if (!inspect) return;
+
+    var render = FindRenderPanel(inspect, 0);
+    var parent = render ? render.GetParent() : null;
+    if (!parent) return; // don't risk covering the stats panel if no render panel found
+
+    var sel = LocalSelection();
+    var img = parent.FindChildTraverse("CustomHeroPortraitImage");
+
+    if (IsCustomHero(sel)) {
+        if (render) render.style.opacity = "0.0";
+        if (!img) {
+            img = $.CreatePanel("DOTAHeroImage", parent, "CustomHeroPortraitImage", { heroimagestyle: "portrait" });
+            img.style.position = "0px 0px 0px";
+            img.style.width = "100%";
+            img.style.height = "100%";
+            img.style.zIndex = "50";
+        }
+        if (img.heroname !== sel) {
+            try { img.heroname = sel; } catch (e) {}
+        }
+        img.visible = true;
+    } else {
+        if (img) img.visible = false;
+        if (render) render.style.opacity = "1.0";
+    }
 }
 
 (function () {
-    // DIAGNOSTIC alive-ping: fires unconditionally so we can confirm in the SERVER
-    // log whether this script is even running + the JS->Lua event pipe works.
-    var pings = 0;
-    function Alive() {
-        pings++;
-        GameEvents.SendCustomGameEventToServer("chp_dump", { s: "PORTRAIT SCRIPT ALIVE ping " + pings });
-        if (pings < 6) $.Schedule(2.0, Alive);
-    }
-    $.Schedule(1.0, Alive);
-
     GameEvents.Subscribe("dota_player_hero_selection_dirty", Run);
     GameEvents.Subscribe("dota_player_update_hero_selection", Run);
     function Tick() { Run(); $.Schedule(0.3, Tick); }
