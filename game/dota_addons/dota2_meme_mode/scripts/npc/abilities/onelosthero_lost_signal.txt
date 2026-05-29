@@ -7,7 +7,7 @@
 		"BaseClass"				"ability_lua"
 		"ScriptFile"			"abilities/onelosthero/lost_signal"
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE"
-		"AbilityType"			"ABILITY_TYPE_ATTRIBUTES"
+		"AbilityType"			"ABILITY_TYPE_BASIC"	// NOT ATTRIBUTES: that made the engine count the innate as a 9th talent and overflow the talent-tree UI (UpgradeName9 crash). Innate slot comes from "Innate" "1".
 		"AbilityTextureName"	"riki_permanent_invisibility"
 		"MaxLevel"				"1"
 		"Innate"				"1"		// show in the dedicated innate slot
