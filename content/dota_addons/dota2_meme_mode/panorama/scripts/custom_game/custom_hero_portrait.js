@@ -80,8 +80,13 @@ function PatchByHeroname(panel, depth) {
     var h = null; try { h = panel.heroname; } catch (e) {}
     if (IsCustomHero(h)) {
         SetBg(panel, SelectionImg(h));
+        // A DOTAHeroImage draws its own (blank, for a custom hero) render OVER the
+        // background, so the bg alone shows nothing -- we must lay the static image on
+        // TOP. This includes the small grid cards (~49x84), which are the panels the
+        // pick screen CSS-scales up on hover (their base size stays small, so the
+        // "enlarged preview" is the same panel). Exclude 0x0 (hidden) and full-screen.
         var w = PanelW(panel), ht = PanelH(panel);
-        if (w >= 90 && w <= 700 && ht >= 90 && ht <= 1000) OverlayOn(panel, h);
+        if (w >= 30 && w <= 700 && ht >= 30 && ht <= 1000) OverlayOn(panel, h);
     }
     var kids = null; try { kids = panel.Children(); } catch (e) {}
     if (kids) { for (var i = 0; i < kids.length; i++) PatchByHeroname(kids[i], depth + 1); }
