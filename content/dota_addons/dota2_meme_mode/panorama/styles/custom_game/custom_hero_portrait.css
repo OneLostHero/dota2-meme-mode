@@ -10,10 +10,15 @@
  *
  * IMPORTANT: reference ONLY images that exist. A missing source breaks the whole
  * CSS compile (and would disable this stylesheet). When a new custom hero gets art,
- * add its lines here. OneLostHero has no art yet -> intentionally not referenced.
+ * add its lines here.
  */
 
 .PrecacheImg_flasaro_selection { background-image: url("file://{images}/heroes/selection/npc_dota_hero_flasaro.png"); }
 .PrecacheImg_flasaro_portrait  { background-image: url("file://{images}/heroes/npc_dota_hero_flasaro.png"); }
 .PrecacheImg_flasaro_icon      { background-image: url("file://{images}/heroes/icons/npc_dota_hero_flasaro.png"); }
 .PrecacheImg_flasaro_crop      { background-image: url("file://{images}/heroes/crops/npc_dota_hero_flasaro.png"); }
+
+.PrecacheImg_onelosthero_selection { background-image: url("file://{images}/heroes/selection/npc_dota_hero_onelosthero.png"); }
+.PrecacheImg_onelosthero_portrait  { background-image: url("file://{images}/heroes/npc_dota_hero_onelosthero.png"); }
+.PrecacheImg_onelosthero_icon      { background-image: url("file://{images}/heroes/icons/npc_dota_hero_onelosthero.png"); }
+.PrecacheImg_onelosthero_crop      { background-image: url("file://{images}/heroes/crops/npc_dota_hero_onelosthero.png"); }

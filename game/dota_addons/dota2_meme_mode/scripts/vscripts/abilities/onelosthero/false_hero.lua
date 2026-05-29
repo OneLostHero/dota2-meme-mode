@@ -225,15 +225,18 @@ end
 --------------------------------------------------------------------------------
 modifier_onelosthero_false_hero_invis = class({})
 function modifier_onelosthero_false_hero_invis:IsPurgable() return false end
+function modifier_onelosthero_false_hero_invis:DeclareFunctions()
+	return { MODIFIER_PROPERTY_INVISIBILITY_LEVEL }
+end
+-- MODIFIER_STATE_INVISIBLE on its own frequently fails to hide the unit; the engine also
+-- needs a non-zero invisibility level. Declaring both is the reliable invis pattern.
+function modifier_onelosthero_false_hero_invis:GetModifierInvisibilityLevel()
+	return 1.0
+end
 function modifier_onelosthero_false_hero_invis:CheckState()
 	return { [MODIFIER_STATE_INVISIBLE] = true }
 end
-function modifier_onelosthero_false_hero_invis:GetEffectName()
-	return "particles/units/heroes/hero_spectre/spectre_desolate.vpcf"
-end
-function modifier_onelosthero_false_hero_invis:GetEffectAttachType()
-	return PATTACH_ABSORIGIN_FOLLOW
-end
+-- No follow particle on purpose: a vanish shouldn't leave a tell-tale effect on the hero.
 
 --------------------------------------------------------------------------------
 -- Break debuff
