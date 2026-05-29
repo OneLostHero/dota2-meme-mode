@@ -5,6 +5,9 @@
 	{
 		"addon_game_name"			"Dota 2 - Meme Mode"
 
+		// ---- Custom heroes ----
+		"npc_dota_hero_flasaro"				"Flasaro"
+
 		"DOTA_TEAM_ALL"														"All"
 		"DOTA_TEAM_CUSTOM_1"												"The Chaos"
 		"DOTA_TEAM_CUSTOM_2"												"The Order"
