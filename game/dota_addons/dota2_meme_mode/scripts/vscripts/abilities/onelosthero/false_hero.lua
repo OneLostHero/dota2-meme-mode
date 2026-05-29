@@ -233,10 +233,10 @@ function onelosthero_false_hero:Detonate(pos, mult)
 	local radius = self:GetSpecialValueFor("explosion_radius")
 	local breakDur = self:GetSpecialValueFor("break_duration")
 
-	-- Visible radial AOE blast (the old terrorblade_sunder is a unit-to-unit beam and renders
-	-- nothing at a world point). doppelganger_aoe is a clear ground burst scaled to the radius.
-	-- doppelganger_aoe loops, so it must be explicitly destroyed or it lingers forever.
-	local p = ParticleManager:CreateParticle("particles/units/heroes/hero_phantom_lancer/phantom_lancer_doppelganger_aoe.vpcf", PATTACH_WORLDORIGIN, nil)
+	-- Visible radial AOE blast at the world point. nightstalker_void is a clear ground burst
+	-- that loads in this build (doppelganger_aoe does not); scale it to the radius via CP1/CP2.
+	-- It loops, so it must be explicitly destroyed or it lingers forever.
+	local p = ParticleManager:CreateParticle("particles/units/heroes/hero_night_stalker/nightstalker_void.vpcf", PATTACH_WORLDORIGIN, nil)
 	ParticleManager:SetParticleControl(p, 0, pos)
 	ParticleManager:SetParticleControl(p, 1, Vector(radius, radius, radius))
 	ParticleManager:SetParticleControl(p, 2, Vector(radius, radius, radius))
@@ -247,7 +247,7 @@ function onelosthero_false_hero:Detonate(pos, mult)
 		ParticleManager:DestroyParticle(p, false);  ParticleManager:ReleaseParticleIndex(p)
 		ParticleManager:DestroyParticle(p2, false); ParticleManager:ReleaseParticleIndex(p2)
 	end)
-	EmitSoundOnLocationWithCaster(pos, "Hero_PhantomLancer.Doppelganger", caster)
+	EmitSoundOnLocationWithCaster(pos, "Hero_NightStalker.Void", caster)
 
 	for _, enemy in pairs(Echo:FindEnemiesInRadius(caster, pos, radius)) do
 		if enemy and not enemy:IsNull() then

@@ -42,7 +42,7 @@
 		{
 			"particle"		"particles/units/heroes/hero_riki/riki_backstab.vpcf"
 			"particle"		"particles/units/heroes/hero_phantom_assassin/phantom_assassin_stifling_dagger.vpcf"
-			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_riki.vsndevts"
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_phantom_assassin.vsndevts"
 		}
 	}
 }

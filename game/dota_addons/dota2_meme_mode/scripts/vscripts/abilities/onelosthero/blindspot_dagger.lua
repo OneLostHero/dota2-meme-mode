@@ -34,25 +34,37 @@ function onelosthero_blindspot_dagger:OnSpellStart()
 		end
 	end
 
-	-- ---- Cast branch ----
+	-- ---- Cast branch: throw a dagger that marks the target on impact ----
 	local target = self:GetCursorTarget()
 	if not target or target:IsNull() then return end
 	self._lastManaCost = self:GetManaCost(self:GetLevel() - 1)
 
-	local daggerDamage = self:GetSpecialValueFor("dagger_damage")
-	local markDuration = self:GetSpecialValueFor("mark_duration")
+	Echo:PlayGesture(caster, { "ACT_DOTA_CAST_ABILITY_2", "ACT_DOTA_ATTACK" })
+	caster:EmitSound("Hero_PhantomAssassin.Dagger.Cast")
+	ProjectileManager:CreateTrackingProjectile({
+		Target = target,
+		Source = caster,
+		Ability = self,
+		EffectName = "particles/units/heroes/hero_phantom_assassin/phantom_assassin_stifling_dagger.vpcf",
+		iMoveSpeed = 1400,
+		vSourceLoc = caster:GetAbsOrigin(),
+		bDodgeable = true,
+		bIsAttack = false,
+	})
+end
 
-	-- Kez's Sai Talon Toss activity isn't exposed by the engine, so use the quick katana strike
-	-- as the closest available, with the generic cast as fallback.
-	Echo:PlayGesture(caster, { "ACT_DOTA_KEZ_KATANA_IMPALE_FAST", "ACT_DOTA_CAST_ABILITY_2" })
-	ParticleManager:CreateParticle("particles/units/heroes/hero_phantom_assassin/phantom_assassin_stifling_dagger.vpcf", PATTACH_ABSORIGIN_FOLLOW, target)
-	caster:EmitSound("Hero_PhantomAssassin.Dagger.Target")
-
+-- Dagger lands: deal damage and apply the mark.
+function onelosthero_blindspot_dagger:OnProjectileHit(target, location)
+	if not IsServer() then return true end
+	if not target or target:IsNull() or not target:IsAlive() then return true end
+	local caster = self:GetCaster()
+	target:EmitSound("Hero_PhantomAssassin.Dagger.Target")
 	ApplyDamage({
-		victim = target, attacker = caster, damage = daggerDamage,
+		victim = target, attacker = caster, damage = self:GetSpecialValueFor("dagger_damage"),
 		damage_type = DAMAGE_TYPE_MAGICAL, ability = self,
 	})
-	target:AddNewModifier(caster, self, "modifier_onelosthero_blindspot_dagger_mark", { duration = markDuration })
+	target:AddNewModifier(caster, self, "modifier_onelosthero_blindspot_dagger_mark", { duration = self:GetSpecialValueFor("mark_duration") })
+	return true
 end
 
 -- Called by the mark when a valid backstab attack lands.
@@ -126,12 +138,8 @@ function modifier_onelosthero_blindspot_dagger_mark:OnAttackLanded(event)
 	ability:TriggerEchoStrike(parent)
 	self:Destroy()
 end
-function modifier_onelosthero_blindspot_dagger_mark:GetEffectName()
-	return "particles/units/heroes/hero_riki/riki_smoke_screen_dustfield.vpcf"
-end
-function modifier_onelosthero_blindspot_dagger_mark:GetEffectAttachType()
-	return PATTACH_OVERHEAD_FOLLOW
-end
+-- No overhead particle: the thrown-dagger impact and the slow read the mark clearly, and
+-- the riki dustfield particle this used to reference doesn't exist in this build.
 
 --------------------------------------------------------------------------------
 -- Silence

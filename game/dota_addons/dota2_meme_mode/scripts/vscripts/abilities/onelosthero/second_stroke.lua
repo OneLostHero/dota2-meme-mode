@@ -55,7 +55,7 @@ function onelosthero_second_stroke:OnSpellStart()
 			self._echo, self._swapUntil = nil, nil
 			local dir = (heroOrigin - echoPos); dir.z = 0
 			if dir:Length2D() > 1 then caster:SetForwardVector(dir:Normalized()) end
-			Echo:PlayGesture(caster, { "ACT_DOTA_KEZ_KATANA_IMPALE", "ACT_DOTA_CAST_ABILITY_1" })
+			Echo:PlayGesture(caster, { "ACT_DOTA_ATTACK", "ACT_DOTA_CAST_ABILITY_1" })
 			self:SlashVFX(echoPos, heroOrigin)
 			self:DamageRadius(caster, heroOrigin, radius, damage * (echoPct / 100))
 			Timers:CreateTimer(0.05, function() if echo and not echo:IsNull() then Echo:Expire(echo) end end)

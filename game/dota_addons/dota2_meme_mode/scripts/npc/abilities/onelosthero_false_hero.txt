@@ -52,9 +52,10 @@
 		"precache"
 		{
 			"particle"		"particles/units/heroes/hero_terrorblade/terrorblade_mirror_image.vpcf"
-			"particle"		"particles/units/heroes/hero_phantom_lancer/phantom_lancer_doppelganger_aoe.vpcf"
+			"particle"		"particles/units/heroes/hero_night_stalker/nightstalker_void.vpcf"
 			"particle"		"particles/units/heroes/hero_spectre/spectre_desolate.vpcf"
 			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_terrorblade.vsndevts"
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_nightstalker.vsndevts"
 		}
 	}
 }

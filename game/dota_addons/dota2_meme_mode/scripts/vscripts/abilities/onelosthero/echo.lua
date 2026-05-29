@@ -169,7 +169,8 @@ function Echo:RemoveSafely(unit)
 		end
 	end
 	destroyAmbient(unit)
-	ParticleManager:CreateParticle("particles/units/heroes/hero_void_spirit/void_spirit_astral_step.vpcf", PATTACH_ABSORIGIN, unit)
+	local px = ParticleManager:CreateParticle("particles/items_fx/blink_dagger_start.vpcf", PATTACH_ABSORIGIN, unit)
+	ParticleManager:ReleaseParticleIndex(px)
 	if unit:IsAlive() then unit:ForceKill(false) end
 	unit:RemoveSelf()
 end
@@ -209,8 +210,13 @@ function Echo:Swap(caster, echo)
 	FindClearSpaceForUnit(echo, casterPos, true)
 	echo:SetForwardVector(casterFwd)
 
-	ParticleManager:CreateParticle("particles/units/heroes/hero_void_spirit/void_spirit_astral_step.vpcf", PATTACH_ABSORIGIN, caster)
-	caster:EmitSound("Hero_VoidSpirit.AstralStep.Cast")
+	-- Blink-style teleport VFX (these particles are confirmed present — the mod's drteaspoon
+	-- blink uses them). Clearly reads as "swapped places."
+	local p1 = ParticleManager:CreateParticle("particles/items_fx/blink_dagger_start.vpcf", PATTACH_ABSORIGIN, echo)
+	ParticleManager:ReleaseParticleIndex(p1)
+	local p2 = ParticleManager:CreateParticle("particles/items_fx/blink_dagger_end.vpcf", PATTACH_ABSORIGIN, caster)
+	ParticleManager:ReleaseParticleIndex(p2)
+	caster:EmitSound("DOTA_Item.BlinkDagger.Activate")
 	return casterPos
 end
 
