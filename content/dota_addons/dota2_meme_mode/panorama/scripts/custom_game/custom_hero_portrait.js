@@ -17,10 +17,6 @@ var CUSTOM_SHORT = {
     "onelosthero": true,
 };
 
-// Set to true to show the on-screen panel readout used to locate the hover-preview
-// panel. Leave false in normal play.
-var CHP_DIAG = true;
-
 function ShortName(n) { if (n == null) return ""; return n.indexOf("npc_dota_hero_") === 0 ? n.substring(14) : n; }
 function FullName(n)  { if (n == null || n === "") return ""; return n.indexOf("npc_dota_hero_") === 0 ? n : ("npc_dota_hero_" + n); }
 function IsCustomHero(n) { var s = ShortName(n); return s !== "" && CUSTOM_SHORT[s] === true; }
@@ -157,53 +153,6 @@ function UpdateTopBar(root) {
     }
 }
 
-// TEMPORARY: on-screen readout. Lists every custom-hero panel under PreGame with its
-// type / size / visibility / first children, so the enlarged hover-preview panel can
-// be identified. Hover a custom hero and screenshot. Disable via CHP_DIAG = false.
-var g_readout = null;
-function Readout(root) {
-    if (!g_readout) {
-        var ctx = $.GetContextPanel();
-        g_readout = $.CreatePanel("Label", ctx, "ChpReadout");
-        g_readout.html = true;
-        g_readout.style.position = "20px 90px 0px";
-        g_readout.style.zIndex = "10000";
-        g_readout.style.color = "#ffec70";
-        g_readout.style.backgroundColor = "#000000dd";
-        g_readout.style.padding = "8px";
-        g_readout.style.fontSize = "15px";
-        g_readout.style.maxWidth = "1100px";
-        try { g_readout.hittest = false; } catch (e) {}
-    }
-    var lines = [];
-    lines.push("sel=" + LocalSelection() + "  (custom-heroname panels under PreGame)");
-    var seen = 0;
-    function walk(p, d) {
-        if (!p || d > 80 || seen > 30) return;
-        var hn = null; try { hn = p.heroname; } catch (e) {}
-        if (IsCustomHero(hn)) {
-            var pt = ""; try { pt = p.paneltype; } catch (e) {}
-            var id = ""; try { id = p.id; } catch (e) {}
-            var w = PanelW(p), h = PanelH(p);
-            var vis = false; try { vis = p.visible; } catch (e) {}
-            var ck = "";
-            var kids = null; try { kids = p.Children(); } catch (e) {}
-            if (kids) { for (var i = 0; i < kids.length && i < 4; i++) {
-                var c = kids[i], cpt = "", cid = "";
-                try { cpt = c.paneltype; } catch (e) {}
-                try { cid = c.id; } catch (e) {}
-                ck += " [" + cpt + ":" + cid + "]";
-            } }
-            lines.push(pt + " #" + id + " " + Math.round(w) + "x" + Math.round(h) + " vis=" + vis + " kids" + ck);
-            seen++;
-        }
-        var kids2 = null; try { kids2 = p.Children(); } catch (e) {}
-        if (kids2) { for (var j = 0; j < kids2.length; j++) walk(kids2[j], d + 1); }
-    }
-    walk(root, 0);
-    g_readout.text = lines.join("<br/>");
-}
-
 function Run() {
     try {
         var root = Root();
@@ -212,7 +161,6 @@ function Run() {
         PatchByHeroname(pg, 0);
         UpdateInspect(root);
         UpdateTopBar(root);
-        if (CHP_DIAG) Readout(pg);
     } catch (e) {}
 }
 
