@@ -56,7 +56,7 @@ function onelosthero_second_stroke:OnSpellStart()
 			local dir = (heroOrigin - echoPos); dir.z = 0
 			if dir:Length2D() > 1 then caster:SetForwardVector(dir:Normalized()) end
 			Echo:PlayGesture(caster, { "ACT_DOTA_ATTACK", "ACT_DOTA_CAST_ABILITY_1" })
-			self:SlashVFX(echoPos, heroOrigin)
+			self:SlashVFX(heroOrigin, radius)
 			self:DamageRadius(caster, heroOrigin, radius, damage * (echoPct / 100))
 			Timers:CreateTimer(0.05, function() if echo and not echo:IsNull() then Echo:Expire(echo) end end)
 			self:StartCooldown(cd)
@@ -81,7 +81,7 @@ function onelosthero_second_stroke:OnSpellStart()
 	-- hero Echo-Slash cast animation + visible slash, radius damage, then dash forward
 	caster:StartGesture(ACT_DOTA_CAST_ABILITY_1)
 	caster:EmitSound("Hero_VoidSpirit.AstralStep.Cast")
-	self:SlashVFX(startPos, endPos)
+	self:SlashVFX(endPos, radius)
 	self:DamageRadius(caster, endPos, radius, damage)
 	caster:SetAbsOrigin(endPos)
 	FindClearSpaceForUnit(caster, endPos, false)
@@ -107,7 +107,7 @@ function onelosthero_second_stroke:OnSpellStart()
 		self._echo = nil
 		self._swapUntil = nil
 		echo:EmitSound("Hero_VoidSpirit.AstralStep.Cast")
-		self:SlashVFX(startPos, endPos)
+		self:SlashVFX(endPos, radius)
 		self:DamageRadius(caster, endPos, radius, damage * (echoPct / 100))
 		self:DashUnit(echo, startPos, endPos, dashSpeed, function()
 			if echo and not echo:IsNull() then Echo:Expire(echo) end
@@ -116,14 +116,31 @@ function onelosthero_second_stroke:OnSpellStart()
 	end)
 end
 
--- Visible slash sweep (brief; auto-destroyed so it never lingers — blade_fury loops otherwise).
-function onelosthero_second_stroke:SlashVFX(startPos, endPos)
+-- Visible slash that covers the full strike radius, centered on where the damage lands.
+-- A spinning blade aura (blade_fury, ~250u) fills the area, ringed by outward-facing blade
+-- slashes so the hit zone reads clearly. Brief + explicitly destroyed (blade_fury loops).
+function onelosthero_second_stroke:SlashVFX(center, radius)
 	local p = ParticleManager:CreateParticle("particles/units/heroes/hero_juggernaut/juggernaut_blade_fury.vpcf", PATTACH_WORLDORIGIN, nil)
-	ParticleManager:SetParticleControl(p, 0, (startPos + endPos) * 0.5)
-	ParticleManager:SetParticleControl(p, 1, endPos)
+	ParticleManager:SetParticleControl(p, 0, center)
+	ParticleManager:SetParticleControl(p, 1, Vector(radius, radius, radius))
+	ParticleManager:SetParticleControl(p, 3, Vector(radius, 0, 0))
+
+	local blades = {}
+	local count = 10
+	for i = 1, count do
+		local ang = (i / count) * 2 * math.pi
+		local dir = Vector(math.cos(ang), math.sin(ang), 0)
+		local b = ParticleManager:CreateParticle("particles/units/heroes/hero_riki/riki_backstab.vpcf", PATTACH_WORLDORIGIN, nil)
+		ParticleManager:SetParticleControl(b, 0, center + dir * radius)
+		ParticleManager:SetParticleControlForward(b, 0, dir)
+		blades[i] = b
+	end
+
 	Timers:CreateTimer(0.5, function()
-		ParticleManager:DestroyParticle(p, false)
-		ParticleManager:ReleaseParticleIndex(p)
+		ParticleManager:DestroyParticle(p, false); ParticleManager:ReleaseParticleIndex(p)
+		for _, b in ipairs(blades) do
+			ParticleManager:DestroyParticle(b, false); ParticleManager:ReleaseParticleIndex(b)
+		end
 	end)
 end
 

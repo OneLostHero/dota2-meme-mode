@@ -22,8 +22,8 @@
 		"AbilityValues"
 		{
 			"slash_distance"		"450 500 550 600"
-			"slash_width"			"140"
-			"strike_radius"			"200"	// each strike (hero, echo repeat, swap) hits this radius
+			"slash_width"			"250"
+			"strike_radius"			"250"	// each strike (hero, echo repeat, swap) hits this radius; VFX covers it
 			"damage"				"80 130 180 230"
 			"echo_delay"			"0.35"
 			"echo_damage_pct"
@@ -38,8 +38,8 @@
 
 		"precache"
 		{
-			"particle"		"particles/units/heroes/hero_void_spirit/void_spirit_astral_step.vpcf"
 			"particle"		"particles/units/heroes/hero_juggernaut/juggernaut_blade_fury.vpcf"
+			"particle"		"particles/units/heroes/hero_riki/riki_backstab.vpcf"
 			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_void_spirit.vsndevts"
 		}
 	}

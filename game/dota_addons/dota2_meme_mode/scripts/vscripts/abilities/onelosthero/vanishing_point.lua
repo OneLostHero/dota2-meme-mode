@@ -82,14 +82,8 @@ function onelosthero_vanishing_point:Release()
 	local echoBurstPct = self:GetSpecialValueFor("echo_burst_damage_pct")
 	local pos = caster:GetAbsOrigin()
 
-	-- main burst VFX/SFX
-	local pfx = ParticleManager:CreateParticle("particles/units/heroes/hero_night_stalker/nightstalker_void.vpcf", PATTACH_WORLDORIGIN, nil)
-	ParticleManager:SetParticleControl(pfx, 0, pos)
-	ParticleManager:SetParticleControl(pfx, 1, Vector(radius, radius, radius))
-	Timers:CreateTimer(2.0, function()
-		ParticleManager:DestroyParticle(pfx, false)
-		ParticleManager:ReleaseParticleIndex(pfx)
-	end)
+	-- reappear flourish + burst SFX (the ring/area VFX is drawn per-location inside BurstAt)
+	Echo:PlayGesture(caster, { "ACT_DOTA_KEZ_KATANA_IMPALE", "ACT_DOTA_ATTACK" })
 	caster:EmitSound("Hero_Nightstalker.Void")
 
 	self:BurstAt(caster, pos, finalDamage, fearDuration, radius, 100)
@@ -130,6 +124,7 @@ end
 -- Damage + fear all enemies around a point. Fear respects debuff immunity unless the
 -- lvl25 talent is taken (then it pierces). Scepter Echo bursts inherit this via the same path.
 function onelosthero_vanishing_point:BurstAt(caster, pos, damage, fearDuration, radius, _pct)
+	self:BurstVFX(pos, radius)
 	local pierce = self:FearPiercesImmunity()
 	for _, enemy in pairs(Echo:FindEnemiesInRadius(caster, pos, radius)) do
 		if enemy and not enemy:IsNull() then
@@ -145,6 +140,34 @@ function onelosthero_vanishing_point:BurstAt(caster, pos, damage, fearDuration, 
 			end
 		end
 	end
+end
+
+-- Visible release: a center void burst plus a ring of outward-facing blade slashes placed
+-- around the edge of the radius, so the affected area reads as the design's "ring of blades."
+-- Every particle here is confirmed present in this build. void/blade effects loop, so all of
+-- them are explicitly destroyed on a short timer (otherwise they linger forever).
+function onelosthero_vanishing_point:BurstVFX(pos, radius)
+	local center = ParticleManager:CreateParticle("particles/units/heroes/hero_night_stalker/nightstalker_void.vpcf", PATTACH_WORLDORIGIN, nil)
+	ParticleManager:SetParticleControl(center, 0, pos)
+	ParticleManager:SetParticleControl(center, 1, Vector(radius, radius, radius))
+
+	local blades = {}
+	local count = 16
+	for i = 1, count do
+		local ang = (i / count) * 2 * math.pi
+		local dir = Vector(math.cos(ang), math.sin(ang), 0)
+		local b = ParticleManager:CreateParticle("particles/units/heroes/hero_riki/riki_backstab.vpcf", PATTACH_WORLDORIGIN, nil)
+		ParticleManager:SetParticleControl(b, 0, pos + dir * radius)
+		ParticleManager:SetParticleControlForward(b, 0, dir)
+		blades[i] = b
+	end
+
+	Timers:CreateTimer(2.0, function()
+		ParticleManager:DestroyParticle(center, false); ParticleManager:ReleaseParticleIndex(center)
+		for _, b in ipairs(blades) do
+			ParticleManager:DestroyParticle(b, false); ParticleManager:ReleaseParticleIndex(b)
+		end
+	end)
 end
 
 --------------------------------------------------------------------------------
