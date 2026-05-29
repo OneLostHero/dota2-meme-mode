@@ -8,4 +8,9 @@ content/dota_addons/dota2_meme_mode/localaccountrecord.txt
 *.bin
 *.vpk
 *.vmdl_c
+*.vsndevts_c
 game/dota_addons/dota2_meme_mode/panorama_debugger.cfg
+
+# Workshop Tools local caches (regenerated; never commit)
+tools_thumbnail_cache.sqlite3*
+tools_asset_info.bin
