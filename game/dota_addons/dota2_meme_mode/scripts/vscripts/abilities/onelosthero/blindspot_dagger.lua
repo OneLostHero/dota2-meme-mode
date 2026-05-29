@@ -42,6 +42,8 @@ function onelosthero_blindspot_dagger:OnSpellStart()
 	local daggerDamage = self:GetSpecialValueFor("dagger_damage")
 	local markDuration = self:GetSpecialValueFor("mark_duration")
 
+	-- Talon Toss: Kez's Sai-stance throw animation (best-guess activity names, safe fallback).
+	Echo:PlayGesture(caster, { "ACT_DOTA_KEZ_SAI_TALON_TOSS", "ACT_DOTA_KEZ_TALON_TOSS", "ACT_DOTA_KEZ_SAI_THROW", "ACT_DOTA_CAST_ABILITY_2" })
 	ParticleManager:CreateParticle("particles/units/heroes/hero_phantom_assassin/phantom_assassin_stifling_dagger.vpcf", PATTACH_ABSORIGIN_FOLLOW, target)
 	caster:EmitSound("Hero_PhantomAssassin.Dagger.Target")
 

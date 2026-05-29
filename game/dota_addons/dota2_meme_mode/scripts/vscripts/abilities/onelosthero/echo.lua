@@ -239,6 +239,20 @@ function Echo:IsBehindOrSide(attacker, target, angleDeg)
 	return math.deg(math.acos(dot)) <= (angleDeg / 2)
 end
 
+-- Play the first activity (by global enum name) that actually exists on this build, as a
+-- gesture. Lets us use Kez's specific ability activities with safe fallbacks: an unknown
+-- enum name is just skipped (no error, no T-pose).
+function Echo:PlayGesture(unit, names)
+	for _, n in ipairs(names) do
+		local act = _G[n]
+		if act ~= nil then
+			unit:StartGesture(act)
+			return n
+		end
+	end
+	return nil
+end
+
 ------------------------------------------------------------------------------------
 -- modifier_onelosthero_echo — fragile / non-farming / afterimage state holder
 ------------------------------------------------------------------------------------

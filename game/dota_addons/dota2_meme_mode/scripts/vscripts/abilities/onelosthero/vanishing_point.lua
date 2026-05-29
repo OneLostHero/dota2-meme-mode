@@ -37,9 +37,8 @@ function onelosthero_vanishing_point:OnSpellStart()
 	self._chargeDuration = chargeDuration
 	self._scepterEchoes = {}
 
-	-- Force the Raptor Dance gesture (ACT_DOTA_CAST_ABILITY_4 = the hero's ult cast animation
-	-- on the Kez model) so the flourish plays even though the charge applies right away.
-	caster:StartGesture(ACT_DOTA_CAST_ABILITY_4)
+	-- Raptor Dance: Kez's katana-stance ult cast animation (confirmed activity from the model).
+	Echo:PlayGesture(caster, { "ACT_DOTA_KEZ_KATANA_ULT_START", "ACT_DOTA_CAST_ABILITY_4" })
 	caster:AddNewModifier(caster, self, "modifier_onelosthero_vanishing_point_charge", { duration = chargeDuration })
 	caster:EmitSound("Hero_Nightstalker.Darkness")
 

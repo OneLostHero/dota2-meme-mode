@@ -30,38 +30,18 @@ function modifier_onelosthero_lost_signal:OnCreated()
 	self.wasInvisible = false
 	if IsServer() then
 		self:StartIntervalThink(0.1)
-		-- TEMP DIAGNOSTIC: list the hero's actual ability slots a moment after spawn so we can
-		-- see whether the custom talents (slots 10-17) loaded or got replaced. Remove once the
-		-- talent tree is confirmed. (Also: if this never prints, the innate modifier isn't
-		-- applying — itself a clue.)
-		local h = self:GetParent()
+		-- TEMP DIAGNOSTIC: list every Kez activity enum the engine exposes, so we can map the
+		-- exact Echo Slash / Talon Toss / Raptor Dance cast animations. Remove once set.
 		Timers:CreateTimer(2.0, function()
-			if not h or h:IsNull() then return end
-			print("=== [OneLostHero] ability/talent slots ===")
-			for i = 0, 17 do
-				local a = h:GetAbilityByIndex(i)
-				if a then print(string.format("  slot %d: %s (lvl %d)", i, a:GetAbilityName(), a:GetLevel())) end
+			local acts = {}
+			for k, _ in pairs(_G) do
+				if type(k) == "string" and (string.find(k, "ACT_DOTA_KEZ") or string.find(k, "RAPTOR") or string.find(k, "TALON") or string.find(k, "ECHO_SLASH")) then
+					acts[#acts + 1] = k
+				end
 			end
-			-- Is the talents file itself loadable + does it define our talents?
-			local kv = LoadKeyValues("scripts/npc/abilities/onelosthero_talents.txt")
-			if kv and kv["DOTAAbilities"] then
-				for k, _ in pairs(kv["DOTAAbilities"]) do print("  talents.txt defines: " .. tostring(k)) end
-			elseif kv then
-				for k, _ in pairs(kv) do print("  talents.txt ROOT key: " .. tostring(k)) end
-			else
-				print("  talents.txt FAILED to load (nil)")
-			end
-			-- Is each ability REGISTERED in the engine? AddAbility returns a handle if the
-			-- engine knows the KV, nil if it's unknown. Compare a vanilla talent vs ours.
-			for _, n in ipairs({
-				"special_bonus_attack_speed_15",                  -- vanilla control
-				"special_bonus_unique_onelosthero_invis",         -- ours
-				"special_bonus_unique_onelosthero_charges",       -- ours
-			}) do
-				local ok, added = pcall(function() return h:AddAbility(n) end)
-				print("  AddAbility(" .. n .. ") ok=" .. tostring(ok) .. " handle=" .. tostring(added))
-				if ok and added then pcall(function() h:RemoveAbilityByHandle(added) end) end
-			end
+			table.sort(acts)
+			print("=== [OneLostHero] Kez activities (" .. #acts .. ") ===")
+			for _, k in ipairs(acts) do print("   " .. k) end
 			print("=== [OneLostHero] end ===")
 		end)
 	end
