@@ -57,9 +57,15 @@ function OverlayOn(panel, hero) {
     if (!parent) return;
     var w = Math.round(PanelW(panel)), h = Math.round(PanelH(panel));
     if (w < 1 || h < 1) return; // layout not ready yet
+    // Offset of the image within its parent, via reliable window-space positions
+    // (actualx/yoffset isn't a real panel property -- it defaulted to 0 and dropped the
+    // overlay at the parent's corner instead of over the card).
     var ox = 0, oy = 0;
-    try { ox = Math.round(panel.actualxoffset) || 0; } catch (e) {}
-    try { oy = Math.round(panel.actualyoffset) || 0; } catch (e) {}
+    try {
+        var ip = panel.GetPositionWithinWindow();
+        var pp = parent.GetPositionWithinWindow();
+        if (ip && pp) { ox = Math.round(ip.x - pp.x); oy = Math.round(ip.y - pp.y); }
+    } catch (e) {}
     // Unique id per hero so two custom heroes sharing a parent can't collide.
     var id = "ChpStaticOverlay_" + ShortName(hero);
     var ov = null;
