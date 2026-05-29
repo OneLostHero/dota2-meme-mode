@@ -55,22 +55,29 @@ function LocalSelection() {
 // a plain background-image. Bounded by caller to card-sized panels so it can never
 // cover the whole screen (the bug when this was applied to a full-screen render panel).
 function OverlayOn(panel, hero) {
-    // Size the overlay in EXPLICIT PIXELS from the panel's measured size. A child of a
-    // DOTAHeroImage with width/height:100% resolves to a zero-size box (the image panel
-    // gives percentage children nothing to fill), so the overlay rendered blank.
+    // A DOTAHeroImage paints its own (blank, for a custom hero) texture OVER its child
+    // panels, so an overlay added as a CHILD never shows. Add it to the PARENT as a
+    // SIBLING instead (the pattern UpdateInspect already proves works), sized in pixels
+    // to match the image and placed at the image's top-left. Sibling lives inside the
+    // same slot container, so the pick screen's hover scale transform scales it too.
+    var parent = panel.GetParent ? panel.GetParent() : null;
+    if (!parent) return;
     var w = Math.round(PanelW(panel)), h = Math.round(PanelH(panel));
     if (w < 1 || h < 1) return; // layout not ready yet
+    var ox = 0, oy = 0;
+    try { ox = Math.round(panel.actualxoffset) || 0; } catch (e) {}
+    try { oy = Math.round(panel.actualyoffset) || 0; } catch (e) {}
     var ov = null;
-    try { ov = panel.FindChild("ChpStaticOverlay"); } catch (e) {}
+    try { ov = parent.FindChild("ChpStaticOverlay"); } catch (e) {}
     if (!ov) {
-        ov = $.CreatePanel("Panel", panel, "ChpStaticOverlay");
-        ov.style.position = "0px 0px 0px";
-        ov.style.zIndex = "40";
+        ov = $.CreatePanel("Panel", parent, "ChpStaticOverlay");
+        ov.style.zIndex = "60";
         ov.style.backgroundSize = "100% 100%";
         ov.style.backgroundPosition = "50% 50%";
         ov.style.backgroundRepeat = "no-repeat";
         try { ov.hittest = false; } catch (e) {}
     }
+    ov.style.position = ox + "px " + oy + "px 0px";
     ov.style.width = w + "px";
     ov.style.height = h + "px";
     ov.style.backgroundImage = SelectionImg(hero);
