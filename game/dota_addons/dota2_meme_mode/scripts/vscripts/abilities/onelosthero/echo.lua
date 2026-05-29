@@ -105,9 +105,19 @@ function Echo:Create(owner, ability, vOrigin, opts)
 	owner.olh_active_echoes[unit:entindex()] = unit
 
 	if not opts.illusion then -- keep illusions visually identical to the real hero
-		ParticleManager:CreateParticle(ECHO_PARTICLE, PATTACH_ABSORIGIN_FOLLOW, unit)
+		unit.olh_echo.ambientFx = ParticleManager:CreateParticle(ECHO_PARTICLE, PATTACH_ABSORIGIN_FOLLOW, unit)
 	end
 	return unit
+end
+
+-- Stop + free a stored ambient particle so it never lingers after the Echo is gone.
+local function destroyAmbient(unit)
+	local data = unit and unit.olh_echo
+	if data and data.ambientFx then
+		ParticleManager:DestroyParticle(data.ambientFx, false)
+		ParticleManager:ReleaseParticleIndex(data.ambientFx)
+		data.ambientFx = nil
+	end
 end
 
 function Echo:GetActiveEchoes(owner)
@@ -142,6 +152,7 @@ function Echo:_Teardown(unit, killed)
 		if killed and data.onDeath then data.onDeath(unit)
 		elseif (not killed) and data.onExpire then data.onExpire(unit) end
 	end
+	destroyAmbient(unit)
 	ParticleManager:CreateParticle("particles/units/heroes/hero_terrorblade/terrorblade_mirror_image.vpcf", PATTACH_ABSORIGIN, unit)
 	if unit:IsAlive() then unit:ForceKill(false) end
 	unit:RemoveSelf()
@@ -157,6 +168,7 @@ function Echo:RemoveSafely(unit)
 			owner.olh_active_echoes[unit:entindex()] = nil
 		end
 	end
+	destroyAmbient(unit)
 	ParticleManager:CreateParticle("particles/units/heroes/hero_void_spirit/void_spirit_astral_step.vpcf", PATTACH_ABSORIGIN, unit)
 	if unit:IsAlive() then unit:ForceKill(false) end
 	unit:RemoveSelf()

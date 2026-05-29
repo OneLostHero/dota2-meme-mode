@@ -8,7 +8,7 @@
 		"BaseClass"				"ability_lua"
 		"ScriptFile"			"abilities/onelosthero/vanishing_point"
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET"	// not IMMEDIATE, so the cast animation (Raptor Dance) actually plays before vanishing
-		"AbilityType"			"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityType"			"ABILITY_TYPE_ULTIMATE"
 		"AbilityTextureName"	"onelosthero_vanishing_point"
 		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_4"
 		"AbilityCastPoint"		"0.4"								// windup that shows the Raptor Dance flourish; invisibility applies at OnSpellStart (after cast point)

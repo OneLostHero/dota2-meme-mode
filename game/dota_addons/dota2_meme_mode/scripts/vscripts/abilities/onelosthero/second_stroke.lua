@@ -1,11 +1,11 @@
 --[[
 	OneLostHero — Q: Second Stroke
-	Dash-slash forward, damaging enemies in a line, and leave an Echo at the start point.
-	Then, within the swap window:
-	  - If you DON'T swap, the Echo repeats the strike: it dashes forward along the same line
-	    and deals reduced damage, then vanishes.
-	  - If you recast to SWAP, you trade places with the Echo (the move in reverse) and the
-	    Echo is consumed without striking.
+	Dash-slash forward, damaging enemies in a radius at the strike, and leave an Echo at the
+	start point. Then, within the swap window:
+	  - If you DON'T swap, the Echo repeats the strike: it dashes forward and strikes again for
+	    reduced damage, then vanishes.
+	  - If you recast to SWAP, you trade places with the Echo, then slash back toward where you
+	    were (reduced damage). The Echo is consumed.
 	All values from KV.
 
 	Cooldown: kept castable during the swap window via EndCooldown so the recast works; the
@@ -41,6 +41,9 @@ function onelosthero_second_stroke:OnSpellStart()
 	local caster = self:GetCaster()
 	local now = GameRules:GetGameTime()
 	local cd = self:GetCooldown(self:GetLevel() - 1)
+	local radius  = self:GetSpecialValueFor("strike_radius")
+	local damage  = self:GetSpecialValueFor("damage")
+	local echoPct = self:GetSpecialValueFor("echo_damage_pct")
 
 	-- ---- Swap branch: recast during the window -> trade places, then slash back toward your old spot ----
 	if self._swapUntil and now <= self._swapUntil and Echo:IsValid(self._echo) then
@@ -50,15 +53,11 @@ function onelosthero_second_stroke:OnSpellStart()
 		if heroOrigin then
 			caster:GiveMana(self._lastManaCost or 0) -- swap recast is free
 			self._echo, self._swapUntil = nil, nil
-			-- reduced-damage slash from the echo's spot toward where you were
-			local width   = self:GetSpecialValueFor("slash_width")
-			local damage  = self:GetSpecialValueFor("damage")
-			local echoPct = self:GetSpecialValueFor("echo_damage_pct")
 			local dir = (heroOrigin - echoPos); dir.z = 0
 			if dir:Length2D() > 1 then caster:SetForwardVector(dir:Normalized()) end
 			caster:StartGesture(ACT_DOTA_CAST_ABILITY_1)
 			self:SlashVFX(echoPos, heroOrigin)
-			self:DamageLine(caster, echoPos, heroOrigin, width, damage * (echoPct / 100))
+			self:DamageRadius(caster, heroOrigin, radius, damage * (echoPct / 100))
 			Timers:CreateTimer(0.05, function() if echo and not echo:IsNull() then Echo:Expire(echo) end end)
 			self:StartCooldown(cd)
 			return
@@ -74,19 +73,16 @@ function onelosthero_second_stroke:OnSpellStart()
 	dir = dir:Normalized()
 
 	local distance  = self:GetSpecialValueFor("slash_distance")
-	local width     = self:GetSpecialValueFor("slash_width")
-	local damage    = self:GetSpecialValueFor("damage")
-	local echoPct   = self:GetSpecialValueFor("echo_damage_pct")
 	local swapWin   = self:GetSpecialValueFor("swap_window")
 	local dashSpeed = self:GetSpecialValueFor("dash_speed")
 	local endPos = startPos + dir * distance
 	self._lastManaCost = self:GetManaCost(self:GetLevel() - 1)
 
-	-- hero Echo-Slash cast animation + visible slash, line damage, then dash forward
+	-- hero Echo-Slash cast animation + visible slash, radius damage, then dash forward
 	caster:StartGesture(ACT_DOTA_CAST_ABILITY_1)
 	caster:EmitSound("Hero_VoidSpirit.AstralStep.Cast")
 	self:SlashVFX(startPos, endPos)
-	self:DamageLine(caster, startPos, endPos, width, damage)
+	self:DamageRadius(caster, endPos, radius, damage)
 	caster:SetAbsOrigin(endPos)
 	FindClearSpaceForUnit(caster, endPos, false)
 	caster:SetForwardVector(dir)
@@ -110,10 +106,9 @@ function onelosthero_second_stroke:OnSpellStart()
 		if self._echo ~= echo or not Echo:IsValid(echo) then return end -- swapped/gone already
 		self._echo = nil
 		self._swapUntil = nil
-		ParticleManager:CreateParticle("particles/units/heroes/hero_juggernaut/juggernaut_blade_fury.vpcf", PATTACH_ABSORIGIN_FOLLOW, echo)
 		echo:EmitSound("Hero_VoidSpirit.AstralStep.Cast")
 		self:SlashVFX(startPos, endPos)
-		self:DamageLine(caster, startPos, endPos, width, damage * (echoPct / 100))
+		self:DamageRadius(caster, endPos, radius, damage * (echoPct / 100))
 		self:DashUnit(echo, startPos, endPos, dashSpeed, function()
 			if echo and not echo:IsNull() then Echo:Expire(echo) end
 		end)
@@ -121,16 +116,19 @@ function onelosthero_second_stroke:OnSpellStart()
 	end)
 end
 
--- Visible slash sweep along the line (so the strike + its damage read even with no enemies).
+-- Visible slash sweep (brief; auto-destroyed so it never lingers — blade_fury loops otherwise).
 function onelosthero_second_stroke:SlashVFX(startPos, endPos)
 	local p = ParticleManager:CreateParticle("particles/units/heroes/hero_juggernaut/juggernaut_blade_fury.vpcf", PATTACH_WORLDORIGIN, nil)
 	ParticleManager:SetParticleControl(p, 0, (startPos + endPos) * 0.5)
 	ParticleManager:SetParticleControl(p, 1, endPos)
-	ParticleManager:ReleaseParticleIndex(p)
+	Timers:CreateTimer(0.5, function()
+		ParticleManager:DestroyParticle(p, false)
+		ParticleManager:ReleaseParticleIndex(p)
+	end)
 end
 
-function onelosthero_second_stroke:DamageLine(caster, startPos, endPos, width, damage)
-	for _, enemy in pairs(Echo:FindEnemiesInLine(caster, startPos, endPos, width)) do
+function onelosthero_second_stroke:DamageRadius(caster, pos, radius, damage)
+	for _, enemy in pairs(Echo:FindEnemiesInRadius(caster, pos, radius)) do
 		if enemy and not enemy:IsNull() then
 			ApplyDamage({
 				victim = enemy, attacker = caster, damage = damage,

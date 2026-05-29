@@ -10,7 +10,7 @@
 	"special_bonus_unique_onelosthero_invis"
 	{
 		"BaseClass"			"special_bonus"
-		"AbilityType"		"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityType"		"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"			"1"
 		"AbilityValues"		{ "value" "0.5" }
@@ -18,7 +18,7 @@
 	"special_bonus_unique_onelosthero_second_stroke"
 	{
 		"BaseClass"			"special_bonus"
-		"AbilityType"		"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityType"		"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"			"1"
 		"AbilityValues"		{ "value" "20" }
@@ -26,7 +26,7 @@
 	"special_bonus_unique_onelosthero_explosion"
 	{
 		"BaseClass"			"special_bonus"
-		"AbilityType"		"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityType"		"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"			"1"
 		"AbilityValues"		{ "value" "80" }
@@ -34,7 +34,7 @@
 	"special_bonus_unique_onelosthero_charges"
 	{
 		"BaseClass"			"special_bonus"
-		"AbilityType"		"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityType"		"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"			"1"
 		"AbilityValues"		{ "value" "2" }
@@ -42,7 +42,7 @@
 	"special_bonus_unique_onelosthero_silence"
 	{
 		"BaseClass"			"special_bonus"
-		"AbilityType"		"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityType"		"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"			"1"
 		"AbilityValues"		{ "value" "1" }
@@ -50,7 +50,7 @@
 	"special_bonus_unique_onelosthero_fear_pierce"
 	{
 		"BaseClass"			"special_bonus"
-		"AbilityType"		"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityType"		"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"			"1"
 		"AbilityValues"		{ "value" "1" }
@@ -58,7 +58,7 @@
 	"special_bonus_unique_onelosthero_break"
 	{
 		"BaseClass"			"special_bonus"
-		"AbilityType"		"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityType"		"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"			"1"
 		"AbilityValues"		{ "value" "2" }

@@ -86,7 +86,11 @@ function onelosthero_vanishing_point:Release()
 	-- main burst VFX/SFX
 	local pfx = ParticleManager:CreateParticle("particles/units/heroes/hero_night_stalker/nightstalker_void.vpcf", PATTACH_WORLDORIGIN, nil)
 	ParticleManager:SetParticleControl(pfx, 0, pos)
-	ParticleManager:ReleaseParticleIndex(pfx)
+	ParticleManager:SetParticleControl(pfx, 1, Vector(radius, radius, radius))
+	Timers:CreateTimer(2.0, function()
+		ParticleManager:DestroyParticle(pfx, false)
+		ParticleManager:ReleaseParticleIndex(pfx)
+	end)
 	caster:EmitSound("Hero_Nightstalker.Void")
 
 	self:BurstAt(caster, pos, finalDamage, fearDuration, radius, 100)

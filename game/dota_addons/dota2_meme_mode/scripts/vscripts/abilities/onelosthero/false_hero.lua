@@ -235,15 +235,18 @@ function onelosthero_false_hero:Detonate(pos, mult)
 
 	-- Visible radial AOE blast (the old terrorblade_sunder is a unit-to-unit beam and renders
 	-- nothing at a world point). doppelganger_aoe is a clear ground burst scaled to the radius.
+	-- doppelganger_aoe loops, so it must be explicitly destroyed or it lingers forever.
 	local p = ParticleManager:CreateParticle("particles/units/heroes/hero_phantom_lancer/phantom_lancer_doppelganger_aoe.vpcf", PATTACH_WORLDORIGIN, nil)
 	ParticleManager:SetParticleControl(p, 0, pos)
 	ParticleManager:SetParticleControl(p, 1, Vector(radius, radius, radius))
 	ParticleManager:SetParticleControl(p, 2, Vector(radius, radius, radius))
 	ParticleManager:SetParticleControl(p, 3, pos)
-	ParticleManager:ReleaseParticleIndex(p)
 	local p2 = ParticleManager:CreateParticle("particles/units/heroes/hero_spectre/spectre_desolate.vpcf", PATTACH_WORLDORIGIN, nil)
 	ParticleManager:SetParticleControl(p2, 0, pos)
-	ParticleManager:ReleaseParticleIndex(p2)
+	Timers:CreateTimer(1.5, function()
+		ParticleManager:DestroyParticle(p, false);  ParticleManager:ReleaseParticleIndex(p)
+		ParticleManager:DestroyParticle(p2, false); ParticleManager:ReleaseParticleIndex(p2)
+	end)
 	EmitSoundOnLocationWithCaster(pos, "Hero_PhantomLancer.Doppelganger", caster)
 
 	for _, enemy in pairs(Echo:FindEnemiesInRadius(caster, pos, radius)) do
