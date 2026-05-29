@@ -152,8 +152,20 @@ function UpdateTopBar(root) {
     }
 }
 
+// Only the PICK SCREEN needs these overlays: pre-spawn, the client can't render a
+// server-only custom hero, so its grid/inspect/top-row panels are blank. IN-GAME the
+// engine renders the portrait natively from the hero's model -- so we must NOT touch
+// anything in-game (doing so covered the live hero portrait). Gate on game state.
+function IsPickState() {
+    var st = -1;
+    try { st = Game.GetState(); } catch (e) {}
+    return st === DOTA_GAMERULES_STATE_HERO_SELECTION ||
+           st === DOTA_GAMERULES_STATE_STRATEGY_TIME;
+}
+
 function Run() {
     try {
+        if (!IsPickState()) return;
         var root = Root();
         if (!root) return;
         var pg = root.FindChildTraverse("PreGame") || root.FindChildTraverse("HeroPickScreen") || root;
