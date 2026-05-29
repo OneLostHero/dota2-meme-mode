@@ -1,35 +1,10 @@
 // Dota Heroes File
-// NOTE: npc_heroes_custom.txt can only OVERRIDE existing heroes in place — it
-// cannot create a brand-new hero with its own HeroID (HeroIDs are capped at
-// MAX_HERO_ID). So "Flasaro" is built by reskinning Dragon Knight: we override
-// dragon_knight's ability slots and rename it to "Flasaro" in addon_english.txt.
-// Dragon Knight keeps its model/animations and becomes Flasaro.
+// NOTE: This is not for creating new heroes, this is for taking a currently existing hero as a template and overriding
+// the specified key-value combinations.  Use override_hero <hero_to_override> for this.
+//
+// Flasaro experiment removed: Dota 2 will not register a brand-new pickable hero
+// here, and an incomplete custom entry breaks the hero-pool Lua. Flasaro will be
+// re-approached as a spawnable character or a reskin of an unused hero.
 "DOTAHeroes"
 {
-	//============================================================
-	//  Flasaro  (reskins npc_dota_hero_dragon_knight in place)
-	//  Kit: AM Blink (Q), Riki Blink Strike (W), Sven Cleave (E),
-	//       Sven God's Strength (R). Sven talent tree (placeholder).
-	//  Model/animations: Dragon Knight's own (unchanged).
-	//============================================================
-	"npc_dota_hero_dragon_knight"
-	{
-		//---- Abilities ----
-		"Ability1"				"antimage_blink"				// Q — Anti-Mage Blink
-		"Ability2"				"riki_blink_strike"				// W — Riki Blink Strike
-		"Ability3"				"sven_great_cleave"				// E — Sven Great Cleave
-		"Ability4"				"generic_hidden"
-		"Ability5"				"generic_hidden"
-		"Ability6"				"sven_gods_strength"			// R — Sven God's Strength (ult)
-
-		//---- Talents (Sven's tree — placeholder "for the time being") ----
-		"Ability10"				"special_bonus_unique_sven_5"
-		"Ability11"				"special_bonus_attack_speed_15"
-		"Ability12"				"special_bonus_unique_sven_3"
-		"Ability13"				"special_bonus_unique_sven_8"
-		"Ability14"				"special_bonus_unique_sven_6"
-		"Ability15"				"special_bonus_unique_sven_7"
-		"Ability16"				"special_bonus_unique_sven_2"
-		"Ability17"				"special_bonus_unique_sven_4"
-	}
 }
