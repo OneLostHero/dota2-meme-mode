@@ -55,12 +55,15 @@ function LocalSelection() {
 // a plain background-image. Bounded by caller to card-sized panels so it can never
 // cover the whole screen (the bug when this was applied to a full-screen render panel).
 function OverlayOn(panel, hero) {
+    // Size the overlay in EXPLICIT PIXELS from the panel's measured size. A child of a
+    // DOTAHeroImage with width/height:100% resolves to a zero-size box (the image panel
+    // gives percentage children nothing to fill), so the overlay rendered blank.
+    var w = Math.round(PanelW(panel)), h = Math.round(PanelH(panel));
+    if (w < 1 || h < 1) return; // layout not ready yet
     var ov = null;
     try { ov = panel.FindChild("ChpStaticOverlay"); } catch (e) {}
     if (!ov) {
         ov = $.CreatePanel("Panel", panel, "ChpStaticOverlay");
-        ov.style.width = "100%";
-        ov.style.height = "100%";
         ov.style.position = "0px 0px 0px";
         ov.style.zIndex = "40";
         ov.style.backgroundSize = "100% 100%";
@@ -68,6 +71,8 @@ function OverlayOn(panel, hero) {
         ov.style.backgroundRepeat = "no-repeat";
         try { ov.hittest = false; } catch (e) {}
     }
+    ov.style.width = w + "px";
+    ov.style.height = h + "px";
     ov.style.backgroundImage = SelectionImg(hero);
     ov.visible = true;
 }
