@@ -82,6 +82,9 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		// This is Flasaro's SHARD upgrade (the one shard he should show). Inherited from
+		// base already, set explicit for clarity. (Shared ability: also applies to Sven.)
+		"HasShardUpgrade"				"1"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"MaxLevel"						"4"
 		// Special

@@ -58,7 +58,11 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
 
-        "HasScepterUpgrade"             "0"
+		// Aghs: this is Flasaro's SCEPTER upgrade (empowered Blink). Shard moved off Blink
+		// onto Sven's Great Cleave, so Blink's inherited base shard is disabled here to
+		// avoid Flasaro showing two shards. (Shared ability: also applies to AntiMage.)
+		"HasScepterUpgrade"				"1"
+		"HasShardUpgrade"				"0"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
