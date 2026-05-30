@@ -359,7 +359,7 @@
 		"Ability1"				"crystal_maiden_frostbite"			// Q
 		"Ability2"				"phantom_assassin_phantom_strike"	// W
 		"Ability3"				"disruptor_kinetic_field"			// E
-		"Ability4"				"generic_hidden"					// (epicenter scepter wired in Phase B)
+		"Ability4"				"mr_badhabits_epicenter_scepter"	// hidden: Epicenter Aghs Scepter (CDR + bonus dmg)
 		"Ability5"				"generic_hidden"
 		"Ability6"				"sandking_epicenter"				// R (ult) — Aghs Shard native (HasShardUpgrade)
 		"Ability7"				"crystal_maiden_brilliance_aura"	// Innate (Arcane Aura)

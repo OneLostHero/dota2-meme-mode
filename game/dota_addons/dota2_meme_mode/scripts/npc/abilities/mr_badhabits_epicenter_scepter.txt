@@ -1,0 +1,26 @@
+// Mr. BadHabits — Aghanim's Scepter: Epicenter
+// Hidden passive that upgrades the borrowed sandking_epicenter when the hero holds a Scepter.
+// Epicenter has NO native Scepter (Sand King's real Aghs lives on Sand Storm, which this hero
+// lacks) and reads its pulse/radius/damage from KV at cast time, so a pure-KV scepter isn't
+// possible without mutating real Sand King. This is the sanctioned tiny-Lua numeric scepter:
+//   - -scepter_cooldown_reduction_pct% Epicenter cooldown (per-ability gated modifier property)
+//   - +scepter_bonus_damage_pct% Epicenter damage (ON_TAKEDAMAGE amp, gated + re-entrancy guarded)
+"DOTAAbilities"
+{
+	"mr_badhabits_epicenter_scepter"
+	{
+		"BaseClass"				"ability_lua"
+		"ScriptFile"			"abilities/mr_badhabits/epicenter_scepter"
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityType"			"ABILITY_TYPE_BASIC"
+		"AbilityTextureName"	"sandking_epicenter"
+		"MaxLevel"				"1"
+		"IsBreakable"			"0"
+
+		"AbilityValues"
+		{
+			"scepter_cooldown_reduction_pct"	"40"	// -% Epicenter cooldown while holding Scepter
+			"scepter_bonus_damage_pct"			"50"	// +% Epicenter damage while holding Scepter
+		}
+	}
+}

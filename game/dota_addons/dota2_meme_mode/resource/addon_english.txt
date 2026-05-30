@@ -40,6 +40,12 @@
 		"npc_dota_hero_mr_badhabits_npedesc2"	"Frostbite the carry, Phantom Strike in, drop Kinetic Field to wall the escape, and channel Epicenter on top of them."
 		"npc_dota_hero_mr_badhabits_hype"	"Old habits die hard. So do you."
 
+		// --- Epicenter Aghanim's Scepter (Mr. BadHabits, hidden passive) ---
+		"DOTA_Tooltip_ability_mr_badhabits_epicenter_scepter"				"Epicenter (Aghanim's Scepter)"
+		"DOTA_Tooltip_ability_mr_badhabits_epicenter_scepter_Description"	"With an Aghanim's Scepter, Epicenter recharges far faster and each pulse erupts for bonus magical damage."
+		"DOTA_Tooltip_ability_mr_badhabits_epicenter_scepter_scepter_cooldown_reduction_pct"	"COOLDOWN REDUCTION:"
+		"DOTA_Tooltip_ability_mr_badhabits_epicenter_scepter_scepter_bonus_damage_pct"		"BONUS DAMAGE:"
+
 		// Custom hero — Mr. Bomber
 		"npc_dota_hero_mr_bomber"			"Mr. Bomber"
 		"npc_dota_hero_mr_bomber_bio"		"A demolitions sapper who teleports across the battlefield, refunds his own spells, hooks a victim into a waiting pile of mines, and lights the fuse."
