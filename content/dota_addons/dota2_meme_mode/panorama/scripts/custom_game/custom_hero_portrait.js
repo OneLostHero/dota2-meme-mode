@@ -18,6 +18,7 @@ var CUSTOM_SHORT = {
     "moosestache": true,
     "occupational_hazard": true,
     "mr_badhabits": true,
+    "mr_bomber": true,
 };
 
 function ShortName(n) { if (n == null) return ""; return n.indexOf("npc_dota_hero_") === 0 ? n.substring(14) : n; }

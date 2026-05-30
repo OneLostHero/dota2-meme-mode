@@ -11,6 +11,7 @@ CustomHeroesPlugin.custom_heroes = {
     "npc_dota_hero_moosestache",
     "npc_dota_hero_occupational_hazard",
     "npc_dota_hero_mr_badhabits",
+    "npc_dota_hero_mr_bomber",
 }
 
 function CustomHeroesPlugin:Init()

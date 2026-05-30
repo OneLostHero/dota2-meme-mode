@@ -37,3 +37,8 @@
 .PrecacheImg_mr_badhabits_portrait  { background-image: url("file://{images}/heroes/npc_dota_hero_mr_badhabits.png"); }
 .PrecacheImg_mr_badhabits_icon      { background-image: url("file://{images}/heroes/icons/npc_dota_hero_mr_badhabits.png"); }
 .PrecacheImg_mr_badhabits_crop      { background-image: url("file://{images}/heroes/crops/npc_dota_hero_mr_badhabits.png"); }
+
+.PrecacheImg_mr_bomber_selection { background-image: url("file://{images}/heroes/selection/npc_dota_hero_mr_bomber.png"); }
+.PrecacheImg_mr_bomber_portrait  { background-image: url("file://{images}/heroes/npc_dota_hero_mr_bomber.png"); }
+.PrecacheImg_mr_bomber_icon      { background-image: url("file://{images}/heroes/icons/npc_dota_hero_mr_bomber.png"); }
+.PrecacheImg_mr_bomber_crop      { background-image: url("file://{images}/heroes/crops/npc_dota_hero_mr_bomber.png"); }
