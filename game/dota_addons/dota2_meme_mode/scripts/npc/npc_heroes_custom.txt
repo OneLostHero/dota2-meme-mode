@@ -43,14 +43,20 @@
 		"Ability5"				"generic_hidden"
 		"Ability6"				"sven_gods_strength"			// R (ult)
 		"Ability7"				"sven_vanquisher"				// Innate (Sven's innate)
-		"Ability10"				"special_bonus_unique_sven_5"
-		"Ability11"				"special_bonus_attack_speed_15"
-		"Ability12"				"special_bonus_unique_sven_3"
-		"Ability13"				"special_bonus_unique_sven_8"
-		"Ability14"				"special_bonus_unique_sven_6"
-		"Ability15"				"special_bonus_unique_sven_7"
-		"Ability16"				"special_bonus_unique_sven_2"
-		"Ability17"				"special_bonus_unique_sven_4"
+		// Talents drawn from ALL of Flasaro's borrowed abilities (AM Blink, Riki Blink
+		// Strike, Sven Great Cleave + God's Strength), each kept at its SOURCE tier so
+		// the values stay balanced. The old tree was Sven-only AND broken: sven_5/_7 are
+		// Warcry talents and sven_6 doesn't exist (Flasaro has no Warcry), so they were
+		// dead. Avoids talents for abilities Flasaro lacks (Mana Void/Smoke/Warcry/Storm
+		// Hammer). Tiers: 10/11=L10, 12/13=L15, 14/15=L20, 16/17=L25.
+		"Ability10"				"special_bonus_movement_speed_25"						// L10  +25 Move Speed
+		"Ability11"				"special_bonus_unique_sven_gods_strength_slow_resist"	// L10  R: God's Strength slow resist
+		"Ability12"				"special_bonus_unique_sven_8"							// L15  E: Great Cleave damage
+		"Ability13"				"special_bonus_unique_sven_3"							// L15  R: God's Strength cooldown
+		"Ability14"				"special_bonus_unique_antimage_3"						// L20  Q: Blink cast range
+		"Ability15"				"special_bonus_unique_riki_5"							// L20  W: Blink Strike cooldown
+		"Ability16"				"special_bonus_unique_riki_9"							// L25  W: Blink Strike cast range
+		"Ability17"				"special_bonus_unique_sven_2"							// L25  R: God's Strength damage
 
 		// Attributes (Dragon Knight)
 		"AttributeBaseStrength"			"21"
