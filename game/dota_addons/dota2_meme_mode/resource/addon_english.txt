@@ -28,17 +28,24 @@
 
 		// Custom hero — Occupational Hazard
 		"npc_dota_hero_occupational_hazard"			"Occupational Hazard"
-		"npc_dota_hero_occupational_hazard_bio"		"A grim attritionist who melts foes with a deathly aura, raises skeletal labor, siphons the life from his enemies, and points a single fatal finger at the survivor."
-		"npc_dota_hero_occupational_hazard_npedesc1"	"A caster-summoner who wins by attrition: stack aura and siphon damage while skeletons and Storm Surge wear the enemy down."
-		"npc_dota_hero_occupational_hazard_npedesc2"	"Open with Heart Stopper + Spirit Siphon, raise Bone Guard skeletons, then execute the survivor with Finger of Death."
+		"npc_dota_hero_occupational_hazard_bio"		"A grim attritionist who silences his foes mid-incantation, pulses death across the battlefield to wound enemies and mend allies, raises skeletal labor, and points a single fatal finger at the survivor."
+		"npc_dota_hero_occupational_hazard_npedesc1"	"A caster-summoner who wins by attrition: silence the enemy, pulse Death Pulse for damage and healing while skeletons and Storm Surge wear them down."
+		"npc_dota_hero_occupational_hazard_npedesc2"	"Open with Last Word, pulse Death Pulse, raise Bone Guard skeletons, then execute the survivor with Finger of Death."
 		"npc_dota_hero_occupational_hazard_hype"	"Death is just the cost of doing business."
 
 		// Custom hero — Mr. BadHabits
 		"npc_dota_hero_mr_badhabits"		"Mr. BadHabits"
-		"npc_dota_hero_mr_badhabits_bio"	"An immovable nuisance who hurls his enemies where he pleases, grinds them down with a spray of quills from behind a wall of meat, and helps himself to whatever spell they were saving."
-		"npc_dota_hero_mr_badhabits_npedesc1"	"A tanky punisher-thief: reposition foes with Toss, bleed them with Quill Spray behind Meat Shield, then steal their best spell."
-		"npc_dota_hero_mr_badhabits_npedesc2"	"Toss an enemy into your team, stack Quill Spray, pop Meat Shield, and Spell Steal the scariest ability on the field."
+		"npc_dota_hero_mr_badhabits_bio"	"A brutish trapper who freezes his prey in place, blink-strikes into the fray, walls them inside a kinetic field, and erupts the ground beneath them."
+		"npc_dota_hero_mr_badhabits_npedesc1"	"A lockdown bruiser: root a target with Frostbite, blink in with Phantom Strike, trap them in Kinetic Field, then erupt with Epicenter."
+		"npc_dota_hero_mr_badhabits_npedesc2"	"Frostbite the carry, Phantom Strike in, drop Kinetic Field to wall the escape, and channel Epicenter on top of them."
 		"npc_dota_hero_mr_badhabits_hype"	"Old habits die hard. So do you."
+
+		// Custom hero — Mr. Bomber
+		"npc_dota_hero_mr_bomber"			"Mr. Bomber"
+		"npc_dota_hero_mr_bomber_bio"		"A demolitions sapper who teleports across the battlefield, refunds his own spells, hooks a victim into a waiting pile of mines, and lights the fuse."
+		"npc_dota_hero_mr_bomber_npedesc1"	"A trap-and-detonate nuker: seed Remote Mines, Meat Hook a victim onto the pile, refund mana with Chakra Magic, and teleport away."
+		"npc_dota_hero_mr_bomber_npedesc2"	"Stack Remote Mines, hook an enemy into them, detonate, then Teleportation out before anyone reaches you."
+		"npc_dota_hero_mr_bomber_hype"		"Hold still. This won't hurt me a bit."
 
 		// --- Lost Signal (Innate) ---
 		"DOTA_Tooltip_ability_onelosthero_lost_signal"				"Lost Signal"

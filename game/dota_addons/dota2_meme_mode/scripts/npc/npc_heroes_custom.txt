@@ -254,9 +254,9 @@
 
 	//============================================================
 	//  Occupational Hazard  (custom hero, Necrophos base/look)
-	//  Q Spirit Siphon | W Bone Guard | E Heart Stopper Aura
-	//  R Finger of Death | Innate Storm Surge
-	//  Necro-caster/summoner/drain: aura attrition, skeletons, siphon, execute.
+	//  Q Last Word (Silencer) | W Bone Guard | E Death Pulse (Necrophos)
+	//  R Finger of Death | Innate Storm Surge | Aghs Shard -> Death Seeker (Phase B)
+	//  Necro-caster/silencer/drain: silence on cast, pulse nuke+heal, skeletons, execute.
 	//============================================================
 	"npc_dota_hero_occupational_hazard"
 	{
@@ -277,23 +277,23 @@
 		"BotImplemented"		"0"
 
 		// Abilities
-		"Ability1"				"death_prophet_spirit_siphon"		// Q
+		"Ability1"				"silencer_last_word"				// Q
 		"Ability2"				"skeleton_king_bone_guard"			// W
-		"Ability3"				"necrolyte_heartstopper_aura"		// E (passive aura)
+		"Ability3"				"necrolyte_death_pulse"				// E (nuke + heal; Aghs Shard adds Death Seeker)
 		"Ability4"				"generic_hidden"
 		"Ability5"				"generic_hidden"
 		"Ability6"				"lion_finger_of_death"				// R (ult)
 		"Ability7"				"razor_storm_surge"					// Innate
 
 		// Talents (real stock tokens, verified wired to held abilities)
-		"Ability10"				"special_bonus_unique_necrophos_2"
-		"Ability11"				"special_bonus_unique_death_prophet_5"
-		"Ability12"				"special_bonus_unique_necrophos_5"
-		"Ability13"				"special_bonus_unique_death_prophet_3"
-		"Ability14"				"special_bonus_unique_razor_storm_surge_damage_and_slow"
-		"Ability15"				"special_bonus_health_250"
-		"Ability16"				"special_bonus_unique_lion_8"
-		"Ability17"				"special_bonus_magic_resistance_10"
+		"Ability10"				"special_bonus_unique_silencer_2"						// L10 L: Last Word
+		"Ability11"				"special_bonus_unique_necrophos"						// L10 R: Death Pulse
+		"Ability12"				"special_bonus_unique_silencer_4"						// L15 L: Last Word
+		"Ability13"				"special_bonus_unique_necrophos_4"						// L15 R: Death Pulse
+		"Ability14"				"special_bonus_unique_razor_5"							// L20 L: Storm Surge (innate)
+		"Ability15"				"special_bonus_hp_250"									// L20 R
+		"Ability16"				"special_bonus_unique_lion_8"							// L25 L: Finger of Death
+		"Ability17"				"special_bonus_magic_resistance_10"						// L25 R
 
 		// Attributes (Necrophos)
 		"AttributeBaseStrength"			"18"
@@ -332,10 +332,10 @@
 	}
 
 	//============================================================
-	//  Mr. BadHabits  (custom hero, Treant Protector base/look)
-	//  Q Toss | W Quill Spray | E Meat Shield (pudge_flesh_heap)
-	//  R Spell Steal | Innate Flesh Heap (pudge_innate_graft_flesh)
-	//  Tanky punisher-thief: toss them around, bleed them behind a shield, steal their best spell.
+	//  Mr. BadHabits  (custom hero, Ursa model — BaseClass/stats stay Treant)
+	//  Q Frostbite (CM) | W Phantom Strike (PA) | E Kinetic Field (Disruptor)
+	//  R Epicenter (Sand King) | Innate Arcane Aura (CM brilliance_aura)
+	//  Re-themed punisher: lock them down, blink-strike in, trap them in a field, and erupt.
 	//============================================================
 	"npc_dota_hero_mr_badhabits"
 	{
@@ -346,33 +346,33 @@
 		"TeamName"				"DOTA_TEAM_GOODGUYS"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 
-		// Look + voice (Treant Protector)
-		"Model"					"models/heroes/treant_protector/treant_protector.vmdl"
+		// Look + voice (Ursa model/voice; BaseClass + stats remain Treant)
+		"Model"					"models/heroes/ursa/ursa.vmdl"
 		"ModelScale"			"1.000000"
-		"SoundSet"				"Hero_Treant"
+		"SoundSet"				"Hero_Ursa"
 		"GibType"				"default"
 		"Role"					"Durable,Disabler,Initiator,Nuker"
 		"Complexity"			"2"
 		"BotImplemented"		"0"
 
 		// Abilities
-		"Ability1"				"tiny_toss"					// Q
-		"Ability2"				"bristleback_quill_spray"	// W
-		"Ability3"				"pudge_flesh_heap"			// E (Meat Shield: damage-block active)
-		"Ability4"				"generic_hidden"
+		"Ability1"				"crystal_maiden_frostbite"			// Q
+		"Ability2"				"phantom_assassin_phantom_strike"	// W
+		"Ability3"				"disruptor_kinetic_field"			// E
+		"Ability4"				"generic_hidden"					// (epicenter scepter wired in Phase B)
 		"Ability5"				"generic_hidden"
-		"Ability6"				"rubick_spell_steal"		// R (ult)
-		"Ability7"				"pudge_innate_graft_flesh"	// Innate (Flesh Heap: +STR on kills)
+		"Ability6"				"sandking_epicenter"				// R (ult) — Aghs Shard native (HasShardUpgrade)
+		"Ability7"				"crystal_maiden_brilliance_aura"	// Innate (Arcane Aura)
 
 		// Talents (real stock tokens, verified wired to held abilities)
-		"Ability10"				"special_bonus_unique_bristleback_2"
-		"Ability11"				"special_bonus_health_250"
-		"Ability12"				"special_bonus_unique_tiny_2"
-		"Ability13"				"special_bonus_unique_pudge_1"
-		"Ability14"				"special_bonus_unique_tiny_5"
-		"Ability15"				"special_bonus_strength_12"
-		"Ability16"				"special_bonus_status_resistance_10"
-		"Ability17"				"special_bonus_attack_damage_60"
+		"Ability10"				"special_bonus_unique_crystal_maiden_1"					// L10 L: Frostbite
+		"Ability11"				"special_bonus_hp_250"									// L10 R
+		"Ability12"				"special_bonus_unique_phantom_assassin_4"				// L15 L: Phantom Strike
+		"Ability13"				"special_bonus_unique_disruptor_2"						// L15 R: Kinetic Field
+		"Ability14"				"special_bonus_unique_sand_king"						// L20 L: Epicenter pulses
+		"Ability15"				"special_bonus_strength_12"								// L20 R
+		"Ability16"				"special_bonus_unique_sand_king_5"						// L25 L: Epicenter radius
+		"Ability17"				"special_bonus_unique_crystal_maiden_frostbite_castrange"	// L25 R: Frostbite cast range
 
 		// Attributes (Treant Protector)
 		"AttributeBaseStrength"			"25"
@@ -401,6 +401,86 @@
 		"StatusHealthRegen"		"0.25"
 		"StatusMana"			"75"
 		"StatusManaRegen"		"0.25"
+		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
+
+		// Classification
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}
+
+	//============================================================
+	//  Mr. Bomber  (custom hero, Gyrocopter base/look)
+	//  Q Teleportation (Nature's Prophet) | W Chakra Magic (KotL) | E Meat Hook (Pudge)
+	//  R Remote Mines (Techies) | Innate Volatile Munitions (added Phase B)
+	//  Demolitions sapper: blink around the map, refund spells, hook a victim onto a mine pile, detonate.
+	//============================================================
+	"npc_dota_hero_mr_bomber"
+	{
+		"BaseClass"				"npc_dota_hero_gyrocopter"		// REQUIRED: real base class so the hero spawns + renders. Gyrocopter is untouched.
+		"HeroID"				"255"							// high, unused id (250 Flasaro, 251 OneLostHero, 252 Moosestache, 253 Occupational Hazard, 254 Mr. BadHabits)
+		"Enabled"				"1"
+		"Team"					"Good"
+		"TeamName"				"DOTA_TEAM_GOODGUYS"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
+
+		// Look + voice (Gyrocopter)
+		"Model"					"models/heroes/gyrocopter/gyrocopter.vmdl"
+		"ModelScale"			"1.000000"
+		"SoundSet"				"Hero_Gyrocopter"
+		"GibType"				"default"
+		"Role"					"Nuker,Disabler,Escape,Pusher"
+		"Complexity"			"2"
+		"BotImplemented"		"0"
+
+		// Abilities
+		"Ability1"				"furion_teleportation"				// Q (Nature's Prophet TP)
+		"Ability2"				"keeper_of_the_light_chakra_magic"	// W (KotL Chakra Magic)
+		"Ability3"				"pudge_meat_hook"					// E (Pudge Hook)
+		"Ability4"				"generic_hidden"
+		"Ability5"				"generic_hidden"
+		"Ability6"				"techies_remote_mines"				// R (ult) — classic remote-detonated mines
+		"Ability7"				"generic_hidden"					// Innate Volatile Munitions wired in Phase B
+
+		// Talents (real stock tokens, verified to exist + wired to held abilities where possible)
+		"Ability10"				"special_bonus_unique_keeper_of_the_light_7"		// L10 L: Chakra Magic
+		"Ability11"				"special_bonus_hp_250"								// L10 R
+		"Ability12"				"special_bonus_attack_speed_30"						// L15 L  (Meat Hook has no stock stat talent)
+		"Ability13"				"special_bonus_unique_furion_3"						// L15 R: Teleportation
+		"Ability14"				"special_bonus_magic_resistance_10"					// L20 L  (Remote Mines has no stock stat talent)
+		"Ability15"				"special_bonus_movement_speed_30"					// L20 R
+		"Ability16"				"special_bonus_strength_12"							// L25 L
+		"Ability17"				"special_bonus_attack_damage_60"					// L25 R
+
+		// Attributes (Gyrocopter)
+		"AttributeBaseStrength"			"22"
+		"AttributeStrengthGain"			"2.900000"
+		"AttributeBaseAgility"			"21"
+		"AttributeAgilityGain"			"2.700000"
+		"AttributeBaseIntelligence"		"19"
+		"AttributeIntelligenceGain"		"1.700000"
+
+		// Combat (Gyrocopter)
+		"ArmorPhysical"			"1"
+		"MagicalResistance"		"25"
+		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"		"50"
+		"AttackDamageMax"		"56"
+		"AttackRate"			"1.700000"
+		"AttackAnimationPoint"	"0.300000"
+		"AttackAcquisitionRange"	"800"
+		"AttackRange"			"365"
+		"ProjectileModel"		"particles/units/heroes/hero_gyrocopter/gyro_base_attack.vpcf"
+		"ProjectileSpeed"		"3000"
+		"MovementSpeed"			"315"
+		"MovementTurnRate"		"0.500000"
+		"MovementCapabilities"	"DOTA_UNIT_CAP_MOVE_GROUND"
+		"VisionDaytimeRange"	"1800"
+		"VisionNighttimeRange"	"800"
+		"StatusHealth"			"200"
+		"StatusHealthRegen"		"0.25"
+		"StatusMana"			"75"
+		"StatusManaRegen"		"0.0"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
 
 		// Classification
