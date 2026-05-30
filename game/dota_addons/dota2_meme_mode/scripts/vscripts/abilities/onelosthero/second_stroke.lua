@@ -19,6 +19,33 @@ function onelosthero_second_stroke:GetCastAnimation()
 	return ACT_DOTA_CAST_ABILITY_1
 end
 
+-- Trading places with the Echo during the swap window is FREE: only the initial slash costs
+-- mana. Returning 0 while a swap is pending means the recast neither requires nor spends mana.
+function onelosthero_second_stroke:GetManaCost(iLevel)
+	if self._swapUntil and Echo:IsValid(self._echo) and GameRules:GetGameTime() <= self._swapUntil then
+		return 0
+	end
+	return self:_BaseManaCost(iLevel)
+end
+
+-- Configured AbilityManaCost from KV (cached), so GetManaCost can return the normal cost.
+function onelosthero_second_stroke:_BaseManaCost(iLevel)
+	if not self._manaCosts then
+		self._manaCosts = {}
+		local kv = self:GetAbilityKeyValues() or {}
+		local raw = kv.AbilityManaCost
+		if type(raw) == "number" then raw = tostring(raw) end
+		if type(raw) == "string" then
+			for tok in string.gmatch(raw, "%S+") do
+				self._manaCosts[#self._manaCosts + 1] = tonumber(tok) or 0
+			end
+		end
+	end
+	if iLevel == nil or iLevel < 0 then iLevel = self:GetLevel() - 1 end
+	local idx = math.max(1, iLevel + 1)
+	return self._manaCosts[idx] or self._manaCosts[#self._manaCosts] or 0
+end
+
 -- Smoothly slide a unit from `from` to `to` at `speed` (units/sec); calls onDone at the end.
 function onelosthero_second_stroke:DashUnit(unit, from, to, speed, onDone)
 	local dist = (to - from):Length2D()
@@ -51,7 +78,7 @@ function onelosthero_second_stroke:OnSpellStart()
 		local echoPos = echo:GetAbsOrigin()
 		local heroOrigin = Echo:Swap(caster, echo) -- hero moves to echoPos; returns hero's pre-swap pos
 		if heroOrigin then
-			caster:GiveMana(self._lastManaCost or 0) -- swap recast is free
+			-- swap is free (GetManaCost returns 0 during the window), so no refund needed
 			self._echo, self._swapUntil = nil, nil
 			local dir = (heroOrigin - echoPos); dir.z = 0
 			if dir:Length2D() > 1 then caster:SetForwardVector(dir:Normalized()) end
@@ -77,7 +104,6 @@ function onelosthero_second_stroke:OnSpellStart()
 	local swapWin   = self:GetSpecialValueFor("swap_window")
 	local dashSpeed = self:GetSpecialValueFor("dash_speed")
 	local endPos = startPos + dir * distance
-	self._lastManaCost = self:GetManaCost(self:GetLevel() - 1)
 
 	-- hero Echo-Slash cast animation + visible slash, radius damage, then dash forward
 	caster:StartGesture(ACT_DOTA_CAST_ABILITY_1)

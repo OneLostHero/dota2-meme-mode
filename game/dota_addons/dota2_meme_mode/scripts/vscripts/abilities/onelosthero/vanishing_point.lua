@@ -98,6 +98,7 @@ function onelosthero_vanishing_point:Release()
 	local finalDamage = baseDamage * (1 + frac * maxChargeBonus / 100)
 
 	local radius      = self:GetSpecialValueFor("release_radius")
+	local echoRadius  = radius * 0.5 -- Echo/scepter-clone bursts cover half the hero's radius
 	local fearDuration = self:GetSpecialValueFor("fear_duration")
 	local echoBurstPct = self:GetSpecialValueFor("echo_burst_damage_pct")
 	local pos = caster:GetAbsOrigin()
@@ -108,9 +109,9 @@ function onelosthero_vanishing_point:Release()
 
 	self:BurstAt(caster, pos, finalDamage, fearDuration, radius, 100)
 
-	-- active Echoes release weaker bursts
+	-- active Echoes release weaker bursts (half radius)
 	for _, echo in pairs(Echo:GetActiveEchoes(caster)) do
-		self:BurstAt(caster, echo:GetAbsOrigin(), finalDamage * (echoBurstPct / 100), fearDuration, radius, echoBurstPct)
+		self:BurstAt(caster, echo:GetAbsOrigin(), finalDamage * (echoBurstPct / 100), fearDuration, echoRadius, echoBurstPct)
 	end
 
 	-- Scepter Echo bursts (weaker damage + scaled fear)
@@ -119,7 +120,7 @@ function onelosthero_vanishing_point:Release()
 		local scepterFearPct  = self:GetSpecialValueFor("scepter_echo_fear_pct")
 		for _, echo in pairs(self._scepterEchoes) do
 			if Echo:IsValid(echo) then
-				self:BurstAt(caster, echo:GetAbsOrigin(), finalDamage * (scepterBurstPct / 100), fearDuration * (scepterFearPct / 100), radius, scepterBurstPct)
+				self:BurstAt(caster, echo:GetAbsOrigin(), finalDamage * (scepterBurstPct / 100), fearDuration * (scepterFearPct / 100), echoRadius, scepterBurstPct)
 			end
 		end
 	end
