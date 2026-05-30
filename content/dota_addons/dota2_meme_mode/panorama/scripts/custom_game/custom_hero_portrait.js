@@ -125,9 +125,15 @@ function UpdateInspect(root) {
     if (!render) return;
     var parent = render.GetParent();
     if (!parent) return;
-    var sel = LocalSelection();
+    // Use the hero the inspect is CURRENTLY showing (it updates on hover), not our own
+    // selection -- otherwise the overlay locks onto the first picked custom hero and
+    // never follows the hovered hero (the "stuck" + "hover doesn't work" symptom).
+    var hero = "";
+    try { hero = render.heroname || ""; } catch (e) {}
+    if (hero === "") { try { hero = inspect.heroname || ""; } catch (e) {} }
+    if (hero === "") hero = LocalSelection();
     var overlay = parent.FindChildTraverse("CustomHeroPortraitOverlay");
-    if (IsCustomHero(sel)) {
+    if (IsCustomHero(hero)) {
         render.style.opacity = "0.0";
         if (!overlay) {
             overlay = $.CreatePanel("Panel", parent, "CustomHeroPortraitOverlay");
@@ -139,7 +145,7 @@ function UpdateInspect(root) {
             overlay.style.backgroundPosition = "50% 50%";
             overlay.style.backgroundRepeat = "no-repeat";
         }
-        overlay.style.backgroundImage = SelectionImg(sel);
+        overlay.style.backgroundImage = SelectionImg(hero);
         overlay.visible = true;
     } else {
         if (overlay) overlay.visible = false;
