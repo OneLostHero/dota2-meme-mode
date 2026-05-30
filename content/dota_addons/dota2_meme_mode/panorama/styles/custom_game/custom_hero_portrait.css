@@ -32,3 +32,8 @@
 .PrecacheImg_occupational_hazard_portrait  { background-image: url("file://{images}/heroes/npc_dota_hero_occupational_hazard.png"); }
 .PrecacheImg_occupational_hazard_icon      { background-image: url("file://{images}/heroes/icons/npc_dota_hero_occupational_hazard.png"); }
 .PrecacheImg_occupational_hazard_crop      { background-image: url("file://{images}/heroes/crops/npc_dota_hero_occupational_hazard.png"); }
+
+.PrecacheImg_mr_badhabits_selection { background-image: url("file://{images}/heroes/selection/npc_dota_hero_mr_badhabits.png"); }
+.PrecacheImg_mr_badhabits_portrait  { background-image: url("file://{images}/heroes/npc_dota_hero_mr_badhabits.png"); }
+.PrecacheImg_mr_badhabits_icon      { background-image: url("file://{images}/heroes/icons/npc_dota_hero_mr_badhabits.png"); }
+.PrecacheImg_mr_badhabits_crop      { background-image: url("file://{images}/heroes/crops/npc_dota_hero_mr_badhabits.png"); }
