@@ -1,0 +1,26 @@
+// Mr. Bomber — Innate: Volatile Munitions
+// Hidden passive. His explosives hit harder, and Remote Mines are cheaper and come faster.
+// "+2 max mines" from the brief isn't modifier-addressable on the borrowed techies_remote_mines
+// (the cap is a hard internal ability value), so it's expressed as a cooldown reduction:
+// laying mines faster keeps a bigger pile on the field — same fantasy, robust implementation.
+"DOTAAbilities"
+{
+	"mr_bomber_volatile_munitions"
+	{
+		"BaseClass"				"ability_lua"
+		"ScriptFile"			"abilities/mr_bomber/volatile_munitions"
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE"
+		"AbilityType"			"ABILITY_TYPE_BASIC"	// NOT ATTRIBUTES: ATTRIBUTES makes the engine count the innate as a 9th talent and overflow the talent-tree UI (UpgradeName9 crash). Innate slot comes from "Innate" "1".
+		"AbilityTextureName"	"techies_remote_mines"
+		"MaxLevel"				"1"
+		"Innate"				"1"		// show in the dedicated innate slot
+		"IsBreakable"			"0"
+
+		"AbilityValues"
+		{
+			"bonus_spell_amp"				"15"	// +% to all his spell damage (mines, hook)
+			"mine_manacost_reduction_pct"	"15"	// -% Remote Mines mana cost
+			"mine_cooldown_reduction_pct"	"25"	// -% Remote Mines cooldown (lay mines faster = bigger pile)
+		}
+	}
+}

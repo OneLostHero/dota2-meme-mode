@@ -440,7 +440,7 @@
 		"Ability4"				"generic_hidden"
 		"Ability5"				"generic_hidden"
 		"Ability6"				"techies_remote_mines"				// R (ult) — classic remote-detonated mines
-		"Ability7"				"generic_hidden"					// Innate Volatile Munitions wired in Phase B
+		"Ability7"				"mr_bomber_volatile_munitions"		// Innate (Volatile Munitions: +spell dmg, cheaper/faster mines)
 
 		// Talents (real stock tokens, verified to exist + wired to held abilities where possible)
 		"Ability10"				"special_bonus_unique_keeper_of_the_light_7"		// L10 L: Chakra Magic
