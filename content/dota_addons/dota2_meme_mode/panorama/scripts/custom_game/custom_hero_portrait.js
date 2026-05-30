@@ -153,18 +153,28 @@ function UpdateInspect(root) {
     }
 }
 
+// In-game (and pick-screen) TOP BAR avatars are small DOTAHeroImage panels that render
+// blank for a custom hero. Overlay them. We discriminate by ON-SCREEN POSITION: the top
+// bar sits at the very top (small y), while the big in-game hero portrait is far lower,
+// so a y threshold lets us fix the top bar without ever covering the main portrait (no
+// game-state API, no hard-coded container names).
 function UpdateTopBar(root) {
-    var rows = ["RadiantTeamPlayers", "DireTeamPlayers"];
-    for (var t = 0; t < rows.length; t++) {
-        var c = root.FindChildTraverse(rows[t]);
-        if (!c) continue;
-        for (var j = 0; j < c.GetChildCount(); j++) {
-            var ch = c.GetChild(j);
-            var img = ch ? ch.FindChildTraverse("HeroImage") : null;
-            var hn = null; try { hn = img ? img.heroname : null; } catch (e) {}
-            if (img && IsCustomHero(hn)) SetBg(img, TopBarImg(hn));
+    function walk(p, d) {
+        if (!p || d > 60) return;
+        var pt = ""; try { pt = p.paneltype; } catch (e) {}
+        if (pt === "DOTAHeroImage") {
+            var hn = null; try { hn = p.heroname; } catch (e) {}
+            if (IsCustomHero(hn)) {
+                var w = PanelW(p), h = PanelH(p);
+                var y = 99999; try { var pos = p.GetPositionWithinWindow(); if (pos) y = pos.y; } catch (e) {}
+                // small avatar, anchored near the top of the screen
+                if (w >= 14 && w <= 120 && h >= 14 && h <= 120 && y < 140) OverlayOn(p, hn);
+            }
         }
+        var kids = null; try { kids = p.Children(); } catch (e) {}
+        if (kids) { for (var i = 0; i < kids.length; i++) walk(kids[i], d + 1); }
     }
+    walk(root, 0);
 }
 
 // Only the PICK SCREEN needs these overlays: pre-spawn, the client can't render a
