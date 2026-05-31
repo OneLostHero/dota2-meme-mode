@@ -197,9 +197,41 @@ function Run() {
     } catch (e) {}
 }
 
+// Cadence. The PICK SCREEN needs frequent polling so the inspect/grid overlays can follow
+// mouse-hover (which changes the shown hero without firing a selection event). IN-GAME the
+// only job is to drop the top-bar overlay once the HUD exists -- the overlay is persistent
+// and idempotent, and the top bar doesn't change after it's built. So re-walking the ENTIRE
+// HUD panel tree (UpdateTopBar's walk + GetPositionWithinWindow on every node) several times
+// a second for the WHOLE match is pure waste -- that perpetual full-tree traversal is a
+// hero-independent client-side lag source. Instead: fast while picking, a short burst as the
+// in-game HUD loads, then a cheap heartbeat (catches rare top-bar reflows at ~1/16th the cost).
 (function () {
     GameEvents.Subscribe("dota_player_hero_selection_dirty", Run);
     GameEvents.Subscribe("dota_player_update_hero_selection", Run);
-    function Tick() { Run(); $.Schedule(0.3, Tick); }
+
+    var INGAME_TRIES = 0;
+    var INGAME_BURST = 40;   // ~20s of 0.5s attempts to place top-bar overlays as the HUD appears
+
+    function InPickScreen(root) {
+        if (!root) return false;
+        return !!(root.FindChildTraverse("PreGame") || root.FindChildTraverse("HeroPickScreen"));
+    }
+
+    function Tick() {
+        var root = Root();
+        var pick = InPickScreen(root);
+        Run();
+        var delay;
+        if (pick) {
+            INGAME_TRIES = 0;                 // fresh in-game budget once we leave the pick screen
+            delay = 0.3;                      // follow hover during hero selection
+        } else if (INGAME_TRIES < INGAME_BURST) {
+            INGAME_TRIES++;
+            delay = 0.5;                      // brief burst: place top-bar overlays as the HUD loads in
+        } else {
+            delay = 5.0;                      // steady state: cheap heartbeat for rare HUD reflows
+        }
+        $.Schedule(delay, Tick);
+    }
     $.Schedule(0.3, Tick);
 })();
