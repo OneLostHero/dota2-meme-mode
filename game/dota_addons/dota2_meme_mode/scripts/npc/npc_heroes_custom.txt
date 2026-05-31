@@ -412,8 +412,13 @@
 	//============================================================
 	//  Mr. Bomber  (custom hero, Gyrocopter base/look)
 	//  Q Teleportation (Nature's Prophet) | W Chakra Magic (KotL) | E Meat Hook (Pudge)
-	//  R Remote Mines (Techies) | Innate Volatile Munitions (added Phase B)
+	//  R Proximity Mines (Techies) | Innate Volatile Munitions (added Phase B)
 	//  Demolitions sapper: blink around the map, refund spells, hook a victim onto a mine pile, detonate.
+	//  NOTE: ult was techies_remote_mines (legacy/cut ability) — its mine unit's real model comes from a
+	//  Techies-only wearable + Techies-only selection/detonate logic, so on a Gyrocopter base the mines
+	//  errored, rendered no model, and couldn't be clicked. Swapped to techies_land_mines (Proximity Mines),
+	//  the supported modern successor: invisible mines that auto-detonate on enemy proximity — no clicking,
+	//  no wearable-model dependency, and they pair perfectly with hooking a victim onto the pile.
 	//============================================================
 	"npc_dota_hero_mr_bomber"
 	{
@@ -438,8 +443,8 @@
 		"Ability2"				"keeper_of_the_light_chakra_magic"	// W (KotL Chakra Magic)
 		"Ability3"				"pudge_meat_hook"					// E (Pudge Hook)
 		"Ability4"				"generic_hidden"
-		"Ability5"				"generic_hidden"
-		"Ability6"				"techies_remote_mines"				// R (ult) — classic remote-detonated mines
+		"Ability5"				"techies_minefield_sign"			// free utility (NOT_LEARNABLE): plant a sign to reveal/auto-detonate the pile
+		"Ability6"				"techies_land_mines"				// R (ult) — Proximity Mines: stack invisible mines that auto-detonate on enemy proximity
 		"Ability7"				"mr_bomber_volatile_munitions"		// Innate (Volatile Munitions: +spell dmg, cheaper/faster mines)
 
 		// Talents (real stock tokens, verified to exist + wired to held abilities where possible)
@@ -447,7 +452,7 @@
 		"Ability11"				"special_bonus_hp_250"								// L10 R
 		"Ability12"				"special_bonus_attack_speed_30"						// L15 L  (Meat Hook has no stock stat talent)
 		"Ability13"				"special_bonus_unique_furion_3"						// L15 R: Teleportation
-		"Ability14"				"special_bonus_magic_resistance_10"					// L20 L  (Remote Mines has no stock stat talent)
+		"Ability14"				"special_bonus_magic_resistance_10"					// L20 L  (generic; Proximity Mines stat talents are wired to Techies-specific values)
 		"Ability15"				"special_bonus_movement_speed_30"					// L20 R
 		"Ability16"				"special_bonus_strength_12"							// L25 L
 		"Ability17"				"special_bonus_attack_damage_60"					// L25 R

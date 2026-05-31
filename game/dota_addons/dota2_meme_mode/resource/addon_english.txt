@@ -49,13 +49,13 @@
 		// Custom hero — Mr. Bomber
 		"npc_dota_hero_mr_bomber"			"Mr. Bomber"
 		"npc_dota_hero_mr_bomber_bio"		"A demolitions sapper who teleports across the battlefield, refunds his own spells, hooks a victim into a waiting pile of mines, and lights the fuse."
-		"npc_dota_hero_mr_bomber_npedesc1"	"A trap-and-detonate nuker: seed Remote Mines, Meat Hook a victim onto the pile, refund mana with Chakra Magic, and teleport away."
-		"npc_dota_hero_mr_bomber_npedesc2"	"Stack Remote Mines, hook an enemy into them, detonate, then Teleportation out before anyone reaches you."
+		"npc_dota_hero_mr_bomber_npedesc1"	"A trap-and-detonate nuker: seed Proximity Mines, Meat Hook a victim onto the pile, refund mana with Chakra Magic, and teleport away."
+		"npc_dota_hero_mr_bomber_npedesc2"	"Stack Proximity Mines, hook an enemy into them to set them off, then Teleportation out before anyone reaches you."
 		"npc_dota_hero_mr_bomber_hype"		"Hold still. This won't hurt me a bit."
 
 		// --- Volatile Munitions (Mr. Bomber innate) ---
 		"DOTA_Tooltip_ability_mr_bomber_volatile_munitions"				"Volatile Munitions"
-		"DOTA_Tooltip_ability_mr_bomber_volatile_munitions_Description"	"Mr. Bomber's explosives are packed hot. His spell damage is increased, and his Remote Mines cost less mana and recharge faster — so a bigger pile is always waiting."
+		"DOTA_Tooltip_ability_mr_bomber_volatile_munitions_Description"	"Mr. Bomber's explosives are packed hot. His spell damage is increased, and his Proximity Mines cost less mana and recharge faster — so a bigger pile is always waiting."
 		"DOTA_Tooltip_ability_mr_bomber_volatile_munitions_bonus_spell_amp"				"SPELL DAMAGE:"
 		"DOTA_Tooltip_ability_mr_bomber_volatile_munitions_mine_manacost_reduction_pct"	"MINE MANA COST REDUCTION:"
 		"DOTA_Tooltip_ability_mr_bomber_volatile_munitions_mine_cooldown_reduction_pct"	"MINE COOLDOWN REDUCTION:"

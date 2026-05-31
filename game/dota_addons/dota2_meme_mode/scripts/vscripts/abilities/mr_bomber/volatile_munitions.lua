@@ -2,11 +2,11 @@
 	Mr. Bomber — Innate: Volatile Munitions
 
 	A hidden intrinsic passive that makes his demolitions kit better:
-	  - +bonus_spell_amp% to all his spell damage (so Remote Mines and Meat Hook hit harder).
-	  - -mine_manacost_reduction_pct% mana cost on Remote Mines only.
-	  - -mine_cooldown_reduction_pct% cooldown on Remote Mines only (lay mines faster, so a
-	    bigger pile stays on the field — the robust stand-in for "+2 max mines", which isn't
-	    reachable on the borrowed techies_remote_mines ability from a modifier).
+	  - +bonus_spell_amp% to all his spell damage (so Proximity Mines and Meat Hook hit harder).
+	  - -mine_manacost_reduction_pct% mana cost on Proximity Mines only.
+	  - -mine_cooldown_reduction_pct% cooldown on Proximity Mines only (lay mines faster, so a
+	    bigger pile stays on the field — fits the "always a pile waiting" fantasy). Note: Proximity
+	    Mines (techies_land_mines) are charge-based; COOLDOWN_PERCENTAGE also speeds charge restore.
 
 	All effects use standard modifier properties; the two mine-specific ones are gated by the
 	triggering ability's name so they don't touch his other spells. All values from KV.
@@ -20,7 +20,7 @@ function mr_bomber_volatile_munitions:GetIntrinsicModifierName()
 end
 
 --------------------------------------------------------------------------------
-local MINE_ABILITY = "techies_remote_mines"
+local MINE_ABILITY = "techies_land_mines"	-- Proximity Mines (the hero's ult); mana/cooldown cuts are gated to this only
 
 modifier_mr_bomber_volatile_munitions = class({})
 
