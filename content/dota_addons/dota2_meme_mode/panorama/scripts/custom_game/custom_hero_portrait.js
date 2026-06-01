@@ -47,7 +47,10 @@ function Root() {
 function LocalSelection() {
     var pid = Players.GetLocalPlayer();
     var info = pid >= 0 ? Game.GetPlayerInfo(pid) : null;
-    return info ? (info.player_selected_hero || info.possible_hero_selection || "") : "";
+    // possible_hero_selection = the hero currently highlighted/previewed in the pick screen (what the
+    // big inspect shows). Prefer it over player_selected_hero so a LOCKED custom pick doesn't override
+    // the portrait of whatever OTHER hero you then click on.
+    return info ? (info.possible_hero_selection || info.player_selected_hero || "") : "";
 }
 
 // Lay our static image ON TOP of a custom-hero card. A DOTAHeroImage paints its own
@@ -142,14 +145,18 @@ function UpdateInspect(root) {
     if (!render) return;
     var parent = render.GetParent();
     if (!parent) return;
-    // Use the hero the inspect is CURRENTLY showing (it updates on hover), not our own
-    // selection -- otherwise the overlay locks onto the first picked custom hero and
-    // never follows the hovered hero (the "stuck" + "hover doesn't work" symptom).
-    var hero = "";
-    try { hero = render.heroname || ""; } catch (e) {}
+    // Identify the hero the inspect is CURRENTLY previewing. possible_hero_selection (via
+    // LocalSelection) is the reliable source -- it tracks the highlighted hero and updates on every
+    // click. render.heroname reads blank for our server-only custom heroes AND for normal heroes
+    // here; the OLD order (render.heroname -> ... -> LocalSelection) let a blank read fall through
+    // to the LOCKED hero, so a selected custom hero's portrait got stamped onto every other hero
+    // you clicked (the "overrides normal characters" bug). Trust the preview first.
+    var hero = LocalSelection();
+    if (hero === "") { try { hero = render.heroname || ""; } catch (e) {} }
     if (hero === "") { try { hero = inspect.heroname || ""; } catch (e) {} }
-    if (hero === "") hero = LocalSelection();
-    var overlay = parent.FindChildTraverse("CustomHeroPortraitOverlay");
+    // Look the overlay up under the STABLE inspect container (not render.GetParent(), which the
+    // engine swaps per hero) so we can always hide it, even when the render panel changed.
+    var overlay = inspect.FindChildTraverse("CustomHeroPortraitOverlay");
     if (IsCustomHero(hero)) {
         render.style.opacity = "0.0";
         if (!overlay) {
