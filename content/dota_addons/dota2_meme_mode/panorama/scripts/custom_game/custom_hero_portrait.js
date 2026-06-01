@@ -141,12 +141,17 @@ function UpdateInspect(root) {
     // lookup failed for a normal hero it returned early and the custom portrait stuck forever
     // ("clicking a normal hero does not remove the custom portrait").
     var hero = LocalSelection();
+    var custom = IsCustomHero(hero);
     var overlay = root.FindChildTraverse("CustomHeroPortraitOverlay");
 
-    if (!IsCustomHero(hero)) {
-        // Non-custom (or nothing previewed): ALWAYS hide the overlay, unconditionally, first.
-        if (overlay) overlay.visible = false;
-        // Best-effort: restore the native render we may have dimmed for a previous custom hero.
+    if (!custom) {
+        // Non-custom (or nothing previewed): ALWAYS hide the overlay, unconditionally, first, and
+        // forcefully (visible + collapse it via zero size + clear image) in case `.visible` alone
+        // isn't enough.
+        if (overlay) {
+            overlay.visible = false;
+            try { overlay.style.opacity = "0.0"; overlay.style.width = "0px"; overlay.style.height = "0px"; overlay.style.backgroundImage = "none"; } catch (e) {}
+        }
         var insp0 = CachedFind(root, "HeroInspectInfo");
         if (insp0) { var r0 = FindRenderPanel(insp0, 0); if (r0) { try { r0.style.opacity = "1.0"; } catch (e) {} } }
         return;
@@ -159,22 +164,24 @@ function UpdateInspect(root) {
     if (!render) { if (overlay) overlay.visible = false; return; }
     try { render.style.opacity = "0.0"; } catch (e) {}
     if (!overlay) {
-        // Anchor under the STABLE inspect container (not the volatile render parent).
-        overlay = $.CreatePanel("Panel", inspect, "CustomHeroPortraitOverlay");
-        overlay.style.zIndex = "60";
+        // Anchor under the TOPMOST root so BOTH script instances (the manifest mounts this as Hud
+        // AND HeroSelection) share ONE overlay. Per-inspect overlays made TWO in separate subtrees,
+        // so the polling instance hid its own while the OTHER instance's overlay stayed visible and
+        // unreachable -- that's why the custom portrait never cleared (diag showed overlay=FOUND yet
+        // still on screen).
+        overlay = $.CreatePanel("Panel", root, "CustomHeroPortraitOverlay");
+        overlay.style.zIndex = "1000";
         overlay.style.backgroundSize = "100% 100%";
         overlay.style.backgroundPosition = "50% 50%";
         overlay.style.backgroundRepeat = "no-repeat";
         try { overlay.hittest = false; } catch (e) {}
     }
-    // Position over whatever render panel is current, in inspect-local space.
+    try { overlay.style.opacity = "1.0"; } catch (e) {}   // undo the forceful-hide opacity if reused
+    // Position in ABSOLUTE WINDOW coords (the overlay lives under the full-window root).
     var w = Math.round(PanelW(render)), h = Math.round(PanelH(render));
     if (w > 0 && h > 0) {
         var ox = 0, oy = 0;
-        try {
-            var rp = render.GetPositionWithinWindow(), ip = inspect.GetPositionWithinWindow();
-            if (rp && ip) { ox = Math.round(rp.x - ip.x); oy = Math.round(rp.y - ip.y); }
-        } catch (e) {}
+        try { var rp = render.GetPositionWithinWindow(); if (rp) { ox = Math.round(rp.x); oy = Math.round(rp.y); } } catch (e) {}
         overlay.style.position = ox + "px " + oy + "px 0px";
         overlay.style.width = w + "px";
         overlay.style.height = h + "px";
