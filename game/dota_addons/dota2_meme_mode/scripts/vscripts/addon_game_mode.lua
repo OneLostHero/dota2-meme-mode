@@ -52,6 +52,7 @@ function CMemeModeGameMode:InitGameMode()
 	gm:SetThink( "OnThink", self, "GlobalThink", 2 )
 	gm:SetWeatherEffectsDisabled(false)
 	PluginSystem:Init()
+	softRequire("meme_diag")   -- registers 'meme_diag_start'/'meme_diag_stop' console cmds; dormant until used
 end
 
 function CMemeModeGameMode:OnThink()
