@@ -143,37 +143,48 @@ function UpdateInspect(root) {
     // (the "Mr.BadHabits overwrites all" bug). FindRenderPanel is a small bounded search -- cheap.
     var render = FindRenderPanel(inspect, 0);
     if (!render) return;
-    var parent = render.GetParent();
-    if (!parent) return;
     // Identify the hero the inspect is CURRENTLY previewing. possible_hero_selection (via
     // LocalSelection) is the reliable source -- it tracks the highlighted hero and updates on every
     // click. render.heroname reads blank for our server-only custom heroes AND for normal heroes
-    // here; the OLD order (render.heroname -> ... -> LocalSelection) let a blank read fall through
-    // to the LOCKED hero, so a selected custom hero's portrait got stamped onto every other hero
-    // you clicked (the "overrides normal characters" bug). Trust the preview first.
+    // here, so trust the preview first.
     var hero = LocalSelection();
     if (hero === "") { try { hero = render.heroname || ""; } catch (e) {} }
     if (hero === "") { try { hero = inspect.heroname || ""; } catch (e) {} }
-    // Look the overlay up under the STABLE inspect container (not render.GetParent(), which the
-    // engine swaps per hero) so we can always hide it, even when the render panel changed.
-    var overlay = inspect.FindChildTraverse("CustomHeroPortraitOverlay");
+    // Look the overlay up from the STABLE root. It used to be anchored to render.GetParent(), which
+    // the engine SWAPS per hero, so once you moved to a hero whose render is a different panel we
+    // could neither find nor hide the overlay -- a custom portrait stuck over normal heroes forever
+    // ("clicking a normal hero does not remove the custom portrait"). root.FindChildTraverse finds it
+    // no matter where it lives, so the hide below always works.
+    var overlay = root.FindChildTraverse("CustomHeroPortraitOverlay");
     if (IsCustomHero(hero)) {
-        render.style.opacity = "0.0";
+        try { render.style.opacity = "0.0"; } catch (e) {}
         if (!overlay) {
-            overlay = $.CreatePanel("Panel", parent, "CustomHeroPortraitOverlay");
-            overlay.style.position = "0px 0px 0px";
-            overlay.style.width = "100%";
-            overlay.style.height = "100%";
-            overlay.style.zIndex = "50";
+            // Anchor under the STABLE inspect container (not the volatile render parent).
+            overlay = $.CreatePanel("Panel", inspect, "CustomHeroPortraitOverlay");
+            overlay.style.zIndex = "60";
             overlay.style.backgroundSize = "100% 100%";
             overlay.style.backgroundPosition = "50% 50%";
             overlay.style.backgroundRepeat = "no-repeat";
+            try { overlay.hittest = false; } catch (e) {}
+        }
+        // Re-position over whatever render panel is current, in inspect-local space, so it tracks the
+        // engine swapping the render between heroes.
+        var w = Math.round(PanelW(render)), h = Math.round(PanelH(render));
+        if (w > 0 && h > 0) {
+            var ox = 0, oy = 0;
+            try {
+                var rp = render.GetPositionWithinWindow(), ip = inspect.GetPositionWithinWindow();
+                if (rp && ip) { ox = Math.round(rp.x - ip.x); oy = Math.round(rp.y - ip.y); }
+            } catch (e) {}
+            overlay.style.position = ox + "px " + oy + "px 0px";
+            overlay.style.width = w + "px";
+            overlay.style.height = h + "px";
         }
         overlay.style.backgroundImage = SelectionImg(hero);
         overlay.visible = true;
     } else {
         if (overlay) overlay.visible = false;
-        render.style.opacity = "1.0";
+        try { render.style.opacity = "1.0"; } catch (e) {}
     }
 }
 
