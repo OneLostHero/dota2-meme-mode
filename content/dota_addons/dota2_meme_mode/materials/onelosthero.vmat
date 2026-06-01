@@ -1,0 +1,10 @@
+// OneLostHero custom hero material (generated from embedded FBX texture)
+Layer0
+{
+	shader "global_lit_simple.vfx"
+
+	TextureColor "materials/onelosthero_diffuse.png"
+
+	g_flModelTintAmount "1.000"
+	g_vColorTint "[1.000000 1.000000 1.000000 0.000000]"
+}

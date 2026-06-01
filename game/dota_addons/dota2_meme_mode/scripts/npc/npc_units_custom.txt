@@ -14,7 +14,7 @@
 	"npc_onelosthero_echo"
 	{
 		"BaseClass"					"npc_dota_creature"
-		"Model"						"models/heroes/kez/kez_base.vmdl"
+		"Model"						"models/heroes/onelosthero/onelosthero.vmdl"
 		"ModelScale"				"1.000000"
 		"Level"						"1"
 		"HealthBarOffset"			"170"
