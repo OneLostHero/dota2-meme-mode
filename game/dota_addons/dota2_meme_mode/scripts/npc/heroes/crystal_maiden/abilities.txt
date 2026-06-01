@@ -142,53 +142,11 @@
 	//=================================================================================================================
 	// Ability: Crystal Maiden's Arcane Aura
 	//=================================================================================================================
-	// ---- Arcane Aura  (crystal_maiden_brilliance_aura) ----
-	// icon: crystal_maiden_brilliance_aura
-	"crystal_maiden_brilliance_aura"
-	{
-		"BaseClass"		"crystal_maiden_brilliance_aura"
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
-		
-		"AbilityValues"
-		{
-			"base_mana_regen"	// higher = stronger
-			{
-				"value"										"0.4 0.6 0.8 1.0"
-			}
-			"proximity_mana_regen_tooltip"	// higher = stronger
-			{
-				"value"										"1.2 1.8 2.4 3.0"
-			}
-			"proximity_bonus_factor"		"3"	// higher = stronger
-			"proximity_bonus_radius"	// higher = stronger
-			{
-				"value"		"1200"
-				"special_bonus_facet_crystal_maiden_cold_comfort"		"=1200"
-				"affected_by_aoe_increase"	"1"
-			}
-			"self_cast_range_bonus"	// higher = stronger
-			{
-				"value"													"0"
-				"special_bonus_facet_crystal_maiden_frozen_expanse"		"50 75 100 125"
-			}
-
-			"aoe_bonus"	// higher = stronger
-			{
-				"special_bonus_facet_crystal_maiden_frozen_expanse" "7 8 9 10"
-			}
-
-			"mana_battery_mana_pct"	// higher = stronger
-			{
-				"value"						"0"
-				"special_bonus_facet_crystal_maiden_cold_comfort"		"10 15 20 25"
-			}
-		}
-		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
-	}
+	// ---- Arcane Aura / Glacial Guard  (crystal_maiden_brilliance_aura) ----
+	// Override REMOVED (2026-06-01): it was a stale pre-rework Arcane Aura (4-level passive, no
+	// "Innate" flag) that MASKED Valve's real innate, so the ability showed as a normal learnable
+	// ability instead of in the innate slot. Falling back to stock makes crystal_maiden_brilliance_aura
+	// the actual current innate (Glacial Guard) -- which is also what Mr.BadHabits uses for his innate.
 	//=================================================================================================================
 	// Ability: Crystal Maiden's Freezing Field
 	//=================================================================================================================

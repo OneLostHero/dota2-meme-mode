@@ -365,7 +365,7 @@
 		"Ability4"				"mr_badhabits_epicenter_scepter"	// hidden: Epicenter Aghs Scepter (CDR + bonus dmg)
 		"Ability5"				"generic_hidden"
 		"Ability6"				"sandking_epicenter"				// R (ult) — Aghs Shard native (HasShardUpgrade)
-		"Ability7"				"mr_badhabits_arcane_aura"			// Innate (dedicated Arcane Aura; does NOT touch CM's shared ability)
+		"Ability7"				"crystal_maiden_brilliance_aura"	// Innate (Glacial Guard — CM's real innate, used directly)
 
 		// Talents (real stock tokens, verified wired to held abilities)
 		"Ability10"				"special_bonus_unique_crystal_maiden_1"					// L10 L: Frostbite
