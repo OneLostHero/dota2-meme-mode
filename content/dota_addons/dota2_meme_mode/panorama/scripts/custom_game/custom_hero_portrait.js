@@ -204,7 +204,9 @@ function Run() {
 // HUD panel tree (UpdateTopBar's walk + GetPositionWithinWindow on every node) several times
 // a second for the WHOLE match is pure waste -- that perpetual full-tree traversal is a
 // hero-independent client-side lag source. Instead: fast while picking, a short burst as the
-// in-game HUD loads, then a cheap heartbeat (catches rare top-bar reflows at ~1/16th the cost).
+// in-game HUD loads, then STOP the timer entirely (zero perpetual in-game cost). The top-bar
+// overlays are idempotent and placed during the burst; any later legit change re-runs Run()
+// via the selection events below, so no recurring full-tree walk is needed once the HUD exists.
 (function () {
     GameEvents.Subscribe("dota_player_hero_selection_dirty", Run);
     GameEvents.Subscribe("dota_player_update_hero_selection", Run);
@@ -221,17 +223,14 @@ function Run() {
         var root = Root();
         var pick = InPickScreen(root);
         Run();
-        var delay;
         if (pick) {
             INGAME_TRIES = 0;                 // fresh in-game budget once we leave the pick screen
-            delay = 0.3;                      // follow hover during hero selection
+            $.Schedule(0.3, Tick);            // follow hover during hero selection
         } else if (INGAME_TRIES < INGAME_BURST) {
             INGAME_TRIES++;
-            delay = 0.5;                      // brief burst: place top-bar overlays as the HUD loads in
-        } else {
-            delay = 5.0;                      // steady state: cheap heartbeat for rare HUD reflows
+            $.Schedule(0.5, Tick);            // brief burst: place top-bar overlays as the HUD loads in
         }
-        $.Schedule(delay, Tick);
+        // else: in-game, burst done -> stop the timer. NO perpetual HUD-tree walk. Events re-run Run().
     }
     $.Schedule(0.3, Tick);
 })();
