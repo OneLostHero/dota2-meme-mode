@@ -135,57 +135,52 @@ function CachedFind(root, id) {
 
 // Big inspect portrait: hide the blank DOTAHeroMovie, overlay our static image.
 function UpdateInspect(root) {
-    var inspect = CachedFind(root, "HeroInspectInfo");
-    if (!inspect) return;
-    // Re-find the render panel EVERY call (do NOT cache it): the engine repoints/swaps this panel
-    // per hovered hero, so a cached handle reads a stale (often blank custom-hero) heroname and the
-    // LocalSelection() fallback then stamps the SELECTED custom hero's portrait over everyone
-    // (the "Mr.BadHabits overwrites all" bug). FindRenderPanel is a small bounded search -- cheap.
-    var render = FindRenderPanel(inspect, 0);
-    if (!render) return;
-    // Identify the hero the inspect is CURRENTLY previewing. possible_hero_selection (via
-    // LocalSelection) is the reliable source -- it tracks the highlighted hero and updates on every
-    // click. render.heroname reads blank for our server-only custom heroes AND for normal heroes
-    // here, so trust the preview first.
+    // Determine the previewed hero from PLAYER INFO (possible_hero_selection), NOT the panel tree,
+    // so the HIDE path never depends on finding a render panel. The old code did
+    // `var render = FindRenderPanel(...); if (!render) return;` BEFORE the hide, so when the render
+    // lookup failed for a normal hero it returned early and the custom portrait stuck forever
+    // ("clicking a normal hero does not remove the custom portrait").
     var hero = LocalSelection();
-    if (hero === "") { try { hero = render.heroname || ""; } catch (e) {} }
-    if (hero === "") { try { hero = inspect.heroname || ""; } catch (e) {} }
-    // Look the overlay up from the STABLE root. It used to be anchored to render.GetParent(), which
-    // the engine SWAPS per hero, so once you moved to a hero whose render is a different panel we
-    // could neither find nor hide the overlay -- a custom portrait stuck over normal heroes forever
-    // ("clicking a normal hero does not remove the custom portrait"). root.FindChildTraverse finds it
-    // no matter where it lives, so the hide below always works.
     var overlay = root.FindChildTraverse("CustomHeroPortraitOverlay");
-    if (IsCustomHero(hero)) {
-        try { render.style.opacity = "0.0"; } catch (e) {}
-        if (!overlay) {
-            // Anchor under the STABLE inspect container (not the volatile render parent).
-            overlay = $.CreatePanel("Panel", inspect, "CustomHeroPortraitOverlay");
-            overlay.style.zIndex = "60";
-            overlay.style.backgroundSize = "100% 100%";
-            overlay.style.backgroundPosition = "50% 50%";
-            overlay.style.backgroundRepeat = "no-repeat";
-            try { overlay.hittest = false; } catch (e) {}
-        }
-        // Re-position over whatever render panel is current, in inspect-local space, so it tracks the
-        // engine swapping the render between heroes.
-        var w = Math.round(PanelW(render)), h = Math.round(PanelH(render));
-        if (w > 0 && h > 0) {
-            var ox = 0, oy = 0;
-            try {
-                var rp = render.GetPositionWithinWindow(), ip = inspect.GetPositionWithinWindow();
-                if (rp && ip) { ox = Math.round(rp.x - ip.x); oy = Math.round(rp.y - ip.y); }
-            } catch (e) {}
-            overlay.style.position = ox + "px " + oy + "px 0px";
-            overlay.style.width = w + "px";
-            overlay.style.height = h + "px";
-        }
-        overlay.style.backgroundImage = SelectionImg(hero);
-        overlay.visible = true;
-    } else {
+
+    if (!IsCustomHero(hero)) {
+        // Non-custom (or nothing previewed): ALWAYS hide the overlay, unconditionally, first.
         if (overlay) overlay.visible = false;
-        try { render.style.opacity = "1.0"; } catch (e) {}
+        // Best-effort: restore the native render we may have dimmed for a previous custom hero.
+        var insp0 = CachedFind(root, "HeroInspectInfo");
+        if (insp0) { var r0 = FindRenderPanel(insp0, 0); if (r0) { try { r0.style.opacity = "1.0"; } catch (e) {} } }
+        return;
     }
+
+    // Custom hero: place/show the overlay over the inspect render.
+    var inspect = CachedFind(root, "HeroInspectInfo");
+    if (!inspect) { if (overlay) overlay.visible = false; return; }
+    var render = FindRenderPanel(inspect, 0);
+    if (!render) { if (overlay) overlay.visible = false; return; }
+    try { render.style.opacity = "0.0"; } catch (e) {}
+    if (!overlay) {
+        // Anchor under the STABLE inspect container (not the volatile render parent).
+        overlay = $.CreatePanel("Panel", inspect, "CustomHeroPortraitOverlay");
+        overlay.style.zIndex = "60";
+        overlay.style.backgroundSize = "100% 100%";
+        overlay.style.backgroundPosition = "50% 50%";
+        overlay.style.backgroundRepeat = "no-repeat";
+        try { overlay.hittest = false; } catch (e) {}
+    }
+    // Position over whatever render panel is current, in inspect-local space.
+    var w = Math.round(PanelW(render)), h = Math.round(PanelH(render));
+    if (w > 0 && h > 0) {
+        var ox = 0, oy = 0;
+        try {
+            var rp = render.GetPositionWithinWindow(), ip = inspect.GetPositionWithinWindow();
+            if (rp && ip) { ox = Math.round(rp.x - ip.x); oy = Math.round(rp.y - ip.y); }
+        } catch (e) {}
+        overlay.style.position = ox + "px " + oy + "px 0px";
+        overlay.style.width = w + "px";
+        overlay.style.height = h + "px";
+    }
+    overlay.style.backgroundImage = SelectionImg(hero);
+    overlay.visible = true;
 }
 
 // In-game (and pick-screen) TOP BAR avatars are small DOTAHeroImage panels that render
