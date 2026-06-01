@@ -134,9 +134,11 @@ function CachedFind(root, id) {
 function UpdateInspect(root) {
     var inspect = CachedFind(root, "HeroInspectInfo");
     if (!inspect) return;
-    var render = _find._inspectRender;
-    if (render) { try { var _t2 = render.paneltype; } catch (e) { render = null; } }
-    if (!render) { render = FindRenderPanel(inspect, 0); _find._inspectRender = render || null; }
+    // Re-find the render panel EVERY call (do NOT cache it): the engine repoints/swaps this panel
+    // per hovered hero, so a cached handle reads a stale (often blank custom-hero) heroname and the
+    // LocalSelection() fallback then stamps the SELECTED custom hero's portrait over everyone
+    // (the "Mr.BadHabits overwrites all" bug). FindRenderPanel is a small bounded search -- cheap.
+    var render = FindRenderPanel(inspect, 0);
     if (!render) return;
     var parent = render.GetParent();
     if (!parent) return;
@@ -234,7 +236,11 @@ function RunInspect() {
 //   * IN-GAME: a short burst places the top-bar overlays as the HUD loads, then the timer
 //     STOPS entirely (zero perpetual cost); events re-run Run() if a pick ever changes.
 (function () {
-    GameEvents.Subscribe("dota_player_hero_selection_dirty", Run);
+    // HOVER fires selection_dirty very frequently (the preview hero changes with no event of its
+    // own) and doing the heavy full pass on each one was a ~40ms client hitch per hover -- the
+    // char-select stutter. Bind hover to the CHEAP inspect-only pass; do the heavy grid/top-row
+    // pass only on an actual PICK (update_hero_selection, infrequent) plus the Tick burst/heartbeat.
+    GameEvents.Subscribe("dota_player_hero_selection_dirty", RunInspect);
     GameEvents.Subscribe("dota_player_update_hero_selection", Run);
 
     var PICK_BURST = 10;     // ~3s of full passes as the pick grid/top row build in
