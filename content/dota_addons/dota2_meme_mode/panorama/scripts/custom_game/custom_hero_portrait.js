@@ -118,11 +118,25 @@ function FindRenderPanel(root, depth) {
     return null;
 }
 
+// Cached whole-tree lookups. FindChildTraverse scans the ENTIRE panel tree; doing it every
+// 0.3s tick (x2 panel instances) was a big pick-screen cost. Cache handles; re-scan only if the
+// cached panel was destroyed (reading a prop throws) or hasn't been found yet.
+var _find = {};
+function CachedFind(root, id) {
+    var c = _find[id];
+    if (c) { try { var _t = c.paneltype; return c; } catch (e) { _find[id] = null; } }
+    var f = null; try { f = root.FindChildTraverse(id); } catch (e) {}
+    _find[id] = f || null;
+    return f;
+}
+
 // Big inspect portrait: hide the blank DOTAHeroMovie, overlay our static image.
 function UpdateInspect(root) {
-    var inspect = root.FindChildTraverse("HeroInspectInfo");
+    var inspect = CachedFind(root, "HeroInspectInfo");
     if (!inspect) return;
-    var render = FindRenderPanel(inspect, 0);
+    var render = _find._inspectRender;
+    if (render) { try { var _t2 = render.paneltype; } catch (e) { render = null; } }
+    if (!render) { render = FindRenderPanel(inspect, 0); _find._inspectRender = render || null; }
     if (!render) return;
     var parent = render.GetParent();
     if (!parent) return;
@@ -186,51 +200,67 @@ function UpdateTopBar(root) {
 // patch to the PreGame/HeroPickScreen container -- which doesn't contain the in-game
 // top-bar portrait. UpdateInspect (HeroInspectInfo) and UpdateTopBar target pick-screen
 // panels that don't exist in-game, so they're safe.
+// Full pass: grid card overlays + inspect + top-row/top-bar overlays. Walks large subtrees
+// (UpdateTopBar forces a layout query per node), so it's driven by EVENTS + short bursts +
+// a slow heartbeat -- NOT the 0.3s hover poll.
 function Run() {
     try {
         var root = Root();
         if (!root) return;
-        var pg = root.FindChildTraverse("PreGame") || root.FindChildTraverse("HeroPickScreen");
+        var pg = CachedFind(root, "PreGame") || CachedFind(root, "HeroPickScreen");
         if (pg) PatchByHeroname(pg, 0);
         UpdateInspect(root);
         UpdateTopBar(root);
     } catch (e) {}
 }
 
-// Cadence. The PICK SCREEN needs frequent polling so the inspect/grid overlays can follow
-// mouse-hover (which changes the shown hero without firing a selection event). IN-GAME the
-// only job is to drop the top-bar overlay once the HUD exists -- the overlay is persistent
-// and idempotent, and the top bar doesn't change after it's built. So re-walking the ENTIRE
-// HUD panel tree (UpdateTopBar's walk + GetPositionWithinWindow on every node) several times
-// a second for the WHOLE match is pure waste -- that perpetual full-tree traversal is a
-// hero-independent client-side lag source. Instead: fast while picking, a short burst as the
-// in-game HUD loads, then STOP the timer entirely (zero perpetual in-game cost). The top-bar
-// overlays are idempotent and placed during the burst; any later legit change re-runs Run()
-// via the selection events below, so no recurring full-tree walk is needed once the HUD exists.
+// Cheap pass: ONLY the inspect portrait, which must follow mouse hover (no hover event fires).
+// Uses cached handles -- no full-tree walk -- so this is what the frequent pick poll runs.
+function RunInspect() {
+    try {
+        var root = Root();
+        if (root) UpdateInspect(root);
+    } catch (e) {}
+}
+
+// Cadence. Split work by cost so the CHARACTER-SELECT screen stays smooth:
+//   * Mouse HOVER changes the big inspect portrait with NO event, so the inspect overlay needs
+//     a frequent poll -- but that's cheap now (one CACHED lookup), so 0.3s is fine.
+//   * The GRID cards and TOP-ROW/TOP-BAR overlays only change when a pick changes, which DOES
+//     fire events, and they require large tree walks (UpdateTopBar does a layout query per
+//     node). So the heavy full pass runs on those EVENTS + a short initial burst + a slow ~2s
+//     heartbeat -- NEVER several times a second. (The old code did a full 3-walk pass every
+//     0.3s during pick; that was the char-select stutter.)
+//   * IN-GAME: a short burst places the top-bar overlays as the HUD loads, then the timer
+//     STOPS entirely (zero perpetual cost); events re-run Run() if a pick ever changes.
 (function () {
     GameEvents.Subscribe("dota_player_hero_selection_dirty", Run);
     GameEvents.Subscribe("dota_player_update_hero_selection", Run);
 
+    var PICK_BURST = 10;     // ~3s of full passes as the pick grid/top row build in
+    var pickTries = 0;
     var INGAME_TRIES = 0;
-    var INGAME_BURST = 40;   // ~20s of 0.5s attempts to place top-bar overlays as the HUD appears
+    var INGAME_BURST = 40;   // ~20s of 0.5s full passes to place the in-game top-bar overlays
 
     function InPickScreen(root) {
         if (!root) return false;
-        return !!(root.FindChildTraverse("PreGame") || root.FindChildTraverse("HeroPickScreen"));
+        return !!(CachedFind(root, "PreGame") || CachedFind(root, "HeroPickScreen"));
     }
 
     function Tick() {
         var root = Root();
         var pick = InPickScreen(root);
-        Run();
         if (pick) {
-            INGAME_TRIES = 0;                 // fresh in-game budget once we leave the pick screen
-            $.Schedule(0.3, Tick);            // follow hover during hero selection
-        } else if (INGAME_TRIES < INGAME_BURST) {
-            INGAME_TRIES++;
-            $.Schedule(0.5, Tick);            // brief burst: place top-bar overlays as the HUD loads in
+            INGAME_TRIES = 0;                                       // fresh in-game budget on leaving pick
+            pickTries++;
+            if (pickTries <= PICK_BURST || pickTries % 7 === 0) Run();  // build + slow ~2s heartbeat
+            else RunInspect();                                     // cheap hover-follow the rest of the time
+            $.Schedule(0.3, Tick);
+        } else {
+            pickTries = 0;
+            if (INGAME_TRIES < INGAME_BURST) { INGAME_TRIES++; Run(); $.Schedule(0.5, Tick); }
+            // else: in-game burst done -> stop. No perpetual walk; selection events re-run Run().
         }
-        // else: in-game, burst done -> stop the timer. NO perpetual HUD-tree walk. Events re-run Run().
     }
     $.Schedule(0.3, Tick);
 })();
