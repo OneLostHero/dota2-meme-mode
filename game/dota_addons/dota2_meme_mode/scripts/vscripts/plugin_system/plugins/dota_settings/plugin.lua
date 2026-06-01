@@ -54,9 +54,8 @@ function DotaSettingsPlugin:ApplySettings()
         end
     end
 
-    if DotaSettingsPlugin.settings.courier_speed ~= 100 then
-        LinkLuaModifier( "modifier_courier_speed", "plugin_system/plugins/dota_settings/modifier_courier_speed", LUA_MODIFIER_MOTION_NONE )
-    end
+    -- Courier speed is applied per-courier on spawn in SpawnEvent() via SetBaseMoveSpeed.
+    -- (The old modifier_courier_speed approach referenced a Lua file that no longer exists.)
 
     if DotaSettingsPlugin.settings.death_time_percent ~= 100 then
         --link modifier
@@ -348,19 +347,22 @@ end
 function DotaSettingsPlugin:SpawnEvent(event)
     local hUnit = EntIndexToHScript(event.entindex)
     if not hUnit.IsRealHero then return end
-    if DotaSettingsPlugin.settings.death_time_percent ~= 100 then
-        if hUnit:IsRealHero() then
-            if DotaSettingsPlugin.unit_cache[event.entindex] ~= nil then return end
-            DotaSettingsPlugin.unit_cache[event.entindex] = true
-            local hModifier = hUnit:AddNewModifier(hUnit,nil,"modifier_death_percentage",{stack = DotaSettingsPlugin.settings.death_time_percent})
-        end
-    end
-    
+    -- Respawn-time scaling is applied globally in ApplySettings() via SetRespawnTimeScale().
+    -- The old per-hero "modifier_death_percentage" add was removed: its Lua file no longer exists
+    -- (the LinkLuaModifier above is commented out), so AddNewModifier spammed
+    -- "Attempted to create unknown modifier type modifier_death_percentage!" on every hero spawn.
+
     if DotaSettingsPlugin.settings.courier_speed ~= 100 then
         if hUnit:IsCourier() then
             if DotaSettingsPlugin.unit_cache[event.entindex] ~= nil then return end
             DotaSettingsPlugin.unit_cache[event.entindex] = true
-            local hModifier = hUnit:AddNewModifier(hUnit,nil,"modifier_courier_speed",{stack = DotaSettingsPlugin.settings.courier_speed})
+            -- Scale the courier's base move speed by courier_speed% directly. (The old
+            -- "modifier_courier_speed" add referenced a Lua file that no longer exists, so it
+            -- silently did nothing AND spammed "unknown modifier" on each courier spawn.)
+            local base = hUnit:GetBaseMoveSpeed()
+            if base and base > 0 then
+                hUnit:SetBaseMoveSpeed(math.floor(base * DotaSettingsPlugin.settings.courier_speed * 0.01))
+            end
         end
     end
 end
