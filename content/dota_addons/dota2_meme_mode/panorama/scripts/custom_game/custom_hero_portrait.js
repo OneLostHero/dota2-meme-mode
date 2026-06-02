@@ -134,54 +134,50 @@ function CachedFind(root, id) {
 }
 
 // Big inspect portrait: hide the blank DOTAHeroMovie, overlay our static image.
+// IMPORTANT: the manifest mounts this script TWICE (Hud AND HeroSelection), so it runs as two
+// independent instances with SEPARATE roots. The one thing they BOTH share is the singular
+// HeroInspectInfo panel, so the overlay is created under / looked up via THAT -- giving exactly one
+// shared overlay both instances can see and hide. Any instance that can't reach HeroInspectInfo does
+// nothing (the other instance owns it). Anchoring under each instance's own root produced TWO
+// overlays ("displaying twice").
 function UpdateInspect(root) {
-    // Determine the previewed hero from PLAYER INFO (possible_hero_selection), NOT the panel tree,
-    // so the HIDE path never depends on finding a render panel. The old code did
-    // `var render = FindRenderPanel(...); if (!render) return;` BEFORE the hide, so when the render
-    // lookup failed for a normal hero it returned early and the custom portrait stuck forever
-    // ("clicking a normal hero does not remove the custom portrait").
-    var hero = LocalSelection();
-    var custom = IsCustomHero(hero);
-    var overlay = root.FindChildTraverse("CustomHeroPortraitOverlay");
+    var inspect = CachedFind(root, "HeroInspectInfo");
+    if (!inspect) return;   // this instance can't reach the inspect -> let the other instance handle it
 
-    if (!custom) {
-        // Non-custom (or nothing previewed): ALWAYS hide the overlay, unconditionally, first, and
-        // forcefully (visible + collapse it via zero size + clear image) in case `.visible` alone
-        // isn't enough.
+    // Decide custom-vs-not from possible_hero_selection (no render needed), then HIDE first so a
+    // missing render can never leave a stuck overlay.
+    var hero = LocalSelection();
+    var overlay = inspect.FindChildTraverse("CustomHeroPortraitOverlay");
+
+    if (!IsCustomHero(hero)) {
         if (overlay) {
             overlay.visible = false;
             try { overlay.style.opacity = "0.0"; overlay.style.width = "0px"; overlay.style.height = "0px"; overlay.style.backgroundImage = "none"; } catch (e) {}
         }
-        var insp0 = CachedFind(root, "HeroInspectInfo");
-        if (insp0) { var r0 = FindRenderPanel(insp0, 0); if (r0) { try { r0.style.opacity = "1.0"; } catch (e) {} } }
+        var r0 = FindRenderPanel(inspect, 0); if (r0) { try { r0.style.opacity = "1.0"; } catch (e) {} }
         return;
     }
 
-    // Custom hero: place/show the overlay over the inspect render.
-    var inspect = CachedFind(root, "HeroInspectInfo");
-    if (!inspect) { if (overlay) overlay.visible = false; return; }
     var render = FindRenderPanel(inspect, 0);
     if (!render) { if (overlay) overlay.visible = false; return; }
     try { render.style.opacity = "0.0"; } catch (e) {}
     if (!overlay) {
-        // Anchor under the TOPMOST root so BOTH script instances (the manifest mounts this as Hud
-        // AND HeroSelection) share ONE overlay. Per-inspect overlays made TWO in separate subtrees,
-        // so the polling instance hid its own while the OTHER instance's overlay stayed visible and
-        // unreachable -- that's why the custom portrait never cleared (diag showed overlay=FOUND yet
-        // still on screen).
-        overlay = $.CreatePanel("Panel", root, "CustomHeroPortraitOverlay");
-        overlay.style.zIndex = "1000";
+        overlay = $.CreatePanel("Panel", inspect, "CustomHeroPortraitOverlay");
+        overlay.style.zIndex = "60";
         overlay.style.backgroundSize = "100% 100%";
         overlay.style.backgroundPosition = "50% 50%";
         overlay.style.backgroundRepeat = "no-repeat";
         try { overlay.hittest = false; } catch (e) {}
     }
-    try { overlay.style.opacity = "1.0"; } catch (e) {}   // undo the forceful-hide opacity if reused
-    // Position in ABSOLUTE WINDOW coords (the overlay lives under the full-window root).
+    try { overlay.style.opacity = "1.0"; } catch (e) {}
+    // Position over the render, in inspect-local space (the overlay lives under inspect).
     var w = Math.round(PanelW(render)), h = Math.round(PanelH(render));
     if (w > 0 && h > 0) {
         var ox = 0, oy = 0;
-        try { var rp = render.GetPositionWithinWindow(); if (rp) { ox = Math.round(rp.x); oy = Math.round(rp.y); } } catch (e) {}
+        try {
+            var rp = render.GetPositionWithinWindow(), ip = inspect.GetPositionWithinWindow();
+            if (rp && ip) { ox = Math.round(rp.x - ip.x); oy = Math.round(rp.y - ip.y); }
+        } catch (e) {}
         overlay.style.position = ox + "px " + oy + "px 0px";
         overlay.style.width = w + "px";
         overlay.style.height = h + "px";
