@@ -18,7 +18,10 @@
 		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/tooltip.xml" />
 		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/smithing.xml" />
 		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/plugin_settings_review.xml" />
-		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/custom_hero_portrait.xml" />
+		<!-- Mounted ONLY as HeroSelection. Mounting it ALSO as Hud created a SECOND script instance
+		     with a separate root that, during pick, couldn't detect the pick screen, ran its in-game
+		     burst, made an orphan inspect overlay, then stopped -- a custom portrait the HeroSelection
+		     instance couldn't reach to hide ("displaying twice" / "won't clear on normal heroes"). -->
 		<CustomUIElement type="HeroSelection" layoutfile="file://{resources}/layout/custom_game/custom_hero_portrait.xml" />
 		
 <!-- 		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/devstuff.xml" /> -->
