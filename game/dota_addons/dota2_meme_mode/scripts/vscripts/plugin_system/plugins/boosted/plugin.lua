@@ -855,8 +855,11 @@ function BoostedPlugin:BanPersonalKV(ability,key,player_id)
         BoostedPlugin.kv_bans[player_id] = {}
         BoostedPlugin.kv_bans[player_id].bans = 0
     end
-    if BoostedPlugin.kv_bans[player_id].bans < BoostedPlugin.settings.kv_bans then
-        BoostedPlugin.kv_bans[player_id][ability .. "&" .. key] = 1
+    -- Ban the WHOLE ability (every stat of it), and count it as a single ban.
+    local ability_ban = "__ability__" .. ability
+    if BoostedPlugin.kv_bans[player_id][ability_ban] == nil
+       and BoostedPlugin.kv_bans[player_id].bans < BoostedPlugin.settings.kv_bans then
+        BoostedPlugin.kv_bans[player_id][ability_ban] = 1
         BoostedPlugin.kv_bans[player_id].bans = BoostedPlugin.kv_bans[player_id].bans + 1
     end
 end
@@ -1275,7 +1278,9 @@ function BoostedPlugin:IntoRng(ability,t,iPlayer,hAbility)
     end
     for k,v in pairs(t) do
 		if v ~= nil then
-            if BoostedPlugin.kv_bans[iPlayer][ability .. "&" .. k] == nil and BoostedPlugin:IsNotBlockedByLinkedKV(ability, k) then
+            if BoostedPlugin.kv_bans[iPlayer][ability .. "&" .. k] == nil
+               and BoostedPlugin.kv_bans[iPlayer]["__ability__" .. ability] == nil
+               and BoostedPlugin:IsNotBlockedByLinkedKV(ability, k) then
                 local flBaseValue = hAbility:GetLevelSpecialValueNoOverride( k, nSpecialLevel )
                 if not (flBaseValue < 0.001 and flBaseValue > -0.001) then
                     table.insert(ti,k)
