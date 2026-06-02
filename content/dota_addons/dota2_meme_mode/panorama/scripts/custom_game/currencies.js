@@ -176,6 +176,32 @@ function Cleanup() {
     WindowRoot.RemoveAndDeleteChildren();
 }
 
+// Mirror upgrade.js: ride just above the bottom-left quickbuy/shop cluster so
+// the Boost Juice bar rises together with the upgrade icon as quickbuy fills.
+function GetDotaHud() {
+    var panel = $.GetContextPanel();
+    while (panel && panel.id !== 'Hud') { panel = panel.GetParent(); }
+    return panel;
+}
+var HUD_BAR_BASE_MARGIN = 90;
+function ComputeHudBarMargin() {
+    var hud = GetDotaHud();
+    if (!hud) return HUD_BAR_BASE_MARGIN;
+    var winH = hud.actuallayoutheight;
+    if (!isFinite(winH) || winH <= 0) return HUD_BAR_BASE_MARGIN;
+    var cluster = hud.FindChildTraverse("quickbuy") || hud.FindChildTraverse("shop_launcher_block");
+    if (!cluster) return HUD_BAR_BASE_MARGIN;
+    var top;
+    try { top = cluster.GetPositionWithinWindow().y; } catch (e) { return HUD_BAR_BASE_MARGIN; }
+    if (!isFinite(top) || top <= 0) return HUD_BAR_BASE_MARGIN;
+    var mb = (winH - top) + 6;
+    return mb > HUD_BAR_BASE_MARGIN ? mb : HUD_BAR_BASE_MARGIN;
+}
+function RepositionBar() {
+    $.Schedule(0.25, RepositionBar);
+    $.GetContextPanel().style.marginBottom = Math.round(ComputeHudBarMargin()) + "px";
+}
+
 
 (function () {
     
@@ -189,6 +215,7 @@ function Cleanup() {
             AddCurrency(tCurrencies[key].key,tCurrencies[key].value);
         }
         CustomNetTables.SubscribeNetTableListener( "currencies" , tCurrenciesUpdate );
+        RepositionBar();
     }
     if (Game.IsHUDFlipped()) {
         $.GetContextPanel().SetHasClass("flipped",true);

@@ -215,9 +215,9 @@
    horizontal-align: left;
    vertical-align: bottom;
    margin-left: 6px;
-   margin-bottom: 84px;
-   width: 70px;
-   height: 50px;
+   margin-bottom: 90px; /* JS (RepositionBar) overrides this to ride the quickbuy cluster */
+   width: 96px;
+   height: 68px;
    background-color: none;
    background-image: url("file://{images}/custom_game/upgrades_button.png");
    background-size: contain;
