@@ -121,7 +121,19 @@
   #OptionButtonBanText{ color: #9aa0ab; font-size: 12px; font-weight: bold; vertical-align: center; text-align: center; }
   .OptionButtonBan:hover #OptionButtonBanText{ color: #fff; }
 
-  #AbilityChangeReport{ visibility: collapse; width: 0px; height: 0px; }
+  #AbilityChangeReport{
+   width: 20px;
+   height: 20px;
+   border-radius: 4px;
+   background-color: #23262e;
+   background-image: url("file://{images}/custom_game/report.png");
+   background-size: 14px;
+   background-repeat: no-repeat;
+   background-position: 50% 50%;
+   vertical-align: center;
+   margin-right: 3px;
+  }
+  #AbilityChangeReport:hover{ background-color: #7a5a1f; }
 
   .DullUpgrade{
    background-color: gradient( linear, 0% 0%, 0% 100%, from( #000000cc ), to( #3b3b3bcc ) );

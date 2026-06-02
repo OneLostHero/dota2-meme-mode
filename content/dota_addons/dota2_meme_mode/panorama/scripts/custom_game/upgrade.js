@@ -88,9 +88,12 @@ function UpgradeOptionNew(data) {
     }
     UpgradeOptionAbilityName.text = nameLoc;
 
-    upgradePanel.FindChildTraverse("AbilityChangeReport").SetPanelEvent( 'onactivate', function () {
+    var reportBtn = upgradePanel.FindChildTraverse("AbilityChangeReport");
+    reportBtn.SetPanelEvent('onactivate', function () {
         GameEvents.SendCustomGameEventToServer( "upgrade_report", {ab: data.ability,kv: data.key});
     } );
+    reportBtn.SetPanelEvent('onmouseover', function () { $.DispatchEvent("DOTAShowTextTooltip", reportBtn, "Report this upgrade (flag as broken/OP)"); });
+    reportBtn.SetPanelEvent('onmouseout', function () { $.DispatchEvent("DOTAHideTextTooltip", reportBtn); });
 
     if (data.rarity == 4) {
         //uniques
