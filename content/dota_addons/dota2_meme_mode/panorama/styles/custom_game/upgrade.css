@@ -215,14 +215,12 @@
    horizontal-align: left;
    vertical-align: bottom;
    margin-left: 6px;
-   margin-bottom: 86px;
-   width: 108px;
-   height: 72px;
+   margin-bottom: 82px;
+   width: 184px;
+   height: 70px;
    background-color: none;
-   border: none;
-   box-shadow: none;
    background-image: url("file://{images}/custom_game/upgrades_button.png");
-   background-size: contain;
+   background-size: cover;
    background-repeat: no-repeat;
    background-position: 50% 50%;
   }
@@ -230,13 +228,13 @@
   .UpgradeToggleBadge{
    horizontal-align: right;
    vertical-align: center;
-   margin-right: 12px;
+   margin-right: 20px;
    margin-top: 0px;
    color: #ffd24d;
-   font-size: 18px;
+   font-size: 20px;
    font-weight: bold;
    text-align: center;
-   width: 18px;
+   width: 22px;
    background-color: none;
   }
 
