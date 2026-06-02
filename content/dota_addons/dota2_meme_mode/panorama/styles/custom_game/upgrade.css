@@ -50,6 +50,10 @@
    width: 340px;
    max-height: 620px;
    flow-children: down;
+   background-color: #15171c;
+   border: 1px solid #2a2f3a;
+   border-radius: 8px;
+   overflow: noclip clip;
   }
 
   .UpgradeOption{
@@ -176,6 +180,21 @@
   }
   .UpgradeDrawerBody{ flow-children: down; }
 
+  /* Self-contained header chrome (id-targeted so it works even if meme_ui.css classes don't land here) */
+  #UpgradeDrawerHeader{
+   flow-children: down;
+   width: 100%;
+   padding: 8px 10px;
+   background-color: gradient( linear, 0% 0%, 0% 100%, from( #1b1e26 ), to( #15171c ) );
+   border-bottom: 1px solid #2a2f3a;
+  }
+  #UpgradeDrawerHeader .meme-header-title{
+   color: #c8ff5e;
+   font-size: 15px;
+   font-weight: bold;
+   letter-spacing: 0.5px;
+   vertical-align: center;
+  }
   .UpgradeDrawerHeaderCol{ flow-children: down; }
   .UpgradeDrawerHeaderTop{ flow-children: right; vertical-align: center; width: 100%; }
   .UpgradeDrawerHeaderSub{ flow-children: right; vertical-align: center; width: 100%; margin-top: 4px; }
