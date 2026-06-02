@@ -30,11 +30,6 @@
 				</Button>
 			</Panel>
 		</snippet>
-		<snippet name="UpgradeToggleButton">
-			<Button class="UpgradeToggleButton">
-				<Label id="UpgradeToggleBadge" class="UpgradeToggleBadge" text="0" />
-			</Button>
-		</snippet>
 	</snippets>
 	<Panel class="PersonalUpgradeScreen" hittest="false" visible="true">
 		<Panel id="UpgradeDrawer" class="meme-panel UpgradeDrawer" hittest="true">
@@ -43,7 +38,7 @@
 					<Label class="meme-header-title" text="ABILITY UPGRADES" />
 					<Panel id="UpgradeDrawerQueued" class="UpgradeDrawerQueued">
 						<Label id="QueuedUpgradesText" text="0" />
-						<Label class="UpgradeDrawerQueuedSuffix" text=" picks" />
+						<Label class="UpgradeDrawerQueuedSuffix" text="picks" />
 					</Panel>
 				</Panel>
 				<Panel class="UpgradeDrawerHeaderSub">
@@ -63,5 +58,8 @@
 				<Panel id="Upgrades" />
 			</Panel>
 		</Panel>
+		<Button id="UpgradeToggleFloat" class="UpgradeToggleFloat" hittest="true">
+			<Label id="UpgradeToggleBadge" class="UpgradeToggleBadge" text="0" />
+		</Button>
 	</Panel>
 </root>

@@ -40,10 +40,8 @@
   }
 
   .PersonalUpgradeScreen{
-   margin-top: 110px;
-   horizontal-align: left;
-   vertical-align: top;
-   flow-children: right;
+   width: 100%;
+   height: 100%;
   }
 
   .UpgradeDrawer{
@@ -54,6 +52,10 @@
    border: 1px solid #2a2f3a;
    border-radius: 8px;
    overflow: noclip clip;
+   horizontal-align: left;
+   vertical-align: top;
+   margin-top: 110px;
+   margin-left: 8px;
   }
 
   .UpgradeOption{
@@ -205,19 +207,26 @@
   .LegendRare{ color: #c7b000; }
   .LegendEpic{ color: #a855f7; }
   .LegendUnique{ color: #f7a000; }
-  .UpgradeDrawerQueuedSuffix{ color: #fff; font-size: 11px; vertical-align: center; }
+  .UpgradeDrawerQueuedSuffix{ color: #fff; font-size: 11px; vertical-align: center; margin-left: 3px; }
 
   .UpgradeOption.meme-row{ margin-bottom: 0px; }
 
-  .UpgradeToggleButton{
+  .UpgradeToggleFloat{
+   horizontal-align: left;
+   vertical-align: bottom;
+   margin-left: 14px;
+   margin-bottom: 120px;
+   width: 32px;
+   height: 32px;
+   border-radius: 5px;
+   background-color: gradient( linear, 0% 0%, 0% 100%, from( #1b1e26 ), to( #15171c ) );
+   border: 1px solid #2a2f3a;
    background-image: url("file://{images}/custom_game/boosted_list_png.png");
-   background-size: 26px;
+   background-size: 24px;
    background-repeat: no-repeat;
    background-position: 50% 50%;
-   width: 26px;
-   height: 26px;
   }
-  .UpgradeToggleButton:hover{ box-shadow: fill #c8ff5e88 0px 0px 12px -2px; }
+  .UpgradeToggleFloat:hover{ border: 1px solid #c8ff5e; box-shadow: fill #c8ff5e66 0px 0px 12px -3px; }
   .UpgradeToggleBadge{
    horizontal-align: right;
    vertical-align: top;

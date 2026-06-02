@@ -12,22 +12,8 @@ var QueuedUpgradesText = $.GetContextPanel().FindChildInLayoutFile("QueuedUpgrad
 var Drawer = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawer");
 var DrawerQueued = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerQueued");
 var DrawerEmpty = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerEmpty");
-var ToggleBadge = null;
-
-function CreateToggleButton() {
-    var button_bar = FindDotaHudElement("ButtonBar");
-    if (!button_bar) return;
-    var existing = button_bar.FindChildTraverse("UpgradeToggleButton");
-    if (existing) { existing.DeleteAsync(0); }
-    var panel = $.CreatePanel('Button', $.GetContextPanel(), "UpgradeToggleButton");
-    panel.BLoadLayoutSnippet("UpgradeToggleButton");
-    ToggleBadge = panel.FindChildTraverse("UpgradeToggleBadge");
-    panel.SetPanelEvent('onactivate', function () { $.GetContextPanel().ToggleClass("hidden"); });
-    panel.SetPanelEvent('onmouseover', function () { $.DispatchEvent("DOTAShowTextTooltip", panel, "Ability Upgrades"); });
-    panel.SetPanelEvent('onmouseout', function () { $.DispatchEvent("DOTAHideTextTooltip", panel); });
-    panel.SetParent(button_bar);
-    UpdateToggleBadge();
-}
+var ToggleFloat = $.GetContextPanel().FindChildInLayoutFile("UpgradeToggleFloat");
+var ToggleBadge = $.GetContextPanel().FindChildInLayoutFile("UpgradeToggleBadge");
 
 function UpdateToggleBadge() {
     if (!ToggleBadge) return;
@@ -35,17 +21,6 @@ function UpdateToggleBadge() {
     try { n = Number(QueuedUpgradesText.text) || 0; } catch (e) { n = 0; }
     ToggleBadge.text = String(n);
     ToggleBadge.SetHasClass("hidden", n <= 0);
-}
-
-function GetDotaHud() {
-    var panel = $.GetContextPanel();
-    while (panel && panel.id !== 'Hud') { panel = panel.GetParent(); }
-    return panel;
-}
-
-function FindDotaHudElement(id) {
-    var hud = GetDotaHud();
-    return hud ? hud.FindChildTraverse(id) : null;
 }
 
 function UpdateEmptyState() {
@@ -293,7 +268,12 @@ function ForceRecreate() {
         //GameEvents.Subscribe( "boost_player_recheck", KeepitReal );
         boost_player_recheck();
 
-        CreateToggleButton();
+        if (ToggleFloat) {
+            ToggleFloat.SetPanelEvent('onactivate', function () { Drawer.SetHasClass("hidden", !Drawer.BHasClass("hidden")); });
+            ToggleFloat.SetPanelEvent('onmouseover', function () { $.DispatchEvent("DOTAShowTextTooltip", ToggleFloat, "Toggle Ability Upgrades"); });
+            ToggleFloat.SetPanelEvent('onmouseout', function () { $.DispatchEvent("DOTAHideTextTooltip", ToggleFloat); });
+        }
+        UpdateToggleBadge();
 
         UpdateEmptyState();
 
