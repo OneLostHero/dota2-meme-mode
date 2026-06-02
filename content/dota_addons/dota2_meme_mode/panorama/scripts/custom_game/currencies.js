@@ -31,7 +31,7 @@ function AddCurrency(sName,tData) {
     var cname = $.Localize("#Currency_" + sName);
     if (cname === "#Currency_" + sName) { cname = sName; }
     var cdesc = $.Localize("#Currency_" + sName + "_Desc");
-    var ctip = (cdesc === "#Currency_" + sName + "_Desc") ? cname : (cname + " — " + cdesc);
+    var ctip = (cdesc === "#Currency_" + sName + "_Desc") ? cname : (cname + ": " + cdesc);
     CurrencyBox.SetPanelEvent("onmouseover", function () { $.DispatchEvent("DOTAShowTextTooltip", CurrencyBox, ctip); });
     CurrencyBox.SetPanelEvent("onmouseout", function () { $.DispatchEvent("DOTAHideTextTooltip", CurrencyBox); });
 
@@ -67,7 +67,7 @@ function ShowOptionMenu(sName) {
         else if (cdata.share == 1) balAmt = cdata.amount[Players.GetTeam(iPlayer)];
         else if (cdata.share == 2) balAmt = cdata.amount[0];
     }
-    var header = $.CreatePanel('Label', CurrencyActionBox, 'CurrencyActionHeader');
+    var header = $.CreatePanel('Label', CurrencyActionBox, 'CurrencyActionHeader_' + sName);
     header.AddClass('CurrencyActionHeader');
     header.text = cname2 + ":  " + balAmt + "    Gold: " + localGold;
     let spend_count = 0;
