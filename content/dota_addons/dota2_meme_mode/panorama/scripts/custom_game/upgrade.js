@@ -262,7 +262,7 @@ function FindDotaHudElement(id) {
 // player quickbuys items, so we track its top edge each tick and set our
 // bottom-margin to (screen height - cluster top + gap). currencies.js mirrors
 // this exact math so the upgrade icon and Boost Juice bar rise together.
-var HUD_BAR_BASE_MARGIN = 72; // resting height above screen bottom (empty quickbuy)
+var HUD_BAR_BASE_MARGIN = 50; // resting height above screen bottom (empty quickbuy)
 function ComputeHudBarMargin() {
     var hud = GetDotaHud();
     if (!hud) return HUD_BAR_BASE_MARGIN;
