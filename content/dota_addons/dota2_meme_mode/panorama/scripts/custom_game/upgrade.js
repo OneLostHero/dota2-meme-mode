@@ -248,6 +248,34 @@ function ForceRecreate() {
     UpgradeOptionsNew("player_booster",Players.GetLocalPlayer() + "d",kvstuff);
 }
 
+function GetDotaHud() {
+    var panel = $.GetContextPanel();
+    while (panel && panel.id !== 'Hud') { panel = panel.GetParent(); }
+    return panel;
+}
+function ProbeHud() {
+    var readout = $.GetContextPanel().FindChildInLayoutFile("HudProbeText");
+    if (!readout) return;
+    var hud = GetDotaHud();
+    if (!hud) { readout.text = "Hud root NOT FOUND"; return; }
+    var ids = ["ButtonBar","GoldText","PlayerGold","quickbuy","QuickBuy","QuickBuyContainer","Quickbuy",
+               "shop","ShopButton","ShopButtonContainer","Courier","CourierContainer","GlyphScanContainer",
+               "ActionPanel","lower_hud","HUDElements","inventory","InventoryContainer","PrimaryAbilities",
+               "center_block","CenterBlock","BottomHud","bottom_hud","QuickStats"];
+    var lines = ["HUD root OK. Found containers (id @ x,y WxH):"];
+    for (var i = 0; i < ids.length; i++) {
+        var p = hud.FindChildTraverse(ids[i]);
+        if (p) {
+            var pos = null; try { pos = p.GetPositionWithinWindow(); } catch(e){}
+            var w = 0, h = 0; try { w = p.actuallayoutwidth; h = p.actuallayoutheight; } catch(e){}
+            if (pos) lines.push(ids[i] + " @ " + Math.round(pos.x) + "," + Math.round(pos.y) + " " + Math.round(w) + "x" + Math.round(h));
+            else lines.push(ids[i] + " (found, no pos)");
+        }
+    }
+    readout.text = lines.join("\n");
+    $.Schedule(2.0, ProbeHud); // refresh a few times as the HUD settles
+}
+
 (function init() {
     plugin_settings = CustomNetTables.GetTableValue( "plugin_settings", this_plugin_id );
 
@@ -292,6 +320,8 @@ function ForceRecreate() {
         DrawerQueued.SetPanelEvent('onmouseout', function () {
             $.DispatchEvent("DOTAHideTextTooltip", DrawerQueued);
         });
+
+        ProbeHud();
     }
 })();
 

@@ -211,6 +211,22 @@
 
   .UpgradeOption.meme-row{ margin-bottom: 0px; }
 
+  .HudProbeReadout{
+   horizontal-align: center;
+   vertical-align: top;
+   margin-top: 90px;
+   width: 560px;
+   padding: 10px;
+   background-color: #000000dd;
+   border: 1px solid #c8ff5e;
+   border-radius: 6px;
+  }
+  #HudProbeText{
+   color: #c8ff5e;
+   font-size: 14px;
+   white-space: pre;
+  }
+
   .UpgradeToggleFloat{
    horizontal-align: left;
    vertical-align: bottom;

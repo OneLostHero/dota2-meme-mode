@@ -61,5 +61,8 @@
 		<Button id="UpgradeToggleFloat" class="UpgradeToggleFloat" hittest="true">
 			<Label id="UpgradeToggleBadge" class="UpgradeToggleBadge" text="0" />
 		</Button>
+		<Panel id="HudProbeReadout" class="HudProbeReadout" hittest="false">
+			<Label id="HudProbeText" text="HUD probe..." />
+		</Panel>
 	</Panel>
 </root>
