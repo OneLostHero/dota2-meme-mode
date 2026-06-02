@@ -183,15 +183,16 @@
    text-align: center;
   }
   .UpgradeDrawerToggleButton{
-   width: 28px;
-   height: 28px;
-   margin: 0px 2px;
-   border-radius: 4px;
-   background-color: gradient( linear, 0% 0%, 0% 100%, from( #1b1e26 ), to( #15171c ) );
-   border: 1px solid #2a2f3a;
+   width: 26px;
+   height: 26px;
+   background-image: url("file://{images}/custom_game/boosted_list_png.png");
+   background-size: 26px;
+   background-repeat: no-repeat;
+   background-position: 50% 50%;
   }
-  .UpgradeDrawerToggleButton:hover{ border: 1px solid #c8ff5e; }
-  .UpgradeDrawerToggleIcon{ color: #c8ff5e; font-size: 16px; horizontal-align: center; vertical-align: center; }
+  .UpgradeDrawerToggleButton:hover{
+   box-shadow: fill #c8ff5e88 0px 0px 12px -2px;
+  }
 
   #AbilityChangeReport{
     background-image: url("file://{images}/custom_game/report.png");

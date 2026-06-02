@@ -9,9 +9,7 @@
 	</scripts>
 	<snippets>
 		<snippet name="UpgradeDrawerToggleButton">
-			<Button class="UpgradeDrawerToggleButton">
-				<Label class="UpgradeDrawerToggleIcon" text="⚡" />
-			</Button>
+			<Button class="UpgradeDrawerToggleButton" />
 		</snippet>
 		<snippet name="UpgradeOption">
 			<Panel class="UpgradeOption meme-row">
