@@ -14,10 +14,21 @@ var Drawer = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawer");
 var DrawerTab = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerTab");
 var DrawerCollapse = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerCollapse");
 var DrawerQueued = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerQueued");
+var UpgradeSearch = $.GetContextPanel().FindChildInLayoutFile("UpgradeSearch");
+var searchQuery = "";
 
 function SetCollapsed(collapsed) {
     Drawer.SetHasClass("collapsed", collapsed);
     Screen.SetHasClass("drawer-collapsed", collapsed);
+}
+
+function ApplyUpgradeFilter() {
+    var kids = Upgrades.Children();
+    for (var i = 0; i < kids.length; i++) {
+        var txt = kids[i].GetAttributeString("searchtext", "");
+        var match = (searchQuery === "" || txt.indexOf(searchQuery) !== -1);
+        kids[i].SetHasClass("filtered-out", !match);
+    }
 }
 
 function UpgradeOptionNew(data) {
@@ -184,9 +195,10 @@ function UpgradeOptionsNew(table,tableKey,data) {
                                 UpgradeOptionNew(data[key]);
                             } else {
                                 QueuedUpgradesText.text = data[key];
-                                
+
                             }
                         }
+                        ApplyUpgradeFilter();
                     } else {
                         bWaiting = true;
                         tCurrent = undefined;
@@ -255,6 +267,11 @@ function ForceRecreate() {
         
         DrawerCollapse.SetPanelEvent('onactivate', function () { SetCollapsed(true); });
         DrawerTab.SetPanelEvent('onactivate', function () { SetCollapsed(false); });
+
+        UpgradeSearch.SetPanelEvent('ontextentrychanged', function () {
+            searchQuery = UpgradeSearch.text.toLowerCase();
+            ApplyUpgradeFilter();
+        });
 
         DrawerQueued.SetPanelEvent('onmouseover', function () {
             $.DispatchEvent("DOTAShowTextTooltip", DrawerQueued, $.Localize("#Boosted_queue"));

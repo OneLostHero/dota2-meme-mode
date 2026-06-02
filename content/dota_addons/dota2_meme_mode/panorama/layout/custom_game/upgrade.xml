@@ -49,6 +49,10 @@
 			<!-- Reserved slot for currency balance + Convert button (later phase). Empty on purpose. -->
 			<Panel id="UpgradeDrawerBalanceSlot" class="UpgradeDrawerBalanceSlot" />
 
+			<Panel class="UpgradeSearchRow">
+				<TextEntry id="UpgradeSearch" class="meme-input UpgradeSearch" placeholder="Search upgrades…" />
+			</Panel>
+
 			<Panel id="Upgrades" />
 		</Panel>
 	</Panel>

@@ -215,3 +215,7 @@
   #UpgradeOptionAbilityName{
    text-align: left;
   }
+
+  .UpgradeSearchRow{ padding: 6px 8px; border-bottom: 1px solid #20242e; }
+  .UpgradeSearch{ width: 100%; }
+  .filtered-out{ visibility: collapse; height: 0px; }
