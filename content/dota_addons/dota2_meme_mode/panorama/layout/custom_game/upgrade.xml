@@ -59,6 +59,7 @@
 			</Panel>
 		</Panel>
 		<Button id="UpgradeToggleFloat" class="UpgradeToggleFloat" hittest="true">
+			<Label class="UpgradeToggleLabel" text="UPGRADES" />
 			<Label id="UpgradeToggleBadge" class="UpgradeToggleBadge" text="0" />
 		</Button>
 	</Panel>

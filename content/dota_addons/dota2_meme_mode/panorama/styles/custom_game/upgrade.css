@@ -214,19 +214,26 @@
   .UpgradeToggleFloat{
    horizontal-align: left;
    vertical-align: bottom;
-   margin-left: 14px;
-   margin-bottom: 120px;
-   width: 32px;
+   margin-left: 10px;
+   margin-bottom: 95px;
    height: 32px;
-   border-radius: 5px;
-   background-color: gradient( linear, 0% 0%, 0% 100%, from( #1b1e26 ), to( #15171c ) );
-   border: 1px solid #2a2f3a;
-   background-image: url("file://{images}/custom_game/boosted_list_png.png");
-   background-size: 24px;
-   background-repeat: no-repeat;
-   background-position: 50% 50%;
+   padding: 0px 12px;
+   flow-children: right;
+   border-radius: 6px;
+   background-color: gradient( linear, 0% 0%, 0% 100%, from( #1f2733 ), to( #141821 ) );
+   border: 1px solid #c8ff5e;
   }
-  .UpgradeToggleFloat:hover{ border: 1px solid #c8ff5e; box-shadow: fill #c8ff5e66 0px 0px 12px -3px; }
+  .UpgradeToggleFloat:hover{
+   background-color: gradient( linear, 0% 0%, 0% 100%, from( #2a3647 ), to( #1a2029 ) );
+   box-shadow: fill #c8ff5e88 0px 0px 14px -3px;
+  }
+  .UpgradeToggleLabel{
+   color: #c8ff5e;
+   font-size: 14px;
+   font-weight: bold;
+   letter-spacing: 0.5px;
+   vertical-align: center;
+  }
   .UpgradeToggleBadge{
    horizontal-align: right;
    vertical-align: top;
