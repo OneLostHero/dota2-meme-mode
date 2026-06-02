@@ -272,7 +272,7 @@ function ProbeHud() {
             else lines.push(ids[i] + " (found, no pos)");
         }
     }
-    readout.text = lines.join("\n");
+    readout.text = lines.join("<br>");
     $.Schedule(2.0, ProbeHud); // refresh a few times as the HUD settles
 }
 
