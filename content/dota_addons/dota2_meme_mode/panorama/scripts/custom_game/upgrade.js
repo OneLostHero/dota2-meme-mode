@@ -9,17 +9,22 @@ var plugin_settings = {};
 const local_team = Players.GetTeam(Players.GetLocalPlayer());
 
 var QueuedUpgradesText = $.GetContextPanel().FindChildInLayoutFile("QueuedUpgradesText");
-var Screen = $.GetContextPanel().FindChildInLayoutFile("PersonalUpgradeScreen");
 var Drawer = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawer");
-var DrawerTab = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerTab");
 var DrawerCollapse = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerCollapse");
 var DrawerQueued = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerQueued");
+var DrawerEmpty = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerEmpty");
 var UpgradeSearch = $.GetContextPanel().FindChildInLayoutFile("UpgradeSearch");
 var searchQuery = "";
+var collapsedState = false;
 
 function SetCollapsed(collapsed) {
+    collapsedState = collapsed;
     Drawer.SetHasClass("collapsed", collapsed);
-    Screen.SetHasClass("drawer-collapsed", collapsed);
+}
+
+function UpdateEmptyState() {
+    var hasRows = Upgrades.Children().length > 0;
+    DrawerEmpty.SetHasClass("hidden", hasRows);
 }
 
 function ApplyUpgradeFilter() {
@@ -199,9 +204,11 @@ function UpgradeOptionsNew(table,tableKey,data) {
                             }
                         }
                         ApplyUpgradeFilter();
+                        UpdateEmptyState();
                     } else {
                         bWaiting = true;
                         tCurrent = undefined;
+                        UpdateEmptyState();
                     }
                 }
             }
@@ -266,7 +273,8 @@ function ForceRecreate() {
 
         
         DrawerCollapse.SetPanelEvent('onactivate', function () { SetCollapsed(true); });
-        DrawerTab.SetPanelEvent('onactivate', function () { SetCollapsed(false); });
+        CreateToggleButton();
+        UpdateEmptyState();
 
         function OnUpgradeSearchChanged() {
             searchQuery = UpgradeSearch.text.toLowerCase();
@@ -283,4 +291,21 @@ function ForceRecreate() {
         });
     }
 })();
+
+function CreateToggleButton() {
+    var button_bar = FindDotaHudElement("ButtonBar");
+    var existing_button = button_bar.FindChildTraverse("UpgradeDrawerToggleButton");
+    if (existing_button) { existing_button.DeleteAsync(0); }
+    var panel = $.CreatePanel('Button', $.GetContextPanel(), "UpgradeDrawerToggleButton");
+    panel.BLoadLayoutSnippet("UpgradeDrawerToggleButton");
+    panel.SetPanelEvent('onactivate', function () { SetCollapsed(!collapsedState); });
+    panel.SetParent(button_bar);
+}
+function GetDotaHud() {
+    var panel = $.GetContextPanel();
+    while (panel && panel.id !== 'Hud') { panel = panel.GetParent(); }
+    if (!panel) { throw new Error('Could not find Hud root'); }
+    return panel;
+}
+function FindDotaHudElement(id) { return GetDotaHud().FindChildTraverse(id); }
 

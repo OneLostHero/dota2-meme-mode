@@ -8,6 +8,11 @@
 		<include src="file://{resources}/scripts/custom_game/upgrade.js" />
 	</scripts>
 	<snippets>
+		<snippet name="UpgradeDrawerToggleButton">
+			<Button class="UpgradeDrawerToggleButton">
+				<Label class="UpgradeDrawerToggleIcon" text="⚡" />
+			</Button>
+		</snippet>
 		<snippet name="UpgradeOption">
 			<Panel class="UpgradeOption meme-row">
 				<DOTAAbilityImage id="UpgradeOptionImage" class="OptionImage" />
@@ -30,11 +35,6 @@
 		</snippet>
 	</snippets>
 	<Panel id="PersonalUpgradeScreen" class="PersonalUpgradeScreen" hittest="false" visible="true">
-		<!-- Edge tab: shown only when the drawer is collapsed; click to reopen -->
-		<Button id="UpgradeDrawerTab" class="UpgradeDrawerTab" hittest="true">
-			<Label id="UpgradeDrawerTabText" text="⚡" />
-		</Button>
-
 		<Panel id="UpgradeDrawer" class="meme-panel UpgradeDrawer" hittest="true">
 			<Panel class="meme-header" hittest="true">
 				<Label class="meme-header-title" text="⚡ ABILITY UPGRADES" />
@@ -54,6 +54,7 @@
 			</Panel>
 
 			<Panel id="Upgrades" />
+			<Label id="UpgradeDrawerEmpty" class="UpgradeDrawerEmpty" text="No upgrades available yet." />
 		</Panel>
 	</Panel>
 </root>

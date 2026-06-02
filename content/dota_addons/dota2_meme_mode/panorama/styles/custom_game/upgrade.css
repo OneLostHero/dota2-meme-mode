@@ -176,20 +176,22 @@
 
   .UpgradeDrawerBalanceSlot{ flow-children: right; }
 
-  .UpgradeDrawerTab{
-   visibility: collapse;
-   width: 0px;
+  .UpgradeDrawerEmpty{
+   padding: 14px 10px;
+   color: #7a8190;
+   font-size: 12px;
+   text-align: center;
   }
-  .PersonalUpgradeScreen.drawer-collapsed .UpgradeDrawerTab{
-   visibility: visible;
-   width: 26px;
-   height: 64px;
-   vertical-align: center;
+  .UpgradeDrawerToggleButton{
+   width: 28px;
+   height: 28px;
+   margin: 0px 2px;
+   border-radius: 4px;
    background-color: gradient( linear, 0% 0%, 0% 100%, from( #1b1e26 ), to( #15171c ) );
    border: 1px solid #2a2f3a;
-   border-radius: 0px 6px 6px 0px;
   }
-  #UpgradeDrawerTabText{ color: #c8ff5e; font-size: 16px; horizontal-align: center; vertical-align: center; }
+  .UpgradeDrawerToggleButton:hover{ border: 1px solid #c8ff5e; }
+  .UpgradeDrawerToggleIcon{ color: #c8ff5e; font-size: 16px; horizontal-align: center; vertical-align: center; }
 
   #AbilityChangeReport{
     background-image: url("file://{images}/custom_game/report.png");
