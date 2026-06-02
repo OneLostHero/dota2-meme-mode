@@ -110,6 +110,13 @@
   background-color: #1b1e26;
   border-bottom: 1px solid #2a2f3a;
  }
+ .CurrencyActionRate{
+  padding: 4px 10px;
+  font-size: 11px;
+  color: #9aa0ab;
+  background-color: #13161c;
+  border-bottom: 1px solid #2a2f3a;
+ }
  .unaffordable{
   opacity: 0.4;
  }

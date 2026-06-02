@@ -70,6 +70,18 @@ function ShowOptionMenu(sName) {
     var header = $.CreatePanel('Label', CurrencyActionBox, 'CurrencyActionHeader_' + sName);
     header.AddClass('CurrencyActionHeader');
     header.text = cname2 + ":  " + balAmt + "    Gold: " + localGold;
+    var goldPerPoint = 0;
+    if (tCurrencies[sName] && tCurrencies[sName].earn_options) {
+        for (var ek in tCurrencies[sName].earn_options) {
+            var eo = tCurrencies[sName].earn_options[ek];
+            if (eo && Number(eo.earn) > 0) { goldPerPoint = Number(eo.cost) / Number(eo.earn); break; }
+        }
+    }
+    if (goldPerPoint > 0) {
+        var rateLabel = $.CreatePanel('Label', CurrencyActionBox, 'CurrencyActionRate_' + sName);
+        rateLabel.AddClass('CurrencyActionRate');
+        rateLabel.text = Math.round(goldPerPoint) + " gold = 1 " + cname2;
+    }
     let spend_count = 0;
     for (const key in tCurrencies[sName].spend_options) {
         const option = tCurrencies[sName].spend_options[key];
@@ -88,6 +100,9 @@ function ShowOptionMenu(sName) {
             CurrencyAction.BLoadLayoutSnippet("CurrencyAction");
             CurrencyAction.FindChildInLayoutFile("CurrencyLabel").text = $.Localize("#SpendOption_" + option.plugin_name + "_" + option.option_name);
             CurrencyAction.FindChildInLayoutFile("CurrencyCost").text = option.cost;
+            if (goldPerPoint > 0) {
+                CurrencyAction.FindChildInLayoutFile("CurrencyCost").text = option.cost + "  (~" + Math.round(Number(option.cost) * goldPerPoint) + "g)";
+            }
             CurrencyAction.SetPanelEvent(
                 "onactivate", 
                 function(){
