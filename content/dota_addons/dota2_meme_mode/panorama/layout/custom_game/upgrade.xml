@@ -35,20 +35,17 @@
 	<Panel id="PersonalUpgradeScreen" class="PersonalUpgradeScreen" hittest="false" visible="true">
 		<Panel id="UpgradeDrawer" class="meme-panel UpgradeDrawer" hittest="true">
 			<Panel class="meme-header" hittest="true">
-				<Label class="meme-header-title" text="⚡ ABILITY UPGRADES" />
+				<Label class="meme-header-title" text="ABILITY UPGRADES" />
 				<Panel id="UpgradeDrawerQueued" class="UpgradeDrawerQueued">
 					<Label id="QueuedUpgradesText" text="0" />
 				</Panel>
-				<Button id="UpgradeDrawerCollapse" class="UpgradeDrawerCollapse">
-					<Label text="◀" />
-				</Button>
 			</Panel>
 
 			<!-- Reserved slot for currency balance + Convert button (later phase). Empty on purpose. -->
 			<Panel id="UpgradeDrawerBalanceSlot" class="UpgradeDrawerBalanceSlot" />
 
 			<Panel class="UpgradeSearchRow">
-				<TextEntry id="UpgradeSearch" class="meme-input UpgradeSearch" placeholder="Search upgrades…" maxchars="100" />
+				<TextEntry id="UpgradeSearch" class="meme-input UpgradeSearch" placeholder="Search upgrades" maxchars="100" />
 			</Panel>
 
 			<Panel id="Upgrades" />

@@ -69,7 +69,7 @@ function ShowOptionMenu(sName) {
     }
     var header = $.CreatePanel('Label', CurrencyActionBox, 'CurrencyActionHeader');
     header.AddClass('CurrencyActionHeader');
-    header.text = cname2 + ":  ◆ " + balAmt + "    🪙 " + localGold;
+    header.text = cname2 + ":  " + balAmt + "    Gold: " + localGold;
     let spend_count = 0;
     for (const key in tCurrencies[sName].spend_options) {
         const option = tCurrencies[sName].spend_options[key];

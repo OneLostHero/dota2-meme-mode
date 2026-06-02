@@ -10,7 +10,6 @@ const local_team = Players.GetTeam(Players.GetLocalPlayer());
 
 var QueuedUpgradesText = $.GetContextPanel().FindChildInLayoutFile("QueuedUpgradesText");
 var Drawer = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawer");
-var DrawerCollapse = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerCollapse");
 var DrawerQueued = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerQueued");
 var DrawerEmpty = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerEmpty");
 var UpgradeSearch = $.GetContextPanel().FindChildInLayoutFile("UpgradeSearch");
@@ -272,7 +271,6 @@ function ForceRecreate() {
         boost_player_recheck();
 
         
-        DrawerCollapse.SetPanelEvent('onactivate', function () { SetCollapsed(true); });
         CreateToggleButton();
         UpdateEmptyState();
 
