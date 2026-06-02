@@ -214,10 +214,13 @@
   .UpgradeToggleFloat{
    horizontal-align: left;
    vertical-align: bottom;
-   margin-left: 8px;
-   margin-bottom: 88px;
-   width: 116px;
-   height: 54px;
+   margin-left: 6px;
+   margin-bottom: 86px;
+   width: 150px;
+   height: 70px;
+   background-color: none;
+   border: none;
+   box-shadow: none;
    background-image: url("file://{images}/custom_game/upgrades_button.png");
    background-size: contain;
    background-repeat: no-repeat;
@@ -227,10 +230,10 @@
   .UpgradeToggleBadge{
    horizontal-align: right;
    vertical-align: center;
-   margin-right: 10px;
+   margin-right: 16px;
    color: #ffd24d;
-   font-size: 16px;
+   font-size: 19px;
    font-weight: bold;
    text-align: center;
-   width: 18px;
+   width: 20px;
   }

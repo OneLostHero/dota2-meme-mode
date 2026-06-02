@@ -6,7 +6,7 @@
  .CurrencyRoot{
      horizontal-align: left;
      vertical-align: bottom;
-     margin-left: 128px;
+     margin-left: 158px;
      margin-bottom: 86px;
      flow-children: right;
  }
@@ -55,19 +55,21 @@
      background-size: contain;
      background-repeat: no-repeat;
      background-position: 50% 50%;
-     width: 90px;
-     height: 54px;
+     background-color: none;
+     box-shadow: none;
+     width: 117px;
+     height: 70px;
  }
  .currency_box_red:hover{ wash-color: #e6e6e6ff; }
  .currency_box_red #CurrencyIcon{ visibility: collapse; width: 0px; height: 0px; }
  .currency_box_red #CurrencyAmmount{
      horizontal-align: left;
      vertical-align: center;
-     margin-left: 6px;
+     margin-left: 8px;
      padding: 0px;
      text-align: center;
-     width: 44px;
-     font-size: 18px;
+     width: 58px;
+     font-size: 22px;
      color: #ffe08a;
  }
 
