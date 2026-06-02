@@ -41,6 +41,14 @@ function Precache( context )
 			end
 		end
 	end
+
+	-- Mr.Bomber's ult is techies_land_mines (Proximity Mines) and his Ability5 is
+	-- techies_minefield_sign, but his BaseClass is Gyrocopter, so the Land Mine model
+	-- (models/heroes/techies/fx_techiesfx_mine.vmdl) and the mine particles/FX are never
+	-- auto-precached -> "RESOURCE_TYPE_MODEL ... not loaded" when a mine spawns. Precache the
+	-- Techies hero (pulls all its ability resources) + the mine model explicitly to be safe.
+	PrecacheResource("model", "models/heroes/techies/fx_techiesfx_mine.vmdl", context)
+	PrecacheUnitByNameSync("npc_dota_hero_techies", context)
 end
 function Activate()
 	GameRules.AddonTemplate = CMemeModeGameMode()
