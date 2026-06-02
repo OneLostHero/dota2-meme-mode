@@ -9,7 +9,16 @@ var plugin_settings = {};
 const local_team = Players.GetTeam(Players.GetLocalPlayer());
 
 var QueuedUpgradesText = $.GetContextPanel().FindChildInLayoutFile("QueuedUpgradesText");
-var QueuedUpgrades = $.GetContextPanel().FindChildInLayoutFile("QueuedUpgrades");
+var Screen = $.GetContextPanel().FindChildInLayoutFile("PersonalUpgradeScreen") || $.GetContextPanel();
+var Drawer = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawer");
+var DrawerTab = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerTab");
+var DrawerCollapse = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerCollapse");
+var DrawerQueued = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerQueued");
+
+function SetCollapsed(collapsed) {
+    Drawer.SetHasClass("collapsed", collapsed);
+    Screen.SetHasClass("drawer-collapsed", collapsed);
+}
 
 function UpgradeOptionNew(data) {
     var upgradePanel = $.CreatePanel('Panel', Upgrades, '');
@@ -233,12 +242,15 @@ function ForceRecreate() {
         boost_player_recheck();
 
         
-        QueuedUpgrades.SetPanelEvent( 'onmouseover', function () {
-            $.DispatchEvent("DOTAShowTextTooltip", QueuedUpgrades, $.Localize("#Boosted_queue"));
-        } ); 
-        QueuedUpgrades.SetPanelEvent( 'onmouseout', function () {
-            $.DispatchEvent("DOTAHideTextTooltip", QueuedUpgrades);
-        } );
+        DrawerCollapse.SetPanelEvent('onactivate', function () { SetCollapsed(true); });
+        DrawerTab.SetPanelEvent('onactivate', function () { SetCollapsed(false); });
+
+        DrawerQueued.SetPanelEvent('onmouseover', function () {
+            $.DispatchEvent("DOTAShowTextTooltip", DrawerQueued, $.Localize("#Boosted_queue"));
+        });
+        DrawerQueued.SetPanelEvent('onmouseout', function () {
+            $.DispatchEvent("DOTAHideTextTooltip", DrawerQueued);
+        });
     }
 })();
 

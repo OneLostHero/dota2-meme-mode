@@ -1,6 +1,7 @@
 <!-- xml reconstructed by Source 2 Viewer 5.0.0.0 - https://valveresourceformat.github.io -->
 <root>
 	<styles>
+		<include src="file://{resources}/styles/custom_game/meme_ui.css" />
 		<include src="file://{resources}/styles/custom_game/upgrade.css" />
 	</styles>
 	<scripts>
@@ -26,11 +27,26 @@
 		</snippet>
 	</snippets>
 	<Panel class="PersonalUpgradeScreen" hittest="false" visible="true">
-		<Panel id="QueuedUpgrades">
-			<Label id="QueuedUpgradesText" text="0"/>
-		</Panel>
+		<!-- Edge tab: shown only when the drawer is collapsed; click to reopen -->
+		<Button id="UpgradeDrawerTab" class="UpgradeDrawerTab" hittest="true">
+			<Label id="UpgradeDrawerTabText" text="⚡" />
+		</Button>
 
-		<Panel id="Upgrades" />
-		
+		<Panel id="UpgradeDrawer" class="meme-panel UpgradeDrawer" hittest="true">
+			<Panel class="meme-header" hittest="true">
+				<Label class="meme-header-title" text="⚡ ABILITY UPGRADES" />
+				<Panel id="UpgradeDrawerQueued" class="UpgradeDrawerQueued">
+					<Label id="QueuedUpgradesText" text="0" />
+				</Panel>
+				<Button id="UpgradeDrawerCollapse" class="UpgradeDrawerCollapse">
+					<Label text="◀" />
+				</Button>
+			</Panel>
+
+			<!-- Reserved slot for currency balance + Convert button (later phase). Empty on purpose. -->
+			<Panel id="UpgradeDrawerBalanceSlot" class="UpgradeDrawerBalanceSlot" />
+
+			<Panel id="Upgrades" />
+		</Panel>
 	</Panel>
 </root>
