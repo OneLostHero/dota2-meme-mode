@@ -211,13 +211,15 @@
 
   .UpgradeOption.meme-row{ margin-bottom: 0px; }
 
+  /* Square box so the square icon art fills it and the count badge lands on
+     the icon's own top-right corner (not floating off to the side). */
   .UpgradeToggleFloat{
    horizontal-align: left;
    vertical-align: bottom;
-   margin-left: 6px;
+   margin-left: 8px;
    margin-bottom: 90px; /* JS (RepositionBar) overrides this to ride the quickbuy cluster */
-   width: 96px;
-   height: 68px;
+   width: 72px;
+   height: 72px;
    background-color: none;
    background-image: url("file://{images}/custom_game/upgrades_button.png");
    background-size: contain;
@@ -228,15 +230,16 @@
   .UpgradeToggleBadge{
    horizontal-align: right;
    vertical-align: top;
-   margin-top: -4px;
-   margin-right: -2px;
+   margin-top: 1px;
+   margin-right: 1px;
    background-color: #e8453a;
    color: #ffffff;
-   font-size: 14px;
+   font-size: 15px;
    font-weight: bold;
-   border-radius: 11px;
-   min-width: 12px;
-   height: 22px;
+   border-radius: 12px;
+   min-width: 13px;
+   height: 24px;
    padding: 0px 5px;
    text-align: center;
+   box-shadow: 0px 0px 4px 0px #000000cc;
   }
