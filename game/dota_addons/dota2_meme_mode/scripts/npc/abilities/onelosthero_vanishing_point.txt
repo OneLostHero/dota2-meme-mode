@@ -33,15 +33,38 @@
 			"max_charge_bonus_pct"			"50"
 			"fear_duration"					"1.1 1.4 1.7"
 			"fear_slow_pct"					"-30"	// feared enemies also flee slowed
+			// 0 normally; the lvl25 talent flips it to 1 (fear pierces debuff immunity). The
+			// value-link also REGISTERS special_bonus_unique_onelosthero_fear_pierce as a real
+			// (auto-generated) talent so it's selectable — see onelosthero talent notes.
+			"fear_pierces_immunity"
+			{
+				"value"											"0"
+				"special_bonus_unique_onelosthero_fear_pierce"	"+1"
+			}
 			"echo_burst_damage_pct"			"35"
 			"warning_radius"				"275"
 			"warning_delay"					"1.0"
 			"swap_allowed"					"1"
 
-			"scepter_extra_echoes"			"10"
-			"scepter_echo_attack_damage"	"60"	// echoes run to the radius edge and attack with this while charging
-			"scepter_echo_burst_damage_pct"	"45"
-			"scepter_echo_fear_pct"			"60"
+			// Scepter-only values: expressed via special_bonus_scepter (like Riki) so they show in
+			// the Aghanim's section (ALT-reveal) instead of the always-on value list. GetSpecialValueFor
+			// returns these only when the caster has a Scepter; the Lua already gates reads on HasScepter.
+			"scepter_extra_echoes"
+			{
+				"special_bonus_scepter"		"10"
+			}
+			"scepter_echo_attack_damage"			// echoes run to the radius edge and attack with this while charging
+			{
+				"special_bonus_scepter"		"60"
+			}
+			"scepter_echo_burst_damage_pct"
+			{
+				"special_bonus_scepter"		"45"
+			}
+			"scepter_echo_fear_pct"
+			{
+				"special_bonus_scepter"		"60"
+			}
 		}
 
 		"precache"

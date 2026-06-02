@@ -21,6 +21,11 @@
 
 		"AbilityValues"
 		{
+			// Mirror of AbilityManaCost as a special value so the Lua GetManaCost override can
+			// read it via GetSpecialValueFor (client-safe + level-aware). GetAbilityKeyValues()
+			// returns nothing on the client, so the old KV parse made the override report 0 and
+			// the HUD showed no mana cost. Keep this in sync with AbilityManaCost above.
+			"mana_cost"				"80 90 100 110"
 			"slash_distance"		"450 500 550 600"
 			"slash_width"			"250"	// line width for each strike (forward, echo repeat, swap-back); VFX covers it
 			"damage"				"80 130 180 230"

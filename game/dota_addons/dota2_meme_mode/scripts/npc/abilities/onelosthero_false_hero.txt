@@ -26,6 +26,14 @@
 		"AbilityValues"
 		{
 			"echo_duration"			"10.0"
+			// Stored uses (charges). Base 1; the lvl20 talent adds a 2nd via this value-link.
+			// The value-link is also what REGISTERS special_bonus_unique_onelosthero_charges as a
+			// real (auto-generated) talent so it's selectable — see onelosthero talent notes.
+			"max_charges"
+			{
+				"value"											"1"
+				"special_bonus_unique_onelosthero_charges"		"+1"
+			}
 			// Invisibility lasts as long as the Echo can live (matches echo_duration). Talent adds +0.5s.
 			"invis_duration"
 			{
@@ -45,8 +53,17 @@
 				"special_bonus_unique_onelosthero_break"		"+2.0"
 			}
 			"echo_move_distance"	"1200"
-			"shard_detonation_pct"	"60"
-			"fading_echo_duration"	"3.0"
+			// Shard-only values: expressed via special_bonus_shard (like Riki) so they appear in the
+			// Aghanim's Shard section (ALT-reveal) instead of the always-on value list. GetSpecialValueFor
+			// returns these only when the caster has a Shard; the Lua already gates reads on HasShard.
+			"shard_detonation_pct"
+			{
+				"special_bonus_shard"	"60"
+			}
+			"fading_echo_duration"
+			{
+				"special_bonus_shard"	"3.0"
+			}
 		}
 
 		"precache"

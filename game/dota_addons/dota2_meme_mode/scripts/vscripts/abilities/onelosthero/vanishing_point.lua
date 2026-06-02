@@ -136,10 +136,11 @@ function onelosthero_vanishing_point:Release()
 	self:StartCooldown(self:GetCooldown(self:GetLevel() - 1))
 end
 
--- Does the lvl25-left talent (fear pierces debuff immunity) apply?
+-- Does the lvl25-left talent (fear pierces debuff immunity) apply? Reads the
+-- fear_pierces_immunity value-link (0 normally, 1 once the talent is taken); GetSpecialValueFor
+-- folds in the learned talent, so no FindAbilityByName/GetLevel lookup is needed.
 function onelosthero_vanishing_point:FearPiercesImmunity()
-	local t = self:GetCaster():FindAbilityByName("special_bonus_unique_onelosthero_fear_pierce")
-	return t ~= nil and t:GetLevel() > 0
+	return self:GetSpecialValueFor("fear_pierces_immunity") > 0
 end
 
 -- Damage + fear all enemies around a point. Fear respects debuff immunity unless the

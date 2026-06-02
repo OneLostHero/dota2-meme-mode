@@ -8,13 +8,13 @@
 "DOTAUnits"
 {
 	// OneLostHero Echo — short-lived afterimage / clone dummy.
-	// Looks like the hero (Riki model). Durability/targetability are governed at
-	// runtime by modifier_onelosthero_echo (see abilities/onelosthero/echo.lua);
-	// it never farms, gives no bounty/XP, and cannot attack.
+	// Looks like the hero (Kez model — matches the hero after the custom-model revert).
+	// Durability/targetability are governed at runtime by modifier_onelosthero_echo
+	// (see abilities/onelosthero/echo.lua); it never farms, gives no bounty/XP, and cannot attack.
 	"npc_onelosthero_echo"
 	{
 		"BaseClass"					"npc_dota_creature"
-		"Model"						"models/heroes/onelosthero/onelosthero.vmdl"
+		"Model"						"models/heroes/kez/kez_base.vmdl"
 		"ModelScale"				"1.000000"
 		"Level"						"1"
 		"HealthBarOffset"			"170"

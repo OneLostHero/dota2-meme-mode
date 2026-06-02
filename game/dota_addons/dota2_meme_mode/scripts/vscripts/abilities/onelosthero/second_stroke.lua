@@ -21,29 +21,14 @@ end
 
 -- Trading places with the Echo during the swap window is FREE: only the initial slash costs
 -- mana. Returning 0 while a swap is pending means the recast neither requires nor spends mana.
+-- Otherwise return the configured cost via the "mana_cost" special value: GetSpecialValueFor
+-- runs (and is level-aware) on the CLIENT too, so the HUD shows the real cost. (The previous
+-- version parsed GetAbilityKeyValues(), which is empty on the client and made it report 0.)
 function onelosthero_second_stroke:GetManaCost(iLevel)
 	if self._swapUntil and Echo:IsValid(self._echo) and GameRules:GetGameTime() <= self._swapUntil then
 		return 0
 	end
-	return self:_BaseManaCost(iLevel)
-end
-
--- Configured AbilityManaCost from KV (cached), so GetManaCost can return the normal cost.
-function onelosthero_second_stroke:_BaseManaCost(iLevel)
-	if not self._manaCosts then
-		self._manaCosts = {}
-		local kv = self:GetAbilityKeyValues() or {}
-		local raw = kv.AbilityManaCost
-		if type(raw) == "number" then raw = tostring(raw) end
-		if type(raw) == "string" then
-			for tok in string.gmatch(raw, "%S+") do
-				self._manaCosts[#self._manaCosts + 1] = tonumber(tok) or 0
-			end
-		end
-	end
-	if iLevel == nil or iLevel < 0 then iLevel = self:GetLevel() - 1 end
-	local idx = math.max(1, iLevel + 1)
-	return self._manaCosts[idx] or self._manaCosts[#self._manaCosts] or 0
+	return self:GetSpecialValueFor("mana_cost")
 end
 
 -- Smoothly slide a unit from `from` to `to` at `speed` (units/sec); calls onDone at the end.

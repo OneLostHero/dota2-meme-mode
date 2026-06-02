@@ -109,13 +109,11 @@
 		"TeamName"				"DOTA_TEAM_GOODGUYS"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 
-		// Look: custom rigged model imported from OneLostHero.fbx (Mixamo-style humanoid rig,
-		// 24 bones, ~170u tall). Built via content/.../models/heroes/onelosthero/onelosthero.vmdl
-		// (compiles to onelosthero.vmdl_c). NOTE: the FBX shipped only a STATIC bind pose — no
-		// motion clips — so it currently plays that pose for idle (T/A-pose, no walk/attack/cast
-		// anim) until real animation clips on this skeleton are added to the vmdl's AnimationList.
-		// Voice still Kez. If it spawns sideways/wrong-facing, add a ModelModifier rotation.
-		"Model"					"models/heroes/onelosthero/onelosthero.vmdl"
+		// Look + voice: Kez (the BaseClass). The custom onelosthero.vmdl shipped only a STATIC
+		// bind pose (no walk/attack/cast clips), so the hero is reverted to Kez's real model,
+		// which has full animations. Re-point Model at the custom vmdl once it has real animation
+		// clips on its skeleton. (Kez's main body model is kez_base.vmdl, per vanilla npc_heroes.)
+		"Model"					"models/heroes/kez/kez_base.vmdl"
 		"ModelScale"			"1.000000"
 		"SoundSet"				"Hero_Kez"
 		"GibType"				"default"
@@ -123,16 +121,26 @@
 		"Complexity"			"3"
 		"BotImplemented"		"0"
 
-		// Abilities — custom kit
+		// Abilities — custom kit. Talents use the STANDARD normal-hero range Ability10-17, NOT Kez's
+		// non-standard 12-19. (Kez the BaseClass is unusual: 11 real ability slots + talents at
+		// 12-19. Mirroring that pushed our L25 pair to slots 18/19, where the engine refuses to
+		// auto-register a CUSTOM talent class for a custom hero -> "entity class is NULL -1" and the
+		// two never appeared. The standard 10-17 window auto-registers all 8, like a normal hero.)
+		// Ability8/9 hide Kez's inherited talon_toss / shodo_sai; Ability10/11 (now talents) override
+		// Kez's ravens_veil / parry_cancel; Ability18/19 are forced hidden so Kez's OWN tier-25
+		// talent tokens (inherited) can't leak in alongside our tree.
 		"Ability1"				"onelosthero_second_stroke"		// Q
 		"Ability2"				"onelosthero_blindspot_dagger"	// W
 		"Ability3"				"onelosthero_false_hero"		// E
 		"Ability4"				"generic_hidden"
 		"Ability5"				"generic_hidden"
 		"Ability6"				"onelosthero_vanishing_point"	// R (ult)
-		"Ability7"				"onelosthero_lost_signal"		// Innate
+		"Ability7"				"onelosthero_lost_signal"		// Innate ("Innate" "1")
+		"Ability8"				"generic_hidden"				// hide inherited kez_talon_toss
+		"Ability9"				"generic_hidden"				// hide inherited kez_shodo_sai
 
-		// Talents (finalized tree — Ability Update brief §13)
+		// Talents (finalized tree — Ability Update brief §13). Standard 10-17 slots; effects/names
+		// unchanged. All 8 auto-generate from the value-links in the ability files (no KV defs).
 		"Ability10"				"special_bonus_attack_speed_15"					// L10 left:  +15 Attack Speed (vanilla)
 		"Ability11"				"special_bonus_unique_onelosthero_invis"			// L10 right: +0.5s False Hero invisibility
 		"Ability12"				"special_bonus_unique_onelosthero_second_stroke"	// L15 left:  +20% Second Stroke Echo damage
@@ -141,6 +149,8 @@
 		"Ability15"				"special_bonus_unique_onelosthero_silence"			// L20 right: +1s Blindspot Dagger silence
 		"Ability16"				"special_bonus_unique_onelosthero_fear_pierce"		// L25 left:  Vanishing Point fear pierces debuff immunity
 		"Ability17"				"special_bonus_unique_onelosthero_break"			// L25 right: +2s False Hero Break duration
+		"Ability18"				"generic_hidden"				// hide inherited kez tier-25 talent token
+		"Ability19"				"generic_hidden"				// hide inherited kez tier-25 talent token
 
 		// Attributes (Riki)
 		"AttributeBaseStrength"			"18"
@@ -432,8 +442,10 @@
 		"TeamName"				"DOTA_TEAM_GOODGUYS"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 
-		// Look + voice (Gyrocopter)
-		"Model"					"models/heroes/gyrocopter/gyrocopter.vmdl"
+		// Look + voice (Gyrocopter). NOTE: Gyrocopter's model lives under models/heroes/gyro/
+		// (folder "gyro", file gyro.vmdl) — NOT models/heroes/gyrocopter/. The old gyrocopter/
+		// path does not exist, so the hero rendered no model. Path verified vs vanilla npc_heroes.
+		"Model"					"models/heroes/gyro/gyro.vmdl"
 		"ModelScale"			"1.000000"
 		"SoundSet"				"Hero_Gyrocopter"
 		"GibType"				"default"

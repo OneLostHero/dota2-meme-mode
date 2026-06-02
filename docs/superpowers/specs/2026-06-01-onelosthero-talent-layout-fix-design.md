@@ -1,7 +1,10 @@
 # OneLostHero — Talent Layout & Polish Fix (design)
 
 Date: 2026-06-01
-Status: approved (Approach A), pending implementation
+Status: implemented. Approach A (slot layout) fixed talent-tree RENDERING + skill-bar cleanup
+(confirmed in-client). Talents still would not SELECT, so the documented fallback (Approach C,
+below) was then applied: explicit talent defs removed, talents auto-generate from value-links.
+Selectability pending final in-client confirmation.
 
 ## Problem
 
@@ -102,8 +105,21 @@ localization strings. Only the slot positions move and the AbilityType token rev
    pierces debuff immunity).
 4. Second Stroke shows its mana cost (80/90/100/110) on the HUD.
 
-### Fallback if talents still won't select after the layout fix
+### Approach C — APPLIED (pure value-link, vanilla model)
 
-Move to the pure value-link model (Approach C): drop the explicit talent definitions and add
-synthetic value-links for the two behavioral talents so they auto-generate like vanilla unique
-talents. Recorded here so the next session has the path without re-deriving it.
+After the layout fix, talents rendered in the tree but still could not be clicked. The only
+remaining difference from vanilla was the explicit `ability_lua` talent definitions, so we removed
+them and let the engine auto-generate the talents from value-links (exactly how every vanilla
+hero's unique talents work — they have no standalone definition).
+
+Changes:
+- Deleted `scripts/npc/abilities/onelosthero_talents.txt` and `abilities/onelosthero/talents.lua`,
+  and removed the `#base` include.
+- The 5 value-link talents (invis, second_stroke, explosion, silence, break) already had value-links
+  in their ability files, so they auto-generate unchanged.
+- The 2 behavior talents were converted to value-links so they also auto-generate:
+  - `max_charges` (base 1, `+1` from charges talent) in `onelosthero_false_hero.txt`;
+    `false_hero.lua:_MaxCharges` now reads `GetSpecialValueFor("max_charges")`.
+  - `fear_pierces_immunity` (0 → `+1` from fear_pierce talent) in `onelosthero_vanishing_point.txt`;
+    `vanishing_point.lua:FearPiercesImmunity` now reads `GetSpecialValueFor(...) > 0`.
+- Talent effects, tiers, names, and tooltips are unchanged.

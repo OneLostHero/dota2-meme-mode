@@ -47,8 +47,9 @@ function onelosthero_false_hero:_Cd()
 	return self:GetCooldown(self:GetLevel() - 1)
 end
 function onelosthero_false_hero:_MaxCharges()
-	local t = self:GetCaster():FindAbilityByName("special_bonus_unique_onelosthero_charges")
-	return (t and t:GetLevel() > 0) and 2 or 1
+	-- Reads the max_charges value-link (base 1, +1 from the lvl20 talent). GetSpecialValueFor
+	-- already folds in the learned talent, so no FindAbilityByName/GetLevel lookup is needed.
+	return math.floor(self:GetSpecialValueFor("max_charges"))
 end
 function onelosthero_false_hero:_UpdateCastable()
 	if self._mode ~= nil and self._mode ~= "idle" then
