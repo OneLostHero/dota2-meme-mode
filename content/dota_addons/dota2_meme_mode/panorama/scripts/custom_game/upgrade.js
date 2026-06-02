@@ -15,8 +15,6 @@ var DrawerHeader = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerHeade
 var CollapseMark = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerCollapseMark");
 var DrawerQueued = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerQueued");
 var DrawerEmpty = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerEmpty");
-var UpgradeSearch = $.GetContextPanel().FindChildInLayoutFile("UpgradeSearch");
-var searchQuery = "";
 var collapsedState = false;
 
 function SetCollapsed(collapsed) {
@@ -28,15 +26,6 @@ function SetCollapsed(collapsed) {
 function UpdateEmptyState() {
     var hasRows = Upgrades.Children().length > 0;
     DrawerEmpty.SetHasClass("hidden", hasRows);
-}
-
-function ApplyUpgradeFilter() {
-    var kids = Upgrades.Children();
-    for (var i = 0; i < kids.length; i++) {
-        var txt = kids[i].GetAttributeString("searchtext", "");
-        var match = (searchQuery === "" || txt.indexOf(searchQuery) !== -1);
-        kids[i].SetHasClass("filtered-out", !match);
-    }
 }
 
 function UpgradeOptionNew(data) {
@@ -73,25 +62,23 @@ function UpgradeOptionNew(data) {
         nameLoc = data.ability.replace("item_", "").replace(/_/g, " ");
     }
     UpgradeOptionAbilityName.text = nameLoc;
-    // Searchable text (ability name + stat key), set once per row; read by the search filter (next task).
-    upgradePanel.SetAttributeString("searchtext", (nameLoc + " " + data.key).toLowerCase());
 
     upgradePanel.FindChildTraverse("AbilityChangeReport").SetPanelEvent( 'onactivate', function () {
         GameEvents.SendCustomGameEventToServer( "upgrade_report", {ab: data.ability,kv: data.key});
     } );
 
     if (data.rarity == 4) {
-        //uniques 
+        //uniques
         UpgradeOptionLabel.text = $.Localize("#Unique_" + data.key);
         upgradePanel.FindChildTraverse( "OptionButtonPlus" ).SetPanelEvent( 'onactivate', function () {
             pickoption( data.ability, data.key, 1, upgradePanel,data.rarity );
-        } ); 
+        } );
         upgradePanel.FindChildTraverse( "OptionButtonMinus" ).visible = false;
         var OptionButtonPlusText = upgradePanel.FindChildTraverse("OptionButtonPlusText");
         OptionButtonPlusText.text = "Select";
         UpgradeOptionLabel.SetPanelEvent( 'onmouseover', function () {
             $.DispatchEvent("DOTAShowTextTooltip", UpgradeOptionLabel, $.Localize("#Unique_" + data.key + "_Desc"));
-        } ); 
+        } );
         UpgradeOptionLabel.SetPanelEvent( 'onmouseout', function () {
             $.DispatchEvent("DOTAHideTextTooltip", UpgradeOptionLabel);
         } );
@@ -116,20 +103,20 @@ function UpgradeOptionNew(data) {
         let downgrade_real = data.current * data.downgrade * 0.01;
         UpgradeOptionLabel.SetPanelEvent( 'onmouseover', function () {
             $.DispatchEvent("DOTAShowTextTooltip", UpgradeOptionLabel, data.key + ": " + current_real.toFixed(2));
-        } ); 
+        } );
         UpgradeOptionLabel.SetPanelEvent( 'onmouseout', function () {
             $.DispatchEvent("DOTAHideTextTooltip", UpgradeOptionLabel);
         } );
         var OptionButtonPlusText = upgradePanel.FindChildTraverse("OptionButtonPlusText");
         var OptionButtonMinusText = upgradePanel.FindChildTraverse("OptionButtonMinusText");
-        OptionButtonPlusText.text = Math.round(data.upgrade)+"%";
-        OptionButtonMinusText.text = Math.round(data.downgrade)+"%";
+        OptionButtonPlusText.text = "+" + Math.round(data.upgrade) + "%";
+        OptionButtonMinusText.text = "-" + Math.round(data.downgrade) + "%";
         if (Math.round(data.current_mult*100) == Math.round(data.upgrade)) {
             //upgradePanel.FindChildTraverse( "OptionButtonPlusText" ).SetHasClass("DullUpgrade",true);
             upgradePanel.FindChildTraverse( "OptionButtonPlus" ).SetHasClass("DullUpgrade",true);
             upgradePanel.FindChildTraverse( "OptionButtonPlus" ).SetPanelEvent( 'onmouseover', function () {
                 $.DispatchEvent("DOTAShowTextTooltip", upgradePanel.FindChildTraverse( "OptionButtonPlus" ), "Maxed");
-            } ); 
+            } );
             upgradePanel.FindChildTraverse( "OptionButtonPlus" ).SetPanelEvent( 'onmouseout', function () {
                 $.DispatchEvent("DOTAHideTextTooltip", upgradePanel.FindChildTraverse( "OptionButtonPlus" ));
             } );
@@ -137,7 +124,7 @@ function UpgradeOptionNew(data) {
             upgradePanel.FindChildTraverse( "OptionButtonPlus" ).SetHasClass("OptionButtonPlus",true);
             upgradePanel.FindChildTraverse( "OptionButtonPlus" ).SetPanelEvent( 'onmouseover', function () {
                 $.DispatchEvent("DOTAShowTextTooltip", upgradePanel.FindChildTraverse( "OptionButtonPlus" ), current_real.toFixed(2) + " => " + upgrade_real.toFixed(2));
-            } ); 
+            } );
             upgradePanel.FindChildTraverse( "OptionButtonPlus" ).SetPanelEvent( 'onmouseout', function () {
                 $.DispatchEvent("DOTAHideTextTooltip", upgradePanel.FindChildTraverse( "OptionButtonPlus" ));
             } );
@@ -147,7 +134,7 @@ function UpgradeOptionNew(data) {
             upgradePanel.FindChildTraverse( "OptionButtonMinus" ).SetHasClass("DullUpgrade",true);
             upgradePanel.FindChildTraverse( "OptionButtonMinus" ).SetPanelEvent( 'onmouseover', function () {
                 $.DispatchEvent("DOTAShowTextTooltip", upgradePanel.FindChildTraverse( "OptionButtonMinus" ), "Maxed");
-            } ); 
+            } );
             upgradePanel.FindChildTraverse( "OptionButtonMinus" ).SetPanelEvent( 'onmouseout', function () {
                 $.DispatchEvent("DOTAHideTextTooltip", upgradePanel.FindChildTraverse( "OptionButtonMinus" ));
             } );
@@ -155,15 +142,15 @@ function UpgradeOptionNew(data) {
             upgradePanel.FindChildTraverse( "OptionButtonMinus" ).SetHasClass("OptionButtonMinus",true);
             upgradePanel.FindChildTraverse( "OptionButtonMinus" ).SetPanelEvent( 'onmouseover', function () {
                 $.DispatchEvent("DOTAShowTextTooltip", upgradePanel.FindChildTraverse( "OptionButtonMinus" ), current_real.toFixed(2) + " => " + downgrade_real.toFixed(2));
-            } ); 
+            } );
             upgradePanel.FindChildTraverse( "OptionButtonMinus" ).SetPanelEvent( 'onmouseout', function () {
                 $.DispatchEvent("DOTAHideTextTooltip", upgradePanel.FindChildTraverse( "OptionButtonMinus" ));
             } );
         }
         upgradePanel.FindChildTraverse( "OptionButtonPlus" ).SetPanelEvent( 'onactivate', function () {
             pickoption( data.id, 1, upgradePanel);
-    
-        } ); 
+
+        } );
         upgradePanel.FindChildTraverse( "OptionButtonMinus" ).SetPanelEvent( 'onactivate', function () {
             pickoption( data.id, 0, upgradePanel);
         } );
@@ -171,7 +158,10 @@ function UpgradeOptionNew(data) {
         if (data.allow_ban) {
             upgradePanel.FindChildTraverse( "OptionButtonBan" ).SetPanelEvent( 'onactivate', function () {
                 pickoption( data.id, 2, upgradePanel);
-            } ); 
+            } );
+            var banBtn = upgradePanel.FindChildTraverse("OptionButtonBan");
+            banBtn.SetPanelEvent('onmouseover', function () { $.DispatchEvent("DOTAShowTextTooltip", banBtn, "Never show this upgrade again"); });
+            banBtn.SetPanelEvent('onmouseout', function () { $.DispatchEvent("DOTAHideTextTooltip", banBtn); });
         } else {
             upgradePanel.FindChildTraverse( "OptionButtonBan" ).visible = false;
         }
@@ -194,7 +184,7 @@ function UpgradeOptionsNew(table,tableKey,data) {
             } else {
                 Upgrades.RemoveAndDeleteChildren();
                 if (typeof(data) == "object") {
-                    
+
                     if (Object.keys(data).length > 1) {
                         bWaiting = false;
                         tCurrent = data;
@@ -206,7 +196,6 @@ function UpgradeOptionsNew(table,tableKey,data) {
 
                             }
                         }
-                        ApplyUpgradeFilter();
                         UpdateEmptyState();
                     } else {
                         bWaiting = true;
@@ -257,7 +246,7 @@ function ForceRecreate() {
 (function init() {
     plugin_settings = CustomNetTables.GetTableValue( "plugin_settings", this_plugin_id );
 
-    
+
     let local_disable = plugin_settings.enabled.VALUE == 0;
 
     if (!local_disable && plugin_settings.core_apply_team.VALUE != 0 && plugin_settings.core_apply_team.VALUE != local_team) {
@@ -274,15 +263,16 @@ function ForceRecreate() {
         //GameEvents.Subscribe( "boost_player_recheck", KeepitReal );
         boost_player_recheck();
 
-        DrawerHeader.SetPanelEvent('onactivate', function () { SetCollapsed(!collapsedState); });
         UpdateEmptyState();
 
-        function OnUpgradeSearchChanged() {
-            searchQuery = UpgradeSearch.text.toLowerCase();
-            ApplyUpgradeFilter();
+        var costLabel = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerCost");
+        if (costLabel) {
+            if (plugin_settings && plugin_settings.cost && plugin_settings.cost.VALUE != undefined) {
+                costLabel.text = plugin_settings.cost.VALUE + " Boost Juice / pick";
+            } else {
+                costLabel.text = "Spend Boost Juice to roll picks";
+            }
         }
-        $.RegisterEventHandler('TextEntryChanged', UpgradeSearch, OnUpgradeSearchChanged);
-        UpgradeSearch.SetPanelEvent('oninputsubmit', OnUpgradeSearchChanged);
 
         DrawerQueued.SetPanelEvent('onmouseover', function () {
             $.DispatchEvent("DOTAShowTextTooltip", DrawerQueued, $.Localize("#Boosted_queue"));

@@ -14,37 +14,47 @@
 				<DOTAItemImage id="UpgradeOptionImageItem" class="OptionImage" />
 				<Button id="AbilityChangeReport"/>
 				<Panel class="UpgradeOptionText">
-					<Label id="UpgradeOptionLabel" class="meme-label-primary" html="true" text="effect" />
-					<Label id="UpgradeOptionAbilityName" class="meme-label-secondary" text="ability" />
+					<Label id="UpgradeOptionLabel" class="meme-label-primary UpgradeEffect" html="true" text="effect" />
+					<Label id="UpgradeOptionAbilityName" class="meme-label-secondary UpgradeAbility" text="ability" />
 				</Panel>
-				<Button id="OptionButtonPlus" class="OptionButton">
-					<Label class="OptionNumText" id="OptionButtonPlusText" text="option_plus" />
-				</Button>
-				<Button id="OptionButtonMinus" class="OptionButton">
-					<Label class="OptionNumText" id="OptionButtonMinusText" text="option_minus" />
-				</Button>
-				<Button id="OptionButtonBan" class="OptionButton">
-					<Label class="OptionNumText" id="OptionButtonBanText" text="X" />
+				<Panel class="UpgradeOptionChips">
+					<Button id="OptionButtonPlus" class="OptionButton OptionButtonPlus">
+						<Label class="OptionNumText" id="OptionButtonPlusText" text="+" />
+					</Button>
+					<Button id="OptionButtonMinus" class="OptionButton OptionButtonMinus">
+						<Label class="OptionNumText" id="OptionButtonMinusText" text="-" />
+					</Button>
+				</Panel>
+				<Button id="OptionButtonBan" class="OptionButtonBan">
+					<Label id="OptionButtonBanText" text="x" />
 				</Button>
 			</Panel>
 		</snippet>
 	</snippets>
 	<Panel id="PersonalUpgradeScreen" class="PersonalUpgradeScreen" hittest="false" visible="true">
 		<Panel id="UpgradeDrawer" class="meme-panel UpgradeDrawer" hittest="true">
-			<Button id="UpgradeDrawerHeader" class="meme-header" hittest="true">
-				<Label class="meme-header-title" text="ABILITY UPGRADES" />
-				<Panel id="UpgradeDrawerQueued" class="UpgradeDrawerQueued">
-					<Label id="QueuedUpgradesText" text="0" />
+			<Panel id="UpgradeDrawerHeader" class="meme-header UpgradeDrawerHeaderCol">
+				<Panel class="UpgradeDrawerHeaderTop">
+					<Label class="meme-header-title" text="ABILITY UPGRADES" />
+					<Panel id="UpgradeDrawerQueued" class="UpgradeDrawerQueued">
+						<Label id="QueuedUpgradesText" text="0" />
+						<Label class="UpgradeDrawerQueuedSuffix" text=" picks" />
+					</Panel>
 				</Panel>
-				<Label id="UpgradeDrawerCollapseMark" class="UpgradeDrawerCollapseMark" text="[-]" />
-			</Button>
+				<Panel class="UpgradeDrawerHeaderSub">
+					<Label id="UpgradeDrawerCost" class="UpgradeDrawerCost" text="" />
+					<Panel class="UpgradeRarityLegend">
+						<Label class="LegendCommon" text="Common" />
+						<Label class="LegendRare" text="Rare" />
+						<Label class="LegendEpic" text="Epic" />
+						<Label class="LegendUnique" text="Unique" />
+					</Panel>
+				</Panel>
+			</Panel>
 			<Panel id="UpgradeDrawerBody" class="UpgradeDrawerBody">
 				<!-- Reserved slot for currency balance + Convert button (later phase). Empty on purpose. -->
 				<Panel id="UpgradeDrawerBalanceSlot" class="UpgradeDrawerBalanceSlot" />
 				<Label id="UpgradeDrawerEmpty" class="UpgradeDrawerEmpty" text="No upgrades available yet." />
-				<Panel class="UpgradeSearchRow">
-					<TextEntry id="UpgradeSearch" class="meme-input UpgradeSearch" placeholder="Search upgrades" maxchars="100" />
-				</Panel>
 				<Panel id="Upgrades" />
 			</Panel>
 		</Panel>
