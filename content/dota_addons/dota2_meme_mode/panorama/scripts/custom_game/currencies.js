@@ -176,21 +176,6 @@ function Cleanup() {
     WindowRoot.RemoveAndDeleteChildren();
 }
 
-function GetDotaHud() {
-    var panel = $.GetContextPanel();
-    while (panel && panel.id !== 'Hud') { panel = panel.GetParent(); }
-    return panel;
-}
-// Move the currency chips (Boost Juice) into the Dota HUD ButtonBar so they
-// sit in the bottom-left HUD cluster (above the gold) and reflow with
-// quickbuy/items, alongside the upgrade toggle (see upgrade.js).
-function AttachToHud() {
-    var hud = GetDotaHud();
-    var bar = hud ? hud.FindChildTraverse("ButtonBar") : null;
-    if (bar) {
-        WindowRoot.SetParent(bar);
-    }
-}
 
 (function () {
     
@@ -204,7 +189,6 @@ function AttachToHud() {
             AddCurrency(tCurrencies[key].key,tCurrencies[key].value);
         }
         CustomNetTables.SubscribeNetTableListener( "currencies" , tCurrenciesUpdate );
-        AttachToHud();
     }
     if (Game.IsHUDFlipped()) {
         $.GetContextPanel().SetHasClass("flipped",true);

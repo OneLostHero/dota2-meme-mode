@@ -257,14 +257,39 @@ function FindDotaHudElement(id) {
     var hud = GetDotaHud();
     return hud ? hud.FindChildTraverse(id) : null;
 }
-// Reparent our upgrade toggle into the Dota HUD ButtonBar so it lives in the
-// bottom-left HUD cluster (above the gold) and reflows with quickbuy/items.
-// Mirrors the working inspect_upgrades.js pattern.
-function AttachToggleToHud() {
-    if (!ToggleFloat) return;
-    var bar = FindDotaHudElement("ButtonBar");
-    if (bar) {
-        ToggleFloat.SetParent(bar);
+// Console diagnostic: log the bottom-left HUD containers and the ancestor
+// chain above the gold so we can pick the real reflowing parent.
+// (ButtonBar turned out to be the TOP-LEFT utility bar — wrong.)
+function pos(p) {
+    var x = 0, y = 0, w = 0, h = 0;
+    try { var pw = p.GetPositionWithinWindow(); x = Math.round(pw.x); y = Math.round(pw.y); } catch (e) {}
+    try { w = Math.round(p.actuallayoutwidth); h = Math.round(p.actuallayoutheight); } catch (e) {}
+    return "@" + x + "," + y + " " + w + "x" + h;
+}
+function DumpHudTree() {
+    var hud = GetDotaHud();
+    if (!hud) { $.Msg("HUDPROBE: hud root NOT found"); return; }
+    $.Msg("HUDPROBE: hud root OK " + pos(hud));
+    var ids = ["GoldText", "PlayerGold", "gold", "quickbuy", "Quickbuy", "QuickBuyContainer",
+               "ShopButton", "shop", "ShopContainer", "inventory", "InventoryContainer",
+               "stash", "StashContainer", "center_block", "CenterBlock", "lower_hud",
+               "HUDElements", "ActionPanel", "items", "ItemContainer"];
+    for (var i = 0; i < ids.length; i++) {
+        var p = hud.FindChildTraverse(ids[i]);
+        if (p) $.Msg("HUDPROBE: found " + ids[i] + " " + pos(p));
+    }
+    // Walk the ancestor chain up from the gold element (the bottom-left anchor).
+    var anchor = hud.FindChildTraverse("GoldText") || hud.FindChildTraverse("quickbuy") || hud.FindChildTraverse("ShopButton");
+    if (anchor) {
+        $.Msg("HUDPROBE: --- ancestor chain from " + anchor.id + " ---");
+        var node = anchor, depth = 0;
+        while (node && depth < 14) {
+            $.Msg("HUDPROBE: [" + depth + "] id='" + node.id + "' class='" + (node.GetAttributeString ? "" : "") + "' " + pos(node));
+            node = node.GetParent();
+            depth++;
+        }
+    } else {
+        $.Msg("HUDPROBE: no gold/quickbuy/shop anchor found to walk");
     }
 }
 
@@ -292,8 +317,8 @@ function AttachToggleToHud() {
             ToggleFloat.SetPanelEvent('onactivate', function () { Drawer.SetHasClass("hidden", !Drawer.BHasClass("hidden")); });
             ToggleFloat.SetPanelEvent('onmouseover', function () { $.DispatchEvent("DOTAShowTextTooltip", ToggleFloat, "Toggle Ability Upgrades"); });
             ToggleFloat.SetPanelEvent('onmouseout', function () { $.DispatchEvent("DOTAHideTextTooltip", ToggleFloat); });
-            AttachToggleToHud();
         }
+        DumpHudTree();
         UpdateToggleBadge();
 
         UpdateEmptyState();
