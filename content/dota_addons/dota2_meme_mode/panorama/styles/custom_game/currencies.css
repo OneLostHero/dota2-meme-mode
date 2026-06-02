@@ -134,6 +134,13 @@
   background-color: #13161c;
   border-bottom: 1px solid #2a2f3a;
  }
+ .CurrencyHelpCost{
+  padding: 6px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffd24d;
+  background-color: #13161c;
+ }
  .CurrencyHelp{
   padding: 5px 10px;
   font-size: 11px;
