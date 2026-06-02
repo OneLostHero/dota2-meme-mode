@@ -9,11 +9,14 @@
 	</scripts>
 	<snippets>
 		<snippet name="UpgradeOption">
-			<Panel class="UpgradeOption">
+			<Panel class="UpgradeOption meme-row">
 				<DOTAAbilityImage id="UpgradeOptionImage" class="OptionImage" />
 				<DOTAItemImage id="UpgradeOptionImageItem" class="OptionImage" />
 				<Button id="AbilityChangeReport"/>
-				<Label id="UpgradeOptionLabel" html="true" text="key_value" />
+				<Panel class="UpgradeOptionText">
+					<Label id="UpgradeOptionAbilityName" class="meme-label-primary" text="ability" />
+					<Label id="UpgradeOptionLabel" class="meme-label-secondary" html="true" text="key_value" />
+				</Panel>
 				<Button id="OptionButtonPlus" class="OptionButton">
 					<Label class="OptionNumText" id="OptionButtonPlusText" text="option_plus" />
 				</Button>

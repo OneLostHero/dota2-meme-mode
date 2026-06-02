@@ -45,6 +45,17 @@ function UpgradeOptionNew(data) {
         UpgradeOptionImageItem.visible = false
     }
     var UpgradeOptionLabel = upgradePanel.FindChildTraverse("UpgradeOptionLabel");
+    var UpgradeOptionAbilityName = upgradePanel.FindChildTraverse("UpgradeOptionAbilityName");
+    var nameLoc = data.ability.includes("item_")
+        ? $.Localize("#DOTA_Tooltip_" + data.ability)
+        : $.Localize("#DOTA_Tooltip_Ability_" + data.ability);
+    // Fall back to a de-prefixed, readable raw name if no localization exists.
+    if (nameLoc.indexOf("#DOTA_Tooltip") === 0) {
+        nameLoc = data.ability.replace("item_", "").replace(/_/g, " ");
+    }
+    UpgradeOptionAbilityName.text = nameLoc;
+    // Searchable text (ability name + stat key), set once per row; read by the search filter (next task).
+    upgradePanel.SetAttributeString("searchtext", (nameLoc + " " + data.key).toLowerCase());
 
     upgradePanel.FindChildTraverse("AbilityChangeReport").SetPanelEvent( 'onactivate', function () {
         GameEvents.SendCustomGameEventToServer( "upgrade_report", {ab: data.ability,kv: data.key});
