@@ -36,7 +36,7 @@
 			</Button>
 		</snippet>
 	</snippets>
-	<Panel id="PersonalUpgradeScreen" class="PersonalUpgradeScreen" hittest="false" visible="true">
+	<Panel class="PersonalUpgradeScreen" hittest="false" visible="true">
 		<Panel id="UpgradeDrawer" class="meme-panel UpgradeDrawer" hittest="true">
 			<Panel id="UpgradeDrawerHeader" class="meme-header UpgradeDrawerHeaderCol">
 				<Panel class="UpgradeDrawerHeaderTop">
