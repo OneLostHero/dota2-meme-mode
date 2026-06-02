@@ -6,7 +6,7 @@
  .CurrencyRoot{
      horizontal-align: left;
      vertical-align: bottom;
-     margin-left: 82px;  /* slight overlap onto the 8+80 upgrade icon so the frames visually touch */
+     margin-left: 86px;  /* 8+80 icon right edge minus the chip's 2px inner margin = flush touch */
      margin-bottom: 40px; /* JS (RepositionBar) overrides this to ride the quickbuy cluster */
      flow-children: right;
      transition: margin-bottom 0.15s ease-in-out 0.0s; /* smooth the quickbuy-ride */
@@ -151,6 +151,19 @@
  }
  .CurrencyHelp{
   padding: 5px 10px;
+  font-size: 11px;
+  color: #c8cdd6;
+  background-color: #13161c;
+ }
+ .CurrencyEarnHeader{
+  padding: 6px 10px 2px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #c8ff5e;
+  background-color: #13161c;
+ }
+ .CurrencyEarnLine{
+  padding: 1px 10px 1px 18px;
   font-size: 11px;
   color: #c8cdd6;
   background-color: #13161c;

@@ -7,6 +7,8 @@ const this_window_id = "currencies";
 const local_team = Players.GetTeam(Players.GetLocalPlayer());
 var tCurrencyNumbers = {}
 var currency_open;
+var menuOpenName = null;   // which currency's converter menu is currently open
+var menuSuppress = false;  // brief guard so the closing click doesn't immediately reopen
 
 function AddCurrency(sName,tData) {
     if (tData.share == 3)
@@ -32,13 +34,17 @@ function AddCurrency(sName,tData) {
     if (cname === "#Currency_" + sName) { cname = sName; }
     var cdesc = $.Localize("#Currency_" + sName + "_Desc");
     var ctip = (cdesc === "#Currency_" + sName + "_Desc") ? cname : (cname + ": " + cdesc);
-    CurrencyBox.SetPanelEvent("onmouseover", function () { $.DispatchEvent("DOTAShowTextTooltip", CurrencyBox, ctip); });
+    // Don't show the hover tooltip while this currency's menu is open (it would
+    // cover the menu that just popped up).
+    CurrencyBox.SetPanelEvent("onmouseover", function () { if (menuOpenName !== sName) $.DispatchEvent("DOTAShowTextTooltip", CurrencyBox, ctip); });
     CurrencyBox.SetPanelEvent("onmouseout", function () { $.DispatchEvent("DOTAHideTextTooltip", CurrencyBox); });
 
     if (plugin_settings[sName + "_gold_buy"].VALUE > 0) {
         CurrencyBox.SetPanelEvent(
             "onactivate",
             function(){
+                // Click toggles: if it just closed via blur this same click, stay closed.
+                if (menuSuppress || menuOpenName === sName) return;
                 ShowOptionMenu(sName);
             }
         );
@@ -51,10 +57,15 @@ function ShowOptionMenu(sName) {
     CurrencyActionBox.BLoadLayoutSnippet("CurrencyActionBox");
     CurrencyActionBox.SetAcceptsFocus(true)
     CurrencyActionBox.SetFocus();
+    menuOpenName = sName;
+    $.DispatchEvent("DOTAHideTextTooltip", CurrencyActionBox); // clear the hover tooltip so it doesn't cover the menu
     CurrencyActionBox.SetPanelEvent(
         "onblur",
         function(){
             CurrencyActionBox.DeleteAsync(0);
+            if (menuOpenName === sName) menuOpenName = null;
+            menuSuppress = true; // closing click also fires onactivate; swallow that one
+            $.Schedule(0.18, function(){ menuSuppress = false; });
         }
     );
     var cname2 = $.Localize("#Currency_" + sName);
@@ -98,9 +109,48 @@ function ShowOptionMenu(sName) {
         helpCost.AddClass('CurrencyHelpCost');
         helpCost.text = pickCost + " " + cname2 + " = 1 upgrade point" + (goldPerPoint > 0 ? ("  (~" + Math.round(pickCost * goldPerPoint) + " gold)") : "");
     }
-    var helpEarn = $.CreatePanel('Label', CurrencyActionBox, 'CurrencyHelpEarn_' + sName);
-    helpEarn.AddClass('CurrencyHelp');
-    helpEarn.text = "Earn by: kills, towers, Roshan, wards, outposts/lamps/Tormentor, timed income, and converting gold below.";
+    // "?" help: how to earn this currency + how much each source gives, pulled
+    // live from the currencies plugin settings so it tracks any config change.
+    var cset = CustomNetTables.GetTableValue("plugin_settings", "currencies") || {};
+    function settingNum(k){ return (cset[k] && cset[k].VALUE != undefined) ? Number(cset[k].VALUE) : 0; }
+    function settingStr(k){ return (cset[k] && cset[k].VALUE != undefined) ? String(cset[k].VALUE) : ""; }
+    var earnSources = [
+        ["hero_kill",       "Hero kill"],
+        ["unit_kill",       "Last hit / unit kill"],
+        ["tower_kill",      "Tower kill"],
+        ["roshan_kill",     "Roshan kill"],
+        ["tormentor_kill",  "Tormentor kill"],
+        ["observer_plant",  "Place a ward"],
+        ["observer_kill",   "Destroy a ward"],
+        ["lamp_capture",    "Capture a lamp"],
+        ["outpost_capture", "Capture an outpost"],
+        ["timed",           "Passive income (per tick)"]
+    ];
+    var earnHeader = $.CreatePanel('Label', CurrencyActionBox, 'CurrencyEarnHeader_' + sName);
+    earnHeader.AddClass('CurrencyEarnHeader');
+    earnHeader.text = "?  How to earn " + cname2;
+    var anyEarn = false;
+    for (var si = 0; si < earnSources.length; si++) {
+        var src = earnSources[si][0], label = earnSources[si][1];
+        if (settingStr(src + "_reward_currency") !== sName) continue;
+        var amt = settingNum(src + "_reward_amount");
+        if (!(amt > 0)) continue;
+        anyEarn = true;
+        var lineEarn = $.CreatePanel('Label', CurrencyActionBox, 'CurrencyEarnLine_' + src);
+        lineEarn.AddClass('CurrencyEarnLine');
+        lineEarn.text = label + ":  +" + amt + " " + cname2;
+    }
+    if (goldPerPoint > 0) {
+        anyEarn = true;
+        var lineConv = $.CreatePanel('Label', CurrencyActionBox, 'CurrencyEarnLine_convert');
+        lineConv.AddClass('CurrencyEarnLine');
+        lineConv.text = "Convert gold (below):  " + Math.round(goldPerPoint) + " gold = 1 " + cname2;
+    }
+    if (!anyEarn) {
+        var lineNone = $.CreatePanel('Label', CurrencyActionBox, 'CurrencyEarnLine_none');
+        lineNone.AddClass('CurrencyEarnLine');
+        lineNone.text = "Earn in combat or convert gold below.";
+    }
     var helpWarn = $.CreatePanel('Label', CurrencyActionBox, 'CurrencyHelpWarn_' + sName);
     helpWarn.AddClass('CurrencyHelpWarn');
     helpWarn.text = "WARNING: Upgrades are RANDOM. They can buff OR nerf any ability, and may even break your hero.";
