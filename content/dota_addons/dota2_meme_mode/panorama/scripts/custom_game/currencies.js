@@ -82,6 +82,26 @@ function ShowOptionMenu(sName) {
         rateLabel.AddClass('CurrencyActionRate');
         rateLabel.text = Math.round(goldPerPoint) + " gold = 1 " + cname2;
     }
+    // Help: how to earn + cost + warning (Boost Juice menu)
+    var helpEarn = $.CreatePanel('Label', CurrencyActionBox, 'CurrencyHelpEarn_' + sName);
+    helpEarn.AddClass('CurrencyHelp');
+    helpEarn.text = "Earn by: kills, towers, Roshan, wards, outposts/lamps/Tormentor, timed income, and converting gold below.";
+    // Cost per upgrade pick: use the first spend option's cost if present
+    var pickCost = 0;
+    if (tCurrencies[sName] && tCurrencies[sName].spend_options) {
+        for (var sk in tCurrencies[sName].spend_options) {
+            var so = tCurrencies[sName].spend_options[sk];
+            if (so && Number(so.cost) > 0) { pickCost = Number(so.cost); break; }
+        }
+    }
+    if (pickCost > 0) {
+        var helpCost = $.CreatePanel('Label', CurrencyActionBox, 'CurrencyHelpCost_' + sName);
+        helpCost.AddClass('CurrencyHelp');
+        helpCost.text = "Each upgrade pick costs " + pickCost + " Boost Juice" + (goldPerPoint > 0 ? (" (~" + Math.round(pickCost * goldPerPoint) + " gold)") : "") + ".";
+    }
+    var helpWarn = $.CreatePanel('Label', CurrencyActionBox, 'CurrencyHelpWarn_' + sName);
+    helpWarn.AddClass('CurrencyHelpWarn');
+    helpWarn.text = "WARNING: Upgrades are RANDOM. They can buff OR nerf any ability, and may even break your hero.";
     let spend_count = 0;
     for (const key in tCurrencies[sName].spend_options) {
         const option = tCurrencies[sName].spend_options[key];

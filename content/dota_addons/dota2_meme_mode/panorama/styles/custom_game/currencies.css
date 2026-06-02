@@ -6,8 +6,8 @@
  .CurrencyRoot{
      horizontal-align: left;
      vertical-align: bottom;
-     margin-left: 192px;
-     margin-bottom: 82px;
+     margin-left: 80px;
+     margin-bottom: 84px;
      flow-children: right;
  }
 
@@ -52,23 +52,23 @@
     Hide the small gem icon and drop the live amount into the art's number slot (top-left). */
  .currency_box_red{
      background-image: url("file://{images}/custom_game/boost_juice.png");
-     background-size: cover;
+     background-size: 100% 100%;
      background-repeat: no-repeat;
      background-position: 50% 50%;
      background-color: none;
-     width: 184px;
-     height: 70px;
+     width: 158px;
+     height: 50px;
  }
  .currency_box_red:hover{ wash-color: #e6e6e6ff; }
  .currency_box_red #CurrencyIcon{ visibility: collapse; width: 0px; height: 0px; }
  .currency_box_red #CurrencyAmmount{
-     horizontal-align: right;
+     horizontal-align: left;
      vertical-align: center;
-     margin-right: 54px;
+     margin-left: 16px;
      padding: 0px;
      text-align: center;
-     width: 32px;
-     font-size: 19px;
+     width: 90px;
+     font-size: 24px;
      color: #ffe08a;
  }
 
@@ -131,6 +131,20 @@
   padding: 4px 10px;
   font-size: 11px;
   color: #9aa0ab;
+  background-color: #13161c;
+  border-bottom: 1px solid #2a2f3a;
+ }
+ .CurrencyHelp{
+  padding: 5px 10px;
+  font-size: 11px;
+  color: #c8cdd6;
+  background-color: #13161c;
+ }
+ .CurrencyHelpWarn{
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #ff6b6b;
   background-color: #13161c;
   border-bottom: 1px solid #2a2f3a;
  }

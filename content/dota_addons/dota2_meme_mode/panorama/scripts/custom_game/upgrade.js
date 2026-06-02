@@ -277,18 +277,6 @@ function ForceRecreate() {
 
         UpdateEmptyState();
 
-        var HelpButton = $.GetContextPanel().FindChildInLayoutFile("UpgradeHelpButton");
-        var HelpPanel = $.GetContextPanel().FindChildInLayoutFile("UpgradeHelpPanel");
-        var HelpClose = $.GetContextPanel().FindChildInLayoutFile("UpgradeHelpClose");
-        if (HelpButton && HelpPanel) {
-            HelpButton.SetPanelEvent('onactivate', function () { HelpPanel.SetHasClass("hidden", !HelpPanel.BHasClass("hidden")); });
-            HelpButton.SetPanelEvent('onmouseover', function () { $.DispatchEvent("DOTAShowTextTooltip", HelpButton, "How Boost Juice & Upgrades work"); });
-            HelpButton.SetPanelEvent('onmouseout', function () { $.DispatchEvent("DOTAHideTextTooltip", HelpButton); });
-        }
-        if (HelpClose && HelpPanel) {
-            HelpClose.SetPanelEvent('onactivate', function () { HelpPanel.AddClass("hidden"); });
-        }
-
         var costLabel = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerCost");
         if (costLabel) {
             if (plugin_settings && plugin_settings.cost && plugin_settings.cost.VALUE != undefined) {
