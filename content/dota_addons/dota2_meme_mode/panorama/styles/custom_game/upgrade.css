@@ -79,7 +79,6 @@
   }
 
   #UpgradeOptionLabel{
-   margin-left: 5px;
    font-weight: normal;
    letter-spacing: 0px;
    margin-right: 4px;
@@ -219,3 +218,5 @@
   .UpgradeSearchRow{ padding: 6px 8px; border-bottom: 1px solid #20242e; }
   .UpgradeSearch{ width: 100%; }
   .filtered-out{ visibility: collapse; height: 0px; }
+
+  .UpgradeOption.meme-row{ margin-bottom: 0px; }

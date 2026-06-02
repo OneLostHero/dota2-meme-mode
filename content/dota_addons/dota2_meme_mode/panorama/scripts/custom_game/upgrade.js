@@ -268,10 +268,12 @@ function ForceRecreate() {
         DrawerCollapse.SetPanelEvent('onactivate', function () { SetCollapsed(true); });
         DrawerTab.SetPanelEvent('onactivate', function () { SetCollapsed(false); });
 
-        UpgradeSearch.SetPanelEvent('ontextentrychanged', function () {
+        function OnUpgradeSearchChanged() {
             searchQuery = UpgradeSearch.text.toLowerCase();
             ApplyUpgradeFilter();
-        });
+        }
+        $.RegisterEventHandler('TextEntryChanged', UpgradeSearch, OnUpgradeSearchChanged);
+        UpgradeSearch.SetPanelEvent('oninputsubmit', OnUpgradeSearchChanged);
 
         DrawerQueued.SetPanelEvent('onmouseover', function () {
             $.DispatchEvent("DOTAShowTextTooltip", DrawerQueued, $.Localize("#Boosted_queue"));

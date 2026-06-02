@@ -29,7 +29,7 @@
 			</Panel>
 		</snippet>
 	</snippets>
-	<Panel class="PersonalUpgradeScreen" hittest="false" visible="true">
+	<Panel id="PersonalUpgradeScreen" class="PersonalUpgradeScreen" hittest="false" visible="true">
 		<!-- Edge tab: shown only when the drawer is collapsed; click to reopen -->
 		<Button id="UpgradeDrawerTab" class="UpgradeDrawerTab" hittest="true">
 			<Label id="UpgradeDrawerTabText" text="⚡" />
@@ -50,7 +50,7 @@
 			<Panel id="UpgradeDrawerBalanceSlot" class="UpgradeDrawerBalanceSlot" />
 
 			<Panel class="UpgradeSearchRow">
-				<TextEntry id="UpgradeSearch" class="meme-input UpgradeSearch" placeholder="Search upgrades…" />
+				<TextEntry id="UpgradeSearch" class="meme-input UpgradeSearch" placeholder="Search upgrades…" maxchars="100" />
 			</Panel>
 
 			<Panel id="Upgrades" />
