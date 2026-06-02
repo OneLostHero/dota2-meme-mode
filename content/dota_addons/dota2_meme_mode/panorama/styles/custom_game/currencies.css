@@ -6,7 +6,7 @@
  .CurrencyRoot{
      horizontal-align: left;
      vertical-align: bottom;
-     margin-left: 88px;
+     margin-left: 94px;
      margin-bottom: 90px; /* JS (RepositionBar) overrides this to ride the quickbuy cluster */
      flow-children: right;
  }
@@ -56,8 +56,8 @@
      background-repeat: no-repeat;
      background-position: 50% 50%;
      background-color: none;
-     width: 210px;
-     height: 72px;
+     width: 212px;  /* art is 1516x458 (~3.3:1); box matches aspect so it fills cleanly */
+     height: 64px;
      vertical-align: bottom;
  }
  .currency_box_red:hover{ wash-color: #e6e6e6ff; }
