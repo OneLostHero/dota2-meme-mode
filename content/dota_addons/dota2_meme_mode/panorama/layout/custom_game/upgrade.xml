@@ -61,5 +61,21 @@
 		<Button id="UpgradeToggleFloat" class="UpgradeToggleFloat" hittest="true">
 			<Label id="UpgradeToggleBadge" class="UpgradeToggleBadge" text="0" />
 		</Button>
+		<Button id="UpgradeHelpButton" class="UpgradeHelpButton" hittest="true">
+			<Label class="UpgradeHelpQ" text="?" />
+		</Button>
+		<Panel id="UpgradeHelpPanel" class="UpgradeHelpPanel hidden" hittest="true">
+			<Label class="UpgradeHelpTitle" text="BOOST JUICE &amp; UPGRADES" />
+			<Label class="UpgradeHelpHeading" text="Ways to earn Boost Juice:" />
+			<Label class="UpgradeHelpLine" text="- Convert gold (50 gold = 1 Boost Juice)" />
+			<Label class="UpgradeHelpLine" text="- Killing units and heroes" />
+			<Label class="UpgradeHelpLine" text="- Destroying towers and killing Roshan" />
+			<Label class="UpgradeHelpLine" text="- Placing and destroying observer wards" />
+			<Label class="UpgradeHelpLine" text="- Capturing outposts, lamps, and Tormentor" />
+			<Label class="UpgradeHelpLine" text="- Passive timed income" />
+			<Label class="UpgradeHelpNote" text="(Exact sources depend on the lobby settings.)" />
+			<Label class="UpgradeHelpWarn" text="WARNING: Upgrades are RANDOM and unpredictable. They can buff OR nerf any ability, and may even break your hero. Spend at your own risk." />
+			<Button id="UpgradeHelpClose" class="UpgradeHelpClose" hittest="true"><Label text="Close" /></Button>
+		</Panel>
 	</Panel>
 </root>
