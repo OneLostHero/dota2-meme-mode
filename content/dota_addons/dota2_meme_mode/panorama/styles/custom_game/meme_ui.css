@@ -1,0 +1,71 @@
+/* meme_ui.css — shared "Refined Chaos" tokens. Include alongside a panel's own .css.
+   Clarity-first surfaces; meme personality lives in the accent colors below. */
+
+.meme-panel {
+    background-color: #15171c;
+    border: 1px solid #2a2f3a;
+    border-radius: 8px;
+    overflow: noclip clip;
+}
+
+.meme-header {
+    flow-children: right;
+    vertical-align: center;
+    padding: 8px 10px;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #1b1e26 ), to( #15171c ) );
+    border-bottom: 1px solid #2a2f3a;
+}
+
+.meme-header-title {
+    color: #c8ff5e;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    vertical-align: center;
+}
+
+.meme-row {
+    flow-children: right;
+    vertical-align: center;
+    padding: 6px 8px;
+    border-bottom: 1px solid #20242e;
+}
+
+.meme-label-primary {
+    color: #e8ebf0;
+    font-size: 14px;
+    vertical-align: center;
+}
+
+.meme-label-secondary {
+    color: #7a8190;
+    font-size: 11px;
+    vertical-align: center;
+}
+
+.meme-pill-pos {
+    color: #7CFC00;
+    font-weight: bold;
+    background-color: #1f3a1f;
+    border-radius: 10px;
+    padding: 2px 7px;
+    vertical-align: center;
+}
+
+.meme-pill-neg {
+    color: #ff6b6b;
+    font-weight: bold;
+    background-color: #3a1f1f;
+    border-radius: 10px;
+    padding: 2px 7px;
+    vertical-align: center;
+}
+
+.meme-input {
+    background-color: #0e1014;
+    border: 1px solid #2c3344;
+    border-radius: 5px;
+    color: #e8ebf0;
+    font-size: 13px;
+    padding: 4px 7px;
+}
