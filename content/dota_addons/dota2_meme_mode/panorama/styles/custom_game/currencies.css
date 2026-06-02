@@ -47,12 +47,28 @@
  .currency_red{
      background-image: url("file://{images}/custom_game/currencies/red_png.png");
  }
+ /* Boost Juice: the custom framed art IS the whole chip (frame + number slot + potion).
+    Hide the small gem icon and drop the live amount into the art's number slot (top-left). */
  .currency_box_red{
-     background-color: rgb(138, 0, 0);
+     background-image: url("file://{images}/custom_game/boost_juice.png");
+     background-size: contain;
+     background-repeat: no-repeat;
+     background-position: 50% 50%;
+     width: 78px;
+     height: 52px;
  }
-
- .currency_box_red:hover{
-     background-color: rgb(168, 0, 0);
+ .currency_box_red:hover{ wash-color: #e6e6e6ff; }
+ .currency_box_red #CurrencyIcon{ visibility: collapse; width: 0px; height: 0px; }
+ .currency_box_red #CurrencyAmmount{
+     horizontal-align: left;
+     vertical-align: top;
+     margin-left: 16px;
+     margin-top: 11px;
+     padding: 0px;
+     text-align: center;
+     width: 22px;
+     font-size: 16px;
+     color: #ffe08a;
  }
 
  .currency_green{
