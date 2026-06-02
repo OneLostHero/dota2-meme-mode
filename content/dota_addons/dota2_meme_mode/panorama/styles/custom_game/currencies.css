@@ -112,6 +112,12 @@
  .share_2{
   box-shadow: inset #ff7c7c 0px 0px 0.4px 0.4px;
  }
+ /* The Boost Juice chip art has its own frame — drop the team/share outline. */
+ .currency_box_red.share_0,
+ .currency_box_red.share_1,
+ .currency_box_red.share_2{
+  box-shadow: none;
+ }
 
  .CurrencyActionBox{
   background-color: #15171c;
