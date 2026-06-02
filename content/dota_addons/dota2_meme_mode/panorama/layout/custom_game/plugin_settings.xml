@@ -97,6 +97,7 @@
 			<ProgressBar id="PluginUnlockBar" min="0" max="100" />
 		</Panel>
 		<Panel id="WindowRoot">
+			<Label id="SettingsSaveSlotsHeader" class="SettingsSaveSlotsHeader" text="PRESETS" />
 			<Panel id="SettingsSaveSlots" />
 			<Panel id="PluginList">
 				<Panel id="ExtraButtons">
@@ -104,6 +105,7 @@
 						<Label class="PresetsShowButtonText" text="#PresetsShowButtonText" />
 					</Button>
 				</Panel>
+				<TextEntry id="PluginSearch" class="PluginSearch" placeholder="Search modes" />
 				<Panel id="PluginListInternalScroll" />
 			</Panel>
 			<Panel id="PluginSettingsBox" />

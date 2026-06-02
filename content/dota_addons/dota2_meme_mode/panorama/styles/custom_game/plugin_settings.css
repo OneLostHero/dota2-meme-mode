@@ -561,3 +561,25 @@
     border-right-color: #404040;
 }
 
+.SettingsSaveSlotsHeader{
+    font-size: 13px;
+    font-weight: bold;
+    color: #c8ff5e;
+    letter-spacing: 1px;
+    margin: 2px 0px 2px 4px;
+}
+.PluginSearch{
+    width: 100%;
+    margin-bottom: 4px;
+    background-color: #0e1014;
+    border: 1px solid #2c3344;
+    border-radius: 4px;
+    color: #e8ebf0;
+    font-size: 13px;
+    padding: 3px 6px;
+}
+.plugin_filtered_out{
+    visibility: collapse;
+    height: 0px;
+}
+

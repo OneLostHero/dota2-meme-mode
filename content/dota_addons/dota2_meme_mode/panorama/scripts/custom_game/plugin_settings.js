@@ -7,6 +7,8 @@ var SettingsSaveSlots = $.GetContextPanel().FindChildInLayoutFile("SettingsSaveS
 var PluginUnlockScreen = $.GetContextPanel().FindChildInLayoutFile("PluginUnlockScreen");
 var PluginUnlockBar = $.GetContextPanel().FindChildInLayoutFile("PluginUnlockBar");
 var PluginMutator = $.GetContextPanel().FindChildInLayoutFile("ExtraButtons");
+var PluginSearch = $.GetContextPanel().FindChildInLayoutFile("PluginSearch");
+var pluginQuery = "";
 var current_open = "";
 var mutator_presets;
 var forced_mode;
@@ -32,6 +34,7 @@ function CreateSettingsBlock(sPluginName,sPluginSettings)
         PluginLabelText.SetHasClass("plugin_enabled_text",true);
     };
     PluginLabelText.text = $.Localize("#Plugin_" +  sPluginName);
+    PluginLabel.SetAttributeString("searchtext", ($.Localize("#Plugin_" + sPluginName) + " " + sPluginName).toLowerCase());
     PluginLabel.plugin = sPluginName;
     PluginLabel.SetPanelEvent(
         "onactivate", 
@@ -84,6 +87,15 @@ function SortElements(elements,changes) {
 	if (changes) {
 		$.Schedule( 0.01, function() {SortElements(parent.Children(),changes)} );
 	}
+}
+
+function FilterPlugins() {
+    let kids = PluginListInternalScroll.Children();
+    for (let i = 0; i < kids.length; i++) {
+        let txt = kids[i].GetAttributeString("searchtext", "");
+        let match = (pluginQuery === "" || txt.indexOf(pluginQuery) !== -1);
+        kids[i].SetHasClass("plugin_filtered_out", !match);
+    }
 }
 
 function OpenPluginSettings(sPluginName) {
@@ -621,6 +633,12 @@ function CreateSaveSlot(iSlot) {
     SettingsSaveSlot.BLoadLayoutSnippet("SettingsSaveSlot");
     let SettingsSaveSlotText = SettingsSaveSlot.FindChildInLayoutFile("SettingsSaveSlotText");
     SettingsSaveSlotText.text = iSlot;
+    SettingsSaveSlot.SetPanelEvent("onmouseover", function () {
+        $.DispatchEvent("DOTAShowTextTooltip", SettingsSaveSlot, "Settings preset slot " + iSlot + ". Click to load it. Ctrl-click = select only. Alt-click = merge into current.");
+    });
+    SettingsSaveSlot.SetPanelEvent("onmouseout", function () {
+        $.DispatchEvent("DOTAHideTextTooltip", SettingsSaveSlot);
+    });
     if (bHost) {
         SettingsSaveSlot.SetPanelEvent(
             "onactivate", 
@@ -788,6 +806,10 @@ function load_abilities() {
         }
     }
     CustomNetTables.SubscribeNetTableListener( "save_slots" , SlotsUpdate );
+    $.RegisterEventHandler('TextEntryChanged', PluginSearch, function () {
+        pluginQuery = PluginSearch.text.toLowerCase();
+        FilterPlugins();
+    });
     CustomNetTables.SubscribeNetTableListener( "forced_mode" , forced_mode_update );
     GameEvents.Subscribe( "plugin_system_show_abilities", plugin_system_show_core_pick);
     GameEvents.Subscribe( "plugin_system_show_items", plugin_system_show_core_pick);
