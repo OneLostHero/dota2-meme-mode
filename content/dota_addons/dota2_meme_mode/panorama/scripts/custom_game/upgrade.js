@@ -253,27 +253,19 @@ function GetDotaHud() {
     while (panel && panel.id !== 'Hud') { panel = panel.GetParent(); }
     return panel;
 }
-function ProbeHud() {
-    var readout = $.GetContextPanel().FindChildInLayoutFile("HudProbeText");
-    if (!readout) return;
+function FindDotaHudElement(id) {
     var hud = GetDotaHud();
-    if (!hud) { readout.text = "Hud root NOT FOUND"; return; }
-    var ids = ["ButtonBar","GoldText","PlayerGold","quickbuy","QuickBuy","QuickBuyContainer","Quickbuy",
-               "shop","ShopButton","ShopButtonContainer","Courier","CourierContainer","GlyphScanContainer",
-               "ActionPanel","lower_hud","HUDElements","inventory","InventoryContainer","PrimaryAbilities",
-               "center_block","CenterBlock","BottomHud","bottom_hud","QuickStats"];
-    var lines = ["HUD root OK. Found containers (id @ x,y WxH):"];
-    for (var i = 0; i < ids.length; i++) {
-        var p = hud.FindChildTraverse(ids[i]);
-        if (p) {
-            var pos = null; try { pos = p.GetPositionWithinWindow(); } catch(e){}
-            var w = 0, h = 0; try { w = p.actuallayoutwidth; h = p.actuallayoutheight; } catch(e){}
-            if (pos) lines.push(ids[i] + " @ " + Math.round(pos.x) + "," + Math.round(pos.y) + " " + Math.round(w) + "x" + Math.round(h));
-            else lines.push(ids[i] + " (found, no pos)");
-        }
+    return hud ? hud.FindChildTraverse(id) : null;
+}
+// Reparent our upgrade toggle into the Dota HUD ButtonBar so it lives in the
+// bottom-left HUD cluster (above the gold) and reflows with quickbuy/items.
+// Mirrors the working inspect_upgrades.js pattern.
+function AttachToggleToHud() {
+    if (!ToggleFloat) return;
+    var bar = FindDotaHudElement("ButtonBar");
+    if (bar) {
+        ToggleFloat.SetParent(bar);
     }
-    readout.text = lines.join("<br>");
-    $.Schedule(2.0, ProbeHud); // refresh a few times as the HUD settles
 }
 
 (function init() {
@@ -300,6 +292,7 @@ function ProbeHud() {
             ToggleFloat.SetPanelEvent('onactivate', function () { Drawer.SetHasClass("hidden", !Drawer.BHasClass("hidden")); });
             ToggleFloat.SetPanelEvent('onmouseover', function () { $.DispatchEvent("DOTAShowTextTooltip", ToggleFloat, "Toggle Ability Upgrades"); });
             ToggleFloat.SetPanelEvent('onmouseout', function () { $.DispatchEvent("DOTAHideTextTooltip", ToggleFloat); });
+            AttachToggleToHud();
         }
         UpdateToggleBadge();
 
@@ -320,8 +313,6 @@ function ProbeHud() {
         DrawerQueued.SetPanelEvent('onmouseout', function () {
             $.DispatchEvent("DOTAHideTextTooltip", DrawerQueued);
         });
-
-        ProbeHud();
     }
 })();
 

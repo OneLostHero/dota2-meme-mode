@@ -211,28 +211,13 @@
 
   .UpgradeOption.meme-row{ margin-bottom: 0px; }
 
-  .HudProbeReadout{
-   horizontal-align: center;
-   vertical-align: top;
-   margin-top: 90px;
-   width: 560px;
-   padding: 10px;
-   background-color: #000000dd;
-   border: 1px solid #c8ff5e;
-   border-radius: 6px;
-  }
-  #HudProbeText{
-   color: #c8ff5e;
-   font-size: 17px;
-  }
-
+  /* Reparented into the Dota HUD ButtonBar (see upgrade.js AttachToggleToHud),
+     so it flows as a bar button rather than a bottom-left float. */
   .UpgradeToggleFloat{
-   horizontal-align: left;
-   vertical-align: bottom;
-   margin-left: 6px;
-   margin-bottom: 84px;
-   width: 70px;
+   width: 50px;
    height: 50px;
+   margin: 0px 4px;
+   vertical-align: center;
    background-color: none;
    background-image: url("file://{images}/custom_game/upgrades_button.png");
    background-size: contain;
