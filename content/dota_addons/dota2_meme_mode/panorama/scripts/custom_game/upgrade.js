@@ -9,7 +9,7 @@ var plugin_settings = {};
 const local_team = Players.GetTeam(Players.GetLocalPlayer());
 
 var QueuedUpgradesText = $.GetContextPanel().FindChildInLayoutFile("QueuedUpgradesText");
-var Screen = $.GetContextPanel().FindChildInLayoutFile("PersonalUpgradeScreen") || $.GetContextPanel();
+var Screen = $.GetContextPanel().FindChildInLayoutFile("PersonalUpgradeScreen");
 var Drawer = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawer");
 var DrawerTab = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerTab");
 var DrawerCollapse = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerCollapse");
