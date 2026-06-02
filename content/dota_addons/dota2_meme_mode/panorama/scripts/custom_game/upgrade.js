@@ -10,17 +10,42 @@ const local_team = Players.GetTeam(Players.GetLocalPlayer());
 
 var QueuedUpgradesText = $.GetContextPanel().FindChildInLayoutFile("QueuedUpgradesText");
 var Drawer = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawer");
-var DrawerBody = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerBody");
-var DrawerHeader = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerHeader");
-var CollapseMark = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerCollapseMark");
 var DrawerQueued = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerQueued");
 var DrawerEmpty = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerEmpty");
-var collapsedState = false;
+var ToggleBadge = null;
 
-function SetCollapsed(collapsed) {
-    collapsedState = collapsed;
-    DrawerBody.SetHasClass("collapsed", collapsed);
-    CollapseMark.text = collapsed ? "[+]" : "[-]";
+function CreateToggleButton() {
+    var button_bar = FindDotaHudElement("ButtonBar");
+    if (!button_bar) return;
+    var existing = button_bar.FindChildTraverse("UpgradeToggleButton");
+    if (existing) { existing.DeleteAsync(0); }
+    var panel = $.CreatePanel('Button', $.GetContextPanel(), "UpgradeToggleButton");
+    panel.BLoadLayoutSnippet("UpgradeToggleButton");
+    ToggleBadge = panel.FindChildTraverse("UpgradeToggleBadge");
+    panel.SetPanelEvent('onactivate', function () { $.GetContextPanel().ToggleClass("hidden"); });
+    panel.SetPanelEvent('onmouseover', function () { $.DispatchEvent("DOTAShowTextTooltip", panel, "Ability Upgrades"); });
+    panel.SetPanelEvent('onmouseout', function () { $.DispatchEvent("DOTAHideTextTooltip", panel); });
+    panel.SetParent(button_bar);
+    UpdateToggleBadge();
+}
+
+function UpdateToggleBadge() {
+    if (!ToggleBadge) return;
+    var n = 0;
+    try { n = Number(QueuedUpgradesText.text) || 0; } catch (e) { n = 0; }
+    ToggleBadge.text = String(n);
+    ToggleBadge.SetHasClass("hidden", n <= 0);
+}
+
+function GetDotaHud() {
+    var panel = $.GetContextPanel();
+    while (panel && panel.id !== 'Hud') { panel = panel.GetParent(); }
+    return panel;
+}
+
+function FindDotaHudElement(id) {
+    var hud = GetDotaHud();
+    return hud ? hud.FindChildTraverse(id) : null;
 }
 
 function UpdateEmptyState() {
@@ -193,14 +218,16 @@ function UpgradeOptionsNew(table,tableKey,data) {
                                 UpgradeOptionNew(data[key]);
                             } else {
                                 QueuedUpgradesText.text = data[key];
-
+                                UpdateToggleBadge();
                             }
                         }
                         UpdateEmptyState();
+                        UpdateToggleBadge();
                     } else {
                         bWaiting = true;
                         tCurrent = undefined;
                         UpdateEmptyState();
+                        UpdateToggleBadge();
                     }
                 }
             }
@@ -262,6 +289,8 @@ function ForceRecreate() {
         UpgradeOptionsNew("player_booster",Players.GetLocalPlayer() + "d",kvstuff);
         //GameEvents.Subscribe( "boost_player_recheck", KeepitReal );
         boost_player_recheck();
+
+        CreateToggleButton();
 
         UpdateEmptyState();
 

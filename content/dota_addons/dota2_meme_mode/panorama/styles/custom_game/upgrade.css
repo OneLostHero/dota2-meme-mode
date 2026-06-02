@@ -51,10 +51,6 @@
    max-height: 620px;
    flow-children: down;
   }
-  .UpgradeDrawer.collapsed{
-   visibility: collapse;
-   width: 0px;
-  }
 
   .UpgradeOption{
    flow-children: right;
@@ -167,8 +163,6 @@
    text-align: center;
   }
   .UpgradeDrawerBody{ flow-children: down; }
-  .UpgradeDrawerBody.collapsed{ visibility: collapse; height: 0px; }
-  #UpgradeDrawerCollapseMark{ horizontal-align: right; color: #7a8190; font-size: 13px; vertical-align: center; margin-left: 6px; }
 
   .UpgradeDrawerHeaderCol{ flow-children: down; }
   .UpgradeDrawerHeaderTop{ flow-children: right; vertical-align: center; width: 100%; }
@@ -183,3 +177,27 @@
   .UpgradeDrawerQueuedSuffix{ color: #fff; font-size: 11px; vertical-align: center; }
 
   .UpgradeOption.meme-row{ margin-bottom: 0px; }
+
+  .UpgradeToggleButton{
+   background-image: url("file://{images}/custom_game/boosted_list_png.png");
+   background-size: 26px;
+   background-repeat: no-repeat;
+   background-position: 50% 50%;
+   width: 26px;
+   height: 26px;
+  }
+  .UpgradeToggleButton:hover{ box-shadow: fill #c8ff5e88 0px 0px 12px -2px; }
+  .UpgradeToggleBadge{
+   horizontal-align: right;
+   vertical-align: top;
+   margin-top: -4px;
+   margin-right: -4px;
+   background-color: #e8453a;
+   color: #ffffff;
+   font-size: 10px;
+   font-weight: bold;
+   border-radius: 8px;
+   padding: 0px 4px;
+   min-width: 8px;
+   text-align: center;
+  }

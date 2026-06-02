@@ -30,6 +30,11 @@
 				</Button>
 			</Panel>
 		</snippet>
+		<snippet name="UpgradeToggleButton">
+			<Button class="UpgradeToggleButton">
+				<Label id="UpgradeToggleBadge" class="UpgradeToggleBadge" text="0" />
+			</Button>
+		</snippet>
 	</snippets>
 	<Panel id="PersonalUpgradeScreen" class="PersonalUpgradeScreen" hittest="false" visible="true">
 		<Panel id="UpgradeDrawer" class="meme-panel UpgradeDrawer" hittest="true">
