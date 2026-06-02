@@ -10,6 +10,9 @@ const local_team = Players.GetTeam(Players.GetLocalPlayer());
 
 var QueuedUpgradesText = $.GetContextPanel().FindChildInLayoutFile("QueuedUpgradesText");
 var Drawer = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawer");
+var DrawerBody = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerBody");
+var DrawerHeader = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerHeader");
+var CollapseMark = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerCollapseMark");
 var DrawerQueued = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerQueued");
 var DrawerEmpty = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerEmpty");
 var UpgradeSearch = $.GetContextPanel().FindChildInLayoutFile("UpgradeSearch");
@@ -18,7 +21,8 @@ var collapsedState = false;
 
 function SetCollapsed(collapsed) {
     collapsedState = collapsed;
-    Drawer.SetHasClass("collapsed", collapsed);
+    DrawerBody.SetHasClass("collapsed", collapsed);
+    CollapseMark.text = collapsed ? "[+]" : "[-]";
 }
 
 function UpdateEmptyState() {
@@ -270,8 +274,7 @@ function ForceRecreate() {
         //GameEvents.Subscribe( "boost_player_recheck", KeepitReal );
         boost_player_recheck();
 
-        
-        CreateToggleButton();
+        DrawerHeader.SetPanelEvent('onactivate', function () { SetCollapsed(!collapsedState); });
         UpdateEmptyState();
 
         function OnUpgradeSearchChanged() {
@@ -290,20 +293,4 @@ function ForceRecreate() {
     }
 })();
 
-function CreateToggleButton() {
-    var button_bar = FindDotaHudElement("ButtonBar");
-    var existing_button = button_bar.FindChildTraverse("UpgradeDrawerToggleButton");
-    if (existing_button) { existing_button.DeleteAsync(0); }
-    var panel = $.CreatePanel('Button', $.GetContextPanel(), "UpgradeDrawerToggleButton");
-    panel.BLoadLayoutSnippet("UpgradeDrawerToggleButton");
-    panel.SetPanelEvent('onactivate', function () { SetCollapsed(!collapsedState); });
-    panel.SetParent(button_bar);
-}
-function GetDotaHud() {
-    var panel = $.GetContextPanel();
-    while (panel && panel.id !== 'Hud') { panel = panel.GetParent(); }
-    if (!panel) { throw new Error('Could not find Hud root'); }
-    return panel;
-}
-function FindDotaHudElement(id) { return GetDotaHud().FindChildTraverse(id); }
 

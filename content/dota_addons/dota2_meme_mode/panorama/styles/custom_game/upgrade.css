@@ -79,12 +79,14 @@
   }
 
   #UpgradeOptionLabel{
-   font-weight: normal;
+   font-weight: bold;
    letter-spacing: 0px;
    margin-right: 4px;
-   text-shadow: 1px 1px 1px rgb(0, 0, 0);
-   vertical-align: center;
    text-align: left;
+   font-size: 15px;
+   text-transform: uppercase;
+   text-shadow: 1px 1px 1px rgb(0,0,0);
+   vertical-align: center;
   }
 
   .OptionNumText{
@@ -173,17 +175,11 @@
    font-size: 12px;
    text-align: center;
   }
-  .UpgradeDrawerToggleButton{
-   width: 26px;
-   height: 26px;
-   background-image: url("file://{images}/custom_game/boosted_list_png.png");
-   background-size: 26px;
-   background-repeat: no-repeat;
-   background-position: 50% 50%;
-  }
-  .UpgradeDrawerToggleButton:hover{
-   box-shadow: fill #c8ff5e88 0px 0px 12px -2px;
-  }
+  .UpgradeDrawerBody{ flow-children: down; }
+  .UpgradeDrawerBody.collapsed{ visibility: collapse; height: 0px; }
+  #UpgradeDrawerHeader{ flow-children: right; }
+  #UpgradeDrawerCollapseMark{ horizontal-align: right; color: #7a8190; font-size: 13px; vertical-align: center; margin-left: 6px; }
+  #UpgradeDrawerHeader:hover #UpgradeDrawerCollapseMark{ color: #c8ff5e; }
 
   #AbilityChangeReport{
     background-image: url("file://{images}/custom_game/report.png");
@@ -207,6 +203,7 @@
   }
   #UpgradeOptionAbilityName{
    text-align: left;
+   font-size: 11px;
   }
 
   .UpgradeSearchRow{ padding: 6px 8px; border-bottom: 1px solid #20242e; }
