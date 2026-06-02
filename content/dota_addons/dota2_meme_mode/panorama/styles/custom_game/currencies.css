@@ -7,7 +7,7 @@
      horizontal-align: left;
      vertical-align: bottom;
      margin-left: 86px;  /* 8+80 icon right edge minus the chip's 2px inner margin = flush touch */
-     margin-bottom: 40px; /* JS (RepositionBar) overrides this to ride the quickbuy cluster */
+     margin-bottom: 34px; /* fixed resting height above the bottom-left HUD (matches upgrade icon) */
      flow-children: right;
      transition: margin-bottom 0.15s ease-in-out 0.0s; /* smooth the quickbuy-ride */
  }

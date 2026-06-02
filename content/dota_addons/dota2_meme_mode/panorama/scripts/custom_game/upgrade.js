@@ -322,7 +322,8 @@ function RepositionBar() {
             ToggleFloat.SetPanelEvent('onmouseover', function () { $.DispatchEvent("DOTAShowTextTooltip", ToggleFloat, "Toggle Ability Upgrades"); });
             ToggleFloat.SetPanelEvent('onmouseout', function () { $.DispatchEvent("DOTAHideTextTooltip", ToggleFloat); });
         }
-        RepositionBar();
+        // Fixed placement (CSS margin-bottom). The dynamic quickbuy-ride was
+        // unreliable across the two UI contexts and split the cluster apart.
         UpdateToggleBadge();
 
         UpdateEmptyState();

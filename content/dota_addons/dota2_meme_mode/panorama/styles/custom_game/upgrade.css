@@ -217,7 +217,7 @@
    horizontal-align: left;
    vertical-align: bottom;
    margin-left: 8px;
-   margin-bottom: 40px; /* JS (RepositionBar) overrides this to ride the quickbuy cluster */
+   margin-bottom: 34px; /* fixed resting height above the bottom-left HUD */
    width: 80px;  /* art is 645x517 (~1.25:1); box matches aspect so it fills cleanly */
    height: 64px;
    background-color: none;

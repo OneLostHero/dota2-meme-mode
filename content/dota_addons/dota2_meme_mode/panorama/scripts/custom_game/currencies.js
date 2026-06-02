@@ -266,7 +266,7 @@ function RepositionBar() {
             AddCurrency(tCurrencies[key].key,tCurrencies[key].value);
         }
         CustomNetTables.SubscribeNetTableListener( "currencies" , tCurrenciesUpdate );
-        RepositionBar();
+        // Fixed placement (CSS margin-bottom) — see upgrade.js note.
     }
     if (Game.IsHUDFlipped()) {
         $.GetContextPanel().SetHasClass("flipped",true);
