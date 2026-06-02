@@ -6,8 +6,8 @@
  .CurrencyRoot{
      horizontal-align: left;
      vertical-align: bottom;
-     margin-left: 94px;
-     margin-bottom: 90px; /* JS (RepositionBar) overrides this to ride the quickbuy cluster */
+     margin-left: 88px;  /* flush against the 8+80 upgrade icon so the frames touch */
+     margin-bottom: 72px; /* JS (RepositionBar) overrides this to ride the quickbuy cluster */
      flow-children: right;
  }
 

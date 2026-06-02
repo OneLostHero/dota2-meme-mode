@@ -183,7 +183,7 @@ function GetDotaHud() {
     while (panel && panel.id !== 'Hud') { panel = panel.GetParent(); }
     return panel;
 }
-var HUD_BAR_BASE_MARGIN = 90;
+var HUD_BAR_BASE_MARGIN = 72;
 function ComputeHudBarMargin() {
     var hud = GetDotaHud();
     if (!hud) return HUD_BAR_BASE_MARGIN;
