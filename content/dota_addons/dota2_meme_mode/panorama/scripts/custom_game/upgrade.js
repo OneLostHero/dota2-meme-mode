@@ -263,21 +263,36 @@ function FindDotaHudElement(id) {
 // bottom-margin to (screen height - cluster top + gap). currencies.js mirrors
 // this exact math so the upgrade icon and Boost Juice bar rise together.
 var HUD_BAR_BASE_MARGIN = 40; // resting height above screen bottom (empty quickbuy)
+var HUD_BAR_OFFSET = 0;       // cluster bottom = clusterTop - OFFSET (tune once we have live numbers)
+var _hudLogTick = 0;
 function ComputeHudBarMargin() {
     var hud = GetDotaHud();
     if (!hud) return HUD_BAR_BASE_MARGIN;
     var winH = hud.actuallayoutheight;
     if (!isFinite(winH) || winH <= 0) return HUD_BAR_BASE_MARGIN;
-    var cluster = hud.FindChildTraverse("quickbuy") || hud.FindChildTraverse("shop_launcher_block");
+    var qb = hud.FindChildTraverse("quickbuy");
+    var slb = hud.FindChildTraverse("shop_launcher_block");
+    // Throttled diagnostic (~once/sec) so we can lock the right reference + offset.
+    if ((_hudLogTick++ % 10) === 0) {
+        function info(p) {
+            if (!p) return "none";
+            var y = "?", h = "?";
+            try { y = Math.round(p.GetPositionWithinWindow().y); } catch (e) {}
+            try { h = Math.round(p.actuallayoutheight); } catch (e) {}
+            return "top=" + y + " h=" + h;
+        }
+        $.Msg("HUDPOS: winH=" + Math.round(winH) + " | quickbuy " + info(qb) + " | shop_launcher_block " + info(slb));
+    }
+    var cluster = qb || slb;
     if (!cluster) return HUD_BAR_BASE_MARGIN;
     var top;
     try { top = cluster.GetPositionWithinWindow().y; } catch (e) { return HUD_BAR_BASE_MARGIN; }
     if (!isFinite(top) || top <= 0) return HUD_BAR_BASE_MARGIN;
-    var mb = (winH - top) + 6;
+    var mb = (winH - top) + HUD_BAR_OFFSET;
     return mb > HUD_BAR_BASE_MARGIN ? mb : HUD_BAR_BASE_MARGIN;
 }
 function RepositionBar() {
-    $.Schedule(0.25, RepositionBar);
+    $.Schedule(0.1, RepositionBar);
     if (!ToggleFloat) return;
     ToggleFloat.style.marginBottom = Math.round(ComputeHudBarMargin()) + "px";
 }

@@ -225,6 +225,7 @@
    background-size: 100% 100%;
    background-repeat: no-repeat;
    background-position: 50% 50%;
+   transition: margin-bottom 0.15s ease-in-out 0.0s; /* smooth the quickbuy-ride */
   }
   .UpgradeToggleFloat:hover{ wash-color: #d8d8d8ff; }
   .UpgradeToggleBadge{

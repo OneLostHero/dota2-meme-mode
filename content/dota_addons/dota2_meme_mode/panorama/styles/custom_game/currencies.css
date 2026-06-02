@@ -9,6 +9,7 @@
      margin-left: 82px;  /* slight overlap onto the 8+80 upgrade icon so the frames visually touch */
      margin-bottom: 40px; /* JS (RepositionBar) overrides this to ride the quickbuy cluster */
      flow-children: right;
+     transition: margin-bottom 0.15s ease-in-out 0.0s; /* smooth the quickbuy-ride */
  }
 
 

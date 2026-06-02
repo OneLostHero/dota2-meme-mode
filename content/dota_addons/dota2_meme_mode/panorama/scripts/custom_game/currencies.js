@@ -184,6 +184,7 @@ function GetDotaHud() {
     return panel;
 }
 var HUD_BAR_BASE_MARGIN = 40;
+var HUD_BAR_OFFSET = 0; // keep in sync with upgrade.js
 function ComputeHudBarMargin() {
     var hud = GetDotaHud();
     if (!hud) return HUD_BAR_BASE_MARGIN;
@@ -194,11 +195,11 @@ function ComputeHudBarMargin() {
     var top;
     try { top = cluster.GetPositionWithinWindow().y; } catch (e) { return HUD_BAR_BASE_MARGIN; }
     if (!isFinite(top) || top <= 0) return HUD_BAR_BASE_MARGIN;
-    var mb = (winH - top) + 6;
+    var mb = (winH - top) + HUD_BAR_OFFSET;
     return mb > HUD_BAR_BASE_MARGIN ? mb : HUD_BAR_BASE_MARGIN;
 }
 function RepositionBar() {
-    $.Schedule(0.25, RepositionBar);
+    $.Schedule(0.1, RepositionBar);
     $.GetContextPanel().style.marginBottom = Math.round(ComputeHudBarMargin()) + "px";
 }
 
