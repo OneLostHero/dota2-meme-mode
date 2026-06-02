@@ -28,9 +28,16 @@ function AddCurrency(sName,tData) {
         tCurrencyNumbers[sName].text = tData.amount[0];
     }
     
+    var cname = $.Localize("#Currency_" + sName);
+    if (cname === "#Currency_" + sName) { cname = sName; }
+    var cdesc = $.Localize("#Currency_" + sName + "_Desc");
+    var ctip = (cdesc === "#Currency_" + sName + "_Desc") ? cname : (cname + " — " + cdesc);
+    CurrencyBox.SetPanelEvent("onmouseover", function () { $.DispatchEvent("DOTAShowTextTooltip", CurrencyBox, ctip); });
+    CurrencyBox.SetPanelEvent("onmouseout", function () { $.DispatchEvent("DOTAHideTextTooltip", CurrencyBox); });
+
     if (plugin_settings[sName + "_gold_buy"].VALUE > 0) {
         CurrencyBox.SetPanelEvent(
-            "onactivate", 
+            "onactivate",
             function(){
                 ShowOptionMenu(sName);
             }
@@ -45,11 +52,24 @@ function ShowOptionMenu(sName) {
     CurrencyActionBox.SetAcceptsFocus(true)
     CurrencyActionBox.SetFocus();
     CurrencyActionBox.SetPanelEvent(
-        "onblur", 
+        "onblur",
         function(){
             CurrencyActionBox.DeleteAsync(0);
         }
     );
+    var cname2 = $.Localize("#Currency_" + sName);
+    if (cname2 === "#Currency_" + sName) { cname2 = sName; }
+    var localGold = Players.GetGold(Players.GetLocalPlayer());
+    var balAmt = 0;
+    var cdata = tCurrencies[sName];
+    if (cdata) {
+        if (cdata.share == 0) balAmt = cdata.amount[iPlayer];
+        else if (cdata.share == 1) balAmt = cdata.amount[Players.GetTeam(iPlayer)];
+        else if (cdata.share == 2) balAmt = cdata.amount[0];
+    }
+    var header = $.CreatePanel('Label', CurrencyActionBox, 'CurrencyActionHeader');
+    header.AddClass('CurrencyActionHeader');
+    header.text = cname2 + ":  ◆ " + balAmt + "    🪙 " + localGold;
     let spend_count = 0;
     for (const key in tCurrencies[sName].spend_options) {
         const option = tCurrencies[sName].spend_options[key];
@@ -85,6 +105,9 @@ function ShowOptionMenu(sName) {
         CurrencyEarnAction.BLoadLayoutSnippet("CurrencyEarnAction");
         CurrencyEarnAction.FindChildInLayoutFile("CurrencyCost").text = option.cost;
         CurrencyEarnAction.FindChildInLayoutFile("CurrencyEarn").text = option.earn;
+        if (localGold < Number(option.cost)) {
+            CurrencyEarnAction.AddClass('unaffordable');
+        }
         CurrencyEarnAction.SetPanelEvent(
             "onactivate", 
             function(){

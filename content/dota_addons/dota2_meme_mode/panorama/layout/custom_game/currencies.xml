@@ -4,6 +4,7 @@
 		<include src="file://{resources}/scripts/custom_game/currencies.js" />
 	</scripts>
 	<styles>
+		<include src="file://{resources}/styles/custom_game/meme_ui.css" />
 		<include src="file://{resources}/styles/custom_game/currencies.css" />
 	</styles>
 	<snippets>

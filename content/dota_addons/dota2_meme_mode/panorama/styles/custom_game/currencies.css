@@ -96,8 +96,22 @@
  }
 
  .CurrencyActionBox{
-  background-color: gradient( linear, 0% 0%, 0% 100%, from( #7669c7 ), to( #6b4ccf ) );
+  background-color: #15171c;
+  border: 1px solid #2a2f3a;
+  border-radius: 8px;
   flow-children: down;
+  padding-bottom: 4px;
+ }
+ .CurrencyActionHeader{
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #c8ff5e;
+  background-color: #1b1e26;
+  border-bottom: 1px solid #2a2f3a;
+ }
+ .unaffordable{
+  opacity: 0.4;
  }
 
  .CurrencyActionBox:focus{
@@ -109,7 +123,7 @@
      padding: 5px 5px 0px 5px;
  }
  .CurrencyAction:hover{
-  background-color: gradient( linear, 0% 0%, 0% 100%, from( #564d8d ), to( #7353dd ) );
+  background-color: #23303a;
  }
  #CurrencyCost{
      font-size: 15px;

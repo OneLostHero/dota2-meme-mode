@@ -1027,7 +1027,11 @@
 		"Plugin_currencies_Option_green_start" "Starting Green Currency"
 		"Plugin_currencies_Option_blue_start" "Starting Blue Currency"
 		"Plugin_currencies_Option_purple_start" "Starting Purple Currency"
-		
+
+		// Currency display names (used by currencies.js tooltip + converter header)
+		"Currency_red"			"Boost Juice"
+		"Currency_red_Desc"		"Spend on ability upgrades."
+
 
 		//thanksihateit
 
