@@ -268,10 +268,24 @@ function ForceRecreate() {
         //GameEvents.Subscribe( "boost_player_recheck", KeepitReal );
         boost_player_recheck();
 
+        function OpenDrawer() {
+            Drawer.RemoveClass("hidden");
+            if (ToggleFloat) ToggleFloat.AddClass("hidden");
+        }
+        function CloseDrawer() {
+            Drawer.AddClass("hidden");
+            if (ToggleFloat) ToggleFloat.RemoveClass("hidden");
+        }
         if (ToggleFloat) {
-            ToggleFloat.SetPanelEvent('onactivate', function () { Drawer.SetHasClass("hidden", !Drawer.BHasClass("hidden")); });
-            ToggleFloat.SetPanelEvent('onmouseover', function () { $.DispatchEvent("DOTAShowTextTooltip", ToggleFloat, "Toggle Ability Upgrades"); });
+            ToggleFloat.SetPanelEvent('onactivate', OpenDrawer);
+            ToggleFloat.SetPanelEvent('onmouseover', function () { $.DispatchEvent("DOTAShowTextTooltip", ToggleFloat, "Open Ability Upgrades"); });
             ToggleFloat.SetPanelEvent('onmouseout', function () { $.DispatchEvent("DOTAHideTextTooltip", ToggleFloat); });
+        }
+        var DrawerHeader = $.GetContextPanel().FindChildInLayoutFile("UpgradeDrawerHeader");
+        if (DrawerHeader) {
+            DrawerHeader.SetPanelEvent('onactivate', CloseDrawer);
+            DrawerHeader.SetPanelEvent('onmouseover', function () { $.DispatchEvent("DOTAShowTextTooltip", DrawerHeader, "Click to collapse"); });
+            DrawerHeader.SetPanelEvent('onmouseout', function () { $.DispatchEvent("DOTAHideTextTooltip", DrawerHeader); });
         }
         UpdateToggleBadge();
 

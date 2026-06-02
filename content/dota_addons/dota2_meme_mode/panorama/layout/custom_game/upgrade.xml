@@ -32,8 +32,8 @@
 		</snippet>
 	</snippets>
 	<Panel class="PersonalUpgradeScreen" hittest="false" visible="true">
-		<Panel id="UpgradeDrawer" class="meme-panel UpgradeDrawer" hittest="true">
-			<Panel id="UpgradeDrawerHeader" class="meme-header UpgradeDrawerHeaderCol">
+		<Panel id="UpgradeDrawer" class="meme-panel UpgradeDrawer hidden" hittest="true">
+			<Button id="UpgradeDrawerHeader" class="meme-header UpgradeDrawerHeaderCol" hittest="true">
 				<Panel class="UpgradeDrawerHeaderTop">
 					<Label class="meme-header-title" text="ABILITY UPGRADES" />
 					<Panel id="UpgradeDrawerQueued" class="UpgradeDrawerQueued">
@@ -50,7 +50,7 @@
 						<Label class="LegendUnique" text="Unique" />
 					</Panel>
 				</Panel>
-			</Panel>
+			</Button>
 			<Panel id="UpgradeDrawerBody" class="UpgradeDrawerBody">
 				<!-- Reserved slot for currency balance + Convert button (later phase). Empty on purpose. -->
 				<Panel id="UpgradeDrawerBalanceSlot" class="UpgradeDrawerBalanceSlot" />
