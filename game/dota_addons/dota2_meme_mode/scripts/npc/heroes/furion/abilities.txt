@@ -260,7 +260,7 @@
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"FightRecapLevel"				"2"
 		"AbilitySound"					"Hero_Furion.WrathOfNature_Cast"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
 		"HasScepterUpgrade"			"1"
 
 		"AbilityDraftUltShardAbility" "furion_curse_of_the_forest"

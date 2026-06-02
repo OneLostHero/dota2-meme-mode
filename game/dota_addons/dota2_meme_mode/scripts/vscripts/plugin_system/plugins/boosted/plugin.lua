@@ -345,7 +345,7 @@ function BoostedPlugin:UpdatePlayer_NetTable_Ability(iPlayer,hUnit,hAbility)
     local sAbility = hAbility:GetAbilityName()
     if BoostedPlugin:BlocksAbility(sAbility) then
         local vals = hAbility:GetAbilityKeyValues()
-        if vals.AbilityType ~= "DOTA_ABILITY_TYPE_ATTRIBUTES" then
+        if vals.AbilityType ~= "ABILITY_TYPE_ATTRIBUTES" then
             if BoostedPlugin.lists[iPlayer][sAbility] == nil then
                 BoostedPlugin.lists[iPlayer][sAbility] = {}
                 if vals.AbilitySpecial ~= nil then

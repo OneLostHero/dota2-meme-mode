@@ -419,7 +419,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "BaseClass"                     "warlock_golem_permanent_immolation"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityType"                   "ABILITY_TYPE_BASIC"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         "MaxLevel"                      "1"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
@@ -456,7 +456,7 @@
         "AbilityTextureName"            "pudge_rot"
         "ScriptFile"                    "abilities/creatures/hulk_rot"
 
-        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityType"                   "ABILITY_TYPE_BASIC"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         "MaxLevel"                      "1"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
@@ -974,7 +974,7 @@
         //-------------------------------------------------------------------------------------------------------------
         "BaseClass"                     "ability_lua"
         "ScriptFile"                    "abilities/building_defender_advantage"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityType"                   "ABILITY_TYPE_BASIC"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         "MaxLevel"                      "1"
         "AbilityTextureName"            "sven_warcry"

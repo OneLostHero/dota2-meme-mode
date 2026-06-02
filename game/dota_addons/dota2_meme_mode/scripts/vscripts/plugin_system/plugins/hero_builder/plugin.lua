@@ -79,9 +79,9 @@ function HeroBuilderPlugin:PrepStageTwo()
             for k,v in pairs(o) do
                 if v ~= nil and type(v) == 'table' then
                     if v.AbilityType ~= nil then
-                        if v.AbilityType == "DOTA_ABILITY_TYPE_ATTRIBUTES" then
+                        if v.AbilityType == "ABILITY_TYPE_ATTRIBUTES" then
                             HeroBuilderPlugin:AddTalent(k,v)
-                        elseif v.AbilityType == "DOTA_ABILITY_TYPE_ULTIMATE" then
+                        elseif v.AbilityType == "ABILITY_TYPE_ULTIMATE" then
                             HeroBuilderPlugin:AddUltimate(k,v)
                         else
                             HeroBuilderPlugin:AddBasic(k,v)
@@ -99,9 +99,9 @@ function HeroBuilderPlugin:PrepStageTwo()
                 if HeroBuilderPlugin.npc_abilities[k] == nil then
                     if v.CustomList ~= nil then
                         if v.AbilityType ~= nil then
-                            if v.AbilityType == "DOTA_ABILITY_TYPE_ATTRIBUTES" then
+                            if v.AbilityType == "ABILITY_TYPE_ATTRIBUTES" then
                                 HeroBuilderPlugin:AddTalent(k,v)
-                            elseif v.AbilityType == "DOTA_ABILITY_TYPE_ULTIMATE" then
+                            elseif v.AbilityType == "ABILITY_TYPE_ULTIMATE" then
                                 HeroBuilderPlugin:AddUltimate(k,v)
                             else
                                 HeroBuilderPlugin:AddBasic(k,v)

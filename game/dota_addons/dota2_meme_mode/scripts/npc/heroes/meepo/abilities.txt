@@ -229,7 +229,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
 		"DisplayAdditionalHeroes"	"1"
 		"LevelsBetweenUpgrades"		"7"
 		"RequiredLevel"			"4"

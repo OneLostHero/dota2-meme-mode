@@ -165,9 +165,9 @@ function LegendsOfDotaPlugin:PrepStageTwo()
         for k,v in pairs(o) do
             if v ~= nil and type(v) == 'table' then
                 if v.AbilityType ~= nil then
-                    if v.AbilityType == "DOTA_ABILITY_TYPE_ATTRIBUTES" then
+                    if v.AbilityType == "ABILITY_TYPE_ATTRIBUTES" then
                         LegendsOfDotaPlugin:AddTalent(k,v,bStrict,nil)
-                    elseif v.AbilityType == "DOTA_ABILITY_TYPE_ULTIMATE" then
+                    elseif v.AbilityType == "ABILITY_TYPE_ULTIMATE" then
                         LegendsOfDotaPlugin:AddUltimate(k,v,bStrict,nil)
                     else
                         LegendsOfDotaPlugin:AddBasic(k,v,bStrict,nil)
@@ -183,9 +183,9 @@ function LegendsOfDotaPlugin:PrepStageTwo()
             if LegendsOfDotaPlugin.npc_abilities[k] == nil then
                 if v.CustomList ~= nil and LegendsOfDotaPlugin:CustomAbilityLists(v.CustomList) then
                     if v.AbilityType ~= nil then
-                        if v.AbilityType == "DOTA_ABILITY_TYPE_ATTRIBUTES" then
+                        if v.AbilityType == "ABILITY_TYPE_ATTRIBUTES" then
                             LegendsOfDotaPlugin:AddTalent(k,v,false,v.CustomList)
-                        elseif v.AbilityType == "DOTA_ABILITY_TYPE_ULTIMATE" then
+                        elseif v.AbilityType == "ABILITY_TYPE_ULTIMATE" then
                             LegendsOfDotaPlugin:AddUltimate(k,v,false,v.CustomList)
                         else
                             LegendsOfDotaPlugin:AddBasic(k,v,false,v.CustomList)

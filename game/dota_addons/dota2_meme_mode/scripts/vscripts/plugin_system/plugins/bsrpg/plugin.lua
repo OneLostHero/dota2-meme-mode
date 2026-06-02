@@ -96,7 +96,7 @@ function BsrpgPlugin:UpdatePlayer_NetTable(iPlayer)
             local sAbility = hAbility:GetAbilityName()
             if BsrpgPlugin:BlocksAbility(sAbility) then
                 local vals = hAbility:GetAbilityKeyValues()
-                if vals.AbilityType ~= "DOTA_ABILITY_TYPE_ATTRIBUTES" then
+                if vals.AbilityType ~= "ABILITY_TYPE_ATTRIBUTES" then
                     if tAbilities[sAbility] == nil then
                         tAbilities[sAbility] = {}
                         if vals.AbilitySpecial ~= nil then

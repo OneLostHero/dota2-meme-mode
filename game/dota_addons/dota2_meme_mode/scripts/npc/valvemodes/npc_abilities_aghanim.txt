@@ -272,7 +272,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityType"                   "ABILITY_TYPE_BASIC"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
         "MaxLevel"                      "19"
@@ -327,7 +327,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityType"                   "ABILITY_TYPE_BASIC"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
         "MaxLevel"                      "19"
@@ -1231,7 +1231,7 @@
         "MaxLevel"                      "5"
         "IsOnCastBar"                   "0"        
 
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
@@ -3086,7 +3086,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "BaseClass"                     "huskar_life_break"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"     
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
@@ -4535,7 +4535,7 @@
         //-------------------------------------------------------------------------------------------------------------
         "IsOnCastBar"                   "0"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
@@ -4710,7 +4710,7 @@
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
         "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "FightRecapLevel"               "1"
         "IsCastableWhileHidden"         "1"
 
@@ -5235,7 +5235,7 @@
         "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
         "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE"
         "FightRecapLevel"               "2"
 
@@ -5918,7 +5918,7 @@
         "BaseClass"                     "ability_lua"
         "ScriptFile"                    "abilities/creatures/aghsfort_brewmaster_primal_split"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
         "FightRecapLevel"               "2"
         "AbilitySound"                  "Hero_Brewmaster.PrimalSplit.Spawn"
@@ -6603,7 +6603,7 @@
         //-------------------------------------------------------------------------------------------------------------
         "BaseClass"                      "dark_seer_wall_of_replica"        
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
         "FightRecapLevel"               "2"
@@ -6755,7 +6755,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "BaseClass"                     "lich_chain_frost"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -7109,7 +7109,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilitySound"					"Hero_PhantomAssassin.CoupDeGrace"
 
@@ -7143,7 +7143,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "BaseClass"                    "pudge_dismember"                                                      
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
         "AbilityUnitTargetTeam"             "DOTA_UNIT_TARGET_TEAM_ENEMY"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -7291,7 +7291,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 
         "IsOnCastBar"                   "0"
@@ -8062,7 +8062,7 @@
 	"creature_juggernaut_omnislash"
 	{
 		"BaseClass"						"juggernaut_omni_slash"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -9460,7 +9460,7 @@
         "ScriptFile"                    "abilities/creatures/storegga_ground_pound"
         "AbilityTextureName"            "omniknight_guardian_angel"
 
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
@@ -9533,7 +9533,7 @@
         "ScriptFile"                    "abilities/creatures/storegga_avalanche"
         "AbilityTextureName"            "omniknight_guardian_angel"
 
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
@@ -9799,7 +9799,7 @@
         "ScriptFile"                    "abilities/creatures/temple_guardian_wrath"
         "AbilityTextureName"            "omniknight_guardian_angel"
 
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
@@ -10901,7 +10901,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityType"                   "ABILITY_TYPE_BASIC"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
@@ -11264,7 +11264,7 @@
         //-------------------------------------------------------------------------------------------------------------
         "BaseClass"                     "dragon_knight_elder_dragon_form"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "SpellImmunityType"             "SPELL_IMMUNITY_ALLIES_YES_ENEMIES_NO"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
         "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
@@ -12105,7 +12105,7 @@
         "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
         "SpellDispellableType"          "SPELL_DISPELLABLE_YES_STRONG"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "FightRecapLevel"               "2"
         "AbilitySound"                  "Hero_Batrider.FlamingLasso.Cast"
         "AbilityCastAnimation"          "ACT_INVALID"
@@ -12313,7 +12313,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
@@ -12885,7 +12885,7 @@
         //-------------------------------------------------------------------------------------------------------------
         "AbilityTextureName"            "void_spirit_astral_step"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -13067,7 +13067,7 @@
         "MaxLevel"                      "5"
         "IsOnCastBar"                   "0"
 
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
@@ -13419,7 +13419,7 @@
         "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
         "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "FightRecapLevel"               "1"
         "AbilitySound"                  "Hero_Tusk.WalrusPunch.Target"
 
@@ -13872,7 +13872,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityType"                   "ABILITY_TYPE_BASIC"
         "MaxLevel"                      "1"
         "AbilitySound"                  "Hero_EarthSpirit.StoneRemnant.Impact"
 
@@ -13980,7 +13980,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
         "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
@@ -14395,7 +14395,7 @@
         "IsOnCastBar"                   "0"
         "BaseClass"                     "skeleton_king_reincarnation"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
@@ -16819,7 +16819,7 @@
         //-------------------------------------------------------------------------------------------------------------
 
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "SpellImmunityType"             "SPELL_IMMUNITY_ALLIES_YES"
         "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
         "FightRecapLevel"               "2"
@@ -16883,7 +16883,7 @@
         "SpellImmunityType"             "SPELL_IMMUNITY_ALLIES_YES"
         "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
         "FightRecapLevel"               "2"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "MaxLevel"                      "1"
         "AbilitySound"                  "Hero_Omniknight.GuardianAngel.Cast"
         "AbilityTextureName"            "omniknight_guardian_angel"
@@ -16921,7 +16921,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
 
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "omniknight_guardian_angel"
@@ -16943,7 +16943,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "omniknight_purification"
@@ -16964,7 +16964,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "omniknight_purification"
 		
@@ -16986,7 +16986,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "omniknight_purification"
 		
@@ -17009,7 +17009,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "omniknight_purification"
 		
@@ -17036,7 +17036,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "omniknight_repel"
         
@@ -17054,7 +17054,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "omniknight_repel"
         
@@ -17076,7 +17076,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "omniknight_repel"
         
@@ -17094,7 +17094,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "omniknight_repel"
         
@@ -17122,7 +17122,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "omniknight_repel"
         
@@ -17155,7 +17155,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "omniknight_degen_aura"
         
@@ -17182,7 +17182,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "omniknight_degen_aura"
         
@@ -17205,7 +17205,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "omniknight_degen_aura"
         
@@ -17229,7 +17229,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "omniknight_guardian_angel"
         
@@ -17257,7 +17257,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "omniknight_guardian_angel"
         
@@ -17365,7 +17365,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "disruptor_thunder_strike"
@@ -17385,7 +17385,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "disruptor_thunder_strike"
@@ -17420,7 +17420,7 @@
   	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "disruptor_thunder_strike"
@@ -17445,7 +17445,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "disruptor_thunder_strike"
@@ -17529,7 +17529,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "disruptor_glimpse"
@@ -17549,7 +17549,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "disruptor_glimpse"
@@ -17574,7 +17574,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "disruptor_glimpse"
@@ -17654,7 +17654,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "disruptor_kinetic_field"
@@ -17674,7 +17674,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "disruptor_kinetic_field"
@@ -17695,7 +17695,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "disruptor_kinetic_field"
@@ -17715,7 +17715,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "disruptor_kinetic_field"
@@ -17735,7 +17735,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
 
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "disruptor_kinetic_field"
@@ -17755,7 +17755,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
@@ -17819,7 +17819,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "disruptor_static_storm"
@@ -17836,7 +17836,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "disruptor_static_storm"
@@ -17862,7 +17862,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "disruptor_static_storm"
@@ -17988,7 +17988,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "magnataur_shockwave"
 		
@@ -18021,7 +18021,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "magnataur_shockwave"
 		
@@ -18049,7 +18049,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "magnataur_shockwave"
 	}	
@@ -18145,7 +18145,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "magnataur_empower"
 	}	
@@ -18157,7 +18157,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "magnataur_empower"
 
@@ -18184,7 +18184,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "magnataur_empower"
 
@@ -18207,7 +18207,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "magnataur_empower"
 
@@ -18235,7 +18235,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "magnataur_shockwave"
 
@@ -18424,7 +18424,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "magnataur_skewer"
 
@@ -18452,7 +18452,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "magnataur_skewer"
 
@@ -18479,7 +18479,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "magnataur_skewer"
 
@@ -18502,7 +18502,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "magnataur_skewer"
 
@@ -18526,7 +18526,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
 		"FightRecapLevel"				"2"
@@ -18582,7 +18582,7 @@
         //-------------------------------------------------------------------------------------------------------------
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
         "SpellDispellableType"          "SPELL_DISPELLABLE_YES_STRONG"
         "FightRecapLevel"               "2"
@@ -18642,7 +18642,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
 
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "magnataur_reverse_polarity"
@@ -18660,7 +18660,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "magnataur_reverse_polarity"
 
@@ -18683,7 +18683,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "magnataur_reverse_polarity"
 
@@ -18706,7 +18706,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "magnataur_reverse_polarity"
 
@@ -18902,7 +18902,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "aghsfort_phantom_assassin_stifling_dagger_upgrade"
 
@@ -18921,7 +18921,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "aghsfort_phantom_assassin_stifling_dagger_upgrade"
 
@@ -18943,7 +18943,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "aghsfort_phantom_assassin_stifling_dagger_upgrade"
 
@@ -19023,7 +19023,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "aghsfort_phantom_assassin_phantom_strike_upgrade"
 
@@ -19042,7 +19042,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "aghsfort_phantom_assassin_phantom_strike_upgrade"
 
@@ -19074,7 +19074,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "aghsfort_phantom_assassin_phantom_strike_upgrade"
 
@@ -19156,7 +19156,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "aghsfort_phantom_assassin_blur_upgrade"
 
@@ -19178,7 +19178,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "aghsfort_phantom_assassin_blur_upgrade"
 
@@ -19196,7 +19196,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "aghsfort_phantom_assassin_blur_upgrade"
 
@@ -19220,7 +19220,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilitySound"					"Hero_PhantomAssassin.CoupDeGrace"
 		"AbilityTextureName"            "phantom_assassin_coup_de_grace"
@@ -19270,7 +19270,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "aghsfort_phantom_assassin_coup_de_grace_upgrade"
 
@@ -19293,7 +19293,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "aghsfort_phantom_assassin_coup_de_grace_upgrade"
 
@@ -19321,7 +19321,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "aghsfort_phantom_assassin_coup_de_grace_upgrade"
 	}	
@@ -19333,7 +19333,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "aghsfort_phantom_assassin_coup_de_grace_upgrade"
 
@@ -19472,7 +19472,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "winter_wyvern_arctic_burn"
@@ -19778,7 +19778,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "winter_wyvern_cold_embrace"
 		
@@ -19801,7 +19801,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "winter_wyvern_cold_embrace"
 		
@@ -19824,7 +19824,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		//"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"AbilityTextureName"            "winter_wyvern_cold_embrace"
 		
@@ -19852,7 +19852,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"		
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
@@ -20067,7 +20067,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
@@ -21102,7 +21102,7 @@
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
 		"FightRecapLevel"				"1"
 		"AbilitySound"					"Hero_Tusk.WalrusPunch.Target"
 		"AbilityTextureName"            "tusk_walrus_punch"
@@ -21663,7 +21663,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"FightRecapLevel"				"1"
@@ -22377,7 +22377,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN"
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -22975,7 +22975,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "sniper_assassinate"
 
@@ -22993,7 +22993,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "sniper_assassinate"
 
@@ -23294,7 +23294,7 @@
     {
         "AbilityTextureName"            "mars_arena_of_blood"
         "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
  		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -23924,7 +23924,7 @@
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
         "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
@@ -24017,7 +24017,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "viper_poison_attack"
         
@@ -24040,7 +24040,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "viper_poison_attack"
         
@@ -24068,7 +24068,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "viper_poison_attack"
         
@@ -24091,7 +24091,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "viper_nethertoxin"
         
@@ -24114,7 +24114,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "viper_nethertoxin"
         
@@ -24137,7 +24137,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "viper_nethertoxin"
         
@@ -24507,7 +24507,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
 
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"      
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
@@ -25036,7 +25036,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"  
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
         "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_NO_INVIS | DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE | DOTA_UNIT_TARGET_FLAG_NOT_ATTACK_IMMUNE | DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
@@ -25105,7 +25105,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_HIDDEN"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"  
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
         "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_NO_INVIS | DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE | DOTA_UNIT_TARGET_FLAG_NOT_ATTACK_IMMUNE | DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
@@ -25653,7 +25653,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
         "AbilityTextureName"            "slark_shadow_dance"
         "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
@@ -26102,7 +26102,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
         "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
         "AbilitySound"                  "Hero_TemplarAssassin.Trap"
@@ -26617,7 +26617,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_POINT"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE"
@@ -26869,7 +26869,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
         "AbilitySpecial"
         {
             "01"
@@ -27294,7 +27294,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
         "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
@@ -27355,7 +27355,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         "AbilitySpecial"
         {
@@ -27424,7 +27424,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
 
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "undying_tombstone_zombie_deathstrike"
@@ -27559,7 +27559,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         "AbilitySpecial"
         {
@@ -27967,7 +27967,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -28573,7 +28573,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
         "AbilityTextureName"            "juggernaut_omni_slash"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -29276,7 +29276,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityTextureName"            "drow_ranger_marksmanship"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
 		"AbilityCastRange"				"400"
 		"AbilityCastAnimation"		    "ACT_DOTA_CAST_ABILITY_4"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
@@ -29348,7 +29348,7 @@
     //=================================================================================================================
     "aghsfort2_talent_drow_ranger_wave_of_silence_blind"
     {
-        "AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilitySpecial"
 		{
@@ -29365,7 +29365,7 @@
     //=================================================================================================================
     "aghsfort2_talent_drow_ranger_multishot_range"
     {
-        "AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilitySpecial"
 		{
@@ -29382,7 +29382,7 @@
     //=================================================================================================================
     "aghsfort2_talent_drow_ranger_marksmanship_attack_count"
     {
-        "AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilitySpecial"
 		{
@@ -29903,7 +29903,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityTextureName"            "luna_eclipse"
 		"AbilityBehavior"              "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
@@ -30907,7 +30907,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -31319,7 +31319,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		
 		// Special
@@ -32201,7 +32201,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
@@ -32586,7 +32586,7 @@
         //-------------------------------------------------------------------------------------------------------------
         "AbilityTextureName"            "void_spirit_astral_step"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -33093,7 +33093,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         
         // Special
@@ -33115,7 +33115,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         
         // Special
@@ -33137,7 +33137,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         
         // Special
@@ -33159,7 +33159,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         
         // Special
@@ -33181,7 +33181,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         
         // Special
@@ -33203,7 +33203,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         
         // Special
@@ -33225,7 +33225,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         
         // Special
@@ -33446,7 +33446,7 @@
         //-------------------------------------------------------------------------------------------------------------
         "AbilityTextureName"            "gyrocopter_call_down"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
         "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
@@ -33944,7 +33944,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         
         // Special
@@ -34176,7 +34176,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "AbilityTextureName"            "sandking_epicenter"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
@@ -34613,7 +34613,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         //"BaseClass"                     "ability_lua"
         //"ScriptFile"                    "abilities/heroes/aghsfort_minor_stats_upgrade"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
@@ -36225,7 +36225,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "BaseClass"                     "earthshaker_echo_slam"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
@@ -37028,7 +37028,7 @@
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_CREEP" // it's hard-coded to BUILDING in base ability actually
         //"AbilityUnitTargetType"         "DOTA_UNIT_TARGET_BUILDING"
         "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
-        //"AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        //"AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         //"LinkedAbility"                 "tinker_rearm"
         "MaxLevel"                      "6" // needs to be +1 level because of ability cpp's level-based building-targeting behavior, may need to make custom version of keen base ability for correct boss level ups
         "IsOnCastBar"                   "0"
@@ -37538,7 +37538,7 @@
         "ScriptFile"                    "abilities/creatures/gaoler_shock"
         "AbilityTextureName"            "omniknight_guardian_angel"
 
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
@@ -37776,7 +37776,7 @@
         "BaseClass"                     "slardar_amplify_damage"
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -38191,7 +38191,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "AbilityTextureName"            "venomancer_poison_nova"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
@@ -38259,7 +38259,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "AbilityTextureName"            "venomancer_poison_sting"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityType"                   "ABILITY_TYPE_BASIC"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
@@ -38610,7 +38610,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "AbilityTextureName"            "dawnbreaker_solar_guardian"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
@@ -38737,7 +38737,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "dawnbreaker_fire_wreath"
         
@@ -38760,7 +38760,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "dawnbreaker_fire_wreath"
         
@@ -38793,7 +38793,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "dawnbreaker_fire_wreath"
         
@@ -38827,7 +38827,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "dawnbreaker_celestial_hammer"
         
@@ -38850,7 +38850,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "dawnbreaker_celestial_hammer"
         
@@ -38878,7 +38878,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "dawnbreaker_celestial_hammer"
         
@@ -38904,7 +38904,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "dawnbreaker_luminosity"
         
@@ -38932,7 +38932,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "dawnbreaker_luminosity"
         
@@ -38955,7 +38955,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "dawnbreaker_luminosity"
         
@@ -38988,7 +38988,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "dawnbreaker_solar_guardian"
         
@@ -39011,7 +39011,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "dawnbreaker_solar_guardian"
         
@@ -39039,7 +39039,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "dawnbreaker_solar_guardian"
         
@@ -39183,7 +39183,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_CHANNEL"
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -39327,7 +39327,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "bane_enfeeble"
         
@@ -39350,7 +39350,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "bane_enfeeble"
         
@@ -39373,7 +39373,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "bane_enfeeble"
         
@@ -39396,7 +39396,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "bane_enfeeble"
         
@@ -39429,7 +39429,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "bane_brain_sap"
         
@@ -39467,7 +39467,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "bane_brain_sap"
         
@@ -39515,7 +39515,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "bane_brain_sap"
         
@@ -39548,7 +39548,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "bane_enfeeble"
         
@@ -39576,7 +39576,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "bane_nightmare"
         
@@ -39604,7 +39604,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "bane_nightmare"
         
@@ -39628,7 +39628,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "bane_nightmare"
         
@@ -39670,7 +39670,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "bane_fiends_grip"
         
@@ -39695,7 +39695,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "bane_fiends_grip"
         
@@ -39723,7 +39723,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        //"AbilityType"                 "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        //"AbilityType"                 "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityTextureName"            "bane_fiends_grip"
         
@@ -39938,7 +39938,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "AbilityTextureName"            "phoenix_launch_fire_spirit"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityType"                   "ABILITY_TYPE_BASIC"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_HIDDEN"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
@@ -40140,7 +40140,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "AbilityTextureName"            "phoenix_supernova"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
@@ -40662,7 +40662,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         "AbilityTextureName"            "phoenix_sun_ray"
         
@@ -40685,7 +40685,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         "AbilityTextureName"            "phoenix_sun_ray"
         
@@ -40708,7 +40708,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         "AbilityTextureName"            "phoenix_sun_ray"
         
@@ -40917,7 +40917,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "AbilityTextureName"            "clinkz_burning_army"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
         "FightRecapLevel"               "1"
@@ -41461,7 +41461,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         
         // Special
@@ -41483,7 +41483,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         
         // Special
@@ -41505,7 +41505,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         
         // Special
@@ -41527,7 +41527,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         
         // Special
@@ -41549,7 +41549,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         
         // Special
@@ -41571,7 +41571,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         
         // Special
@@ -41593,7 +41593,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         
         // Special
@@ -41615,7 +41615,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         
         // Special
@@ -41642,7 +41642,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         
         // Special
@@ -41664,7 +41664,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         
         // Special
@@ -41686,7 +41686,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         
         // Special
@@ -41708,7 +41708,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         
         // Special
@@ -41931,7 +41931,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "FightRecapLevel"               "2"
         "AbilitySound"                  "Hero_ArcWarden.TempestDouble"
         "HasScepterUpgrade"             "1"
@@ -42276,7 +42276,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityType"                   "ABILITY_TYPE_BASIC"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
@@ -43369,7 +43369,7 @@
         "BaseClass"                     "ability_lua"
         "ScriptFile"                    "abilities/creatures/aghslab_phantom_lancer_doppelganger"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
         "FightRecapLevel"               "2"
         "AbilitySound"                  "Hero_PhantomLancer.Doppelwalk"
@@ -46094,7 +46094,7 @@
         "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
@@ -48515,7 +48515,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "BaseClass"                     "slardar_amplify_damage"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -49206,7 +49206,7 @@
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
 
         // Casting
         //-------------------------------------------------------------------------------------------------------------
@@ -49368,7 +49368,7 @@
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
         "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
@@ -49643,7 +49643,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityType"                   "ABILITY_TYPE_BASIC"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
@@ -49726,7 +49726,7 @@
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
@@ -49850,7 +49850,7 @@
         "BaseClass"                     "crystal_maiden_frostbite"
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityType"                   "ABILITY_TYPE_BASIC"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -50656,7 +50656,7 @@
         //-------------------------------------------------------------------------------------------------------------
         "BaseClass"                     "ability_lua"
         "ScriptFile"                    "abilities/creatures/boss_dark_willow_bloom_toss"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityType"                   "ABILITY_TYPE_BASIC"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_CHANNELED"
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -50946,7 +50946,7 @@
         //-------------------------------------------------------------------------------------------------------------
         "BaseClass"                     "dark_willow_terrorize"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_CHANNELED"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
         "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
@@ -51020,7 +51020,7 @@
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELED"
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
         "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
         "FightRecapLevel"               "1"
