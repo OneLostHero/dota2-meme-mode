@@ -1,6 +1,13 @@
 "use strict";
 var plugin_settings = {};
 var WindowRoot = $.GetContextPanel().FindChildInLayoutFile("WindowRoot");
+// Combined Boost Juice HUD strip (boost juice "red" currency renders here, not as a generic chip).
+var BoostStrip = $.GetContextPanel().FindChildInLayoutFile("BoostStrip");
+var BoostStripAmount = $.GetContextPanel().FindChildInLayoutFile("BoostStripAmount");
+var BoostStripBadge = $.GetContextPanel().FindChildInLayoutFile("BoostStripBadge");
+var BoostStripUpgradeBtn = $.GetContextPanel().FindChildInLayoutFile("BoostStripUpgradeBtn");
+var BoostStripPotionBtn = $.GetContextPanel().FindChildInLayoutFile("BoostStripPotionBtn");
+const STRIP_CURRENCY = "red"; // Boost Juice
 var tCurrencies = {};
 var iPlayer = Players.GetLocalPlayer();
 const this_window_id = "currencies";
@@ -9,11 +16,58 @@ var tCurrencyNumbers = {}
 var currency_open;
 var menuOpenName = null;   // which currency's converter menu is currently open
 var menuSuppress = false;  // brief guard so the closing click doesn't immediately reopen
+var openMenuPanel = null;  // the live converter panel, so we can explicitly close it
+
+// Close the open converter menu (used by both click-outside blur AND the
+// click-the-chip-again toggle). menuSuppress briefly blocks an immediate reopen.
+function CloseCurrencyMenu() {
+    if (openMenuPanel) {
+        var p = openMenuPanel;
+        openMenuPanel = null;
+        try { p.DeleteAsync(0); } catch (e) {}
+    }
+    menuOpenName = null;
+    menuSuppress = true;
+    $.Schedule(0.18, function () { menuSuppress = false; });
+}
+
+function CurrencyShareAmount(tData) {
+    if (tData.share == 0) return tData.amount[iPlayer];
+    if (tData.share == 1) return tData.amount[Players.GetTeam(iPlayer)];
+    if (tData.share == 2) return tData.amount[0];
+    return 0;
+}
 
 function AddCurrency(sName,tData) {
     if (tData.share == 3)
         return;
     tCurrencies[sName] = tData;
+
+    // Boost Juice ("red") is the combined HUD strip, not a generic chip.
+    if (sName === STRIP_CURRENCY && BoostStrip) {
+        tCurrencyNumbers[sName] = BoostStripAmount;
+        BoostStripAmount.text = CurrencyShareAmount(tData);
+
+        var cnameS = $.Localize("#Currency_" + sName);
+        if (cnameS === "#Currency_" + sName) { cnameS = sName; }
+        var cdescS = $.Localize("#Currency_" + sName + "_Desc");
+        var ctipS = (cdescS === "#Currency_" + sName + "_Desc") ? cnameS : (cnameS + ": " + cdescS);
+
+        if (BoostStripPotionBtn) {
+            BoostStripPotionBtn.SetPanelEvent("onmouseover", function () { if (menuOpenName !== sName) $.DispatchEvent("DOTAShowTextTooltip", BoostStripPotionBtn, ctipS); });
+            BoostStripPotionBtn.SetPanelEvent("onmouseout", function () { $.DispatchEvent("DOTAHideTextTooltip", BoostStripPotionBtn); });
+            if (plugin_settings[sName + "_gold_buy"] && plugin_settings[sName + "_gold_buy"].VALUE > 0) {
+                BoostStripPotionBtn.SetPanelEvent("onactivate", function () {
+                    CloseUpgradeDrawer(); // clicking Boost Juice dismisses the upgrade drawer
+                    if (menuSuppress) return;
+                    if (menuOpenName === sName) { CloseCurrencyMenu(); return; } // toggle closed
+                    ShowOptionMenu(sName);
+                });
+            }
+        }
+        return;
+    }
+
     let CurrencyBox = $.CreatePanel('Panel', WindowRoot, 'CurrencyBox');
     CurrencyBox.BLoadLayoutSnippet("CurrencyBox");
     let CurrencyIcon = CurrencyBox.FindChildInLayoutFile("CurrencyIcon");
@@ -43,8 +97,8 @@ function AddCurrency(sName,tData) {
         CurrencyBox.SetPanelEvent(
             "onactivate",
             function(){
-                // Click toggles: if it just closed via blur this same click, stay closed.
-                if (menuSuppress || menuOpenName === sName) return;
+                if (menuSuppress) return;
+                if (menuOpenName === sName) { CloseCurrencyMenu(); return; } // toggle closed
                 ShowOptionMenu(sName);
             }
         );
@@ -55,19 +109,12 @@ function ShowOptionMenu(sName) {
     
     let CurrencyActionBox = $.CreatePanel('Panel', $.GetContextPanel(), sName + "_options");
     CurrencyActionBox.BLoadLayoutSnippet("CurrencyActionBox");
-    CurrencyActionBox.SetAcceptsFocus(true)
-    CurrencyActionBox.SetFocus();
     menuOpenName = sName;
+    openMenuPanel = CurrencyActionBox;
     $.DispatchEvent("DOTAHideTextTooltip", CurrencyActionBox); // clear the hover tooltip so it doesn't cover the menu
-    CurrencyActionBox.SetPanelEvent(
-        "onblur",
-        function(){
-            CurrencyActionBox.DeleteAsync(0);
-            if (menuOpenName === sName) menuOpenName = null;
-            menuSuppress = true; // closing click also fires onactivate; swallow that one
-            $.Schedule(0.18, function(){ menuSuppress = false; });
-        }
-    );
+    // No blur-close on purpose: the menu only closes when Boost Juice is clicked
+    // again, or when Ability Upgrades (the crest) is clicked. Clicking the map
+    // or elsewhere leaves it open.
     var cname2 = $.Localize("#Currency_" + sName);
     if (cname2 === "#Currency_" + sName) { cname2 = sName; }
     var localGold = Players.GetGold(Players.GetLocalPlayer());
@@ -233,24 +280,97 @@ function GetDotaHud() {
     while (panel && panel.id !== 'Hud') { panel = panel.GetParent(); }
     return panel;
 }
-var HUD_BAR_BASE_MARGIN = 40;
-var HUD_BAR_OFFSET = 0; // keep in sync with upgrade.js
+// Single-context reflow. The strip's bottom tracks the TOP of the quickbuy
+// cluster (which grows upward as items are queued), so the whole strip rides
+// up together — no second context to drift apart.
+var HUD_BAR_BASE_MARGIN = 34; // fallback only (HUD not found / bad numbers)
+var HUD_BAR_OFFSET = 4;       // small gap so the strip nearly-but-not-quite touches the quickbuy bar
+var _hudLogTick = 0;
 function ComputeHudBarMargin() {
     var hud = GetDotaHud();
     if (!hud) return HUD_BAR_BASE_MARGIN;
     var winH = hud.actuallayoutheight;
     if (!isFinite(winH) || winH <= 0) return HUD_BAR_BASE_MARGIN;
-    var cluster = hud.FindChildTraverse("quickbuy") || hud.FindChildTraverse("shop_launcher_block");
+    var qb = hud.FindChildTraverse("quickbuy");
+    var slb = hud.FindChildTraverse("shop_launcher_block");
+    if ((_hudLogTick++ % 10) === 0) {
+        function info(p) {
+            if (!p) return "none";
+            var y = "?", h = "?";
+            try { y = Math.round(p.GetPositionWithinWindow().y); } catch (e) {}
+            try { h = Math.round(p.actuallayoutheight); } catch (e) {}
+            return "top=" + y + " h=" + h;
+        }
+        function wid(p) { if (!p) return "?"; try { return Math.round(p.actuallayoutwidth); } catch (e) { return "?"; } }
+        $.Msg("HUDPOS(strip): winH=" + Math.round(winH) + " | quickbuy " + info(qb) + " w=" + wid(qb) + " | shop_launcher_block " + info(slb) + " w=" + wid(slb));
+    }
+    var cluster = qb || slb;
     if (!cluster) return HUD_BAR_BASE_MARGIN;
     var top;
     try { top = cluster.GetPositionWithinWindow().y; } catch (e) { return HUD_BAR_BASE_MARGIN; }
     if (!isFinite(top) || top <= 0) return HUD_BAR_BASE_MARGIN;
     var mb = (winH - top) + HUD_BAR_OFFSET;
-    return mb > HUD_BAR_BASE_MARGIN ? mb : HUD_BAR_BASE_MARGIN;
+    if (mb < HUD_BAR_BASE_MARGIN) mb = HUD_BAR_BASE_MARGIN;
+    var maxMB = winH * 0.45;          // safety clamp so a bad reading can't fling the strip up the screen
+    if (mb > maxMB) mb = maxMB;
+    return mb;
 }
+var _lastMB = -1, _lastW = -1;
 function RepositionBar() {
     $.Schedule(0.1, RepositionBar);
-    $.GetContextPanel().style.marginBottom = Math.round(ComputeHudBarMargin()) + "px";
+    var mb = Math.round(ComputeHudBarMargin());
+    if (mb !== _lastMB) { _lastMB = mb; $.GetContextPanel().style.marginBottom = mb + "px"; } // only on change -> smooth transition
+    // Stretch the strip to the width of the bottom-left gold/quickbuy module so it lines up flush.
+    if (BoostStrip) {
+        var hud = GetDotaHud();
+        var blk = hud && (hud.FindChildTraverse("shop_launcher_block") || hud.FindChildTraverse("quickbuy"));
+        if (blk) {
+            var w = Math.round(blk.actuallayoutwidth);
+            if (w > 40 && w !== _lastW) { _lastW = w; BoostStrip.style.width = w + "px"; }
+        }
+    }
+}
+
+// Toggle the upgrade drawer that lives in the (separate) upgrade.xml HUD context.
+// Both are children of "Hud", so a traverse finds it; we only flip a CSS class
+// (no cross-context function call), which is robust regardless of mount order.
+function ToggleUpgradeDrawer() {
+    var hud = GetDotaHud();
+    if (!hud) return;
+    var drawer = hud.FindChildTraverse("UpgradeDrawer");
+    if (drawer) { drawer.SetHasClass("hidden", !drawer.BHasClass("hidden")); }
+}
+function CloseUpgradeDrawer() {
+    var hud = GetDotaHud();
+    if (!hud) return;
+    var drawer = hud.FindChildTraverse("UpgradeDrawer");
+    if (drawer) { drawer.SetHasClass("hidden", true); }
+}
+
+// While the shop is open it should own the top-left space, so hide the strip
+// (and dismiss the menu/drawer) instead of letting our icons sit in front of it.
+var _shopWasOpen = false;
+function UpdateShopCover() {
+    $.Schedule(0.2, UpdateShopCover);
+    var shopOpen = false;
+    try { shopOpen = Game.IsShopOpen(); } catch (e) { shopOpen = false; }
+    if (shopOpen === _shopWasOpen) return;
+    _shopWasOpen = shopOpen;
+    if (BoostStrip) BoostStrip.SetHasClass("hidden", shopOpen);
+    if (shopOpen) {
+        if (openMenuPanel) CloseCurrencyMenu();
+        CloseUpgradeDrawer();
+    }
+}
+
+// Queued upgrade-pick count for the crest badge, read from the player_booster net table.
+function UpdateStripBadge() {
+    if (!BoostStripBadge) return;
+    var n = 0;
+    var pb = CustomNetTables.GetTableValue("player_booster", iPlayer + "d");
+    if (pb && pb.boosters !== undefined) { n = Number(pb.boosters) || 0; }
+    BoostStripBadge.text = String(n);
+    BoostStripBadge.SetHasClass("hidden", n <= 0);
 }
 
 
@@ -266,7 +386,22 @@ function RepositionBar() {
             AddCurrency(tCurrencies[key].key,tCurrencies[key].value);
         }
         CustomNetTables.SubscribeNetTableListener( "currencies" , tCurrenciesUpdate );
-        // Fixed placement (CSS margin-bottom) — see upgrade.js note.
+
+        // Strip's crest button toggles the upgrade drawer; potion is wired in AddCurrency.
+        if (BoostStripUpgradeBtn) {
+            BoostStripUpgradeBtn.SetPanelEvent("onactivate", function () {
+                if (openMenuPanel) CloseCurrencyMenu(); // clicking Ability Upgrades dismisses the Boost Juice menu
+                ToggleUpgradeDrawer();
+            });
+            BoostStripUpgradeBtn.SetPanelEvent("onmouseover", function () { $.DispatchEvent("DOTAShowTextTooltip", BoostStripUpgradeBtn, "Toggle Ability Upgrades"); });
+            BoostStripUpgradeBtn.SetPanelEvent("onmouseout", function () { $.DispatchEvent("DOTAHideTextTooltip", BoostStripUpgradeBtn); });
+        }
+        UpdateStripBadge();
+        CustomNetTables.SubscribeNetTableListener("player_booster", function (t, k) { if (k === iPlayer + "d") UpdateStripBadge(); });
+
+        // Fixed top-left placement (under K/D/A) via CSS — no quickbuy-ride needed up here.
+        // RepositionBar()/width-match are left defined but unused.
+        UpdateShopCover(); // hide the strip while the shop is open
     }
     if (Game.IsHUDFlipped()) {
         $.GetContextPanel().SetHasClass("flipped",true);

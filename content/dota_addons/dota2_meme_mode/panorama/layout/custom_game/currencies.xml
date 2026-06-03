@@ -33,6 +33,20 @@
 		</snippet>
 	</snippets>
 	<Panel class="CurrencyRoot">
+		<!-- Generic chips for any OTHER currencies (Boost Juice / "red" is drawn as the strip below instead). -->
 		<Panel id="WindowRoot" />
+		<!-- Single combined HUD strip (one image = one panel = one reflow context, so the two
+		     halves can never drift apart). Left crest = upgrade-drawer toggle + pick badge;
+		     middle = live Boost Juice amount; right potion = gold->Boost Juice converter. -->
+		<Panel id="BoostStrip" class="BoostStrip">
+			<!-- Left half = upgrades, right half = Boost Juice converter. The amount
+			     label is painted last (on top) with hittest=false so clicks fall
+			     through to the wide potion button beneath it. -->
+			<Button id="BoostStripUpgradeBtn" class="BoostStripUpgradeBtn" hittest="true">
+				<Label id="BoostStripBadge" class="BoostStripBadge hidden" text="0" />
+			</Button>
+			<Button id="BoostStripPotionBtn" class="BoostStripPotionBtn" hittest="true" />
+			<Label id="BoostStripAmount" class="BoostStripAmount" text="0" hittest="false" />
+		</Panel>
 	</Panel>
 </root>

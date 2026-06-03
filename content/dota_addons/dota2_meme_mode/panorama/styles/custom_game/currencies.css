@@ -5,11 +5,69 @@
 
  .CurrencyRoot{
      horizontal-align: left;
-     vertical-align: bottom;
-     margin-left: 86px;  /* 8+80 icon right edge minus the chip's 2px inner margin = flush touch */
-     margin-bottom: 34px; /* fixed resting height above the bottom-left HUD (matches upgrade icon) */
-     flow-children: right;
-     transition: margin-bottom 0.15s ease-in-out 0.0s; /* smooth the quickbuy-ride */
+     vertical-align: top;
+     margin-left: 0px;  /* flush to the screen's left edge */
+     margin-top: 100px; /* sits just under the top-left K/D/A : LH/DN readout */
+ }
+
+ /* ===== Combined Boost Juice HUD strip =====================================
+    One framed image (boost_juice.png, cropped to ~2.5:1) is the background.
+    Three transparent regions sit on top: crest button (left), live amount
+    (middle), potion button (right). Box is fixed 250x100 to match the art's
+    2.5:1 aspect; child offsets are px-tuned to that size. */
+ .BoostStrip{
+     horizontal-align: left;
+     vertical-align: top;
+     width: 180px;
+     height: 72px;
+     background-image: url("file://{images}/custom_game/boost_juice.png");
+     background-size: 100% 100%;
+     background-repeat: no-repeat;
+     background-position: 50% 50%;
+     background-color: none;
+ }
+ /* Left section (up to the art's divider) = open/close the upgrade drawer. */
+ .BoostStripUpgradeBtn{
+     horizontal-align: left;
+     vertical-align: center;
+     width: 38%;
+     height: 100%;
+ }
+ .BoostStripUpgradeBtn:hover{ wash-color: #ffe6b0ff; }
+ .BoostStripBadge{
+     horizontal-align: right;
+     vertical-align: top;
+     margin-top: 5px;
+     margin-right: 6px;
+     background-color: #e8453a;
+     color: #ffffff;
+     font-size: 15px;
+     font-weight: bold;
+     border-radius: 12px;
+     min-width: 13px;
+     height: 22px;
+     padding: 0px 5px;
+     text-align: center;
+     box-shadow: 0px 0px 4px 0px #000000cc;
+ }
+ /* Right section (everything past the divider, incl. the potion) = Boost Juice menu. */
+ .BoostStripPotionBtn{
+     horizontal-align: right;
+     vertical-align: center;
+     width: 62%;
+     height: 100%;
+ }
+ .BoostStripPotionBtn:hover{ wash-color: #ffd0d0ff; }
+ .BoostStripAmount{
+     horizontal-align: right;
+     vertical-align: center;
+     margin-right: 18%;   /* sit in the big middle cell (~44%..82% of the strip) */
+     width: 38%;
+     text-align: center;
+     font-size: 24px;
+     font-weight: bold;
+     color: #ffe08a;
+     text-shadow: 1px 1px 4px #000000;
  }
 
 
@@ -121,6 +179,9 @@
  }
 
  .CurrencyActionBox{
+  horizontal-align: left;
+  vertical-align: top;
+  margin-top: 76px;  /* drop just below the ~72px strip */
   background-color: #15171c;
   border: 1px solid #2a2f3a;
   border-radius: 8px;

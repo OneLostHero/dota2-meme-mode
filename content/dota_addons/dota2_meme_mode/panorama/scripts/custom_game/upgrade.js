@@ -317,13 +317,10 @@ function RepositionBar() {
         //GameEvents.Subscribe( "boost_player_recheck", KeepitReal );
         boost_player_recheck();
 
-        if (ToggleFloat) {
-            ToggleFloat.SetPanelEvent('onactivate', function () { Drawer.SetHasClass("hidden", !Drawer.BHasClass("hidden")); });
-            ToggleFloat.SetPanelEvent('onmouseover', function () { $.DispatchEvent("DOTAShowTextTooltip", ToggleFloat, "Toggle Ability Upgrades"); });
-            ToggleFloat.SetPanelEvent('onmouseout', function () { $.DispatchEvent("DOTAHideTextTooltip", ToggleFloat); });
-        }
-        // Fixed placement (CSS margin-bottom). The dynamic quickbuy-ride was
-        // unreliable across the two UI contexts and split the cluster apart.
+        // The upgrade toggle now lives on the combined Boost Juice HUD strip
+        // (currencies.xml), which toggles this drawer's "hidden" class via a Hud
+        // traverse. Hide the old standalone icon so it isn't duplicated.
+        if (ToggleFloat) { ToggleFloat.SetHasClass("hidden", true); }
         UpdateToggleBadge();
 
         UpdateEmptyState();

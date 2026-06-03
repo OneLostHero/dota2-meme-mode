@@ -54,8 +54,8 @@
    overflow: noclip clip;
    horizontal-align: left;
    vertical-align: top;
-   margin-top: 110px;
-   margin-left: 8px;
+   margin-top: 178px;  /* opens BELOW the Boost Juice strip (top 100 + height 72 + gap) so it never covers the toggle */
+   margin-left: 0px;   /* align left edge with the strip (flush to screen edge) */
   }
 
   .UpgradeOption{
@@ -160,16 +160,18 @@
   }
 
   .UpgradeDrawerQueued{
+   flow-children: right;   /* number + "picks" side by side, not stacked on top of each other */
    margin-left: 8px;
    border-radius: 10px;
    background-color: #a36a00;
-   padding: 1px 8px;
+   padding: 2px 9px;
    vertical-align: center;
   }
   #QueuedUpgradesText{
    color: rgb(255,255,255);
    font-size: 13px;
    font-weight: bold;
+   vertical-align: center;
   }
 
   .UpgradeDrawerBalanceSlot{ flow-children: right; }
@@ -207,7 +209,7 @@
   .LegendRare{ color: #c7b000; }
   .LegendEpic{ color: #a855f7; }
   .LegendUnique{ color: #f7a000; }
-  .UpgradeDrawerQueuedSuffix{ color: #fff; font-size: 11px; vertical-align: center; margin-left: 3px; }
+  .UpgradeDrawerQueuedSuffix{ color: #fff; font-size: 11px; vertical-align: center; margin-left: 5px; }
 
   .UpgradeOption.meme-row{ margin-bottom: 0px; }
 
