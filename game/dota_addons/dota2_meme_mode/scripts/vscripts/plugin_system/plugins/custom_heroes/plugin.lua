@@ -14,6 +14,17 @@ CustomHeroesPlugin.custom_heroes = {
     "npc_dota_hero_mr_bomber",
 }
 
+-- Maps each custom hero to its per-hero "include" setting key (see settings.txt).
+-- When the master "all_heroes" toggle is off, only heroes whose key is on appear.
+CustomHeroesPlugin.setting_key = {
+    npc_dota_hero_flasaro            = "hero_flasaro",
+    npc_dota_hero_onelosthero        = "hero_onelosthero",
+    npc_dota_hero_moosestache        = "hero_moosestache",
+    npc_dota_hero_occupational_hazard = "hero_occupational_hazard",
+    npc_dota_hero_mr_badhabits       = "hero_mr_badhabits",
+    npc_dota_hero_mr_bomber          = "hero_mr_bomber",
+}
+
 function CustomHeroesPlugin:Init()
     --print("[CustomHeroesPlugin] found")
 end
@@ -26,19 +37,51 @@ local function is_custom(name)
     return false
 end
 
--- Hide custom heroes from the pick grid. herolist.txt is the master selectable
--- set; availability filtering is a SUBSET of it, so we switch the picker to an
--- explicit set of every NON-custom hero, leaving the custom heroes unavailable.
-local function hide_custom_heroes()
+-- Read a boolean plugin setting, defaulting when missing. GetAllSetting returns
+-- booleans as true/false.
+local function setting_on(settings, key, default_on)
+    if settings == nil then return default_on end
+    local v = settings[key]
+    if v == nil then return default_on end
+    return v == true
+end
+
+-- Build the pick-grid availability. herolist.txt is the master selectable set;
+-- availability filtering can only NARROW it. Cases:
+--   plugin off            -> hide every custom hero (allow only non-customs).
+--   on + "All" toggle on  -> leave the grid untouched (all heroes show).
+--   on + "All" toggle off -> allow non-customs + each custom whose toggle is on.
+local function apply_hero_availability()
     local herolist = LoadKeyValues('scripts/npc/herolist.txt')
     if herolist == nil or not next(herolist) then return end
+
+    local settings = PluginSystem:GetAllSetting("custom_heroes")
+    local enabled = (settings ~= nil and settings.enabled == true)
+    local all_on = setting_on(settings, "all_heroes", true)
+
+    -- Enabled + master "All": leave the pick grid untouched so every herolist hero
+    -- (including all customs) shows. This is the original, proven behaviour and
+    -- avoids round-tripping the custom heroes' recycled HeroIDs through the
+    -- availability filter. We only NARROW the grid in the other cases below.
+    if enabled and all_on then
+        return
+    end
+
+    local function custom_allowed(name)
+        if not enabled then return false end          -- plugin off -> no custom heroes
+        local key = CustomHeroesPlugin.setting_key[name]
+        if key == nil then return true end            -- unmapped custom -> allow by default
+        return setting_on(settings, key, true)        -- per-hero toggle (default on)
+    end
 
     GameRules:SetHideBlacklistedHeroes(true)
     GameRules:GetGameModeEntity():SetPlayerHeroAvailabilityFiltered(true)
     for iPlayer = 0, DOTA_MAX_PLAYERS do
         if PlayerResource:IsValidPlayer(iPlayer) then
             for name,_ in pairs(herolist) do
-                if not is_custom(name) then
+                local allow = true
+                if is_custom(name) then allow = custom_allowed(name) end
+                if allow then
                     local id = DOTAGameManager:GetHeroIDByName(name)
                     if id ~= nil and id > 0 then
                         GameRules:AddHeroToPlayerAvailability(iPlayer, id)
@@ -75,12 +118,9 @@ ListenToGameEvent("game_rules_state_change", function()
     local state = GameRules:State_Get()
 
     if state == DOTA_GAMERULES_STATE_HERO_SELECTION then
-        local settings = PluginSystem:GetAllSetting("custom_heroes")
-        -- toggle ON (checked) -> custom heroes allowed; herolist already shows them.
-        -- toggle OFF (default) -> hide them from the grid.
-        if not (settings ~= nil and settings.enabled == true) then
-            hide_custom_heroes()
-        end
+        -- Always apply availability: off -> no customs; on -> all (or just the
+        -- selected ones when the master "All" toggle is off).
+        apply_hero_availability()
     elseif state == DOTA_GAMERULES_STATE_PRE_GAME then
         -- Give the engine a moment to do its own spawn, then backfill any custom
         -- hero that failed to spawn.

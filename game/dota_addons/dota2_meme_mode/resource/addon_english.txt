@@ -151,7 +151,15 @@
 
 		// Custom Heroes setup panel
 		"Plugin_custom_heroes"				"Custom Heroes"
-		"Plugin_custom_heroes_Description"	"Adds this mod's custom heroes (such as Flasaro) to the hero pick screen. When off, only standard Dota heroes can be picked."
+		"Plugin_custom_heroes_Description"	"Adds this mod's custom heroes to the hero pick screen. When off, only standard Dota heroes can be picked. When on, bring in all of them or pick which ones below."
+		"Plugin_custom_heroes_Option_all_heroes"					"All custom heroes"
+		"Plugin_custom_heroes_Option_all_heroes_Description"		"Bring in every custom hero. Turn this off to choose specific heroes below."
+		"Plugin_custom_heroes_Option_hero_flasaro"					"Flasaro"
+		"Plugin_custom_heroes_Option_hero_onelosthero"				"OneLostHero"
+		"Plugin_custom_heroes_Option_hero_moosestache"				"Moosestache"
+		"Plugin_custom_heroes_Option_hero_occupational_hazard"		"Occupational Hazard"
+		"Plugin_custom_heroes_Option_hero_mr_badhabits"				"Mr. BadHabits"
+		"Plugin_custom_heroes_Option_hero_mr_bomber"				"Mr. Bomber"
 
 		"DOTA_TEAM_ALL"														"All"
 		"DOTA_TEAM_CUSTOM_1"												"The Chaos"
