@@ -81,7 +81,15 @@ function PluginSystem:Init()
     
     
     GameRules:SetSafeToLeave(true)
-    --GameRules:SetCustomGameAccountRecordSaveFunction( Dynamic_Wrap( PluginSystem, "SaveHostSettings_PartA" ), self )
+    -- Persistent preset storage (Option B): Valve account records. This API is
+    -- Preview/Unreleased and may not function for a published game, so register
+    -- it defensively -- if it's missing or throws, presets just stay in-session.
+    if GameRules.SetCustomGameAccountRecordSaveFunction ~= nil then
+        local ok, err = pcall(function()
+            GameRules:SetCustomGameAccountRecordSaveFunction( Dynamic_Wrap( PluginSystem, "SaveHostSettings_PartA" ), self )
+        end)
+        if not ok then print("[PluginSystem] account-record save unavailable: " .. tostring(err)) end
+    end
     GameRules:SetCustomGameEndDelay(15)
     GameRules:SetCustomGameSetupAutoLaunchDelay(60)
     --GameRules:SetCustomGameSetupAutoLaunchDelay(420)
@@ -561,18 +569,59 @@ end
 
 
 function PluginSystem:SendSettingSave(slot)
-	-- Cloud backend removed during the Meme Mode rebrand (formerly an external
-	-- HTTP server). Presets are saved to the in-session "save_slots" net table
-	-- so the host can save/restore presets during setup.
-	-- TODO: cross-session persistence needs a storage backend (future work).
+	-- In-session save: write the current settings into the "save_slots" net table.
+	-- Cross-session persistence is handled by the engine calling
+	-- SaveHostSettings_PartA (Valve account records) when it next persists.
 	local save = PluginSystem:GenerateSave()
 	CustomNetTables:SetTableValue("save_slots", "slot_" .. slot, {data = save})
 end
 
+-- Find the connected host's player id (presets are host-owned), or nil.
+function PluginSystem:GetHostPlayerID()
+	for i = 0, DOTA_MAX_PLAYERS - 1 do
+		if PlayerResource:IsValidPlayer(i) and Toolbox:IsHost(i) then
+			return i
+		end
+	end
+	return nil
+end
+
 function PluginSystem:GetSettingSave(slot)
-	-- Cloud backend removed during the Meme Mode rebrand. Presets live only in
-	-- the in-session "save_slots" net table, so there is nothing to fetch here.
-	-- TODO: load from a local/remote backend once cross-session presets exist.
+	-- Load one persisted preset from the host's Valve account record (as it was
+	-- at session start) into the in-session "save_slots" net table. Fully guarded:
+	-- if the Preview API is absent or empty, the slot just stays empty.
+	if GameRules.GetPlayerCustomGameAccountRecord == nil then return end
+	local hostID = PluginSystem:GetHostPlayerID()
+	if hostID == nil then return end
+	local rec
+	local ok = pcall(function() rec = GameRules:GetPlayerCustomGameAccountRecord(hostID) end)
+	if not ok or type(rec) ~= "table" then return end
+	local key = "slot_" .. slot
+	local data = rec[key]
+	if type(data) == "string" and #data > 0 then
+		CustomNetTables:SetTableValue("save_slots", key, {data = data})
+	end
+end
+
+-- Engine save callback (Valve account records). Called per player when the engine
+-- persists; must return a FLAT table of string/number values. We store the host's
+-- 0-10 preset blobs on the host's own account, and leave every other player's
+-- record untouched (so we never wipe presets they saved while hosting elsewhere).
+function PluginSystem:SaveHostSettings_PartA(playerID)
+	if Toolbox:IsHost(playerID) then
+		local record = {}
+		for i = 0, 10 do
+			local s = CustomNetTables:GetTableValue("save_slots", "slot_" .. i)
+			if s and type(s.data) == "string" and #s.data > 0 then
+				record["slot_" .. i] = s.data
+			end
+		end
+		return record
+	end
+	local rec
+	pcall(function() rec = GameRules:GetPlayerCustomGameAccountRecord(playerID) end)
+	if type(rec) == "table" then return rec end
+	return {}
 end
 
 function PluginSystem:LoadHostSettings()
