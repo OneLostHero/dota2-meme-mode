@@ -1,5 +1,7 @@
 .WindowRoot{
+  horizontal-align: left;
   margin-top: 50px;
+  margin-left: 0px;
   max-height: 700px;
   flow-children: down;
 }
@@ -33,7 +35,7 @@
  .PluginSettings{
   flow-children: down;
   height: 700px;
-  width: 600px;
+  width: 500px;  /* narrowed so the left cluster clears the lobby's team panels on the right */
   background-color: gradient( linear, 0% 0%, 0% 100%, from( #444a7c ), to( #353261 ) );
   border-radius: 5px;
  }
@@ -177,13 +179,14 @@
  }
 
  #SettingsSaveSlots{
-  flow-children: down;
+  flow-children: right;   /* horizontal row of preset tabs */
+  horizontal-align: center;
  }
  .SettingsSaveSlot{
-  height: 30px;
-  width: 30px;
-  margin-top: 4px;
-  border-radius: 10px 0px 0px 10px;
+  height: 22px;
+  width: 22px;
+  margin: 0px 1px 0px 1px;   /* symmetric so the centered row is balanced */
+  border-radius: 6px;
   background-color: gradient( linear, 0% 0%, 0% 100%, from( #16161a ), to( #0b0b0e ) );
  }
  #SettingsSaveSlotText{
@@ -192,7 +195,7 @@
   vertical-align: center;
   color: rgb(255, 255, 255);
   font-weight: bold;
-  font-size: 20px;
+  font-size: 13px;
  }
 
  .SettingsSaveSlot:hover{
@@ -492,7 +495,7 @@
  #PresetSelect{
   flow-children: down;
   height: 700px;
-  width: 600px;
+  width: 500px;  /* match the narrowed settings panel */
   background-color: gradient( linear, 0% 0%, 0% 100%, from( #444a7c ), to( #353261 ) );
   border-radius: 5px;
  }
@@ -561,12 +564,25 @@
     border-right-color: #404040;
 }
 
+/* Preset rail: PRESETS header stacked above the 0-10 slot tabs, left-aligned to the screen edge. */
+/* Preset rail lives at the top of the box now: PRESETS label + a horizontal
+   row of 0-10 tabs. Always visible regardless of how far left the panel sits. */
+.PresetColumn{
+    flow-children: down;
+    width: 100%;
+    horizontal-align: left;
+    vertical-align: top;
+    padding: 6px 8px 2px 8px;
+}
 .SettingsSaveSlotsHeader{
+    horizontal-align: center;
+    text-align: center;
+    width: 100%;
     font-size: 13px;
     font-weight: bold;
     color: #c8ff5e;
     letter-spacing: 1px;
-    margin: 2px 0px 2px 4px;
+    margin: 0px 0px 3px 0px;
 }
 .PluginSearch{
     width: 100%;

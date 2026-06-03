@@ -97,9 +97,11 @@
 			<ProgressBar id="PluginUnlockBar" min="0" max="100" />
 		</Panel>
 		<Panel id="WindowRoot">
-			<Label id="SettingsSaveSlotsHeader" class="SettingsSaveSlotsHeader" text="PRESETS" />
-			<Panel id="SettingsSaveSlots" />
 			<Panel id="PluginList">
+				<Panel id="PresetColumn" class="PresetColumn">
+					<Label id="SettingsSaveSlotsHeader" class="SettingsSaveSlotsHeader" text="PRESETS" />
+					<Panel id="SettingsSaveSlots" />
+				</Panel>
 				<Panel id="ExtraButtons">
 					<Button class="PresetsShowButton" onactivate="OpenPresetSelect();">
 						<Label class="PresetsShowButtonText" text="#PresetsShowButtonText" />

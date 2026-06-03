@@ -591,7 +591,10 @@ function PluginSystem:settings_save_slot(tEvent)
     local iSlot = tEvent.slot
     if iSlot == nil then return end
     PluginSystem.current_save_slot = iSlot
-    if tEvent.fn == 2 then
+    if tEvent.fn == 3 then
+        -- SAVE the current settings into this slot (in-session; net table only).
+        PluginSystem:SendSettingSave(iSlot)
+    elseif tEvent.fn == 2 then
         --do nothing! (user wanted to select slot without activating it)
     elseif tEvent.fn == 1 then
         PluginSystem:ApplySaveSlot(iSlot,true)

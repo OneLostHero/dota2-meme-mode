@@ -634,21 +634,23 @@ function CreateSaveSlot(iSlot) {
     let SettingsSaveSlotText = SettingsSaveSlot.FindChildInLayoutFile("SettingsSaveSlotText");
     SettingsSaveSlotText.text = iSlot;
     SettingsSaveSlot.SetPanelEvent("onmouseover", function () {
-        $.DispatchEvent("DOTAShowTextTooltip", SettingsSaveSlot, "Settings preset slot " + iSlot + ". Click to load it. Ctrl-click = select only. Alt-click = merge into current.");
+        $.DispatchEvent("DOTAShowTextTooltip", SettingsSaveSlot, "Preset slot " + iSlot + ".\nClick = load it.\nShift-click = SAVE current settings here.\nCtrl-click = select only.\nAlt-click = merge into current.");
     });
     SettingsSaveSlot.SetPanelEvent("onmouseout", function () {
         $.DispatchEvent("DOTAHideTextTooltip", SettingsSaveSlot);
     });
     if (bHost) {
         SettingsSaveSlot.SetPanelEvent(
-            "onactivate", 
+            "onactivate",
             function(){
-                if (GameUI.IsControlDown()) {
-                    SaveSlotLoad(iSlot,2)
+                if (GameUI.IsShiftDown()) {
+                    SaveSlotLoad(iSlot,3)   // SAVE current settings into this slot
+                } else if (GameUI.IsControlDown()) {
+                    SaveSlotLoad(iSlot,2)   // select only
                 } else if (GameUI.IsAltDown()) {
-                    SaveSlotLoad(iSlot,1)
+                    SaveSlotLoad(iSlot,1)   // merge into current
                 } else {
-                    SaveSlotLoad(iSlot,0)
+                    SaveSlotLoad(iSlot,0)   // load
                 }
             }
         );
@@ -773,6 +775,11 @@ function load_abilities() {
 }
 
 (function () {
+    // Pull the panel toward the screen's left edge (the GameSetup slot is inset).
+    // The earlier "vanishing numbers" was the fixed-width preset column, not this
+    // margin, so an auto-width column (see .PresetColumn) keeps the rail visible.
+    $.GetContextPanel().style.horizontalAlign = "left";
+    $.GetContextPanel().style.marginLeft = "-45px";
     text_update();
     mutator_presets = fixtable(CustomNetTables.GetAllTableValues( "mutator_presets" ));
     forced_mode = CustomNetTables.GetTableValue( "forced_mode","initial" );
@@ -788,11 +795,24 @@ function load_abilities() {
     }
     var sSettings = CustomNetTables.GetAllTableValues( "plugin_settings" );
     Cleanup();
+    // Sort ONCE up front and create the rows already in final order, so the list
+    // appears instantly and stably (the old incremental bubble-sort reshuffled
+    // the rows over many frames, which looked like a random shuffle on load).
+    let sortedPlugins = [];
     for (const key in sSettings) {
-        CreateSettingsBlock(sSettings[key].key,sSettings[key].value);
+        let name = sSettings[key].key;
+        if (name == "core_teams") continue;
+        let val = sSettings[key].value;
+        let ord = (val && val.Order != undefined) ? Number(val.Order) : 1000;
+        sortedPlugins.push({ name: name, val: val, ord: ord });
     }
-    let children = PluginListInternalScroll.Children();
-    SortElements(children);
+    sortedPlugins.sort(function (a, b) {
+        if (a.ord !== b.ord) return a.ord - b.ord;       // primary: declared Order
+        return a.name < b.name ? -1 : (a.name > b.name ? 1 : 0); // tie-break: name (stable across loads)
+    });
+    for (let i = 0; i < sortedPlugins.length; i++) {
+        CreateSettingsBlock(sortedPlugins[i].name, sortedPlugins[i].val);
+    }
     CustomNetTables.SubscribeNetTableListener( "plugin_settings" , SettingsUpdate );
 
     for (let iSlot = 0; iSlot <= 10; iSlot++) {
